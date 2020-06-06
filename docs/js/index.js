@@ -35,7 +35,10 @@ const getData = async () => {
 
 getData();
 
-document.getElementById("button").onclick = function () {
+
+
+
+function langChnage() {
   var langBotton = document.getElementById("button");
   var langBottonClass = langBotton.getAttribute("class");
 
@@ -55,4 +58,6 @@ document.getElementById("button").onclick = function () {
     document.getElementById('nomalButton').style.display = "block";
     document.getElementById('englishButton').style.display = "none";
   }
+
 }
+

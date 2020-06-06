@@ -6,31 +6,54 @@ const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 const renderJson = (json) => {
   const studios = json.records;
   studios.forEach(studio => {
-   const studioDiv = document.createElement('div');
-   const studioTitle = document.createElement("span");
-   studioTitle.className = 'studio-title';
-   studioTitle.textContent = studio['name-ja'];
-   const studioTitleEn = document.createElement("span");
-   studioTitleEn.className = 'studio-title-en';
-   studioTitleEn.textContent = studio['name-en'];
-   studioDiv.appendChild(studioTitle);
-   studioDiv.appendChild(studioTitleEn);
-   document.getElementById('studios').appendChild(studioDiv);
- });
+    const studioDiv = document.createElement('div');
+    const studioTitle = document.createElement("span");
+    studioTitle.className = 'studio-title';
+    studioTitle.textContent = studio['name-ja'];
+    const studioTitleEn = document.createElement("span");
+    studioTitleEn.className = 'studio-title-en';
+    studioTitleEn.textContent = studio['name-en'];
+    studioDiv.appendChild(studioTitle);
+    studioDiv.appendChild(studioTitleEn);
+    document.getElementById('studios').appendChild(studioDiv);
+  });
   document.getElementById('result').textContent = JSON.stringify(json, null, 2);
 }
 
 const getData = async () => {
-  try{
-    const response =  await fetch(endpoint);
-    if(response.ok){
+  try {
+    const response = await fetch(endpoint);
+    if (response.ok) {
       let jsonResponse = await response.json();
-            renderJson(jsonResponse);
+      renderJson(jsonResponse);
     }
   }
-  catch(error){
+  catch (error) {
     console.log(error);
   }
 }
 
 getData();
+
+
+document.getElementById("button").onclick = function () {
+  var langBotton = document.getElementById("button");
+  var langBottonClass = langBotton.getAttribute("class");
+
+  if (langBottonClass == "open") {
+    langBotton.classList.remove('open');
+    langBotton.classList.add('close');
+    document.getElementById('nomal_text').style.display = "none";
+    document.getElementById('english_text').style.display = "block";
+    document.getElementById('nomal_button').style.display = "none";
+    document.getElementById('english_button').style.display = "block";
+
+  } else {
+    langBotton.classList.remove('close');
+    langBotton.classList.add('open');
+    document.getElementById('nomal_text').style.display = "block";
+    document.getElementById('english_text').style.display = "none";
+    document.getElementById('nomal_button').style.display = "block";
+    document.getElementById('english_button').style.display = "none";
+  }
+};

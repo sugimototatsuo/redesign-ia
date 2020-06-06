@@ -35,7 +35,6 @@ const getData = async () => {
 
 getData();
 
-
 document.getElementById("button").onclick = function () {
   var langBotton = document.getElementById("button");
   var langBottonClass = langBotton.getAttribute("class");
@@ -43,17 +42,17 @@ document.getElementById("button").onclick = function () {
   if (langBottonClass == "open") {
     langBotton.classList.remove('open');
     langBotton.classList.add('close');
-    document.getElementById('nomal_text').style.display = "none";
-    document.getElementById('english_text').style.display = "block";
-    document.getElementById('nomal_button').style.display = "none";
-    document.getElementById('english_button').style.display = "block";
+    document.getElementById('nomalText').style.display = "none";
+    document.getElementById('englishText').style.display = "block";
+    document.getElementById('nomalButton').style.display = "none";
+    document.getElementById('englishButton').style.display = "block";
 
   } else {
     langBotton.classList.remove('close');
     langBotton.classList.add('open');
-    document.getElementById('nomal_text').style.display = "block";
-    document.getElementById('english_text').style.display = "none";
-    document.getElementById('nomal_button').style.display = "block";
-    document.getElementById('english_button').style.display = "none";
+    document.getElementById('nomalText').style.display = "block";
+    document.getElementById('englishText').style.display = "none";
+    document.getElementById('nomalButton').style.display = "block";
+    document.getElementById('englishButton').style.display = "none";
   }
-};
+}

@@ -8,20 +8,26 @@
 </head>
 
 <body>
-  <button id="button" class="open" onClick="langChange()">
+  <button id="button" class="open">
     <p id="nomalButton" style="display: block">English</p>
     <p id="englishButton" style="display: none">Undo</p>
   </button>
 
-  <h1 id="nomalText" style="display: block">東京都立大学システムデザイン学部インダストリアルアート学科</h1>
-  <h1 id="englishText" style="display: none">Department of Industrial Art</h1>
-  <h2 id="englishText" style="display: none">Faculty of Systems Design, Tokyo Metropolitan University</h2>
+  <h1 id="nomalTitle" style="display: block">東京都立大学システムデザイン学部インダストリアルアート学科</h1>
+  <h1 id="englishTitle" style="display: none">Department of Industrial Art</h1>
+  <h2 id="englishTitle2" style="display: none">Faculty of Systems Design, Tokyo Metropolitan University</h2>
   <div>Google SheetのデータをJSONで取得できるAPIを使ってサイトを構築しています。</div>
 
   <nav>
     <ul>
-      <li><a href="#aboutus">学科概要</a></li>
-      <li><a href="#works">作品</a></li>
+      <li><a href="#aboutus">
+          <h3>学科概要</h3>
+          <h3>Summary</h3>
+        </a></li>
+      <li><a href="#works">
+          <h3>作品</h3>
+          <h3>Works</h3>
+        </a></li>
       <li><a href="#class">カリキュラム</a></li>
       <li><a href="#studios">スタジオ紹介</a></li>
       <li><a href="#faculty">教員紹介</a></li>

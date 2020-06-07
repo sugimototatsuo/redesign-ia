@@ -37,8 +37,8 @@ getData();
 
 
 
-
-function langChnage() {
+/*
+document.getElementById("button").onclick = function () {
   var langBotton = document.getElementById("button");
   var langBottonClass = langBotton.getAttribute("class");
 
@@ -47,6 +47,7 @@ function langChnage() {
     langBotton.classList.add('close');
     document.getElementById('nomalText').style.display = "none";
     document.getElementById('englishText').style.display = "block";
+
     document.getElementById('nomalButton').style.display = "none";
     document.getElementById('englishButton').style.display = "block";
 
@@ -55,9 +56,47 @@ function langChnage() {
     langBotton.classList.add('open');
     document.getElementById('nomalText').style.display = "block";
     document.getElementById('englishText').style.display = "none";
+
     document.getElementById('nomalButton').style.display = "block";
     document.getElementById('englishButton').style.display = "none";
   }
 
+};
+*/
+/*
+function hoge(evt) {
+  var t = evt.target || evt.srcElement;
+  if (t.nodeName == "BUTTON")
+    fuga(t.getAttribute("name"));
 }
+*/
 
+document.getElementById("button").onclick = function () {
+  var langBotton = document.getElementById("button");
+  var langBottonClass = langBotton.getAttribute("class");
+
+  if (langBottonClass == "open") {
+    langBotton.classList.remove('open');
+    langBotton.classList.add('close');
+    document.getElementById('nomalButton').style.display = "none";
+    document.getElementById('englishButton').style.display = "block";
+    document.getElementById('nomalTitle').style.display = "none";
+    document.getElementById('englishTitle').style.display = "block";
+    document.getElementById('englishTitle2').style.display = "block";
+    document.getElementById('nomalText').style.display = "none";
+    document.getElementById('englishText').style.display = "block";
+
+  } else {
+    langBotton.classList.remove('close');
+    langBotton.classList.add('open');
+    document.getElementById('nomalButton').style.display = "block";
+    document.getElementById('englishButton').style.display = "none";
+    document.getElementById('nomalTitle').style.display = "block";
+    document.getElementById('englishTitle').style.display = "none";
+    document.getElementById('englishTitle2').style.display = "none";
+    document.getElementById('nomalText').style.display = "block";
+    document.getElementById('englishText').style.display = "none";
+
+  }
+
+};

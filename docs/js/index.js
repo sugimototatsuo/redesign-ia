@@ -8,11 +8,30 @@ const renderJson = (json) => {
   studios.forEach(studio => {
     const studioDiv = document.createElement('div');
     const studioTitle = document.createElement("span");
+    //const studioDisply = document.createElement("style");
     studioTitle.className = 'studio-title';
     studioTitle.textContent = studio['name-ja'];
+
     const studioTitleEn = document.createElement("span");
+    //const studioDisplyEn = document.createElement("style");
     studioTitleEn.className = 'studio-title-en';
     studioTitleEn.textContent = studio['name-en'];
+    studioTitle.style.display = "block";
+    studioTitleEn.style.display = "none";
+
+    document.getElementById("button").onclick = function () {
+      var langBotton = document.getElementById("button");
+      var langBottonClass = langBotton.getAttribute("class");
+
+      if (langBottonClass == "open") {
+        studioTitle.style.display = "none";
+        studioTitleEn.style.display = "block";
+      } else {
+        studioTitle.style.display = "block";
+        studioTitleEn.style.display = "none";
+      }
+    }
+
     studioDiv.appendChild(studioTitle);
     studioDiv.appendChild(studioTitleEn);
     document.getElementById('studios').appendChild(studioDiv);
@@ -58,8 +77,8 @@ document.getElementById("button").onclick = function () {
     document.getElementById('nomalText').style.display = "none";
     document.getElementById('englishText').style.display = "block";
 
-    document.getElementsByClassName('studio-title').style.display = "none";
-    document.getElementsByClassName('studio-title-en').style.display = "block";
+    document.getElementsById('studio-title').style.display = "none";
+    document.getElementsById('studio-title-en').style.display = "block";
 
   } else {
     langBotton.classList.remove('close');
@@ -78,8 +97,8 @@ document.getElementById("button").onclick = function () {
     document.getElementById('nomalText').style.display = "block";
     document.getElementById('englishText').style.display = "none";
 
-    document.getElementsByClassName('studio-title').style.display = "block";
-    document.getElementsByClassName('studio-title-en').style.display = "none";
+    document.getElementsById('studio-title').style.display = "block";
+    document.getElementsById('studio-title-en').style.display = "none";
 
   }
 

@@ -89,11 +89,16 @@ document.getElementById("button").onclick = function () {
       document.getElementById('englishSubtitle' + (i + 1).toString()).style.display = "block";
     }
 
+    for (var i = 0; i <= 8; i++) {
+      document.getElementById('nomalContentsTitle' + (i + 1).toString()).style.display = "none";
+      document.getElementById('englishContentsTitle' + (i + 1).toString()).style.display = "block";
+    }
+
     document.getElementById('nomalText').style.display = "none";
     document.getElementById('englishText').style.display = "block";
 
-    document.getElementById('nomalWorkTitle').style.display = "none";
-    document.getElementById('englishWorkTitle').style.display = "block";
+    //document.getElementById('nomalWorkTitle').style.display = "none";
+    //document.getElementById('englishWorkTitle').style.display = "block";
     document.getElementById('nomalWorkText').style.display = "none";
     document.getElementById('englishWorkText').style.display = "block";
     //document.getElementById('nomalWorkReturn').style.display = "none";
@@ -124,11 +129,16 @@ document.getElementById("button").onclick = function () {
       document.getElementById('englishSubtitle' + (i + 1).toString()).style.display = "none";
     }
 
+    for (var i = 0; i <= 8; i++) {
+      document.getElementById('nomalContentsTitle' + (i + 1).toString()).style.display = "block";
+      document.getElementById('englishContentsTitle' + (i + 1).toString()).style.display = "none";
+    }
+
     document.getElementById('nomalText').style.display = "block";
     document.getElementById('englishText').style.display = "none";
 
-    document.getElementById('nomalWorkTitle').style.display = "block";
-    document.getElementById('englishWorkTitle').style.display = "none";
+    //document.getElementById('nomalWorkTitle').style.display = "block";
+    //document.getElementById('englishWorkTitle').style.display = "none";
     document.getElementById('nomalWorkText').style.display = "block";
     document.getElementById('englishWorkText').style.display = "none";
     //document.getElementById('nomalWorkReturn').style.display = "block";

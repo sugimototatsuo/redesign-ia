@@ -1,51 +1,61 @@
 const uri = 'https://script.google.com/macros/s/AKfycbxyacpN8y4nxSAnU0Eji6E_rBRDFTY7YoWWFa0clY5ELRhskgpt/exec';
-const id = '1BpGnuwC4lZf9G2yFyiSrxbJuGO8gviV8mr-I2D3x4vA';
-const sheet = 'studio';
-const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 
-//let mode = 1;
+const id = '1BpGnuwC4lZf9G2yFyiSrxbJuGO8gviV8mr-I2D3x4vA';
+const sheet = 'Studio';
+const sheet2 = "Faculty";
+const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
+const endpoint2 = `${uri}?id=${id}&sheet=${sheet2}`;
+
 
 const renderJson = (json) => {
   const studios = json.records;
-  studios.forEach(studio => {
+  studios.forEach(studios => {
     const nomalStudioDiv = document.createElement('div');
     const nomalStudioTitle = document.createElement("span");
     nomalStudioTitle.className = 'studio-title';
-    nomalStudioTitle.textContent = studio['name-ja'];
-
+    nomalStudioTitle.textContent = studios['name-ja'];
 
     const englishStudioDiv = document.createElement('div');
     const englishStudioTitle = document.createElement("span");
 
     englishStudioTitle.className = 'studio-title-en';
-    englishStudioTitle.textContent = studio['name-en'];
-
-    englishStudioDiv.appendChild(englishStudioTitle);
-    document.getElementById('englishStudios').appendChild(englishStudioDiv);
-    /*
-    const studioTitleEn = document.createElement("span");
-    studioTitleEn.className = 'studio-title-en';
-    studioTitleEn.textContent = studio['name-en'];
-    studioTitle.style.display = "block";
-    studioTitleEn.style.display = "none";
-    */
+    englishStudioTitle.textContent = studios['name-en'];
 
     nomalStudioDiv.appendChild(nomalStudioTitle);
-    //nomalStudioDiv.appendChild(studioTitleEn);
     document.getElementById('nomalStudios').appendChild(nomalStudioDiv);
+    englishStudioDiv.appendChild(englishStudioTitle);
+    document.getElementById('englishStudios').appendChild(englishStudioDiv);
+
   });
+
   document.getElementById('result').textContent = JSON.stringify(json, null, 2);
 }
 
-/*
-const renderJson = (json) => {
-  const englishStudios = json.records;
-  englishStudios.forEach(studio => {
-    
+
+const renderJson2 = (json) => {
+  const faculty = json.records;
+  faculty.forEach(faculty => {
+    const nomalFacultyDiv = document.createElement('div');
+    const nomalFacultyTitle = document.createElement("span");
+    nomalFacultyTitle.className = 'faculty-title';
+    nomalFacultyTitle.textContent = faculty['f-faculty-ja'];
+
+    const englishFacultyDiv = document.createElement('div');
+    const englishFacultyTitle = document.createElement("span");
+
+    englishFacultyTitle.className = 'faculty-title-en';
+    englishFacultyTitle.textContent = faculty['f-faculty-en'];
+
+    nomalFacultyDiv.appendChild(nomalFacultyTitle);
+    document.getElementById('nomalFaculty').appendChild(nomalFacultyDiv);
+    englishFacultyDiv.appendChild(englishFacultyTitle);
+    document.getElementById('englishFaculty').appendChild(englishFacultyDiv);
   });
+
   document.getElementById('result').textContent = JSON.stringify(json, null, 2);
 }
-*/
+
+
 
 document.getElementById("button").onclick = function () {
   var langBotton = document.getElementById("button");
@@ -70,7 +80,9 @@ document.getElementById("button").onclick = function () {
 
     document.getElementById('nomalStudios').style.display = "none";
     document.getElementById('englishStudios').style.display = "block";
-    // mode = 2;
+
+    document.getElementById('nomalFaculty').style.display = "none";
+    document.getElementById('englishFaculty').style.display = "block";
 
   } else {
     langBotton.classList.remove('close');
@@ -91,10 +103,13 @@ document.getElementById("button").onclick = function () {
 
     document.getElementById('nomalStudios').style.display = "block";
     document.getElementById('englishStudios').style.display = "none";
-    //mode = 1;
+
+    document.getElementById('nomalFaculty').style.display = "block";
+    document.getElementById('englishFaculty').style.display = "none";
   }
 
 };
+
 
 const getData = async () => {
   try {
@@ -103,6 +118,16 @@ const getData = async () => {
       let jsonResponse = await response.json();
       renderJson(jsonResponse);
     }
+
+
+    const response2 = await fetch(endpoint2);
+    if (response2.ok) {
+      let jsonResponse2 = await response2.json();
+      renderJson2(jsonResponse2);
+    }
+
+
+
   }
   catch (error) {
     console.log(error);

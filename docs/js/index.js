@@ -37,17 +37,23 @@ const renderJson2 = (json) => {
   faculty.forEach(faculty => {
     const nomalFacultyDiv = document.createElement('div');
     const nomalFacultyTitle = document.createElement("span");
+    const nomalFacultyImage = document.createElement("img");
     nomalFacultyTitle.className = 'faculty-title';
+    //nomalFacultyTitle.parse = "data":['faculty-photo'];
     nomalFacultyTitle.textContent = faculty['f-faculty-ja'];
+    nomalFacultyImage.src = faculty['faculty-photo'];
 
     const englishFacultyDiv = document.createElement('div');
     const englishFacultyTitle = document.createElement("span");
-
+    const englishFacultyImage = document.createElement("img");
     englishFacultyTitle.className = 'faculty-title-en';
     englishFacultyTitle.textContent = faculty['f-faculty-en'];
+    englishFacultyImage.src = faculty['faculty-photo'];
 
+    nomalFacultyDiv.appendChild(nomalFacultyImage);
     nomalFacultyDiv.appendChild(nomalFacultyTitle);
     document.getElementById('nomalFaculty').appendChild(nomalFacultyDiv);
+    englishFacultyDiv.appendChild(englishFacultyImage);
     englishFacultyDiv.appendChild(englishFacultyTitle);
     document.getElementById('englishFaculty').appendChild(englishFacultyDiv);
   });

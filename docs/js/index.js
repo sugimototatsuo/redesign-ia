@@ -66,12 +66,20 @@ const renderJson2 = (json) => {
 document.getElementById("button").onclick = function () {
   var langBotton = document.getElementById("button");
   var langBottonClass = langBotton.getAttribute("class");
+  //var langBottonWork = document.getElementById("buttonWork");
+  //var langBottonWorkClass = langBotton.getAttribute("class");
 
   if (langBottonClass == "open") {
     langBotton.classList.remove('open');
     langBotton.classList.add('close');
+    //langBottonWork.classList.remove('open');
+    //langBottonWork.classList.add('close');
+
     document.getElementById('nomalButton').style.display = "none";
     document.getElementById('englishButton').style.display = "block";
+    //document.getElementById('nomalButtonWork').style.display = "none";
+    //document.getElementById('englishButtonWork').style.display = "block";
+
     document.getElementById('nomalTitle').style.display = "none";
     document.getElementById('englishTitle').style.display = "block";
     document.getElementById('englishTitle2').style.display = "block";
@@ -84,17 +92,29 @@ document.getElementById("button").onclick = function () {
     document.getElementById('nomalText').style.display = "none";
     document.getElementById('englishText').style.display = "block";
 
+    document.getElementById('nomalWorkTitle').style.display = "none";
+    document.getElementById('englishWorkTitle').style.display = "block";
+    document.getElementById('nomalWorkText').style.display = "none";
+    document.getElementById('englishWorkText').style.display = "block";
+    //document.getElementById('nomalWorkReturn').style.display = "none";
+    //document.getElementById('englishWorkReturn').style.display = "block";
+
     document.getElementById('nomalStudios').style.display = "none";
     document.getElementById('englishStudios').style.display = "block";
 
     document.getElementById('nomalFaculty').style.display = "none";
     document.getElementById('englishFaculty').style.display = "block";
 
-  } else {
+  } else if (langBottonClass == "close") {
     langBotton.classList.remove('close');
     langBotton.classList.add('open');
+    //langBottonWork.classList.remove('close');
+    //langBottonWork.classList.add('open');
     document.getElementById('nomalButton').style.display = "block";
     document.getElementById('englishButton').style.display = "none";
+    //document.getElementById('nomalButtonWork').style.display = "block";
+    //document.getElementById('englishButtonWork').style.display = "none";
+
     document.getElementById('nomalTitle').style.display = "block";
     document.getElementById('englishTitle').style.display = "none";
     document.getElementById('englishTitle2').style.display = "none";
@@ -106,6 +126,13 @@ document.getElementById("button").onclick = function () {
 
     document.getElementById('nomalText').style.display = "block";
     document.getElementById('englishText').style.display = "none";
+
+    document.getElementById('nomalWorkTitle').style.display = "block";
+    document.getElementById('englishWorkTitle').style.display = "none";
+    document.getElementById('nomalWorkText').style.display = "block";
+    document.getElementById('englishWorkText').style.display = "none";
+    //document.getElementById('nomalWorkReturn').style.display = "block";
+    //document.getElementById('englishWorkReturn').style.display = "none";
 
     document.getElementById('nomalStudios').style.display = "block";
     document.getElementById('englishStudios').style.display = "none";

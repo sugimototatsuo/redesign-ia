@@ -7,12 +7,12 @@ const renderJson = (json) => {
   const studios = json.records;
   studios.forEach(studio => {
     const studioDiv = document.createElement('div');
-    const studioTitle = document.createElement("span");
-    studioTitle.className = 'studio-title';
-    studioTitle.textContent = studio['name-ja'];
-    const studioTitleEn = document.createElement("span");
+    const studioTitle = document.createElement("span");//span要素の作成
+    studioTitle.className = 'studio-title';//クラスの名前をつけてCSSで指定できるようにしている
+    studioTitle.textContent = studio['name-ja'];//[データシート上のkey]
+    const studioTitleEn = document.createElement("span");//新たにspan要素の作成　-jaと同上  
     studioTitleEn.className = 'studio-title-en';
-    studioTitleEn.textContent = studio['name-en'];//[データシート上のkey]
+    studioTitleEn.textContent = studio['name-en'];
     studioDiv.appendChild(studioTitle);//親ノードstudioDivに子ノードstudioTitleを追加、要素の集合体をノードという
     studioDiv.appendChild(studioTitleEn);
     document.getElementById('studios').appendChild(studioDiv);//HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加

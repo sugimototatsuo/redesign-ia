@@ -12,8 +12,12 @@ const renderJson = (json) => {
   studios.forEach(studios => {
     const nomalStudioDiv = document.createElement('div');
     const nomalStudioTitle = document.createElement("span");
+    //var studioLink = nomalStudioDiv.firstChild.nodeValue;
+    const nomalStudioLink = document.createElement("a");
     nomalStudioTitle.className = 'studio-title';
     nomalStudioTitle.textContent = studios['name-ja'];
+    nomalStudioLink.href = "./html./studios['name.en'].html";
+    //nomalStudioLink.appendChild(document.createTextNode(studioLink));
 
     const englishStudioDiv = document.createElement('div');
     const englishStudioTitle = document.createElement("span");
@@ -21,6 +25,7 @@ const renderJson = (json) => {
     englishStudioTitle.className = 'studio-title-en';
     englishStudioTitle.textContent = studios['name-en'];
 
+    nomalStudioDiv.appendChild(nomalStudioLink);
     nomalStudioDiv.appendChild(nomalStudioTitle);
     document.getElementById('nomalStudios').appendChild(nomalStudioDiv);
     englishStudioDiv.appendChild(englishStudioTitle);

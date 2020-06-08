@@ -1,17 +1,103 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
-    <link rel="stylesheet" href="styles/styles.css">
-  </head>
-  <body>
-    <h1>東京都立大学システムデザイン学部インダストリアルアート学科</h1>
-    <h2>Department of Industrial Art</h2>
-    <h2>Faculty of Systems Design, Tokyo Metropolitan University</h2>
-    <div>Google SheetのデータをJSONで取得できるAPIを使ってサイトを構築しています。</div>
-    <div id="studios"></div>
-    <pre id="result"></pre>
-    <script src="js/index.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+  <button id="button" class="open">
+    <p id="nomalButton" style="display: block">English</p>
+    <p id="englishButton" style="display: none">Undo</p>
+  </button>
+
+  <h1 id="nomalTitle" style="display: block">東京都立大学システムデザイン学部インダストリアルアート学科</h1>
+  <h1 id="englishTitle" style="display: none">Department of Industrial Art</h1>
+  <h2 id="englishTitle2" style="display: none">Faculty of Systems Design, Tokyo Metropolitan University</h2>
+  <div>Google SheetのデータをJSONで取得できるAPIを使ってサイトを構築しています。</div>
+
+  <nav>
+    <ul>
+      <li><a href="#aboutus">
+          <h3 id=nomalSubtitle1 style="display: block">学科概要</h3>
+          <h3 id=englishSubtitle1 style="display: none">Summary</h3>
+        </a></li>
+      <li><a href="#works">
+          <h3 id=nomalSubtitle2 style="display: block">作品</h3>
+          <h3 id=englishSubtitle2 style="display: none">Works</h3>
+        </a></li>
+      <li><a href="#curriculum">
+          <h3 id=nomalSubtitle3 style="display: block">カリキュラム</h3>
+          <h3 id=englishSubtitle3 style="display: none">Curriculum</h3>
+        </a></li>
+      <li><a href="#studios">
+          <h3 id=nomalSubtitle4 style="display: block">スタジオ紹介</h3>
+          <h3 id=englishSubtitle4 style="display: none">Studios</h3>
+        </a></li>
+      <li><a href="#faculty">
+          <h3 id=nomalSubtitle5 style="display: block">教員紹介</h3>
+          <h3 id=englishSubtitle5 style="display: none">Faculty</h3>
+      <li><a href="#admission">
+          <h3 id=nomalSubtitle6 style="display: block">入試概要</h3>
+          <h3 id=englishSubtitle6 style="display: none">Admission</h3>
+        </a></li>
+      <li><a href="#question">
+          <h3 id=nomalSubtitle7 style="display: block">よくある質問</h3>
+          <h3 id=englishSubtitle7 style="display: none">Q&A</h3>
+        </a></li>
+      <li><a href="#access">
+          <h3 id=nomalSubtitle8 style="display: block">アクセス</h3>
+          <h3 id=englishSubtitle8 style="display: none">Access</h3>
+        </a></li>
+      <li><a href="#column">
+          <h3 id=nomalSubtitle9 style="display: block">おまけ</h3>
+          <h3 id=englishSubtitle9 style="display: none">Column</h3>
+        </a></li>
+    </ul>
+  </nav>
+
+
+  <div id="aboutus">
+    <p id="nomalText" style="display: block">
+      システムデザイン研究科インダストリアルアート学域では、これまでの工学的かつ文化的な基盤をひとつにすることで、
+      現代社会の新たなデザイン·アート領域の研究者や創造·研究·実践の担い手の育成を、「プロダクトデザイン」と「メディア創生」の
+      2つの研究分野から図っています。「プロダクトデザイン」は、交通機関、家電製品、工業製品、家具、住空間、公共空間などの
+      デザインや人間工学など、人と環境の双方からのアプローチでものづくりを展開しています。「メディア創生」は、
+      グラフィック、先端メディア、テクノロジーおよびデザイン、アートにかかわる革新的なモノやコトを創出しています。
+    </p>
+    <p id="englishText" style="display: none">
+      What is aim of the Department of lndustrial Art? To integrate engineering
+      and design, bring together the fundamentals of technology and culture, to pursue the leading edge where skilled
+      craftsmanship meets information technology refining both technology and sensibility, and resulting in new value
+      creation.
+    </p>
+  </div>
+
+  <div id="works">
+    <h3 id="nomalWorkTitle" style="display: block">作品紹介</h3>
+    <h3 id="englishWorkTitle" style="display: none">Works</h3>
+    <a href="./html/work.html" title="seeMore">
+      <p id="nomalWorkText" style="display: block">もっと見る</p>
+      <p id="englishWorkText" style="display: none">see more</p>
+    </a>
+  </div>
+  <div id="curriculum"></div>
+  <div id="studios">
+    <div id="nomalStudios" style="display: block"></div>
+    <div id="englishStudios" style="display: none"></div>
+  </div>
+  <div id="faculty">
+    <div id="nomalFaculty" style="display: block"></div>
+    <div id="englishFaculty" style="display: none"></div>
+  </div>
+  <div id="admission"></div>
+  <div id="question"></div>
+  <div id="access"></div>
+  <div id="colum"></div>
+  <pre id="result"></pre>
+  <script src="js/index.js"></script>
+</body>
+
 </html>

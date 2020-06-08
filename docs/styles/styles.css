@@ -6,12 +6,34 @@ h1, h2 {
   font-weight: 400;
   color: steelblue;
 }
-#studios > div {
+#nomalStudios > div {
   margin: 1em 0;
   padding: 0.5em;
   background: #f8f8f8;
   min-height: 3em;
 }
+
+#englishStudios > div {
+  margin: 1em 0;
+  padding: 0.5em;
+  background: #f8f8f8;
+  min-height: 3em;
+}
+
+#nomalFaculty > div {
+  margin: 1em 0;
+  padding: 0.5em;
+  background: #f8f8f8;
+  min-height: 3em;
+}
+
+#englishFaculty > div {
+  margin: 1em 0;
+  padding: 0.5em;
+  background: #f8f8f8;
+  min-height: 3em;
+}
+
 .studio-title {
   font-weight: bold;
 }

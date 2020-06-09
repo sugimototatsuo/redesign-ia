@@ -11,24 +11,30 @@ const renderJson = (json) => {
   const studios = json.records;
   studios.forEach(studios => {
     const nomalStudioDiv = document.createElement('div');
-    const nomalStudioTitle = document.createElement("span");
-    //var studioLink = nomalStudioDiv.firstChild.nodeValue;
+    //const nomalStudioTitle = document.createElement("span");
     const nomalStudioLink = document.createElement("a");
-    nomalStudioTitle.className = 'studio-title';
-    nomalStudioTitle.textContent = studios['name-ja'];
-    nomalStudioLink.href = "./html./studios['name.en'].html";
-    //nomalStudioLink.appendChild(document.createTextNode(studioLink));
+    //nomalStudioTitle.className = 'studio-title';
+    //nomalStudioTitle.textContent = studios['name-ja'];
+    nomalStudioLink.className = 'studio-title';
+    nomalStudioLink.href = "./html/" + studios['name-short'].toString() + ".html";
+    nomalStudioLink.textContent = studios['name-ja'];
 
     const englishStudioDiv = document.createElement('div');
-    const englishStudioTitle = document.createElement("span");
+    //const englishStudioTitle = document.createElement("span");
+    const englishStudioLink = document.createElement("a");
 
-    englishStudioTitle.className = 'studio-title-en';
-    englishStudioTitle.textContent = studios['name-en'];
+    //englishStudioTitle.className = 'studio-title-en';
+    //englishStudioTitle.textContent = studios['name-en'];
+    englishStudioLink.className = 'studio-title-en';
+    englishStudioLink.href = "./html/" + studios['name-short'].toString() + ".html";
+    englishStudioLink.textContent = studios['name-en'];
 
+
+    //nomalStudioDiv.appendChild(nomalStudioTitle);
     nomalStudioDiv.appendChild(nomalStudioLink);
-    nomalStudioDiv.appendChild(nomalStudioTitle);
     document.getElementById('nomalStudios').appendChild(nomalStudioDiv);
-    englishStudioDiv.appendChild(englishStudioTitle);
+    //englishStudioDiv.appendChild(englishStudioTitle);
+    englishStudioDiv.appendChild(englishStudioLink);
     document.getElementById('englishStudios').appendChild(englishStudioDiv);
 
   });

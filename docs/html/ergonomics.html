@@ -4,15 +4,30 @@
 <head>
     <meta charset="utf-8">
     <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="../styles/styles.css">
 </head>
 
 <body>
+    <button id="button" class="open">
+        <p id="nomalButton" style="display: block">English</p>
+        <p id="englishButton" style="display: none">Undo</p>
+    </button>
+
+    <h1 id=nomalTitle style="display: block">エルゴノミックデザインスタジオ</h1>
+    <h1 id="englishTitle" style="display: none">Ergonomics Design Studio</h1>
+
     <a href="../index.html" title="returnIndex">
-        <p id="nomaReturn" style="display: block">もどる</p>
+        <p id="nomalReturn" style="display: block">もどる</p>
         <p id="englishReturn" style="display: none">Return</p>
     </a>
-    <script src="js/index.js"></script>
+
+    <div id="studios">
+        <h3 id="nomalContentsTitle4" style="display: block">他のスタジオを見る</h3>
+        <h3 id="englishContentsTitle4" style="display: none">Other Studios</h3>
+        <div id="nomalStudios" style="display: block"></div>
+        <div id="englishStudios" style="display: none"></div>
+    </div>
+    <script src="../js/js2.js"></script>
 </body>
 
 </html>

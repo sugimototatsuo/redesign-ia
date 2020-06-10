@@ -169,6 +169,14 @@ document.getElementById("button").onclick = function () {
 
 };
 
+/*
+function openner(link) {
+
+  window.open(link, "window_open", "width=600,height=400");
+
+}
+*/
+
 
 const getData = async () => {
   try {

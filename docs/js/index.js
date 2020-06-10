@@ -31,7 +31,7 @@ const renderJson = (json) => {
     englishStudioLink.className = 'studio-title-en';
     englishStudioLink.href = "./html/" + studios['name-short'].toString() + ".html";
     englishStudioLink.textContent = studios['name-en'];
-    englishStudioImage.src = studios['photo2'];
+    englishStudioImage.src = studios['photo2'], width = 300;
 
 
     nomalStudioDiv.appendChild(nomalStudioImage);

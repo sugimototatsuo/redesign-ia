@@ -8,16 +8,33 @@
 </head>
 
 <body>
-    <button id="buttonWork" class="open">
-        <p id="nomalButtonWork" style="display: block">English</p>
-        <p id="englishButtonWork" style="display: none">Undo</p>
+    <button id="button" class="open">
+        <p id="nomalButton" style="display: block">English</p>
+        <p id="englishButton" style="display: none">Undo</p>
     </button>
 
+    <h1 id=nomalTitle style="display: block">学生作品</h1>
+    <h1 id="englishTitle" style="display: none">Student's Works</h1>
+
+    <div id="works">
+        <!--<a href="./html/d-pro01.html" target="window_open" onClick="openner('./html/d-pro01.html'); return false;">-->
+        <a href="d-pro01.html">
+            <img src="../image/d-pro01.png" title="DP" width="22.5%" height="22.5%">
+        </a>
+        <a href="space01.html">
+            <img src="../image/space01.JPG" title="space" width="30%" height="30%">
+        </a>
+        <a href="tum.html">
+            <img src="../image/tum02.jpg" title="tanb" width="31%" height="31%">
+        </a>
+    </div>
+
     <a href="../index.html" title="returnIndex">
-        <p id="nomalWorkReturn" style="display: block">もどる</p>
-        <p id="englishWorkReturn" style="display: none">Return</p>
+        <p id="nomalReturn" style="display: block">TOPへもどる</p>
+        <p id="englishReturn" style="display: none">Return to Top</p>
     </a>
-    <script src="js/index.js"></script>
+    <script src="../js/work.js"></script>
+
 </body>
 
 </html>

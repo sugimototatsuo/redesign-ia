@@ -13,8 +13,12 @@ const renderJson = (json) => {
     const studioTitleEn = document.createElement("span");//新たにspan要素の作成　-jaと同上  
     studioTitleEn.className = 'studio-title-en';
     studioTitleEn.textContent = studio['name-en'];
-    studioDiv.appendChild(studioTitle);//親ノードstudioDivに子ノードstudioTitleを追加、要素の集合体をノードという
+    const studioCore = document.createElement("span");//新たにspan要素の作成　-jaと同上  
+    studioCore.className = 'studio-core';
+    studioCore.textContent = studio['core-ja'];
+    studioDiv.appendChild(studioTitle);
     studioDiv.appendChild(studioTitleEn);
+    studioDiv.appendChild(studioCore);
     document.getElementById('studios').appendChild(studioDiv);//HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
   });
   document.getElementById('result').textContent = JSON.stringify(json, null, 2);//JavaScript のオブジェクトや値を JSON 文字列に変換させて、HTML上のresultというidがついたdivに付与？する。最後の引数は上限が10のスペーシング 変わってんのかわからない

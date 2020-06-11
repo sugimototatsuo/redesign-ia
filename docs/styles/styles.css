@@ -20,6 +20,9 @@ h1, h2 {
   font-weight: 100;
   opacity: 0.75;
 }
+.studio-core{
+  font-weight: bold;
+}
 pre#result {
   background-color: #444;
   color: #fff;

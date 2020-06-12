@@ -78,13 +78,15 @@ const renderJson2 = (json) => {
 }
 
 
-//aaaaaaaaaa
+
 document.getElementById("button").onclick = function () {
   var langBotton = document.getElementById("button");
   var langBottonClass = langBotton.getAttribute("class");
   //var langBottonWork = document.getElementById("buttonWork");
   //var langBottonWorkClass = langBotton.getAttribute("class");
 
+
+  //ボタンで言葉の切り替え
   if (langBottonClass == "open") {
     langBotton.classList.remove('open');
     langBotton.classList.add('close');
@@ -93,21 +95,24 @@ document.getElementById("button").onclick = function () {
 
     document.getElementById('nomalButton').style.display = "none";
     document.getElementById('englishButton').style.display = "block";
-    //document.getElementById('nomalButtonWork').style.display = "none";
-    //document.getElementById('englishButtonWork').style.display = "block";
+    document.getElementById('nomalButton2').style.display = "block";
+    document.getElementById('easyButton2').style.display = "none";
 
     document.getElementById('nomalTitle').style.display = "none";
+    document.getElementById('easyTitle').style.display = "none";
     document.getElementById('englishTitle').style.display = "block";
     document.getElementById('englishTitle2').style.display = "block";
 
     for (var i = 0; i <= 8; i++) {
       document.getElementById('nomalSubtitle' + (i + 1).toString()).style.display = "none";
+      document.getElementById('easySubtitle' + (i + 1).toString()).style.display = "none";
       document.getElementById('englishSubtitle' + (i + 1).toString()).style.display = "block";
     }
 
     for (var i = 0; i <= 8; i++) {
       document.getElementById('nomalContentsTitle' + (i + 1).toString()).style.display = "none";
       document.getElementById('englishContentsTitle' + (i + 1).toString()).style.display = "block";
+      document.getElementById('easyContentsTitle' + (i + 1).toString()).style.display = "none";
     }
 
     document.getElementById('nomalText').style.display = "none";
@@ -117,6 +122,9 @@ document.getElementById("button").onclick = function () {
     //document.getElementById('englishWorkTitle').style.display = "block";
     document.getElementById('nomalWorkText').style.display = "none";
     document.getElementById('englishWorkText').style.display = "block";
+    document.getElementById('nomalCurrText').style.display = "none";
+    document.getElementById('englishCurrText').style.display = "block";
+    document.getElementById('easyCurrText').style.display = "none";
     //document.getElementById('nomalWorkReturn').style.display = "none";
     //document.getElementById('englishWorkReturn').style.display = "block";
 
@@ -133,21 +141,24 @@ document.getElementById("button").onclick = function () {
     //langBottonWork.classList.add('open');
     document.getElementById('nomalButton').style.display = "block";
     document.getElementById('englishButton').style.display = "none";
-    //document.getElementById('nomalButtonWork').style.display = "block";
-    //document.getElementById('englishButtonWork').style.display = "none";
+    document.getElementById('nomalButton2').style.display = "block";
+    document.getElementById('easyButton2').style.display = "none";
 
     document.getElementById('nomalTitle').style.display = "block";
+    document.getElementById('easyTitle').style.display = "none";
     document.getElementById('englishTitle').style.display = "none";
     document.getElementById('englishTitle2').style.display = "none";
 
     for (var i = 0; i <= 8; i++) {
       document.getElementById('nomalSubtitle' + (i + 1).toString()).style.display = "block";
+      document.getElementById('easySubtitle' + (i + 1).toString()).style.display = "none";
       document.getElementById('englishSubtitle' + (i + 1).toString()).style.display = "none";
     }
 
     for (var i = 0; i <= 8; i++) {
       document.getElementById('nomalContentsTitle' + (i + 1).toString()).style.display = "block";
       document.getElementById('englishContentsTitle' + (i + 1).toString()).style.display = "none";
+      document.getElementById('easyContentsTitle' + (i + 1).toString()).style.display = "none";
     }
 
     document.getElementById('nomalText').style.display = "block";
@@ -157,6 +168,112 @@ document.getElementById("button").onclick = function () {
     //document.getElementById('englishWorkTitle').style.display = "none";
     document.getElementById('nomalWorkText').style.display = "block";
     document.getElementById('englishWorkText').style.display = "none";
+    document.getElementById('nomalCurrText').style.display = "block";
+    document.getElementById('englishCurrText').style.display = "none";
+    document.getElementById('easyCurrText').style.display = "none";
+    //document.getElementById('nomalWorkReturn').style.display = "block";
+    //document.getElementById('englishWorkReturn').style.display = "none";
+
+    document.getElementById('nomalStudios').style.display = "block";
+    document.getElementById('englishStudios').style.display = "none";
+
+    document.getElementById('nomalFaculty').style.display = "block";
+    document.getElementById('englishFaculty').style.display = "none";
+  }
+
+};
+
+//やさしいにほんご
+document.getElementById("button2").onclick = function () {
+  var langBotton2 = document.getElementById("button2");
+  var langBotton2Class = langBotton2.getAttribute("class");
+  //var langBottonWork = document.getElementById("buttonWork");
+  //var langBottonWorkClass = langBotton.getAttribute("class");
+
+  if (langBotton2Class == "open") {
+    langBotton2.classList.remove('open');
+    langBotton2.classList.add('close');
+    //langBottonWork.classList.remove('open');
+    //langBottonWork.classList.add('close');
+
+    document.getElementById('nomalButton').style.display = "block";
+    document.getElementById('englishButton').style.display = "none";
+    document.getElementById('nomalButton2').style.display = "none";
+    document.getElementById('easyButton2').style.display = "block";
+
+    document.getElementById('nomalTitle').style.display = "none";
+    document.getElementById('easyTitle').style.display = "block";
+    document.getElementById('englishTitle').style.display = "none";
+    document.getElementById('englishTitle2').style.display = "none";
+
+    for (var i = 0; i <= 8; i++) {
+      document.getElementById('easySubtitle' + (i + 1).toString()).style.display = "block";
+      document.getElementById('nomalSubtitle' + (i + 1).toString()).style.display = "none";
+      document.getElementById('englishSubtitle' + (i + 1).toString()).style.display = "none";
+    }
+
+    for (var i = 0; i <= 8; i++) {
+      document.getElementById('nomalContentsTitle' + (i + 1).toString()).style.display = "none";
+      document.getElementById('englishContentsTitle' + (i + 1).toString()).style.display = "none";
+      document.getElementById('easyContentsTitle' + (i + 1).toString()).style.display = "block";
+    }
+
+    document.getElementById('nomalText').style.display = "none";
+    document.getElementById('englishText').style.display = "none";
+
+    //document.getElementById('nomalWorkTitle').style.display = "none";
+    //document.getElementById('englishWorkTitle').style.display = "block";
+    document.getElementById('nomalWorkText').style.display = "none";
+    document.getElementById('englishWorkText').style.display = "none";
+    document.getElementById('nomalCurrText').style.display = "none";
+    document.getElementById('englishCurrText').style.display = "none";
+    document.getElementById('easyCurrText').style.display = "block";
+    //document.getElementById('nomalWorkReturn').style.display = "none";
+    //document.getElementById('englishWorkReturn').style.display = "block";
+
+    document.getElementById('nomalStudios').style.display = "none";
+    document.getElementById('englishStudios').style.display = "none";
+
+    document.getElementById('nomalFaculty').style.display = "none";
+    document.getElementById('englishFaculty').style.display = "none";
+
+  } else if (langBotton2Class == "close") {
+    langBotton2.classList.remove('close');
+    langBotton2.classList.add('open');
+    //langBottonWork.classList.remove('close');
+    //langBottonWork.classList.add('open');
+    document.getElementById('nomalButton').style.display = "block";
+    document.getElementById('englishButton').style.display = "none";
+    document.getElementById('nomalButton2').style.display = "block";
+    document.getElementById('easyButton2').style.display = "none";
+
+    document.getElementById('nomalTitle').style.display = "block";
+    document.getElementById('easyTitle').style.display = "none";
+    document.getElementById('englishTitle').style.display = "none";
+    document.getElementById('englishTitle2').style.display = "none";
+
+    for (var i = 0; i <= 8; i++) {
+      document.getElementById('nomalSubtitle' + (i + 1).toString()).style.display = "block";
+      document.getElementById('easySubtitle' + (i + 1).toString()).style.display = "none";
+      document.getElementById('englishSubtitle' + (i + 1).toString()).style.display = "none";
+    }
+
+    for (var i = 0; i <= 8; i++) {
+      document.getElementById('nomalContentsTitle' + (i + 1).toString()).style.display = "block";
+      document.getElementById('englishContentsTitle' + (i + 1).toString()).style.display = "none";
+      document.getElementById('easyContentsTitle' + (i + 1).toString()).style.display = "none";
+    }
+
+    document.getElementById('nomalText').style.display = "block";
+    document.getElementById('englishText').style.display = "none";
+
+    //document.getElementById('nomalWorkTitle').style.display = "block";
+    //document.getElementById('englishWorkTitle').style.display = "none";
+    document.getElementById('nomalWorkText').style.display = "block";
+    document.getElementById('englishWorkText').style.display = "none";
+    document.getElementById('nomalCurrText').style.display = "block";
+    document.getElementById('englishCurrText').style.display = "none";
+    document.getElementById('easyCurrText').style.display = "none";
     //document.getElementById('nomalWorkReturn').style.display = "block";
     //document.getElementById('englishWorkReturn').style.display = "none";
 

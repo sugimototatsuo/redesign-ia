@@ -96,3 +96,13 @@ const getData3 = async () => {
 }
 
 getData3();
+
+
+
+let lottieObj = lottie.loadAnimation({
+  container: document.getElementById('sampleAnime'), // 表示させたい要素を渡します
+  renderer: 'svg', // 描画形式を指定します. // svg or canvas or html svg以外ちゃんとためしてないですが
+  loop: true, // trueにしたらループです。1回再生の場合はfalseで
+  autoplay: true, // 自動再生です。falseの場合は自分のタイミングで
+  path: 'https://assets6.lottiefiles.com/packages/lf20_lp3wO4.json' // 再生させたいアニメーションのjsonのパスを指定します。リンクだといけるな…なんだそれ
+});

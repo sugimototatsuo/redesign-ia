@@ -11,6 +11,7 @@ const endpoint3 = `${uri}?id=${id}&sheet=${sheet3}`;
 
 const renderJson = (json) => {
   const studios = json.records;
+  studios.pop();
   studios.forEach(studios => {
     const nomalStudioDiv = document.createElement('div');
     //const nomalStudioTitle = document.createElement("span");
@@ -54,6 +55,7 @@ const renderJson = (json) => {
 
 const renderJson2 = (json) => {
   const faculty = json.records;
+  faculty.pop();
   faculty.forEach(faculty => {
     const nomalFacultyDiv = document.createElement('div');
     const nomalFacultyname = document.createElement("span");
@@ -109,6 +111,7 @@ const renderJson2 = (json) => {
 
 const renderJson3 = (json) => {
   const link = json.records;
+  link.pop();
   link.forEach(link => {
     const nomalLinkDiv = document.createElement('div');
     const nomalLinkTitle = document.createElement("a");

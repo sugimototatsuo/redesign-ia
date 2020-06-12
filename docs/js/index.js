@@ -3,8 +3,10 @@ const uri = 'https://script.google.com/macros/s/AKfycbxyacpN8y4nxSAnU0Eji6E_rBRD
 const id = '1BpGnuwC4lZf9G2yFyiSrxbJuGO8gviV8mr-I2D3x4vA';
 const sheet = 'Studio';
 const sheet2 = "Faculty";
+const sheet3 = 'Link';
 const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 const endpoint2 = `${uri}?id=${id}&sheet=${sheet2}`;
+const endpoint3 = `${uri}?id=${id}&sheet=${sheet3}`;
 
 
 const renderJson = (json) => {
@@ -52,26 +54,93 @@ const renderJson2 = (json) => {
   const faculty = json.records;
   faculty.forEach(faculty => {
     const nomalFacultyDiv = document.createElement('div');
+    const nomalFacultyname = document.createElement("span");
     const nomalFacultyTitle = document.createElement("span");
+    const nomalFacultyStudio = document.createElement("span");
+    const nomalFacultyMajor = document.createElement("span");
     const nomalFacultyImage = document.createElement("img");
+    nomalFacultyname.className = 'faculty-name';
     nomalFacultyTitle.className = 'faculty-title';
-    //nomalFacultyTitle.parse = "data":['faculty-photo'];
-    nomalFacultyTitle.textContent = faculty['f-faculty-ja'];
+    nomalFacultyStudio.className = 'faculty-studio';
+    nomalFacultyMajor.className = 'faculty-major';
+    //nomalFacultyTitle.parse = "data": ['faculty-photo'];
+    nomalFacultyname.textContent = faculty['f-faculty-ja'];
+    nomalFacultyTitle.textContent = faculty['f-faculty-title-ja'];
+    nomalFacultyStudio.textContent = faculty['f-studio-ja'];
+    nomalFacultyMajor.textContent = faculty['major-ja'];
     nomalFacultyImage.src = faculty['faculty-photo'];
 
     const englishFacultyDiv = document.createElement('div');
+    const englishFacultyname = document.createElement("span");
     const englishFacultyTitle = document.createElement("span");
+    const englishFacultyStudio = document.createElement("span");
+    const englishFacultyMajor = document.createElement("span");
     const englishFacultyImage = document.createElement("img");
+    englishFacultyname.className = 'faculty-name-en';
     englishFacultyTitle.className = 'faculty-title-en';
-    englishFacultyTitle.textContent = faculty['f-faculty-en'];
+    englishFacultyStudio.className = 'faculty-studio-en';
+    englishFacultyname.textContent = faculty['f-faculty-en'];
+    englishFacultyTitle.textContent = faculty['f-faculty-title-en'];
+    englishFacultyStudio.textContent = faculty['f-studio-en'];
+    englishFacultyMajor.textContent = faculty['major-en'];
     englishFacultyImage.src = faculty['faculty-photo'];
 
     nomalFacultyDiv.appendChild(nomalFacultyImage);
+    nomalFacultyDiv.appendChild(nomalFacultyname);
     nomalFacultyDiv.appendChild(nomalFacultyTitle);
+    nomalFacultyDiv.appendChild(nomalFacultyStudio);
+    nomalFacultyDiv.appendChild(nomalFacultyMajor);
     document.getElementById('nomalFaculty').appendChild(nomalFacultyDiv);
     englishFacultyDiv.appendChild(englishFacultyImage);
+    englishFacultyDiv.appendChild(englishFacultyname);
     englishFacultyDiv.appendChild(englishFacultyTitle);
+    englishFacultyDiv.appendChild(englishFacultyStudio);
+    englishFacultyDiv.appendChild(englishFacultyMajor);
     document.getElementById('englishFaculty').appendChild(englishFacultyDiv);
+  });
+
+  document.getElementById('result').textContent = JSON.stringify(json, null, 2);
+}
+
+const renderJson3 = (json) => {
+  const link = json.records;
+  link.forEach(link => {
+    const nomalLinkDiv = document.createElement('div');
+    //const nomalStudioLink = document.createElement("a");
+    const nomalLinkImage = document.createElement("img");
+    //nomalStudioTitle.className = 'studio-title';
+    //nomalStudioTitle.textContent = studios['name-ja'];
+    //nomalStudioLink.className = 'studio-title';
+    //nomalStudioLink.href = "./html/" + studios['name-short'].toString() + ".html";
+    //nomalStudioLink.textContent = studios['name-ja'];
+    nomalLinkImage.src = link['photo'];
+    nomalLinkImage.className = 'link-nomal';
+
+    /*
+    const englishStudioDiv = document.createElement('div');
+    //const englishStudioTitle = document.createElement("span");
+    const englishStudioLink = document.createElement("a");
+    const englishStudioImage = document.createElement("img");
+
+    //englishStudioTitle.className = 'studio-title-en';
+    //englishStudioTitle.textContent = studios['name-en'];
+    englishStudioLink.className = 'studio-title-en';
+    englishStudioLink.href = "./html/" + studios['name-short'].toString() + ".html";
+    englishStudioLink.textContent = studios['name-en'];
+    englishStudioImage.src = studios['photo2'], width = 300;
+    */
+
+
+    nomalLinkDiv.appendChild(nomalLinkImage);
+    //nomalStudioDiv.appendChild(nomalStudioLink);
+    document.getElementById('nomalLink').appendChild(nomalLinkDiv);
+    //englishStudioDiv.appendChild(englishStudioTitle);
+    /*
+    englishStudioDiv.appendChild(englishStudioImage);
+    englishStudioDiv.appendChild(englishStudioLink);
+    document.getElementById('englishStudios').appendChild(englishStudioDiv);
+    */
+
   });
 
   document.getElementById('result').textContent = JSON.stringify(json, null, 2);
@@ -308,6 +377,12 @@ const getData = async () => {
     if (response2.ok) {
       let jsonResponse2 = await response2.json();
       renderJson2(jsonResponse2);
+    }
+
+    const response3 = await fetch(endpoint3);
+    if (response3.ok) {
+      let jsonResponse3 = await response3.json();
+      renderJson3(jsonResponse3);
     }
 
 

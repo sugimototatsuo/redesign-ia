@@ -48,3 +48,8 @@ pre#result {
   font-family: monospace;
   font-size: 9px;
 }
+
+.link-nomal{
+  width: 300px;
+  height: 300px;
+}

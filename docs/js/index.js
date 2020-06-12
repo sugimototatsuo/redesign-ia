@@ -21,6 +21,7 @@ const renderJson = (json) => {
     nomalStudioLink.className = 'studio-title';
     nomalStudioLink.href = "./html/" + studios['name-short'].toString() + ".html";
     nomalStudioLink.textContent = studios['name-ja'];
+    nomalStudioImage.className = 'studio-photo1';
     nomalStudioImage.src = studios['photo1'];
 
     const englishStudioDiv = document.createElement('div');
@@ -33,7 +34,8 @@ const renderJson = (json) => {
     englishStudioLink.className = 'studio-title-en';
     englishStudioLink.href = "./html/" + studios['name-short'].toString() + ".html";
     englishStudioLink.textContent = studios['name-en'];
-    englishStudioImage.src = studios['photo2'], width = 300;
+    englishStudioImage.src = studios['photo2'];
+    nomalStudioImage.className = 'studio-photo2';
 
 
     nomalStudioDiv.appendChild(nomalStudioImage);
@@ -63,6 +65,7 @@ const renderJson2 = (json) => {
     nomalFacultyTitle.className = 'faculty-title';
     nomalFacultyStudio.className = 'faculty-studio';
     nomalFacultyMajor.className = 'faculty-major';
+    nomalFacultyImage.className = "faculty-image";
     //nomalFacultyTitle.parse = "data": ['faculty-photo'];
     nomalFacultyname.textContent = faculty['f-faculty-ja'];
     nomalFacultyTitle.textContent = faculty['f-faculty-title-ja'];
@@ -79,6 +82,8 @@ const renderJson2 = (json) => {
     englishFacultyname.className = 'faculty-name-en';
     englishFacultyTitle.className = 'faculty-title-en';
     englishFacultyStudio.className = 'faculty-studio-en';
+    englishFacultyMajor.className = 'faculty-major-en';
+    englishFacultyImage.className = "faculty-image-en";
     englishFacultyname.textContent = faculty['f-faculty-en'];
     englishFacultyTitle.textContent = faculty['f-faculty-title-en'];
     englishFacultyStudio.textContent = faculty['f-studio-en'];
@@ -106,15 +111,15 @@ const renderJson3 = (json) => {
   const link = json.records;
   link.forEach(link => {
     const nomalLinkDiv = document.createElement('div');
-    //const nomalStudioLink = document.createElement("a");
+    const nomalLinkTitle = document.createElement("a");
     const nomalLinkImage = document.createElement("img");
     //nomalStudioTitle.className = 'studio-title';
-    //nomalStudioTitle.textContent = studios['name-ja'];
-    //nomalStudioLink.className = 'studio-title';
-    //nomalStudioLink.href = "./html/" + studios['name-short'].toString() + ".html";
+    nomalLinkTitle.textContent = link['name-ja'];
+    nomalLinkTitle.className = 'link-title';
+    nomalLinkTitle.href = link['link'];
     //nomalStudioLink.textContent = studios['name-ja'];
     nomalLinkImage.src = link['photo'];
-    nomalLinkImage.className = 'link-nomal';
+    nomalLinkImage.className = 'link-image';
 
     /*
     const englishStudioDiv = document.createElement('div');
@@ -132,6 +137,7 @@ const renderJson3 = (json) => {
 
 
     nomalLinkDiv.appendChild(nomalLinkImage);
+    nomalLinkDiv.appendChild(nomalLinkTitle);
     //nomalStudioDiv.appendChild(nomalStudioLink);
     document.getElementById('nomalLink').appendChild(nomalLinkDiv);
     //englishStudioDiv.appendChild(englishStudioTitle);

@@ -125,21 +125,6 @@ const renderJson3 = (json) => {
     nomalLinkImage.src = link['photo'];
     nomalLinkImage.className = 'link-image';
 
-    /*
-    const englishStudioDiv = document.createElement('div');
-    //const englishStudioTitle = document.createElement("span");
-    const englishStudioLink = document.createElement("a");
-    const englishStudioImage = document.createElement("img");
-
-    //englishStudioTitle.className = 'studio-title-en';
-    //englishStudioTitle.textContent = studios['name-en'];
-    englishStudioLink.className = 'studio-title-en';
-    englishStudioLink.href = "./html/" + studios['name-short'].toString() + ".html";
-    englishStudioLink.textContent = studios['name-en'];
-    englishStudioImage.src = studios['photo2'], width = 300;
-    */
-
-
     nomalLinkDiv.appendChild(nomalLinkImage);
     nomalLinkDiv.appendChild(nomalLinkTitle);
     //nomalStudioDiv.appendChild(nomalStudioLink);
@@ -169,7 +154,7 @@ document.getElementById("button").onclick = function () {
   if (langBottonClass == "open") {
     langBotton.classList.remove('open');
     langBotton.classList.add('close');
-    langMode = 1;
+    //langMode = 1;
     //langBottonWork.classList.remove('open');
     //langBottonWork.classList.add('close');
 
@@ -182,6 +167,10 @@ document.getElementById("button").onclick = function () {
     document.getElementById('easyTitle').style.display = "none";
     document.getElementById('englishTitle').style.display = "block";
     document.getElementById('englishTitle2').style.display = "block";
+
+    document.getElementById('nomalCopy').style.display = "none";
+    document.getElementById('englishCopy').style.display = "block";
+    document.getElementById('easyCopy').style.display = "none";
 
     for (var i = 0; i <= 8; i++) {
       document.getElementById('nomalSubtitle' + (i + 1).toString()).style.display = "none";
@@ -229,6 +218,10 @@ document.getElementById("button").onclick = function () {
     document.getElementById('easyTitle').style.display = "none";
     document.getElementById('englishTitle').style.display = "none";
     document.getElementById('englishTitle2').style.display = "none";
+
+    document.getElementById('nomalCopy').style.display = "block";
+    document.getElementById('englishCopy').style.display = "none";
+    document.getElementById('easyCopy').style.display = "none";
 
     for (var i = 0; i <= 8; i++) {
       document.getElementById('nomalSubtitle' + (i + 1).toString()).style.display = "block";
@@ -288,6 +281,10 @@ document.getElementById("button2").onclick = function () {
     document.getElementById('englishTitle').style.display = "none";
     document.getElementById('englishTitle2').style.display = "none";
 
+    document.getElementById('nomalCopy').style.display = "none";
+    document.getElementById('englishCopy').style.display = "none";
+    document.getElementById('easyCopy').style.display = "block";
+
     for (var i = 0; i <= 8; i++) {
       document.getElementById('easySubtitle' + (i + 1).toString()).style.display = "block";
       document.getElementById('nomalSubtitle' + (i + 1).toString()).style.display = "none";
@@ -334,6 +331,10 @@ document.getElementById("button2").onclick = function () {
     document.getElementById('easyTitle').style.display = "none";
     document.getElementById('englishTitle').style.display = "none";
     document.getElementById('englishTitle2').style.display = "none";
+
+    document.getElementById('nomalCopy').style.display = "block";
+    document.getElementById('englishCopy').style.display = "none";
+    document.getElementById('easyCopy').style.display = "none";
 
     for (var i = 0; i <= 8; i++) {
       document.getElementById('nomalSubtitle' + (i + 1).toString()).style.display = "block";

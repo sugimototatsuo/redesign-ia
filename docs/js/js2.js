@@ -76,6 +76,8 @@ const renderJson2 = (json) => {
 
   document.getElementById('result').textContent = JSON.stringify(json, null, 2);
 }*/
+
+/*
 var langBotton = document.getElementById("button");
 var langBottonClass = langBotton.getAttribute("class");
 
@@ -94,29 +96,12 @@ if (pareValue[1] == "1") {
     document.getElementById('englishContentsTitle4').style.display = "block";
     document.getElementById('nomalStudios').style.display = "none";
     document.getElementById('englishStudios').style.display = "block";
-}
+}*/
 
 
 document.getElementById("button").onclick = function () {
     var langBotton = document.getElementById("button");
     var langBottonClass = langBotton.getAttribute("class");
-
-    if (langMode == 1) {
-        langBotton.classList.remove('open');
-        langBotton.classList.add('close');
-        document.getElementById('nomalButton').style.display = "none";
-        document.getElementById('englishButton').style.display = "block";
-
-        document.getElementById('nomalTitle').style.display = "none";
-        document.getElementById('englishTitle').style.display = "block";
-
-        document.getElementById('nomalReturn').style.display = "none";
-        document.getElementById('englishReturn').style.display = "block";
-        document.getElementById('nomalContentsTitle4').style.display = "none";
-        document.getElementById('englishContentsTitle4').style.display = "block";
-        document.getElementById('nomalStudios').style.display = "none";
-        document.getElementById('englishStudios').style.display = "block";
-    }
     //var langBottonWork = document.getElementById("buttonWork");
     //var langBottonWorkClass = langBotton.getAttribute("class");
 

@@ -203,6 +203,10 @@ document.getElementById("button").onclick = function () {
     document.getElementById('nomalFaculty').style.display = "none";
     document.getElementById('englishFaculty').style.display = "block";
 
+    document.getElementById('nomalAdmissionText').style.display = "none";
+    document.getElementById('englishAdmissionText').style.display = "block";
+    document.getElementById('easyAdmissionText').style.display = "none";
+
   } else if (langBottonClass == "close") {
     langMode = 0;
     langBotton.classList.remove('close');
@@ -253,6 +257,10 @@ document.getElementById("button").onclick = function () {
 
     document.getElementById('nomalFaculty').style.display = "block";
     document.getElementById('englishFaculty').style.display = "none";
+
+    document.getElementById('nomalAdmissionText').style.display = "block";
+    document.getElementById('englishAdmissionText').style.display = "none";
+    document.getElementById('easyAdmissionText').style.display = "none";
   }
 
 };
@@ -316,6 +324,10 @@ document.getElementById("button2").onclick = function () {
     document.getElementById('nomalFaculty').style.display = "none";
     document.getElementById('englishFaculty').style.display = "none";
 
+    document.getElementById('nomalAdmissionText').style.display = "none";
+    document.getElementById('englishAdmissionText').style.display = "none";
+    document.getElementById('easyAdmissionText').style.display = "block";
+
   } else if (langBotton2Class == "close") {
     langMode = 0;
     langBotton2.classList.remove('close');
@@ -366,6 +378,10 @@ document.getElementById("button2").onclick = function () {
 
     document.getElementById('nomalFaculty').style.display = "block";
     document.getElementById('englishFaculty').style.display = "none";
+
+    document.getElementById('nomalAdmissionText').style.display = "block";
+    document.getElementById('englishAdmissionText').style.display = "none";
+    document.getElementById('easyAdmissionText').style.display = "none";
   }
 
 };

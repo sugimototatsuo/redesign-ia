@@ -207,6 +207,8 @@ document.getElementById("button").onclick = function () {
     document.getElementById('englishAdmissionText').style.display = "block";
     document.getElementById('easyAdmissionText').style.display = "none";
 
+    document.getElementById('nomalQText').style.display = "none";
+
   } else if (langBottonClass == "close") {
     langMode = 0;
     langBotton.classList.remove('close');
@@ -261,6 +263,8 @@ document.getElementById("button").onclick = function () {
     document.getElementById('nomalAdmissionText').style.display = "block";
     document.getElementById('englishAdmissionText').style.display = "none";
     document.getElementById('easyAdmissionText').style.display = "none";
+
+    document.getElementById('nomalQText').style.display = "block";
   }
 
 };
@@ -328,6 +332,8 @@ document.getElementById("button2").onclick = function () {
     document.getElementById('englishAdmissionText').style.display = "none";
     document.getElementById('easyAdmissionText').style.display = "block";
 
+    document.getElementById('nomalQText').style.display = "none";
+
   } else if (langBotton2Class == "close") {
     langMode = 0;
     langBotton2.classList.remove('close');
@@ -382,6 +388,8 @@ document.getElementById("button2").onclick = function () {
     document.getElementById('nomalAdmissionText').style.display = "block";
     document.getElementById('englishAdmissionText').style.display = "none";
     document.getElementById('easyAdmissionText').style.display = "none";
+
+    document.getElementById('nomalQText').style.display = "block";
   }
 
 };

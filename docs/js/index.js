@@ -7,6 +7,7 @@ const sheet3 = 'Link';
 const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 const endpoint2 = `${uri}?id=${id}&sheet=${sheet2}`;
 const endpoint3 = `${uri}?id=${id}&sheet=${sheet3}`;
+var langMode = 0;
 
 
 const renderJson = (json) => {
@@ -33,7 +34,7 @@ const renderJson = (json) => {
     //englishStudioTitle.className = 'studio-title-en';
     //englishStudioTitle.textContent = studios['name-en'];
     englishStudioLink.className = 'studio-title-en';
-    englishStudioLink.href = "./html/" + studios['name-short'].toString() + ".html";
+    englishStudioLink.href = "./html/" + studios['name-short'].toString() + ".html?langMode";
     englishStudioLink.textContent = studios['name-en'];
     englishStudioImage.src = studios['photo2'];
     nomalStudioImage.className = 'studio-photo2';
@@ -168,6 +169,7 @@ document.getElementById("button").onclick = function () {
   if (langBottonClass == "open") {
     langBotton.classList.remove('open');
     langBotton.classList.add('close');
+    langMode = 1;
     //langBottonWork.classList.remove('open');
     //langBottonWork.classList.add('close');
 
@@ -213,6 +215,7 @@ document.getElementById("button").onclick = function () {
     document.getElementById('englishFaculty').style.display = "block";
 
   } else if (langBottonClass == "close") {
+    langMode = 0;
     langBotton.classList.remove('close');
     langBotton.classList.add('open');
     //langBottonWork.classList.remove('close');
@@ -263,6 +266,7 @@ document.getElementById("button").onclick = function () {
 
 //やさしいにほんご
 document.getElementById("button2").onclick = function () {
+  langMode = 2;
   var langBotton2 = document.getElementById("button2");
   var langBotton2Class = langBotton2.getAttribute("class");
   //var langBottonWork = document.getElementById("buttonWork");
@@ -316,6 +320,7 @@ document.getElementById("button2").onclick = function () {
     document.getElementById('englishFaculty').style.display = "none";
 
   } else if (langBotton2Class == "close") {
+    langMode = 0;
     langBotton2.classList.remove('close');
     langBotton2.classList.add('open');
     //langBottonWork.classList.remove('close');

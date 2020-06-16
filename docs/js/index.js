@@ -73,7 +73,7 @@ const renderJson2 = (json) => {
     nomalFacultyImage.className = "faculty-image";
     //nomalFacultyTitle.parse = "data": ['faculty-photo'];
     nomalFacultyname.textContent = faculty['f-faculty-ja'];
-    nomalFacultyname.textContent = faculty['f-faculty-en'];
+    nomalFacultynameEn.textContent = faculty['f-faculty-en'];
     nomalFacultyTitle.textContent = faculty['f-faculty-title-ja'];
     nomalFacultyStudio.textContent = faculty['f-studio-ja'];
     nomalFacultyMajor.textContent = faculty['major-ja'];

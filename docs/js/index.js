@@ -37,7 +37,7 @@ const renderJson = (json) => {
     englishStudioLink.href = "./html/" + studios['name-short'].toString() + ".html?langMode";
     englishStudioLink.textContent = studios['name-en'];
     englishStudioImage.src = studios['photo2'];
-    nomalStudioImage.className = 'studio-photo2';
+    englishStudioImage.className = 'studio-photo2';
 
 
     nomalStudioDiv.appendChild(nomalStudioImage);
@@ -60,17 +60,20 @@ const renderJson2 = (json) => {
   faculty.forEach(faculty => {
     const nomalFacultyDiv = document.createElement('div');
     const nomalFacultyname = document.createElement("span");
+    const nomalFacultynameEn = document.createElement("span");
     const nomalFacultyTitle = document.createElement("span");
     const nomalFacultyStudio = document.createElement("span");
     const nomalFacultyMajor = document.createElement("span");
     const nomalFacultyImage = document.createElement("img");
     nomalFacultyname.className = 'faculty-name';
+    nomalFacultynameEn.className = 'faculty-name-2';
     nomalFacultyTitle.className = 'faculty-title';
     nomalFacultyStudio.className = 'faculty-studio';
     nomalFacultyMajor.className = 'faculty-major';
     nomalFacultyImage.className = "faculty-image";
     //nomalFacultyTitle.parse = "data": ['faculty-photo'];
     nomalFacultyname.textContent = faculty['f-faculty-ja'];
+    nomalFacultyname.textContent = faculty['f-faculty-en'];
     nomalFacultyTitle.textContent = faculty['f-faculty-title-ja'];
     nomalFacultyStudio.textContent = faculty['f-studio-ja'];
     nomalFacultyMajor.textContent = faculty['major-ja'];
@@ -78,16 +81,19 @@ const renderJson2 = (json) => {
 
     const englishFacultyDiv = document.createElement('div');
     const englishFacultyname = document.createElement("span");
+    const englishFacultynameJa = document.createElement("span");
     const englishFacultyTitle = document.createElement("span");
     const englishFacultyStudio = document.createElement("span");
     const englishFacultyMajor = document.createElement("span");
     const englishFacultyImage = document.createElement("img");
     englishFacultyname.className = 'faculty-name-en';
+    englishFacultynameJa.className = 'faculty-name-en2';
     englishFacultyTitle.className = 'faculty-title-en';
     englishFacultyStudio.className = 'faculty-studio-en';
     englishFacultyMajor.className = 'faculty-major-en';
     englishFacultyImage.className = "faculty-image-en";
     englishFacultyname.textContent = faculty['f-faculty-en'];
+    englishFacultynameJa.textContent = faculty['f-faculty-ja'];
     englishFacultyTitle.textContent = faculty['f-faculty-title-en'];
     englishFacultyStudio.textContent = faculty['f-studio-en'];
     englishFacultyMajor.textContent = faculty['major-en'];
@@ -95,12 +101,14 @@ const renderJson2 = (json) => {
 
     nomalFacultyDiv.appendChild(nomalFacultyImage);
     nomalFacultyDiv.appendChild(nomalFacultyname);
+    nomalFacultyDiv.appendChild(nomalFacultynameEn);
     nomalFacultyDiv.appendChild(nomalFacultyTitle);
     nomalFacultyDiv.appendChild(nomalFacultyStudio);
     nomalFacultyDiv.appendChild(nomalFacultyMajor);
     document.getElementById('nomalFaculty').appendChild(nomalFacultyDiv);
     englishFacultyDiv.appendChild(englishFacultyImage);
     englishFacultyDiv.appendChild(englishFacultyname);
+    englishFacultyDiv.appendChild(englishFacultynameJa);
     englishFacultyDiv.appendChild(englishFacultyTitle);
     englishFacultyDiv.appendChild(englishFacultyStudio);
     englishFacultyDiv.appendChild(englishFacultyMajor);

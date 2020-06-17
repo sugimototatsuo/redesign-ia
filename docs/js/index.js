@@ -194,6 +194,7 @@ document.getElementById("button").onclick = function () {
 
     document.getElementById('nomalText').style.display = "none";
     document.getElementById('englishText').style.display = "block";
+    document.getElementById('easyText').style.display = "none";
 
     //document.getElementById('nomalWorkTitle').style.display = "none";
     //document.getElementById('englishWorkTitle').style.display = "block";
@@ -251,6 +252,7 @@ document.getElementById("button").onclick = function () {
 
     document.getElementById('nomalText').style.display = "block";
     document.getElementById('englishText').style.display = "none";
+    document.getElementById('easyText').style.display = "none";
 
     //document.getElementById('nomalWorkTitle').style.display = "block";
     //document.getElementById('englishWorkTitle').style.display = "none";
@@ -319,6 +321,7 @@ document.getElementById("button2").onclick = function () {
 
     document.getElementById('nomalText').style.display = "none";
     document.getElementById('englishText').style.display = "none";
+    document.getElementById('easyText').style.display = "block";
 
     //document.getElementById('nomalWorkTitle').style.display = "none";
     //document.getElementById('englishWorkTitle').style.display = "block";
@@ -330,10 +333,10 @@ document.getElementById("button2").onclick = function () {
     //document.getElementById('nomalWorkReturn').style.display = "none";
     //document.getElementById('englishWorkReturn').style.display = "block";
 
-    document.getElementById('nomalStudios').style.display = "none";
+    document.getElementById('nomalStudios').style.display = "block";
     document.getElementById('englishStudios').style.display = "none";
 
-    document.getElementById('nomalFaculty').style.display = "none";
+    document.getElementById('nomalFaculty').style.display = "block";
     document.getElementById('englishFaculty').style.display = "none";
 
     document.getElementById('nomalAdmissionText').style.display = "none";
@@ -376,6 +379,7 @@ document.getElementById("button2").onclick = function () {
 
     document.getElementById('nomalText').style.display = "block";
     document.getElementById('englishText').style.display = "none";
+    document.getElementById('easyText').style.display = "none";
 
     //document.getElementById('nomalWorkTitle').style.display = "block";
     //document.getElementById('englishWorkTitle').style.display = "none";

@@ -149,15 +149,17 @@ const renderJson = (json) => {
       majorEn.textContent = faculty['major-en'];
 
 
-
-      const linkP = document.createElement('p');
-      const fLink = document.createElement('a');
-      fLink.className = 'faculty-link';
       if (faculty['f-link'] !== '') {
+        const linkP = document.createElement('p');
+        const fLink = document.createElement('a');
+        fLink.className = 'faculty-link';
+
         fLink.textContent = faculty['f-faculty-ja'] + "のサイトです";//リンクに何かしらテキストがないと見えない
         fLink.href = faculty['f-link'];
+
+        linkP.appendChild(fLink);
+        facultyDiv.appendChild(linkP);
       }
-      linkP.appendChild(fLink);
 
       const photoP = document.createElement('p');//★
       const photo = document.createElement("img");
@@ -175,7 +177,7 @@ const renderJson = (json) => {
       facultyDiv.appendChild(studioEn);
       facultyDiv.appendChild(majorJa);
       facultyDiv.appendChild(majorEn);
-      facultyDiv.appendChild(linkP);
+
       facultyDiv.appendChild(photo);
 
 

@@ -35,3 +35,5 @@ const getData = async () => {
 }
 
 getData();
+
+

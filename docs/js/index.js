@@ -234,12 +234,12 @@ const renderJson = (json) => {
       const photo = document.createElement("img");
       photo.className = 'l-photo';
       photo.textContent = link['photo'];
-      photo = "";
+      photo.alt = "";
       l_photoP.appendChild(photo);
 
-      const link = document.createElement("a");
-      link.className = 'l-link';
-      link.textContent = link['link'];
+      const lLink = document.createElement("a");
+      lLink.className = 'l-link';
+      lLink.textContent = link['link'];
 
       linkDiv.appendChild(nameJa);
       linkDiv.appendChild(nameEn);
@@ -248,7 +248,7 @@ const renderJson = (json) => {
       linkDiv.appendChild(descriptionJa);
       linkDiv.appendChild(descriptionEn);
       linkDiv.appendChild(photo);
-      linkDiv.appendChild(link);
+      linkDiv.appendChild(lLink);
 
       document.getElementById('links').appendChild(linkDiv);
 
@@ -293,7 +293,7 @@ const getData2 = async () => {
 getData2();
 
 
-/*
+
 const getData3 = async () => {
   try {
     const response = await fetch(endpoint3);
@@ -307,7 +307,7 @@ const getData3 = async () => {
   }
 }
 
-getData3();*/
+getData3();
 
 
 

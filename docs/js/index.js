@@ -7,7 +7,7 @@ const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 const endpoint2 = `${uri}?id=${id}&sheet=${sheet2}`;
 const endpoint3 = `${uri}?id=${id}&sheet=${sheet3}`;
 //jsonをHTMLにとってきて表示するのに必要な基本的な流れは①~⑤である
-const renderJson = (json) => {
+const renderStudio = (json) => {//シートごとに使い分ける
   const studios = json.records;
 
   //studios.pop();//配列の一番最後の要素を取り出すメソッド　ほんとは返り値があって const lastStudio =  studios.pop();とかするべきなんだけど、さいごが空ってわかってるのでOK　ここコメントアウトするとrecordにfacultyだけ反映される…
@@ -109,6 +109,12 @@ const renderJson = (json) => {
       document.getElementById('studios').appendChild(studioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
     }
   });
+
+  document.getElementById('result-studio').textContent = JSON.stringify(json, null, 2);//JavaScript のオブジェクトや値を JSON 文字列に変換させて、HTML上のresultというidがついたdivに付与？する。最後の引数は上限が10のスペーシング 変わってんのかわからない
+}
+
+
+const renderFaculty = (json) => {
   //シート２枚目
   const faculties = json.records;
   faculties.forEach(faculty => {
@@ -119,34 +125,42 @@ const renderJson = (json) => {
       const facultyNameJa = document.createElement("span");
       facultyNameJa.className = 'faculty-name';
       facultyNameJa.textContent = faculty['f-faculty-ja'];
+      facultyDiv.appendChild(facultyNameJa);
 
       const facultyNameEn = document.createElement("span");
       facultyNameEn.className = 'faculty-name';
       facultyNameEn.textContent = faculty['f-faculty-en'];
+      facultyDiv.appendChild(facultyNameEn);
 
       const facultyTitleJa = document.createElement("span");
       facultyTitleJa.className = 'faculty-title';
       facultyTitleJa.textContent = faculty['f-faculty-title-ja'];
+      facultyDiv.appendChild(facultyTitleJa);
 
       const facultyTitleEn = document.createElement("span");
       facultyTitleEn.className = 'faculty-title';
       facultyTitleEn.textContent = faculty['f-faculty-title-en'];
+      facultyDiv.appendChild(facultyTitleEn);
 
       const studioJa = document.createElement("span");//この辺はローカル関数なのでstudioとかとかぶってもOK 
       studioJa.className = 'faculty-studio';
       studioJa.textContent = faculty['f-studio-ja'];
+      facultyDiv.appendChild(studioJa);
 
       const studioEn = document.createElement("span");
       studioEn.className = 'faculty-studio';
       studioEn.textContent = faculty['f-studio-en'];
+      facultyDiv.appendChild(studioEn);
 
       const majorJa = document.createElement("span");
       majorJa.className = 'faculty-major';
       majorJa.textContent = faculty['major-ja'];
+      facultyDiv.appendChild(majorJa);
 
       const majorEn = document.createElement("span");
       majorEn.className = 'faculty-major';
       majorEn.textContent = faculty['major-en'];
+      facultyDiv.appendChild(majorEn);
 
 
       if (faculty['f-link'] !== '') {
@@ -164,30 +178,21 @@ const renderJson = (json) => {
       const photoP = document.createElement('p');//★
       const photo = document.createElement("img");
       photo.className = 'faculty-photo';
-      photo.textContent = faculty['faculty-photo'];
+      photo.src = faculty['faculty-photo'];
       photo.alt = "";
       photoP.appendChild(photo);
-
-
-      facultyDiv.appendChild(facultyNameJa);//④
-      facultyDiv.appendChild(facultyNameEn);
-      facultyDiv.appendChild(facultyTitleJa);
-      facultyDiv.appendChild(facultyTitleEn);
-      facultyDiv.appendChild(studioJa);
-      facultyDiv.appendChild(studioEn);
-      facultyDiv.appendChild(majorJa);
-      facultyDiv.appendChild(majorEn);
-
-      facultyDiv.appendChild(photo);
+      facultyDiv.appendChild(photoP);
 
 
       document.getElementById('faculties').appendChild(facultyDiv);
 
-
     }
   });
+  document.getElementById('result-faculty').textContent = JSON.stringify(json, null, 2);//JavaScript のオブジェクトや値を JSON 文字列に変換させて、HTML上のresultというidがついたdivに付与？する。最後の引数は上限が10のスペーシング 変わってんのかわからない
+}
 
 
+const renderLink = (json) => {
   //シート３枚目
   const links = json.records;
   links.forEach(link => {
@@ -199,56 +204,61 @@ const renderJson = (json) => {
       const nameJa = document.createElement("span");
       nameJa.className = 'name';
       nameJa.textContent = link['name-ja'];
+      linkDiv.appendChild(nameJa);
 
       const nameEn = document.createElement("span");
       nameEn.className = 'name';
       nameEn.textContent = link['name-en'];
+      linkDiv.appendChild(nameEn);
 
       const venueJa = document.createElement("span");
       venueJa.className = 'venue';
       venueJa.textContent = link['venue-ja'];
+      linkDiv.appendChild(venueJa);
 
       const venueEn = document.createElement("span");
       venueEn.className = 'venue';
       venueEn.textContent = link['venue-en'];
+      linkDiv.appendChild(venueEn);
 
       const eventDatesJa = document.createElement("span");
       eventDatesJa.className = 'event-dates';
       eventDatesJa.textContent = link['event-dates-ja'];
+      linkDiv.appendChild(eventDatesJa);
 
       const eventDatesEn = document.createElement("span");
       eventDatesEn.className = 'event-dates';
       eventDatesEn.textContent = link['event-dates-en'];
+      linkDiv.appendChild(eventDatesEn);
 
       const descriptionJa = document.createElement("p");
       descriptionJa.className = 'l-description';
       descriptionJa.textContent = link['description-ja'];
+      linkDiv.appendChild(descriptionJa);
+
 
       const descriptionEn = document.createElement("p");
       descriptionEn.className = 'l-description';
       descriptionEn.textContent = link['description-en'];
+      linkDiv.appendChild(descriptionEn);
 
-
-
-      const l_photoP = document.createElement('p');
+      const photoP = document.createElement('p');//★
       const photo = document.createElement("img");
       photo.className = 'l-photo';
-      photo.textContent = link['photo'];
+      photo.src = link['photo'];
       photo.alt = "";
-      l_photoP.appendChild(photo);
+      photoP.appendChild(photo);
+      linkDiv.appendChild(photoP);
 
-      const lLink = document.createElement("a");
+
+      const linkP = document.createElement('p');
+      const lLink = document.createElement('a');//ここでうっかりlinkっていう変数を作っちゃうとかぶるのでうまくいかない
       lLink.className = 'l-link';
-      lLink.textContent = link['link'];
+      lLink.textContent = link['name-ja'] + "のサイトです";//リンクに何かしらテキストがないと見えない
+      lLink.href = link['link'];
+      linkP.appendChild(lLink);
+      linkDiv.appendChild(linkP);
 
-      linkDiv.appendChild(nameJa);
-      linkDiv.appendChild(nameEn);
-      linkDiv.appendChild(venueJa);
-      linkDiv.appendChild(venueEn);
-      linkDiv.appendChild(descriptionJa);
-      linkDiv.appendChild(descriptionEn);
-      linkDiv.appendChild(photo);
-      linkDiv.appendChild(lLink);
 
       document.getElementById('links').appendChild(linkDiv);
 
@@ -256,9 +266,8 @@ const renderJson = (json) => {
 
   });
 
-  document.getElementById('result').textContent = JSON.stringify(json, null, 2);//JavaScript のオブジェクトや値を JSON 文字列に変換させて、HTML上のresultというidがついたdivに付与？する。最後の引数は上限が10のスペーシング 変わってんのかわからない
+  document.getElementById('result-link').textContent = JSON.stringify(json, null, 2);//JavaScript のオブジェクトや値を JSON 文字列に変換させて、HTML上のresultというidがついたdivに付与？する。最後の引数は上限が10のスペーシング 変わってんのかわからない
 }
-
 
 
 const getData = async () => {
@@ -266,7 +275,7 @@ const getData = async () => {
     const response = await fetch(endpoint);
     if (response.ok) {
       let jsonResponse = await response.json();
-      renderJson(jsonResponse);
+      renderStudio(jsonResponse);
     }
   }
   catch (error) {
@@ -282,7 +291,7 @@ const getData2 = async () => {
     const response = await fetch(endpoint2);
     if (response.ok) {
       let jsonResponse = await response.json();
-      renderJson(jsonResponse);
+      renderFaculty(jsonResponse);
     }
   }
   catch (error) {
@@ -299,7 +308,7 @@ const getData3 = async () => {
     const response = await fetch(endpoint3);
     if (response.ok) {
       let jsonResponse = await response.json();
-      renderJson(jsonResponse);
+      renderLink(jsonResponse);
     }
   }
   catch (error) {

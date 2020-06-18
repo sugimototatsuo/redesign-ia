@@ -170,10 +170,9 @@ const renderFaculty = (json) => {
       const photoP = document.createElement('p');//★
       const photo = document.createElement("img");
       photo.className = 'faculty-photo';
-      photo.textContent = faculty['faculty-photo'];
+      photo.src = faculty['faculty-photo'];
       photo.alt = "";
       photoP.appendChild(photo);
-
 
       facultyDiv.appendChild(facultyNameJa);//④
       facultyDiv.appendChild(facultyNameEn);
@@ -183,8 +182,7 @@ const renderFaculty = (json) => {
       facultyDiv.appendChild(studioEn);
       facultyDiv.appendChild(majorJa);
       facultyDiv.appendChild(majorEn);
-
-      facultyDiv.appendChild(photo);
+      facultyDiv.appendChild(photoP);
 
 
       document.getElementById('faculties').appendChild(facultyDiv);
@@ -239,16 +237,18 @@ const renderLink = (json) => {
 
 
 
-      const l_photoP = document.createElement('p');
+      const photoP = document.createElement('p');//★
       const photo = document.createElement("img");
       photo.className = 'l-photo';
-      photo.textContent = link['photo'];
+      photo.src = link['photo'];
       photo.alt = "";
-      l_photoP.appendChild(photo);
+      photoP.appendChild(photo);
 
-      const lLink = document.createElement("a");
+      const linkP = document.createElement('p');
+      const lLink = document.createElement("a");//ここでうっかりlinkっていう変数を作っちゃうとかぶるのでうまくいかない
       lLink.className = 'l-link';
       lLink.textContent = link['link'];
+      linkP.appendChild(lLink);
 
       linkDiv.appendChild(nameJa);
       linkDiv.appendChild(nameEn);
@@ -256,8 +256,8 @@ const renderLink = (json) => {
       linkDiv.appendChild(venueEn);
       linkDiv.appendChild(descriptionJa);
       linkDiv.appendChild(descriptionEn);
-      linkDiv.appendChild(photo);
-      linkDiv.appendChild(lLink);
+      linkDiv.appendChild(photoP);
+      linkDiv.appendChild(linkP);
 
       document.getElementById('links').appendChild(linkDiv);
 

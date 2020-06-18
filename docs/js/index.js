@@ -7,7 +7,7 @@ const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 const endpoint2 = `${uri}?id=${id}&sheet=${sheet2}`;
 const endpoint3 = `${uri}?id=${id}&sheet=${sheet3}`;
 //jsonをHTMLにとってきて表示するのに必要な基本的な流れは①~⑤である
-const renderJson = (json) => {
+const renderStudio = (json) => {//シートごとに使い分ける
   const studios = json.records;
 
   //studios.pop();//配列の一番最後の要素を取り出すメソッド　ほんとは返り値があって const lastStudio =  studios.pop();とかするべきなんだけど、さいごが空ってわかってるのでOK　ここコメントアウトするとrecordにfacultyだけ反映される…
@@ -109,6 +109,12 @@ const renderJson = (json) => {
       document.getElementById('studios').appendChild(studioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
     }
   });
+
+  document.getElementById('result-studio').textContent = JSON.stringify(json, null, 2);//JavaScript のオブジェクトや値を JSON 文字列に変換させて、HTML上のresultというidがついたdivに付与？する。最後の引数は上限が10のスペーシング 変わってんのかわからない
+}
+
+
+const renderFaculty = (json) => {
   //シート２枚目
   const faculties = json.records;
   faculties.forEach(faculty => {
@@ -186,8 +192,11 @@ const renderJson = (json) => {
 
     }
   });
+  document.getElementById('result-faculty').textContent = JSON.stringify(json, null, 2);//JavaScript のオブジェクトや値を JSON 文字列に変換させて、HTML上のresultというidがついたdivに付与？する。最後の引数は上限が10のスペーシング 変わってんのかわからない
+}
 
 
+const renderLink = (json) => {
   //シート３枚目
   const links = json.records;
   links.forEach(link => {
@@ -256,9 +265,8 @@ const renderJson = (json) => {
 
   });
 
-  document.getElementById('result').textContent = JSON.stringify(json, null, 2);//JavaScript のオブジェクトや値を JSON 文字列に変換させて、HTML上のresultというidがついたdivに付与？する。最後の引数は上限が10のスペーシング 変わってんのかわからない
+  document.getElementById('result-link').textContent = JSON.stringify(json, null, 2);//JavaScript のオブジェクトや値を JSON 文字列に変換させて、HTML上のresultというidがついたdivに付与？する。最後の引数は上限が10のスペーシング 変わってんのかわからない
 }
-
 
 
 const getData = async () => {
@@ -266,7 +274,7 @@ const getData = async () => {
     const response = await fetch(endpoint);
     if (response.ok) {
       let jsonResponse = await response.json();
-      renderJson(jsonResponse);
+      renderStudio(jsonResponse);
     }
   }
   catch (error) {
@@ -282,7 +290,7 @@ const getData2 = async () => {
     const response = await fetch(endpoint2);
     if (response.ok) {
       let jsonResponse = await response.json();
-      renderJson(jsonResponse);
+      renderFaculty(jsonResponse);
     }
   }
   catch (error) {
@@ -299,7 +307,7 @@ const getData3 = async () => {
     const response = await fetch(endpoint3);
     if (response.ok) {
       let jsonResponse = await response.json();
-      renderJson(jsonResponse);
+      renderLink(jsonResponse);
     }
   }
   catch (error) {

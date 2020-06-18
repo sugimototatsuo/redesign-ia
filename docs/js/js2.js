@@ -119,6 +119,12 @@ document.getElementById("button").onclick = function () {
 
         document.getElementById('nomalTitle').style.display = "none";
         document.getElementById('englishTitle').style.display = "block";
+
+        document.getElementById('nomalFaculty').style.display = "none";
+        document.getElementById('englishFaculty').style.display = "block";
+
+        document.getElementById('nomalText').style.display = "none";
+        document.getElementById('englishText').style.display = "block";
         //document.getElementById('englishTitle2').style.display = "block";
         /*
             for (var i = 0; i <= 8; i++) {
@@ -157,6 +163,15 @@ document.getElementById("button").onclick = function () {
         //langBottonWork.classList.add('open');
         document.getElementById('nomalButton').style.display = "block";
         document.getElementById('englishButton').style.display = "none";
+
+        document.getElementById('nomalTitle').style.display = "block";
+        document.getElementById('englishTitle').style.display = "none";
+
+        document.getElementById('nomalFaculty').style.display = "block";
+        document.getElementById('englishFaculty').style.display = "none";
+
+        document.getElementById('nomalText').style.display = "block";
+        document.getElementById('englishText').style.display = "none";
         //document.getElementById('nomalButtonWork').style.display = "block";
         //document.getElementById('englishButtonWork').style.display = "none";
         /*

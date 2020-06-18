@@ -7,7 +7,14 @@ const sheet3 = 'Link';
 const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 const endpoint2 = `${uri}?id=${id}&sheet=${sheet2}`;
 const endpoint3 = `${uri}?id=${id}&sheet=${sheet3}`;
-var langMode = 0;
+//var langMode = 0;
+
+var showloading = document.getElementById('showloading');
+var contents = document.getElementById('mainContent');
+window.addEventListener('load', function () {
+  showloading.style.display = 'none';
+  contents.classList.remove('hidden');
+});
 
 
 const renderJson = (json) => {

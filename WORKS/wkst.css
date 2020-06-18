@@ -1,0 +1,67 @@
+body{
+    background-color: floralwhite;
+    margin: 0;
+}
+
+header{
+    background-color: floralwhite;
+    border-bottom:1px solid midnightblue;
+    position: fixed;
+    width:100%;
+    z-index: 10;
+}
+ul{
+    margin: 30px auto;
+    padding: 0 50px;
+    text-align: center;
+}
+li{
+    color: midnightblue;
+    font-family: 'Oswald',sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    display:inline-block;
+    width: 150px;
+}
+li:hover{
+    color:coral;
+}
+
+.zentai{
+    position:relative;
+    top:150px;
+    width:100%;
+    height:700px;
+    background-color:floralwhite;
+    overflow: scroll;
+}
+
+figure {
+    left:100px;
+    margin:1px;
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    display:inline-block;
+  }
+  figcaption {
+    position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.6);
+  -webkit-transform: rotateY(-90deg) rotateX(-90deg);
+  transform: rotateY(-90deg) rotateX(-90deg);
+  -webkit-transition: .5s;
+  transition: .5s;
+  opacity: 0;
+    color: cornsilk;
+  }
+  figure:hover figcaption {
+    -webkit-transform: rotateY(0) rotateX(0);
+  transform: rotateY(0) rotateX(0);
+  opacity: 1;
+  }

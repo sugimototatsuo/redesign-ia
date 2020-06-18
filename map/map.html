@@ -1,9 +1,33 @@
 <!DOCTYPE html>
-<html lang="ja">
-  <head>
-   
-  </head>
-  <body>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.626260475521!2d139.3664679!3d35.6615787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018e2086b789781%3A0x74b7f28cd003b142!2z5p2x5Lqs6YO956uL5aSn5a2mIOaXpemHjuOCreODo-ODs-ODkeOCuQ!5e0!3m2!1sja!2sjp!4v1591791543202!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;filter:sepia(40%);-webkit-filter:sepia(40%)filter:saturate(150%);-webkit-filter:saturate(150%)" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-  </body>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>map</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
+<style>
+	body { margin: 0; padding: 0; }
+	#map { position: absolute; top: 0; bottom: 0; width: 1000px; height: 700px;}
+</style>
+</head>
+<body>
+<div id="map"></div>
+
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoibW9lY28wOSIsImEiOiJja2JjZjEweDQwMWFoMnJud2N6M3N4Z2c2In0.cfn_JZgFwQgheoCiYBgFZQ';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/moeco09/ckbftkk4s1ufj1jmtr4hw3c6u',
+        center: [139.366468, 35.661579],
+        zoom: 15
+    });
+
+    var marker = new mapboxgl.Marker()
+        .setLngLat([139.366468, 35.661579])
+        .addTo(map);
+        
+</script>
+
+</body>
 </html>

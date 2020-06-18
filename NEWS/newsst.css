@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Sawarabi+Gothic');
+
+body{
+    background-color: floralwhite;
+    margin: 0 auto;
+}
+header{
+    background-color: floralwhite;
+    border-bottom:1px solid midnightblue;
+    position: fixed;
+    width:100%;
+    z-index: 10;
+}
+ul{
+    margin: 30px auto;
+    padding: 0 50px;
+    text-align: center;
+}
+li{
+    color: midnightblue;
+    font-family: 'Oswald',sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    display:inline-block;
+    width: 150px;
+}
+li:hover{
+    color:coral;
+}
+.news{
+    position:relative;
+    top:200px;
+    width:1300px;
+    height:350px;
+    background-color:floralwhite;
+   
+}
+img,image{
+    box-shadow: 10px 10px rgba(1,1,100,0.8);
+    float:left;
+    margin:0 80px;
+}
+h1{
+    font-family: 'Sawarabi Gothic', sans-serif; 
+    color: #11114d;
+}
+h2{
+    font-family: 'Sawarabi Gothic', sans-serif;
+    color: #11114d
+}
+h3{
+    font-family: 'Sawarabi Gothic', sans-serif;
+    color: #11114d;
+    font-size: 13px;
+}
+a {
+    font-family: 'Sawarabi Gothic', sans-serif; 
+    font-size:20px;
+    text-decoration: none ;
+    color:#11114d;
+    margin:0 19px;
+}
+a:hover{
+    color:coral;
+}

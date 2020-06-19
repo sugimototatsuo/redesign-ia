@@ -78,8 +78,19 @@ img.studio-img{
     max-width:1000px;
     margin: 0 auto;
 }
-.a-studio{
 
+.product-studios{
+    float:left;
+
+}
+.media-studios{
+
+
+}
+
+.a-studio{
+    text-align: center;
+    max-width:320px;
 }
 
 
@@ -88,7 +99,4 @@ img.studio-img{
     text-decoration: none ;
     color:#11114d;
     margin:10px;
-}
-.studio-core{
-    float:left;
 }

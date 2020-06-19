@@ -10,18 +10,16 @@ const endpoint3 = `${uri}?id=${id}&sheet=${sheet3}`;
 const renderStudio = (json) => {//シートごとに使い分ける
     const studios = json.records;
     const productStudioDiv = document.createElement('div');
-    productStudioDiv.className = 'studio-core';
+    productStudioDiv.className = 'product-studios';
 
     studios.forEach(studio => {
 
-
         if (studio['name-ja'] !== '') {
-            const studioDiv = document.createElement('div');
-            studioDiv.className = 'a-studio';
-
 
             if (studio['core-ja'] == 'プロダクトデザインコア') {
 
+                const studioDiv = document.createElement('div');
+                studioDiv.className = 'a-studio';
 
                 const photoP = document.createElement('p');//★
                 const photo1 = document.createElement("img");
@@ -35,24 +33,25 @@ const renderStudio = (json) => {//シートごとに使い分ける
                 studioTitleJa.className = 'studio-title';
                 studioTitleJa.textContent = studio['name-ja'];
                 studioDiv.appendChild(studioTitleJa);
-            }
-            productStudioDiv.appendChild(studioDiv);
 
-            document.getElementById('studios').appendChild(productStudioDiv);
+                productStudioDiv.appendChild(studioDiv);
+                document.getElementById('studios').appendChild(productStudioDiv);
+            }
         }
 
     });
 
-    studios.forEach(studio => {
-        const studioDiv = document.createElement('div');
-        studioDiv.className = 'a-studio';
+    const mediaStudioDiv = document.createElement('div');
+    mediaStudioDiv.className = 'media-studios';
 
+    studios.forEach(studio => {
 
         if (studio['name-ja'] !== '') {
 
             if (studio['core-ja'] == 'メディアアートコア・メディア創生') {
-                const mediaStudioDiv = document.createElement('div');
-                mediaStudioDiv.className = 'studio-core';
+
+                const studioDiv = document.createElement('div');
+                studioDiv.className = 'a-studio';
 
                 const photoP = document.createElement('p');//★
                 const photo1 = document.createElement("img");
@@ -60,16 +59,15 @@ const renderStudio = (json) => {//シートごとに使い分ける
                 photo1.src = studio['photo1'];
                 photo1.alt = "";
                 photoP.appendChild(photo1);
-                mediaStudioDiv.appendChild(photoP);
+                studioDiv.appendChild(photoP);
 
                 const studioTitleJa = document.createElement("p");
                 studioTitleJa.className = 'studio-title';
                 studioTitleJa.textContent = studio['name-ja'];
-                mediaStudioDiv.appendChild(studioTitleJa);
+                studioDiv.appendChild(studioTitleJa);
 
-                studioDiv.appendChild(mediaStudioDiv);
-
-                document.getElementById('studios').appendChild(studioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
+                mediaStudioDiv.appendChild(studioDiv);
+                document.getElementById('studios').appendChild(mediaStudioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
             }
         }
 
@@ -95,38 +93,6 @@ const getData = async () => {
 
 getData();
 
-
-const getData2 = async () => {
-    try {
-        const response = await fetch(endpoint2);
-        if (response.ok) {
-            let jsonResponse = await response.json();
-            renderFaculty(jsonResponse);
-        }
-    }
-    catch (error) {
-        console.log(error);
-    }
-}
-
-getData2();
-
-
-
-const getData3 = async () => {
-    try {
-        const response = await fetch(endpoint3);
-        if (response.ok) {
-            let jsonResponse = await response.json();
-            renderLink(jsonResponse);
-        }
-    }
-    catch (error) {
-        console.log(error);
-    }
-}
-
-getData3();
 
 
 

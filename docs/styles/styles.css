@@ -79,3 +79,111 @@ left: 50%;
 .hidden {
 display: none;
 }
+
+/* ========== * ==========*/
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*========== header nav ==========*/
+header ul{
+  position: fixed;
+  top: 0;
+  background: #fff;
+  width: 100%;
+  height: 80px;
+}
+header ul li{
+  list-style: none;
+  display: inline-block;
+}
+header ul li a{
+  text-decoration: none;
+  color: #363636;
+  line-height: 80px;
+  display: block;
+  padding: 0 10px;
+  font-size: 17px;
+}
+header ul li a:hover{
+  opacity: 0.5;
+}
+
+.open{
+  margin-top: 80px;
+}
+
+
+/* ========== main-visual ========== */
+.main-visual{
+  width: 100%;
+  height: 800px;
+  background: #2B2845;
+  color: #fff;
+}
+.main-visual h1{
+  color: #fff;
+  padding-top: 150px;
+  padding-left: 134px;
+}
+.main-visual h3{
+  padding-top: 300px;
+  padding-left: 500px;
+  font-size: 20px;
+}
+
+/* ========== common section title ========== */
+[id^="nomalContentsTitle"]  {
+  color: #363636;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  font-size: 30px;
+}
+
+/* ========== aboutus ========== */
+#aboutus p{
+  display: block;
+  background: #E4EBEF;
+  padding: 50px 100px;
+}
+
+/* ========== works ========== */
+#works a{
+  text-align: center;
+}
+/* flex使う */
+/* もっと見る はbuttonか何かで覆う */
+
+/* ========== curriculum ========== */
+#curriculum p{
+  display: block;
+  background: #E4EBEF;
+  padding: 50px 100px;
+}
+
+/* ========== studios ========== */
+
+
+/* ========== admission ==========*/
+#admission #nomalAdmissionText{
+  background: #E4EBEF;
+  padding: 50px 100px;
+}
+#admission #nomalAdmissionText h4{
+  font-size: 25px;
+}
+#admission #nomalAdmissionText p, ol, ul{
+  padding-left: 100px;
+  /* padding-bottom: 20px; */
+}
+
+/* ========== question ========== */
+#question #nomalQText{
+  background: #E4EBEF;
+  padding: 50px 100px;
+}
+
+/* footer作成 */

@@ -106,11 +106,11 @@ const renderStudio = (json) => {//シートごとに使い分ける
       studioDiv.appendChild(photoP);
 
 
-      document.getElementById('studios').appendChild(studioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
+      //document.getElementById('studios').appendChild(studioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
     }
   });
 
-  document.getElementById('result-studio').textContent = JSON.stringify(json, null, 2);//JavaScript のオブジェクトや値を JSON 文字列に変換させて、HTML上のresultというidがついたdivに付与？する。最後の引数は上限が10のスペーシング 変わってんのかわからない
+  //document.getElementById('result-studio').textContent = JSON.stringify(json, null, 2);//JavaScript のオブジェクトや値を JSON 文字列に変換させて、HTML上のresultというidがついたdivに付与？する。最後の引数は上限が10のスペーシング 変わってんのかわからない
 }
 
 
@@ -184,11 +184,11 @@ const renderFaculty = (json) => {
       facultyDiv.appendChild(photoP);
 
 
-      document.getElementById('faculties').appendChild(facultyDiv);
+      //document.getElementById('faculties').appendChild(facultyDiv);
 
     }
   });
-  document.getElementById('result-faculty').textContent = JSON.stringify(json, null, 2);//JavaScript のオブジェクトや値を JSON 文字列に変換させて、HTML上のresultというidがついたdivに付与？する。最後の引数は上限が10のスペーシング 変わってんのかわからない
+  //document.getElementById('result-faculty').textContent = JSON.stringify(json, null, 2);//JavaScript のオブジェクトや値を JSON 文字列に変換させて、HTML上のresultというidがついたdivに付与？する。最後の引数は上限が10のスペーシング 変わってんのかわからない
 }
 
 
@@ -198,6 +198,52 @@ const renderLink = (json) => {
   links.forEach(link => {
 
     if (link['name-ja'] !== '') {
+
+
+      //START-ニュースの1記事を生成して回す
+      //一つの記事全体を囲むdiv
+      const anArticleDiv = document.createElement('div');
+      anArticleDiv.className = 'an-article';
+
+
+      const photoP = document.createElement('p');//★
+      const photo = document.createElement("img");
+      photo.className = 'article-img';
+      photo.src = link['photo'];
+      photo.alt = "";
+      photoP.appendChild(photo);
+      anArticleDiv.appendChild(photoP);
+
+      //記事のタイトル・掲載日・内容といった、テキスト部分を包括するdiv
+      const articleTextContainerDiv = document.createElement('div');
+      articleTextContainerDiv.className = 'article-text-container';
+
+      const articleTitle = document.createElement('p');
+      articleTitle.className = 'article-title';
+      const articleTitleLink = document.createElement('a');
+      articleTitleLink.textContent = link['name-ja'];
+      articleTitleLink.href = link['link'];
+      articleTitle.appendChild(articleTitleLink);
+      articleTextContainerDiv.appendChild(articleTitle);
+
+      const updateDateP = document.createElement('p');
+      updateDateP.className = 'update-date';
+      articleTextContainerDiv.appendChild(updateDateP);
+
+      const articleContents = document.createElement('p');
+      articleContents.className = 'article-contents';
+      articleContents.textContent = link['description-ja'];
+      articleTextContainerDiv.appendChild(articleContents);
+
+      anArticleDiv.appendChild(articleTextContainerDiv);
+
+      const floatClearDiv = document.createElement('div');
+      floatClearDiv.className = 'float-clear';
+      anArticleDiv.appendChild(floatClearDiv);
+
+      document.getElementById('articles').appendChild(anArticleDiv);
+      //ニュースの1記事を生成して回す-END
+
 
       const linkDiv = document.createElement('div');
 
@@ -242,15 +288,6 @@ const renderLink = (json) => {
       descriptionEn.textContent = link['description-en'];
       linkDiv.appendChild(descriptionEn);
 
-      const photoP = document.createElement('p');//★
-      const photo = document.createElement("img");
-      photo.className = 'l-photo';
-      photo.src = link['photo'];
-      photo.alt = "";
-      photoP.appendChild(photo);
-      linkDiv.appendChild(photoP);
-
-
       const linkP = document.createElement('p');
       const lLink = document.createElement('a');//ここでうっかりlinkっていう変数を作っちゃうとかぶるのでうまくいかない
       lLink.className = 'l-link';
@@ -260,28 +297,28 @@ const renderLink = (json) => {
       linkDiv.appendChild(linkP);
 
 
-
+      //画像にリンク付する構造
       const linkPhotoP = document.createElement('p');
       const linkOnPhoto = document.createElement('a');
       const exhibiPhoto = document.createElement("img");
       linkOnPhoto.className = 'l-link';
       exhibiPhoto.className = 'l-photo';
-      //linkPhoto.textContent = link['name-ja'] + "のサイトです";//リンクに何かしらテキストがないと見えない
       exhibiPhoto.src = link['photo'];
-      exhibiPhoto.alt = "altだよ";
+      exhibiPhoto.alt = link['name-ja'];
       linkOnPhoto.href = link['link'];
+      linkOnPhoto.target = "_blank";
       linkOnPhoto.appendChild(exhibiPhoto);
       linkPhotoP.appendChild(linkOnPhoto);
-      document.getElementById('sotsutenLinkDiv').appendChild(linkPhotoP, exhibiPhoto);
+      // document.getElementById('sotsutenLinkDiv').appendChild(linkPhotoP, exhibiPhoto);
 
 
-      document.getElementById('links').appendChild(linkDiv);
+      // document.getElementById('links').appendChild(linkDiv);
 
     }
 
   });
 
-  document.getElementById('result-link').textContent = JSON.stringify(json, null, 2);//JavaScript のオブジェクトや値を JSON 文字列に変換させて、HTML上のresultというidがついたdivに付与？する。最後の引数は上限が10のスペーシング 変わってんのかわからない
+  //document.getElementById('result-link').textContent = JSON.stringify(json, null, 2);//JavaScript のオブジェクトや値を JSON 文字列に変換させて、HTML上のresultというidがついたdivに付与？する。最後の引数は上限が10のスペーシング 変わってんのかわからない
 }
 
 

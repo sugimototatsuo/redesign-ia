@@ -43,11 +43,11 @@ const renderStudio = (json) => {//シートごとに使い分ける
 
       const facultyTitleJa = document.createElement("span");
       facultyTitleJa.className = 'studio-facultyTitle';
-      facultyTitleJa.textContent = studio['facultyTitle-ja'];
+      facultyTitleJa.textContent = studio['faculty-title-ja'];
 
       const facultyTitleEn = document.createElement("span");
       facultyTitleEn.className = 'studio-facultyTitle';
-      facultyTitleEn.textContent = studio['facultyTitle-en'];
+      facultyTitleEn.textContent = studio['faculty-title-en'];
 
       const descriptionJa = document.createElement("p");
       descriptionJa.className = 'studio-description';

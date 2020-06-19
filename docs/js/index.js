@@ -265,13 +265,14 @@ const renderLink = (json) => {
       const linkOnPhoto = document.createElement('a');
       const exhibiPhoto = document.createElement("img");
       linkOnPhoto.className = 'l-link';
+      exhibiPhoto.className = 'l-photo';
       //linkPhoto.textContent = link['name-ja'] + "のサイトです";//リンクに何かしらテキストがないと見えない
       exhibiPhoto.src = link['photo'];
       exhibiPhoto.alt = "altだよ";
       linkOnPhoto.href = link['link'];
       linkOnPhoto.appendChild(exhibiPhoto);
       linkPhotoP.appendChild(linkOnPhoto);
-      document.getElementById('sotsutenLinkDiv').appendChild(linkPhotoP);
+      document.getElementById('sotsutenLinkDiv').appendChild(linkPhotoP, exhibiPhoto);
 
 
       document.getElementById('links').appendChild(linkDiv);

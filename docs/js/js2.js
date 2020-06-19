@@ -77,6 +77,26 @@ const renderJson2 = (json) => {
   document.getElementById('result').textContent = JSON.stringify(json, null, 2);
 }*/
 
+/*
+var langBotton = document.getElementById("button");
+var langBottonClass = langBotton.getAttribute("class");
+
+if (pareValue[1] == "1") {
+    langBotton.classList.remove('open');
+    langBotton.classList.add('close');
+    document.getElementById('nomalButton').style.display = "none";
+    document.getElementById('englishButton').style.display = "block";
+
+    document.getElementById('nomalTitle').style.display = "none";
+    document.getElementById('englishTitle').style.display = "block";
+
+    document.getElementById('nomalReturn').style.display = "none";
+    document.getElementById('englishReturn').style.display = "block";
+    document.getElementById('nomalContentsTitle4').style.display = "none";
+    document.getElementById('englishContentsTitle4').style.display = "block";
+    document.getElementById('nomalStudios').style.display = "none";
+    document.getElementById('englishStudios').style.display = "block";
+}*/
 
 
 document.getElementById("button").onclick = function () {
@@ -99,27 +119,13 @@ document.getElementById("button").onclick = function () {
 
         document.getElementById('nomalTitle').style.display = "none";
         document.getElementById('englishTitle').style.display = "block";
-        //document.getElementById('englishTitle2').style.display = "block";
-        /*
-            for (var i = 0; i <= 8; i++) {
-              document.getElementById('nomalSubtitle' + (i + 1).toString()).style.display = "none";
-              document.getElementById('englishSubtitle' + (i + 1).toString()).style.display = "block";
-            }
-            */
-        /*
-                for (var i = 0; i <= 8; i++) {
-                    document.getElementById('nomalContentsTitle' + (i + 1).toString()).style.display = "none";
-                    document.getElementById('englishContentsTitle' + (i + 1).toString()).style.display = "block";
-                }
-                */
 
-        //document.getElementById('nomalText').style.display = "none";
-        //document.getElementById('englishText').style.display = "block";
+        document.getElementById('nomalFaculty').style.display = "none";
+        document.getElementById('englishFaculty').style.display = "block";
 
-        //document.getElementById('nomalWorkTitle').style.display = "none";
-        //document.getElementById('englishWorkTitle').style.display = "block";
-        //document.getElementById('nomalWorkText').style.display = "none";
-        //document.getElementById('englishWorkText').style.display = "block";
+        document.getElementById('nomalText').style.display = "none";
+        document.getElementById('englishText').style.display = "block";
+
         document.getElementById('nomalReturn').style.display = "none";
         document.getElementById('englishReturn').style.display = "block";
         document.getElementById('nomalContentsTitle4').style.display = "none";
@@ -137,30 +143,16 @@ document.getElementById("button").onclick = function () {
         //langBottonWork.classList.add('open');
         document.getElementById('nomalButton').style.display = "block";
         document.getElementById('englishButton').style.display = "none";
-        //document.getElementById('nomalButtonWork').style.display = "block";
-        //document.getElementById('englishButtonWork').style.display = "none";
-        /*
-            document.getElementById('nomalTitle').style.display = "block";
-            document.getElementById('englishTitle').style.display = "none";
-            document.getElementById('englishTitle2').style.display = "none";
-        
-            for (var i = 0; i <= 8; i++) {
-              document.getElementById('nomalSubtitle' + (i + 1).toString()).style.display = "block";
-              document.getElementById('englishSubtitle' + (i + 1).toString()).style.display = "none";
-            }
-        
-            for (var i = 0; i <= 8; i++) {
-              document.getElementById('nomalContentsTitle' + (i + 1).toString()).style.display = "block";
-              document.getElementById('englishContentsTitle' + (i + 1).toString()).style.display = "none";
-            }
-        
-            document.getElementById('nomalText').style.display = "block";
-            document.getElementById('englishText').style.display = "none";
-        */
-        //document.getElementById('nomalWorkTitle').style.display = "block";
-        //document.getElementById('englishWorkTitle').style.display = "none";
-        //document.getElementById('nomalWorkText').style.display = "block";
-        //document.getElementById('englishWorkText').style.display = "none";
+
+        document.getElementById('nomalTitle').style.display = "block";
+        document.getElementById('englishTitle').style.display = "none";
+
+        document.getElementById('nomalFaculty').style.display = "block";
+        document.getElementById('englishFaculty').style.display = "none";
+
+        document.getElementById('nomalText').style.display = "block";
+        document.getElementById('englishText').style.display = "none";
+
         document.getElementById('nomalReturn').style.display = "block";
         document.getElementById('englishReturn').style.display = "none";
 

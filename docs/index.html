@@ -5,320 +5,522 @@
   <meta charset="utf-8">
   <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="shortcut icon" href="./image/mark.ico">
+
 </head>
 
 <body>
-  <button id="button" class="open">
-    <p id="nomalButton" style="display: block">English</p>
-    <p id="englishButton" style="display: none">Undo</p>
-  </button>
-
-  <button id="button2" class="open">
-    <p id="nomalButton2" style="display: block">やさしいにほんご</p>
-    <p id="easyButton2" style="display: none">もとに もどす</p>
-  </button>
-
-  <h1 id="nomalTitle" style="display: block">東京都立大学システムデザイン学部インダストリアルアート学科</h1>
-  <h1 id="easyTitle" style="display: none"><ruby>
-      <rb>東京都立大学</rb>
-      <rt>とうきょうとりつだいがく</rt>
-    </ruby>システムデザイン<ruby>
-      <rb>学部</rb>
-      <rt>がくぶ</rt>
-    </ruby>インダストリアルアート<ruby>
-      <rb>学科</rb>
-      <rt>がっか</rt>
-    </ruby></h1>
-  <h1 id="englishTitle" style="display: none">Department of Industrial Art</h1>
-  <h2 id="englishTitle2" style="display: none">Faculty of Systems Design, Tokyo Metropolitan University</h2>
-  <div>「アート」 ―― それは、新時代を築くイノベーションの原動力です。</div>
-
-  <nav>
-    <ul>
-      <li><a href="#aboutus">
-          <h3 id="nomalSubtitle1" style="display: block">学科概要</h3>
-          <h3 id="easySubtitle1" style="display: none">この<ruby>
-              <rb>学科</rb>
-              <rt>がっか</rt>
-            </ruby>について</h3>
-          <h3 id="englishSubtitle1" style="display: none">Summary</h3>
-        </a></li>
-      <li><a href="#works">
-          <h3 id="nomalSubtitle2" style="display: block">作品</h3>
-          <h3 id="easySubtitle2" style="display: none"><ruby>
-              <rb>作品</rb>
-              <rt>さくひん</rt>
-            </ruby></h3>
-          <h3 id="englishSubtitle2" style="display: none">Works</h3>
-        </a></li>
-      <li><a href="#curriculum">
-          <h3 id="nomalSubtitle3" style="display: block">カリキュラム</h3>
-          <h3 id="easySubtitle3" style="display: none">カリキュラム</h3>
-          <h3 id="englishSubtitle3" style="display: none">Curriculum</h3>
-        </a></li>
-      <li><a href="#studios">
-          <h3 id="nomalSubtitle4" style="display: block">スタジオ紹介</h3>
-          <h3 id="easySubtitle4" style="display: none">スタジオ<ruby>
-              <rb>紹介</rb>
-              <rt>しょうかい</rt>
-            </ruby></h3>
-          <h3 id="englishSubtitle4" style="display: none">Studios</h3>
-        </a></li>
-      <li><a href="#faculty">
-          <h3 id="nomalSubtitle5" style="display: block">教員紹介</h3>
-          <h3 id="easySubtitle5" style="display: none"><ruby>
-              <rb>先生</rb>
-              <rt>せんせい</rt>
-            </ruby>の<ruby>
-              <rb>紹介</rb>
-              <rt>しょうかい</rt>
-            </ruby></h3>
-          <h3 id="englishSubtitle5" style="display: none">Faculty</h3>
-        </a></li>
-      <li><a href="#admission">
-          <h3 id="nomalSubtitle6" style="display: block">入試概要</h3>
-          <h3 id="easySubtitle6" style="display: none"><ruby>
-              <rb>入学試験</rb>
-              <rt>にゅうがくしけん</rt>
-            </ruby>について</h3>
-          <h3 id="englishSubtitle6" style="display: none">Admission</h3>
-        </a></li>
-      <li><a href="#question">
-          <h3 id="nomalSubtitle7" style="display: block">よくある質問</h3>
-          <h3 id="easySubtitle7" style="display: none">よくある<ruby>
-              <rb>質問</rb>
-              <rt>しつもん</rt>
-            </ruby></h3>
-          <h3 id="englishSubtitle7" style="display: none">Q&A</h3>
-        </a></li>
-      <li><a href="#access">
-          <h3 id="nomalSubtitle8" style="display: block">アクセス</h3>
-          <h3 id="easySubtitle8" style="display: none">アクセス</h3>
-          <h3 id="englishSubtitle8" style="display: none">Access</h3>
-        </a></li>
-      <li><a href="#column">
-          <h3 id="nomalSubtitle9" style="display: block">関連コンテンツ</h3>
-          <h3 id="easySubtitle9" style="display: none"><ruby>
-              <rb>関連</rb>
-              <rt>かんれん</rt>
-            </ruby>コンテンツ</h3>
-          <h3 id="englishSubtitle9" style="display: none">Column</h3>
-        </a></li>
-    </ul>
-  </nav>
+  <div id="showloading">
+    <img src="./image/loading.gif" alt="loading">
+  </div>
 
 
-  <div id="aboutus">
-    <h3 id="nomalContentsTitle1" style="display: block">学科概要</h3>
-    <h3 id="englishContentsTitle1" style="display: none">Summary</h3>
-    <h3 id="easyContentsTitle1" style="display: none">この<ruby>
+  <div id="mainContent" class="hidden">
+    <button id="button" class="open">
+      <p id="nomalButton" style="display: block">English</p>
+      <p id="englishButton" style="display: none">Undo</p>
+    </button>
+
+    <button id="button2" class="open">
+      <p id="nomalButton2" style="display: block">やさしいにほんご</p>
+      <p id="easyButton2" style="display: none">もとに もどす</p>
+    </button>
+
+    <h1 id="nomalTitle" style="display: block">東京都立大学システムデザイン学部インダストリアルアート学科</h1>
+    <h1 id="easyTitle" style="display: none"><ruby>
+        <rb>東京都立大学</rb>
+        <rt>とうきょうとりつだいがく</rt>
+      </ruby>システムデザイン<ruby>
+        <rb>学部</rb>
+        <rt>がくぶ</rt>
+      </ruby>インダストリアルアート<ruby>
         <rb>学科</rb>
         <rt>がっか</rt>
-      </ruby>について</h3>
-    <p id="nomalText" style="display: block">
-      システムデザイン研究科インダストリアルアート学域では、これまでの工学的かつ文化的な基盤をひとつにすることで、
-      現代社会の新たなデザイン·アート領域の研究者や創造·研究·実践の担い手の育成を、「プロダクトデザイン」と「メディア創生」の
-      2つの研究分野から図っています。「プロダクトデザイン」は、交通機関、家電製品、工業製品、家具、住空間、公共空間などの
-      デザインや人間工学など、人と環境の双方からのアプローチでものづくりを展開しています。「メディア創生」は、
-      グラフィック、先端メディア、テクノロジーおよびデザイン、アートにかかわる革新的なモノやコトを創出しています。
-    </p>
-    <p id="englishText" style="display: none">
-      What is aim of the Department of lndustrial Art? To integrate engineering
-      and design, bring together the fundamentals of technology and culture, to pursue the leading edge where skilled
-      craftsmanship meets information technology refining both technology and sensibility, and resulting in new value
-      creation.
-    </p>
-  </div>
+      </ruby></h1>
+    <h1 id="englishTitle" style="display: none">Department of Industrial Art</h1>
+    <h2 id="englishTitle2" style="display: none">Faculty of Systems Design, Tokyo Metropolitan University</h2>
+    <div>
+      <h3 id="nomalCopy" style="display: block">「アート」 ―― それは、新時代を築くイノベーションの原動力です。</h3>
+      <h3 id="englishCopy" style="display: none">Art is the driving force of the innovation that builds a new age.</h3>
+      <h3 id="easyCopy" style="display: none">
+        「アート」―― それは、<ruby>
+          <rb>新</rb>
+          <rt>あたら</rt>
+        </ruby>しい<ruby>
+          <rb>時代</rb>
+          <rt>じだい</rt>
+        </ruby>つくる<ruby>
+          <rb>力</rb>
+          <rt>ちから</rt>
+        </ruby>です。</h3>
+    </div>
 
-  <div id="works">
-    <h3 id="nomalContentsTitle2" style="display: block">作品紹介</h3>
-    <h3 id="englishContentsTitle2" style="display: none">Works</h3>
-    <h3 id="easyContentsTitle2" style="display: none"><ruby>
-        <rb>作品</rb>
-        <rt>さくひん</rt>
-      </ruby></h3>
-    <!--<a href="./html/d-pro01.html" target="window_open" onClick="openner('./html/d-pro01.html'); return false;">-->
-    <a href="./html/d-pro01.html">
-      <img src="./image/d-pro01.png" title="DP" width="22.5%" height="22.5%">
-    </a>
-    <a href="./html/space01.html">
-      <img src="./image/space01.JPG" title="space" width="30%" height="30%">
-    </a>
-    <a href="./html/tum.html">
-      <img src="./image/tum02.jpg" title="tanb" width="31%" height="31%">
-    </a>
 
-    <a href="./html/work.html" title="seeMore">
-      <p id="nomalWorkText" style="display: block">もっと見る</p>
-      <p id="englishWorkText" style="display: none">see more</p>
-    </a>
+    <nav>
+      <ul>
+        <li><a href="#aboutus">
+            <h3 id="nomalSubtitle1" style="display: block">学科概要</h3>
+            <h3 id="easySubtitle1" style="display: none">この<ruby>
+                <rb>学科</rb>
+                <rt>がっか</rt>
+              </ruby>について</h3>
+            <h3 id="englishSubtitle1" style="display: none">Summary</h3>
+          </a></li>
+        <li><a href="#works">
+            <h3 id="nomalSubtitle2" style="display: block">作品</h3>
+            <h3 id="easySubtitle2" style="display: none"><ruby>
+                <rb>作品</rb>
+                <rt>さくひん</rt>
+              </ruby></h3>
+            <h3 id="englishSubtitle2" style="display: none">Works</h3>
+          </a></li>
+        <li><a href="#curriculum">
+            <h3 id="nomalSubtitle3" style="display: block">カリキュラム</h3>
+            <h3 id="easySubtitle3" style="display: none">カリキュラム</h3>
+            <h3 id="englishSubtitle3" style="display: none">Curriculum</h3>
+          </a></li>
+        <li><a href="#studios">
+            <h3 id="nomalSubtitle4" style="display: block">スタジオ紹介</h3>
+            <h3 id="easySubtitle4" style="display: none">スタジオ<ruby>
+                <rb>紹介</rb>
+                <rt>しょうかい</rt>
+              </ruby></h3>
+            <h3 id="englishSubtitle4" style="display: none">Studios</h3>
+          </a></li>
+        <li><a href="#faculty">
+            <h3 id="nomalSubtitle5" style="display: block">教員紹介</h3>
+            <h3 id="easySubtitle5" style="display: none"><ruby>
+                <rb>先生</rb>
+                <rt>せんせい</rt>
+              </ruby>の<ruby>
+                <rb>紹介</rb>
+                <rt>しょうかい</rt>
+              </ruby></h3>
+            <h3 id="englishSubtitle5" style="display: none">Faculty</h3>
+          </a></li>
+        <li><a href="#column">
+            <h3 id="nomalSubtitle9" style="display: block">関連コンテンツ</h3>
+            <h3 id="easySubtitle9" style="display: none"><ruby>
+                <rb>関連</rb>
+                <rt>かんれん</rt>
+              </ruby>コンテンツ</h3>
+            <h3 id="englishSubtitle9" style="display: none">Column</h3>
+          </a></li>
+        <li><a href="#admission">
+            <h3 id="nomalSubtitle6" style="display: block">入試案内</h3>
+            <h3 id="easySubtitle6" style="display: none"><ruby>
+                <rb>入学試験</rb>
+                <rt>にゅうがくしけん</rt>
+              </ruby>について</h3>
+            <h3 id="englishSubtitle6" style="display: none">Admission</h3>
+          </a></li>
+        <li><a href="#question">
+            <h3 id="nomalSubtitle7" style="display: block">よくある質問</h3>
+            <h3 id="easySubtitle7" style="display: none">よくある<ruby>
+                <rb>質問</rb>
+                <rt>しつもん</rt>
+              </ruby></h3>
+            <h3 id="englishSubtitle7" style="display: none">Q&A</h3>
+          </a></li>
+        <li><a href="#access">
+            <h3 id="nomalSubtitle8" style="display: block">アクセス</h3>
+            <h3 id="easySubtitle8" style="display: none">アクセス</h3>
+            <h3 id="englishSubtitle8" style="display: none">Access</h3>
+          </a></li>
+      </ul>
+    </nav>
+
+
+    <div id="aboutus">
+      <h3 id="nomalContentsTitle1" style="display: block">学科概要</h3>
+      <h3 id="englishContentsTitle1" style="display: none">Summary</h3>
+      <h3 id="easyContentsTitle1" style="display: none">この<ruby>
+          <rb>学科</rb>
+          <rt>がっか</rt>
+        </ruby>について</h3>
+      <p id="nomalText" style="display: block">
+        システムデザイン学部インダストリアルアート学科では、これまでの工学的かつ文化的な基盤をひとつにすることで、
+        現代社会の新たなデザイン·アート領域の研究者や創造·研究·実践の担い手の育成を、「プロダクトデザイン」と「メディアアート」の
+        2つの研究分野から図っています。<br>「プロダクトデザイン」は、交通機関、家電製品、工業製品、家具、住空間、公共空間などの
+        デザインや人間工学など、人と環境の双方からのアプローチでものづくりを展開しています。「メディアアート」は、
+        グラフィック、先端メディア、テクノロジーおよびデザイン、アートにかかわる革新的なモノやコトを創出しています。
+      </p>
+      <p id="englishText" style="display: none">
+        This department incorporates various subjects related to the urban context, and considers them from both design
+        and
+        engineering points of view. Its aim is to create new value and design innovation at an accelerated rate for the
+        immense
+        urban fabric of the nation’s capital. The curriculum consists of specialized subjects from two broad fields,
+        Media
+        Art
+        and Product Design. Students can increase their expertise by gaining a broad, multi-disciplinary perspective
+        that
+        crosses the boundaries of various design disciplines.
+      </p>
+      <p id="easyText" style="display: none">
+        システムデザイン<ruby>
+          <rb>学部</rb>
+          <rt>がくぶ</rt>
+        </ruby>インダストリアルアート<ruby>
+          <rb>学科</rb>
+          <rt>がっか</rt>
+        </ruby>では、「プロダクトデザイン」と「メディアアート」の2つの<ruby>
+          <rb>研究分野</rb>
+          <rt>けんきゅうぶんや</rt>
+        </ruby>から、<ruby>
+          <rb>新</rb>
+          <rt>あたら</rt>
+        </ruby>しいデザイン·アート<ruby>
+          <rb>領域</rb>
+          <rt>りょういき</rt>
+        </ruby>の<ruby>
+          <rb>研究者</rb>
+          <rt>けんきゅうしゃ</rt>
+        </ruby>や<ruby>
+          <rb>創造·研究·実践</rb>
+          <rt>そうぞう・けんきゅう・じっせん</rt>
+        </ruby>をする<ruby>
+          <rb>人</rb>
+          <rt>ひと</rt>
+        </ruby>を<ruby>
+          <rb>育</rb>
+          <rt>そだ</rt>
+        </ruby>てています。<br>
+        「プロダクトデザイン」は、<ruby>
+          <rb>交通機関</rb>
+          <rt>こうつうきかん</rt>
+        </ruby>、<ruby>
+          <rb>家電製品</rb>
+          <rt>かでんせいひん</rt>
+        </ruby>、<ruby>
+          <rb>工業製品</rb>
+          <rt>こうぎょうせいひん</rt>
+        </ruby>、<ruby>
+          <rb>家具</rb>
+          <rt>かぐ</rt>
+        </ruby>、<ruby>
+          <rb>住空間</rb>
+          <rt>じゅうくうかん</rt>
+        </ruby>、<ruby>
+          <rb>公共機関</rb>
+          <rt>こうきょうきかん</rt>
+        </ruby>などのデザインや<ruby>
+          <rb>人間工学</rb>
+          <rt>にんげんこうがく</rt>
+        </ruby>のことです。<ruby>
+          <rb>人</rb>
+          <rt>ひと</rt>
+        </ruby>と<ruby>
+          <rb>環境</rb>
+          <rt>かんきょう</rt>
+        </ruby>の<ruby>
+          <rb>両方</rb>
+          <rt>りょうほう</rt>
+        </ruby>からのアプローチでものづくりしています。<br>
+        「メディアアート」は、グラフィック、<ruby>
+          <rb>先端</rb>
+          <rt>せんたん</rt>
+        </ruby>メディア、テクノロジーやデザイン、アートにかかわる<ruby>
+          <rb>今</rb>
+          <rt>いま</rt>
+        </ruby>までになかったモノやコトをつくっています。
+      </p>
+    </div>
+
+    <div id="works">
+      <h3 id="nomalContentsTitle2" style="display: block">作品紹介</h3>
+      <h3 id="englishContentsTitle2" style="display: none">Works</h3>
+      <h3 id="easyContentsTitle2" style="display: none"><ruby>
+          <rb>作品</rb>
+          <rt>さくひん</rt>
+        </ruby></h3>
+      <!--<a href="./html/d-pro01.html" target="window_open" onClick="openner('./html/d-pro01.html'); return false;">-->
+      <a href="./html/d-pro01.html">
+        <img src="./image/d-pro01.png" title="DP" width="22.5%" height="22.5%">
+      </a>
+      <a href="./html/space01.html">
+        <img src="./image/space01.JPG" title="space" width="30%" height="30%">
+      </a>
+      <a href="./html/tum.html">
+        <img src="./image/tum02.jpg" title="tanb" width="31%" height="31%">
+      </a>
+
+      <a href="./html/work.html?langMode" title="seeMore">
+        <p id="nomalWorkText" style="display: block">もっと見る</p>
+        <p id="englishWorkText" style="display: none">see more</p>
+      </a>
+    </div>
+    <div id="curriculum">
+
+      <h3 id="nomalContentsTitle3" style="display: block">カリキュラム</h3>
+      <h3 id="englishContentsTitle3" style="display: none">Curriculum</h3>
+      <h3 id="easyContentsTitle3" style="display: none">カリキュラム</h3>
+      <p id="nomalCurrText" style="display:block">
+        専門科目は大きく「基礎総合ワークショップ」と「コア科目」に分かれます。
+        「基礎総合ワークショップ」は、アート・デザイン全般に不可欠な技術と知識を体験的、協同的に学ぶ中で感性を磨くことが主眼。
+        「コア科目」では、プロダクトデザインとメディアアートという産業にも直結するフィールドを設け、演習科目等で専門性を高めます。<br>
+        また、4年次には12のスタジオ（専門領域）に分かれ、アート・デザインとそのシステムが拓く新たな可能性を特別研究（卒業研究）としてまとめます｡
+      </p>
+      <p id="englishCurrText" style="display:none">
+        The specialized courses are broadly divided into Basic Synthesis Workshop and Core Subjects.
+        The main focus of the Basic Synthesis Workshop is to polish up students' sensibilities through experiential and
+        collaborative learning of the techniques and knowledge essential for art and design in general.
+        In the core subjects, students are given fields directly related to industry, such as product design and media
+        art, and
+        their expertise is enhanced through exercises and other activities.<br>
+        In the fourth year, students are divided into 12 studios (specialized areas) and compile their graduation
+        research
+        on
+        art design and the new possibilities opened up by these systems.
+      </p>
+      <p id="easyCurrText" style="display:none">
+        <ruby>
+          <rb>専門科目</rb>
+          <rt>せんもんかもく</rt>
+        </ruby>は<ruby>
+          <rb>大</rb>
+          <rt>おお</rt>
+        </ruby>きく「<ruby>
+          <rb>基礎総合</rb>
+          <rt>きそそうごう</rt>
+        </ruby>ワークショップ」と「コア<ruby>
+          <rb>科目</rb>
+          <rt>かもく</rt>
+        </ruby>」に<ruby>
+          <rb>分</rb>
+          <rt>わ</rt>
+        </ruby>かれます。
+        「<ruby>
+          <rb>基礎総合</rb>
+          <rt>きそそうごう</rt>
+        </ruby>ワークショップ」は、アート・デザインに<ruby>
+          <rb>必要</rb>
+          <rt>ひつよう</rt>
+        </ruby>な<ruby>
+          <rb>技術</rb>
+          <rt>ぎじゅつ</rt>
+        </ruby>と<ruby>
+          <rb>知識</rb>
+          <rt>ちしき</rt>
+        </ruby>を<ruby>
+          <rb>経験</rb>
+          <rt>けいけん</rt>
+        </ruby>しながら<ruby>
+          <rb>学</rb>
+          <rt>まな</rt>
+        </ruby>ぶことが<ruby>
+          <rb>目的</rb>
+          <rt>もくてき</rt>
+        </ruby>です。
+        「コア<ruby>
+          <rb>科目</rb>
+          <rt>かもく</rt>
+        </ruby>」では、プロダクトデザインとメディアアートという<ruby>
+          <rb>産業</rb>
+          <rt>さんぎょう</rt>
+        </ruby>にもつながる2つの<ruby>
+          <rb>分野</rb>
+          <rt>ぶんや</rt>
+        </ruby>を<ruby>
+          <rb>設</rb>
+          <rt>もう</rt>
+        </ruby>けます。<ryby>
+          <rb>演習科目</rb>
+          <rt>えんしゅうかもく</rt>
+        </ryby>などで<ruby>
+          <rb>専門性</rb>
+          <rt>せんもんせい</rt>
+        </ruby>を<ruby>
+          <rb>高</rb>
+          <rt>たか</rt>
+        </ruby>めます。<br>
+        また、4<ruby>
+          <rb>年次</rb>
+          <rt>ねんじ</rt>
+        </ruby>には12のスタジオ（<ruby>
+          <rb>専門領域</rb>
+          <rt>せんもんりょういき</rt>
+        </ruby>）に<ruby>
+          <rb>分</rb>
+          <rt>わ</rt>
+        </ruby>かれます。アート・デザインとそのシステムが<ruby>
+          <rb>作</rb>
+          <rt>つく</rt>
+        </ruby>る<ruby>
+          <rb>新</rb>
+          <rt>あたら</rt>
+        </ruby>しい<ruby>
+          <rb>可能性</rb>
+          <rt>かのうせい</rt>
+        </ruby>を<ruby>
+          <rb>特別研究（卒業研究）</rb>
+          <rt>とくべつけんきゅう（そつぎょうけんきゅう）</rt>
+        </ruby>としてまとめます｡
+      </p>
+      <img src="./image/courcemodel2_3-01.png" title="curr1" width=70% height=70%>
+      <!--<img src="./image/courcemodel2_3-02.png" title="curr2" width=70% height=70%>-->
+    </div>
+    <div id="studios">
+      <h3 id="nomalContentsTitle4" style="display: block">スタジオ紹介</h3>
+      <h3 id="englishContentsTitle4" style="display: none">Studios</h3>
+      <h3 id="easyContentsTitle4" style="display: none">スタジオ<ruby>
+          <rb>紹介</rb>
+          <rt>しょうかい</rt>
+        </ruby></h3>
+      <div id="nomalStudios" style="display: block"></div>
+      <div id="englishStudios" style="display: none"></div>
+    </div>
+    <div id="faculty">
+      <h3 id="nomalContentsTitle5" style="display: block">教員紹介</h3>
+      <h3 id="englishContentsTitle5" style="display: none">Faculty</h3>
+      <h3 id="easyContentsTitle5" style="display: none"><ruby>
+          <rb>先生</rb>
+          <rt>せんせい</rt>
+        </ruby>の<ruby>
+          <rb>紹介</rb>
+          <rt>しょうかい</rt>
+        </ruby></h3>
+      <div id="nomalFaculty" style="display: block"></div>
+      <div id="englishFaculty" style="display: none"></div>
+    </div>
+    <div id="column">
+      <h3 id="nomalContentsTitle9" style="display: block">関連コンテンツ</h3>
+      <h3 id="englishContentsTitle9" style="display: none">Column</h3>
+      <h3 id="easyContentsTitle9" style="display: none"><ruby>
+          <rb>関連</rb>
+          <rt>かんれん</rt>
+        </ruby>コンテンツ</h3>
+      <div id="nomalLink" style="display: block"></div>
+    </div>
+    <div id="admission">
+      <h3 id="nomalContentsTitle6" style="display: block">入試案内</h3>
+      <h3 id="englishContentsTitle6" style="display: none">Admission</h3>
+      <h3 id="easyContentsTitle6" style="display: none"><ruby>
+          <rb>入学試験</rb>
+          <rt>にゅうがくしけん</rt>
+        </ruby>について</h3>
+      <div id="nomalAdmissionText" style="display: block">
+        <h4>アドミッション・ポリシー</h4>
+        <p>
+          現代の社会が抱える様々な問題や文化産業活動にデザインの側面から解決策を提案し実践する能力を養成します。
+          産業活動を工学的かつ表現的な視点から再編集し、新しい価値やグローバルなネットワークを生み出していくことができる総合的能力を備えた研究者、
+          エンジニア、デザイナー、クリエイター、プロデューサー等の人材の育成を目指しています。<br>
+          特に「プロダクトデザイン分野」と「メディアアート分野」の両分野が相互に連関をとることで、エンジニアリングをベースにした新しい視点からの
+          デザイン提案能力の育成に力を入れています。
+        </p>
+        <h4>求める学生像</h4>
+        <ol>
+          <li>人とのコミュニケーションを大切にするダイナミックな行動力のある人</li>
+          <li>デザイン、システム、社会に対して、豊かな感性をもって幅広い視野で捉えることに興味を持っている人</li>
+          <li>先進のデザイン学を学ぶために十分な数学や英語などの基礎学力を持っている人</li>
+        </ol>
+        </p>
+        <h4>入試概要</h4>
+        <h5>一般選抜</h5>
+        <p>試験教科</p>
+        <ul>
+          <li>
+            <p>(前期)</p>
+            <p>
+              第１次選抜（大学入試センター試験）4教科5科目　国、数、理、外
+              第２次選抜（個別学力検査）2教科3科目　数、外、その他（造形表現）
+            </p>
+          </li>
+          <li>
+            <p>(後期)</p>
+            <p>第１次選抜（大学入試センター試験）4教科5科目　国、数、理、外
+              第２次選抜（個別学力検査）1教科2科目　数、その他（造形表現）
+            </p>
+          </li>
+        </ul>
+
+        <h5>推薦入試</h5>
+        <p>選考方法等</p>
+        <ul>
+          <li>
+            <p>一般推薦入試</p>
+            <p>第１次選考：出願書類<br>
+              第２次選考：面接、口頭試問及び小論文</p>
+          </li>
+        </ul>
+      </div>
+      <div id="englishAdmissionText" style="display: none">
+        <h4>Admission Policy</h4>
+      </div>
+      <div id="easyAdmissionText" style="display: none">
+        <h4>アドミッション・ポリシー</h4>
+      </div>
+    </div>
+    <div id="question">
+      <h3 id="nomalContentsTitle7" style="display: block">よくある質問</h3>
+      <h3 id="englishContentsTitle7" style="display: none">Q&A</h3>
+      <h3 id="easyContentsTitle7" style="display: none">よくある<ruby>
+          <rb>質問</rb>
+          <rt>しつもん</rt>
+        </ruby></h3>
+      <div id="nomalQText" style="display: block">
+        <ul>
+          <li>
+            <h4>
+              取れる資格は何ですか？
+            </h4>
+            <p>学校の提示している取得可能な資格・免許は以下の通りです。</p>
+            <ul>
+              <li>学士（芸術工学）：卒業を要件として取得できます。</li>
+              <li>学芸員：所定科目の単位ならびに卒業を要件として取得できます。</li>
+              <li>インテリアプランナー：卒業を要件として受験資格を取得できます。（資格取得は、卒業後実務経験2年以上が必要です。）</li>
+              <li>商業施設士補：定められた科目の単位の修得を要件として受講資格を取得できます。<br> <a
+                  href="https://www.sd.tmu.ac.jp/sdfaculty/industrial_art.html"
+                  title="sikaku">（https://www.sd.tmu.ac.jp/sdfaculty/industrial_art.html）</a>（20代　B３女性）
+              </li>
+            </ul>
+
+            <p>人によりますが、色彩学概論という授業がインダストリアルアート学科では受講できますので、色彩検定とかカラーコーディネーターを取るきっかけになると思います。（20代　B３女性）</p>
+            <p>推奨はされていませんが、過去に教員免許を取得し、現在教員として働いている方もいます。（20代　B３女性）</p>
+          </li>
+
+          <li>
+            <h4>バイトをする余裕はありますか？どんなバイトしていますか？</h4>
+            <p>1年後期から、週2〜3回程でバイトしています。私は通学時間が長いのもあるため、課題の忙しい時期は少なくしていました。割とシフトの自由が効くバイトを選びました。
+              仕事は人によりけりだと思いますが、私はケーキ屋と披露宴の音響で掛け持ちしています。（20代　B３女性）</p>
+            <p>1年生の時から3年間アパレルで週3〜4バイトしています。
+              シフトが融通のところの方が課題との両立ができると思います。（20代　B３女性）</p>
+          </li>
+          <li>
+            <h4>数学ができないので不安です。大丈夫ですか？</h4>
+            <p>他の科目もあるので、数学だけで全てが決まるわけではありません。ただし、苦手意識があるなら早いうちから向き合う方が良いかと思います。（20代　B３女性）</p>
+            <p>センター試験と2次試験突破するくらいのスキルがあれば充分です。（20代　B３女性）</p>
+          </li>
+          <li>
+            <h4>お金がないけどデザインの勉強がしたいです。専門学校に行くべきか、どこなら行けますか？</h4>
+            <p>都立大の図書館は以下の方にも解放されていますので、利用してみるといいかと。デザインの本などを読んでみるだけでも勉強にはなります。</p>
+            <ul>
+              <li>協定大学（中央大学・東京外国語大学・東京薬科大学）の大学院生および専任教員</li>
+              <li>所属機関の図書館から発行された紹介状をお持ちの方（事前照会が必要）</li>
+              <li>都内に在住または在勤の方（18歳以上で、大学等に所属していない方）</li>
+              <li>医療従事者（医療機関において教育・研究に携わる方も含む）<br>
+                ※医療従事者は、荒川館のみ利用可。<a
+                  href="https://www.lib.tmu.ac.jp/guide/first_time.html">(https://www.lib.tmu.ac.jp/guide/first_time.html)</a>
+              </li>
+            </ul>
+            <p>何を借りればいいのか検討もつかない場合は、<a href="./html/iaLib.html">IAみんなの図書</a>でIAの教授が実際におすすめしている本を借りてみることも一つの手です！参考にしてみては？
+              そのほかにも卒展や、システムデザインフォーラムにて教授とお話しできるタイミングがあると思います。ぜひお越しください。（20代　B３女性）</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="access">
+      <h3 id="nomalContentsTitle8" style="display: block">アクセス</h3>
+      <h3 id="englishContentsTitle8" style="display: none">Access</h3>
+      <h3 id="easyContentsTitle8" style="display: none">アクセス</h3>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.6262612793907!2d139.36427921465238!3d35.66157868019891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018e2086b789781%3A0x74b7f28cd003b142!2z5p2x5Lqs6YO956uL5aSn5a2mIOaXpemHjuOCreODo-ODs-ODkeOCuQ!5e0!3m2!1sja!2sjp!4v1591849222873!5m2!1sja!2sjp"
+        width="600" height="500" frameborder="0"
+        style="border:0;width:100%;filter:grayscale(100%);-webkit-filter:grayscale(100%)" allowfullscreen></iframe>
+    </div>
+
+    <pre id="result" style="display: none"></pre>
   </div>
-  <div id="curriculum">
-    <h3 id="nomalContentsTitle3" style="display: block">カリキュラム</h3>
-    <h3 id="englishContentsTitle3" style="display: none">Curriculum</h3>
-    <h3 id="easyContentsTitle3" style="display: none">カリキュラム</h3>
-    <p id="nomalCurrText" style="display:block">
-      専門科目は大きく「基礎総合ワークショップ」と「コア科目」に分かれます。
-      「基礎総合ワークショップ」は、アート・デザイン全般に不可欠な技術と知識を体験的、協同的に学ぶ中で感性を磨くことが主眼。
-      「コア科目」では、プロダクトデザインとメディアアートという産業にも直結するフィールドを設け、演習科目等で専門性を高めます。<br>
-      また、4年次には12のスタジオ（専門領域）に分かれ、アート・デザインとそのシステムが拓く新たな可能性を特別研究（卒業研究）としてまとめます｡
-    </p>
-    <p id="englishCurrText" style="display:none">
-      The specialized courses are broadly divided into Basic Synthesis Workshop and Core Subjects.
-      The main focus of the Basic Synthesis Workshop is to polish up students' sensibilities through experiential and
-      collaborative learning of the techniques and knowledge essential for art and design in general.
-      In the core subjects, students are given fields directly related to industry, such as product design and media
-      art, and
-      their expertise is enhanced through exercises and other activities.<br>
-      In the fourth year, students are divided into 12 studios (specialized areas) and compile their graduation research
-      on
-      art design and the new possibilities opened up by these systems.
-    </p>
-    <p id="easyCurrText" style="display:none">
-      <ruby>
-        <rb>専門科目</rb>
-        <rt>せんもんかもく</rt>
-      </ruby>は<ruby>
-        <rb>大</rb>
-        <rt>おお</rt>
-      </ruby>きく「<ruby>
-        <rb>基礎総合</rb>
-        <rt>きそそうごう</rt>
-      </ruby>ワークショップ」と「コア<ruby>
-        <rb>科目</rb>
-        <rt>かもく</rt>
-      </ruby>」に<ruby>
-        <rb>分</rb>
-        <rt>わ</rt>
-      </ruby>かれます。
-      「<ruby>
-        <rb>基礎総合</rb>
-        <rt>きそそうごう</rt>
-      </ruby>ワークショップ」は、アート・デザインに<ruby>
-        <rb>必要</rb>
-        <rt>ひつよう</rt>
-      </ruby>な<ruby>
-        <rb>技術</rb>
-        <rt>ぎじゅつ</rt>
-      </ruby>と<ruby>
-        <rb>知識</rb>
-        <rt>ちしき</rt>
-      </ruby>を<ruby>
-        <rb>経験</rb>
-        <rt>けいけん</rt>
-      </ruby>しながら<ruby>
-        <rb>学</rb>
-        <rt>まな</rt>
-      </ruby>ぶことが<ruby>
-        <rb>目的</rb>
-        <rt>もくてき</rt>
-      </ruby>です。
-      「コア<ruby>
-        <rb>科目</rb>
-        <rt>かもく</rt>
-      </ruby>」では、プロダクトデザインとメディアアートという<ruby>
-        <rb>産業</rb>
-        <rt>さんぎょう</rt>
-      </ruby>にもつながる2つの<ruby>
-        <rb>分野</rb>
-        <rt>ぶんや</rt>
-      </ruby>を<ruby>
-        <rb>設</rb>
-        <rt>もう</rt>
-      </ruby>けます。<ryby>
-        <rb>演習科目</rb>
-        <rt>えんしゅうかもく</rt>
-      </ryby>などで<ruby>
-        <rb>専門性</rb>
-        <rt>せんもんせい</rt>
-      </ruby>を<ruby>
-        <rb>高</rb>
-        <rt>たか</rt>
-      </ruby>めます。<br>
-      また、4<ruby>
-        <rb>年次</rb>
-        <rt>ねんじ</rt>
-      </ruby>には12のスタジオ（<ruby>
-        <rb>専門領域</rb>
-        <rt>せんもんりょういき</rt>
-      </ruby>）に<ruby>
-        <rb>分</rb>
-        <rt>わ</rt>
-      </ruby>かれます。アート・デザインとそのシステムが<ruby>
-        <rb>作</rb>
-        <rt>つく</rt>
-      </ruby>る<ruby>
-        <rb>新</rb>
-        <rt>あたら</rt>
-      </ruby>しい<ruby>
-        <rb>可能性</rb>
-        <rt>かのうせい</rt>
-      </ruby>を<ruby>
-        <rb>特別研究（卒業研究）</rb>
-        <rt>とくべつけんきゅう（そつぎょうけんきゅう）</rt>
-      </ruby>としてまとめます｡
-    </p>
-    <img src="./image/courcemodel2_3-01.png" title="curr1" width=70% height=70%>
-    <img src="./image/courcemodel2_3-02.png" title="curr2" width=70% height=70%>
-  </div>
-  <div id="studios">
-    <h3 id="nomalContentsTitle4" style="display: block">スタジオ紹介</h3>
-    <h3 id="englishContentsTitle4" style="display: none">Studios</h3>
-    <h3 id="easyContentsTitle4" style="display: none">スタジオ<ruby>
-        <rb>紹介</rb>
-        <rt>しょうかい</rt>
-      </ruby></h3>
-    <div id="nomalStudios" style="display: block"></div>
-    <div id="englishStudios" style="display: none"></div>
-  </div>
-  <div id="faculty">
-    <h3 id="nomalContentsTitle5" style="display: block">教員紹介</h3>
-    <h3 id="englishContentsTitle5" style="display: none">Faculty</h3>
-    <h3 id="easyContentsTitle5" style="display: none"><ruby>
-        <rb>先生</rb>
-        <rt>せんせい</rt>
-      </ruby>の<ruby>
-        <rb>紹介</rb>
-        <rt>しょうかい</rt>
-      </ruby></h3>
-    <div id="nomalFaculty" style="display: block"></div>
-    <div id="englishFaculty" style="display: none"></div>
-  </div>
-  <div id="admission">
-    <h3 id="nomalContentsTitle6" style="display: block">入試概要</h3>
-    <h3 id="englishContentsTitle6" style="display: none">Admission</h3>
-    <h3 id="easyContentsTitle6" style="display: none"><ruby>
-        <rb>入学試験</rb>
-        <rt>にゅうがくしけん</rt>
-      </ruby>について</h3>
-  </div>
-  <div id="question">
-    <h3 id="nomalContentsTitle7" style="display: block">よくある質問</h3>
-    <h3 id="englishContentsTitle7" style="display: none">Q&A</h3>
-    <h3 id="easyContentsTitle7" style="display: none">よくある<ruby>
-        <rb>質問</rb>
-        <rt>しつもん</rt>
-      </ruby></h3>
-  </div>
-  <div id="access">
-    <h3 id="nomalContentsTitle8" style="display: block">アクセス</h3>
-    <h3 id="englishContentsTitle8" style="display: none">Access</h3>
-    <h3 id="easyContentsTitle8" style="display: none">アクセス</h3>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.6262612793907!2d139.36427921465238!3d35.66157868019891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018e2086b789781%3A0x74b7f28cd003b142!2z5p2x5Lqs6YO956uL5aSn5a2mIOaXpemHjuOCreODo-ODs-ODkeOCuQ!5e0!3m2!1sja!2sjp!4v1591849222873!5m2!1sja!2sjp"
-      width="600" height="500" frameborder="0"
-      style="border:0;width:100%;filter:grayscale(100%);-webkit-filter:grayscale(100%)" allowfullscreen></iframe>
-  </div>
-  <div id="column">
-    <h3 id="nomalContentsTitle9" style="display: block">関連コンテンツ</h3>
-    <h3 id="englishContentsTitle9" style="display: none">Column</h3>
-    <h3 id="easyContentsTitle9" style="display: none"><ruby>
-        <rb>関連</rb>
-        <rt>かんれん</rt>
-      </ruby>コンテンツ</h3>
-    <div id="nomalLink" style="display: block"></div>
-  </div>
-  <pre id="result" style="display: none"></pre>
   <script src="js/index.js"></script>
 </body>
 

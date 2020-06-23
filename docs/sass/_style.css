@@ -1,0 +1,152 @@
+@charset "UTF-8";
+body {
+  font-family: sans-serif;
+}
+
+/* ========== * ==========*/
+/*========== header nav ==========*/
+header nav {
+  position: fixed;
+  top: 0;
+  background: #fff;
+  width: 100%;
+  height: 80px;
+}
+
+header nav ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #363636;
+  line-height: 80px;
+  display: block;
+  padding: 0 10px;
+  font-size: 17px;
+}
+
+header nav ul li a:hover {
+  opacity: 0.5;
+}
+
+.open {
+  margin-top: 80px;
+}
+
+/* ========== main-visual ========== */
+.main-visual {
+  width: 100%;
+  height: 800px;
+  background: #2B2845;
+  color: #fff;
+  position: relative;
+}
+
+.main-visual .logo {
+  position: absolute;
+  bottom: -3rem;
+  right: 7rem;
+  font-size: 30rem;
+  color: #2b2845;
+  text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff, -1px -1px 0 #fff;
+}
+
+.main-visual h1 {
+  color: #fff;
+  padding-top: 150px;
+  padding-left: 134px;
+  z-index: 10;
+}
+
+.main-visual h3 {
+  padding-top: 300px;
+  padding-left: 500px;
+  font-size: 20px;
+  z-index: 10;
+}
+
+.main-visual h3 .second_line {
+  margin-left: 3rem;
+}
+
+.main-visual h3 .third_line {
+  margin-left: 6rem;
+}
+
+/* ========== common section title ========== */
+.section_title {
+  color: #363636;
+  text-align: center;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  font-size: 3rem;
+  position: relative;
+  display: inline-block;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+
+.section_title:before, .section_title:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 45px;
+  height: 1px;
+  background-color: black;
+}
+
+.section_title:before {
+  left: 30rem;
+}
+
+.section_title:after {
+  right: 30rem;
+}
+
+/* ========== aboutus ========== */
+#aboutus p {
+  display: block;
+  background: #E4EBEF;
+  padding: 50px 100px;
+}
+
+/* ========== works ========== */
+#works a {
+  text-align: center;
+}
+
+/* flex使う */
+/* もっと見る はbuttonか何かで覆う */
+/* ========== curriculum ========== */
+#curriculum p {
+  display: block;
+  background: #E4EBEF;
+  padding: 50px 100px;
+}
+
+/* ========== studios ========== */
+/* ========== admission ==========*/
+#admission #nomalAdmissionText {
+  background: #E4EBEF;
+  padding: 50px 100px;
+}
+
+#admission #nomalAdmissionText h4 {
+  font-size: 25px;
+}
+
+#admission #nomalAdmissionText p, ol, ul {
+  padding-left: 100px;
+  /* padding-bottom: 20px; */
+}
+
+/* ========== question ========== */
+#question #nomalQText {
+  background: #E4EBEF;
+  padding: 50px 100px;
+}
+
+/* footer作成 */

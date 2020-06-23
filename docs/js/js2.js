@@ -9,36 +9,38 @@ const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 
 const renderJson = (json) => {
     const studios = json.records;
+    studios.pop();
     studios.forEach(studios => {
         const nomalStudioDiv = document.createElement('div');
         //const nomalStudioTitle = document.createElement("span");
         const nomalStudioLink = document.createElement("a");
-        //const nomalStudioImage = document.createElement("img");
-        //nomalStudioTitle.className = 'studio-title';
-        //nomalStudioTitle.textContent = studios['name-ja'];
-        nomalStudioLink.className = 'studio-title';
+        const nomalStudioImage = document.createElement("img");
+
+        //リンクと画像にクラス名（日本語版サイト）
+        nomalStudioLink.className = 'studio-link';
+        nomalStudioImage.className = 'studio-image';
         nomalStudioLink.href = studios['name-short'].toString() + ".html";
-        nomalStudioLink.textContent = studios['name-ja'];
+        nomalStudioImage.src = "../image/" + studios['name-short'].toString() + ".png";
+        //nomalStudioLink.textContent = studios['name-ja'];
         //nomalStudioImage.src = studios['photo1'];
 
         const englishStudioDiv = document.createElement('div');
-        //const englishStudioTitle = document.createElement("span");
         const englishStudioLink = document.createElement("a");
-        //const englishStudioImage = document.createElement("img");
+        const englishStudioImage = document.createElement("img");
 
-        //englishStudioTitle.className = 'studio-title-en';
-        //englishStudioTitle.textContent = studios['name-en'];
-        englishStudioLink.className = 'studio-title-en';
+        //リンクと画像にクラス名（英語版サイト）。でもこれ英語と日本語で分けなくても良かったかも。
+        englishStudioLink.className = 'studio-link-en';
+        englishStudioImage.className = 'studio-image-en'
         englishStudioLink.href = studios['name-short'].toString() + ".html";
-        englishStudioLink.textContent = studios['name-en'];
-        //englishStudioImage.src = studios['photo2'];
+        //englishStudioLink.textContent = studios['name-en'];
+        englishStudioImage.src = "../image/" + studios['name-short'].toString() + ".png";
 
 
-        //nomalStudioDiv.appendChild(nomalStudioImage);
+        nomalStudioLink.appendChild(nomalStudioImage);
         nomalStudioDiv.appendChild(nomalStudioLink);
         document.getElementById('nomalStudios').appendChild(nomalStudioDiv);
         //englishStudioDiv.appendChild(englishStudioTitle);
-        //englishStudioDiv.appendChild(englishStudioImage);
+        englishStudioLink.appendChild(englishStudioImage);
         englishStudioDiv.appendChild(englishStudioLink);
         document.getElementById('englishStudios').appendChild(englishStudioDiv);
 

@@ -49,56 +49,6 @@ const renderJson = (json) => {
     document.getElementById('result').textContent = JSON.stringify(json, null, 2);
 }
 
-/*
-const renderJson2 = (json) => {
-  const faculty = json.records;
-  faculty.forEach(faculty => {
-    const nomalFacultyDiv = document.createElement('div');
-    const nomalFacultyTitle = document.createElement("span");
-    const nomalFacultyImage = document.createElement("img");
-    nomalFacultyTitle.className = 'faculty-title';
-    //nomalFacultyTitle.parse = "data":['faculty-photo'];
-    nomalFacultyTitle.textContent = faculty['f-faculty-ja'];
-    nomalFacultyImage.src = faculty['faculty-photo'];
-
-    const englishFacultyDiv = document.createElement('div');
-    const englishFacultyTitle = document.createElement("span");
-    const englishFacultyImage = document.createElement("img");
-    englishFacultyTitle.className = 'faculty-title-en';
-    englishFacultyTitle.textContent = faculty['f-faculty-en'];
-    englishFacultyImage.src = faculty['faculty-photo'];
-
-    nomalFacultyDiv.appendChild(nomalFacultyImage);
-    nomalFacultyDiv.appendChild(nomalFacultyTitle);
-    document.getElementById('nomalFaculty').appendChild(nomalFacultyDiv);
-    englishFacultyDiv.appendChild(englishFacultyImage);
-    englishFacultyDiv.appendChild(englishFacultyTitle);
-    document.getElementById('englishFaculty').appendChild(englishFacultyDiv);
-  });
-
-  document.getElementById('result').textContent = JSON.stringify(json, null, 2);
-}*/
-
-/*
-var langBotton = document.getElementById("button");
-var langBottonClass = langBotton.getAttribute("class");
-
-if (pareValue[1] == "1") {
-    langBotton.classList.remove('open');
-    langBotton.classList.add('close');
-    document.getElementById('nomalButton').style.display = "none";
-    document.getElementById('englishButton').style.display = "block";
-
-    document.getElementById('nomalTitle').style.display = "none";
-    document.getElementById('englishTitle').style.display = "block";
-
-    document.getElementById('nomalReturn').style.display = "none";
-    document.getElementById('englishReturn').style.display = "block";
-    document.getElementById('nomalContentsTitle4').style.display = "none";
-    document.getElementById('englishContentsTitle4').style.display = "block";
-    document.getElementById('nomalStudios').style.display = "none";
-    document.getElementById('englishStudios').style.display = "block";
-}*/
 
 
 document.getElementById("button").onclick = function () {
@@ -178,16 +128,6 @@ const getData = async () => {
             let jsonResponse = await response.json();
             renderJson(jsonResponse);
         }
-
-
-        /*
-        const response2 = await fetch(endpoint2);
-        if (response2.ok) {
-            let jsonResponse2 = await response2.json();
-            renderJson2(jsonResponse2);
-        }
-        */
-
 
 
     }

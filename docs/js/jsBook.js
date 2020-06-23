@@ -65,8 +65,6 @@ const getData = async () => {
             let jsonResponse = await response.json();
             renderJson(jsonResponse);
         }
-
-
     }
     catch (error) {
         console.log(error);

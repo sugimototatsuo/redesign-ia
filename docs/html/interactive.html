@@ -5,28 +5,221 @@
     <meta charset="utf-8">
     <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="shortcut icon" href="../image/mark.ico">
 </head>
 
 <body>
+    <!--
+    <div id="showloading">
+        <img src="../image/loading.gif" alt="loading" width="500px">
+    </div>
+
+    <div id="mainContent" class="hidden">-->
     <button id="button" class="open">
         <p id="nomalButton" style="display: block">English</p>
         <p id="englishButton" style="display: none">Undo</p>
     </button>
 
-    <h1 id=nomalTitle style="display: block">インタラクティブアートスタジオ</h1>
+    <button id="button2" class="open">
+        <p id="nomalButton2" style="display: block">やさしいにほんご</p>
+        <p id="easyButton2" style="display: none">もとに もどす</p>
+    </button>
+    <h1 id="nomalTitle" style="display: block">インタラクティブアートスタジオ</h1>
     <h1 id="englishTitle" style="display: none">Interactive Art Studio</h1>
+    <h1 id="easyTitle" style="display: none">インタラクティブアートスタジオ</h1>
+
+    <div id="nomalFaculty" style="display: block">
+        <h3>担当教員</h3>
+        <h5>串山 久美子</h5>
+        <h5>教授</h5>
+    </div>
+
+    <div id="englishFaculty" style="display: none">
+        <h3>Faculty</h3>
+        <h5>Kumiko Kushiyama</h5>
+        <h5>Professor</h5>
+    </div>
+
+    <div id="easyFaculty" style="display: none">
+        <h3><ruby>
+                <rb>担当教員</rb>
+                <rt>たんとうきょういん</rt>
+            </ruby></h3>
+        <h5><ruby>
+                <rb>串山 久美子</rb>
+                <rt>くしやま くみこ</rt>
+            </ruby></h5>
+        <h5><ruby>
+                <rb>教授</rb>
+                <rt>きょうじゅ</rt>
+            </ruby></h5>
+    </div>
+
+    <h4 id="nomalCore" style="display: block">メディアアートコア</h4>
+    <h4 id="englishCore" style="display: none">Media Art Core</h4>
+
+    <p id="nomalText" style="display: block">
+        インタラクティブアートスタジオ（通称:IDEEA Lab.)はInteractive, Design, Entertainment, Education,
+        Artの頭文字を取った、インタラクションデザインを軸に工学と表現領域にまたがる研究を行う研究室です。
+        人間とコンピュータをつなぐインタフェースやインタラクションのあり方を日夜考えています。具体的には触覚、映像、
+        音をインタラクティブに扱うインタフェースを開発し、新たなコミュニケーションを創造する研究などをアイディア、設計、
+        実装、検証、最終のデザインのアウトプットまで一貫した研究が行われています。
+    </p>
+
+    <p id="englishText" style="display: none">
+        The Interactive Art Studio, or IDEEA (for Interaction, Design, Entertainment, Education and Art) Lab researches
+        interface design, such as new tactile input devices, controls for moving image and sound, interaction design,
+        and
+        various ways to connect people and computers. Our focus is on exploring new ways of communicating, from coming
+        up with
+        original ideas to designing snd engineering the finished products.
+
+    </p>
+
+    <p id="easyText" style="display: none">
+        インタラクティブアートスタジオは、
+        インタラクションデザインを<ruby>
+            <rb>中心</rb>
+            <rt>ちゅうしん</rt>
+        </ruby>に
+        <ryby>
+            <rb>工学</rb>
+            <rt>こうがく</rt>
+        </ryby>と<ruby>
+            <rb>表現</rb>
+            <rt>ひょうげん</rt>
+        </ruby>を
+        どちらも<ruby>
+            <rb>研究</rb>
+            <rt>けんきゅう</rt>
+        </ruby>する<ruby>
+            <rb>研究室</rb>
+            <rt>けんきゅうしつ</rt>
+        </ruby>です。
+        <ruby>
+            <rb>別</rb>
+            <rt>べつ</rt>
+        </ruby>の<ruby>
+            <rb>名前</rb>
+            <rt>なまえ</rt>
+        </ruby>は、IDEEA Lab.です。
+        <ruby>
+            <rb>人</rb>
+            <rt>ひと</rt>
+        </ruby>とコンピュータをつなぐインタフェースやインタラクションの<ruby>
+            <rb>役目</rb>
+            <rt>やくめ</rt>
+        </ruby>を
+        いつも<ruby>
+            <rb>考</rb>
+            <rt>かんが</rt>
+        </ruby>えています。<ruby>
+            <rb>特</rb>
+            <rt>とく</rt>
+        </ruby>に、
+        <ruby>
+            <rb>触覚</rb>
+            <rt>しょっかく</rt>
+        </ruby>・<ruby>
+            <rb>映像</rb>
+            <rt>えいぞう</rt>
+        </ruby>・<ruby>
+            <rb>音</rb>
+            <rt>おと</rt>
+        </ruby>を
+        インタラクティブに<ruby>
+            <rb>使</rb>
+            <rt>つか</rt>
+        </ruby>うインタフェースを<ruby>
+            <rb>作</rb>
+            <rt>つく</rt>
+        </ruby>っています。
+        また、<ruby>
+            <rb>新</rb>
+            <rt>あたら</rt>
+        </ruby>しいコミュニケーションを<ruby>
+            <rb>作</rb>
+            <rt>つく</rt>
+        </ruby>る<ruby>
+            <rb>研究</rb>
+            <rt>けんきゅう</rt>
+        </ruby>もしています。
+        アイディアを<ruby>
+            <rb>出</rb>
+            <rt>だ</rt>
+        </ruby>して、<ruby>
+            <rb>作</rb>
+            <rt>つく</rt>
+        </ruby>って、<ruby>
+            <rb>試</rb>
+            <rt>ため</rt>
+        </ruby>して、
+        デザインを<ruby>
+            <rb>決</rb>
+            <rt>き</rt>
+        </ruby>めるまでのつながった<ruby>
+            <rb>研究</rb>
+            <rt>けんきゅう</rt>
+        </ruby>をしています。
+    </p>
 
     <a href="../index.html" title="returnIndex">
-        <p id="nomalReturn" style="display: block">もどる</p>
-        <p id="englishReturn" style="display: none">Return</p>
+        <p id="nomalReturn" style="display: block">トップへもどる</p>
+        <p id="englishReturn" style="display: none">Return to top</p>
     </a>
 
     <div id="studios">
         <h3 id="nomalContentsTitle4" style="display: block">他のスタジオを見る</h3>
         <h3 id="englishContentsTitle4" style="display: none">Other Studios</h3>
+        <h3 id="easyContentsTitle4" style="display: none"><ruby>
+                <rb>他</rb>
+                <rt>ほか</rt>
+            </ruby>のスタジオを<ruby>
+                <rb>見</rb>
+                <rt>み</rt>
+            </ruby>る</h3>
+        <!--面倒だからjsonで取ってくるけど、ホバーしたらどうのこうのするならこっちのが良いかもと思ったので一応残しておきます
+                <a href="editorial.html">
+                    <img src="../image/editorial.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="equipment.html">
+                    <img src="../image/equipment.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="ergonomics.html">
+                    <img src="../image/ergonomics.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="interactive.html">
+                    <img src="../image/interactive.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="interface.html">
+                    <img src="../image/interface.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="interior.html">
+                    <img src="../image/interior.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="kinematograph.html">
+                    <img src="../image/kinematograph.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="network.html">
+                    <img src="../image/network.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="software.html">
+                    <img src="../image/software.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="spatial.html">
+                    <img src="../image/spatial.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="transportation.html">
+                    <img src="../image/transportation.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="visual.html">
+                    <img src="../image/visual.png" title="edi" width="50px" height="50px">
+                </a>
+                --->
         <div id="nomalStudios" style="display: block"></div>
         <div id="englishStudios" style="display: none"></div>
     </div>
+    <!--</div>-->
     <script src="../js/js2.js"></script>
 </body>
 

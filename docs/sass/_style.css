@@ -1,33 +1,91 @@
-@charset "UTF-8";
 body {
   font-family: sans-serif;
 }
 
-/* ========== * ==========*/
+.faculty-image, .faculty-image-en {
+  width: 200px;
+  height: 200px;
+}
+
+.link-image {
+  width: 200px;
+  height: 200px;
+}
+
+#loading {
+  width: 100%;
+  height: 100vh;
+  background-color: #073a49;
+  position: relative;
+}
+
+#loading img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.hidden {
+  display: none;
+}
+
 /*========== header nav ==========*/
-header nav {
+header {
   position: fixed;
   top: 0;
   background: #fff;
   width: 100%;
   height: 80px;
+  z-index: 10;
 }
 
-header nav ul li {
+header .left_h {
+  width: 80%;
+  height: 80px;
+  float: left;
+}
+
+header .left_h nav ul {
+  padding-left: -50px;
+}
+
+header .left_h nav ul li {
   list-style: none;
   display: inline-block;
 }
 
-header nav ul li a {
+header .left_h nav ul li a {
   text-decoration: none;
   color: #363636;
   line-height: 80px;
   display: block;
   padding: 0 10px;
-  font-size: 17px;
+  font-size: 1.0rem;
 }
 
-header nav ul li a:hover {
+header .left_h nav ul li a:hover {
+  opacity: 0.5;
+}
+
+header .right_h {
+  width: 20%;
+  height: 80px;
+  float: right;
+  text-align: center;
+}
+
+header .right_h a {
+  text-decoration: none;
+  color: #363636;
+  line-height: 80px;
+  display: inline-block;
+  width: 48%;
+  background: #C3C3C3;
+  font-size: 1.0rem;
+  font-weight: bold;
+}
+
+header .right_h a:hover {
   opacity: 0.5;
 }
 
@@ -57,14 +115,14 @@ header nav ul li a:hover {
   color: #fff;
   padding-top: 150px;
   padding-left: 134px;
-  z-index: 10;
+  z-index: 1;
 }
 
 .main-visual h3 {
-  padding-top: 300px;
-  padding-left: 500px;
-  font-size: 20px;
-  z-index: 10;
+  padding-top: 20rem;
+  padding-left: 50rem;
+  font-size: 2rem;
+  z-index: 1;
 }
 
 .main-visual h3 .second_line {
@@ -114,20 +172,129 @@ header nav ul li a:hover {
 }
 
 /* ========== works ========== */
-#works a {
+#works img {
+  width: 33rem;
+  height: 33rem;
+}
+
+#works .frame {
+  border: 1px solid #707070;
+  padding: 3rem 0;
+}
+
+#works .frame .container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#works .frame .moreBtn {
   text-align: center;
 }
 
-/* flex使う */
-/* もっと見る はbuttonか何かで覆う */
+#works .frame .moreBtn a {
+  text-decoration: none;
+  color: #363636;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+#works .frame .moreBtn a:hover {
+  opacity: 0.7;
+}
+
+#works .frame .moreBtn a p {
+  background: #CFCFCF;
+  padding: 1rem 4rem;
+  margin-top: 3rem;
+}
+
 /* ========== curriculum ========== */
-#curriculum p {
-  display: block;
+#curriculum .bg-gray {
+  text-align: center;
   background: #E4EBEF;
+}
+
+#curriculum .bg-gray p {
+  display: block;
   padding: 50px 100px;
+  text-align: left;
+}
+
+#curriculum .bg-gray img {
+  width: 70%;
+  padding-bottom: 3rem;
 }
 
 /* ========== studios ========== */
+.bg_blue {
+  background: #E4EBEF;
+  padding: 1rem 10%;
+}
+
+#nomalStudios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#nomalStudios > div {
+  margin: 1em 0;
+  background: #FFFFFF;
+  min-height: 3em;
+  width: 31%;
+  display: inline-block;
+  text-align: center;
+}
+
+#englishStudios > div {
+  margin: 1em 0;
+  background: #FFFFFF;
+  min-height: 3em;
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+}
+
+.studio-title {
+  font-weight: bold;
+  text-decoration: none;
+  color: #363636;
+}
+
+.studio-title-en {
+  margin-left: 1em;
+  font-weight: 100;
+  opacity: 0.75;
+  text-decoration: none;
+  color: #363636;
+}
+
+pre#result {
+  background-color: #444;
+  color: #fff;
+  font-family: monospace;
+  font-size: 9px;
+}
+
+.studio-photo1, .studio-photo2 {
+  width: 100%;
+}
+
+#nomalFaculty > div {
+  margin: 1em 0;
+  padding: 0.5em;
+  background: #f8f8f8;
+  min-height: 3em;
+}
+
+#englishFaculty > div {
+  margin: 1em 0;
+  padding: 0.5em;
+  background: #f8f8f8;
+  min-height: 3em;
+}
+
 /* ========== admission ==========*/
 #admission #nomalAdmissionText {
   background: #E4EBEF;
@@ -139,7 +306,7 @@ header nav ul li a:hover {
 }
 
 #admission #nomalAdmissionText p, ol, ul {
-  padding-left: 100px;
+  padding-left: 50px;
   /* padding-bottom: 20px; */
 }
 
@@ -149,4 +316,19 @@ header nav ul li a:hover {
   padding: 50px 100px;
 }
 
-/* footer作成 */
+#access .frame {
+  border: 1px solid #707070;
+  margin-bottom: -0.5rem;
+}
+
+/* ========== footer ========== */
+footer {
+  background: #2B2845;
+  padding: 1rem 0;
+}
+
+footer p {
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 0.3rem;
+}

@@ -76,6 +76,9 @@ document.getElementById("button").onclick = function () {
         document.getElementById('englishFaculty').style.display = "block";
         document.getElementById('easyFaculty').style.display = "none";
 
+        document.getElementById('nomalCore').style.display = "none";
+        document.getElementById('englishCore').style.display = "block";
+
         document.getElementById('nomalText').style.display = "none";
         document.getElementById('englishText').style.display = "block";
         document.getElementById('easyText').style.display = "none";
@@ -108,6 +111,8 @@ document.getElementById("button").onclick = function () {
         document.getElementById('englishFaculty').style.display = "none";
         document.getElementById('easyFaculty').style.display = "none";
 
+        document.getElementById('nomalCore').style.display = "block";
+        document.getElementById('englishCore').style.display = "none";
 
         document.getElementById('nomalText').style.display = "block";
         document.getElementById('englishText').style.display = "none";
@@ -147,6 +152,8 @@ document.getElementById("button2").onclick = function () {
         document.getElementById('englishFaculty').style.display = "none";
         document.getElementById('easyFaculty').style.display = "block";
 
+        document.getElementById('nomalCore').style.display = "block";
+        document.getElementById('englishCore').style.display = "none";
 
         document.getElementById('nomalText').style.display = "none";
         document.getElementById('englishText').style.display = "none";
@@ -180,6 +187,8 @@ document.getElementById("button2").onclick = function () {
         document.getElementById('englishFaculty').style.display = "none";
         document.getElementById('easyFaculty').style.display = "none";
 
+        document.getElementById('nomalCore').style.display = "block";
+        document.getElementById('englishCore').style.display = "none";
 
         document.getElementById('nomalText').style.display = "block";
         document.getElementById('englishText').style.display = "none";

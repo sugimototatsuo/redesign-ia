@@ -19,116 +19,91 @@ $breakpoints: (
 body {
   font-family: sans-serif;
 }
-// #nomalStudios > div {
-//   margin: 1em 0;
-//   padding: 0.5em;
-//   background: #f8f8f8;
-//   min-height: 3em;
-// }
 
-// #englishStudios > div {
-//   margin: 1em 0;
-//   padding: 0.5em;
-//   background: #f8f8f8;
-//   min-height: 3em;
-// }
+.faculty-image,.faculty-image-en{
+  width: 200px;
+  height: 200px;
+}
 
-// #nomalFaculty > div {
-//   margin: 1em 0;
-//   padding: 0.5em;
-//   background: #f8f8f8;
-//   min-height: 3em;
-// }
+.link-image{
+  width: 200px;
+  height: 200px;
+}
 
-// #englishFaculty > div {
-//   margin: 1em 0;
-//   padding: 0.5em;
-//   background: #f8f8f8;
-//   min-height: 3em;
-// }
+#loading {
+width: 100%;
+height: 100vh;
+background-color: #073a49;
+position: relative;
+}
 
-// .studio-title {
-//   font-weight: bold;
-// }
-// .studio-title-en {
-//   margin-left: 1em;
-//   font-weight: 100;
-//   opacity: 0.75;
-// }
-// pre#result {
-//   background-color: #444;
-//   color: #fff;
-//   font-family: monospace;
-//   font-size: 9px;
-// }
+#loading img {
+position: absolute;
+top: 50%;
+left: 50%;
+}
 
-// .studio-photo1,.studio-photo2{
-//   width: 200px;
-// }
-
-// .faculty-image,.faculty-image-en{
-//   width: 200px;
-//   height: 200px;
-// }
-
-// .link-image{
-//   width: 200px;
-//   height: 200px;
-// }
-
-// #loading {
-// width: 100%;
-// height: 100vh;
-// background-color: #073a49;
-// position: relative;
-// }
-
-// #loading img {
-// position: absolute;
-// top: 50%;
-// left: 50%;
-// }
-
-// .hidden {
-// display: none;
-// }
-
-/* ========== * ==========*/
-// *{
-//   padding: 0;
-//   margin: 0;
-//   box-sizing: border-box;
-// }
+.hidden {
+display: none;
+}
 
 /*========== header nav ==========*/
-header nav{
+header {
   position: fixed;
   top: 0;
   background: #fff;
   width: 100%;
   height: 80px;
-  ul li{
-    list-style: none;
-    display: inline-block;
-    a{
-      text-decoration: none;
-      color: #363636;
-      line-height: 80px;
-      display: block;
-      padding: 0 10px;
-      font-size: 17px;
-      &:hover{
-        opacity: 0.5;
+  z-index: 10;
+  .left_h{
+    width: 80%;
+    height: 80px;
+    float: left;
+    nav{
+      ul {
+        padding-left: -50px;
+        li{
+          list-style: none;
+          display: inline-block;
+          a{
+            text-decoration: none;
+            color: #363636;
+            line-height: 80px;
+            display: block;
+            padding: 0 10px;
+            font-size: 1.0rem;
+            &:hover{
+              opacity: 0.5;
+            }
+          }
+        }
       }
     }
   }
+  .right_h{
+    width: 20%;
+    height: 80px;
+    float: right;
+    text-align: center;
+          a{
+            text-decoration: none;
+            color: #363636;
+            line-height: 80px;
+            display: inline-block;
+            width: 48%;
+            background: #C3C3C3;
+            font-size: 1.0rem;
+            font-weight: bold;
+            &:hover{
+              opacity: 0.5;
+            }
+          }
+        }
 }
-
 // button
 .open{
   margin-top: 80px;
 }
-
 
 /* ========== main-visual ========== */
 .main-visual{
@@ -152,13 +127,13 @@ header nav{
     color: #fff;
     padding-top: 150px;
     padding-left: 134px;
-    z-index: 10;
+    z-index: 1;
   }
   h3{
-    padding-top: 300px;
-    padding-left: 500px;
-    font-size: 20px;
-    z-index: 10;
+    padding-top: 20rem;
+    padding-left: 50rem;
+    font-size: 2rem;
+    z-index: 1;
     .second_line{
       margin-left: 3rem;
     }
@@ -167,7 +142,6 @@ header nav{
     }
   }
 }
-
 
 /* ========== common section title ========== */
 // [id^="nomalContentsTitle"]  {
@@ -206,21 +180,119 @@ header nav{
 }
 
 /* ========== works ========== */
-#works a{
-  text-align: center;
+#works {
+  img{
+    width: 33rem;
+    height: 33rem;
+  }
+  .frame{
+    border: 1px solid #707070;
+    padding: 3rem 0;
+    .container{
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .moreBtn{
+      text-align: center;
+      a{
+        text-decoration: none;
+        color: #363636;
+        display: inline-block;
+        margin: 0 auto;
+        &:hover{
+          opacity: 0.7;
+        }
+        p{
+          background: #CFCFCF;
+          padding: 1rem 4rem;
+          margin-top: 3rem;
+        }
+      }
+    }
+  }
 }
-/* flex使う */
-/* もっと見る はbuttonか何かで覆う */
 
 /* ========== curriculum ========== */
-#curriculum p{
-  display: block;
-  background: #E4EBEF;
-  padding: 50px 100px;
+#curriculum {
+  .bg-gray{
+    text-align: center;
+    background: #E4EBEF;
+    p{
+      display: block;
+      padding: 50px 100px;
+      text-align: left;
+    }
+    img{
+      width: 70%;
+      padding-bottom: 3rem;
+    }
+  }
 }
 
 /* ========== studios ========== */
+.bg_blue{
+  background: #E4EBEF;
+  padding: 1rem 10%;
+}
+#nomalStudios{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#nomalStudios > div {
+  margin: 1em 0;
+  background: #FFFFFF;
+  min-height: 3em;
+  width: 31%;
+  display: inline-block;
+  text-align: center;
+}
+#englishStudios > div {
+  margin: 1em 0;
+  background: #FFFFFF;
+  min-height: 3em;
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+}
+.studio-title {
+  font-weight: bold;
+  text-decoration: none;
+  color: #363636;
+}
+.studio-title-en {
+  margin-left: 1em;
+  font-weight: 100;
+  opacity: 0.75;
+  text-decoration: none;
+  color: #363636;
+}
+pre#result {
+  background-color: #444;
+  color: #fff;
+  font-family: monospace;
+  font-size: 9px;
+}
 
+.studio-photo1,.studio-photo2{
+  width: 100%;
+}
+
+// ==========faculty ==========
+#nomalFaculty > div {
+  margin: 1em 0;
+  padding: 0.5em;
+  background: #f8f8f8;
+  min-height: 3em;
+}
+
+#englishFaculty > div {
+  margin: 1em 0;
+  padding: 0.5em;
+  background: #f8f8f8;
+  min-height: 3em;
+}
 
 /* ========== admission ==========*/
 #admission #nomalAdmissionText{
@@ -231,7 +303,7 @@ header nav{
   font-size: 25px;
 }
 #admission #nomalAdmissionText p, ol, ul{
-  padding-left: 100px;
+  padding-left: 50px;
   /* padding-bottom: 20px; */
 }
 
@@ -241,4 +313,25 @@ header nav{
   padding: 50px 100px;
 }
 
-/* footer作成 */
+// ========== access =========
+#access{
+  .frame{
+    border: 1px solid #707070;
+    margin-bottom: -0.5rem;
+  }
+}
+// iframe{
+//   width: 48%!important;
+//   height: 30rem;
+// }
+
+/* ========== footer ========== */
+footer{
+  background: #2B2845;
+  padding: 1rem 0;
+  p{
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 0.3rem;
+  }
+}

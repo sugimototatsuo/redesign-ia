@@ -1,0 +1,343 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/*デフォルトの設定があるとスタイリング時にわかりにくいので、こちらとりあえず削除します*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+
+/*各種見出しとかタグのデフォルト設定*/
+h1 {
+    font-size: 48px;
+    font-weight: 400;
+    color: steelblue;
+  }
+   h2 {
+      font-weight: 400;
+      font-size: 36px;
+      color: steelblue;
+    }
+  
+    p{
+      font-size: 16px;
+    }
+    ol, ul {
+        list-style: none; 
+    }
+    a { 
+        text-decoration: none ;
+    }
+
+body{
+ background-color:#ffffff;
+ margin: 0px auto;
+  font-family: sans-serif;
+max-width:1200px;
+ }
+
+ 
+ footer {
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 120px;
+    bottom: 0px;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.5em;
+    letter-spacing: 0.8px;
+    margin: 50px 0 0 0;
+    padding: 10px 0 0 0;
+    color: #777; }
+    footer p.sd {
+      font: normal 8pt "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin-bottom: 13px; }
+    footer p.ja {
+      font: normal 8pt "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, Osaka, "MS PGothic", arial, helvetica, sans-serif; }
+    footer a {
+      text-decoration: none; }
+      footer a.sd {
+        font: normal 8pt "Helvetica Neue", Helvetica, Arial, sans-serif; }
+        footer a.sd:visited {
+          color: #777; }
+        footer a.sd:link {
+          color: #777; }
+
+ .float-clear{
+    clear:both;
+}
+   
+/*サイドバー*/
+ .sidebar {
+ position: fixed;
+ /*left: 0px;
+ top: 100px;
+width: 150px;
+height: 100vh;*/
+z-index:10;
+ /* min-height: 500px;*/
+ background-color: #FFF;
+ padding-top: 15px;
+ padding-left: 50px;
+ }
+ .sidebar a.linkMenuText {
+ font: bold 20pt /*"Helvetica Neue", Helvetica, Arial, sans-serif*/;
+text-decoration: none;
+color: #777;
+
+ /*letter-spacing: .5pt; */
+}
+.sidebar li{
+    margin-bottom:20px;
+}
+ .sidebar a.linkMenuText.here {
+  color: #000; 
+}
+ .sidebar a.linkMenuText:hover {
+ color: #000; 
+}
+
+
+/*サイドメニュー以外の全てを囲む*/
+ .contents {
+    position: absolute;
+    left: 200px;
+    top: 100px;
+    width: 800px/*calc(100vw - 240px)*/;
+    height: auto;
+    min-height: 500px;
+    background-color: #FFF;
+    padding: 0px 100px 0px 30px; }
+
+
+    /*画像のスライドショー ref:https://tech-dig.jp/js-slider//*/
+    .slider {
+        position: relative;
+    }
+    
+    .slider img {
+        width: 600px;/*変えた*/
+        height: 400px;/*付け加えた*/
+        vertical-align: bottom;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+    
+    .appear {
+        animation: fadeIn 2s ease 0s 1 normal;
+        -webkit-animation: fadeIn 2s ease 0s 1 normal;
+    
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+    
+    @keyframes fadeIn {
+        0% {
+            opacity: 0.2
+        }
+    
+        100% {
+            opacity: 1
+        }
+    }
+    
+    @-webkit-keyframes fadeIn {
+        0% {
+            opacity: 0.2
+        }
+    
+        100% {
+            opacity: 1
+        }
+    }
+    
+    .slider i.fas {
+        color: rgba(25, 25, 25, 0.7);
+        font-size: 2.5em;
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+    }
+    
+    .slider i.fa-arrow-circle-right {
+        right: 2%;
+    }
+    
+    .slider i.fa-arrow-circle-left {
+        left: 2%;
+    }
+    .thumbnail{
+        /*読み解く時間があれなのでとりあえず強制非表示*/
+        display: none;
+    }
+    
+    .thumbnail ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    }
+    
+    .thumbnail ul li {
+        margin: 10px 0;
+        width: 23.5%;
+        margin-right: 2%;
+        cursor: pointer;
+        -webkit-filter: grayscale(90%);
+        filter: grayscale(90%);
+    }
+    
+    .thumbnail ul li:nth-child(4n) {
+        margin-right: 0;
+    }
+    
+    .thumbnail ul li:hover {
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);
+    }
+    
+    .thumbnail ul li.selected {
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);
+    }
+    
+    .thumbnail ul li img {
+        width: 100%;
+    }
+
+    .scroll-top {
+        position: fixed;
+        width: 100px;
+        height: 50px;
+        bottom: 40px;
+        right: 40px;
+        cursor: pointer;
+        z-index: 100;
+        text-align: center;
+     }
+        .scroll-top img {
+          width: 30px;
+          height: auto; 
+        }
+        .scroll-top p {
+          font-size: 17px;
+          color: #535353;
+          font: bold 15pt "Helvetica Neue", Helvetica, Arial, sans-serif;
+          letter-spacing: 0.5px;
+          padding-top: 8px; 
+        }
+
+ /*ここまで共通設定*/
+
+.sectionTitle{
+    text-align: center;
+}
+
+/*出だし*/
+  #introduction{
+
+  }
+
+#intro-sentense{
+font-size: 16px;
+width:400px;
+
+}
+
+#top-logo-image{
+    width:300px;
+    float:left;
+}
+
+
+/*news*/
+   img.article-img{
+    width: 200px;
+    height: 200px; 
+    float:left;
+}
+
+#articles{
+    max-width:1000px;
+    margin: 0 auto;
+}
+
+.an-article{
+    margin:60px 0px;
+}
+.article-text-container{
+margin: 40px 0px 0px 200px;/*この辺の回り込み　いい方法忘れたので後でなんとかする*/
+width: calc(100% - 200px);  
+padding:0px 0px 0px 16px;
+}
+
+.article-title{
+    font-size:20px;
+    text-decoration: none ;
+    color:#11114d;
+    margin:10px;
+}
+.update-date{
+    margin:10px;
+    
+}
+.article-contents{
+    margin:10px;
+    
+}
+
+
+/*Aceess*/
+
+#accessMapcantainer{
+    margin:0px 100px;
+}
+#map { 
+    top: 0;
+    bottom: 0;
+    width: 600px;
+    height: 400px;
+}
+
+li:hover{
+    color:#B20909;
+}
+
+a { 
+    font-size:20px;
+}
+a:hover{
+    color:#B20909;
+}
+

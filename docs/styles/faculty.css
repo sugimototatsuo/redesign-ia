@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+body{
+    background-color: #ffffff;
+    margin: 0 auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+
+p,a{
+       margin: 0; 
+       padding:0;
+}
+
+header{
+    background-color:  #ffffff;
+    border-bottom:1px solid #191919;
+    position: fixed;
+    width:100%;
+    z-index: 10;
+}
+ul{
+    margin: 30px auto;
+    padding: 0 50px;
+    text-align: center;
+}
+li{
+    color: midnightblue;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    display:inline-block;
+    width: 150px;
+}
+li:hover{
+    color:coral;
+}
+
+/*img{
+    box-shadow: 10px 10px rgba(1,1,100,0.8);
+    margin:0 80px;
+}*/
+h1{
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #191919;
+}
+h2{
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #191919;
+}
+h3{
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #191919;
+    font-size: 13px;
+}
+a {
+    text-decoration: none ;
+    color:#191919;
+}
+a:hover{
+    color:coral;
+}
+
+.container{
+    max-width:1200px;
+    margin: 0  auto;
+   }
+
+
+
+   /*ここからfaculty*/
+img.faculty-img{
+    width: 160px;
+    height: 160px;
+    float:left;
+}
+
+#faculties{
+    max-width:1200px;
+    margin: 0 auto;
+}
+
+.faculty-profile{
+    min-height:180px;
+}
+
+.faculty-name{
+    font-size:24px;
+    text-decoration: none ;
+    color:#191919;
+
+}
+.faculty-title{
+    font-size:20px;
+    
+}
+.aculty-studio{
+
+    
+}
+.faculty-major{
+ 
+}
+
+.faculty-link{
+
+}

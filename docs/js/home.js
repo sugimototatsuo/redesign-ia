@@ -371,7 +371,7 @@ const getData3 = async () => {
 getData3();
 
 
-
+//ローディングアニメーション　jsonの読み込み
 let lottieObj = lottie.loadAnimation({
     container: document.getElementById('sampleAnime'), // 表示させたい要素を渡します
     renderer: 'svg', // 描画形式を指定
@@ -379,3 +379,100 @@ let lottieObj = lottie.loadAnimation({
     autoplay: true, // 自動再生、falseの場合は自分のタイミングで
     path: 'https://assets6.lottiefiles.com/packages/lf20_lp3wO4.json' // 再生させたいアニメーションのjsonのパスを指定します。リンクだといけるな…なんだそれ
 });
+
+
+
+//画像のスライドショー
+(function () {
+    const setImage = [
+        "./img/currentSite_imgs/studio/ed1.png",
+        "./img/currentSite_imgs/studio/ed2.png",
+        "./img/currentSite_imgs/studio/baba1.png",
+        "./img/currentSite_imgs/studio/baba2.png"
+    ];
+    const view = document.getElementById('view');
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+    const thumbnailList = document.getElementById('thumbnailList');
+
+    let list;
+    let image;
+    let current = 0;
+    let clickBtn = true;
+
+
+    function createThumbnailItem() {
+        for (let i = 0; i < setImage.length; i++) {
+            list = document.createElement('li');
+            image = document.createElement('img');
+            image.src = setImage[i];
+            list.appendChild(image);
+            thumbnailList.appendChild(list);
+
+            if (i === 0) {
+                list.classList.add("selected");
+            }
+
+            list.addEventListener('click', function () {
+                view.src = this.children[0].src;
+
+                for (let j = 0; j < thumbnailList.children.length; j++) {
+                    thumbnailList.children[j].classList.remove("selected");
+                };
+                this.classList.add("selected");
+                let currentImage = this.children[0].src.slice(-6, -4);
+                current = Number(currentImage) - 1;
+            });
+        };
+    }
+    createThumbnailItem();
+
+
+    prev.addEventListener('click', function () {
+        if (clickBtn === true) {
+            clickBtn = false;
+            view.classList.add("appear");
+            thumbnailList.children[current].classList.remove("selected");
+            current--;
+            if (current < 0) {
+                current = setImage.length - 1;
+            }
+            view.src = setImage[current];
+            thumbnailList.children[current].classList.add("selected");
+            setTimeout('view.classList.remove("appear");', 2100);
+            setTimeout(function () {
+                clickBtn = true;
+            }, 2100);
+        } else {
+            return false;
+        }
+    });
+
+    next.addEventListener('click', function () {
+        if (clickBtn === true) {
+            clickBtn = false;
+            view.classList.add("appear");
+            thumbnailList.children[current].classList.remove("selected");
+            current++;
+            if (current > setImage.length - 1) {
+                current = 0;
+            }
+            view.src = setImage[current];
+            thumbnailList.children[current].classList.add("selected");
+            setTimeout('view.classList.remove("appear");', 2100);
+            setTimeout(function () {
+                clickBtn = true;
+            }, 2100);
+        } else {
+            return false;
+        }
+    });
+
+    function autoPlay() {
+        setTimeout(function () {
+            next.click();
+            autoPlay();
+        }, 5000);
+    }
+    window.onload = autoPlay();
+})();

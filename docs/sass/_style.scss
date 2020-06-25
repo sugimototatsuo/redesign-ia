@@ -20,16 +20,6 @@ body {
   font-family: sans-serif;
 }
 
-.faculty-image,.faculty-image-en{
-  width: 200px;
-  height: 200px;
-}
-
-.link-image{
-  width: 200px;
-  height: 200px;
-}
-
 #loading {
 width: 100%;
 height: 100vh;
@@ -233,26 +223,22 @@ header {
 /* ========== studios ========== */
 .bg_blue{
   background: #E4EBEF;
-  padding: 1rem 10%;
-}
-#nomalStudios{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  padding: 2rem 6%;
 }
 #nomalStudios > div {
   margin: 1em 0;
   background: #FFFFFF;
   min-height: 3em;
-  width: 31%;
+  width: 33.3%;
   display: inline-block;
   text-align: center;
+
 }
 #englishStudios > div {
   margin: 1em 0;
   background: #FFFFFF;
   min-height: 3em;
-  width: 30%;
+  width: 33.3%;
   display: inline-block;
   text-align: center;
 }
@@ -277,21 +263,32 @@ pre#result {
 
 .studio-photo1,.studio-photo2{
   width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
 
-// ==========faculty ==========
+// ========== faculty ==========
 #nomalFaculty > div {
   margin: 1em 0;
   padding: 0.5em;
-  background: #f8f8f8;
+  // background: #f8f8f8;
   min-height: 3em;
 }
-
 #englishFaculty > div {
   margin: 1em 0;
   padding: 0.5em;
   background: #f8f8f8;
   min-height: 3em;
+}
+.faculty-image,.faculty-image-en{
+  width: 200px;
+  height: 200px;
+}
+
+// ========== column ==========
+.link-image{
+  width: 200px;
+  height: 200px;
 }
 
 /* ========== admission ==========*/

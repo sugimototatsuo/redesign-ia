@@ -1,0 +1,63 @@
+$breakpoints: (
+ 'sm': 'screen and (min-width: 576px)',
+ 'md': 'screen and (min-width: 768px)',
+ 'lg': 'screen and (min-width: 992px)',
+ 'xl': 'screen and (min-width: 1200px)'
+) !default;
+
+//メディアクエリ用のmixinを定義。デフォ値はmd
+@mixin mq($breakpoint: md) {
+//map-get(マップ型変数, キー)で値を取得
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+body{
+
+}
+
+section{
+  background: #E4EBEF;
+  padding: 5rem;
+  .first_box{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    #nomalStudios{
+      width: 330px;
+      float: right;
+      text-align: right;
+      > div{
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        text-align: center;
+        .studio-image,.studio-image-en{
+          width: 42px;
+          height: 42px;
+        }
+      }
+    }
+  }
+  .second_box{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    img{
+      width: 1054px;
+    }
+  }
+}
+.faculty_title{
+  float: left;
+}
+
+.right_box{
+  float: right;
+  text-align: right;
+}
+p{
+  width: 1000px;
+  margin: 0 auto;
+}

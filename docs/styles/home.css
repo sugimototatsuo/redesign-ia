@@ -1,0 +1,250 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/*デフォルトの設定があるとスタイリング時にわかりにくいので、こちらとりあえず削除します*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+
+/*各種見出しとかタグのデフォルト設定*/
+h1 {
+    font-size: 48px;
+    font-weight: 400;
+    color: steelblue;
+  }
+   h2 {
+      font-weight: 400;
+      font-size: 36px;
+      color: steelblue;
+    }
+  
+    p{
+      font-size: 16px;
+    }
+    ol, ul {
+        list-style: none; 
+    }
+
+body{
+ background-color: floralwhite;
+ /*margin: 10px auto;
+  font-family: sans-serif;
+max-width:1200px;*/
+ }
+
+ .float-clear{
+    clear:both;
+}
+      
+        /*サイドバー*/
+ .sidebar {
+ position: fixed;
+ left: 0px;
+ top: 186px;
+width: 150px;
+height: 100vh;
+  min-height: 500px;
+ background-color: #FFF;
+ padding-top: 15px;
+ padding-left: 50px; }
+ .sidebar a.en {
+ font: bold 15pt "Helvetica Neue", Helvetica, Arial, sans-serif;
+text-decoration: none;
+color: #777;
+line-height: 2em;
+ letter-spacing: .5pt; }
+ .sidebar a.en.here {
+  color: #444; }
+ .sidebar a.en:hover {
+ color: #444; }
+
+/*出だし*/
+  #introduction{
+
+  }
+
+#intro-sentense{
+font-size: 16px;
+width:400px;
+
+}
+
+#top-logo-image{
+    width:300px;
+    float:left;
+}
+
+
+
+
+#studios > div {
+  margin: 1em 0;
+  padding: 0.5em;
+  background: #f8f8f8;
+  min-height: 3em;
+}
+.studio-title {
+  font-weight: bold;
+}
+.studio-title-en {
+  margin-left: 1em;
+  font-weight: 100;
+  opacity: 0.75;
+}
+.studio-core{
+  font-weight: bold;
+}
+pre#result {
+  background-color: #444;
+  color: #fff;
+  font-family: monospace;
+  font-size: 9px;
+}
+
+/*wkst.css*/
+header{
+  background-color: floralwhite;
+  border-bottom:1px solid midnightblue;
+  position: fixed;
+  width:100%;
+  z-index: 10;
+}
+ul{
+  margin: 30px auto;
+  padding: 0 50px;
+  text-align: center;
+}
+li{
+  color: midnightblue;
+  font-family: 'Oswald',sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  display:inline-block;
+  width: 150px;
+}
+li:hover{
+  color:coral;
+}
+
+.zentai{
+  position:relative;
+  top:150px;
+  width:100%;
+  height:700px;
+  background-color:floralwhite;
+  overflow: scroll;
+}
+
+figure {
+  left:100px;
+  margin:1px;
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  display:inline-block;
+}
+figcaption {
+  position: absolute;
+top: 0;
+left: 0;
+z-index: 2;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,.6);
+-webkit-transform: rotateY(-90deg) rotateX(-90deg);
+transform: rotateY(-90deg) rotateX(-90deg);
+-webkit-transition: .5s;
+transition: .5s;
+opacity: 0;
+  color: cornsilk;
+}
+figure:hover figcaption {
+  -webkit-transform: rotateY(0) rotateX(0);
+transform: rotateY(0) rotateX(0);
+opacity: 1;
+}
+
+/*newsst*/
+
+@import url('https://fonts.googleapis.com/css?family=Sawarabi+Gothic');
+header{
+    background-color: floralwhite;
+    border-bottom:1px solid midnightblue;
+    position: fixed;
+    width:100%;
+    z-index: 10;
+}
+ul{
+    margin: 30px auto;
+    padding: 0 50px;
+    text-align: center;
+}
+li{
+    color: midnightblue;
+    font-family: 'Oswald',sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    display:inline-block;
+    width: 150px;
+}
+li:hover{
+    color:coral;
+}
+.news{
+    position:relative;
+    top:200px;
+    width:1300px;
+    height:350px;
+    background-color:floralwhite;
+   
+}
+
+h1{
+    font-family: 'Sawarabi Gothic', sans-serif; 
+    color: #11114d;
+}
+h2{
+    font-family: 'Sawarabi Gothic', sans-serif;
+    color: #11114d
+}
+h3{
+    font-family: 'Sawarabi Gothic', sans-serif;
+    color: #11114d;
+    font-size: 13px;
+}
+a {
+    font-family: 'Sawarabi Gothic', sans-serif; 
+    font-size:20px;
+    text-decoration: none ;
+    color:#11114d;
+    margin:0 19px;
+}
+a:hover{
+    color:coral;
+}

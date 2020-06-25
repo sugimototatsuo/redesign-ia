@@ -49,39 +49,220 @@ h1 {
     ol, ul {
         list-style: none; 
     }
+    a { 
+        text-decoration: none ;
+    }
 
 body{
- background-color: floralwhite;
- /*margin: 10px auto;
+ background-color:#ffffff;
+ margin: 0px auto;
   font-family: sans-serif;
-max-width:1200px;*/
+max-width:1200px;
  }
+
+ 
+ footer {
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 120px;
+    bottom: 0px;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.5em;
+    letter-spacing: 0.8px;
+    margin: 50px 0 0 0;
+    padding: 10px 0 0 0;
+    color: #777; }
+    footer p.sd {
+      font: normal 8pt "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin-bottom: 13px; }
+    footer p.ja {
+      font: normal 8pt "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, Osaka, "MS PGothic", arial, helvetica, sans-serif; }
+    footer a {
+      text-decoration: none; }
+      footer a.sd {
+        font: normal 8pt "Helvetica Neue", Helvetica, Arial, sans-serif; }
+        footer a.sd:visited {
+          color: #777; }
+        footer a.sd:link {
+          color: #777; }
 
  .float-clear{
     clear:both;
 }
-      
-        /*サイドバー*/
+   
+/*サイドバー*/
  .sidebar {
  position: fixed;
- left: 0px;
- top: 186px;
+ /*left: 0px;
+ top: 100px;
 width: 150px;
-height: 100vh;
-  min-height: 500px;
+height: 100vh;*/
+z-index:10;
+ /* min-height: 500px;*/
  background-color: #FFF;
  padding-top: 15px;
- padding-left: 50px; }
- .sidebar a.en {
- font: bold 15pt "Helvetica Neue", Helvetica, Arial, sans-serif;
+ padding-left: 50px;
+ }
+ .sidebar a.linkMenuText {
+ font: bold 20pt /*"Helvetica Neue", Helvetica, Arial, sans-serif*/;
 text-decoration: none;
 color: #777;
-line-height: 2em;
- letter-spacing: .5pt; }
- .sidebar a.en.here {
-  color: #444; }
- .sidebar a.en:hover {
- color: #444; }
+
+ /*letter-spacing: .5pt; */
+}
+.sidebar li{
+    margin-bottom:20px;
+}
+ .sidebar a.linkMenuText.here {
+  color: #000; 
+}
+ .sidebar a.linkMenuText:hover {
+ color: #000; 
+}
+
+
+/*サイドメニュー以外の全てを囲む*/
+ .contents {
+    position: absolute;
+    left: 200px;
+    top: 100px;
+    width: 800px/*calc(100vw - 240px)*/;
+    height: auto;
+    min-height: 500px;
+    background-color: #FFF;
+    padding: 0px 100px 0px 30px; }
+
+
+    /*画像のスライドショー ref:https://tech-dig.jp/js-slider//*/
+    .slider {
+        position: relative;
+    }
+    
+    .slider img {
+        width: 600px;/*変えた*/
+        height: 400px;/*付け加えた*/
+        vertical-align: bottom;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+    
+    .appear {
+        animation: fadeIn 2s ease 0s 1 normal;
+        -webkit-animation: fadeIn 2s ease 0s 1 normal;
+    
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+    
+    @keyframes fadeIn {
+        0% {
+            opacity: 0.2
+        }
+    
+        100% {
+            opacity: 1
+        }
+    }
+    
+    @-webkit-keyframes fadeIn {
+        0% {
+            opacity: 0.2
+        }
+    
+        100% {
+            opacity: 1
+        }
+    }
+    
+    .slider i.fas {
+        color: rgba(25, 25, 25, 0.7);
+        font-size: 2.5em;
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+    }
+    
+    .slider i.fa-arrow-circle-right {
+        right: 2%;
+    }
+    
+    .slider i.fa-arrow-circle-left {
+        left: 2%;
+    }
+    .thumbnail{
+        /*読み解く時間があれなのでとりあえず強制非表示*/
+        display: none;
+    }
+    
+    .thumbnail ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    }
+    
+    .thumbnail ul li {
+        margin: 10px 0;
+        width: 23.5%;
+        margin-right: 2%;
+        cursor: pointer;
+        -webkit-filter: grayscale(90%);
+        filter: grayscale(90%);
+    }
+    
+    .thumbnail ul li:nth-child(4n) {
+        margin-right: 0;
+    }
+    
+    .thumbnail ul li:hover {
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);
+    }
+    
+    .thumbnail ul li.selected {
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);
+    }
+    
+    .thumbnail ul li img {
+        width: 100%;
+    }
+
+    .scroll-top {
+        position: fixed;
+        width: 100px;
+        height: 50px;
+        bottom: 40px;
+        right: 40px;
+        cursor: pointer;
+        z-index: 100;
+        text-align: center;
+     }
+        .scroll-top img {
+          width: 30px;
+          height: auto; 
+        }
+        .scroll-top p {
+          font-size: 17px;
+          color: #535353;
+          font: bold 15pt "Helvetica Neue", Helvetica, Arial, sans-serif;
+          letter-spacing: 0.5px;
+          padding-top: 8px; 
+        }
+
+ /*ここまで共通設定*/
+
+.sectionTitle{
+    text-align: center;
+}
 
 /*出だし*/
   #introduction{
@@ -100,151 +281,63 @@ width:400px;
 }
 
 
-
-
-#studios > div {
-  margin: 1em 0;
-  padding: 0.5em;
-  background: #f8f8f8;
-  min-height: 3em;
-}
-.studio-title {
-  font-weight: bold;
-}
-.studio-title-en {
-  margin-left: 1em;
-  font-weight: 100;
-  opacity: 0.75;
-}
-.studio-core{
-  font-weight: bold;
-}
-pre#result {
-  background-color: #444;
-  color: #fff;
-  font-family: monospace;
-  font-size: 9px;
+/*news*/
+   img.article-img{
+    width: 200px;
+    height: 200px; 
+    float:left;
 }
 
-/*wkst.css*/
-header{
-  background-color: floralwhite;
-  border-bottom:1px solid midnightblue;
-  position: fixed;
-  width:100%;
-  z-index: 10;
-}
-ul{
-  margin: 30px auto;
-  padding: 0 50px;
-  text-align: center;
-}
-li{
-  color: midnightblue;
-  font-family: 'Oswald',sans-serif;
-  font-size: 30px;
-  font-weight: 700;
-  display:inline-block;
-  width: 150px;
-}
-li:hover{
-  color:coral;
+#articles{
+    max-width:1000px;
+    margin: 0 auto;
 }
 
-.zentai{
-  position:relative;
-  top:150px;
-  width:100%;
-  height:700px;
-  background-color:floralwhite;
-  overflow: scroll;
+.an-article{
+    margin:60px 0px;
+}
+.article-text-container{
+margin: 40px 0px 0px 200px;/*この辺の回り込み　いい方法忘れたので後でなんとかする*/
+width: calc(100% - 200px);  
+padding:0px 0px 0px 16px;
 }
 
-figure {
-  left:100px;
-  margin:1px;
-  position: relative;
-  overflow: hidden;
-  width: 200px;
-  height: 200px;
-  display:inline-block;
-}
-figcaption {
-  position: absolute;
-top: 0;
-left: 0;
-z-index: 2;
-width: 100%;
-height: 100%;
-background: rgba(0,0,0,.6);
--webkit-transform: rotateY(-90deg) rotateX(-90deg);
-transform: rotateY(-90deg) rotateX(-90deg);
--webkit-transition: .5s;
-transition: .5s;
-opacity: 0;
-  color: cornsilk;
-}
-figure:hover figcaption {
-  -webkit-transform: rotateY(0) rotateX(0);
-transform: rotateY(0) rotateX(0);
-opacity: 1;
-}
-
-/*newsst*/
-
-@import url('https://fonts.googleapis.com/css?family=Sawarabi+Gothic');
-header{
-    background-color: floralwhite;
-    border-bottom:1px solid midnightblue;
-    position: fixed;
-    width:100%;
-    z-index: 10;
-}
-ul{
-    margin: 30px auto;
-    padding: 0 50px;
-    text-align: center;
-}
-li{
-    color: midnightblue;
-    font-family: 'Oswald',sans-serif;
-    font-size: 30px;
-    font-weight: 700;
-    display:inline-block;
-    width: 150px;
-}
-li:hover{
-    color:coral;
-}
-.news{
-    position:relative;
-    top:200px;
-    width:1300px;
-    height:350px;
-    background-color:floralwhite;
-   
-}
-
-h1{
-    font-family: 'Sawarabi Gothic', sans-serif; 
-    color: #11114d;
-}
-h2{
-    font-family: 'Sawarabi Gothic', sans-serif;
-    color: #11114d
-}
-h3{
-    font-family: 'Sawarabi Gothic', sans-serif;
-    color: #11114d;
-    font-size: 13px;
-}
-a {
-    font-family: 'Sawarabi Gothic', sans-serif; 
+.article-title{
     font-size:20px;
     text-decoration: none ;
     color:#11114d;
-    margin:0 19px;
+    margin:10px;
+}
+.update-date{
+    margin:10px;
+    
+}
+.article-contents{
+    margin:10px;
+    
+}
+
+
+/*Aceess*/
+
+#accessMapcantainer{
+    margin:0px 100px;
+}
+#map { 
+    top: 0;
+    bottom: 0;
+    width: 600px;
+    height: 400px;
+}
+
+li:hover{
+    color:#B20909;
+}
+
+a { 
+    font-size:20px;
 }
 a:hover{
-    color:coral;
+    color:#B20909;
 }
+

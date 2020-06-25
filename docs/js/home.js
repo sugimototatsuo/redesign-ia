@@ -195,9 +195,10 @@ const renderFaculty = (json) => {
 const renderLink = (json) => {
     //シート３枚目
     const links = json.records;
+    var i = 0;
     links.forEach(link => {
 
-        if (link['name-ja'] !== '') {
+        if (link['name-ja'] !== '' && i < 3) {
 
 
             //START-ニュースの1記事を生成して回す
@@ -233,87 +234,31 @@ const renderLink = (json) => {
             const articleContents = document.createElement('p');
             articleContents.className = 'article-contents';
             articleContents.textContent = link['description-ja'];
-            articleTextContainerDiv.appendChild(articleContents);
 
+            //フォントサイズとボックスの幅を数値で取得したいけどとりあえず手打ち
+            var fontsize = 16;
+            var width = 800;
+
+            //２行分のボックスに収納できる文字数
+            var mojisuu = Math.floor(width / fontsize) * 2;
+            console.log(mojisuu);
+            var shortText = articleContents.innerText;//.innerTextしないとテキスト取れないのか
+            //テキストから（「mojisuu」-1）文字を切り出し。
+            shortText = shortText.substr(0, (mojisuu - 1));
+            //「…」と連結し、元のテキストを置き換える
+            articleContents.innerText = shortText + "…";
+            articleTextContainerDiv.appendChild(articleContents);
             anArticleDiv.appendChild(articleTextContainerDiv);
+
 
             const floatClearDiv = document.createElement('div');
             floatClearDiv.className = 'float-clear';
             anArticleDiv.appendChild(floatClearDiv);
 
-            //document.getElementById('articles').appendChild(anArticleDiv);
+            document.getElementById('articles').appendChild(anArticleDiv);
             //ニュースの1記事を生成して回す-END
 
-
-            const linkDiv = document.createElement('div');
-
-            const nameJa = document.createElement("span");
-            nameJa.className = 'name';
-            nameJa.textContent = link['name-ja'];
-            linkDiv.appendChild(nameJa);
-
-            const nameEn = document.createElement("span");
-            nameEn.className = 'name';
-            nameEn.textContent = link['name-en'];
-            linkDiv.appendChild(nameEn);
-
-            const venueJa = document.createElement("span");
-            venueJa.className = 'venue';
-            venueJa.textContent = link['venue-ja'];
-            linkDiv.appendChild(venueJa);
-
-            const venueEn = document.createElement("span");
-            venueEn.className = 'venue';
-            venueEn.textContent = link['venue-en'];
-            linkDiv.appendChild(venueEn);
-
-            const eventDatesJa = document.createElement("span");
-            eventDatesJa.className = 'event-dates';
-            eventDatesJa.textContent = link['event-dates-ja'];
-            linkDiv.appendChild(eventDatesJa);
-
-            const eventDatesEn = document.createElement("span");
-            eventDatesEn.className = 'event-dates';
-            eventDatesEn.textContent = link['event-dates-en'];
-            linkDiv.appendChild(eventDatesEn);
-
-            const descriptionJa = document.createElement("p");
-            descriptionJa.className = 'l-description';
-            descriptionJa.textContent = link['description-ja'];
-            linkDiv.appendChild(descriptionJa);
-
-
-            const descriptionEn = document.createElement("p");
-            descriptionEn.className = 'l-description';
-            descriptionEn.textContent = link['description-en'];
-            linkDiv.appendChild(descriptionEn);
-
-            const linkP = document.createElement('p');
-            const lLink = document.createElement('a');//ここでうっかりlinkっていう変数を作っちゃうとかぶるのでうまくいかない
-            lLink.className = 'l-link';
-            lLink.textContent = link['name-ja'] + "のサイトです";//リンクに何かしらテキストがないと見えない
-            lLink.href = link['link'];
-            linkP.appendChild(lLink);
-            linkDiv.appendChild(linkP);
-
-
-            //画像にリンク付する構造
-            const linkPhotoP = document.createElement('p');
-            const linkOnPhoto = document.createElement('a');
-            const exhibiPhoto = document.createElement("img");
-            linkOnPhoto.className = 'l-link';
-            exhibiPhoto.className = 'l-photo';
-            exhibiPhoto.src = link['photo'];
-            exhibiPhoto.alt = link['name-ja'];
-            linkOnPhoto.href = link['link'];
-            linkOnPhoto.target = "_blank";
-            linkOnPhoto.appendChild(exhibiPhoto);
-            linkPhotoP.appendChild(linkOnPhoto);
-            // document.getElementById('sotsutenLinkDiv').appendChild(linkPhotoP, exhibiPhoto);
-
-
-            // document.getElementById('links').appendChild(linkDiv);
-
+            i++;
         }
 
     });
@@ -370,12 +315,109 @@ const getData3 = async () => {
 
 getData3();
 
-
-
+/*
+//ローディングアニメーション　jsonの読み込み
 let lottieObj = lottie.loadAnimation({
     container: document.getElementById('sampleAnime'), // 表示させたい要素を渡します
     renderer: 'svg', // 描画形式を指定
     loop: true, // trueにしたらループ、1回再生の場合はfalseで
     autoplay: true, // 自動再生、falseの場合は自分のタイミングで
     path: 'https://assets6.lottiefiles.com/packages/lf20_lp3wO4.json' // 再生させたいアニメーションのjsonのパスを指定します。リンクだといけるな…なんだそれ
-});
+});*/
+
+
+
+//画像のスライドショー
+(function () {
+    const setImage = [
+        "./img/currentSite_imgs/studio/ed1.png",
+        "./img/currentSite_imgs/studio/ed2.png",
+        "./img/currentSite_imgs/studio/baba1.png",
+        "./img/currentSite_imgs/studio/baba2.png"
+    ];
+    const view = document.getElementById('view');
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+    const thumbnailList = document.getElementById('thumbnailList');
+
+    let list;
+    let image;
+    let current = 0;
+    let clickBtn = true;
+
+
+    function createThumbnailItem() {
+        for (let i = 0; i < setImage.length; i++) {
+            list = document.createElement('li');
+            image = document.createElement('img');
+            image.src = setImage[i];
+            list.appendChild(image);
+            thumbnailList.appendChild(list);
+
+            if (i === 0) {
+                list.classList.add("selected");
+            }
+
+            list.addEventListener('click', function () {
+                view.src = this.children[0].src;
+
+                for (let j = 0; j < thumbnailList.children.length; j++) {
+                    thumbnailList.children[j].classList.remove("selected");
+                };
+                this.classList.add("selected");
+                let currentImage = this.children[0].src.slice(-6, -4);
+                current = Number(currentImage) - 1;
+            });
+        };
+    }
+    createThumbnailItem();
+
+
+    prev.addEventListener('click', function () {
+        if (clickBtn === true) {
+            clickBtn = false;
+            view.classList.add("appear");
+            thumbnailList.children[current].classList.remove("selected");
+            current--;
+            if (current < 0) {
+                current = setImage.length - 1;
+            }
+            view.src = setImage[current];
+            thumbnailList.children[current].classList.add("selected");
+            setTimeout('view.classList.remove("appear");', 2100);
+            setTimeout(function () {
+                clickBtn = true;
+            }, 2100);
+        } else {
+            return false;
+        }
+    });
+
+    next.addEventListener('click', function () {
+        if (clickBtn === true) {
+            clickBtn = false;
+            view.classList.add("appear");
+            thumbnailList.children[current].classList.remove("selected");
+            current++;
+            if (current > setImage.length - 1) {
+                current = 0;
+            }
+            view.src = setImage[current];
+            thumbnailList.children[current].classList.add("selected");
+            setTimeout('view.classList.remove("appear");', 2100);
+            setTimeout(function () {
+                clickBtn = true;
+            }, 2100);
+        } else {
+            return false;
+        }
+    });
+
+    function autoPlay() {
+        setTimeout(function () {
+            next.click();
+            autoPlay();
+        }, 5000);
+    }
+    window.onload = autoPlay();
+})();

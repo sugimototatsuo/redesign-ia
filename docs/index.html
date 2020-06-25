@@ -20,6 +20,10 @@
     <meta name="twitter:site" content="@ia_sd_tmu" />
     <meta name="twitter:player" content="@ia_sd_tmu" />
 
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
+
   </head>
 
 <body>
@@ -28,13 +32,13 @@
     </header>
     <section class="sidebar">
       <ul>
-        <li><a href="./index.html">HOME</a></li>
-        <li><a href="./about.html">ABOUT</a></li>
-        <li><a href="./news.html">NEWS</a></li>
-        <li><a href="./studio.html">STUDIO</a></li>
-        <li><a href="./faculty.html">FACULTY</a></li>
-        <li><a href="./works.html">WORKS</a></li>
-        <li><a href="./access.html">ACCESS</a></li>
+        <li><a class="linkMenuText here" href="./index.html">HOME</a></li>
+        <li><a class="linkMenuText" href="./about.html">ABOUT</a></li>
+        <li><a class="linkMenuText" href="./news.html">NEWS</a></li>
+        <li><a class="linkMenuText" href="./studio.html">STUDIO</a></li>
+        <li><a class="linkMenuText" href="./faculty.html">FACULTY</a></li>
+        <li><a class="linkMenuText" href="./works.html">WORKS</a></li>
+        <li><a class="linkMenuText" href="./access.html">ACCESS</a></li>
       </ul>
     </section>
     <section class="contents" style="opacity: 1;">
@@ -53,13 +57,50 @@
 
 
 
-      <h2>NEWS</h2>
+      <h2 class="sectionTitle">NEWS</h2>
+      <div id="articles"></div>
+      <h2 class="sectionTitle">ABOUT</h2>
+      <div class="top-img">
+        <img src="./img/currentSite_imgs/about/newreserch.png" width=600px></div>
 
-      <h2>ABOUT</h2>
-      <h2>STUDIO</h2>
-      <h2>FACULTY</h2>
-      <h2>WORKS</h2>
-      <h2>ACCESS</h2>
+      </div>
+
+      <h2 class="sectionTitle">STUDIO</h2>
+      <div class="top-img">
+        <div class="slider">
+          <img id="view" src="./img/currentSite_imgs/studio/ed1.png">
+          <i id="prev" class="fas fa-arrow-circle-left"></i>
+          <i id="next" class="fas fa-arrow-circle-right"></i>
+        </div>
+        <nav class="thumbnail">
+          <ul id="thumbnailList">
+          </ul>
+        </nav>
+
+      </div>
+
+      <h2 class="sectionTitle">FACULTY</h2>
+      <h2 class="sectionTitle">WORKS</h2>
+      <h2 class="sectionTitle">ACCESS</h2>
+      <div id="accessMapcantainer">
+        <div id="map"></div>
+      </div>
+
+      <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoibW9lY28wOSIsImEiOiJja2JjZjEweDQwMWFoMnJud2N6M3N4Z2c2In0.cfn_JZgFwQgheoCiYBgFZQ';
+        var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/moeco09/ckbftkk4s1ufj1jmtr4hw3c6u',
+          center: [139.366468, 35.661579],
+          zoom: 15
+        });
+
+        var marker = new mapboxgl.Marker()
+          .setLngLat([139.366468, 35.661579])
+          .addTo(map);
+
+      </script>
+
 
       <div id="studios"></div>
       <div id="faculties"></div>
@@ -69,7 +110,6 @@
       <pre id="result-faculty"></pre>
       <pre id="result-link"></pre>
       </div>
-      <div id="sampleAnime"></div>
 
 
       <footer>

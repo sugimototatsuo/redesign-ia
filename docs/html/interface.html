@@ -5,29 +5,202 @@
     <meta charset="utf-8">
     <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="shortcut icon" href="../image/mark.ico">
 </head>
 
 <body>
+    <!--
+    <div id="showloading">
+        <img src="../image/loading.gif" alt="loading" width="500px">
+    </div>
+
+    <div id="mainContent" class="hidden">-->
     <button id="button" class="open">
         <p id="nomalButton" style="display: block">English</p>
         <p id="englishButton" style="display: none">Undo</p>
     </button>
 
-    <h1 id=nomalTitle style="display: block">インタフェースデザインスタジオ</h1>
+    <button id="button2" class="open">
+        <p id="nomalButton2" style="display: block">やさしいにほんご</p>
+        <p id="easyButton2" style="display: none">もとに もどす</p>
+    </button>
+    <h1 id="nomalTitle" style="display: block">インタフェースデザインスタジオ</h1>
     <h1 id="englishTitle" style="display: none">Interface Design Studio</h1>
+    <h1 id="easyTitle" style="display: none">インタフェースデザインスタジオ</h1>
 
+    <div id="nomalFaculty" style="display: block">
+        <h3>担当教員</h3>
+        <h5>馬場 哲晃</h5>
+        <h5>准教授</h5>
+    </div>
+
+    <div id="englishFaculty" style="display: none">
+        <h3>Faculty</h3>
+        <h5>Tetsuaki Baba</h5>
+        <h5>Associate Professor</h5>
+    </div>
+
+    <div id="easyFaculty" style="display: none">
+        <h3><ruby>
+                <rb>担当教員</rb>
+                <rt>たんとうきょういん</rt>
+            </ruby></h3>
+        <h5><ruby>
+                <rb>馬場 哲晃</rb>
+                <rt>ばば　てつあき</rt>
+            </ruby></h5>
+        <h5><ruby>
+                <rb>准教授</rb>
+                <rt>じゅんきょうじゅ</rt>
+            </ruby></h5>
+    </div>
+
+    <h4 id="nomalCore" style="display: block">プロダクトデザインコア</h4>
+    <h4 id="englishCore" style="display: none">Product Design Core</h4>
+
+    <p id="nomalText" style="display: block">
+        インタフェースデザインスタジオでは、ユーザとコンピュータの接点であるインタフェースに関する基礎·応用研究を行っています。
+        現代生活において、私達は常に機器を操作することを必要とされており、それらの操作方法にマウスやキーボードだけではない、
+        マルチタッチや画像処理、ジェスチャ認識や筋電位操作等の入力装置が利用されています。これら様々な入力装置を発案、実装、
+        提案をすることで、未来を切り開くデザインスキルを身につけた学生を育てています。
+    </p>
+
+    <p id="englishText" style="display: none">
+        The Interface Design Studio explores fundamental and applied research of the interface located on the border of
+        user and
+        a computer. In our daily life, we are forced to use various electric devices whether we'd like or not. In order
+        to do
+        so, not only the mouse, keyboard but also multi-touch panel, computer vision, gesture recognition, myogenic
+        potential
+        and so on are used for computer interface. We cultivate these new sort of research/design area by practical
+        prototyping
+        and nurture students who has a skill for the design of future.
+    </p>
+
+    <p id="easyText" style="display: none">
+        インタフェースデザインスタジオでは、ユーザとコンピュータの<ruby>
+            <rb>接点</rb>
+            <rt>せってん</rt>
+        </ruby>であるインタフェースに<ruby>
+            <rb>関</rb>
+            <rt>かん</rt>
+        </ruby>する<ruby>
+            <rb>研究</rb>
+            <rt>けんきゅう</rt>
+        </ruby>をしています。
+        <ruby>
+            <rb>私達</rb>
+            <rt>わたしたち</rt>
+        </ruby>は<ruby>
+            <rb>生活</rb>
+            <rt>せいかつ</rt>
+        </ruby>の<ruby>
+            <rb>中</rb>
+            <rt>なか</rt>
+        </ruby>でいつも<ruby>
+            <rb>機械</rb>
+            <rt>きかい</rt>
+        </ruby>を<ruby>
+            <rb>操作</rb>
+            <rt>そうさ</rt>
+        </ruby>しています。
+        それらの<ruby>
+            <rb>操作方法</rb>
+            <rt>そうさほうほう</rt>
+        </ruby>はマウスやキーボードだけではなくて、マルチタッチや<ruby>
+            <rb>画像処理</rb>
+            <rt>がぞうしょり</rt>
+        </ruby>、ジェスチャ<ruby>
+            <rb>認識</rb>
+            <rt>にんしき</rt>
+        </ruby>や<ruby>
+            <rb>筋電位操作等</rb>
+            <rt>きんでんいそうさとう</rt>
+        </ruby>の<ruby>
+            <rb>入力装置</rb>
+            <rt>にゅうりょくそうち</rt>
+        </ruby>を<ruby>
+            <rb>使</rb>
+            <rt>つか</rt>
+        </ruby>っています。
+        これらいろいろな<ruby>
+            <rb>入力装置</rb>
+            <rt>にゅうりょくそうち</rt>
+        </ruby>を<ruby>
+            <rb>発案、実装、提案</rb>
+            <rt>はつあん　　じっそう　　ていあん</rt>
+        </ruby>をすることで、<ruby>
+            <rb>未来</rb>
+            <rt>みらい</rt>
+        </ruby>をつくるデザインスキルを<ruby>
+            <rb>身</rb>
+            <rt>み</rt>
+        </ruby>につけた<ruby>
+            <rb>学生</rb>
+            <rt>がくせい</rt>
+        </ruby>を<ruby>
+            <rb>育</rb>
+            <rt>そだ</rt>
+        </ruby>てています。
+    </p>
 
     <a href="../index.html" title="returnIndex">
-        <p id="nomalReturn" style="display: block">もどる</p>
-        <p id="englishReturn" style="display: none">Return</p>
+        <p id="nomalReturn" style="display: block">トップへもどる</p>
+        <p id="englishReturn" style="display: none">Return to top</p>
     </a>
 
     <div id="studios">
         <h3 id="nomalContentsTitle4" style="display: block">他のスタジオを見る</h3>
         <h3 id="englishContentsTitle4" style="display: none">Other Studios</h3>
+        <h3 id="easyContentsTitle4" style="display: none"><ruby>
+                <rb>他</rb>
+                <rt>ほか</rt>
+            </ruby>のスタジオを<ruby>
+                <rb>見</rb>
+                <rt>み</rt>
+            </ruby>る</h3>
+        <!--面倒だからjsonで取ってくるけど、ホバーしたらどうのこうのするならこっちのが良いかもと思ったので一応残しておきます
+                <a href="editorial.html">
+                    <img src="../image/editorial.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="equipment.html">
+                    <img src="../image/equipment.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="ergonomics.html">
+                    <img src="../image/ergonomics.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="interactive.html">
+                    <img src="../image/interactive.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="interface.html">
+                    <img src="../image/interface.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="interior.html">
+                    <img src="../image/interior.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="kinematograph.html">
+                    <img src="../image/kinematograph.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="network.html">
+                    <img src="../image/network.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="software.html">
+                    <img src="../image/software.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="spatial.html">
+                    <img src="../image/spatial.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="transportation.html">
+                    <img src="../image/transportation.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="visual.html">
+                    <img src="../image/visual.png" title="edi" width="50px" height="50px">
+                </a>
+                --->
         <div id="nomalStudios" style="display: block"></div>
         <div id="englishStudios" style="display: none"></div>
     </div>
+    <!--</div>-->
     <script src="../js/js2.js"></script>
 </body>
 

@@ -5,28 +5,230 @@
     <meta charset="utf-8">
     <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="shortcut icon" href="../image/mark.ico">
 </head>
 
 <body>
+    <!--
+    <div id="showloading">
+        <img src="../image/loading.gif" alt="loading" width="500px">
+    </div>
+
+    <div id="mainContent" class="hidden">-->
     <button id="button" class="open">
         <p id="nomalButton" style="display: block">English</p>
         <p id="englishButton" style="display: none">Undo</p>
     </button>
 
-    <h1 id=nomalTitle style="display: block">トランスポーテーションデザインスタジオ</h1>
+    <button id="button2" class="open">
+        <p id="nomalButton2" style="display: block">やさしいにほんご</p>
+        <p id="easyButton2" style="display: none">もとに もどす</p>
+    </button>
+    <h1 id="nomalTitle" style="display: block">トランスポーテーションデザインスタジオ</h1>
     <h1 id="englishTitle" style="display: none">Transportation Design Studio</h1>
+    <h1 id="easyTitle" style="display: none">トランスポーテーションデザインスタジオ</h1>
+
+    <div id="nomalFaculty" style="display: block">
+        <h3>担当教員</h3>
+        <h5>難波 治</h5>
+        <h5>教授</h5>
+    </div>
+
+    <div id="englishFaculty" style="display: none">
+        <h3>Faculty</h3>
+        <h5>Osamu Namba</h5>
+        <h5>Professor</h5>
+    </div>
+
+    <div id="easyFaculty" style="display: none">
+        <h3><ruby>
+                <rb>担当教員</rb>
+                <rt>たんとうきょういん</rt>
+            </ruby></h3>
+        <h5><ruby>
+                <rb>難波 治</rb>
+                <rt>なんば　おさむ</rt>
+            </ruby></h5>
+        <h5><ruby>
+                <rb>教授</rb>
+                <rt>きょうじゅ</rt>
+            </ruby></h5>
+    </div>
+
+    <h4 id="nomalCore" style="display: block">プロダクトデザインコア</h4>
+    <h4 id="englishCore" style="display: none">Product Design Core</h4>
+
+    <p id="nomalText" style="display: block">
+        「美しく豊かで潤いのある生活」の実現に向けた移動体のデザイン研究を、自動車を主題材にしておこなっている。
+        スケッチから始め、スケールモデルを実際に作ることで、実践的なトランスポーテーション·デザインを教える。発想の原点として、
+        手でモノを創る感覚的な部分と新しいソリューションを基にした、クリエイティブな発想の部分の結合を目指している。
+        人々の生活のこれからをイメージし、創造しデザインすることで単なるリ·デザインではない教育を推進しますそして、
+        真に豊かな交通社会の実現のため、デザインの視点から、将来の都市環境や交通システム等を視野においた、
+        サスティナブルなデザイン活動を追求している。
+    </p>
+
+    <p id="englishText" style="display: none">
+        The Transportation Design Studio researches automobile body design, especially cars Starting from the drawing
+        board, and
+        making actual scale models, we teach practical transportation design through creative thinking and tactile
+        engagement.
+        But it doesn't stop there. To realize a truly beautiful, rich, and pleasant transportation society means going
+        beyond
+        redesigning transport, through understanding sustainability, and contributing to building better urban
+        lifestyles.
+    </p>
+
+    <p id="easyText" style="display: none">
+        「<ruby>
+            <rb>美</rb>
+            <rt></rt>
+        </ruby>しく<ruby>
+            <rb>豊</rb>
+            <rt>ゆた</rt>
+        </ruby>かで<ruby>
+            <rb>潤</rb>
+            <rt>うるお</rt>
+        </ruby>いのある<ruby>
+            <rb>生活</rb>
+            <rt>せいかつ</rt>
+        </ruby>」の<ruby>
+            <rb>実現</rb>
+            <rt>じつげん</rt>
+        </ruby>に<ruby>
+            <rb>向</rb>
+            <rt>む</rt>
+        </ruby>けた<ruby>
+            <rb>移動体</rb>
+            <rt>いどうたい</rt>
+        </ruby>のデザイン<ruby>
+            <rb>研究</rb>
+            <rt>けんきゅう</rt>
+        </ruby>をしています。<ruby>
+            <rb>主</rb>
+            <rt>おも</rt>
+        </ruby>なテーマは<ruby>
+            <rb>自動車</rb>
+            <rt>じどうしゃ</rt>
+        </ruby>です。
+        スケッチから<ruby>
+            <rb>始</rb>
+            <rt>はじ</rt>
+        </ruby>め、スケールモデルを<ruby>
+            <rb>実際</rb>
+            <rt>じっさい</rt>
+        </ruby>につくることで、<ruby>
+            <rb>実践的</rb>
+            <rt>じっせんてき</rt>
+        </ruby>なトランスポーテーション·デザインを<ruby>
+            <rb>教</rb>
+            <rt>おし</rt>
+        </ruby>えています。アイデアのもととして、
+        <ruby>
+            <rb>手</rb>
+            <rt>て</rt>
+        </ruby>でモノをつくる<ruby>
+            <rb>感覚的</rb>
+            <rt>かんかくてき</rt>
+        </ruby>なところと<ruby>
+            <rb>新</rb>
+            <rt>あたら</rt>
+        </ruby>しいソリューションをもとにした、クリエイティブな<ruby>
+            <rb>考</rb>
+            <rt>かんが</rt>
+        </ruby>えのところをつなぐことを<ruby>
+            <rb>目指</rb>
+            <rt>めざ</rt>
+        </ruby>しています。
+        人びとの<ruby>
+            <rb>生活</rb>
+            <rt>せいかつ</rt>
+        </ruby>のこれからをイメージし、デザインすることでただのリ·デザインではない<ruby>
+            <rb>教育</rb>
+            <rt>きょういく</rt>
+        </ruby>をすすめます。そして、ほんとうに<ruby>
+            <rb>豊</rb>
+            <rt>ゆた</rt>
+        </ruby>かな<ruby>
+            <rb>交通社会</rb>
+            <rt>こうつうしゃかい</rt>
+        </ruby>のつくるため、デザインの<ruby>
+            <rb>見方</rb>
+            <rt>みかた</rt>
+        </ruby>から、これからの<ruby>
+            <rb>都市環境</rb>
+            <rt>としかんきょう</rt>
+        </ruby>や<ruby>
+            <rb>交通</rb>
+            <rt>こうつう</rt>
+        </ruby>システムなどを<ruby>
+            <rb>考</rb>
+            <rt>かんが</rt>
+        </ruby>えにおいた、サスティナブルなデザイン<ruby>
+            <rb>活動</rb>
+            <rt>かつどう</rt>
+        </ruby>を<ruby>
+            <rb>目指</rb>
+            <rt>めざ</rt>
+        </ruby>しています。
+    </p>
 
     <a href="../index.html" title="returnIndex">
-        <p id="nomalReturn" style="display: block">もどる</p>
-        <p id="englishReturn" style="display: none">Return</p>
+        <p id="nomalReturn" style="display: block">トップへもどる</p>
+        <p id="englishReturn" style="display: none">Return to top</p>
     </a>
 
     <div id="studios">
         <h3 id="nomalContentsTitle4" style="display: block">他のスタジオを見る</h3>
         <h3 id="englishContentsTitle4" style="display: none">Other Studios</h3>
+        <h3 id="easyContentsTitle4" style="display: none"><ruby>
+                <rb>他</rb>
+                <rt>ほか</rt>
+            </ruby>のスタジオを<ruby>
+                <rb>見</rb>
+                <rt>み</rt>
+            </ruby>る</h3>
+        <!--面倒だからjsonで取ってくるけど、ホバーしたらどうのこうのするならこっちのが良いかもと思ったので一応残しておきます
+                <a href="editorial.html">
+                    <img src="../image/editorial.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="equipment.html">
+                    <img src="../image/equipment.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="ergonomics.html">
+                    <img src="../image/ergonomics.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="interactive.html">
+                    <img src="../image/interactive.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="interface.html">
+                    <img src="../image/interface.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="interior.html">
+                    <img src="../image/interior.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="kinematograph.html">
+                    <img src="../image/kinematograph.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="network.html">
+                    <img src="../image/network.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="software.html">
+                    <img src="../image/software.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="spatial.html">
+                    <img src="../image/spatial.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="transportation.html">
+                    <img src="../image/transportation.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="visual.html">
+                    <img src="../image/visual.png" title="edi" width="50px" height="50px">
+                </a>
+                --->
         <div id="nomalStudios" style="display: block"></div>
         <div id="englishStudios" style="display: none"></div>
     </div>
+    <!--</div>-->
     <script src="../js/js2.js"></script>
 </body>
 

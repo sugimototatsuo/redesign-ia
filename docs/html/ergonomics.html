@@ -5,28 +5,213 @@
     <meta charset="utf-8">
     <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="shortcut icon" href="../image/mark.ico">
 </head>
 
 <body>
+    <!--
+    <div id="showloading">
+        <img src="../image/loading.gif" alt="loading" width="500px">
+    </div>
+
+    <div id="mainContent" class="hidden">-->
     <button id="button" class="open">
         <p id="nomalButton" style="display: block">English</p>
         <p id="englishButton" style="display: none">Undo</p>
     </button>
 
-    <h1 id=nomalTitle style="display: block">エルゴノミックデザインスタジオ</h1>
+    <button id="button2" class="open">
+        <p id="nomalButton2" style="display: block">やさしいにほんご</p>
+        <p id="easyButton2" style="display: none">もとに もどす</p>
+    </button>
+    <h1 id="nomalTitle" style="display: block">エルゴノミックデザインスタジオ</h1>
     <h1 id="englishTitle" style="display: none">Ergonomics Design Studio</h1>
+    <h1 id="easyTitle" style="display: none">エルゴノミックデザインスタジオ</h1>
+
+    <div id="nomalFaculty" style="display: block">
+        <h3>担当教員</h3>
+        <h5>笠松 慶子</h5>
+        <h5>教授</h5>
+    </div>
+
+    <div id="englishFaculty" style="display: none">
+        <h3>Faculty</h3>
+        <h5>Keiko Kasamatsu</h5>
+        <h5>Professor</h5>
+    </div>
+
+    <div id="easyFaculty" style="display: none">
+        <h3><ruby>
+                <rb>担当教員</rb>
+                <rt>たんとうきょういん</rt>
+            </ruby></h3>
+        <h5><ruby>
+                <rb>笠松 慶子</rb>
+                <rt>かさまつ　けいこ</rt>
+            </ruby></h5>
+        <h5><ruby>
+                <rb>教授</rb>
+                <rt>きょうじゅ</rt>
+            </ruby></h5>
+    </div>
+
+    <h4 id="nomalCore" style="display: block">プロダクトデザインコア</h4>
+    <h4 id="englishCore" style="display: none">Product Design Core</h4>
+
+    <p id="nomalText" style="display: block">
+        エルゴノミックデザインスタジオでは、人が心地よく過ごせるために、人とモノやシステムとの関係を考え、
+        どのようなデザインが必要かを検討しています。そのため、人間工学的アプローチにより、人を観察し、
+        その行動や気持ちを把握する手法を研究しています。その方法としては、ユーザの経験を把握し、見える化し、デザインする手法を取っています。
+        そこから、デザインアプローチにつなげ、モノを創り出すためのエビデンスを見つけ出す研究を行っています。
+    </p>
+
+    <p id="englishText" style="display: none">
+        It's important that we appeal to users' sensibilities if we are produce satisfying goods and services. The
+        Ergonomics
+        Studio uses a sensibility and physiology index to analyze qualitative and quantitive usability and comfort,
+        investigates
+        factors and mechanisms which foster active use, and pursue design elements necessary to build comfortable
+        relations
+        between users, goods and services, and other people.
+    </p>
+
+    <p id="easyText" style="display: none">
+        エルゴノミックデザインスタジオでは、<ruby>
+            <rb>人</rb>
+            <rt>ひと</rt>
+        </ruby>が<ruby>
+            <rb>心地</rb>
+            <rt>ここち</rt>
+        </ruby>よく<ruby>
+            <rb>過</rb>
+            <rt>す</rt>
+        </ruby>ごせるために、<ruby>
+            <rb>人</rb>
+            <rt>ひと</rt>
+        </ruby>とモノやシステムとの<ruby>
+            <rb>関係</rb>
+            <rt>かんけい</rt>
+        </ruby>を<ruby>
+            <rb>考</rb>
+            <rt>かんが</rt>
+        </ruby>えて、どのようなデザインが<ruby>
+            <rb>必要</rb>
+            <rt>ひつよう</rt>
+        </ruby>かを<ruby>
+            <rb>考</rb>
+            <rt>かんが</rt>
+        </ruby>えています。
+        そのため、<ruby>
+            <rb>人間工学的</rb>
+            <rt>にんげんこうがくてき</rt>
+        </ruby>アプローチにより、<ruby>
+            <rb>人</rb>
+            <rt>ひと</rt>
+        </ruby>を<ruby>
+            <rb>観察</rb>
+            <rt>かんさつ</rt>
+        </ruby>して、その<ruby>
+            <rb>行動</rb>
+            <rt>こうどう</rt>
+        </ruby>や<ruby>
+            <rb>気持</rb>
+            <rt>きも</rt>
+        </ruby>ちを<ruby>
+            <rb>理解</rb>
+            <rt>りかい</rt>
+        </ruby>するやり<ruby>
+            <rb>方</rb>
+            <rt>かた</rt>
+        </ruby>を<ruby>
+            <rb>研究</rb>
+            <rt>けんきゅう</rt>
+        </ruby>しています。その<ruby>
+            <rb>方法</rb>
+            <rt>ほうほう</rt>
+        </ruby>は、ユーザの<ruby>
+            <rb>経験</rb>
+            <rt>けいけん</rt>
+        </ruby>を<ruby>
+            <rb>理解</rb>
+            <rt>りかい</rt>
+        </ruby>して、<ruby>
+            <rb>見</rb>
+            <rt>み</rt>
+        </ruby>える<ruby>
+            <rb>化</rb>
+            <rt>か</rt>
+        </ruby>して、デザインするやり<ruby>
+            <rb>方</rb>
+            <rt>かた</rt>
+        </ruby>です。
+        そこから、デザインアプローチにつなげて、モノを<ruby>
+            <rb>作</rb>
+            <rt>つく</rt>
+        </ruby>るエビデンスを<ruby>
+            <rb>見</rb>
+            <rt>み</rt>
+        </ruby>つける<ruby>
+            <rb>研究</rb>
+            <rt>けんきゅう</rt>
+        </ruby>をしています。 </p>
 
     <a href="../index.html" title="returnIndex">
-        <p id="nomalReturn" style="display: block">もどる</p>
-        <p id="englishReturn" style="display: none">Return</p>
+        <p id="nomalReturn" style="display: block">トップへもどる</p>
+        <p id="englishReturn" style="display: none">Return to top</p>
     </a>
 
     <div id="studios">
         <h3 id="nomalContentsTitle4" style="display: block">他のスタジオを見る</h3>
         <h3 id="englishContentsTitle4" style="display: none">Other Studios</h3>
+        <h3 id="easyContentsTitle4" style="display: block"><ruby>
+                <rb>他</rb>
+                <rt>ほか</rt>
+            </ruby>のスタジオを<ruby>
+                <rb>見</rb>
+                <rt>み</rt>
+            </ruby>る</h3>
+        <!--面倒だからjsonで取ってくるけど、ホバーしたらどうのこうのするならこっちのが良いかもと思ったので一応残しておきます
+                <a href="editorial.html">
+                    <img src="../image/editorial.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="equipment.html">
+                    <img src="../image/equipment.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="ergonomics.html">
+                    <img src="../image/ergonomics.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="interactive.html">
+                    <img src="../image/interactive.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="interface.html">
+                    <img src="../image/interface.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="interior.html">
+                    <img src="../image/interior.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="kinematograph.html">
+                    <img src="../image/kinematograph.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="network.html">
+                    <img src="../image/network.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="software.html">
+                    <img src="../image/software.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="spatial.html">
+                    <img src="../image/spatial.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="transportation.html">
+                    <img src="../image/transportation.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="visual.html">
+                    <img src="../image/visual.png" title="edi" width="50px" height="50px">
+                </a>
+                --->
         <div id="nomalStudios" style="display: block"></div>
         <div id="englishStudios" style="display: none"></div>
     </div>
+    <!--</div>-->
     <script src="../js/js2.js"></script>
 </body>
 

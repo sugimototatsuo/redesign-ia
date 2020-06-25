@@ -5,29 +5,208 @@
     <meta charset="utf-8">
     <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="shortcut icon" href="../image/mark.ico">
 </head>
 
 <body>
+    <!--
+    <div id="showloading">
+        <img src="../image/loading.gif" alt="loading" width="500px">
+    </div>
+
+    <div id="mainContent" class="hidden">-->
     <button id="button" class="open">
         <p id="nomalButton" style="display: block">English</p>
         <p id="englishButton" style="display: none">Undo</p>
     </button>
 
-    <h1 id=nomalTitle style="display: block">ネットワークデザインスタジオ</h1>
+    <button id="button2" class="open">
+        <p id="nomalButton2" style="display: block">やさしいにほんご</p>
+        <p id="easyButton2" style="display: none">もとに もどす</p>
+    </button>
+
+
+    <h1 id="nomalTitle" style="display: block">ネットワークデザインスタジオ</h1>
     <h1 id="englishTitle" style="display: none">Network Design Studio</h1>
+    <h1 id="easyTitle" style="display: none">ネットワークデザインスタジオ</h1>
+
+    <div id="nomalFaculty" style="display: block">
+        <h3>担当教員</h3>
+        <h5>杉本 達應</h5>
+        <h5>准教授</h5>
+    </div>
+
+    <div id="englishFaculty" style="display: none">
+        <h3>Faculty</h3>
+        <h5>Kiyoshi Kusumi</h5>
+        <h5>Associate Professor</h5>
+    </div>
+
+    <div id="easyFaculty" style="display: none">
+        <h3><ruby>
+                <rb>担当教員</rb>
+                <rt>たんとうきょういん</rt>
+            </ruby></h3>
+        <h5><ruby>
+                <rb>杉本 達應</rb>
+                <rt>すぎもと　たつお</rt>
+            </ruby></h5>
+        <h5><ruby>
+                <rb>准教授</rb>
+                <rt>じゅんきょうじゅ</rt>
+            </ruby></h5>
+    </div>
+
+    <h4 id="nomalCore" style="display: block">メディアアートコア</h4>
+    <h4 id="englishCore" style="display: none">Media Art Core</h4>
+
+    <p id="nomalText" style="display: block">
+        インターネットが支えるコミュニケーション環境は、いまや私たちの生活の基盤として欠かせないものになりました。
+        デジタルメディア技術によって、人びとの表現は豊かになり、情報発信は容易になった一方、膨大な情報に惑わされることもふえました。
+        ネットワークデザインスタジオでは、デジタルメディア表現特有の歴史や文化を踏まえて、
+        人びとのもつ創造性の発掘やオープンな技術文化に着目しながら、コンテンツやアプリケーション、サービスなどを企画開発します。
+    </p>
+
+    <p id="englishText" style="display: none">
+        The communication environment which supported by the Internet is now indispensable infrastructure of our
+        everyday lives.
+        Digital media technology has enriched people's expressions and made it easier to spread information, while also
+        being
+        confused by enormous amounts of information.The Network Design Studio plans and develops content, applications,
+        and
+        services based on the specific history and culture of digital media expression, especially focusing on
+        discovering
+        people's creativity and open technology culture.
+    </p>
+
+    <p id="easyText" style="display: none">
+        インターネットがささえるコミュニケーション<ruby>
+            <rb>環境</rb>
+            <rt>かんきょう</rt>
+        </ruby>は、いまや<ruby>
+            <rb>私</rb>
+            <rt>わたし</rt>
+        </ruby>たちの<ruby>
+            <rb>生活</rb>
+            <rt>せいかつ</rt>
+        </ruby>にとって<ruby>
+            <rb>必要</rb>
+            <rt>ひつよう</rt>
+        </ruby>なものになりました。
+        デジタルメディア<ruby>
+            <rb>技術</rb>
+            <rt>ぎじゅつ</rt>
+        </ruby>によって、<ruby>
+            <rb>人</rb>
+            <rt>ひと</rt>
+        </ruby>びとの<ruby>
+            <rb>表現</rb>
+            <rt>ひょうげん</rt>
+        </ruby>は<ruby>
+            <rb>豊</rb>
+            <rt>ゆた</rt>
+        </ruby>かになりました。<ruby>
+            <rb>情報発信</rb>
+            <rt>じょうほうはっしん</rt>
+        </ruby>はかんたんになりましたが、<ruby>
+            <rb>情報</rb>
+            <rt>じょうほう</rt>
+        </ruby>が<ruby>
+            <rb>多</rb>
+            <rt>おお</rt>
+        </ruby>すぎて<ruby>
+            <rb>困</rb>
+            <rt>こま</rt>
+        </ruby>ることもふえました。
+        ネットワークデザインスタジオでは、デジタルメディア<ruby>
+            <rb>表現</rb>
+            <rt>ひょうげん</rt>
+        </ruby>だけの<ruby>
+            <rb>歴史</rb>
+            <rt>れきし</rt>
+        </ruby>や<ruby>
+            <rb>文化</rb>
+            <rt>ぶんか</rt>
+        </ruby>を考えて、<ruby>
+            <rb>人</rb>
+            <rt>ひと</rt>
+        </ruby>びとのもつ<ruby>
+            <rb>創造性</rb>
+            <rt>そうぞうせい</rt>
+        </ruby>を<ruby>
+            <rb>育</rb>
+            <rt>そだ</rt>
+        </ruby>てることやオープンな<ruby>
+            <rb>技術文化</rb>
+            <rt>ぎじゅつぶんか</rt>
+        </ruby>に<ruby>
+            <rb>注目</rb>
+            <rt>ちゅうもく</rt>
+        </ruby>しながら、コンテンツやアプリケーション、サービスなどを<ruby>
+            <rb>作</rb>
+            <rt>つく</rt>
+        </ruby>ります。
+    </p>
 
     <a href="../index.html" title="returnIndex">
-        <p id="nomalReturn" style="display: block">もどる</p>
-        <p id="englishReturn" style="display: none">Return</p>
+        <p id="nomalReturn" style="display: block">トップへもどる</p>
+        <p id="englishReturn" style="display: none">Return to top</p>
     </a>
 
     <div id="studios">
         <h3 id="nomalContentsTitle4" style="display: block">他のスタジオを見る</h3>
         <h3 id="englishContentsTitle4" style="display: none">Other Studios</h3>
+        <h3 id="easyContentsTitle4" style="display: none"><ruby>
+                <rb>他</rb>
+                <rt>ほか</rt>
+            </ruby>のスタジオを<ruby>
+                <rb>見</rb>
+                <rt>み</rt>
+            </ruby>る</h3>
+        <!--面倒だからjsonで取ってくるけど、ホバーしたらどうのこうのするならこっちのが良いかもと思ったので一応残しておきます
+        <a href="editorial.html">
+            <img src="../image/editorial.png" title="edi" width="50px" height="50px">
+        </a>
+        <a href="equipment.html">
+            <img src="../image/equipment.png" title="edi" width="50px" height="50px">
+        </a>
+        <a href="ergonomics.html">
+            <img src="../image/ergonomics.png" title="edi" width="50px" height="50px">
+        </a>
+        <a href="interactive.html">
+            <img src="../image/interactive.png" title="edi" width="50px" height="50px">
+        </a>
+        <a href="interface.html">
+            <img src="../image/interface.png" title="edi" width="50px" height="50px">
+        </a>
+        <a href="interior.html">
+            <img src="../image/interior.png" title="edi" width="50px" height="50px">
+        </a>
+        <a href="kinematograph.html">
+            <img src="../image/kinematograph.png" title="edi" width="50px" height="50px">
+        </a>
+        <a href="network.html">
+            <img src="../image/network.png" title="edi" width="50px" height="50px">
+        </a>
+        <a href="software.html">
+            <img src="../image/software.png" title="edi" width="50px" height="50px">
+        </a>
+        <a href="spatial.html">
+            <img src="../image/spatial.png" title="edi" width="50px" height="50px">
+        </a>
+        <a href="transportation.html">
+            <img src="../image/transportation.png" title="edi" width="50px" height="50px">
+        </a>
+        <a href="visual.html">
+            <img src="../image/visual.png" title="edi" width="50px" height="50px">
+        </a>
+        --->
         <div id="nomalStudios" style="display: block"></div>
         <div id="englishStudios" style="display: none"></div>
     </div>
+    <!--</div>-->
     <script src="../js/js2.js"></script>
+
 </body>
 
 </html>

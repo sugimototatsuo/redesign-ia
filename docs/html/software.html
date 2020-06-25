@@ -5,29 +5,211 @@
     <meta charset="utf-8">
     <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="shortcut icon" href="../image/mark.ico">
 </head>
 
 <body>
+    <!--
+    <div id="showloading">
+        <img src="../image/loading.gif" alt="loading" width="500px">
+    </div>
+
+    <div id="mainContent" class="hidden">-->
     <button id="button" class="open">
         <p id="nomalButton" style="display: block">English</p>
         <p id="englishButton" style="display: none">Undo</p>
     </button>
 
-    <h1 id=nomalTitle style="display: block">ソフトウェアデザインスタジオ</h1>
+    <button id="button2" class="open">
+        <p id="nomalButton2" style="display: block">やさしいにほんご</p>
+        <p id="easyButton2" style="display: none">もとに もどす</p>
+    </button>
+
+
+    <h1 id="nomalTitle" style="display: block">ソフトウェアデザインスタジオ</h1>
     <h1 id="englishTitle" style="display: none">Software Design Studio</h1>
+    <h1 id="easyTitle" style="display: none">ソフトウェアデザインスタジオ</h1>
+
+    <div id="nomalFaculty" style="display: block">
+        <h3>担当教員</h3>
+        <h5>向井 智彦</h5>
+        <h5>准教授</h5>
+    </div>
+
+    <div id="englishFaculty" style="display: none">
+        <h3>Faculty</h3>
+        <h5>Toshihiko Mukai</h5>
+        <h5>Associate Professor</h5>
+    </div>
+
+    <div id="easyFaculty" style="display: none">
+        <h3><ruby>
+                <rb>担当教員</rb>
+                <rt>たんとうきょういん</rt>
+            </ruby></h3>
+        <h5><ruby>
+                <rb>向井 智彦</rb>
+                <rt>むかい　ともひこ</rt>
+            </ruby></h5>
+        <h5><ruby>
+                <rb>准教授</rb>
+                <rt>じゅんきょうじゅ</rt>
+            </ruby></h5>
+    </div>
+
+    <h4 id="nomalCore" style="display: block">メディアアートコア</h4>
+    <h4 id="englishCore" style="display: none">Media Art Core</h4>
+
+    <p id="nomalText" style="display: block">
+        コンピュータと人間との関わりは、ますます多様化・深化しています。ソフトウェアデザインスタジオでは、
+        人間が行うデザイン活動とコンピュータソフトウェアの関係性について研究しています。
+        特に、次世代デジタルコンテンツ制作支援を見据えたプロジェクトを展開しています。
+        研究テーマは新しいコンテンツデザインを切り拓く計算アルゴリズムやソフトウェアの開発、
+        複雑なソフトウェアを効率的に開発するためのデザイン技法、そしてコンテンツ制作プロセスのデザインなど多岐にわたります。
+    </p>
+
+    <p id="englishText" style="display: none">
+        The relationship between computers and humans has become closer and more diverse. Software Design Studio
+        conducts
+        research on the relationship between software technology and design activity performed by humans, especially in
+        the
+        next-generation digital content creation. Our research theme includes computational algorithm to open up novel
+        content
+        design, efficient design of the complex software, and design of content creation process.
+    </p>
+
+    <p id="easyText" style="display: none">
+        コンピュータと<ruby>
+            <rb>人間</rb>
+            <rt>にんげん</rt>
+        </ruby>との<ruby>
+            <rb>関</rb>
+            <rt>かか</rt>
+        </ruby>わりは、ますます<ruby>
+            <rb>複雑</rb>
+            <rt>ふくざつ</rt>
+        </ruby>になってきています。
+        ソフトウェアデザインスタジオでは、<ruby>
+            <rb>人間</rb>
+            <rt>にんげん</rt>
+        </ruby>がするデザイン<ruby>
+            <rb>活動</rb>
+            <rt>かつどう</rt>
+        </ruby>とコンピュータソフトウェアの<ruby>
+            <rb>関係性</rb>
+            <rt>かんけいせい</rt>
+        </ruby>について<ruby>
+            <rb>研究</rb>
+            <rt>けんきゅう</rt>
+        </ruby>しています。
+        <ruby>
+            <rb>特</rb>
+            <rt>とく</rt>
+        </ruby>に、<ruby>
+            <rb>次世代</rb>
+            <rt>じせだい</rt>
+        </ruby>デジタルコンテンツ<ruby>
+            <rb>作</rb>
+            <rt>つく</rt>
+        </ruby>りを<ruby>
+            <rb>支援</rb>
+            <rt>しえん</rt>
+        </ruby>することを<ruby>
+            <rb>目指</rb>
+            <rt>めざ</rt>
+        </ruby>したプロジェクトをしています。
+        <ruby>
+            <rb>研究</rb>
+            <rt>けんきゅう</rt>
+        </ruby>テーマは<ruby>
+            <rb>新</rb>
+            <rt>あたら</rt>
+        </ruby>しいコンテンツデザインを<ruby>
+            <rb>作</rb>
+            <rt>つく</rt>
+        </ruby>り<ruby>
+            <rb>出</rb>
+            <rt>だ</rt>
+        </ruby>す<ruby>
+            <rb>計算</rb>
+            <rt>けいさん</rt>
+        </ruby>アルゴリズムやソフトウェアの<ruby>
+            <rb>開発</rb>
+            <rt>かいはつ</rt>
+        </ruby>、<ruby>
+            <rb>複雑</rb>
+            <rt>ふくざつ</rt>
+        </ruby>なソフトウェアをうまく<ruby>
+            <rb>作</rb>
+            <rt>つく</rt>
+        </ruby>るためのデザイン<ruby>
+            <rb>技法</rb>
+            <rt>ぎほう</rt>
+        </ruby>、そしてコンテンツ<ruby>
+            <rb>制作</rb>
+            <rt>せいさく</rt>
+        </ruby>プロセスのデザインなどいろいろあります。
+    </p>
 
     <a href="../index.html" title="returnIndex">
-        <p id="nomalReturn" style="display: block">もどる</p>
-        <p id="englishReturn" style="display: none">Return</p>
+        <p id="nomalReturn" style="display: block">トップへもどる</p>
+        <p id="englishReturn" style="display: none">Return to top</p>
     </a>
 
     <div id="studios">
         <h3 id="nomalContentsTitle4" style="display: block">他のスタジオを見る</h3>
         <h3 id="englishContentsTitle4" style="display: none">Other Studios</h3>
+        <h3 id="easyContentsTitle4" style="display: none"><ruby>
+                <rb>他</rb>
+                <rt>ほか</rt>
+            </ruby>のスタジオを<ruby>
+                <rb>見</rb>
+                <rt>み</rt>
+            </ruby>る</h3>
+        <!--面倒だからjsonで取ってくるけど、ホバーしたらどうのこうのするならこっちのが良いかもと思ったので一応残しておきます
+        <a href="editorial.html">
+            <img src="../image/editorial.png" title="edi" width="50px" height="50px">
+        </a>
+        <a href="equipment.html">
+            <img src="../image/equipment.png" title="edi" width="50px" height="50px">
+        </a>
+        <a href="ergonomics.html">
+            <img src="../image/ergonomics.png" title="edi" width="50px" height="50px">
+        </a>
+        <a href="interactive.html">
+            <img src="../image/interactive.png" title="edi" width="50px" height="50px">
+        </a>
+        <a href="interface.html">
+            <img src="../image/interface.png" title="edi" width="50px" height="50px">
+        </a>
+        <a href="interior.html">
+            <img src="../image/interior.png" title="edi" width="50px" height="50px">
+        </a>
+        <a href="kinematograph.html">
+            <img src="../image/kinematograph.png" title="edi" width="50px" height="50px">
+        </a>
+        <a href="network.html">
+            <img src="../image/network.png" title="edi" width="50px" height="50px">
+        </a>
+        <a href="software.html">
+            <img src="../image/software.png" title="edi" width="50px" height="50px">
+        </a>
+        <a href="spatial.html">
+            <img src="../image/spatial.png" title="edi" width="50px" height="50px">
+        </a>
+        <a href="transportation.html">
+            <img src="../image/transportation.png" title="edi" width="50px" height="50px">
+        </a>
+        <a href="visual.html">
+            <img src="../image/visual.png" title="edi" width="50px" height="50px">
+        </a>
+        --->
         <div id="nomalStudios" style="display: block"></div>
         <div id="englishStudios" style="display: none"></div>
     </div>
+    <!--</div>-->
     <script src="../js/js2.js"></script>
+
 </body>
 
 </html>

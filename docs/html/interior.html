@@ -5,28 +5,255 @@
     <meta charset="utf-8">
     <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="shortcut icon" href="../image/mark.ico">
 </head>
 
 <body>
+    <!--
+    <div id="showloading">
+        <img src="../image/loading.gif" alt="loading" width="500px">
+    </div>
+
+    <div id="mainContent" class="hidden">-->
     <button id="button" class="open">
         <p id="nomalButton" style="display: block">English</p>
         <p id="englishButton" style="display: none">Undo</p>
     </button>
 
-    <h1 id=nomalTitle style="display: block">インテリアデザインスタジオ</h1>
+    <button id="button2" class="open">
+        <p id="nomalButton2" style="display: block">やさしいにほんご</p>
+        <p id="easyButton2" style="display: none">もとに もどす</p>
+    </button>
+    <h1 id="nomalTitle" style="display: block">インテリアデザインスタジオ</h1>
     <h1 id="englishTitle" style="display: none">Interior Design Studio</h1>
+    <h1 id="easyTitle" style="display: none">インテリアデザインスタジオ</h1>
+
+    <div id="nomalFaculty" style="display: block">
+        <h3>担当教員</h3>
+        <h5>藤原 敬介</h5>
+        <h5>教授</h5>
+    </div>
+
+    <div id="englishFaculty" style="display: none">
+        <h3>Faculty</h3>
+        <h5>Keisuke Fujiwara</h5>
+        <h5>Professor</h5>
+    </div>
+
+    <div id="easyFaculty" style="display: none">
+        <h3><ruby>
+                <rb>担当教員</rb>
+                <rt>たんとうきょういん</rt>
+            </ruby></h3>
+        <h5><ruby>
+                <rb>藤原 敬介</rb>
+                <rt>ふじわら　けいすけ</rt>
+            </ruby></h5>
+        <h5><ruby>
+                <rb>教授</rb>
+                <rt>きょうじゅ</rt>
+            </ruby></h5>
+    </div>
+
+    <h4 id="nomalCore" style="display: block">プロダクトデザインコア</h4>
+    <h4 id="englishCore" style="display: none">Product Design Core</h4>
+
+    <p id="nomalText" style="display: block">
+        デザインとは、社会に対し、未来に対し、小さな"きっかけ"という種を蒔くようなことだと考えています。
+        インテリアデザインスタジオでは、人間と社会と自然を結び付け"生きるとは何か"を考えることをデザインの出発点としています。
+        ひとりひとりの感性や知性を大切にしながら議論を重ね、デザインの試行錯誤を繰り返します。デザインを"造形を通した文化の創造"と位置づけ、
+        精神・物質の両面から人びとの幸福を支えることを目指し日々デザインに取り組んでいます。
+        ここでデザインを学び巣立った学生たちが、世界を魅了するデザイニストとなり、未来に素敵な花を芽吹かせてくれることを願っています。
+    </p>
+
+    <p id="englishText" style="display: none">
+        At the Interior Design Studio we believe that design is a way of sowing the seeds of opportunities for the
+        future.
+        Design is cultural creation through forms. It is a constant trial and error of how to better connect people, and
+        nature,
+        in a discourse of what it means to be alive and happy in both spiritual and material terms. We believe that with
+        each
+        graduating class we are spreading the seeds of a brilliant bouquet of flowers, ready to brighten the world.
+    </p>
+
+    <p id="easyText" style="display: none">
+        デザインとは、<ruby>
+            <rb>社会</rb>
+            <rt>しゃかい</rt>
+        </ruby>に<ruby>
+            <rb>対</rb>
+            <rt>たい</rt>
+        </ruby>し、未来に<ruby>
+            <rb>対</rb>
+            <rt>たい</rt>
+        </ruby>し、<ruby>
+            <rb>小</rb>
+            <rt>ちい</rt>
+        </ruby>さな"きっかけ"という<ruby>
+            <rb>種</rb>
+            <rt>たね</rt>
+        </ruby>をまくようなことだと<ruby>
+            <rb>考</rb>
+            <rt>かんが</rt>
+        </ruby>えています。
+        インテリアデザインスタジオでは、<ruby>
+            <rb>人間</rb>
+            <rt>にんげん</rt>
+        </ruby>と<ruby>
+            <rb>社会</rb>
+            <rt>しゃかい</rt>
+        </ruby>と<ruby>
+            <rb>自然</rb>
+            <rt>しぜん</rt>
+        </ruby>を<ruby>
+            <rb>結</rb>
+            <rt>むす</rt>
+        </ruby>び<ruby>
+            <rb>付</rb>
+            <rt>つ</rt>
+        </ruby>け"<ruby>
+            <rb>生</rb>
+            <rt>い</rt>
+        </ruby>きるとは<ruby>
+            <rb>何</rb>
+            <rt>なに</rt>
+        </ruby>か"を<ruby>
+            <rb>考</rb>
+            <rt>かんが</rt>
+        </ruby>えることをデザインの<ruby>
+            <rb>出発点</rb>
+            <rt>しゅっぱつてん</rt>
+        </ruby>としています。
+        ひとりひとりの<ruby>
+            <rb>感性</rb>
+            <rt>かんせい</rt>
+        </ruby>や<ruby>
+            <rb>知性</rb>
+            <rt>ちせい</rt>
+        </ruby>を<ruby>
+            <rb>大切</rb>
+            <rt>たいせつ</rt>
+        </ruby>にしながら<ruby>
+            <rb>話</rb>
+            <rt>はな</rt>
+        </ruby>し<ruby>
+            <rb>合</rb>
+            <rt>あ</rt>
+        </ruby>いをくりかえし、デザインの<ruby>
+            <rb>試行錯誤</rb>
+            <rt>しこうさくご</rt>
+        </ruby>をくりかえします。デザインを"<ruby>
+            <rb>造形</rb>
+            <rt>ぞうけい</rt>
+        </ruby>を<ruby>
+            <rb>通</rb>
+            <rt>とお</rt>
+        </ruby>して<ruby>
+            <rb>文化</rb>
+            <rt>ぶんか</rt>
+        </ruby>をつくること"と<ruby>
+            <rb>考</rb>
+            <rt>かんが</rt>
+        </ruby>えて、<ruby>
+            <rb>精神・物質</rb>
+            <rt>せいしん　　ぶっしつ</rt>
+        </ruby>のどちらもから<ruby>
+            <rb>人</rb>
+            <rt>ひと</rt>
+        </ruby>びとの<ruby>
+            <rb>幸</rb>
+            <rt>しあわ</rt>
+        </ruby>せをささえることを<ruby>
+            <rb>目指</rb>
+            <rt>めざ</rt>
+        </ruby>してデザインをしています。
+        ここでデザインを<ruby>
+            <rb>学</rb>
+            <rt>まな</rt>
+        </ruby>んだ<ruby>
+            <rb>学生</rb>
+            <rt>がくせい</rt>
+        </ruby>たちが、<ruby>
+            <rb>世界</rb>
+            <rt>せかい</rt>
+        </ruby>を<ruby>
+            <rb>魅了</rb>
+            <rt>みりょう</rt>
+        </ruby>するデザイニストとなり、<ruby>
+            <rb>未来</rb>
+            <rt>みらい</rt>
+        </ruby>に<ruby>
+            <rb>素敵</rb>
+            <rt>すてき</rt>
+        </ruby>な<ruby>
+            <rb>花</rb>
+            <rt>はな</rt>
+        </ruby>を<ruby>
+            <rb>咲</rb>
+            <rt>さ</rt>
+        </ruby>かせてくれることを<ruby>
+            <rb>願</rb>
+            <rt>ねが</rt>
+        </ruby>っています。
+    </p>
 
     <a href="../index.html" title="returnIndex">
-        <p id="nomalReturn" style="display: block">もどる</p>
-        <p id="englishReturn" style="display: none">Return</p>
+        <p id="nomalReturn" style="display: block">トップへもどる</p>
+        <p id="englishReturn" style="display: none">Return to top</p>
     </a>
 
     <div id="studios">
         <h3 id="nomalContentsTitle4" style="display: block">他のスタジオを見る</h3>
         <h3 id="englishContentsTitle4" style="display: none">Other Studios</h3>
+        <h3 id="easyContentsTitle4" style="display: none"><ruby>
+                <rb>他</rb>
+                <rt>ほか</rt>
+            </ruby>のスタジオを<ruby>
+                <rb>見</rb>
+                <rt>み</rt>
+            </ruby>る</h3>
+        <!--面倒だからjsonで取ってくるけど、ホバーしたらどうのこうのするならこっちのが良いかもと思ったので一応残しておきます
+                <a href="editorial.html">
+                    <img src="../image/editorial.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="equipment.html">
+                    <img src="../image/equipment.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="ergonomics.html">
+                    <img src="../image/ergonomics.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="interactive.html">
+                    <img src="../image/interactive.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="interface.html">
+                    <img src="../image/interface.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="interior.html">
+                    <img src="../image/interior.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="kinematograph.html">
+                    <img src="../image/kinematograph.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="network.html">
+                    <img src="../image/network.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="software.html">
+                    <img src="../image/software.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="spatial.html">
+                    <img src="../image/spatial.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="transportation.html">
+                    <img src="../image/transportation.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="visual.html">
+                    <img src="../image/visual.png" title="edi" width="50px" height="50px">
+                </a>
+                --->
         <div id="nomalStudios" style="display: block"></div>
         <div id="englishStudios" style="display: none"></div>
     </div>
+    <!--</div>-->
     <script src="../js/js2.js"></script>
 </body>
 

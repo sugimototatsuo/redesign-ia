@@ -5,28 +5,226 @@
     <meta charset="utf-8">
     <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="shortcut icon" href="../image/mark.ico">
 </head>
 
 <body>
+    <!--
+    <div id="showloading">
+        <img src="../image/loading.gif" alt="loading" width="500px">
+    </div>
+
+    <div id="mainContent" class="hidden">-->
     <button id="button" class="open">
         <p id="nomalButton" style="display: block">English</p>
         <p id="englishButton" style="display: none">Undo</p>
     </button>
 
-    <h1 id=nomalTitle style="display: block">空間デザインスタジオ</h1>
+    <button id="button2" class="open">
+        <p id="nomalButton2" style="display: block">やさしいにほんご</p>
+        <p id="easyButton2" style="display: none">もとに もどす</p>
+    </button>
+    <h1 id="nomalTitle" style="display: block">空間デザインスタジオ</h1>
     <h1 id="englishTitle" style="display: none">Spatial Design Studio</h1>
+    <h1 id="easyTitle" style="display: none"><ruby>
+            <rb>空間</rb>
+            <rt>くうかん</rt>
+        </ruby>デザインスタジオ</h1>
+
+    <div id="nomalFaculty" style="display: block">
+        <h3>担当教員</h3>
+        <h5>ヴァール アダムス</h5>
+        <h5>准教授</h5>
+    </div>
+
+    <div id="englishFaculty" style="display: none">
+        <h3>Faculty</h3>
+        <h5>Verl Adams</h5>
+        <h5>Associate Professor</h5>
+    </div>
+
+    <div id="easyFaculty" style="display: none">
+        <h3><ruby>
+                <rb>担当教員</rb>
+                <rt>たんとうきょういん</rt>
+            </ruby></h3>
+        <h5>ヴァール アダムス</h5>
+        <h5><ruby>
+                <rb>准教授</rb>
+                <rt>じゅんきょうじゅ</rt>
+            </ruby></h5>
+    </div>
+
+    <h4 id="nomalCore" style="display: block">プロダクトデザインコア</h4>
+    <h4 id="englishCore" style="display: none">Product Design Core</h4>
+
+    <p id="nomalText" style="display: block">
+        空間デザイン分野は、建築、ランドスケープアーキテクチャー、インテリアデザイン、パブリックアートなどの、既存の専門領域の間を交差しております。
+        まず、「空間デザインの意味とはなにか？」という疑問から出発して、この複数の専門領域に及ぶデザイン分野にアプローチします。
+        次に、学生が本学科で学んできた分野横断的教育を多様な視点で研究活動に活かし、柔軟で相互作用を及ぼすようなデザインプロセスを行うようにします。
+        これにより、学生はデザイナーとしての役割をより深く理解し、新しいデザイン手法を確立することができ、
+        さまざまなデザイン分野に携わることができます。
+    </p>
+
+    <p id="englishText" style="display: none">
+        Spatial Design overlaps with architecture, landscape architecture, interior design and public art. We approach
+        this
+        interdisciplinary design field by first asking the question, “What is the meaning of Spatial Design?” We then
+        encourage
+        students to integrate multiple perspectives from their diverse education into their graduate works, and to
+        engage in
+        flexible, iterative design processes. This leads students to a better understanding of their roles as designers
+        and
+        enables them to create new design methods. It also gives students the ability to engage in a diverse range of
+        design
+        work.
+    </p>
+
+    <p id="easyText" style="display: none">
+        <ruby>
+            <rb>空間</rb>
+            <rt>くうかん</rt>
+        </ruby>デザイン<ruby>
+            <rb>分野</rb>
+            <rt>ぶんや</rt>
+        </ruby>は、<ruby>
+            <rb>建築</rb>
+            <rt>けんちく</rt>
+        </ruby>、ランドスケープアーキテクチャー、インテリアデザイン、パブリックアートなどの、<ruby>
+            <rb>今</rb>
+            <rt>いま</rt>
+        </ruby>ある<ruby>
+            <rb>専門領域</rb>
+            <rt>せんもんりょういき</rt>
+        </ruby>にまたがっています。
+        まず、「<ruby>
+            <rb>空間</rb>
+            <rt>くうかん</rt>
+        </ruby>デザインの<ruby>
+            <rb>意味</rb>
+            <rt>いみ</rt>
+        </ruby>とはなにか？」という<ruby>
+            <rb>疑問</rb>
+            <rt>ぎもん</rt>
+        </ruby>から<ruby>
+            <rb>出発</rb>
+            <rt>しゅっぱつ</rt>
+        </ruby>して、<ruby>
+            <rb>空間</rb>
+            <rt>くうかん</rt>
+        </ruby>デザイン<ruby>
+            <rb>分野</rb>
+            <rt>ぶんや</rt>
+        </ruby>にアプローチします。
+        <ruby>
+            <rb>次</rb>
+            <rt>つぎ</rt>
+        </ruby>に、<ruby>
+            <rb>学生</rb>
+            <rt>がくせい</rt>
+        </ruby>はこの<ruby>
+            <rb>学科</rb>
+            <rt>がっか</rt>
+        </ruby>で<ruby>
+            <rb>学</rb>
+            <rt>まな</rt>
+        </ruby>んできた<ruby>
+            <rb>分野横断的教育</rb>
+            <rt>ぶんやおうだんてききょういく</rt>
+        </ruby>をいろいろな<ruby>
+            <rb>見方</rb>
+            <rt>みかた</rt>
+        </ruby>で<ruby>
+            <rb>研究</rb>
+            <rt>けんきゅう</rt>
+        </ruby>に<ruby>
+            <rb>活</rb>
+            <rt>い</rt>
+        </ruby>かし、デザインをします。
+        これにより、<ruby>
+            <rb>学生</rb>
+            <rt>がくせい</rt>
+        </ruby>はデザイナーとしての<ruby>
+            <rb>役割</rb>
+            <rt>やくわり</rt>
+        </ruby>をより<ruby>
+            <rb>理解</rb>
+            <rt>りかい</rt>
+        </ruby>します。<ruby>
+            <rb>新</rb>
+            <rt>あたら</rt>
+        </ruby>しいデザインのやり<ruby>
+            <rb>方</rb>
+            <rt>かた</rt>
+        </ruby>を<ruby>
+            <rb>作</rb>
+            <rt>つく</rt>
+        </ruby>ることができるようになり、ざまなデザイン<ruby>
+            <rb>分野</rb>
+            <rt>ぶんや</rt>
+        </ruby>に<ruby>
+            <rb>関</rb>
+            <rt>かか</rt>
+        </ruby>わることができるようになります。
+    </p>
 
     <a href="../index.html" title="returnIndex">
-        <p id="nomalReturn" style="display: block">もどる</p>
-        <p id="englishReturn" style="display: none">Return</p>
+        <p id="nomalReturn" style="display: block">トップへもどる</p>
+        <p id="englishReturn" style="display: none">Return to top</p>
     </a>
 
     <div id="studios">
         <h3 id="nomalContentsTitle4" style="display: block">他のスタジオを見る</h3>
         <h3 id="englishContentsTitle4" style="display: none">Other Studios</h3>
+        <h3 id="easyContentsTitle4" style="display: none"><ruby>
+                <rb>他</rb>
+                <rt>ほか</rt>
+            </ruby>のスタジオを<ruby>
+                <rb>見</rb>
+                <rt>み</rt>
+            </ruby>る</h3>
+        <!--面倒だからjsonで取ってくるけど、ホバーしたらどうのこうのするならこっちのが良いかもと思ったので一応残しておきます
+                <a href="editorial.html">
+                    <img src="../image/editorial.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="equipment.html">
+                    <img src="../image/equipment.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="ergonomics.html">
+                    <img src="../image/ergonomics.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="interactive.html">
+                    <img src="../image/interactive.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="interface.html">
+                    <img src="../image/interface.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="interior.html">
+                    <img src="../image/interior.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="kinematograph.html">
+                    <img src="../image/kinematograph.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="network.html">
+                    <img src="../image/network.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="software.html">
+                    <img src="../image/software.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="spatial.html">
+                    <img src="../image/spatial.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="transportation.html">
+                    <img src="../image/transportation.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="visual.html">
+                    <img src="../image/visual.png" title="edi" width="50px" height="50px">
+                </a>
+                --->
         <div id="nomalStudios" style="display: block"></div>
         <div id="englishStudios" style="display: none"></div>
     </div>
+    <!--</div>-->
     <script src="../js/js2.js"></script>
 </body>
 

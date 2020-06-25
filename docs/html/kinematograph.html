@@ -5,28 +5,266 @@
     <meta charset="utf-8">
     <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="shortcut icon" href="../image/mark.ico">
 </head>
 
 <body>
+    <!--
+    <div id="showloading">
+        <img src="../image/loading.gif" alt="loading" width="500px">
+    </div>
+
+    <div id="mainContent" class="hidden">-->
     <button id="button" class="open">
         <p id="nomalButton" style="display: block">English</p>
         <p id="englishButton" style="display: none">Undo</p>
     </button>
 
-    <h1 id=nomalTitle style="display: block">映像デザインスタジオ</h1>
+    <button id="button2" class="open">
+        <p id="nomalButton2" style="display: block">やさしいにほんご</p>
+        <p id="easyButton2" style="display: none">もとに もどす</p>
+    </button>
+    <h1 id="nomalTitle" style="display: block">映像デザインスタジオ</h1>
     <h1 id="englishTitle" style="display: none">Kinematograph Design Studio</h1>
+    <h1 id="easyTitle" style="display: none"><ruby>
+            <rb>映像</rb>
+            <rt>えいぞう</rt>
+        </ruby>デザインスタジオ</h1>
+
+    <div id="nomalFaculty" style="display: block">
+        <h3>担当教員</h3>
+        <h5>今間 俊博</h5>
+        <h5>教授</h5>
+    </div>
+
+    <div id="englishFaculty" style="display: none">
+        <h3>Faculty</h3>
+        <h5>Toshihiro Komma</h5>
+        <h5>Professor</h5>
+    </div>
+
+    <div id="easyFaculty" style="display: none">
+        <h3><ruby>
+                <rb>担当教員</rb>
+                <rt>たんとうきょういん</rt>
+            </ruby></h3>
+        <h5><ruby>
+                <rb>今間 俊博</rb>
+                <rt>こんま　としひろ</rt>
+            </ruby></h5>
+        <h5><ruby>
+                <rb>教授</rb>
+                <rt>きょうじゅ</rt>
+            </ruby></h5>
+    </div>
+
+    <h4 id="nomalCore" style="display: block">メディアアートコア</h4>
+    <h4 id="englishCore" style="display: none">Media Art Core</h4>
+
+    <p id="nomalText" style="display: block">
+        映像は大きく分類すると、その制作手法によって実写(LIVE)映像と、アニメーション映像に分けられる。
+        一般的によく目にするアニメーション以外に、CGアニメーション、クレイなどのストップモーションアニメーション等、色々な制作手法が存在する。
+        照明、カメラワーク、編集、企画、世界観、キャラクター設定、シナリオ、コンテをベースに、アニメーション特有の知識を加えることにより、
+        アニメーションの原理を理解し、その制作方法の基礎を習得する。LIVEに撮影する実写映像の知識だけでなく、
+        最低限のLIVE撮影・編集の実技についても習得する。また映像制作、特にドラマ制作において重要な、企画、世界観、キャラクター設定、
+        シナリオ、コンテなどの仕組みを理解する。
+    </p>
+
+    <p id="englishText" style="display: none">
+        Moving image work can be roughly divided between live action and “animated” productions. Students in the
+        Kinematograph
+        Design Studio learn not only the basics of theory and practice in lighting, camera work, editing, producing,
+        staging,
+        creating characters, scripts and storyboarding, all common to both live and animated narrative work, but they
+        also learn
+        the fundamentals of traditional cell, computer generated, and stop-motion animation techniques.
+    </p>
+
+    <p id="easyText" style="display: none">
+        <ruby>
+            <rb>映像</rb>
+            <rt>えいぞう</rt>
+        </ruby>は、その<ruby>
+            <rb>作</rb>
+            <rt>つく</rt>
+        </ruby>り<ruby>
+            <rb>方</rb>
+            <rt>かた</rt>
+        </ruby>によって、<ruby>
+            <rb>大</rb>
+            <rt>おお</rt>
+        </ruby>きく２つに<ruby>
+            <rb>分</rb>
+            <rt>わ</rt>
+        </ruby>かれます。<ruby>
+            <rb>実写</rb>
+            <rt>じっしゃ</rt>
+        </ruby>(LIVE)<ruby>
+            <rb>映像</rb>
+            <rt>えいぞう</rt>
+        </ruby>と、アニメーション<ruby>
+            <rb>映像</rb>
+            <rt>えいぞう</rt>
+        </ruby>です。
+        よく<ruby>
+            <rb>目</rb>
+            <rt>め</rt>
+        </ruby>にするアニメーション<ruby>
+            <rb>以外</rb>
+            <rt>いがい</rt>
+        </ruby>に、CGアニメーション、クレイなどのストップモーションアニメーションなど、いろいろな<ruby>
+            <rb>作</rb>
+            <rt>つく</rt>
+        </ruby>り<ruby>
+            <rb>方</rb>
+            <rt>かた</rt>
+        </ruby>があります。
+        <ruby>
+            <rb>照明</rb>
+            <rt>しょうめい</rt>
+        </ruby>、カメラワーク、<ruby>
+            <rb>編集、企画、世界観</rb>
+            <rt>へんしゅう　　きかく　　せかいかん</rt>
+        </ruby>、キャラクター<ruby>
+            <rb>設定</rb>
+            <rt>せってい</rt>
+        </ruby>、シナリオ、コンテをベースに、そこにアニメーション<ruby>
+            <rb>特有</rb>
+            <rt>とくゆう</rt>
+        </ruby>の<ruby>
+            <rb>知識</rb>
+            <rt>ちしき</rt>
+        </ruby>を<ruby>
+            <rb>加</rb>
+            <rt>くわ</rt>
+        </ruby>えることによって、アニメーションの<ruby>
+            <rb>仕組</rb>
+            <rt>しく</rt>
+        </ruby>みを<ruby>
+            <rb>理解</rb>
+            <rt>りかい</rt>
+        </ruby>し、その<ruby>
+            <rb>作</rb>
+            <rt>つく</rt>
+        </ruby>り<ruby>
+            <rb>方</rb>
+            <rt>かた</rt>
+        </ruby>の<ruby>
+            <rb>基礎</rb>
+            <rt>きそ</rt>
+        </ruby>を<ruby>
+            <rb>身</rb>
+            <rt>み</rt>
+        </ruby>に<ruby>
+            <rb>付</rb>
+            <rt>つ</rt>
+        </ruby>けます。
+        <ruby>
+            <rb>実写映像</rb>
+            <rt>じっしゃえいぞう</rt>
+        </ruby>の<ruby>
+            <rb>知識</rb>
+            <rt>ちしき</rt>
+        </ruby>だけでなく、<ruby>
+            <rb>最低限</rb>
+            <rt>さいていげん</rt>
+        </ruby>のLIVE<ruby>
+            <rb>撮影・編集</rb>
+            <rt>さつえい　　へんしゅう</rt>
+        </ruby>のやり<ruby>
+            <rb>方</rb>
+            <rt>かた</rt>
+        </ruby>も<ruby>
+            <rb>身</rb>
+            <rt>み</rt>
+        </ruby>に<ruby>
+            <rb>付</rb>
+            <rt>つ</rt>
+        </ruby>けます。
+        また<ruby>
+            <rb>映像制作</rb>
+            <rt>えいぞうせいさく</rt>
+        </ruby>、<ruby>
+            <rb>特</rb>
+            <rt>とく</rt>
+        </ruby>にドラマ<ruby>
+            <rb>制作</rb>
+            <rt>せいさく</rt>
+        </ruby>において<ruby>
+            <rb>重要</rb>
+            <rt>じゅうよう</rt>
+        </ruby>な、<ruby>
+            <rb>企画、世界観</rb>
+            <rt>きかく　　せかいかん</rt>
+        </ruby>、キャラクター<ruby>
+            <rb>設定</rb>
+            <rt>せってい</rt>
+        </ruby>、シナリオ、コンテなどの<ruby>
+            <rb>仕組</rb>
+            <rt>しく</rt>
+        </ruby>みを<ruby>
+            <rb>理解</rb>
+            <rt>りかい</rt>
+        </ruby>します。
+    </p>
 
     <a href="../index.html" title="returnIndex">
-        <p id="nomalReturn" style="display: block">もどる</p>
-        <p id="englishReturn" style="display: none">Return</p>
+        <p id="nomalReturn" style="display: block">トップへもどる</p>
+        <p id="englishReturn" style="display: none">Return to top</p>
     </a>
 
     <div id="studios">
         <h3 id="nomalContentsTitle4" style="display: block">他のスタジオを見る</h3>
         <h3 id="englishContentsTitle4" style="display: none">Other Studios</h3>
+        <h3 id="easyContentsTitle4" style="display: none"><ruby>
+                <rb>他</rb>
+                <rt>ほか</rt>
+            </ruby>のスタジオを<ruby>
+                <rb>見</rb>
+                <rt>み</rt>
+            </ruby>る</h3>
+        <!--面倒だからjsonで取ってくるけど、ホバーしたらどうのこうのするならこっちのが良いかもと思ったので一応残しておきます
+                <a href="editorial.html">
+                    <img src="../image/editorial.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="equipment.html">
+                    <img src="../image/equipment.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="ergonomics.html">
+                    <img src="../image/ergonomics.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="interactive.html">
+                    <img src="../image/interactive.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="interface.html">
+                    <img src="../image/interface.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="interior.html">
+                    <img src="../image/interior.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="kinematograph.html">
+                    <img src="../image/kinematograph.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="network.html">
+                    <img src="../image/network.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="software.html">
+                    <img src="../image/software.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="spatial.html">
+                    <img src="../image/spatial.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="transportation.html">
+                    <img src="../image/transportation.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="visual.html">
+                    <img src="../image/visual.png" title="edi" width="50px" height="50px">
+                </a>
+                --->
         <div id="nomalStudios" style="display: block"></div>
         <div id="englishStudios" style="display: none"></div>
     </div>
+    <!--</div>-->
     <script src="../js/js2.js"></script>
 </body>
 

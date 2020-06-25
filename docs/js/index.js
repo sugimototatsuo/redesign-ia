@@ -22,26 +22,25 @@ const renderJson = (json) => {
   studios.pop();
   studios.forEach(studios => {
     const nomalStudioDiv = document.createElement('div');
-    //const nomalStudioTitle = document.createElement("span");
     const nomalStudioLink = document.createElement("a");
     const nomalStudioImage = document.createElement("img");
-    //nomalStudioTitle.className = 'studio-title';
-    //nomalStudioTitle.textContent = studios['name-ja'];
+
+    //スタジオ名（日本語）のクラス
     nomalStudioLink.className = 'studio-title';
     nomalStudioLink.href = "./html/" + studios['name-short'].toString() + ".html";
     nomalStudioLink.textContent = studios['name-ja'];
+    //スタジオ写真のクラス
     nomalStudioImage.className = 'studio-photo1';
     nomalStudioImage.src = studios['photo1'];
 
     const englishStudioDiv = document.createElement('div');
-    //const englishStudioTitle = document.createElement("span");
     const englishStudioLink = document.createElement("a");
     const englishStudioImage = document.createElement("img");
 
-    //englishStudioTitle.className = 'studio-title-en';
-    //englishStudioTitle.textContent = studios['name-en'];
+    //スタジオ名（英語）のクラス
     englishStudioLink.className = 'studio-title-en';
     englishStudioLink.href = "./html/" + studios['name-short'].toString() + ".html?langMode";
+    //スタジオ写真（英語）のクラス
     englishStudioLink.textContent = studios['name-en'];
     englishStudioImage.src = studios['photo2'];
     englishStudioImage.className = 'studio-photo2';
@@ -50,7 +49,6 @@ const renderJson = (json) => {
     nomalStudioDiv.appendChild(nomalStudioImage);
     nomalStudioDiv.appendChild(nomalStudioLink);
     document.getElementById('nomalStudios').appendChild(nomalStudioDiv);
-    //englishStudioDiv.appendChild(englishStudioTitle);
     englishStudioDiv.appendChild(englishStudioImage);
     englishStudioDiv.appendChild(englishStudioLink);
     document.getElementById('englishStudios').appendChild(englishStudioDiv);
@@ -72,13 +70,14 @@ const renderJson2 = (json) => {
     const nomalFacultyStudio = document.createElement("span");
     const nomalFacultyMajor = document.createElement("span");
     const nomalFacultyImage = document.createElement("img");
+    //nomal~のところは全部日本語版サイト。
+    //○○.classNameのところ、上から順に、教員名（日本語）、教員名（英語）、教授か助教かとか、所属スタジオ、教員の専攻、写真
     nomalFacultyname.className = 'faculty-name';
     nomalFacultynameEn.className = 'faculty-name-2';
     nomalFacultyTitle.className = 'faculty-title';
     nomalFacultyStudio.className = 'faculty-studio';
     nomalFacultyMajor.className = 'faculty-major';
     nomalFacultyImage.className = "faculty-image";
-    //nomalFacultyTitle.parse = "data": ['faculty-photo'];
     nomalFacultyname.textContent = faculty['f-faculty-ja'];
     nomalFacultynameEn.textContent = faculty['f-faculty-en'];
     nomalFacultyTitle.textContent = faculty['f-faculty-title-ja'];
@@ -93,6 +92,8 @@ const renderJson2 = (json) => {
     const englishFacultyStudio = document.createElement("span");
     const englishFacultyMajor = document.createElement("span");
     const englishFacultyImage = document.createElement("img");
+    //english~のところは全部日本語版サイト。
+    //○○.classNameのところ、上から順に、教員名（英語）、教員名（日本語）、教授か助教かとか、所属スタジオ、教員の専攻、写真
     englishFacultyname.className = 'faculty-name-en';
     englishFacultynameJa.className = 'faculty-name-en2';
     englishFacultyTitle.className = 'faculty-title-en';
@@ -132,24 +133,18 @@ const renderJson3 = (json) => {
     const nomalLinkDiv = document.createElement('div');
     const nomalLinkTitle = document.createElement("a");
     const nomalLinkImage = document.createElement("img");
-    //nomalStudioTitle.className = 'studio-title';
     nomalLinkTitle.textContent = link['name-ja'];
+    //関連コンテンツ名のクラス
     nomalLinkTitle.className = 'link-title';
     nomalLinkTitle.href = link['link'];
-    //nomalStudioLink.textContent = studios['name-ja'];
     nomalLinkImage.src = link['photo'];
+    //関連コンテンツ画像のクラス
     nomalLinkImage.className = 'link-image';
 
     nomalLinkDiv.appendChild(nomalLinkImage);
     nomalLinkDiv.appendChild(nomalLinkTitle);
     //nomalStudioDiv.appendChild(nomalStudioLink);
     document.getElementById('nomalLink').appendChild(nomalLinkDiv);
-    //englishStudioDiv.appendChild(englishStudioTitle);
-    /*
-    englishStudioDiv.appendChild(englishStudioImage);
-    englishStudioDiv.appendChild(englishStudioLink);
-    document.getElementById('englishStudios').appendChild(englishStudioDiv);
-    */
 
   });
 
@@ -157,15 +152,11 @@ const renderJson3 = (json) => {
 }
 
 
-
+//この辺から下は言語切り替え
 document.getElementById("button").onclick = function () {
   var langBotton = document.getElementById("button");
   var langBottonClass = langBotton.getAttribute("class");
-  //var langBottonWork = document.getElementById("buttonWork");
-  //var langBottonWorkClass = langBotton.getAttribute("class");
-
-
-  //ボタンで言葉の切り替え
+  //ボタンで言葉の切り替え（英語）
   if (langBottonClass == "open") {
     langBotton.classList.remove('open');
     langBotton.classList.add('close');
@@ -410,16 +401,7 @@ document.getElementById("button2").onclick = function () {
 
     document.getElementById('nomalQText').style.display = "block";
   }
-
 };
-
-/*
-function openner(link) {
-
-  window.open(link, "window_open", "width=600,height=400");
-
-}
-*/
 
 
 const getData = async () => {

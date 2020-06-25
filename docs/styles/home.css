@@ -60,6 +60,7 @@ body{
 max-width:1200px;
  }
 
+ 
  footer {
     position: relative;
     display: table;
@@ -94,10 +95,11 @@ max-width:1200px;
 /*サイドバー*/
  .sidebar {
  position: fixed;
- left: 0px;
+ /*left: 0px;
  top: 100px;
 width: 150px;
-height: 100vh;
+height: 100vh;*/
+z-index:10;
  /* min-height: 500px;*/
  background-color: #FFF;
  padding-top: 15px;
@@ -234,9 +236,33 @@ color: #777;
         width: 100%;
     }
 
-
+    .scroll-top {
+        position: fixed;
+        width: 100px;
+        height: 50px;
+        bottom: 40px;
+        right: 40px;
+        cursor: pointer;
+        z-index: 100;
+        text-align: center;
+     }
+        .scroll-top img {
+          width: 30px;
+          height: auto; 
+        }
+        .scroll-top p {
+          font-size: 17px;
+          color: #535353;
+          font: bold 15pt "Helvetica Neue", Helvetica, Arial, sans-serif;
+          letter-spacing: 0.5px;
+          padding-top: 8px; 
+        }
 
  /*ここまで共通設定*/
+
+.sectionTitle{
+    text-align: center;
+}
 
 /*出だし*/
   #introduction{
@@ -255,6 +281,54 @@ width:400px;
 }
 
 
+/*news*/
+   img.article-img{
+    width: 200px;
+    height: 200px; 
+    float:left;
+}
+
+#articles{
+    max-width:1000px;
+    margin: 0 auto;
+}
+
+.an-article{
+    margin:60px 0px;
+}
+.article-text-container{
+margin: 40px 0px 0px 200px;/*この辺の回り込み　いい方法忘れたので後でなんとかする*/
+width: calc(100% - 200px);  
+padding:0px 0px 0px 16px;
+}
+
+.article-title{
+    font-size:20px;
+    text-decoration: none ;
+    color:#11114d;
+    margin:10px;
+}
+.update-date{
+    margin:10px;
+    
+}
+.article-contents{
+    margin:10px;
+    
+}
+
+
+/*Aceess*/
+
+#accessMapcantainer{
+    margin:0px 100px;
+}
+#map { 
+    top: 0;
+    bottom: 0;
+    width: 600px;
+    height: 400px;
+}
 
 li:hover{
     color:#B20909;
@@ -266,3 +340,4 @@ a {
 a:hover{
     color:#B20909;
 }
+

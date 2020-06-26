@@ -91,15 +91,17 @@ max-width:1200px;
  .float-clear{
     clear:both;
 }
+
+
    
 /*サイドバー*/
- .sidebar {
+/* .sidebar {
  position: fixed;
  top: 100px;
- left: calc(100vw/10);
- /*
+ left: /*calc(100vw/10)0;
+
 width: 150px;
-height: 100vh;*/
+ height: 100vh;
 z-index:10;
  min-height: 500px;
  background-color: #FFF;
@@ -108,10 +110,10 @@ z-index:10;
  }
  .sidebar a.linkMenuText {
  font: bold 20pt /*"Helvetica Neue", Helvetica, Arial, sans-serif*/;
-text-decoration: none;
+/*text-decoration: none;
 color: #777;
 
- /*letter-spacing: .5pt; */
+ /*letter-spacing: .5pt; 
 }
 .sidebar li{
     margin-bottom:20px;
@@ -121,19 +123,62 @@ color: #777;
 }
  .sidebar a.linkMenuText:hover {
  color: #000; 
-}
+}*/
 
 
-/*サイドメニュー以外の全てを囲む*/
- .contents {
-    position: absolute;
+/*サイドメニュー以外の全てを囲む
+.contents {
+
     left: calc(100vw/4);
+
+    width:800px;
+    min-width:800px;
+
+
+}*/
+
+.contents {
+    position: absolute;
+    left: 200px;
     top: 100px;
-    width: 800px/*calc(100vw - 240px)*/;
     height: auto;
     min-height: 500px;
     background-color: #FFF;
-    padding: 0px 0px 0px 0px; }
+    padding: 15px 20px 15px 20px; 
+}
+  
+  
+    
+  .sidebar {
+    position: fixed;
+    left: 0px;
+    top: 186px;
+    width: 150px;
+    height: 100vh;
+    min-height: 500px;
+    background-color: #FFF;
+    padding-top: 15px;
+    padding-left: 50px; }
+    .sidebar a.en {
+      font: bold 15pt "Helvetica Neue", Helvetica, Arial, sans-serif;
+      text-decoration: none;
+      color: #777;
+      line-height: 2em;
+      letter-spacing: .5pt; }
+      .sidebar a.en.here {
+        color: #444; }
+      .sidebar a.en:hover {
+        color: #444; }
+
+
+        .studios {
+            width: 100%;
+            height: auto;
+            /*display: flex;*/
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: flex-start; 
+        }
 
 
     /*画像のスライドショー ref:https://tech-dig.jp/js-slider//*/

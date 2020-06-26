@@ -42,76 +42,76 @@
       </ul>
     </section>
     <section class="contents" style="opacity: 1;">
+      <section class="studios">
+        <h1>東京都立大学システムデザイン学部<br>インダストリアルアート学科</h1>
+        <div id="introduction">
+          <div id="intro-sentense">
+            <p>工業意匠と訳され、工業製品の商品性を高める手段と捉えられがちなインダストリアルデザインでは、取り組みは限定されてしまいます。</p>
+            <p>デザインという言葉では伝えきれない大きな思いを込めて、あえて「インダストリアルアート」を名乗ります。</p>
+          </div>
+          <div id="top-logo-image">
+            <img src="./img/relogo.png" width=280px></div>
 
-      <h1>東京都立大学システムデザイン学部<br>インダストリアルアート学科</h1>
-      <div id="introduction">
-        <div id="intro-sentense">
-          <p>工業意匠と訳され、工業製品の商品性を高める手段と捉えられがちなインダストリアルデザインでは、取り組みは限定されてしまいます。</p>
-          <p>デザインという言葉では伝えきれない大きな思いを込めて、あえて「インダストリアルアート」を名乗ります。</p>
         </div>
-        <div id="top-logo-image">
-          <img src="./img/relogo.png" width=280px></div>
-
-      </div>
-      <div class="float-clear"></div>
+        <div class="float-clear"></div>
 
 
 
-      <h2 class="sectionTitle">NEWS</h2>
-      <div id="articles"></div>
-      <h2 class="sectionTitle">ABOUT</h2>
-      <div class="top-img">
-        <img src="./img/currentSite_imgs/about/newreserch.png" width=600px></div>
+        <h2 class="sectionTitle">NEWS</h2>
+        <div id="articles"></div>
+        <h2 class="sectionTitle">ABOUT</h2>
+        <div class="top-img">
+          <img src="./img/currentSite_imgs/about/newreserch.png" width=600px></div>
 
-      </div>
-
-      <h2 class="sectionTitle">STUDIO</h2>
-      <div class="top-img">
-        <div class="slider">
-          <img id="view" src="./img/currentSite_imgs/studio/ed1.png">
-          <i id="prev" class="fas fa-arrow-circle-left"></i>
-          <i id="next" class="fas fa-arrow-circle-right"></i>
         </div>
-        <nav class="thumbnail">
-          <ul id="thumbnailList">
-          </ul>
-        </nav>
 
-      </div>
+        <h2 class="sectionTitle">STUDIO</h2>
+        <div class="top-img">
+          <div class="slider">
+            <img id="view" src="./img/currentSite_imgs/studio/ed1.png">
+            <i id="prev" class="fas fa-arrow-circle-left"></i>
+            <i id="next" class="fas fa-arrow-circle-right"></i>
+          </div>
+          <nav class="thumbnail">
+            <ul id="thumbnailList">
+            </ul>
+          </nav>
 
-      <h2 class="sectionTitle">FACULTY</h2>
-      <h2 class="sectionTitle">WORKS</h2>
-      <h2 class="sectionTitle">ACCESS</h2>
-      <div id="accessMapcantainer">
-        <div id="map"></div>
-      </div>
+        </div>
 
-      <script>
-        mapboxgl.accessToken = 'pk.eyJ1IjoibW9lY28wOSIsImEiOiJja2JjZjEweDQwMWFoMnJud2N6M3N4Z2c2In0.cfn_JZgFwQgheoCiYBgFZQ';
-        var map = new mapboxgl.Map({
-          container: 'map',
-          style: 'mapbox://styles/moeco09/ckbftkk4s1ufj1jmtr4hw3c6u',
-          center: [139.366468, 35.661579],
-          zoom: 15
-        });
+        <h2 class="sectionTitle">FACULTY</h2>
+        <h2 class="sectionTitle">WORKS</h2>
+        <h2 class="sectionTitle">ACCESS</h2>
+        <div id="accessMapcantainer">
+          <div id="map"></div>
+        </div>
 
-        var marker = new mapboxgl.Marker()
-          .setLngLat([139.366468, 35.661579])
-          .addTo(map);
+        <script>
+          mapboxgl.accessToken = 'pk.eyJ1IjoibW9lY28wOSIsImEiOiJja2JjZjEweDQwMWFoMnJud2N6M3N4Z2c2In0.cfn_JZgFwQgheoCiYBgFZQ';
+          var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/moeco09/ckbftkk4s1ufj1jmtr4hw3c6u',
+            center: [139.366468, 35.661579],
+            zoom: 15
+          });
 
-      </script>
+          var marker = new mapboxgl.Marker()
+            .setLngLat([139.366468, 35.661579])
+            .addTo(map);
 
-
-      <div id="studios"></div>
-      <div id="faculties"></div>
-      <div id="links"></div>
-
-      <pre id="result-studio"></pre>
-      <pre id="result-faculty"></pre>
-      <pre id="result-link"></pre>
-      </div>
+        </script>
 
 
+        <div id="studios"></div>
+        <div id="faculties"></div>
+        <div id="links"></div>
+
+        <pre id="result-studio"></pre>
+        <pre id="result-faculty"></pre>
+        <pre id="result-link"></pre>
+        </div>
+
+      </section>
       <footer>
         <section class="en">
           <p class="ja">東京都立大学 システムデザイン学部／研究科</p>

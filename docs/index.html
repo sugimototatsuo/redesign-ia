@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
-  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/home.css">
 
   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
     <meta property="og:url" content="https://sumikko-mountain.github.io/redesign-ia/" />
@@ -20,43 +20,113 @@
     <meta name="twitter:site" content="@ia_sd_tmu" />
     <meta name="twitter:player" content="@ia_sd_tmu" />
 
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
+
   </head>
 
 <body>
-  <header>
-    <ul>
-      <li><a href="./index.html">HOME</a></li>
-      <li><a href="./about.html">ABOUT</a></li>
-      <li><a href="./news.html">NEWS</a></li>
-      <li><a href="./studio.html">STUDIO</a></li>
-      <li><a href="./faculty.html">FACULTY</a></li>
-      <li><a href="./works.html">WORKS</a></li>
-      <li><a href="./access.html">ACCESS</a></li>
-    </ul>
-  </header>
-  <h1>東京都立大学システムデザイン学部インダストリアルアート学科</h1>
-  <h2>Department of Industrial Art</h2>
-  <h2>Faculty of Systems Design, Tokyo Metropolitan University</h2>
-  <!-- <div>Google SheetのデータをJSONで取得できるAPIを使ってサイトを構築しています。</div>
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.626260475521!2d139.3664679!3d35.6615787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018e2086b789781%3A0x74b7f28cd003b142!2z5p2x5Lqs6YO956uL5aSn5a2mIOaXpemHjuOCreODo-ODs-ODkeOCuQ!5e0!3m2!1sja!2sjp!4v1591791543202!5m2!1sja!2sjp"
-    width="600" height="450" frameborder="0"
-    style="border:0;filter:sepia(40%);-webkit-filter:sepia(40%)filter:saturate(150%);-webkit-filter:saturate(150%)"
-    allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>-->
-  <div id="studios"></div>
-  <div id="faculties"></div>
-  <div id="links"></div>
+  <main>
+    <header>
+    </header>
+    <section class="sidebar">
+      <ul>
+        <li><a class="linkMenuText here" href="./index.html">HOME</a></li>
+        <li><a class="linkMenuText" href="./about.html">ABOUT</a></li>
+        <li><a class="linkMenuText" href="./news.html">NEWS</a></li>
+        <li><a class="linkMenuText" href="./studio.html">STUDIO</a></li>
+        <li><a class="linkMenuText" href="./faculty.html">FACULTY</a></li>
+        <li><a class="linkMenuText" href="./works.html">WORKS</a></li>
+        <li><a class="linkMenuText" href="./access.html">ACCESS</a></li>
+      </ul>
+    </section>
+    <section class="contents" style="opacity: 1;">
+      <section class="studios">
+        <h1>東京都立大学システムデザイン学部<br>インダストリアルアート学科</h1>
+        <div id="introduction">
+          <div id="intro-sentense">
+            <p>工業意匠と訳され、工業製品の商品性を高める手段と捉えられがちなインダストリアルデザインでは、取り組みは限定されてしまいます。</p>
+            <p>デザインという言葉では伝えきれない大きな思いを込めて、あえて「インダストリアルアート」を名乗ります。</p>
+          </div>
+          <div id="top-logo-image">
+            <img src="./img/relogo.png" width=280px></div>
 
-  <pre id="result-studio"></pre>
-  <pre id="result-faculty"></pre>
-  <pre id="result-link"></pre>
-  </div>
-  <div id="sampleAnime"></div>
+        </div>
+        <div class="float-clear"></div>
 
 
+
+        <h2 class="sectionTitle">NEWS</h2>
+        <div id="articles"></div>
+        <h2 class="sectionTitle">ABOUT</h2>
+        <div class="top-img">
+          <img src="./img/currentSite_imgs/about/newreserch.png" width=600px></div>
+
+        </div>
+
+        <h2 class="sectionTitle">STUDIO</h2>
+        <div class="top-img">
+          <div class="slider">
+            <img id="view" src="./img/currentSite_imgs/studio/ed1.png">
+            <i id="prev" class="fas fa-arrow-circle-left"></i>
+            <i id="next" class="fas fa-arrow-circle-right"></i>
+          </div>
+          <nav class="thumbnail">
+            <ul id="thumbnailList">
+            </ul>
+          </nav>
+
+        </div>
+
+        <h2 class="sectionTitle">FACULTY</h2>
+        <h2 class="sectionTitle">WORKS</h2>
+        <h2 class="sectionTitle">ACCESS</h2>
+        <div id="accessMapcantainer">
+          <div id="map"></div>
+        </div>
+
+        <script>
+          mapboxgl.accessToken = 'pk.eyJ1IjoibW9lY28wOSIsImEiOiJja2JjZjEweDQwMWFoMnJud2N6M3N4Z2c2In0.cfn_JZgFwQgheoCiYBgFZQ';
+          var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/moeco09/ckbftkk4s1ufj1jmtr4hw3c6u',
+            center: [139.366468, 35.661579],
+            zoom: 15
+          });
+
+          var marker = new mapboxgl.Marker()
+            .setLngLat([139.366468, 35.661579])
+            .addTo(map);
+
+        </script>
+
+
+        <div id="studios"></div>
+        <div id="faculties"></div>
+        <div id="links"></div>
+
+        <pre id="result-studio"></pre>
+        <pre id="result-faculty"></pre>
+        <pre id="result-link"></pre>
+        </div>
+
+      </section>
+      <footer>
+        <section class="en">
+          <p class="ja">東京都立大学 システムデザイン学部／研究科</p>
+          <p class="sd">Faculty &amp; Graduate School of Systems Design</p><a class="sd"
+            href="https://www.tmu.ac.jp/">Copyright ©2018 Tokyo Metropolitan University. All rights reserved.</a>
+        </section>
+      </footer>
+    </section>
+  </main>
+  <section class="scroll-top" style="display: none;"><img src="./img/icon/Twitter/Twitter_Logo_Blue.png" art="image">
+    <p class="en">PageTop</p>
+  </section>
   <script src="js/lottie.min.js"></script>
 
-  <script src="js/index.js"></script>
+  <script src="js/home.js"></script>
 
 </body>
 

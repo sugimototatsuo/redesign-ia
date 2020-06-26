@@ -109,15 +109,15 @@ const renderJson2 = (json) => {
 
     nomalFacultyDiv.appendChild(nomalFacultyImage);
     nomalFacultyDiv.appendChild(nomalFacultyname);
-    nomalFacultyDiv.appendChild(nomalFacultynameEn);
     nomalFacultyDiv.appendChild(nomalFacultyTitle);
+    nomalFacultyDiv.appendChild(nomalFacultynameEn);
     nomalFacultyDiv.appendChild(nomalFacultyStudio);
     nomalFacultyDiv.appendChild(nomalFacultyMajor);
     document.getElementById('nomalFaculty').appendChild(nomalFacultyDiv);
     englishFacultyDiv.appendChild(englishFacultyImage);
     englishFacultyDiv.appendChild(englishFacultyname);
-    englishFacultyDiv.appendChild(englishFacultynameJa);
     englishFacultyDiv.appendChild(englishFacultyTitle);
+    englishFacultyDiv.appendChild(englishFacultynameJa);
     englishFacultyDiv.appendChild(englishFacultyStudio);
     englishFacultyDiv.appendChild(englishFacultyMajor);
     document.getElementById('englishFaculty').appendChild(englishFacultyDiv);

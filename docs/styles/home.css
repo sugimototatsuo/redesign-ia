@@ -1,3 +1,4 @@
+ /*ここから共通設定*/
 @charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -34,13 +35,14 @@ footer, header, hgroup, menu, nav, section {
 /*各種見出しとかタグのデフォルト設定*/
 h1 {
     font-size: 48px;
-    font-weight: 400;
-    color: steelblue;
+    font-weight: 300;
+    color: #000;
   }
    h2 {
-      font-weight: 400;
+      font-weight: 600;
       font-size: 36px;
-      color: steelblue;
+      color: #000;
+      margin:20px 0px;
     }
   
     p{
@@ -53,10 +55,47 @@ h1 {
         text-decoration: none ;
     }
 
+   header a:link {
+        color: #999999;
+      }
+     header a:visited {
+        color:#999999;
+      }
+     header a:hover {
+        color:#191919;
+      }
+     header a:active {
+        color:#DDDDDD;
+      }
+
+    
+      .btn-flat-simple {
+        position: relative;
+        display: inline-block;
+        font-weight: bold;
+        padding: 0.35em 1.5em;
+        text-decoration: none;
+        color: #fff;
+        background: #000;
+        transition: .4s;
+       
+      }
+      
+      .btn-flat-simple:hover {
+     opacity:0.7;
+        color:#fff;
+      }
+    
+      .moreButton{
+        text-align: center;
+        margin: 30px 0;
+      }
+
+
 body{
  background-color:#ffffff;
  margin: 0px auto;
-  font-family: sans-serif;
+ font-family: 'Open Sans', sans-serif;
 max-width:1200px;
  }
 
@@ -92,93 +131,35 @@ max-width:1200px;
     clear:both;
 }
 
+/*グロナビ　ヘッダー*/
+header {
+    width: 100%;
+    padding: 15px 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .nav-list{
+    text-align: center;
+    padding: 10px 0;
+    margin: 0 auto;
+  }
 
-   
-/*サイドバー*/
-/* .sidebar {
- position: fixed;
- top: 100px;
- left: /*calc(100vw/10)0;
+  .nav-list-item{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 20px;
+  }
 
-width: 150px;
- height: 100vh;
-z-index:10;
- min-height: 500px;
- background-color: #FFF;
- padding-top: 15px;
- padding-left: 50px;
- }
- .sidebar a.linkMenuText {
- font: bold 20pt /*"Helvetica Neue", Helvetica, Arial, sans-serif*/;
-/*text-decoration: none;
-color: #777;
-
- /*letter-spacing: .5pt; 
-}
-.sidebar li{
-    margin-bottom:20px;
-}
- .sidebar a.linkMenuText.here {
-  color: #000; 
-}
- .sidebar a.linkMenuText:hover {
- color: #000; 
-}*/
-
-
-/*サイドメニュー以外の全てを囲む
-.contents {
-
-    left: calc(100vw/4);
-
-    width:800px;
-    min-width:800px;
-
-
-}*/
+  /*header意外を取り囲む*/
 
 .contents {
-    position: absolute;
-    left: 200px;
-    top: 100px;
-    height: auto;
-    min-height: 500px;
+   /* min-height: 500px;*/
     background-color: #FFF;
-    padding: 15px 20px 15px 20px; 
+    margin: 100px 30px;
+  
 }
-  
-  
-    
-  .sidebar {
-    position: fixed;
-    left: 0px;
-    top: 186px;
-    width: 150px;
-    height: 100vh;
-    min-height: 500px;
-    background-color: #FFF;
-    padding-top: 15px;
-    padding-left: 50px; }
-    .sidebar a.en {
-      font: bold 15pt "Helvetica Neue", Helvetica, Arial, sans-serif;
-      text-decoration: none;
-      color: #777;
-      line-height: 2em;
-      letter-spacing: .5pt; }
-      .sidebar a.en.here {
-        color: #444; }
-      .sidebar a.en:hover {
-        color: #444; }
-
-
-        .studios {
-            width: 100%;
-            height: auto;
-            /*display: flex;*/
-            flex-wrap: wrap;
-            align-items: flex-start;
-            justify-content: flex-start; 
-        }
 
 
     /*画像のスライドショー ref:https://tech-dig.jp/js-slider//*/
@@ -306,28 +287,47 @@ color: #777;
 
  /*ここまで共通設定*/
 
+
+ /*style for HOME*/
 .sectionTitle{
     text-align: center;
 }
 
+  
+.eachSection{/*各セクション間の余白*/
+    margin:  120px 0; 
+
+  }
+    
+
 .top-img{
     margin:0 auto;
+    text-align: center;
+}
+.sectionDescription{
+    text-align: center;/*1行ものには必要*/
+    margin: 30px auto;
+    width:600px;
 }
 
 /*出だし*/
   #introduction{
-
+    margin:  0 auto;
+    width:800px;
   }
 
 #intro-sentense{
 font-size: 16px;
+padding: 50px 40px 0px 0px;
 width:400px;
+float: left;
+
 
 }
 
 #top-logo-image{
     width:300px;
-    float:left;
+    display:inline-block;
 }
 
 
@@ -371,23 +371,11 @@ padding:0px 0px 0px 16px;
 /*Aceess*/
 
 #accessMapcantainer{
-    margin:0px 100px;
+    
 }
 #map { 
-    top: 0;
-    bottom: 0;
     width: 600px;
     height: 400px;
-}
-
-li:hover{
-    color:#B20909;
-}
-
-a { 
-    font-size:20px;
-}
-a:hover{
-    color:#B20909;
+    margin:0 auto;
 }
 

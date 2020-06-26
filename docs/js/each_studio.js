@@ -1,6 +1,6 @@
 const uri = 'https://script.google.com/macros/s/AKfycbxyacpN8y4nxSAnU0Eji6E_rBRDFTY7YoWWFa0clY5ELRhskgpt/exec';//google App scriptの何か　たぶんspreadsheetからjsonを取得するためのライブラリ的なものの読み込み
 const id = '1BpGnuwC4lZf9G2yFyiSrxbJuGO8gviV8mr-I2D3x4vA';//URLのid=にあったこれでどのシートかを指定
-const sheet = 'studio';//読み込むシート名
+const sheet = 'group3-studio';//読み込むシート名
 const sheet2 = 'faculty';
 const sheet3 = 'link';
 const endpoint = `${uri}?id=${id}&sheet=${sheet}`;

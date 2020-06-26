@@ -17,7 +17,8 @@
         float: right;
         display: flex;
         margin-left:40px;
-    
+        left:200px;
+        position: block;
      }
 .labview {
     position: relative;
@@ -27,16 +28,17 @@
       width: 70%;
       position: relative; 
     }
-      .labview .left .title {
+      .topBar .title {
         width: 90%;
         display: flex;
         align-items: flex-start;
     }
-    .labview .left .title .inner-title {
+    /*アイコンセットsns-iconとスタジオ名セットstudioTitleTextを、親囲いstudioTitleに display: flex;することで横並びにする*/
+    .topBar .title .inner-title {
         display: flex;
     }
     /*タイトル部分全体左に縦棒を引く*/
-        .labview .left .title {
+        .topBar .title {
           width: 80%;
           text-align: left;
           border-left: solid 6px #E80000;
@@ -46,14 +48,14 @@
           
          }
             /*スタジオ名の表示*/
-        .labview .left .title .inner-title .titleText h2 {
+        .topBar .title .inner-title .titleText h2 {
             letter-spacing: 0.05em;
             width: 100%;
             margin: -5px 0 0px 0px;
             font: bold 20pt , sans-serif; 
         }
         /*コアの表示*/
-          .labview .left .title .inner-title .titleText h4 {
+          .topBar .title .inner-title .titleText h4 {
             font: bold 12pt, sans-serif; 
             margin-bottom:10px;
         }
@@ -95,7 +97,10 @@
         }
    
 .faculty-contents-div{
-/*回り込みの処理を描く*/
+display:flex;
+}
+.faculty-text-div{
+    display:inline-block;
 }
 
         .studio-photo{

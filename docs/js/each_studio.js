@@ -99,7 +99,7 @@ const renderStudio = (json) => {//シートごとに使い分ける
             studioTitleInnerDiv.appendChild(studioSNSDiv);
 
             studioTitleDiv.appendChild(studioTitleInnerDiv);
-            studioLeftSec_Pre.appendChild(studioTitleDiv);
+            //studioLeftSec_Pre.appendChild(studioTitleDiv);
 
 
             /*スタジオ画像スライドショー*/
@@ -152,7 +152,10 @@ const renderStudio = (json) => {//シートごとに使い分ける
             facultyDiv.className = 'faculty-div';
             /*見出し「担当教員」以外は一旦ひとつのdivに入れて回り込み処理をする*/
             const facultyContentsDiv = document.createElement('div');
-            facultyContentsDiv.className = 'faculty-contents-div';
+            facultyContentsDiv.className = 'faculty-text-div';
+            /*中でも写真以外は一旦ひとつのdivに入れて、その中では横並びにならないようにする*/
+            const facultyTextDiv = document.createElement('div');
+            facultyTextDiv.className = 'faculty-text-div';
 
             const teacherHead = document.createElement("h3");
             teacherHead.className = 'teacher';
@@ -170,12 +173,12 @@ const renderStudio = (json) => {//シートごとに使い分ける
             const facultyJa = document.createElement("span");
             facultyJa.className = 'studio-faculty';
             facultyJa.textContent = studio['faculty-ja'];
-            facultyContentsDiv.appendChild(facultyJa);
+            facultyTextDiv.appendChild(facultyJa);
 
             const facultyTitleJa = document.createElement("span");
             facultyTitleJa.className = 'studio-facultyTitle';
             facultyTitleJa.textContent = studio['faculty-title-ja'];
-            facultyContentsDiv.appendChild(facultyTitleJa);
+            facultyTextDiv.appendChild(facultyTitleJa);
 
             if (studio['f-link'] !== '') {
                 const linkP = document.createElement('p');
@@ -186,9 +189,10 @@ const renderStudio = (json) => {//シートごとに使い分ける
                 fLink.href = studio['f-link'];
 
                 linkP.appendChild(fLink);
-                facultyContentsDiv.appendChild(linkP);
+                facultyTextDiv.appendChild(linkP);
             }
-            facultyDiv.appendChild(facultyContentsDiv);
+            facultyContentsDiv.appendChild(facultyTextDiv);//文字だけの囲いを教員情報に追加
+            facultyDiv.appendChild(facultyContentsDiv);//写真＋文字だけの囲い　という囲いを教員情報に追加
 
             studioLeftSec_Pre.appendChild(facultyDiv);
 
@@ -196,42 +200,43 @@ const renderStudio = (json) => {//シートごとに使い分ける
 
 
 
-            if (studio['name-ja'] == 'エディティングスタジオ') {
-                document.getElementById('studioLeftSec_editorial').appendChild(studioLeftSec_Pre);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
+            if (studio['name-ja'] == 'エディティングスタジオ' && document.getElementById('studioLeftSec_editorial') !== '') {
+                document.getElementById('topBar_editorial').appendChild(studioTitleDiv);
+                document.getElementById('studioLeftSec_editorial').appendChild(studioLeftSec_Pre);
             }
             if (studio['name-ja'] == '製品・サービスデザインスタジオ') {
-                document.getElementById('studioLeftSec_equip').appendChild(studioLeftSec_Pre);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
+                document.getElementById('studioLeftSec_equip').appendChild(studioLeftSec_Pre);
             }
             if (studio['name-ja'] == 'エルゴノミックデザインスタジオ') {
                 document.getElementById('studioLeftSec_ergonomics').appendChild(studioLeftSec_Pre);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
             }
             if (studio['name-ja'] == 'インタラクティブアートスタジオ') {
-                document.getElementById('interactive').appendChild(studioLeftSec_Pre);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
+                document.getElementById('studioLeftSec_interactive').appendChild(studioLeftSec_Pre);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
             }
             if (studio['name-ja'] == 'インタフェースデザインスタジオ') {
-                document.getElementById('interface').appendChild(studioLeftSec_Pre);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
+                document.getElementById('studioLeftSec_interface').appendChild(studioLeftSec_Pre);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
             }
             if (studio['name-ja'] == 'インテリアデザインスタジオ') {
-                document.getElementById('interior').appendChild(studioLeftSec_Pre);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
+                document.getElementById('studioLeftSec_interior').appendChild(studioLeftSec_Pre);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
             }
             if (studio['name-ja'] == '映像デザインスタジオ') {
-                document.getElementById('kinemat').appendChild(studioLeftSec_Pre);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
+                document.getElementById('studioLeftSec_kinemat').appendChild(studioLeftSec_Pre);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
             }
             if (studio['name-ja'] == 'ネットワークデザインスタジオ') {
-                document.getElementById('network').appendChild(studioLeftSec_Pre);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
+                document.getElementById('studioLeftSec_network').appendChild(studioLeftSec_Pre);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
             }
             if (studio['name-ja'] == 'ソフトウェアデザインスタジオ') {
-                document.getElementById('software').appendChild(studioLeftSec_Pre);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
+                document.getElementById('studioLeftSec_software').appendChild(studioLeftSec_Pre);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
             }
             if (studio['name-ja'] == '空間デザインスタジオ') {
-                document.getElementById('spatial').appendChild(studioLeftSec_Pre);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
+                document.getElementById('studioLeftSec_spatial').appendChild(studioLeftSec_Pre);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
             }
             if (studio['name-ja'] == 'トランスポーテーションデザインスタジオ') {
-                document.getElementById('visual').appendChild(studioLeftSec_Pre);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
+                document.getElementById('studioLeftSec_transportation').appendChild(studioLeftSec_Pre);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
             }
 
             if (studio['name-ja'] == 'ヴィジュアルコミュニケーションデザインスタジオ') {
-                document.getElementById('editing').appendChild(studioLeftSec_Pre);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
+                document.getElementById('studioLeftSec_visual').appendChild(studioLeftSec_Pre);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
             }
         }
     });

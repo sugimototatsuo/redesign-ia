@@ -1,3 +1,37 @@
+windows.onload() = function () {
+    var langBotton = document.getElementById("button");
+
+    if (paraValue("langMode") = "0") {
+        langBotton.classList.remove('close');
+        langBotton.classList.add('open');
+
+        document.getElementById('nomalButton').style.display = "block";
+        document.getElementById('englishButton').style.display = "none";
+
+
+        document.getElementById('nomalTitle').style.display = "block";
+        document.getElementById('englishTitle').style.display = "none";
+
+        document.getElementById('nomalReturn').style.display = "block";
+        document.getElementById('englishReturn').style.display = "none";
+    }
+    if (paraValue("langMode") = "1") {
+
+        langBotton.classList.remove('open');
+        langBotton.classList.add('close');
+
+        document.getElementById('nomalButton').style.display = "none";
+        document.getElementById('englishButton').style.display = "block";
+
+        document.getElementById('nomalTitle').style.display = "none";
+        document.getElementById('englishTitle').style.display = "block";
+
+        document.getElementById('nomalReturn').style.display = "none";
+        document.getElementById('englishReturn').style.display = "block";
+    }
+};
+
+
 document.getElementById("button").onclick = function () {
     var langBotton = document.getElementById("button");
     var langBottonClass = langBotton.getAttribute("class");

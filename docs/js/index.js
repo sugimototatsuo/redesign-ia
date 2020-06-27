@@ -7,7 +7,7 @@ const sheet3 = 'Link';
 const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 const endpoint2 = `${uri}?id=${id}&sheet=${sheet2}`;
 const endpoint3 = `${uri}?id=${id}&sheet=${sheet3}`;
-//var langMode = 0;
+var langMode = 0;
 
 var showloading = document.getElementById('showloading');
 var contents = document.getElementById('mainContent');
@@ -160,7 +160,7 @@ document.getElementById("button").onclick = function () {
   if (langBottonClass == "open") {
     langBotton.classList.remove('open');
     langBotton.classList.add('close');
-    //langMode = 1;
+    langMode = 1;
     //langBottonWork.classList.remove('open');
     //langBottonWork.classList.add('close');
 

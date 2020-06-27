@@ -184,7 +184,7 @@
  .contents {
     /* min-height: 500px;*/
      background-color: #FFF;
-     margin: 100px 30px;
+     margin: 100px 30px 10px 30px;
      animation: fadeIn 3s ease 0s 1 normal;
      -webkit-animation: fadeIn 3s ease 0s 1 normal;
    

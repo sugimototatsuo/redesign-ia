@@ -100,7 +100,7 @@ h3.coreName {
 }
 .blue{
     color:#0C09B2;
-    margin-top:30px;/*メディアとの余白*/
+    margin-top:40px;/*メディアとの余白*/
 }
 
 
@@ -111,4 +111,8 @@ h3.coreName {
    
 
     max-width:1140px;
+}
+
+.studio-description{
+    margin-bottom:50px;
 }

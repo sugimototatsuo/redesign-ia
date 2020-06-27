@@ -1,7 +1,7 @@
 const uri = 'https://script.google.com/macros/s/AKfycbxyacpN8y4nxSAnU0Eji6E_rBRDFTY7YoWWFa0clY5ELRhskgpt/exec';//google App scriptの何か　たぶんspreadsheetからjsonを取得するためのライブラリ的なものの読み込み
 const id = '1BpGnuwC4lZf9G2yFyiSrxbJuGO8gviV8mr-I2D3x4vA';//URLのid=にあったこれでどのシートかを指定
-const sheet = 'studio';//読み込むシート名
-const sheet2 = 'faculty';
+const sheet = 'group3-studio';//読み込むシート名
+const sheet2 = 'group3-faculty';
 const sheet3 = 'group3-news';
 const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 const endpoint2 = `${uri}?id=${id}&sheet=${sheet2}`;
@@ -421,3 +421,32 @@ let lottieObj = lottie.loadAnimation({
     }
     window.onload = autoPlay();
 })();
+
+
+
+//topへ戻るボタン
+function getScrolled() {
+    return (window.pageYOffset !== undefined) ? window.pageYOffset : document.documentElement.scrollTop;
+}
+
+//トップに戻るボタンの要素を取得
+var topButton = document.getElementById('js-scroll-fadein');
+
+//ボタンの表示・非表示
+window.onscroll = function () {
+    (getScrolled() > 500) ? topButton.classList.add('is-fadein') : topButton.classList.remove('is-fadein');
+};
+
+//トップに移動する関数
+function scrollToTop() {
+    var scrolled = getScrolled();
+    window.scrollTo(0, Math.floor(scrolled / 2));
+    if (scrolled > 0) {
+        window.setTimeout(scrollToTop, 30);
+    }
+};
+
+//イベント登録
+topButton.onclick = function () {
+    scrollToTop();
+};

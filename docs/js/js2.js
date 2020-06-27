@@ -26,7 +26,7 @@ const renderJson = (json) => {
             } else if (langMode == 2) {
                 langControll = "?lang=2";
             }
-            location.href = "./html/" + studios['name-short'].toString() + ".html" + langControll;
+            location.href = studios['name-short'].toString() + ".html" + langControll;
         };
         nomalStudioImage.src = "../image/" + studios['name-short'].toString() + ".png";
         //nomalStudioLink.textContent = studios['name-ja'];
@@ -42,7 +42,7 @@ const renderJson = (json) => {
         englishStudioLink.onclick = function () {
             var langControll;
             langControll = "?lang=1";
-            location.href = "./html/" + studios['name-short'].toString() + ".html" + langControll;
+            location.href = studios['name-short'].toString() + ".html" + langControll;
         };
         //englishStudioLink.textContent = studios['name-en'];
         englishStudioImage.src = "../image/" + studios['name-short'].toString() + ".png";

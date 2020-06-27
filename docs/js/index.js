@@ -8,7 +8,8 @@ const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 const endpoint2 = `${uri}?id=${id}&sheet=${sheet2}`;
 const endpoint3 = `${uri}?id=${id}&sheet=${sheet3}`;
 var langMode = 0;
-var stname;
+var stnameja = [];
+var stnameen = [];
 
 var showloading = document.getElementById('showloading');
 var contents = document.getElementById('mainContent');
@@ -28,8 +29,12 @@ const renderJson = (json) => {
 
     //スタジオ名（日本語）のクラス
     nomalStudioLink.className = 'studio-title';
-    nomalStudioLink.href = "./html/" + studios['name-short'].toString() + ".html";
+    //nomalStudioLink.href = "./html/" + studios['name-short'].toString() + ".html";
+
     nomalStudioLink.textContent = studios['name-ja'];
+    nomalStudioLink.onclick = jumppage(studios['name-short'].toString());
+    //nomalStudioLink.id = studios['name-short'];
+    //stnameja.push(studios['name-short']);
     //スタジオ写真のクラス
     nomalStudioImage.className = 'studio-photo1';
     nomalStudioImage.src = studios['photo1'];
@@ -41,6 +46,7 @@ const renderJson = (json) => {
     //スタジオ名（英語）のクラス
     englishStudioLink.className = 'studio-title-en';
     englishStudioLink.href = "./html/" + studios['name-short'].toString() + ".html";
+    //stnameen.push(studios['name-short']);
     //スタジオ写真（英語）のクラス
     englishStudioLink.textContent = studios['name-en'];
     englishStudioImage.src = studios['photo2'];
@@ -430,7 +436,7 @@ document.getElementById("moreBtnWork").onclick = function () {
   location.href = "./html/work.html" + langControll;
 };
 
-document.getElementsByClassName("studio-name").onclick = function () {
+function jumppage(studioname) {
   var langControll;
   if (langMode == 0) {
     langControll = "?lang=0";
@@ -439,8 +445,10 @@ document.getElementsByClassName("studio-name").onclick = function () {
   } else if (langMode == 2) {
     langControll = "?lang=2";
   }
-  location.href = url + langControll;//このURLに当たるものがほしい
-};
+
+  location.href = "./html/" + studioname.toString() + ".html" + langControll;
+
+}
 
 
 const getData = async () => {

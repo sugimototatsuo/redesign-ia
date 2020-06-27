@@ -49,8 +49,87 @@ const renderJson = (json) => {
     document.getElementById('result').textContent = JSON.stringify(json, null, 2);
 }
 
+//初回読み込み時の言語
+window.onload = function () {
+    var langBotton = document.getElementById("button");
+    var langBotton2 = document.getElementById("button2");
+
+    if (document.URL.match("/?lang=0")) {
+
+    }
+    else if (document.URL.match("/?lang=1")) {
+        langBotton.classList.remove('open');
+        langBotton.classList.add('close');
+
+        document.getElementById('nomalButton').style.display = "none";
+        document.getElementById('englishButton').style.display = "block";
+        document.getElementById('nomalButton2').style.display = "block";
+        document.getElementById('easyButton2').style.display = "none";
+
+        document.getElementById('nomalTitle').style.display = "none";
+        document.getElementById('englishTitle').style.display = "block";
+        document.getElementById('easyTitle').style.display = "none";
+
+        document.getElementById('nomalFaculty').style.display = "none";
+        document.getElementById('englishFaculty').style.display = "block";
+        document.getElementById('easyFaculty').style.display = "none";
+
+        document.getElementById('nomalCore').style.display = "none";
+        document.getElementById('englishCore').style.display = "block";
+
+        document.getElementById('nomalText').style.display = "none";
+        document.getElementById('englishText').style.display = "block";
+        document.getElementById('easyText').style.display = "none";
+
+        document.getElementById('nomalReturn').style.display = "none";
+        document.getElementById('englishReturn').style.display = "block";
+
+        document.getElementById('nomalContentsTitle4').style.display = "none";
+        document.getElementById('englishContentsTitle4').style.display = "block";
+        document.getElementById('easyContentsTitle4').style.display = "none";
+
+        document.getElementById('nomalStudios').style.display = "none";
+        document.getElementById('englishStudios').style.display = "block";
+    }
+
+    else if (document.URL.match("/?lang=2")) {
+        langBotton2.classList.remove('open');
+        langBotton2.classList.add('close');
+
+        document.getElementById('nomalButton').style.display = "block";
+        document.getElementById('englishButton').style.display = "none";
+        document.getElementById('nomalButton2').style.display = "none";
+        document.getElementById('easyButton2').style.display = "block";
+
+        document.getElementById('nomalTitle').style.display = "none";
+        document.getElementById('englishTitle').style.display = "none";
+        document.getElementById('easyTitle').style.display = "block";
+
+        document.getElementById('nomalFaculty').style.display = "none";
+        document.getElementById('englishFaculty').style.display = "none";
+        document.getElementById('easyFaculty').style.display = "block";
+
+        document.getElementById('nomalCore').style.display = "block";
+        document.getElementById('englishCore').style.display = "none";
+
+        document.getElementById('nomalText').style.display = "none";
+        document.getElementById('englishText').style.display = "none";
+        document.getElementById('easyText').style.display = "block";
+
+        document.getElementById('nomalReturn').style.display = "block";
+        document.getElementById('englishReturn').style.display = "none";
+
+        document.getElementById('nomalContentsTitle4').style.display = "none";
+        document.getElementById('englishContentsTitle4').style.display = "none";
+        document.getElementById('easyContentsTitle4').style.display = "block";
+
+        document.getElementById('nomalStudios').style.display = "block";
+        document.getElementById('englishStudios').style.display = "none";
+    }
+};
 
 
+//ページ内の切り替え
 document.getElementById("button").onclick = function () {
     var langBotton = document.getElementById("button");
     var langBottonClass = langBotton.getAttribute("class");

@@ -203,59 +203,68 @@ const renderLink = (json) => {
 
             //START-ニュースの1記事を生成して回す
             //一つの記事全体を囲むdiv
-            const anArticleDiv = document.createElement('div');
-            anArticleDiv.className = 'an-article';
+            const anArticleSec = document.createElement('section');
+            anArticleSec.className = 'card';
 
 
-            const photoP = document.createElement('p');//★
+
+            const photoP = document.createElement('p');
             const photo = document.createElement("img");
-            photo.className = 'article-img';
+            photo.className = 'card-img';
             photo.src = link['photo'];
-            photo.alt = "";
+            photo.alt = link['name-ja'];
             photoP.appendChild(photo);
-            anArticleDiv.appendChild(photoP);
 
-            //記事のタイトル・掲載日・内容といった、テキスト部分を包括するdiv
-            const articleTextContainerDiv = document.createElement('div');
-            articleTextContainerDiv.className = 'article-text-container';
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'card-content';
 
-            const articleTitle = document.createElement('p');
-            articleTitle.className = 'article-title';
-            const articleTitleLink = document.createElement('a');
-            articleTitleLink.textContent = link['name-ja'];
-            articleTitleLink.href = link['link'];
-            articleTitle.appendChild(articleTitleLink);
-            articleTextContainerDiv.appendChild(articleTitle);
+            const articleTitleH1 = document.createElement('h1');
+            articleTitleH1.className = 'card-title';
+            articleTitleH1.textContent = link['name-ja'];
+            contentDiv.appendChild(articleTitleH1);
+
+            const articleP = document.createElement('p');
+            articleP.className = 'card-text';
+            var slicetext;
+            if ((link['description-ja']).length > 40) {
+                slicetext = (link['description-ja']).slice(0, 40) + "…";
+                console.log(slicetext);
+            } else {
+                slicetext = link['description-ja'];
+            }
+
+            articleP.textContent = slicetext;
+            contentDiv.appendChild(articleP);
+
+            //タグと日付のDiv
+            const tag_dateDiv = document.createElement('p');
+            tag_dateDiv.className = 'card-meta';
 
             const updateDateP = document.createElement('p');
             updateDateP.className = 'update-date';
-            articleTextContainerDiv.appendChild(updateDateP);
+            updateDateP.textContent = link['update-date'];
+            tag_dateDiv.appendChild(updateDateP);
 
-            const articleContents = document.createElement('p');
-            articleContents.className = 'article-contents';
-            articleContents.textContent = link['description-ja'];
+            const tagP = document.createElement('p');
+            tagP.className = 'tag';
+            tagP.textContent = link['tag-ja'];
+            tag_dateDiv.appendChild(tagP);
 
-            //フォントサイズとボックスの幅を数値で取得したいけどとりあえず手打ち
-            var fontsize = 16;
-            var width = 800;
-
-            //２行分のボックスに収納できる文字数
-            var mojisuu = Math.floor(width / fontsize) * 2;
-            console.log(mojisuu);
-            var shortText = articleContents.innerText;//.innerTextしないとテキスト取れないのか
-            //テキストから（「mojisuu」-1）文字を切り出し。
-            shortText = shortText.substr(0, (mojisuu - 1));
-            //「…」と連結し、元のテキストを置き換える
-            articleContents.innerText = shortText + "…";
-            articleTextContainerDiv.appendChild(articleContents);
-            anArticleDiv.appendChild(articleTextContainerDiv);
+            contentDiv.appendChild(tag_dateDiv);
 
 
-            const floatClearDiv = document.createElement('div');
-            floatClearDiv.className = 'float-clear';
-            anArticleDiv.appendChild(floatClearDiv);
+            //カード全体のsectionにリンク付けする
+            const linkOnCard = document.createElement('a');
+            linkOnCard.className = 'article-link';
+            linkOnCard.href = link['article-link'];
 
-            document.getElementById('articles').appendChild(anArticleDiv);
+            anArticleSec.appendChild(linkOnCard)
+            anArticleSec.appendChild(photoP);
+            anArticleSec.appendChild(contentDiv);
+
+
+
+            document.getElementById('newsDiv').appendChild(anArticleSec);
             //ニュースの1記事を生成して回す-END
 
             i++;

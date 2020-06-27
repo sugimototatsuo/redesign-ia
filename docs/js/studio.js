@@ -12,7 +12,7 @@ const renderStudio = (json) => {//シートごとに使い分ける
 
 
     const mediaStudioDiv = document.createElement('div');
-    mediaStudioDiv.className = 'media-studios';
+    mediaStudioDiv.className = 'media-studios-div';
 
     studios.forEach(studio => {
 
@@ -23,24 +23,34 @@ const renderStudio = (json) => {//シートごとに使い分ける
                 const studioDiv = document.createElement('div');
                 studioDiv.className = 'a-studio';
 
-                //画像にリンク付する構造
+                //画像にリンク付け＋マウスオーバーでエフェクトする構造
                 const linkPhotoP = document.createElement('p');
                 const linkOnPhoto = document.createElement('a');
-                const photo = document.createElement("img");
                 linkOnPhoto.className = 's-link';
+                const imgDiv = document.createElement('div');
+                imgDiv.className = 'studio-photo-wrap';
+                const photo = document.createElement("img");
                 photo.className = 's-photo';
+                const maskDiv = document.createElement('div');
+                maskDiv.className = 'mask_red';
+                const captionDiv = document.createElement('div');
+                captionDiv.className = 'caption';
+                captionDiv.textContent = studio['name-en'];
+                maskDiv.appendChild(captionDiv);
+
+
                 photo.src = studio['photo1'];
                 photo.alt = studio['name-ja'];
                 linkOnPhoto.href = studio['studio-page-link'];
-                //linkOnPhoto.target = "_blank";
-                linkOnPhoto.appendChild(photo);
-                linkPhotoP.appendChild(linkOnPhoto);
-                studioDiv.appendChild(linkPhotoP, photo);
 
-                /* const studioTitleJa = document.createElement("p");
-                 studioTitleJa.className = 'studio-title';
-                 studioTitleJa.textContent = studio['name-ja'];
-                 studioDiv.appendChild(studioTitleJa);*/
+
+                imgDiv.appendChild(photo);
+                imgDiv.appendChild(maskDiv);
+                linkOnPhoto.appendChild(imgDiv);
+                linkPhotoP.appendChild(linkOnPhoto);
+                studioDiv.appendChild(linkPhotoP);
+
+
 
                 const linkTitleP = document.createElement('p');
                 const linkOnText = document.createElement('a');//ここでうっかりlinkっていう変数を作っちゃうとかぶるのでうまくいかない
@@ -53,13 +63,13 @@ const renderStudio = (json) => {//シートごとに使い分ける
 
 
                 mediaStudioDiv.appendChild(studioDiv);
-                document.getElementById('studios').appendChild(mediaStudioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
+                document.getElementById('media-studios').appendChild(mediaStudioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
             }
         }
 
     });
     const productStudioDiv = document.createElement('div');
-    productStudioDiv.className = 'product-studios';
+    productStudioDiv.className = 'product-studios-div';
 
     studios.forEach(studio => {
 
@@ -72,30 +82,33 @@ const renderStudio = (json) => {//シートごとに使い分ける
 
 
 
-
-                //画像にリンク付する構造
+                //画像にリンク付け＋マウスオーバーでエフェクトする構造
                 const linkPhotoP = document.createElement('p');
                 const linkOnPhoto = document.createElement('a');
-                const photo = document.createElement("img");
                 linkOnPhoto.className = 's-link';
+                const imgDiv = document.createElement('div');
+                imgDiv.className = 'studio-photo-wrap';
+                const photo = document.createElement("img");
                 photo.className = 's-photo';
+                const maskDiv = document.createElement('div');
+                maskDiv.className = 'mask_blue';
+                const captionDiv = document.createElement('div');
+                captionDiv.className = 'caption';
+                captionDiv.textContent = studio['name-en'];
+                maskDiv.appendChild(captionDiv);
+
+
                 photo.src = studio['photo1'];
                 photo.alt = studio['name-ja'];
                 linkOnPhoto.href = studio['studio-page-link'];
-                //linkOnPhoto.target = "_blank";
-                linkOnPhoto.appendChild(photo);
-                linkPhotoP.appendChild(linkOnPhoto);
-                studioDiv.appendChild(linkPhotoP, photo);
-                // document.getElementById('sotsutenLinkDiv').appendChild(linkPhotoP, exhibiPhoto);
 
-                /*
-                                const photoP = document.createElement('p');//★
-                                const photo1 = document.createElement("img");
-                                photo1.className = 'studio-img';
-                                photo1.src = studio['photo1'];
-                                photo1.alt = studio['photo-alt'];
-                                photoP.appendChild(photo1);
-                                studioDiv.appendChild(photoP);*/
+
+                imgDiv.appendChild(photo);
+                imgDiv.appendChild(maskDiv);
+                linkOnPhoto.appendChild(imgDiv);
+                linkPhotoP.appendChild(linkOnPhoto);
+                studioDiv.appendChild(linkPhotoP);
+
 
                 const studioTitleJa = document.createElement("p");
                 studioTitleJa.className = 'studio-title';
@@ -103,7 +116,7 @@ const renderStudio = (json) => {//シートごとに使い分ける
                 studioDiv.appendChild(studioTitleJa);
 
                 productStudioDiv.appendChild(studioDiv);
-                document.getElementById('studios').appendChild(productStudioDiv);
+                document.getElementById('product-studios').appendChild(productStudioDiv);
             }
         }
 

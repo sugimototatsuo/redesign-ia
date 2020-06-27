@@ -269,11 +269,11 @@
             <img src="./image/iconB2/インテ_icon.png" title="inte">
           </a>
         </div>
-        <div class="moreBtn">
-          <a href="./html/work.html?langMode" title="seeMore">
-            <p id="nomalWorkText" style="display: block">もっと見る</p>
-            <p id="englishWorkText" style="display: none">see more</p>
-          </a>
+        <div id="moreBtnWork" class="moreBtn">
+          <!--<a href="./html/work.html?langMode" title="seeMore">-->
+          <p id="nomalWorkText" style="display: block">もっと見る</p>
+          <p id="englishWorkText" style="display: none">see more</p>
+          <!--</a>-->
         </div>
       </div>
     </div>
@@ -543,6 +543,29 @@
 
           <h4>学費</h4>
           <img src="./image/学費.png" width="80%" height="80%">
+          <ul>
+            <li>
+              <p>入学考査料は、出願のときに納入していただきます。</p>
+            </li>
+            <li>
+              <p>入学料は、入学手続を行うときに納入していただきます。</p>
+              <p>（　）内は「東京都の住民」の金額です。<br>
+                「東京都の住民」とは、本人又はその者の配偶者若しくは一親等の親族が、入学の日の１年前から引き続き東京都内に住所を有する者をいい、
+                この認定には、大学が配付する「住民票記載事項証明書」による区市町村の証明が必要です。</p>
+            </li>
+            <li>
+              <p>授業料は、年２回（前期・後期）それぞれ年額の２分の１を納入していただきます。</p>
+              <p>納入方法は、原則、口座振替（引落し）です。</p>
+              <p>前期は４月２６日、後期は１０月２６日に引落しを行います。（土日祝日に当たる場合は直後の平日）</p>
+              <p>納入期限を経過し、督促してもなお延滞が続くと除籍の対象となります。（東京都立大学学則（第33条）等）</p>
+              <p>なお、在学中に授業料の改定があった場合は、改定時から新授業料が適用されます。</p>
+            </li>
+          </ul>
+          <p>
+            その他学費の詳細、減免制度、奨学金制度についてはこちら
+            <a href="https://www.tmu.ac.jp/campus_life/tuition/expenses.html">
+              (https://www.tmu.ac.jp/campus_life/tuition/expenses.html)</a>
+          </p>
         </div>
       </div>
 
@@ -571,37 +594,37 @@
           </li>
           <li>Adequate basic academic skills, such as math and English, to study advanced design studies.</li>
         </ol>
+
         <h4>Admissions Overview</h4>
         <div onclick="obj=document.getElementById('adcontenten').style; obj.display=(obj.display=='none')?'block':'none';">
+
           <a style="cursor:pointer;">▼ See more</a>
         </div>
         <div id="adcontenten" style="display:none;clear:both;">
-          <h5>一般選抜</h5>
-          <p>試験教科</p>
-          <ul>
-            <li>
-              <p>(前期)</p>
-              <p>
-                第１次選抜（大学入試センター試験）4教科5科目　国、数、理、外
-                第２次選抜（個別学力検査）2教科3科目　数、外、その他（造形表現）
-              </p>
-            </li>
-            <li>
-              <p>(後期)</p>
-              <p>第１次選抜（大学入試センター試験）4教科5科目　国、数、理、外
-                第２次選抜（個別学力検査）1教科2科目　数、その他（造形表現）
-              </p>
-            </li>
-          </ul>
+          <h4>Admissions Overview</h4>
+          <a href="https://www.tmu.ac.jp/english/admission.html">Look here.</a>
 
-          <h5>推薦入試</h5>
-          <p>選考方法等</p>
+          <h4>Career path after graduation</h4>
           <ul>
             <li>
-              <p>一般推薦入試</p>
-              <p>第１次選考：出願書類<br>
-                第２次選考：面接、口頭試問及び小論文</p>
+              <h5>Major employers</h5>
+              <p>
+                アイリスオーヤマ　アシックス　イトーキ　キヤノンITソリューションズ　コクヨ　サイバーエージェント　サンゲツ　
+                シチズン時計 シャープ　セガエンターテイメント　ソニー　丹青社　チームラボ　東急ハンズ　東芝　凸版印刷　トヨタ自動車　ドワンゴ　日産自動車
+                日本アイ・ビー・エム・サービス　日本デザインセンター　パナソニック　東日本旅客鉄道（JR東日本）　富士通デザイン　富士フイルム　　
+                星野リゾートマネジメント　ミサワホーム　ヤフー　リクルートホールディングス　ローランド　DNPコミュニケーションデザイン　日本電気（NEC）　
+                NHKアート　SUBARU（旧：富士重工業）　東京都庁　横浜市役所
+              </p>　
             </li>
+            <li>
+              <h5>Major Destinations</h5>
+              <p>
+                東京都立大学大学院　東京大学大学院　東京芸術大学大学院　九州大学大学院　千葉大学大学院　お茶の水女子大学大学院　
+                情報科学芸術大学院大学　産業技術大学院大学　慶応義塾大学大学院
+              </p>
+            </li>
+            <p>※Information on the Department's predecessor, the Industrial Arts Course, is available here. (2014-2018
+              academic year)</p>
           </ul>
         </div>
       </div>
@@ -800,6 +823,7 @@
             </ruby>
           </li>
         </ol>
+
         <h4>
           <ruby>
             <rb>入学試験</rb>
@@ -807,12 +831,19 @@
           </ruby>について
         </h4>
         <div onclick="obj=document.getElementById('adcontenteas').style; obj.display=(obj.display=='none')?'block':'none';">
+
           <a style="cursor:pointer;">▼ もっと<ruby>
               <rb>見</rb>
               <rt>み</rt>
             </ruby>る</a>
         </div>
         <div id="adcontenteas" style="display:none;clear:both;">
+          <h4>
+            <ruby>
+              <rb>入学試験</rb>
+              <rt>にゅうがくしけん</rt>
+            </ruby>について
+          </h4>
           <h5>
             <ruby>
               <rb>一般選抜</rb>
@@ -843,23 +874,38 @@
 
           <h5>
             <ruby>
-              <rb>推薦入試</rb>
-              <rt>すいせんにゅうし</rt>
+              <rb>多様</rb>
+              <rt>たよう</rt>
+            </ruby>な<ruby>
+              <rb>選抜</rb>
+              <rt>せんばつ</rt>
             </ruby>
           </h5>
-          <p>
-            <ruby>
-              <rb>選考方法</rb>
-              <rt>せんこうほうほう</rt>
-            </ruby>など
-          </p>
-          <ul>
+          <ol>
             <li>
-              <p>一般推薦入試</p>
-              <p>第１次選考：出願書類<br>
-                第２次選考：面接、口頭試問及び小論文</p>
+              <p>学校推薦型選抜</p>
+              <ul>
+                <li>
+                  <p>一般推薦入試</p>
+                  <p>第１次選考：出願書類<br>
+                    第２次選考：面接、口頭試問及び小論文</p>
+                </li>
+              </ul>
             </li>
-          </ul>
+            <li>
+              <p>特別選抜</p>
+              <ul>
+                <li>
+                  <p>帰国子女（中国引揚者等子女を含む）入試</p>
+                  <p>出願書類、個別学力検査（１教科２科目）、外部英語検定試験及び面接（口頭試問を含む。）によって選抜します。</p>
+                </li>
+                <li>
+                  <p>私費外国人留学生入試</p>
+                  <p>日本留学試験の成績、個別学力検査（１教科２科目）、外部英語検定試験及び面接（口頭試問を含む。）によって選抜します。</p>
+                </li>
+              </ul>
+            </li>
+          </ol>
         </div>
       </div>
 
@@ -941,6 +987,14 @@
       </div>
 
       <div id="englishQText" style="display: none">
+        <ul>
+          <li>
+            <h4>>What if I want to learn from abroad?</h4>
+            <p>Please refer to the following sites.Click here for an overview of the special selection process.</p>
+            <a href="https://www.tmu.ac.jp/entrance/faculty/outline/others.html#shihi">
+              https://www.tmu.ac.jp/entrance/faculty/outline/others.html#shihi</a>
+          </li>
+        </ul>
       </div>
 
       <div id="easyQText" style="display: none">

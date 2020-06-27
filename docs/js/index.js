@@ -8,6 +8,7 @@ const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 const endpoint2 = `${uri}?id=${id}&sheet=${sheet2}`;
 const endpoint3 = `${uri}?id=${id}&sheet=${sheet3}`;
 var langMode = 0;
+var stname;
 
 var showloading = document.getElementById('showloading');
 var contents = document.getElementById('mainContent');
@@ -39,7 +40,7 @@ const renderJson = (json) => {
 
     //スタジオ名（英語）のクラス
     englishStudioLink.className = 'studio-title-en';
-    englishStudioLink.href = "./html/" + studios['name-short'].toString() + ".html?langMode";
+    englishStudioLink.href = "./html/" + studios['name-short'].toString() + ".html";
     //スタジオ写真（英語）のクラス
     englishStudioLink.textContent = studios['name-en'];
     englishStudioImage.src = studios['photo2'];
@@ -427,6 +428,18 @@ document.getElementById("moreBtnWork").onclick = function () {
     langControll = "?lang=2";
   }
   location.href = "./html/work.html" + langControll;
+};
+
+document.getElementsByClassName("studio-name").onclick = function () {
+  var langControll;
+  if (langMode == 0) {
+    langControll = "?lang=0";
+  } else if (langMode == 1) {
+    langControll = "?lang=1";
+  } else if (langMode == 2) {
+    langControll = "?lang=2";
+  }
+  location.href = url + langControll;//このURLに当たるものがほしい
 };
 
 

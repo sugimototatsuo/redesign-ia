@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
-  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/news.css">
 
   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
     <meta property="og:url" content="https://sumikko-mountain.github.io/redesign-ia/" />
@@ -24,47 +25,76 @@
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
 
+    <!--フォント取得-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet">
+
   </head>
 
 <body>
   <main>
     <header>
-    </header>
-    <section class="sidebar">
-      <ul>
-        <li><a class="linkMenuText here" href="./index.html">HOME</a></li>
-        <li><a class="linkMenuText" href="./about.html">ABOUT</a></li>
-        <li><a class="linkMenuText" href="./news.html">NEWS</a></li>
-        <li><a class="linkMenuText" href="./studio.html">STUDIO</a></li>
-        <li><a class="linkMenuText" href="./faculty.html">FACULTY</a></li>
-        <li><a class="linkMenuText" href="./works.html">WORKS</a></li>
-        <li><a class="linkMenuText" href="./access.html">ACCESS</a></li>
+      <ul class="nav-list">
+        <li class="nav-list-item"><a class="linkMenuText here" href="./index.html">HOME</a></li>
+        <li class="nav-list-item"><a class="linkMenuText" href="./about.html">ABOUT</a></li>
+        <li class="nav-list-item"><a class="linkMenuText" href="./news.html">NEWS</a></li>
+        <li class="nav-list-item"><a class="linkMenuText" href="./studio.html">STUDIO</a></li>
+        <li class="nav-list-item"><a class="linkMenuText" href="./faculty.html">FACULTY</a></li>
+        <li class="nav-list-item"><a class="linkMenuText" href="./works.html">WORKS</a></li>
+        <li class="nav-list-item"><a class="linkMenuText" href="./access.html">ACCESS</a></li>
       </ul>
-    </section>
+    </header>
+
     <section class="contents" style="opacity: 1;">
-      <section class="studios">
-        <h1>東京都立大学システムデザイン学部<br>インダストリアルアート学科</h1>
+
+      <h1>東京都立大学システムデザイン学部<br>インダストリアルアート学科</h1>
+
+      <!--introduction-->
+      <div class="eachSection">
         <div id="introduction">
           <div id="intro-sentense">
             <p>工業意匠と訳され、工業製品の商品性を高める手段と捉えられがちなインダストリアルデザインでは、取り組みは限定されてしまいます。</p>
             <p>デザインという言葉では伝えきれない大きな思いを込めて、あえて「インダストリアルアート」を名乗ります。</p>
           </div>
           <div id="top-logo-image">
-            <img src="./img/relogo.png" width=280px></div>
+            <p><img src="./img/relogo.png" width=280px>
+          </div>
+          </p>
 
         </div>
+
         <div class="float-clear"></div>
+      </div>
 
 
-
+      <!--NEWS-->
+      <div class="eachSection">
         <h2 class="sectionTitle">NEWS</h2>
+
+
         <div id="articles"></div>
+
+
+      </div>
+
+
+      <!--ABOUT-->
+      <div class="eachSection">
         <h2 class="sectionTitle">ABOUT</h2>
+
         <div class="top-img">
           <img src="./img/currentSite_imgs/about/newreserch.png" width=600px></div>
-
+        <p class="sectionDescription">
+          システムデザイン研究科インダストリアルアート学域では、これまでの工学的かつ文化的な基盤をひとつにすることで、現代社会の新たなデザイン·アート領域の研究者や創造·研究·実践の担い手の育成を、「プロダクトデザイン」と「メディア創生」の2つの研究分野から図っています。
+        </p>
+        <div class="moreButton">
+          <a href="./about.html" class="btn-flat-simple">MORE</a>
         </div>
+      </div>
+      </div>
 
+      <!--STUDIO-->
+      <div class="eachSection">
         <h2 class="sectionTitle">STUDIO</h2>
         <div class="top-img">
           <div class="slider">
@@ -79,13 +109,39 @@
 
         </div>
 
+        <p class="sectionDescription">インダストリアルアート学科・学域は、「プロダクトデザイン」と「メディア創生」の2つのコア・分野を柱に、12のスタジオで構成されています</p>
+        <div class="moreButton">
+          <a href="./studio.html" class="btn-flat-simple">MORE</a>
+        </div>
+      </div>
+
+      <!--FACULTY-->
+      <div class="eachSection">
         <h2 class="sectionTitle">FACULTY</h2>
+
+        <p class="sectionDescription">インダストリアルアート学科・学域の教員を紹介しています</p>
+        <div class="moreButton">
+          <a href="./faculty.html" class="btn-flat-simple">MORE</a>
+        </div>
+      </div>
+
+      <div class="eachSection">
         <h2 class="sectionTitle">WORKS</h2>
+
+        <p class="sectionDescription">学生の作品を紹介しています</p>
+        <div class="moreButton">
+          <a href="./works.html" class="btn-flat-simple">MORE</a>
+        </div>
+
+      </div>
+
+      <!--ACCESS-->
+      <div class="eachSection">
         <h2 class="sectionTitle">ACCESS</h2>
         <div id="accessMapcantainer">
           <div id="map"></div>
         </div>
-
+        <p class="sectionDescription">キャンパスの所在地、アクセス方法をご案内しています</p>
         <script>
           mapboxgl.accessToken = 'pk.eyJ1IjoibW9lY28wOSIsImEiOiJja2JjZjEweDQwMWFoMnJud2N6M3N4Z2c2In0.cfn_JZgFwQgheoCiYBgFZQ';
           var map = new mapboxgl.Map({
@@ -100,18 +156,14 @@
             .addTo(map);
 
         </script>
-
-
-        <div id="studios"></div>
-        <div id="faculties"></div>
-        <div id="links"></div>
-
-        <pre id="result-studio"></pre>
-        <pre id="result-faculty"></pre>
-        <pre id="result-link"></pre>
+        <div class="moreButton">
+          <a href="./about.html" class="btn-flat-simple">MORE</a>
         </div>
+      </div>
 
-      </section>
+
+
+
       <footer>
         <section class="en">
           <p class="ja">東京都立大学 システムデザイン学部／研究科</p>

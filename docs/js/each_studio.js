@@ -1,6 +1,6 @@
 const uri = 'https://script.google.com/macros/s/AKfycbxyacpN8y4nxSAnU0Eji6E_rBRDFTY7YoWWFa0clY5ELRhskgpt/exec';//google App scriptの何か　たぶんspreadsheetからjsonを取得するためのライブラリ的なものの読み込み
 const id = '1BpGnuwC4lZf9G2yFyiSrxbJuGO8gviV8mr-I2D3x4vA';//URLのid=にあったこれでどのシートかを指定
-const sheet = 'studio';//読み込むシート名
+const sheet = 'group3-studio';//読み込むシート名
 const sheet2 = 'faculty';
 const sheet3 = 'link';
 const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
@@ -15,33 +15,34 @@ const renderStudio = (json) => {//シートごとに使い分ける
 
         //シート１枚目
         if (studio['name-ja'] !== '') {
-            const studioDiv = document.createElement('div');
-            //運用的にクラス名は言語問わず共通
-            const studioTitleJa = document.createElement("h1");//①studioTitle　という変数でもって、span要素の作成
-            studioTitleJa.className = 'studio-title';//②span要素？にクラスの名前をつけてCSSで指定できるようにしている
-            studioTitleJa.textContent = studio['name-ja'];//③[データシート上のkey]
-            studioDiv.appendChild(studioTitleJa);
 
-            const studioCoreJa = document.createElement("span");
+
+            const studioLeftSec_Pre = document.createElement('section');
+
+            const studioTitleDiv = document.createElement('div');
+            studioTitleDiv.className = 'title';
+            const studioTitleTextDiv = document.createElement('div');
+            studioTitleTextDiv.className = 'titleText';
+
+            const facultyDiv = document.createElement('div');
+            facultyDiv.className = 'faculty-div';
+
+            const studioDiv = document.createElement('div');
+
+            //スタジオタイトル　とコアの表示
+            const studioTitleJa = document.createElement("h2");
+            studioTitleJa.className = 'studio-title';
+            studioTitleJa.textContent = studio['name-ja'];
+            studioTitleTextDiv.appendChild(studioTitleJa);
+
+            const studioCoreJa = document.createElement("h4");
             studioCoreJa.className = 'studio-core';
             studioCoreJa.textContent = studio['core-ja'];
-            studioDiv.appendChild(studioCoreJa);
+            studioTitleTextDiv.appendChild(studioCoreJa);
 
-            const facultyJa = document.createElement("span");
-            facultyJa.className = 'studio-faculty';
-            facultyJa.textContent = studio['faculty-ja'];
-            studioDiv.appendChild(facultyJa);
+            studioTitleDiv.appendChild(studioTitleTextDiv);
+            studioLeftSec_Pre.appendChild(studioTitleDiv);
 
-
-            const facultyTitleJa = document.createElement("span");
-            facultyTitleJa.className = 'studio-facultyTitle';
-            facultyTitleJa.textContent = studio['faculty-title-ja'];
-            studioDiv.appendChild(facultyTitleJa);
-
-            const descriptionJa = document.createElement("p");
-            descriptionJa.className = 'studio-description';
-            descriptionJa.textContent = studio['description-ja'];
-            studioDiv.appendChild(descriptionJa);
 
 
             const photoP = document.createElement('p');//★
@@ -77,41 +78,91 @@ const renderStudio = (json) => {//シートごとに使い分ける
             photoP.appendChild(photo3);
             photoP.appendChild(photo4);
             photoP.appendChild(photo5);
-            studioDiv.appendChild(photoP);
+            studioLeftSec_Pre.appendChild(photoP);
+
+
+            //スタジオ説明
+            const descriptionJa = document.createElement("p");
+            descriptionJa.className = 'studio-description';
+            descriptionJa.textContent = studio['description-ja'];
+            studioLeftSec_Pre.appendChild(descriptionJa);
+
+
+            //担当教員
+            const teacherHead = document.createElement("h3");
+            teacherHead.className = 'teacher';
+            teacherHead.textContent = "担当教員";
+            facultyDiv.appendChild(teacherHead);
+
+            const facPhotoP = document.createElement('p');
+            const facPhoto = document.createElement("img");
+            facPhoto.className = 'studio-faculty-img';
+            facPhoto.src = studio['faculty-photo'];
+            facPhoto.alt = studio['faculty-ja'];
+            facPhotoP.appendChild(facPhoto);
+            facultyDiv.appendChild(facPhotoP);
+
+            const facultyJa = document.createElement("span");
+            facultyJa.className = 'studio-faculty';
+            facultyJa.textContent = studio['faculty-ja'];
+            facultyDiv.appendChild(facultyJa);
+
+            const facultyTitleJa = document.createElement("span");
+            facultyTitleJa.className = 'studio-facultyTitle';
+            facultyTitleJa.textContent = studio['faculty-title-ja'];
+            facultyDiv.appendChild(facultyTitleJa);
+
+            if (studio['f-link'] !== '') {
+                const linkP = document.createElement('p');
+                const fLink = document.createElement('a');
+                fLink.className = 'faculty-link';
+
+                fLink.textContent = studio['f-link-title'] + "_webサイト";
+                fLink.href = studio['f-link'];
+
+                linkP.appendChild(fLink);
+                facultyDiv.appendChild(linkP);
+            }
+
+
+            studioLeftSec_Pre.appendChild(facultyDiv);
+
+
+
 
 
             if (studio['name-ja'] == 'エディティングスタジオ') {
-                document.getElementById('editing').appendChild(studioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
+                document.getElementById('studioLeftSec_editorial').appendChild(studioLeftSec_Pre);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
             }
             if (studio['name-ja'] == '製品・サービスデザインスタジオ') {
-                document.getElementById('equip-setvice').appendChild(studioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
+                document.getElementById('studioLeftSec_equip').appendChild(studioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
             }
             if (studio['name-ja'] == 'エルゴノミックデザインスタジオ') {
-                document.getElementById('editing').appendChild(studioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
+                document.getElementById('studioLeftSec_ergonomics').appendChild(studioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
             }
             if (studio['name-ja'] == 'インタラクティブアートスタジオ') {
-                document.getElementById('editing').appendChild(studioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
+                document.getElementById('interactive').appendChild(studioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
             }
             if (studio['name-ja'] == 'インタフェースデザインスタジオ') {
-                document.getElementById('editing').appendChild(studioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
+                document.getElementById('interface').appendChild(studioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
             }
             if (studio['name-ja'] == 'インテリアデザインスタジオ') {
-                document.getElementById('editing').appendChild(studioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
+                document.getElementById('interior').appendChild(studioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
             }
             if (studio['name-ja'] == '映像デザインスタジオ') {
-                document.getElementById('editing').appendChild(studioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
+                document.getElementById('kinemat').appendChild(studioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
             }
             if (studio['name-ja'] == 'ネットワークデザインスタジオ') {
-                document.getElementById('editing').appendChild(studioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
+                document.getElementById('network').appendChild(studioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
             }
             if (studio['name-ja'] == 'ソフトウェアデザインスタジオ') {
-                document.getElementById('editing').appendChild(studioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
+                document.getElementById('software').appendChild(studioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
             }
             if (studio['name-ja'] == '空間デザインスタジオ') {
-                document.getElementById('editing').appendChild(studioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
+                document.getElementById('spatial').appendChild(studioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
             }
             if (studio['name-ja'] == 'トランスポーテーションデザインスタジオ') {
-                document.getElementById('editing').appendChild(studioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
+                document.getElementById('visual').appendChild(studioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
             }
 
             if (studio['name-ja'] == 'ヴィジュアルコミュニケーションデザインスタジオ') {

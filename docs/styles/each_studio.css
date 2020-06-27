@@ -1,102 +1,122 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@charset "UTF-8";
 
-body{
-    background-color: floralwhite;
-    margin: 0 auto;
-    font-family: 'Noto Sans JP', sans-serif;
+ /*ーーーーーーーーー左サイド・スタジオ中身ーーーーーーーー*/
+.labview {
+    position: relative;
+    display: flex; /*ここを外すと右サイドが下に落ちる*/
 }
+    .labview .left {
+      width: 70%;
+      position: relative; 
+    }
+      .labview .left .title {
+        width: 90%;
+        display: flex;
+        align-items: flex-start; 
+    }
+    /*タイトル部分全体左に縦棒を引く*/
+        .labview .left .title .titleText {
+          width: 100%;
+          text-align: left;
+          border-left: solid 6px #E80000;
+          padding-left: 10px;
+          margin-bottom: 10px;
+         }
+            /*スタジオ名の表示*/
+        .labview .left .title .titleText h2 {
+            letter-spacing: 0.05em;
+            width: 100%;
+            margin: -5px 0 0px 0px;
+            font: bold 20pt , sans-serif; 
+        }
+        /*コアの表示*/
+          .labview .left .title .titleText h4 {
+            font: bold 12pt, sans-serif; 
+        }
+  
+      
+      .labview .left p {
+        width: 90%;
+    }
 
+    /*スタジオ説明文の体裁*/
+        .labview .left p.studio-description {
+        margin-top: 20px;
+          font-size :12pt;
+          line-height: 18pt;
+         }
 
-p,a{
-       margin: 0; 
-       padding:0;
-}
-
-header{
-    background-color: floralwhite;
-    border-bottom:1px solid midnightblue;
-    position: fixed;
-    width:100%;
-    z-index: 10;
-}
-ul{
-    margin: 30px auto;
-    padding: 0 50px;
-    text-align: center;
-}
-li{
-    color: midnightblue;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 30px;
-    font-weight: 700;
-    display:inline-block;
-    width: 150px;
-}
-li:hover{
-    color:coral;
-}
-
-/*img{
-    box-shadow: 10px 10px rgba(1,1,100,0.8);
-    margin:0 80px;
-}*/
-h1{
-    font-family: 'Noto Sans JP', sans-serif;
-    color: #11114d;
-}
-h2{
-    font-family: 'Noto Sans JP', sans-serif;
-    color: #11114d
-}
-h3{
-    font-family: 'Noto Sans JP', sans-serif;
-    color: #11114d;
-    font-size: 13px;
-}
-a {
-    text-decoration: none ;
-    color:#11114d;
-}
-a:hover{
-    color:coral;
-}
-
-.container{
-    max-width:1200px;
-    margin: 100px  auto;
-   }
-
-
-
-   /*ここからstudio*/
-img.studio-img{
-    width: 300px;
-    height: 200px; 
-}
-
-#studios{
-    max-width:1000px;
-    margin: 0 auto;
-}
-
-.product-studios{
-    float:left;
-
-}
-.media-studios{
+         .faculty-div{
+             margin-top: 40px;
+         }
+         .faculty-div > p {
+            font-size :12pt;
+           
+        }
+        .faculty-div > span{
+            font-size :16pt;
+            margin-right:1em;
+            display:inline-block;/*これ書かないと下マージンが効かない*/
+            margin-bottom: 10px; 
+        }
+        .faculty-div > h3{
+            font-size :24pt;
+            margin-bottom:10px;
+        }
+        .studio-faculty-img{
+            width:160px;
+            height: 160px;
+            display:inline-block;
+            vertical-align:top; 
+   
+        }
+     
 
 
-}
+        .studio-photo{
+            width:600px;
+            height: auto;
+        }
+ 
+      
+ /*ーーーーーーーーー右サイド・スタジオリストーーーーーーーー*/
+    .labview .right {
+      position: relative;
+      width: 200px; 
+    }
 
-.a-studio{
-    text-align: center;
-    max-width:320px;
-}
+    /*コア間の隙間をとる*/
+      .labview .right .coreBox {
+       /* width: 200px;
+        display: flex;
+        justify-content: space-between;*/
+        margin-bottom: 40px; 
+    }
+    
+    .labview .right p {/*右サイド　スタジオリストの pエレメント　コア名メディアアートコア・メディア創生　プロダクトデザインコア*/
+        /*letter-spacing: 0.3em;*/
+        margin: 0 0 20px 0;
+        font: bold 12pt;
+     }
 
 
-.studio-title{
-    font-size:20px;
-    text-decoration: none ;
-    color:#11114d;
-    margin:10px;
-}
+    .studio-list-item {
+        margin:10px 0;
+    }
+
+    .studio-list-item > a:link {
+        color: #999999;
+      }
+      .studio-list-item > a:visited {
+        color:#999999;
+      }
+      .studio-list-item > a:hover {
+        color:#191919;
+        cursor: pointer;
+      }
+      .studio-list-item > a:active {
+        color:#DDDDDD;
+      }
+
+       
+   

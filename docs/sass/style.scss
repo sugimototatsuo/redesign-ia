@@ -316,11 +316,16 @@ pre#result {
 }
 
 // ========== column ==========
+#column{
+  text-align: center;
+}
 #nomalLink{
   width: 100%;
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
   display: flex;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
 }
 #column > div > div{
   width: 30%;
@@ -345,17 +350,26 @@ pre#result {
   padding: 50px 100px;
 }
 #admission #nomalAdmissionText h4{
-  font-size: 25px;
+  font-size: 1.5rem;
+  margin-top: 1rem;
 }
 #admission #nomalAdmissionText p, ol, ul{
-  padding-left: 50px;
+  padding-left: 3rem;
   /* padding-bottom: 20px; */
+}
+#admission #nomalAdmissionText img{
+  display: block;
+  width: 70%;
+  margin: 0.3rem auto;
 }
 
 /* ========== question ========== */
 #question #nomalQText{
   background: #E4EBEF;
-  padding: 50px 100px;
+  padding: 3rem 5rem;
+  h4{
+    margin-top: 1rem;
+  }
 }
 
 // ========== access =========
@@ -372,10 +386,11 @@ pre#result {
 
 /* ========== footer ========== */
 footer{
+  width: 100%;
   background: #2B2845;
   padding: 1rem 0;
   p{
-    text-align: center;
+    text-align: center!important;
     color: #FFFFFF;
     margin-bottom: 0.3rem;
   }

@@ -411,6 +411,18 @@ document.getElementById("button2").onclick = function () {
   }
 };
 
+document.getElementById("moreBtnWork").onclick = function () {
+  var langControll;
+  if (langMode == 0) {
+    langControll = "?lang=0";
+  } else if (langMode == 1) {
+    langControll = "?lang=1";
+  } else if (langMode == 2) {
+    langControll = "?lang=2";
+  }
+  location.href = "./html/work.html" + langControll;
+};
+
 
 const getData = async () => {
   try {

@@ -1,22 +1,12 @@
-windows.onload() = function () {
+var url = location.href;
+
+window.onload = function () {
     var langBotton = document.getElementById("button");
 
-    if (paraValue("langMode") = "0") {
-        langBotton.classList.remove('close');
-        langBotton.classList.add('open');
+    if (document.URL.match("/?lang=0")) {
 
-        document.getElementById('nomalButton').style.display = "block";
-        document.getElementById('englishButton').style.display = "none";
-
-
-        document.getElementById('nomalTitle').style.display = "block";
-        document.getElementById('englishTitle').style.display = "none";
-
-        document.getElementById('nomalReturn').style.display = "block";
-        document.getElementById('englishReturn').style.display = "none";
     }
-    if (paraValue("langMode") = "1") {
-
+    else if (document.URL.match("/?lang=1")) {
         langBotton.classList.remove('open');
         langBotton.classList.add('close');
 

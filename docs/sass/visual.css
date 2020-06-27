@@ -1,0 +1,52 @@
+section {
+  background: #E4EBEF;
+  padding: 5rem;
+}
+
+section .first_box {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+section .first_box #nomalStudios {
+  width: 330px;
+  float: right;
+  text-align: right;
+}
+
+section .first_box #nomalStudios > div {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
+}
+
+section .first_box #nomalStudios > div .studio-image, section .first_box #nomalStudios > div .studio-image-en {
+  width: 42px;
+  height: 42px;
+}
+
+section .second_box {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+section .second_box img {
+  width: 1054px;
+}
+
+.faculty_title {
+  float: left;
+}
+
+.right_box {
+  float: right;
+  text-align: right;
+}
+
+p {
+  width: 1000px;
+  margin: 0 auto;
+}

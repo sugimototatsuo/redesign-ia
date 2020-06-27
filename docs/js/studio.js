@@ -110,10 +110,13 @@ const renderStudio = (json) => {//シートごとに使い分ける
                 studioDiv.appendChild(linkPhotoP);
 
 
-                const studioTitleJa = document.createElement("p");
-                studioTitleJa.className = 'studio-title';
-                studioTitleJa.textContent = studio['name-ja'];
-                studioDiv.appendChild(studioTitleJa);
+                const linkTitleP = document.createElement('p');
+                const linkOnText = document.createElement('a');//ここでうっかりlinkっていう変数を作っちゃうとかぶるのでうまくいかない
+                linkOnText.className = 'studio-title';
+                linkOnText.textContent = studio['name-ja'];//リンクに何かしらテキストがないと見えない
+                linkOnText.href = studio['studio-page-link'];
+                linkTitleP.appendChild(linkOnText);
+                studioDiv.appendChild(linkTitleP);
 
                 productStudioDiv.appendChild(studioDiv);
                 document.getElementById('product-studios').appendChild(productStudioDiv);

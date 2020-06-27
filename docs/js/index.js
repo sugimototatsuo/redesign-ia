@@ -356,51 +356,50 @@ document.getElementById("button").onclick = function () {
     document.getElementById('easyQText').style.display = "none";
 
   } else if (langBottonClass == "close") {
-    langBotton2.classList.remove('open');
-    langBotton2.classList.add('close');
     langMode = 0;
-    //langBottonWork.classList.remove('open');
-    //langBottonWork.classList.add('close');
-
+    langBotton.classList.remove('close');
+    langBotton.classList.add('open');
+    //langBottonWork.classList.remove('close');
+    //langBottonWork.classList.add('open');
     document.getElementById('nomalButton').style.display = "block";
     document.getElementById('englishButton').style.display = "none";
-    document.getElementById('nomalButton2').style.display = "none";
-    document.getElementById('easyButton2').style.display = "block";
+    document.getElementById('nomalButton2').style.display = "block";
+    document.getElementById('easyButton2').style.display = "none";
 
-    document.getElementById('nomalTitle').style.display = "none";
-    document.getElementById('easyTitle').style.display = "block";
+    document.getElementById('nomalTitle').style.display = "block";
+    document.getElementById('easyTitle').style.display = "none";
     document.getElementById('englishTitle').style.display = "none";
     document.getElementById('englishTitle2').style.display = "none";
 
-    document.getElementById('nomalCopy').style.display = "none";
+    document.getElementById('nomalCopy').style.display = "block";
     document.getElementById('englishCopy').style.display = "none";
-    document.getElementById('easyCopy').style.display = "block";
+    document.getElementById('easyCopy').style.display = "none";
 
     for (var i = 0; i <= 8; i++) {
-      document.getElementById('easySubtitle' + (i + 1).toString()).style.display = "block";
-      document.getElementById('nomalSubtitle' + (i + 1).toString()).style.display = "none";
+      document.getElementById('nomalSubtitle' + (i + 1).toString()).style.display = "block";
+      document.getElementById('easySubtitle' + (i + 1).toString()).style.display = "none";
       document.getElementById('englishSubtitle' + (i + 1).toString()).style.display = "none";
     }
 
     for (var i = 0; i <= 8; i++) {
-      document.getElementById('nomalContentsTitle' + (i + 1).toString()).style.display = "none";
+      document.getElementById('nomalContentsTitle' + (i + 1).toString()).style.display = "block";
       document.getElementById('englishContentsTitle' + (i + 1).toString()).style.display = "none";
-      document.getElementById('easyContentsTitle' + (i + 1).toString()).style.display = "block";
+      document.getElementById('easyContentsTitle' + (i + 1).toString()).style.display = "none";
     }
 
-    document.getElementById('nomalText').style.display = "none";
+    document.getElementById('nomalText').style.display = "block";
     document.getElementById('englishText').style.display = "none";
-    document.getElementById('easyText').style.display = "block";
+    document.getElementById('easyText').style.display = "none";
 
-    //document.getElementById('nomalWorkTitle').style.display = "none";
-    //document.getElementById('englishWorkTitle').style.display = "block";
-    document.getElementById('nomalWorkText').style.display = "none";
+    //document.getElementById('nomalWorkTitle').style.display = "block";
+    //document.getElementById('englishWorkTitle').style.display = "none";
+    document.getElementById('nomalWorkText').style.display = "block";
     document.getElementById('englishWorkText').style.display = "none";
-    document.getElementById('nomalCurrText').style.display = "none";
+    document.getElementById('nomalCurrText').style.display = "block";
     document.getElementById('englishCurrText').style.display = "none";
-    document.getElementById('easyCurrText').style.display = "block";
-    //document.getElementById('nomalWorkReturn').style.display = "none";
-    //document.getElementById('englishWorkReturn').style.display = "block";
+    document.getElementById('easyCurrText').style.display = "none";
+    //document.getElementById('nomalWorkReturn').style.display = "block";
+    //document.getElementById('englishWorkReturn').style.display = "none";
 
     document.getElementById('nomalStudios').style.display = "block";
     document.getElementById('englishStudios').style.display = "none";
@@ -408,13 +407,13 @@ document.getElementById("button").onclick = function () {
     document.getElementById('nomalFaculty').style.display = "block";
     document.getElementById('englishFaculty').style.display = "none";
 
-    document.getElementById('nomalAdmissionText').style.display = "none";
+    document.getElementById('nomalAdmissionText').style.display = "block";
     document.getElementById('englishAdmissionText').style.display = "none";
-    document.getElementById('easyAdmissionText').style.display = "block";
+    document.getElementById('easyAdmissionText').style.display = "none";
 
-    document.getElementById('nomalQText').style.display = "none";
+    document.getElementById('nomalQText').style.display = "block";
     document.getElementById('englishQText').style.display = "none";
-    document.getElementById('easyQText').style.display = "block";
+    document.getElementById('easyQText').style.display = "none";
   }
 
 };

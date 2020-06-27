@@ -8,8 +8,6 @@ const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 const endpoint2 = `${uri}?id=${id}&sheet=${sheet2}`;
 const endpoint3 = `${uri}?id=${id}&sheet=${sheet3}`;
 var langMode = 0;
-var stnameja = [];
-var stnameen = [];
 
 var showloading = document.getElementById('showloading');
 var contents = document.getElementById('mainContent');
@@ -24,7 +22,7 @@ const renderJson = (json) => {
   studios.pop();
   studios.forEach(studios => {
     const nomalStudioDiv = document.createElement('div');
-    const nomalStudioLink = document.createElement("a");
+    const nomalStudioLink = document.createElement("p");
     const nomalStudioImage = document.createElement("img");
 
     //スタジオ名（日本語）のクラス
@@ -32,7 +30,15 @@ const renderJson = (json) => {
     //nomalStudioLink.href = "./html/" + studios['name-short'].toString() + ".html";
 
     nomalStudioLink.textContent = studios['name-ja'];
-    nomalStudioLink.onclick = jumppage(studios['name-short'].toString());
+    nomalStudioLink.onclick = function () {
+      var langControll;
+      if (langMode == 0) {
+        langControll = "?lang=0";
+      } else if (langMode == 2) {
+        langControll = "?lang=2";
+      }
+      location.href = "./html/" + studios['name-short'].toString() + ".html" + langControll;
+    };
     //nomalStudioLink.id = studios['name-short'];
     //stnameja.push(studios['name-short']);
     //スタジオ写真のクラス
@@ -45,7 +51,12 @@ const renderJson = (json) => {
 
     //スタジオ名（英語）のクラス
     englishStudioLink.className = 'studio-title-en';
-    englishStudioLink.href = "./html/" + studios['name-short'].toString() + ".html";
+    englishStudioLink.onclick = function () {
+      var langControll;
+      langControll = "?lang=1";
+      location.href = "./html/" + studios['name-short'].toString() + ".html" + langControll;
+    };
+    //englishStudioLink.href = "./html/" + studios['name-short'].toString() + ".html";
     //stnameen.push(studios['name-short']);
     //スタジオ写真（英語）のクラス
     englishStudioLink.textContent = studios['name-en'];
@@ -436,19 +447,9 @@ document.getElementById("moreBtnWork").onclick = function () {
   location.href = "./html/work.html" + langControll;
 };
 
-function jumppage(studioname) {
-  var langControll;
-  if (langMode == 0) {
-    langControll = "?lang=0";
-  } else if (langMode == 1) {
-    langControll = "?lang=1";
-  } else if (langMode == 2) {
-    langControll = "?lang=2";
-  }
+//function jumppage(studioname) {
 
-  location.href = "./html/" + studioname.toString() + ".html" + langControll;
 
-}
 
 
 const getData = async () => {

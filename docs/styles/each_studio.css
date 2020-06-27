@@ -3,22 +3,22 @@
  /*ーーーーーーーーー左サイド・スタジオ中身ーーーーーーーー*/
  .sns-icon{
     width:40px;
-    margin-left:10px;
+    margin-left:16px;
     }
     /*twitterのicon２回りくらい小さいんだが*/
      .sns-icon-twitter{
     width:60px;
-    margin-left:10px;
+    margin-left:16px;
      }
      .sns-link:hover{
          opacity:0.5;
      }
      .studio-sns{
-        float: right;
-        display: flex;
-        margin-left:40px;
-        left:200px;
-        position: block;
+        /*float: right;*/
+        display:inline-block;
+        margin:26px 0 0 0;
+        left:10%;
+        position: relative;
      }
 .labview {
     position: relative;
@@ -70,41 +70,46 @@
         margin-top: 20px;
           font-size :12pt;
           line-height: 18pt;
+          width: 75%;
          }
 
          .faculty-div{
              margin-top: 40px;
          }
-         .faculty-div > p {
-            font-size :12pt;
-           
+         /*教員サイトリンク*/
+         .faculty-text-div > p {
+            font-size :16pt;    
         }
-        .faculty-div > span{
+         /*教員名と教授か准教授*/
+        .faculty-text-div >span{
             font-size :16pt;
-            margin-right:100em;
-            display:inline-block;/*これ書かないと下マージンが効かない*/
-            padding : 0 10px 10px 0;
+          display:inline-block;/*これ書かないと下マージンが効かない*/
+          margin:0 0.7em 20px 0;
+          /*display: flex;*/
         }
         /*見出し「担当教員」*/
         .faculty-div > h3{
-            font-size :24pt;
+            font-size :20pt;
             margin-bottom:10px;
         }
+
         .studio-faculty-img{
             width:160px;
             height: 160px;
+            float:left;
+            margin-right:20px;
    
         }
    
 .faculty-contents-div{
-display:flex;
+
 }
 .faculty-text-div{
-    display:inline-block;
+
 }
 
         .studio-photo{
-            width:600px;
+            width:90%;
             height: auto;
         }
  

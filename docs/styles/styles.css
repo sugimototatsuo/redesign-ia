@@ -152,6 +152,12 @@
      margin: 0 20px;
      font-size: 20px;
    }
+
+   /*グロナビのうち現在いる親の階層　を黒くする*/
+.nav-list-item >a.here{
+  color:#000;
+}
+
  
    /*header意外を取り囲む*/
  
@@ -288,6 +294,45 @@
            padding-top: 8px; 
          }
  
+
+  /*topにもどる*/
+  .js-scroll-fadein {
+  transition: opacity 1s;
+  visibility: hidden;
+  opacity: 0;
+}
+.js-scroll-fadein.is-fadein {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------
+  arrow
+--------------------------------*/
+.arrow {
+  position: fixed;
+  right: 16px;
+  bottom: 12px;
+  color: #fff;
+  cursor: pointer;
+  padding: 20px;
+  transition: all 0.2s ease-in-out;
+}
+.arrow:hover {
+  opacity: 0.8;
+  bottom: 15px;
+  -webkit-filter: drop-shadow(3px 3px 3px #828282);
+}
+.arrow:before, .arrow:after {
+}
+
+/*
+.arrow:before {
+  top: 11px;
+}
+.arrow:after {
+  top: 21px;
+}*/
   /*ここまで共通設定*/
  
  

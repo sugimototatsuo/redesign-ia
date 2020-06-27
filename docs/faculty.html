@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>東京都立大学システムデザイン学部 インダストリアルアート学科|FACULTY</title>
+    <title>東京都立大学システムデザイン学部インダストリアルアート学科|FACULTY</title>
+    <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/faculty.css">
 
     <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
@@ -20,30 +21,54 @@
         <meta name="twitter:site" content="@ia_sd_tmu" />
         <meta name="twitter:player" content="@ia_sd_tmu" />
 
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+        <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+        <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
+
+        <!--フォント取得-->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+            rel="stylesheet">
+
     </head>
 
 <body>
-    <header>
-        <ul>
-            <li><a href="./index.html">HOME</a></li>
-            <li><a href="./about.html">ABOUT</a></li>
-            <li><a href="./news.html">NEWS</a></li>
-            <li><a href="./studio.html">STUDIO</a></li>
-            <li><a href="./faculty.html">FACULTY</a></li>
-            <li><a href="./works.html">WORKS</a></li>
-            <li><a href="./access.html">ACCESS</a></li>
-        </ul>
-    </header>
-    <div class=container>
+    <main>
+        <header>
+            <ul class="nav-list">
+                <li class="nav-list-item"><a class="linkMenuText here" href="./index.html">HOME</a></li>
+                <li class="nav-list-item"><a class="linkMenuText" href="./about.html">ABOUT</a></li>
+                <li class="nav-list-item"><a class="linkMenuText" href="./news.html">NEWS</a></li>
+                <li class="nav-list-item"><a class="linkMenuText" href="./studio.html">STUDIO</a></li>
+                <li class="nav-list-item"><a class="linkMenuText" href="./faculty.html">FACULTY</a></li>
+                <li class="nav-list-item"><a class="linkMenuText" href="./works.html">WORKS</a></li>
+                <li class="nav-list-item"><a class="linkMenuText" href="./access.html">ACCESS</a></li>
+            </ul>
+        </header>
 
-        <h1>FACULTY</h1>
+        <section class="contents" style="opacity: 1;">
 
-        <div id="faculties"></div>
-
-    </div>
+            <h1>FACULTY</h1>
 
 
-    </div>
+            <div id="faculties"></div>
+
+
+
+
+
+            <footer>
+                <section class="en">
+                    <p class="ja">東京都立大学 システムデザイン学部／研究科</p>
+                    <p class="sd">Faculty &amp; Graduate School of Systems Design</p><a class="sd"
+                        href="https://www.tmu.ac.jp/">Copyright ©2018 Tokyo Metropolitan University. All rights
+                        reserved.</a>
+                </section>
+            </footer>
+        </section>
+    </main>
+
+    <!--topに戻る-->
+    <div id="js-scroll-fadein" class="js-scroll-fadein arrow"></div>
     <script src="js/lottie.min.js"></script>
 
     <script src="js/faculty.js"></script>

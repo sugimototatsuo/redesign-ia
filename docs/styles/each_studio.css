@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
  /*ーーーーーーーーー左サイド・スタジオ中身ーーーーーーーー*/
  .sns-icon{
     width:40px;
@@ -137,14 +138,13 @@
         color: #999999;
      }
 
-
     .studio-list-item {
         margin:16px 0;
     }
 
-   #here {
-        color: #000;
-      }
+    .studio-list .studio-list-item >a.here{
+        color:#000;
+    }
 
     .studio-list-item > a:link {
         color: #999999;

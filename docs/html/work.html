@@ -13,12 +13,12 @@
 
 <body>
 
-    <!--headerはコピペなので不都合あったら直してください
+    <!--headerはコピペなので不都合あったら直してください-->
     <header>
         <div class="left_h">
             <nav>
                 <ul>
-                    <li><a href="../index.html#aboutus">
+                    <li><a href="../index.html#aboutus" 　class="head-aboutus">
                             <h3 id="nomalSubtitle1" style="display: block">学科概要</h3>
                             <h3 id="easySubtitle1" style="display: none">この<ruby>
                                     <rb>学科</rb>
@@ -26,20 +26,20 @@
                                 </ruby>について</h3>
                             <h3 id="englishSubtitle1" style="display: none">Summary</h3>
                         </a></li>
-                    <li><a href="../index.html#works">
+                    <li><a href="../index.html#works" class="head-work">
                             <h3 id="nomalSubtitle2" style="display: block">作品</h3>
                             <h3 id="easySubtitle2" style="display: none"><ruby>
                                     <rb>作品</rb>
                                     <rt>さくひん</rt>
                                 </ruby></h3>
-                            <h3 id="../index.htmlenglishSubtitle2" style="display: none">Works</h3>
+                            <h3 id="englishSubtitle2" style="display: none">Works</h3>
                         </a></li>
-                    <li><a href="../index.html#curriculum">
+                    <li><a href="../index.html#curriculum" class="head-curriculm">
                             <h3 id="nomalSubtitle3" style="display: block">カリキュラム</h3>
                             <h3 id="easySubtitle3" style="display: none">カリキュラム</h3>
                             <h3 id="englishSubtitle3" style="display: none">Curriculum</h3>
                         </a></li>
-                    <li><a href="../index.html#studios">
+                    <li><a href="../index.html#studios" class="head-studios">
                             <h3 id="nomalSubtitle4" style="display: block">スタジオ紹介</h3>
                             <h3 id="easySubtitle4" style="display: none">スタジオ<ruby>
                                     <rb>紹介</rb>
@@ -47,7 +47,7 @@
                                 </ruby></h3>
                             <h3 id="englishSubtitle4" style="display: none">Studios</h3>
                         </a></li>
-                    <li><a href="../index.html#faculty">
+                    <li><a href="../index.html#faculty" class="head-faculty">
                             <h3 id="nomalSubtitle5" style="display: block">教員紹介</h3>
                             <h3 id="easySubtitle5" style="display: none"><ruby>
                                     <rb>先生</rb>
@@ -58,7 +58,7 @@
                                 </ruby></h3>
                             <h3 id="englishSubtitle5" style="display: none">Faculty</h3>
                         </a></li>
-                    <li><a href="../index.html#column">
+                    <li><a href="../index.html#column" class="head-column">
                             <h3 id="nomalSubtitle9" style="display: block">関連コンテンツ</h3>
                             <h3 id="easySubtitle9" style="display: none"><ruby>
                                     <rb>関連</rb>
@@ -66,7 +66,7 @@
                                 </ruby>コンテンツ</h3>
                             <h3 id="englishSubtitle9" style="display: none">Column</h3>
                         </a></li>
-                    <li><a href="../index.html#admission">
+                    <li><a href="../index.html#admission" class="head-admission">
                             <h3 id="nomalSubtitle6" style="display: block">入試案内</h3>
                             <h3 id="easySubtitle6" style="display: none"><ruby>
                                     <rb>入学試験</rb>
@@ -74,7 +74,7 @@
                                 </ruby>について</h3>
                             <h3 id="englishSubtitle6" style="display: none">Admission</h3>
                         </a></li>
-                    <li><a href="../index.html#question">
+                    <li><a href="../index.html#question" class="head-question">
                             <h3 id="nomalSubtitle7" style="display: block">よくある質問</h3>
                             <h3 id="easySubtitle7" style="display: none">よくある<ruby>
                                     <rb>質問</rb>
@@ -82,7 +82,7 @@
                                 </ruby></h3>
                             <h3 id="englishSubtitle7" style="display: none">Q&A</h3>
                         </a></li>
-                    <li><a href="../index.html#access">
+                    <li><a href="../index.html#access" class="head-access">
                             <h3 id="nomalSubtitle8" style="display: block">アクセス</h3>
                             <h3 id="easySubtitle8" style="display: none">アクセス</h3>
                             <h3 id="englishSubtitle8" style="display: none">Access</h3>
@@ -94,7 +94,7 @@
             <a href="https://www.tmu.ac.jp/entrance/faculty/application_guidebook.html">資料請求</a>
             <a href="#">言語</a>
         </div>
-    </header>-->
+    </header>
 
     <button id="button" class="open">
         <p id="nomalButton" style="display: block">English</p>
@@ -104,7 +104,8 @@
     <div class="bg-purple">
         <h1 id=nomalTitle style="display: block">学生作品</h1>
         <h1 id="englishTitle" style="display: none">Student's Works</h1>
-        <p>インダストリアルアート学科の授業で作成した作品です。</p>
+        <p id="nomalCap" style="display: block">インダストリアルアート学科の授業で作成した作品です。</p>
+        <p id="englishCap" style="display: none">This work was created in a class in the Industrial Art Department.</p>
     </div>
 
     <h3 class="grade-title">学部1年</h3>
@@ -126,7 +127,9 @@
 
         <div class="wrapper">
             <div class="mainVisual main01 flex center">
+
                 <div class="btn"><label for="modal01"><img src="../image/iconB1/基礎造形A2_icon.png" title="kisoA2"></label></div>
+
             </div>
             <div id="modal01Con" class="modalWrap">
                 <div class="modalBg"><label for="modal01" class="closeModal"></label></div>

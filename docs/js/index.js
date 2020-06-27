@@ -22,13 +22,25 @@ const renderJson = (json) => {
   studios.pop();
   studios.forEach(studios => {
     const nomalStudioDiv = document.createElement('div');
-    const nomalStudioLink = document.createElement("a");
+    const nomalStudioLink = document.createElement("p");
     const nomalStudioImage = document.createElement("img");
 
     //スタジオ名（日本語）のクラス
     nomalStudioLink.className = 'studio-title';
-    nomalStudioLink.href = "./html/" + studios['name-short'].toString() + ".html";
+    //nomalStudioLink.href = "./html/" + studios['name-short'].toString() + ".html";
+
     nomalStudioLink.textContent = studios['name-ja'];
+    nomalStudioLink.onclick = function () {
+      var langControll;
+      if (langMode == 0) {
+        langControll = "?lang=0";
+      } else if (langMode == 2) {
+        langControll = "?lang=2";
+      }
+      location.href = "./html/" + studios['name-short'].toString() + ".html" + langControll;
+    };
+    //nomalStudioLink.id = studios['name-short'];
+    //stnameja.push(studios['name-short']);
     //スタジオ写真のクラス
     nomalStudioImage.className = 'studio-photo1';
     nomalStudioImage.src = studios['photo1'];
@@ -39,7 +51,13 @@ const renderJson = (json) => {
 
     //スタジオ名（英語）のクラス
     englishStudioLink.className = 'studio-title-en';
-    englishStudioLink.href = "./html/" + studios['name-short'].toString() + ".html?langMode";
+    englishStudioLink.onclick = function () {
+      var langControll;
+      langControll = "?lang=1";
+      location.href = "./html/" + studios['name-short'].toString() + ".html" + langControll;
+    };
+    //englishStudioLink.href = "./html/" + studios['name-short'].toString() + ".html";
+    //stnameen.push(studios['name-short']);
     //スタジオ写真（英語）のクラス
     englishStudioLink.textContent = studios['name-en'];
     englishStudioImage.src = studios['photo2'];
@@ -428,6 +446,10 @@ document.getElementById("moreBtnWork").onclick = function () {
   }
   location.href = "./html/work.html" + langControll;
 };
+
+//function jumppage(studioname) {
+
+
 
 
 const getData = async () => {

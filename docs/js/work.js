@@ -10,11 +10,20 @@ window.onload = function () {
         langBotton.classList.remove('open');
         langBotton.classList.add('close');
 
+        for (var i = 0; i <= 8; i++) {
+            document.getElementById('nomalSubtitle' + (i + 1).toString()).style.display = "none";
+            document.getElementById('easySubtitle' + (i + 1).toString()).style.display = "none";
+            document.getElementById('englishSubtitle' + (i + 1).toString()).style.display = "block";
+        }
+
         document.getElementById('nomalButton').style.display = "none";
         document.getElementById('englishButton').style.display = "block";
 
         document.getElementById('nomalTitle').style.display = "none";
         document.getElementById('englishTitle').style.display = "block";
+
+        document.getElementById('nomalCap').style.display = "none";
+        document.getElementById('englishCap').style.display = "block";
 
         document.getElementById('nomalReturn').style.display = "none";
         document.getElementById('englishReturn').style.display = "block";
@@ -33,6 +42,12 @@ document.getElementById("button").onclick = function () {
         langBotton.classList.add('close');
         //langBottonWork.classList.remove('open');
         //langBottonWork.classList.add('close');
+        for (var i = 0; i <= 8; i++) {
+            document.getElementById('nomalSubtitle' + (i + 1).toString()).style.display = "none";
+            document.getElementById('easySubtitle' + (i + 1).toString()).style.display = "none";
+            document.getElementById('englishSubtitle' + (i + 1).toString()).style.display = "block";
+        }
+
 
         document.getElementById('nomalButton').style.display = "none";
         document.getElementById('englishButton').style.display = "block";
@@ -42,6 +57,9 @@ document.getElementById("button").onclick = function () {
 
         document.getElementById('nomalTitle').style.display = "none";
         document.getElementById('englishTitle').style.display = "block";
+
+        document.getElementById('nomalCap').style.display = "none";
+        document.getElementById('englishCap').style.display = "block";
 
         document.getElementById('nomalReturn').style.display = "none";
         document.getElementById('englishReturn').style.display = "block";
@@ -55,9 +73,18 @@ document.getElementById("button").onclick = function () {
         document.getElementById('nomalButton').style.display = "block";
         document.getElementById('englishButton').style.display = "none";
 
+        for (var i = 0; i <= 8; i++) {
+            document.getElementById('nomalSubtitle' + (i + 1).toString()).style.display = "block";
+            document.getElementById('easySubtitle' + (i + 1).toString()).style.display = "none";
+            document.getElementById('englishSubtitle' + (i + 1).toString()).style.display = "none";
+        }
+
 
         document.getElementById('nomalTitle').style.display = "block";
         document.getElementById('englishTitle').style.display = "none";
+
+        document.getElementById('nomalCap').style.display = "block";
+        document.getElementById('englishCap').style.display = "none";
 
         document.getElementById('nomalReturn').style.display = "block";
         document.getElementById('englishReturn').style.display = "none";

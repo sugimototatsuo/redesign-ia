@@ -17,117 +17,69 @@ const renderLink = (json) => {
 
             //START-ニュースの1記事を生成して回す
             //一つの記事全体を囲むdiv
-            const anArticleDiv = document.createElement('div');
-            anArticleDiv.className = 'an-article';
+            const anArticleSec = document.createElement('section');
+            anArticleSec.className = 'card';
 
 
-            const photoP = document.createElement('p');//★
+
+            const photoP = document.createElement('p');
             const photo = document.createElement("img");
-            photo.className = 'article-img';
+            photo.className = 'card-img';
             photo.src = link['photo'];
-            photo.alt = "";
+            photo.alt = link['name-ja'];
             photoP.appendChild(photo);
-            anArticleDiv.appendChild(photoP);
 
-            //記事のタイトル・掲載日・内容といった、テキスト部分を包括するdiv
-            const articleTextContainerDiv = document.createElement('div');
-            articleTextContainerDiv.className = 'article-text-container';
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'card-content';
 
-            const articleTitle = document.createElement('p');
-            articleTitle.className = 'article-title';
-            const articleTitleLink = document.createElement('a');
-            articleTitleLink.textContent = link['name-ja'];
-            articleTitleLink.href = link['link'];
-            articleTitle.appendChild(articleTitleLink);
-            articleTextContainerDiv.appendChild(articleTitle);
+            const articleTitleH1 = document.createElement('h1');
+            articleTitleH1.className = 'card-title';
+            articleTitleH1.textContent = link['name-ja'];
+            contentDiv.appendChild(articleTitleH1);
+
+            const articleP = document.createElement('p');
+            articleP.className = 'card-text';
+            var slicetext;
+            if ((link['description-ja']).length > 40) {
+                slicetext = (link['description-ja']).slice(0, 40) + "…";
+                console.log(slicetext);
+            } else {
+                slicetext = link['description-ja'];
+            }
+
+            articleP.textContent = slicetext;
+            contentDiv.appendChild(articleP);
+
+            //タグと日付のDiv
+            const tag_dateDiv = document.createElement('p');
+            tag_dateDiv.className = 'card-meta';
 
             const updateDateP = document.createElement('p');
             updateDateP.className = 'update-date';
-            articleTextContainerDiv.appendChild(updateDateP);
+            updateDateP.textContent = link['update-date'];
+            tag_dateDiv.appendChild(updateDateP);
 
-            const articleContents = document.createElement('p');
-            articleContents.className = 'article-contents';
-            articleContents.textContent = link['description-ja'];
-            articleTextContainerDiv.appendChild(articleContents);
+            const tagP = document.createElement('p');
+            tagP.className = 'tag';
+            tagP.textContent = link['tag-ja'];
+            tag_dateDiv.appendChild(tagP);
 
-            anArticleDiv.appendChild(articleTextContainerDiv);
+            contentDiv.appendChild(tag_dateDiv);
 
-            const floatClearDiv = document.createElement('div');
-            floatClearDiv.className = 'float-clear';
-            anArticleDiv.appendChild(floatClearDiv);
 
-            document.getElementById('articles').appendChild(anArticleDiv);
+            //カード全体のsectionにリンク付けする
+            const linkOnCard = document.createElement('a');
+            linkOnCard.className = 'article-link';
+            linkOnCard.href = link['article-link'];
+
+            anArticleSec.appendChild(linkOnCard);
+            anArticleSec.appendChild(photoP);
+            anArticleSec.appendChild(contentDiv);
+
+
+
+            document.getElementById('newsDiv').appendChild(anArticleSec);
             //ニュースの1記事を生成して回す-END
-
-
-            const linkDiv = document.createElement('div');
-
-            const nameJa = document.createElement("span");
-            nameJa.className = 'name';
-            nameJa.textContent = link['name-ja'];
-            linkDiv.appendChild(nameJa);
-
-            const nameEn = document.createElement("span");
-            nameEn.className = 'name';
-            nameEn.textContent = link['name-en'];
-            linkDiv.appendChild(nameEn);
-
-            const venueJa = document.createElement("span");
-            venueJa.className = 'venue';
-            venueJa.textContent = link['venue-ja'];
-            linkDiv.appendChild(venueJa);
-
-            const venueEn = document.createElement("span");
-            venueEn.className = 'venue';
-            venueEn.textContent = link['venue-en'];
-            linkDiv.appendChild(venueEn);
-
-            const eventDatesJa = document.createElement("span");
-            eventDatesJa.className = 'event-dates';
-            eventDatesJa.textContent = link['event-dates-ja'];
-            linkDiv.appendChild(eventDatesJa);
-
-            const eventDatesEn = document.createElement("span");
-            eventDatesEn.className = 'event-dates';
-            eventDatesEn.textContent = link['event-dates-en'];
-            linkDiv.appendChild(eventDatesEn);
-
-            const descriptionJa = document.createElement("p");
-            descriptionJa.className = 'l-description';
-            descriptionJa.textContent = link['description-ja'];
-            linkDiv.appendChild(descriptionJa);
-
-
-            const descriptionEn = document.createElement("p");
-            descriptionEn.className = 'l-description';
-            descriptionEn.textContent = link['description-en'];
-            linkDiv.appendChild(descriptionEn);
-
-            const linkP = document.createElement('p');
-            const lLink = document.createElement('a');//ここでうっかりlinkっていう変数を作っちゃうとかぶるのでうまくいかない
-            lLink.className = 'l-link';
-            lLink.textContent = link['name-ja'] + "のサイトです";//リンクに何かしらテキストがないと見えない
-            lLink.href = link['link'];
-            linkP.appendChild(lLink);
-            linkDiv.appendChild(linkP);
-
-
-            //画像にリンク付する構造
-            const linkPhotoP = document.createElement('p');
-            const linkOnPhoto = document.createElement('a');
-            const exhibiPhoto = document.createElement("img");
-            linkOnPhoto.className = 'l-link';
-            exhibiPhoto.className = 'l-photo';
-            exhibiPhoto.src = link['photo'];
-            exhibiPhoto.alt = link['name-ja'];
-            linkOnPhoto.href = link['link'];
-            linkOnPhoto.target = "_blank";
-            linkOnPhoto.appendChild(exhibiPhoto);
-            linkPhotoP.appendChild(linkOnPhoto);
-            // document.getElementById('sotsutenLinkDiv').appendChild(linkPhotoP, exhibiPhoto);
-
-
-            // document.getElementById('links').appendChild(linkDiv);
 
         }
 
@@ -136,37 +88,6 @@ const renderLink = (json) => {
     //document.getElementById('result-link').textContent = JSON.stringify(json, null, 2);//JavaScript のオブジェクトや値を JSON 文字列に変換させて、HTML上のresultというidがついたdivに付与？する。最後の引数は上限が10のスペーシング 変わってんのかわからない
 }
 
-
-const getData = async () => {
-    try {
-        const response = await fetch(endpoint);
-        if (response.ok) {
-            let jsonResponse = await response.json();
-            renderStudio(jsonResponse);
-        }
-    }
-    catch (error) {
-        console.log(error);
-    }
-}
-
-getData();
-
-
-const getData2 = async () => {
-    try {
-        const response = await fetch(endpoint2);
-        if (response.ok) {
-            let jsonResponse = await response.json();
-            renderFaculty(jsonResponse);
-        }
-    }
-    catch (error) {
-        console.log(error);
-    }
-}
-
-getData2();
 
 
 
@@ -194,3 +115,33 @@ let lottieObj = lottie.loadAnimation({
     autoplay: true, // 自動再生、falseの場合は自分のタイミングで
     path: 'https://assets6.lottiefiles.com/packages/lf20_lp3wO4.json' // 再生させたいアニメーションのjsonのパスを指定します。リンクだといけるな…なんだそれ
 });
+
+
+
+
+//topへ戻るボタン　ref:https://hiroshi-yokota.com/2019/12/10/back-to-top/
+function getScrolled() {
+    return (window.pageYOffset !== undefined) ? window.pageYOffset : document.documentElement.scrollTop;
+}
+
+//トップに戻るボタンの要素を取得
+var topButton = document.getElementById('js-scroll-fadein');
+
+//ボタンの表示・非表示
+window.onscroll = function () {
+    (getScrolled() > 500) ? topButton.classList.add('is-fadein') : topButton.classList.remove('is-fadein');
+};
+
+//トップに移動する関数
+function scrollToTop() {
+    var scrolled = getScrolled();
+    window.scrollTo(0, Math.floor(scrolled / 2));
+    if (scrolled > 0) {
+        window.setTimeout(scrollToTop, 30);
+    }
+};
+
+//イベント登録
+topButton.onclick = function () {
+    scrollToTop();
+};

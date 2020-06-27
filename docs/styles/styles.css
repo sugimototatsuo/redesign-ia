@@ -38,13 +38,16 @@
      font-weight: 300;
      color: #000;
    }
-    h2 {
+
+   h2.sectionTitle {
        font-weight: 600;
        font-size: 36px;
        color: #000;
        margin:20px 0px;
      }
-   
+   h1.page-title{
+    margin-bottom:40px
+   }
      p{
        font-size: 16px;
      }
@@ -53,6 +56,8 @@
      }
      a { 
          text-decoration: none ;
+         cursor: pointer;
+
      }
  
     header a:link {
@@ -118,7 +123,7 @@
        font: normal 8pt "Helvetica Neue", Helvetica, Arial, sans-serif;
        margin-bottom: 13px; }
      footer p.ja {
-       font: normal 8pt "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, Osaka, "MS PGothic", arial, helvetica, sans-serif; }
+       font-size:8pt; }
      footer a {
        text-decoration: none; }
        footer a.sd {
@@ -136,7 +141,7 @@
  header {
      width: 100%;
      padding: 15px 0;
-     margin: 0 auto;
+     margin: 30px 0 auto;
      text-align: center;
    }
    

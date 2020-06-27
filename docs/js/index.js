@@ -64,6 +64,7 @@ const renderJson2 = (json) => {
   faculty.pop();
   faculty.forEach(faculty => {
     const nomalFacultyDiv = document.createElement('div');
+    const nomalFacultyTextDiv = document.createElement('div');
     const nomalFacultyname = document.createElement("span");
     const nomalFacultynameEn = document.createElement("span");
     const nomalFacultyTitle = document.createElement("span");
@@ -72,6 +73,7 @@ const renderJson2 = (json) => {
     const nomalFacultyImage = document.createElement("img");
     //nomal~のところは全部日本語版サイト。
     //○○.classNameのところ、上から順に、教員名（日本語）、教員名（英語）、教授か助教かとか、所属スタジオ、教員の専攻、写真
+    nomalFacultyTextDiv.className = 'text-box'
     nomalFacultyname.className = 'faculty-name';
     nomalFacultynameEn.className = 'faculty-name-2';
     nomalFacultyTitle.className = 'faculty-title';
@@ -86,6 +88,7 @@ const renderJson2 = (json) => {
     nomalFacultyImage.src = faculty['faculty-photo'];
 
     const englishFacultyDiv = document.createElement('div');
+    const englishFacultyTextDiv = document.createElement('div');
     const englishFacultyname = document.createElement("span");
     const englishFacultynameJa = document.createElement("span");
     const englishFacultyTitle = document.createElement("span");
@@ -94,6 +97,7 @@ const renderJson2 = (json) => {
     const englishFacultyImage = document.createElement("img");
     //english~のところは全部日本語版サイト。
     //○○.classNameのところ、上から順に、教員名（英語）、教員名（日本語）、教授か助教かとか、所属スタジオ、教員の専攻、写真
+    englishFacultyTextDiv.className = 'text-box'
     englishFacultyname.className = 'faculty-name-en';
     englishFacultynameJa.className = 'faculty-name-en2';
     englishFacultyTitle.className = 'faculty-title-en';
@@ -108,18 +112,20 @@ const renderJson2 = (json) => {
     englishFacultyImage.src = faculty['faculty-photo'];
 
     nomalFacultyDiv.appendChild(nomalFacultyImage);
-    nomalFacultyDiv.appendChild(nomalFacultyname);
-    nomalFacultyDiv.appendChild(nomalFacultyTitle);
-    nomalFacultyDiv.appendChild(nomalFacultynameEn);
-    nomalFacultyDiv.appendChild(nomalFacultyStudio);
-    nomalFacultyDiv.appendChild(nomalFacultyMajor);
+    nomalFacultyDiv.appendChild(nomalFacultyTextDiv);
+    nomalFacultyTextDiv.appendChild(nomalFacultyname);
+    nomalFacultyTextDiv.appendChild(nomalFacultyTitle);
+    nomalFacultyTextDiv.appendChild(nomalFacultynameEn);
+    nomalFacultyTextDiv.appendChild(nomalFacultyStudio);
+    nomalFacultyTextDiv.appendChild(nomalFacultyMajor);
     document.getElementById('nomalFaculty').appendChild(nomalFacultyDiv);
     englishFacultyDiv.appendChild(englishFacultyImage);
-    englishFacultyDiv.appendChild(englishFacultyname);
-    englishFacultyDiv.appendChild(englishFacultyTitle);
-    englishFacultyDiv.appendChild(englishFacultynameJa);
-    englishFacultyDiv.appendChild(englishFacultyStudio);
-    englishFacultyDiv.appendChild(englishFacultyMajor);
+    englishFacultyDiv.appendChild(englishFacultyTextDiv)
+    englishFacultyTextDiv.appendChild(englishFacultyname);
+    englishFacultyTextDiv.appendChild(englishFacultyTitle);
+    englishFacultyTextDiv.appendChild(englishFacultynameJa);
+    englishFacultyTextDiv.appendChild(englishFacultyStudio);
+    englishFacultyTextDiv.appendChild(englishFacultyMajor);
     document.getElementById('englishFaculty').appendChild(englishFacultyDiv);
   });
 

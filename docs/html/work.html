@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../sass/reset.css">
+    <link rel="stylesheet" href="../sass/work.css">
     <link rel="shortcut icon" href="../image/mark.ico">
 </head>
 
@@ -14,12 +15,47 @@
         <p id="englishButton" style="display: none">Undo</p>
     </button>
 
-    <h1 id=nomalTitle style="display: block">学生作品</h1>
-    <h1 id="englishTitle" style="display: none">Student's Works</h1>
-    <p>インダストリアルアート学科の授業で作成した作品です。</p>
+    <div class="bg-purple">
+        <h1 id=nomalTitle style="display: block">学生作品</h1>
+        <h1 id="englishTitle" style="display: none">Student's Works</h1>
+        <p>インダストリアルアート学科の授業で作成した作品です。</p>
+    </div>
 
+    <h3 class="grade-title">学部1年</h3>
     <div id="works1">
-        <h3>学部1年</h3>
+        <!--  -->
+
+
+        <input type="checkbox" id="modal01" class="modalCheck">
+        <div class="wrapper">
+            <div class="mainVisual main01 flex center">
+                <div class="btn"><label for="modal01"><img src="../image/iconB1/基礎造形A2_icon.png" title="kisoA2"></label></div>
+                <!-- /.mainVisual -->
+            </div>
+
+            <div id="modal01Con" class="modalWrap">
+                <div class="modalBg"><label for="modal01" class="closeModal"></label></div>
+
+                <div class="modalCon">
+                    <div class="modalInner">
+                        <div class="modalCloseBtn"><label for="modal01" class="closeModal">×</label></div>
+                        <div class="modalText">
+                            <div class="modalCover"><img src="../image/workB1/基礎造形A.jpg" title="popupkisoA2"></div>
+                            <h3>基礎造形A 「線による造形表現」</h3>
+                            <h4>担当教員：西崎美穂 准教授</h4>
+                            <!-- /.modalText -->
+                        </div>
+                        <!-- /.modalInner -->
+                    </div>
+                    <!-- /.modalCon -->
+                </div>
+                <!-- /.modalWrap -->
+            </div>
+        </div>
+
+
+
+        <!--  -->
         <a class="item">
             <img src="../image/iconB1/基礎造形A2_icon.png" title="kisoA2">
         </a>
@@ -170,9 +206,9 @@
         <!--ここまで-->
     </div>
 
-    <div id="work2">
-        <h3>学部2年</h3>
-        <a class="item">
+    <h3 class="grade-title">学部2年</h3>
+    <div id="works2">
+        <a class="item"><label for="modal01"></label>
             <img src="../image/iconB2/スペース_icon.png" title="space">
         </a>
         <!--ポップアップ-->
@@ -326,8 +362,8 @@
 
     </div>
 
-    <div id="work3">
-        <h3>学部3年</h3>
+    <h3 class="grade-title">学部3年</h3>
+    <div id="works3">
         <p>＊学部3年次以降の授業は日野キャンパスでの開講となります。</p>
         <a class="item">
             <img src="../image/iconB3/LIvingDesignB180122_icon.png" title="lid">

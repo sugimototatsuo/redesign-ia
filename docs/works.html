@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/works.css">
 
     <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
         <meta property="og:url" content="https://sumikko-mountain.github.io/redesign-ia/" />
@@ -20,214 +21,243 @@
         <meta name="twitter:site" content="@ia_sd_tmu" />
         <meta name="twitter:player" content="@ia_sd_tmu" />
 
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+        <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+        <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
+
+        <!--フォント取得-->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+            rel="stylesheet">
+
     </head>
 
 <body>
-    <header>
-        <ul>
-            <li>HOME</li>
-            <li>NEWS</li>
-            <li>ABOUT</li>
-            <li>STUDIO</li>
-            <li>FACULTY</li>
-            <li>WORKS</li>
-            <li>ACCESS</li>
-        </ul>
-    </header>
+    <main>
+        <header>
+            <ul class="nav-list">
+                <li class="nav-list-item"><a href="./index.html">HOME</a></li>
+                <li class="nav-list-item"><a href="./about.html">ABOUT</a></li>
+                <li class="nav-list-item"><a href="./news.html">NEWS</a></li>
+                <li class="nav-list-item"><a href="./studio.html">STUDIO</a></li>
+                <li class="nav-list-item"><a href="./faculty.html">FACULTY</a></li>
+                <li class="nav-list-item"><a class="here" href="./works.html">WORKS</a></li>
+                <li class="nav-list-item"><a href="./access.html">ACCESS</a></li>
+            </ul>
+        </header>
 
-    <div class="zentai">
-        <figure>
-            <img src="./Image/ex.jpg" alt="aaaa" width="200" height="200" />
-            <figcaption>
-                <h3>Caption Title</h3>
-                <p>caption text here ...</p>
-            </figcaption>
-        </figure>
+        <section class="contents" style="opacity: 1;">
 
-        <figure>
-            <img src="./Image/ex1.jpg" alt="aaaa" width="200" height="200" />
-            <figcaption>
-                <h3>Caption Title</h3>
-                <p>caption text here ...</p>
-            </figcaption>
-        </figure>
+            <h1 class="page-title">WORKS</h1>
+            <div class="zentai">
+                <figure>
+                    <img src="./img/works/ex.jpg" alt="aaaa" width="200" height="200" />
+                    <figcaption>
+                        <h3>Caption Title</h3>
+                        <p>caption text here ...</p>
+                    </figcaption>
+                </figure>
 
-        <figure>
-            <img src="./Image/ex2.jpg" alt="aaaa" width="200" height="200" />
-            <figcaption>
-                <h3>Caption Title</h3>
-                <p>caption text here ...</p>
-            </figcaption>
-        </figure>
+                <figure>
+                    <img src="./img/works/ex1.jpg" alt="aaaa" width="200" height="200" />
+                    <figcaption>
+                        <h3>Caption Title</h3>
+                        <p>caption text here ...</p>
+                    </figcaption>
+                </figure>
 
-        <figure>
-            <img src="./Image/ex3.jpg" alt="aaaa" width="200" height="200" />
-            <figcaption>
-                <h3>Caption Title</h3>
-                <p>caption text here ...</p>
-            </figcaption>
-        </figure>
+                <figure>
+                    <img src="./img/works/ex2.jpg" alt="aaaa" width="200" height="200" />
+                    <figcaption>
+                        <h3>Caption Title</h3>
+                        <p>caption text here ...</p>
+                    </figcaption>
+                </figure>
 
-        <figure>
-            <img src="./Image/ex4.jpg" alt="aaaa" width="200" height="200" />
-            <figcaption>
-                <h3>Caption Title</h3>
-                <p>caption text here ...</p>
-            </figcaption>
-        </figure>
+                <figure>
+                    <img src="./img/works/ex3.jpg" alt="aaaa" width="200" height="200" />
+                    <figcaption>
+                        <h3>Caption Title</h3>
+                        <p>caption text here ...</p>
+                    </figcaption>
+                </figure>
 
-        <figure>
-            <img src="./Image/ex5.jpg" alt="aaaa" width="200" height="200" />
-            <figcaption>
-                <h3>Caption Title</h3>
-                <p>caption text here ...</p>
-            </figcaption>
-        </figure>
+                <figure>
+                    <img src="./img/works/ex4.jpg" alt="aaaa" width="200" height="200" />
+                    <figcaption>
+                        <h3>Caption Title</h3>
+                        <p>caption text here ...</p>
+                    </figcaption>
+                </figure>
 
-        <figure>
-            <img src="./Image/ex6.jpg" alt="aaaa" width="200" height="200" />
-            <figcaption>
-                <h3>Caption Title</h3>
-                <p>caption text here ...</p>
-            </figcaption>
-        </figure>
+                <figure>
+                    <img src="./img/works/ex5.jpg" alt="aaaa" width="200" height="200" />
+                    <figcaption>
+                        <h3>Caption Title</h3>
+                        <p>caption text here ...</p>
+                    </figcaption>
+                </figure>
 
-        <figure>
-            <img src="./Image/ex7.jpg" alt="aaaa" width="200" height="200" />
-            <figcaption>
-                <h3>Caption Title</h3>
-                <p>caption text here ...</p>
-            </figcaption>
-        </figure>
+                <figure>
+                    <img src="./img/works/ex6.jpg" alt="aaaa" width="200" height="200" />
+                    <figcaption>
+                        <h3>Caption Title</h3>
+                        <p>caption text here ...</p>
+                    </figcaption>
+                </figure>
 
-        <figure>
-            <img src="./Image/ex.jpg" alt="aaaa" width="200" height="200" />
-            <figcaption>
-                <h3>Caption Title</h3>
-                <p>caption text here ...</p>
-            </figcaption>
-        </figure>
+                <figure>
+                    <img src="./img/works/ex7.jpg" alt="aaaa" width="200" height="200" />
+                    <figcaption>
+                        <h3>Caption Title</h3>
+                        <p>caption text here ...</p>
+                    </figcaption>
+                </figure>
 
-        <figure>
-            <img src="./Image/ex1.jpg" alt="aaaa" width="200" height="200" />
-            <figcaption>
-                <h3>Caption Title</h3>
-                <p>caption text here ...</p>
-            </figcaption>
-        </figure>
+                <figure>
+                    <img src="./img/works/ex.jpg" alt="aaaa" width="200" height="200" />
+                    <figcaption>
+                        <h3>Caption Title</h3>
+                        <p>caption text here ...</p>
+                    </figcaption>
+                </figure>
 
-        <figure>
-            <img src="./Image/ex2.jpg" alt="aaaa" width="200" height="200" />
-            <figcaption>
-                <h3>Caption Title</h3>
-                <p>caption text here ...</p>
-            </figcaption>
-        </figure>
+                <figure>
+                    <img src="./img/works/ex1.jpg" alt="aaaa" width="200" height="200" />
+                    <figcaption>
+                        <h3>Caption Title</h3>
+                        <p>caption text here ...</p>
+                    </figcaption>
+                </figure>
 
-        <figure>
-            <img src="./Image/ex3.jpg" alt="aaaa" width="200" height="200" />
-            <figcaption>
-                <h3>Caption Title</h3>
-                <p>caption text here ...</p>
-            </figcaption>
-        </figure>
+                <figure>
+                    <img src="./img/works/ex2.jpg" alt="aaaa" width="200" height="200" />
+                    <figcaption>
+                        <h3>Caption Title</h3>
+                        <p>caption text here ...</p>
+                    </figcaption>
+                </figure>
 
-        <figure>
-            <img src="./Image/ex4.jpg" alt="aaaa" width="200" height="200" />
-            <figcaption>
-                <h3>Caption Title</h3>
-                <p>caption text here ...</p>
-            </figcaption>
-        </figure>
+                <figure>
+                    <img src="./img/works/ex3.jpg" alt="aaaa" width="200" height="200" />
+                    <figcaption>
+                        <h3>Caption Title</h3>
+                        <p>caption text here ...</p>
+                    </figcaption>
+                </figure>
 
-        <figure>
-            <img src="./Image/ex5.jpg" alt="aaaa" width="200" height="200" />
-            <figcaption>
-                <h3>Caption Title</h3>
-                <p>caption text here ...</p>
-            </figcaption>
-        </figure>
+                <figure>
+                    <img src="./img/works/ex4.jpg" alt="aaaa" width="200" height="200" />
+                    <figcaption>
+                        <h3>Caption Title</h3>
+                        <p>caption text here ...</p>
+                    </figcaption>
+                </figure>
 
-        <figure>
-            <img src="./Image/ex6.jpg" alt="aaaa" width="200" height="200" />
-            <figcaption>
-                <h3>Caption Title</h3>
-                <p>caption text here ...</p>
-            </figcaption>
-        </figure>
+                <figure>
+                    <img src="./img/works/ex5.jpg" alt="aaaa" width="200" height="200" />
+                    <figcaption>
+                        <h3>Caption Title</h3>
+                        <p>caption text here ...</p>
+                    </figcaption>
+                </figure>
 
-        <figure>
-            <img src="./Image/ex7.jpg" alt="aaaa" width="200" height="200" />
-            <figcaption>
-                <h3>Caption Title</h3>
-                <p>caption text here ...</p>
-            </figcaption>
-        </figure>
+                <figure>
+                    <img src="./img/works/ex6.jpg" alt="aaaa" width="200" height="200" />
+                    <figcaption>
+                        <h3>Caption Title</h3>
+                        <p>caption text here ...</p>
+                    </figcaption>
+                </figure>
 
-        <figure>
-            <img src="./Image/ex.jpg" alt="aaaa" width="200" height="200" />
-            <figcaption>
-                <h3>Caption Title</h3>
-                <p>caption text here ...</p>
-            </figcaption>
-        </figure>
+                <figure>
+                    <img src="./img/works/ex7.jpg" alt="aaaa" width="200" height="200" />
+                    <figcaption>
+                        <h3>Caption Title</h3>
+                        <p>caption text here ...</p>
+                    </figcaption>
+                </figure>
 
-        <figure>
-            <img src="./Image/ex1.jpg" alt="aaaa" width="200" height="200" />
-            <figcaption>
-                <h3>Caption Title</h3>
-                <p>caption text here ...</p>
-            </figcaption>
-        </figure>
+                <figure>
+                    <img src="./img/works/ex.jpg" alt="aaaa" width="200" height="200" />
+                    <figcaption>
+                        <h3>Caption Title</h3>
+                        <p>caption text here ...</p>
+                    </figcaption>
+                </figure>
 
-        <figure>
-            <img src="./Image/ex2.jpg" alt="aaaa" width="200" height="200" />
-            <figcaption>
-                <h3>Caption Title</h3>
-                <p>caption text here ...</p>
-            </figcaption>
-        </figure>
+                <figure>
+                    <img src="./img/works/ex1.jpg" alt="aaaa" width="200" height="200" />
+                    <figcaption>
+                        <h3>Caption Title</h3>
+                        <p>caption text here ...</p>
+                    </figcaption>
+                </figure>
 
-        <figure>
-            <img src="./Image/ex3.jpg" alt="aaaa" width="200" height="200" />
-            <figcaption>
-                <h3>Caption Title</h3>
-                <p>caption text here ...</p>
-            </figcaption>
-        </figure>
+                <figure>
+                    <img src="./img/works/ex2.jpg" alt="aaaa" width="200" height="200" />
+                    <figcaption>
+                        <h3>Caption Title</h3>
+                        <p>caption text here ...</p>
+                    </figcaption>
+                </figure>
 
-        <figure>
-            <img src="./Image/ex4.jpg" alt="aaaa" width="200" height="200" />
-            <figcaption>
-                <h3>Caption Title</h3>
-                <p>caption text here ...</p>
-            </figcaption>
-        </figure>
+                <figure>
+                    <img src="./img/works/ex3.jpg" alt="aaaa" width="200" height="200" />
+                    <figcaption>
+                        <h3>Caption Title</h3>
+                        <p>caption text here ...</p>
+                    </figcaption>
+                </figure>
 
-        <figure>
-            <img src="./Image/ex5.jpg" alt="aaaa" width="200" height="200" />
-            <figcaption>
-                <h3>Caption Title</h3>
-                <p>caption text here ...</p>
-            </figcaption>
-        </figure>
+                <figure>
+                    <img src="./img/works/ex4.jpg" alt="aaaa" width="200" height="200" />
+                    <figcaption>
+                        <h3>Caption Title</h3>
+                        <p>caption text here ...</p>
+                    </figcaption>
+                </figure>
 
-        <figure>
-            <img src="./Image/ex6.jpg" alt="aaaa" width="200" height="200" />
-            <figcaption>
-                <h3>Caption Title</h3>
-                <p>caption text here ...</p>
-            </figcaption>
-        </figure>
+                <figure>
+                    <img src="./img/works/ex5.jpg" alt="aaaa" width="200" height="200" />
+                    <figcaption>
+                        <h3>Caption Title</h3>
+                        <p>caption text here ...</p>
+                    </figcaption>
+                </figure>
 
-        <figure>
-            <img src="./Image/ex7.jpg" alt="aaaa" width="200" height="200" />
-            <figcaption>
-                <h3>Caption Title</h3>
-                <p>caption text here ...</p>
-            </figcaption>
-        </figure>
+                <figure>
+                    <img src="./img/works/ex6.jpg" alt="aaaa" width="200" height="200" />
+                    <figcaption>
+                        <h3>Caption Title</h3>
+                        <p>caption text here ...</p>
+                    </figcaption>
+                </figure>
 
+                <figure>
+                    <img src="./img/works/ex7.jpg" alt="aaaa" width="200" height="200" />
+                    <figcaption>
+                        <h3>Caption Title</h3>
+                        <p>caption text here ...</p>
+                    </figcaption>
+                </figure>
+
+
+            </div>
+
+            <footer>
+                <section class="en">
+                    <p class="ja">東京都立大学 システムデザイン学部／研究科</p>
+                    <p class="sd">Faculty &amp; Graduate School of Systems Design</p><a class="sd"
+                        href="https://www.tmu.ac.jp/">Copyright ©2018 Tokyo Metropolitan University. All rights
+                        reserved.</a>
+                </section>
+            </footer>
+        </section>
+    </main>
+
+    <!--topに戻る-->
+    <div id="js-scroll-fadein" class="js-scroll-fadein arrow">
+        <img id="view" src="./img/icon/GOtoTOP/GOtoTOP_icon_White.png" width=80px height=auto>
 
     </div>
     <script src="js/lottie.min.js"></script>

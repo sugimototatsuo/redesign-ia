@@ -29,13 +29,13 @@ const renderStudio = (json) => {//シートごとに使い分ける
 
 
             //スタジオタイトル　とコアの表示
-            const studioCoreJa = document.createElement("h4");
-            studioCoreJa.className = 'studio-core';
+            const studioCoreJa = document.createElement("p");
+            studioCoreJa.className = 'studio-core-top';
             studioCoreJa.textContent = studio['core-ja'];
             studioTitleTextDiv.appendChild(studioCoreJa);
 
-            const studioTitleJa = document.createElement("h2");
-            studioTitleJa.className = 'studio-title';
+            const studioTitleJa = document.createElement("p");
+            studioTitleJa.className = 'studio-title-top';
             studioTitleJa.textContent = studio['name-ja'];
             studioTitleTextDiv.appendChild(studioTitleJa);
 

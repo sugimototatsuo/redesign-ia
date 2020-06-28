@@ -13,6 +13,7 @@
 
 <body>
   <div class="wrap">
+
     <div id="showloading">
       <img src="./image/loading.gif" alt="loading">
     </div>
@@ -95,41 +96,38 @@
       </div>
 
       <div class="right_h">
-        <a href="https://www.tmu.ac.jp/entrance/faculty/application_guidebook.html">
-          <p id="nomalRec" style="display: block">資料請求</p>
-          <p id="englishRec" style="display: none">Brochure</p>
-          <p id="easyRec" style="display: none"><ruby>
-              <rb>資料請求</rb>
-              <rt>しりょうせいきゅう</rt>
-            </ruby></p>
-        </a>
-        <a href="#">
-          <p id="nomalLang" style="display: block">言語</p>
-          <p id="englishLang" style="display: none">Language</p>
-          <p id="easyLang" style="display: none"><ruby>
-              <rb>言葉</rb>
-              <rt>ことば</rt>
-            </ruby></p>
-        </a>
+
+
+        <label for="type1" class="lang">言語</label>
+        <input type="checkbox" id="type1" class="accordion">
+        <ul id="links1">
+          <li id="button" class="open">
+            <p id="nomalButton" style="display: block">English</p>
+            <p id="englishButton" style="display: none">Undo</p>
+          </li>
+          <li><button id="button2" class="open">
+              <p id="nomalButton2" style="display: block">やさしい<br>にほんご</p>
+              <p id="easyButton2" style="display: none">もとに もどす</p>
+            </button></li>
+        </ul>
+        <label for="type2">資料</label>
+        <input type="checkbox" id="type2" class="accordion">
+
       </div>
     </header>
 
     <div id="mainContent" class="hidden">
 
-
-
       <!-- あとで位置変更 -->
-      <button id="button" class="open">
+      <!-- <button id="button" class="open">
         <p id="nomalButton" style="display: block">English</p>
         <p id="englishButton" style="display: none">Undo</p>
-      </button>
+      </button> -->
 
-      <button id="button2" class="open">
+      <!-- <button id="button2" class="open">
         <p id="nomalButton2" style="display: block">やさしいにほんご</p>
         <p id="easyButton2" style="display: none">もとに もどす</p>
-      </button>
-
-
+      </button> -->
 
       <div class="main-visual">
         <h1 id="nomalTitle" style="display: block">東京都立大学 システムデザイン学部<br>インダストリアルアート学科</h1>
@@ -289,6 +287,7 @@
             </a>
           </div>
           <div id="moreBtnWork" class="moreBtn">
+
             <!--<a href="./html/work.html?langMode" title="seeMore">-->
             <p id="nomalWorkText" style="display: block">もっと見る</p>
             <p id="englishWorkText" style="display: none">see more</p>
@@ -298,7 +297,6 @@
                 <rt>み</rt>
               </ruby>る
             </p>
-            <!--</a>-->
           </div>
 
 
@@ -1310,8 +1308,7 @@
             </p>
 
           </div>
-
-        </div>
+          </div>
 
         <div id="question">
           <h3 class="section_title" id="nomalContentsTitle7" style="display: block">- よくある質問 -</h3>
@@ -1418,7 +1415,6 @@
                 src="https://docs.google.com/forms/d/e/1FAIpQLSeUW0nKHalhyZksHTGTAe7rTyidckQmQ96ll3XzZFL3GPhNTw/viewform?embedded=true"
                 width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
             </div>
-
           </div>
 
           <div id="englishQText" style="display: none">
@@ -1430,6 +1426,7 @@
                   https://www.tmu.ac.jp/entrance/faculty/outline/others.html#shihi</a>
               </li>
             </ul>
+
             </br>
             <div
               onclick="obj=document.getElementById('qplusen').style; obj.display=(obj.display=='none')?'block':'none';">
@@ -1448,6 +1445,7 @@
             <ul>
               <li>
                 <h4>
+
                   どんな<ruby>
                     <rb>資格</rb>
                     <rt>しかく</rt>
@@ -2279,11 +2277,7 @@
             </ruby>6-6
           </p>
           <p>TEL 042-585-8606</p>
-
-        </div>
-      </div>
-
-
+</div>
       <footer>
         <p>東京都立大学</p>
         <p>Tokyo Metropolitan University</p>

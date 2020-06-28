@@ -19,76 +19,80 @@
 
     <div id="mainContent" class="hidden">-->
 
-    <!--headerはコピペなので不都合あったら直してください-->
+    <!-- <div class="wrap">
+        <div id="showloading">
+            <img src="./image/loading.gif" alt="loading">
+        </div> -->
+
     <header>
         <div class="left_h">
             <nav>
                 <ul>
-                    <li><a id="head-aboutus">
+                    <li><a href="#aboutus">
                             <h3 id="nomalSubtitle1" style="display: block">学科概要</h3>
                             <h3 id="easySubtitle1" style="display: none">この<ruby>
-                                    <rb>学科</rb>
-                                    <rt>がっか</rt>
-                                </ruby>について</h3>
+                      <rb>学科</rb>
+                      <rt>がっか</rt>
+                    </ruby>について</h3>
                             <h3 id="englishSubtitle1" style="display: none">Summary</h3>
                         </a></li>
-                    <li><a id="head-work">
+                    <li><a href="#works">
                             <h3 id="nomalSubtitle2" style="display: block">作品</h3>
                             <h3 id="easySubtitle2" style="display: none"><ruby>
-                                    <rb>作品</rb>
-                                    <rt>さくひん</rt>
-                                </ruby></h3>
+                      <rb>作品</rb>
+                      <rt>さくひん</rt>
+                    </ruby></h3>
                             <h3 id="englishSubtitle2" style="display: none">Works</h3>
                         </a></li>
-                    <li><a id="head-curriculm">
+                    <li><a href="#curriculum">
                             <h3 id="nomalSubtitle3" style="display: block">カリキュラム</h3>
                             <h3 id="easySubtitle3" style="display: none">カリキュラム</h3>
                             <h3 id="englishSubtitle3" style="display: none">Curriculum</h3>
                         </a></li>
-                    <li><a id="head-studios">
+                    <li><a href="#studios">
                             <h3 id="nomalSubtitle4" style="display: block">スタジオ紹介</h3>
                             <h3 id="easySubtitle4" style="display: none">スタジオ<ruby>
-                                    <rb>紹介</rb>
-                                    <rt>しょうかい</rt>
-                                </ruby></h3>
+                      <rb>紹介</rb>
+                      <rt>しょうかい</rt>
+                    </ruby></h3>
                             <h3 id="englishSubtitle4" style="display: none">Studios</h3>
                         </a></li>
-                    <li><a id="head-faculty">
+                    <li><a href="#faculty">
                             <h3 id="nomalSubtitle5" style="display: block">教員紹介</h3>
                             <h3 id="easySubtitle5" style="display: none"><ruby>
-                                    <rb>先生</rb>
-                                    <rt>せんせい</rt>
-                                </ruby>の<ruby>
-                                    <rb>紹介</rb>
-                                    <rt>しょうかい</rt>
-                                </ruby></h3>
+                      <rb>先生</rb>
+                      <rt>せんせい</rt>
+                    </ruby>の<ruby>
+                      <rb>紹介</rb>
+                      <rt>しょうかい</rt>
+                    </ruby></h3>
                             <h3 id="englishSubtitle5" style="display: none">Faculty</h3>
                         </a></li>
-                    <li><a id="head-column">
+                    <li><a href="#column">
                             <h3 id="nomalSubtitle9" style="display: block">関連コンテンツ</h3>
                             <h3 id="easySubtitle9" style="display: none"><ruby>
-                                    <rb>関連</rb>
-                                    <rt>かんれん</rt>
-                                </ruby>コンテンツ</h3>
+                      <rb>関連</rb>
+                      <rt>かんれん</rt>
+                    </ruby>コンテンツ</h3>
                             <h3 id="englishSubtitle9" style="display: none">Column</h3>
                         </a></li>
-                    <li><a id="head-admission">
+                    <li><a href="#admission">
                             <h3 id="nomalSubtitle6" style="display: block">入試案内</h3>
                             <h3 id="easySubtitle6" style="display: none"><ruby>
-                                    <rb>入学試験</rb>
-                                    <rt>にゅうがくしけん</rt>
-                                </ruby>について</h3>
+                      <rb>入学試験</rb>
+                      <rt>にゅうがくしけん</rt>
+                    </ruby>について</h3>
                             <h3 id="englishSubtitle6" style="display: none">Admission</h3>
                         </a></li>
-                    <li><a id="head-question">
+                    <li><a href="#question">
                             <h3 id="nomalSubtitle7" style="display: block">よくある質問</h3>
                             <h3 id="easySubtitle7" style="display: none">よくある<ruby>
-                                    <rb>質問</rb>
-                                    <rt>しつもん</rt>
-                                </ruby></h3>
+                      <rb>質問</rb>
+                      <rt>しつもん</rt>
+                    </ruby></h3>
                             <h3 id="englishSubtitle7" style="display: none">Q&A</h3>
                         </a></li>
-                    <li><a id="head-access">
+                    <li><a href="#access">
                             <h3 id="nomalSubtitle8" style="display: block">アクセス</h3>
                             <h3 id="easySubtitle8" style="display: none">アクセス</h3>
                             <h3 id="englishSubtitle8" style="display: none">Access</h3>
@@ -96,21 +100,36 @@
                 </ul>
             </nav>
         </div>
+
         <div class="right_h">
-            <a href="https://www.tmu.ac.jp/entrance/faculty/application_guidebook.html">資料請求</a>
-            <a href="#">言語</a>
+
+            <label for="type1" class="lang">言語</label>
+            <input type="checkbox" id="type1" class="accordion">
+            <ul id="links1">
+                <li id="button" class="open">
+                    <p id="nomalButton" style="display: block">English</p>
+                    <p id="englishButton" style="display: none">Undo</p>
+                </li>
+                <li><button id="button2" class="open">
+                        <p id="nomalButton2" style="display: block">やさしい<br>にほんご</p>
+                        <p id="easyButton2" style="display: none">もとに もどす</p>
+                    </button></li>
+            </ul>
+            <label for="type2">資料</label>
+            <input type="checkbox" id="type2" class="accordion">
         </div>
     </header>
+    <div style="height: 80px;"></div>
 
-    <button id="button" class="open">
-        <p id="nomalButton" style="display: block">English</p>
-        <p id="englishButton" style="display: none">Undo</p>
-    </button>
+    <!-- <button id="button" class="open">
+            <p id="nomalButton" style="display: block">English</p>
+            <p id="englishButton" style="display: none">Undo</p>
+        </button>
 
-    <button id="button2" class="open">
-        <p id="nomalButton2" style="display: block">やさしいにほんご</p>
-        <p id="easyButton2" style="display: none">もとに もどす</p>
-    </button>
+        <button id="button2" class="open">
+            <p id="nomalButton2" style="display: block">やさしいにほんご</p>
+            <p id="easyButton2" style="display: none">もとに もどす</p>
+        </button> -->
 
     <section>
         <div class="first_box">
@@ -122,8 +141,10 @@
                 <h1 id="englishTitle" style="display: none">Visual Communication Design Studio</h1>
                 <h1 id="easyTitle" style="display: none">ヴィジュアルコミュニケーション<br>デザインスタジオ</h1>
 
+
                 <a href="https://instagram.com/tmuvisualcommunication?igshid=kczy9tfuszha" target="_blank"><i
                         class="fab fa-instagram"></i></a>
+
 
                 <h4 id="nomalCore" style="display: block">メディアアートコア</h4>
                 <h4 id="englishCore" style="display: none">Media Art Core</h4>
@@ -161,14 +182,10 @@
                 </div>
             </div>
             <div class="left_box">
-                <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/vc1.jpg" alt="photo1"
-                    id="studioPhoto1">
-                <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/vc2.jpg" alt="photo2"
-                    id="studioPhoto2">
-                <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/vc3.jpg" alt="photo3"
-                    id="studioPhoto3">
-                <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/vc4.jpg" alt="photo4"
-                    id="studioPhoto4">
+                <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/vc1.jpg" alt="photo1" id="studioPhoto1">
+                <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/vc2.jpg" alt="photo2" id="studioPhoto2">
+                <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/vc3.jpg" alt="photo3" id="studioPhoto3">
+                <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/vc4.jpg" alt="photo4" id="studioPhoto4">
             </div>
         </div>
 
@@ -342,6 +359,12 @@
 
     </div>
     <!--</div>-->
+
+    <footer>
+        <p>東京都立大学</p>
+        <p>Tokyo Metropolitan University</p>
+    </footer>
+
     <script src="../js/js2.js"></script>
 </body>
 

@@ -85,29 +85,61 @@ header .right_h {
   height: 80px;
   float: right;
   text-align: center;
+  position: relative;
 }
 
-header .right_h a {
-  text-decoration: none;
-  color: #363636;
-  line-height: 80px;
+header label {
   display: inline-block;
-  width: 48%;
+  float: right;
+  margin-left: 5px;
+  width: 7rem;
+  line-height: 80px;
+  color: #000;
   background: #C3C3C3;
-  font-size: 1.0rem;
-  font-weight: bold;
+  cursor: pointer;
 }
 
-header .right_h a:hover {
-  opacity: 0.5;
+@media screen and (max-width: 1310px) {
+  header label {
+    width: 5.5rem;
+  }
 }
 
-.open {
-  margin-top: 80px;
+header input {
+  display: none;
+}
+
+header .right_h ul {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 8rem;
+  margin: 0;
+  padding: 0;
+  background: #C3C3C3;
+  list-style: none;
+}
+
+header .right_h li {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+header #type1:checked ~ #links1 li,
+header #type2:checked ~ #links2 li {
+  height: 70px;
+  opacity: 1;
+  cursor: pointer;
 }
 
 /* ========== main-visual ========== */
 .main-visual {
+  z-index: 0 !important;
   width: 100%;
   height: 800px;
   background-image: url(../image/header.png);
@@ -294,6 +326,7 @@ pre#result {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 2rem;
+  color: #2E2E2E;
 }
 
 #nomalFaculty > div {
@@ -335,6 +368,15 @@ pre#result {
 
 #faculty span.faculty-name-2, .faculty-name-en2 {
   display: block;
+}
+
+.faculty-link > a {
+  color: #2E2E2E;
+  text-decoration: none;
+}
+
+.faculty-link > a:hover {
+  opacity: 0.5;
 }
 
 #column {
@@ -385,7 +427,12 @@ pre#result {
 #admission #nomalAdmissionText img {
   display: block;
   width: 70%;
-  margin: 0.3rem auto;
+  margin: 0.3rem auto 1rem;
+}
+
+#admission #nomalAdmissionText a {
+  color: #2E2E2E;
+  text-decoration: none;
 }
 
 /* ========== question ========== */
@@ -398,9 +445,21 @@ pre#result {
   margin-top: 1rem;
 }
 
-#access .frame {
-  border: 1px solid #707070;
-  margin-bottom: -0.5rem;
+#nomalAcText, #englishAcText, #easyAcText {
+  padding: 2rem 3rem;
+  color: #2E2E2E;
+}
+
+#nomalAcText ul, #englishAcText ul, #easyAcText ul {
+  list-style: none;
+}
+
+#nomalAcText h4, #nomalAcText > p, #englishAcText h4, #englishAcText > p, #easyAcText h4, #easyAcText > p {
+  padding-left: 3rem;
+}
+
+#nomalAcText h4, #englishAcText h4, #easyAcText h4 {
+  padding-top: 0.3rem;
 }
 
 /* ========== footer ========== */

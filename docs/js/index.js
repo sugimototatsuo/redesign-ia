@@ -3,7 +3,7 @@ const uri = 'https://script.google.com/macros/s/AKfycbxyacpN8y4nxSAnU0Eji6E_rBRD
 const id = '1BpGnuwC4lZf9G2yFyiSrxbJuGO8gviV8mr-I2D3x4vA';
 const sheet = 'Studio';
 const sheet2 = "group4-faculty";
-const sheet3 = 'Link';
+const sheet3 = 'group4-link';
 const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 const endpoint2 = `${uri}?id=${id}&sheet=${sheet2}`;
 const endpoint3 = `${uri}?id=${id}&sheet=${sheet3}`;
@@ -174,19 +174,68 @@ const renderJson3 = (json) => {
   link.forEach(link => {
     const nomalLinkDiv = document.createElement('div');
     const nomalLinkTitle = document.createElement("a");
+    const nomalLink = document.createElement("a");
     const nomalLinkImage = document.createElement("img");
     nomalLinkTitle.textContent = link['name-ja'];
     //関連コンテンツ名のクラス
     nomalLinkTitle.className = 'link-title';
-    nomalLinkTitle.href = link['link'];
+    nomalLinkTitle.onclick = function () {
+      var langControll;
+      if (langMode == 0) {
+        langControll = "?lang=0";
+      } else if (langMode == 2) {
+        langControll = "?lang=2";
+      }
+      location.href = link['link'] + langControll;
+    };
+    nomalLink.onclick = function () {
+      var langControll;
+      if (langMode == 0) {
+        langControll = "?lang=0";
+      } else if (langMode == 2) {
+        langControll = "?lang=2";
+      }
+      location.href = link['link'] + langControll;
+    };
+
     nomalLinkImage.src = link['photo'];
     //関連コンテンツ画像のクラス
     nomalLinkImage.className = 'link-image';
 
-    nomalLinkDiv.appendChild(nomalLinkImage);
+    nomalLink.appendChild(nomalLinkImage);
+    nomalLinkDiv.appendChild(nomalLink);
     nomalLinkDiv.appendChild(nomalLinkTitle);
     //nomalStudioDiv.appendChild(nomalStudioLink);
     document.getElementById('nomalLink').appendChild(nomalLinkDiv);
+
+    const englishLinkDiv = document.createElement('div');
+    const englishLinkTitle = document.createElement("a");
+    const englishLink = document.createElement("a");
+    const englishLinkImage = document.createElement("img");
+    englishLinkTitle.textContent = link['name-en'];
+    //関連コンテンツ名のクラス
+    englishLinkTitle.className = 'link-title';
+    englishLinkTitle.onclick = function () {
+      var langControll;
+      langControll = "?lang=1";
+      location.href = link['link'] + langControll;
+    };
+    englishLink.onclick = function () {
+      var langControll;
+      langControll = "?lang=1";
+      location.href = link['link'] + langControll;
+    };
+
+    englishLinkImage.src = link['photo'];
+    //関連コンテンツ画像のクラス
+    englishLinkImage.className = 'link-image';
+
+    englishLink.appendChild(englishLinkImage);
+    englishLinkDiv.appendChild(englishLink);
+    englishLinkDiv.appendChild(englishLinkTitle);
+    //nomalStudioDiv.appendChild(nomalStudioLink);
+    document.getElementById('englishLink').appendChild(englishLinkDiv);
+
 
   });
 
@@ -212,6 +261,13 @@ window.onload = function () {
     document.getElementById('englishButton').style.display = "block";
     document.getElementById('nomalButton2').style.display = "block";
     document.getElementById('easyButton2').style.display = "none";
+
+    document.getElementById('nomalRec').style.display = "none";
+    document.getElementById('englishRec').style.display = "block";
+    document.getElementById('easyRec').style.display = "none";
+    document.getElementById('nomalLang').style.display = "none";
+    document.getElementById('englishLang').style.display = "none";
+    document.getElementById('easyLang').style.display = "block";
 
     document.getElementById('nomalTitle').style.display = "none";
     document.getElementById('easyTitle').style.display = "none";
@@ -256,6 +312,9 @@ window.onload = function () {
     document.getElementById('nomalFaculty').style.display = "none";
     document.getElementById('englishFaculty').style.display = "block";
 
+    document.getElementById('nomalLink').style.display = "none";
+    document.getElementById('englishLink').style.display = "flex";
+
     document.getElementById('nomalAdmissionText').style.display = "none";
     document.getElementById('englishAdmissionText').style.display = "block";
     document.getElementById('easyAdmissionText').style.display = "none";
@@ -280,6 +339,13 @@ window.onload = function () {
     document.getElementById('englishButton').style.display = "none";
     document.getElementById('nomalButton2').style.display = "none";
     document.getElementById('easyButton2').style.display = "block";
+
+    document.getElementById('nomalRec').style.display = "none";
+    document.getElementById('englishRec').style.display = "none";
+    document.getElementById('easyRec').style.display = "block";
+    document.getElementById('nomalLang').style.display = "none";
+    document.getElementById('englishLang').style.display = "none";
+    document.getElementById('easyLang').style.display = "block";
 
     document.getElementById('nomalTitle').style.display = "none";
     document.getElementById('easyTitle').style.display = "block";
@@ -324,6 +390,9 @@ window.onload = function () {
     document.getElementById('nomalFaculty').style.display = "block";
     document.getElementById('englishFaculty').style.display = "none";
 
+    document.getElementById('nomalLink').style.display = "flex";
+    document.getElementById('englishLink').style.display = "none";
+
     document.getElementById('nomalAdmissionText').style.display = "none";
     document.getElementById('englishAdmissionText').style.display = "none";
     document.getElementById('easyAdmissionText').style.display = "block";
@@ -355,6 +424,13 @@ document.getElementById("button").onclick = function () {
     document.getElementById('englishButton').style.display = "block";
     document.getElementById('nomalButton2').style.display = "block";
     document.getElementById('easyButton2').style.display = "none";
+
+    document.getElementById('nomalRec').style.display = "none";
+    document.getElementById('englishRec').style.display = "block";
+    document.getElementById('easyRec').style.display = "none";
+    document.getElementById('nomalLang').style.display = "none";
+    document.getElementById('englishLang').style.display = "block";
+    document.getElementById('easyLang').style.display = "none";
 
     document.getElementById('nomalTitle').style.display = "none";
     document.getElementById('easyTitle').style.display = "none";
@@ -399,6 +475,9 @@ document.getElementById("button").onclick = function () {
     document.getElementById('nomalFaculty').style.display = "none";
     document.getElementById('englishFaculty').style.display = "block";
 
+    document.getElementById('nomalLink').style.display = "none";
+    document.getElementById('englishLink').style.display = "flex";
+
     document.getElementById('nomalAdmissionText').style.display = "none";
     document.getElementById('englishAdmissionText').style.display = "block";
     document.getElementById('easyAdmissionText').style.display = "none";
@@ -421,6 +500,13 @@ document.getElementById("button").onclick = function () {
     document.getElementById('englishButton').style.display = "none";
     document.getElementById('nomalButton2').style.display = "block";
     document.getElementById('easyButton2').style.display = "none";
+
+    document.getElementById('nomalRec').style.display = "block";
+    document.getElementById('englishRec').style.display = "none";
+    document.getElementById('easyRec').style.display = "none";
+    document.getElementById('nomalLang').style.display = "block";
+    document.getElementById('englishLang').style.display = "none";
+    document.getElementById('easyLang').style.display = "none";
 
     document.getElementById('nomalTitle').style.display = "block";
     document.getElementById('easyTitle').style.display = "none";
@@ -464,6 +550,9 @@ document.getElementById("button").onclick = function () {
 
     document.getElementById('nomalFaculty').style.display = "block";
     document.getElementById('englishFaculty').style.display = "none";
+
+    document.getElementById('nomalLink').style.display = "flex";
+    document.getElementById('englishLink').style.display = "none";
 
     document.getElementById('nomalAdmissionText').style.display = "block";
     document.getElementById('englishAdmissionText').style.display = "none";
@@ -499,6 +588,13 @@ document.getElementById("button2").onclick = function () {
     document.getElementById('nomalButton2').style.display = "none";
     document.getElementById('easyButton2').style.display = "block";
 
+    document.getElementById('nomalRec').style.display = "none";
+    document.getElementById('englishRec').style.display = "none";
+    document.getElementById('easyRec').style.display = "block";
+    document.getElementById('nomalLang').style.display = "none";
+    document.getElementById('englishLang').style.display = "none";
+    document.getElementById('easyLang').style.display = "block";
+
     document.getElementById('nomalTitle').style.display = "none";
     document.getElementById('easyTitle').style.display = "block";
     document.getElementById('englishTitle').style.display = "none";
@@ -542,6 +638,9 @@ document.getElementById("button2").onclick = function () {
     document.getElementById('nomalFaculty').style.display = "block";
     document.getElementById('englishFaculty').style.display = "none";
 
+    document.getElementById('nomalLink').style.display = "flex";
+    document.getElementById('englishLink').style.display = "none";
+
     document.getElementById('nomalAdmissionText').style.display = "none";
     document.getElementById('englishAdmissionText').style.display = "none";
     document.getElementById('easyAdmissionText').style.display = "block";
@@ -564,6 +663,13 @@ document.getElementById("button2").onclick = function () {
     document.getElementById('englishButton').style.display = "none";
     document.getElementById('nomalButton2').style.display = "block";
     document.getElementById('easyButton2').style.display = "none";
+
+    document.getElementById('nomalRec').style.display = "block";
+    document.getElementById('englishRec').style.display = "none";
+    document.getElementById('easyRec').style.display = "none";
+    document.getElementById('nomalLang').style.display = "block";
+    document.getElementById('englishLang').style.display = "none";
+    document.getElementById('easyLang').style.display = "none";
 
     document.getElementById('nomalTitle').style.display = "block";
     document.getElementById('easyTitle').style.display = "none";
@@ -607,6 +713,9 @@ document.getElementById("button2").onclick = function () {
 
     document.getElementById('nomalFaculty').style.display = "block";
     document.getElementById('englishFaculty').style.display = "none";
+
+    document.getElementById('nomalLink').style.display = "flex";
+    document.getElementById('englishLink').style.display = "none";
 
     document.getElementById('nomalAdmissionText').style.display = "block";
     document.getElementById('englishAdmissionText').style.display = "none";

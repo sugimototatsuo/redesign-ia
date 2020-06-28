@@ -33,20 +33,14 @@ const renderWorks = (json) => {//シートごとに使い分ける
         //最新８件を取ってくる
         if (work['title-ja'] !== '' && i < 8) {
 
-            const aworkFig = document.createElement("figure");
-            aworkFig.className = 'a-work';
 
             const workImg = document.createElement("img");
             workImg.className = 'work-img';
             workImg.src = work['img'];
             workImg.alt = work['title-ja'];
-            workImg.width = 180;
-            workImg.height = 180;
-
-            aworkFig.appendChild(workImg);
 
 
-            document.getElementById('worksDiv').appendChild(aworkFig);
+            document.getElementById('worksDiv').appendChild(workImg);
 
             i++;
 

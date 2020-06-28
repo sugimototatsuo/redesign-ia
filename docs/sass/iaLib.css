@@ -2,6 +2,7 @@
 body {
   font-family: sans-serif;
   font-size: 20px;
+  width: 100%;
 }
 
 .main-visual {
@@ -9,6 +10,7 @@ body {
   height: 700px;
   background-image: url(../image/みんなの図書visual-02.jpg);
   background-size: cover;
+  background-position: center;
 }
 
 .first-text {
@@ -70,6 +72,8 @@ body {
 #book div .book-text-box .book-link, #book div .book-text-box .book-link2 {
   color: #363636;
   text-decoration: none;
+  display: inline-block;
+  word-break: break-all;
 }
 
 #book div .book-text-box .book-link:hover, #book div .book-text-box .book-link2:hover {

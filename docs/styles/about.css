@@ -20,7 +20,12 @@
         width: 100%;
         padding: 10px 0 10px 0; 
     }
-
+    .studyModel {
+        text-align:center;
+    }
+    .studyModel img{
+        width: 90%;
+    }
     #topHeadLine{
         margin:10px  0 10px 0;
     }

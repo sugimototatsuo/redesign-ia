@@ -91,20 +91,20 @@ header {
     height: 80px;
     float: right;
     text-align: center;
-          a{
-            text-decoration: none;
-            color: #363636;
-            line-height: 80px;
-            display: inline-block;
-            width: 48%;
-            background: #C3C3C3;
-            font-size: 1.0rem;
-            font-weight: bold;
-            &:hover{
-              opacity: 0.5;
-            }
-          }
-        }
+    a{
+      text-decoration: none;
+      color: #363636;
+      line-height: 80px;
+      display: inline-block;
+      width: 48%;
+      background: #C3C3C3;
+      font-size: 1.0rem;
+      font-weight: bold;
+      &:hover{
+        opacity: 0.5;
+      }
+    }
+  }
 }
 // button
 .open{

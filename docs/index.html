@@ -98,7 +98,11 @@
       <div class="right_h">
 
 
-        <label for="type1" class="lang">言語</label>
+        <label for="type1" class="lang">
+          <p id="nomalLang" style="display: block">言語</p>
+          <p id="englishLang" style="display: none">Lang</p>
+          <p id="easyLang" style="display: none">ことば</p>
+        </label>
         <input type="checkbox" id="type1" class="accordion">
         <ul id="links1">
           <li id="button" class="open">
@@ -110,7 +114,16 @@
               <p id="easyButton2" style="display: none">もとに もどす</p>
             </button></li>
         </ul>
-        <label for="type2">資料</label>
+        <label for="type2">
+          <a href="https://www.tmu.ac.jp/entrance/faculty/application_guidebook.html" target="_blank">
+            <p id="nomalRec" style="display: block">資料</p>
+            <p id="englishRec" style="display: none">Info</p>
+            <p id="easyRec" style="display: none"><ruby>
+                <rb>資料</rb>
+                <rt>しりょう</rt>
+              </ruby></p>
+          </a>
+        </label>
         <input type="checkbox" id="type2" class="accordion">
 
       </div>
@@ -1308,7 +1321,7 @@
             </p>
 
           </div>
-          </div>
+        </div>
 
         <div id="question">
           <h3 class="section_title" id="nomalContentsTitle7" style="display: block">- よくある質問 -</h3>
@@ -2277,16 +2290,16 @@
             </ruby>6-6
           </p>
           <p>TEL 042-585-8606</p>
-</div>
-      <footer>
-        <p>東京都立大学</p>
-        <p>Tokyo Metropolitan University</p>
-      </footer>
+        </div>
+        <footer>
+          <p>東京都立大学</p>
+          <p>Tokyo Metropolitan University</p>
+        </footer>
 
-      <pre id="result" style="display: none"></pre>
+        <pre id="result" style="display: none"></pre>
+      </div>
     </div>
-  </div>
-  <script src="js/index.js"></script>
+    <script src="js/index.js"></script>
 
 </body>
 

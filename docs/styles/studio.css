@@ -1,0 +1,118 @@
+@charset "UTF-8";
+ 
+.a-studio{
+
+    text-align: center; 
+    width:300px;
+    height:270px;
+    margin-right:80px;
+    float:left;
+    
+}
+
+
+
+
+a.studio-title{
+    font-size:12pt;
+    color:#000;
+    margin:10px 0;
+    display:inline-block;
+   padding:0px 26px;
+
+}
+
+a.studio-title :hover{
+    color:rgb(223, 29, 29);
+
+}
+
+
+.studio-photo-wrap {
+	width:300px;
+    height:200px;
+    overflow: hidden;
+    position:relative;	/* 相対位置指定 */
+    /*border: solid 2px #B20909;*/
+}
+.studio-photo-wrap .caption {
+    text-align: left;
+	font-size:	32px;
+	padding: 8px 0 0 16px;
+    color:			#fff;
+    font-weight: 600;
+}
+.studio-photo-wrap .mask_blue{
+	width:			100%;
+	height:			100%;
+	position:		absolute;	/* 絶対位置指定 */
+	top:			0;
+	left:			0;
+	opacity:		0;	/* マスクを表示しない */
+	background-color:	rgba(12, 9, 178, 0.6);	/* マスクは半透明 */
+	-webkit-transition:	all 0.2s ease;
+	transition:		all 0.2s ease;
+}
+
+
+.studio-photo-wrap .mask_red{
+	width:			100%;
+	height:			100%;
+	position:		absolute;	/* 絶対位置指定 */
+	top:			0;
+	left:			0;
+	opacity:		0;	/* マスクを表示しない */
+	background-color:	rgba(178, 9, 9, 0.6);	/* マスクは半透明 */
+	-webkit-transition:	all 0.2s ease;
+	transition:		all 0.2s ease;
+}
+
+.studio-photo-wrap:hover .mask_blue {
+	opacity:		1;	/* マスクを表示する */
+}
+
+.studio-photo-wrap:hover .mask_red {
+	opacity:		1;	/* マスクを表示する */
+}
+
+.studio-photo-wrap a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+}
+.studio-photo-wrap :hover {
+    cursor: pointer;
+}
+
+.s-photo{
+    width:			300px;
+	height:			200px;
+}
+
+h3.coreName {
+    font-size:20pt;
+    margin-bottom:10px;
+}
+.red{
+    color:#B20909;
+}
+.blue{
+    color:#0C09B2;
+    margin-top:40px;/*メディアとの余白*/
+}
+
+
+.studios {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+   
+
+    max-width:1140px;
+}
+
+.studio-description{
+    margin-bottom:50px;
+}

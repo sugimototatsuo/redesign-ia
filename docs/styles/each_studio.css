@@ -1,0 +1,199 @@
+@charset "UTF-8";
+
+
+ /*ーーーーーーーーー左サイド・スタジオ中身ーーーーーーーー*/
+ .sns-icon{
+    width:40px;
+    margin-left:12px;
+    padding:8px;
+
+    }
+    /*twitterのicon２回りくらい小さいんだが*/
+     .sns-icon-twitter{
+    width:56px;
+    margin-left:12px;
+     }
+     .sns-link:hover{
+         opacity:0.5;
+     }
+     .studio-sns{
+        /*float: right;*/
+        display:inline-block;
+        margin:0px 0 0 0;
+        left:20%;
+        position: relative;
+     }
+.labview {
+    position: relative;
+    display: flex; /*ここを外すと右サイドが下に落ちる*/
+}
+    .labview .left {
+      width: 70%;
+      position: relative; 
+    }
+ 
+    /*アイコンセットsns-iconとスタジオ名セットstudioTitleTextを、親囲いstudioTitleに display: flex;することで横並びにする*/
+    .topBar .title .inner-title {
+        display: flex;
+    }
+    /*タイトル部分全体左に縦棒を引く*/
+        .topBar .title {
+          width: 86%;
+          text-align: left;
+          border-left: solid 6px #E80000;
+          padding-left: 10px;
+          margin-bottom: 10px;
+          border-bottom: 1px solid #828282;
+          display: flex;
+          align-items: flex-end;
+          
+         }
+
+       
+            /*スタジオ名の表示*/
+p.studio-title-top{
+            letter-spacing: 0.05em;
+            width: 100%;
+            margin: -5px 0 0px 0px;
+            font-size:20pt; 
+            font-weight: 600;
+        }
+        /*コアの表示*/
+        p.studio-core-top {
+            font-size:12pt; 
+            margin-bottom:10px;
+            font-weight: 400;
+        }
+  
+      
+      .labview .left p {
+        width: 80%;
+    }
+
+    /*スタジオ説明文の体裁*/
+ p.studio-description {
+        margin-top: 20px;
+          font-size :12pt;
+          width: 75%;
+          font-weight: 300;
+         }
+
+         .faculty-div{
+             margin-top: 40px;
+         }
+         /*教員サイトリンク*/
+         .faculty-text-div > p {
+            font-size :16pt;    
+        }
+         /*教員名と教授か准教授*/
+        .faculty-text-div >span{
+            font-size :16pt;
+          display:inline-block;/*これ書かないと下マージンが効かない*/
+          margin:0 0.7em 20px 0;
+          /*display: flex;*/
+        }
+        /*見出し「担当教員」*/
+        .faculty-div > h3{
+            font-size :20pt;
+            margin-bottom:10px;
+        }
+
+        .studio-faculty-img{
+            width:160px;
+            height: 160px;
+            float:left;
+            margin-right:20px;
+   
+        }
+   
+.faculty-contents-div{
+
+}
+.faculty-text-div{
+
+}
+
+ .studio-photo{
+ width:90%;
+height: auto;
+ }
+ 
+
+ 
+      
+ /*ーーーーーーーーー右サイド・スタジオリストーーーーーーーー*/
+    .labview .right {
+      position: relative;
+      width: 200px; 
+      margin-top:30px;
+    }
+
+    /*コア間の隙間をとる*/
+      .labview .right .coreBox {
+       /* width: 200px;
+        display: flex;
+        justify-content: space-between;*/
+        margin-bottom: 50px; 
+    }
+    
+    .labview .right p {/*右サイド　スタジオリストの pエレメント　コア名メディアアートコア・メディア創生　プロダクトデザインコア*/
+        /*letter-spacing: 0.3em;*/
+        margin: 0 0 20px 0;
+        font-size:12pt;
+        color: #828282;
+     }
+
+    .studio-list-item {
+        margin:16px 0;
+    }
+
+    .studio-list .studio-list-item >a.here{
+        color:#000;
+    }
+
+    .studio-list-item > a:link {
+        color: #828282;
+      }
+      .studio-list-item > a:visited {
+        color:#828282;
+      }
+      .studio-list-item > a:hover {
+        color:#000;
+        cursor: pointer;
+      }
+      .studio-list-item > a:active {
+        color:#DDDDDD;
+      }
+
+       /*コア名の下に線を引く*/
+      p.core-underLine{
+        border-bottom: 1px solid #828282;
+      }
+   
+
+      .faculty-sitelink-icon {
+        background: none;
+        display: inline-block;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        margin: 3px 0 0 5px; 
+    }
+
+    a.faculty-link {
+      font-weight: 600;
+      font-size:12pt;
+  }
+  a.faculty-link:link {
+      color: #828282;
+    }
+    a.faculty-linka:visited {
+      color:#828282;
+    }
+    a.faculty-link:hover {
+      color:#000;
+      cursor: pointer;
+    }
+    a.faculty-link:active {
+      color:#DDDDDD;
+    }

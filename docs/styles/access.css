@@ -1,0 +1,42 @@
+@charset "UTF-8";
+ /*Aceess*/
+ 
+ #accessMapcantainer{
+     
+ }
+ #access_map { 
+     width: 600px;
+     height: 400px;
+ }
+ 
+
+ #accessMapcantaine{
+
+ }
+ #accessText{
+     min-width:400px;
+     width:460px;
+     margin-left:80px;
+  
+ }
+ .accessContainer{
+    display: flex;
+ }
+.access_section  >  h3 {
+     font-size:22pt;
+     margin-bottom:20px;
+     font-weight: 500;
+ }
+
+ .access_section  >  h4 {
+    font-size:18pt;
+    margin-bottom:10px;
+    font-weight: 500;
+}
+ .access_section  >  p {
+    font-size:12pt;
+    margin-bottom:14px;
+}
+ .access_section{
+     margin-bottom:30px;
+ }

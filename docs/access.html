@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>東京都立大学システムデザイン学部インダストリアルアート学科|ACCESS</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/access.css">
+
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
+        <meta property="og:url" content="https://sumikko-mountain.github.io/redesign-ia/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="東京都立大学インダストリアルアート学科" />
+        <meta property="og:description" content="東京都立大学インダストリアルアート学科のオリジナルサイトです。在学生が制作・運営をしています。" />
+        <meta property="og:site_name" content="東京都立大学インダストリアルアート学科" />
+        <meta property="og:image" content="http://industrial-art.sd.tmu.ac.jp/images/studio-images/vc1.jpg" />
+
+        <meta property="fb:app_id" content="278510070190115" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@ia_sd_tmu" />
+        <meta name="twitter:player" content="@ia_sd_tmu" />
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+        <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+        <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
+
+    </head>
+
+<body>
+    <main>
+        <div class="head-wrapper">
+            <header>
+                <ul class="nav-list">
+                    <li class="nav-list-item"><a href="./index.html">HOME</a></li>
+                    <li class="nav-list-item"><a href="./about.html">ABOUT</a></li>
+                    <li class="nav-list-item"><a href="./news.html">NEWS</a></li>
+                    <li class="nav-list-item"><a href="./studio.html">STUDIO</a></li>
+                    <li class="nav-list-item"><a href="./faculty.html">FACULTY</a></li>
+                    <li class="nav-list-item"><a href="./works.html">WORKS</a></li>
+                    <li class="nav-list-item"><a class="here" href="./access.html">ACCESS</a></li>
+                </ul>
+            </header>
+            <div class="language">
+                <span id="language-text">language</span><a class="here" href="./access.html">JA</a><span>|</span><a
+                    href="./access-en.html">EN</a></span>
+            </div>
+        </div>
+
+        <section class="contents" style="opacity: 1;">
+            <h1 class="page-title">ACCESS</h1>
+            <span class="page-description">キャンパス所在地と交通案内
+            </span>
+            <div class="float-clear"></div>
+
+
+            <div class="accessContainer">
+                <div id="accessMapcantainer">
+                    <div id="access_map"></div>
+                </div>
+
+                <script>
+                    mapboxgl.accessToken = 'pk.eyJ1IjoibW9lY28wOSIsImEiOiJja2JjZjEweDQwMWFoMnJud2N6M3N4Z2c2In0.cfn_JZgFwQgheoCiYBgFZQ';
+                    var map = new mapboxgl.Map({
+                        container: 'access_map',
+                        style: 'mapbox://styles/moeco09/ckbftkk4s1ufj1jmtr4hw3c6u',
+                        center: [139.366468, 35.661579],
+                        zoom: 15
+                    });
+
+                    var marker = new mapboxgl.Marker()
+                        .setLngLat([139.366468, 35.661579])
+                        .addTo(access_map);
+
+                </script>
+                <div id="accessText">
+                    <div class="access_section">
+                        <h3>東京都立大学日野キャンパス</h3>
+                        <h4>所在地</h4>
+                        <p>〒 191-0065 東京都日野市旭が丘6-6</p>
+                        <p>TEL 042-585-8606</p>
+                    </div>
+                    <div class="access_section">
+                        <h4>アクセス</h4>
+                        <p>JR中央線「豊田」駅（北口）から徒歩約20分。または京王バス「平山工業団地循環」乗車、「旭が丘中央公園」下車徒歩約5分</p>
+                        <p>JR中央線「八王子」駅（北口）、京王線「京王八王子」駅（西口）から京王バス「日野駅行き」または「豊田駅北口行き」乗車、「大和田坂上」下車徒歩約10分</p>
+                        <p>JR八高線「北八王子」駅から徒歩約15分</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <footer>
+                <section class="en">
+                    <p class="ja">東京都立大学 システムデザイン学部／研究科</p>
+                    <p class="sd">Faculty &amp; Graduate School of Systems Design</p><a class="sd"
+                        href="https://www.tmu.ac.jp/">Copyright ©2020 Tokyo Metropolitan University. All rights
+                        reserved.</a>
+                </section>
+            </footer>
+        </section>
+    </main>
+
+    <!--topに戻る-->
+    <div id="js-scroll-fadein" class="js-scroll-fadein arrow">
+        <img id="view" src="./img/icon/GOtoTOP/GOtoTOP_icon_White.png" width=80px height=auto>
+
+    </div>
+
+
+    <!--最後にJSの読み込み　getElementとかCreateとかしてるから最後じゃないとまずいの-->
+    <script src=" js/lottie.min.js"></script>
+
+    <script src="js/about.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/access.css">
+
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
+        <meta property="og:url" content="https://sumikko-mountain.github.io/redesign-ia/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="東京都立大学インダストリアルアート学科" />
+        <meta property="og:description" content="東京都立大学インダストリアルアート学科のオリジナルサイトです。在学生が制作・運営をしています。" />
+        <meta property="og:site_name" content="東京都立大学インダストリアルアート学科" />
+        <meta property="og:image" content="http://industrial-art.sd.tmu.ac.jp/images/studio-images/vc1.jpg" />
+
+        <meta property="fb:app_id" content="278510070190115" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@ia_sd_tmu" />
+        <meta name="twitter:player" content="@ia_sd_tmu" />
+
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+        <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+        <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
+
+    </head>
+
+<body>
+    <main>
+        <div class="head-wrapper">
+            <header>
+                <ul class="nav-list">
+                    <li class="nav-list-item"><a href="./index.html">HOME</a></li>
+                    <li class="nav-list-item"><a href="./about-en.html">ABOUT</a></li>
+                    <li class="nav-list-item"><a href="./news-en.html">NEWS</a></li>
+                    <li class="nav-list-item"><a href="./studio-en.html">STUDIO</a></li>
+                    <li class="nav-list-item"><a href="./faculty-en.html">FACULTY</a></li>
+                    <li class="nav-list-item"><a href="./works-en.html">WORKS</a></li>
+                    <li class="nav-list-item"><a class="here" href="./access-en.html">ACCESS</a></li>
+                </ul>
+            </header>
+            <div class="language">
+                <span id="language-text">language</span><a href="./index.html">JA</a><span>|</span><a class="here"
+                    href="./en_html/index_en.html">EN</a></span>
+            </div>
+        </div>
+        <section class="contents" style="opacity: 1;">
+
+            <h1 class="page-title">ACCESS</h1>
+            <span class="page-description">Campus Location and Traffic Information
+            </span>
+            <div class="float-clear"></div>
+
+
+            <div class="accessContainer">
+                <div id="accessMapcantainer">
+                    <div id="access_map"></div>
+                </div>
+
+                <script>
+                    mapboxgl.accessToken = 'pk.eyJ1IjoibW9lY28wOSIsImEiOiJja2JjZjEweDQwMWFoMnJud2N6M3N4Z2c2In0.cfn_JZgFwQgheoCiYBgFZQ';
+                    var map = new mapboxgl.Map({
+                        container: 'access_map',
+                        style: 'mapbox://styles/moeco09/ckbftkk4s1ufj1jmtr4hw3c6u',
+                        center: [139.366468, 35.661579],
+                        zoom: 15
+                    });
+
+                    var marker = new mapboxgl.Marker()
+                        .setLngLat([139.366468, 35.661579])
+                        .addTo(access_map);
+
+                </script>
+                <div id="accessText">
+                    <div class="access_section">
+                        <h3>Tokyo Metropolitan University Hino Campus</h3>
+                        <h4>ADDRESS</h4>
+                        <p>6-6 Asahigaoka, Hino-shi, Tokyo, Japan 191-0065</p>
+                        <p>TEL 042-585-8606</p>
+                    </div>
+                    <div class="access_section">
+                        <h4>ACCESS</h4>
+                        <p>About 20 minutes walk from "Toyoda" Station (north exit) on the JR Chuo Line.Or get on the Keio bus "Hirayama Kogyo Danchi", "Asahigaoka Chuo Koen", about 5 minutes walk.</p>
+                        <p>JR Chuo Line's “Hachioji” station (north exit), Keio Line's “Keio Hachioji” station (west exit) to Keio Bus “Hino Station” or “Toyoda Station's north exit” and about 10 minutes' walk.</p>
+                        <p>About 15 minutes walk from "Kitahachioji" Station on JR Hachiko Line</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <footer>
+                <section class="en">
+                    <p class="ja">東京都立大学 システムデザイン学部／研究科</p>
+                    <p class="sd">Faculty &amp; Graduate School of Systems Design</p><a class="sd"
+                        href="https://www.tmu.ac.jp/">Copyright ©2020 Tokyo Metropolitan University. All rights
+                        reserved.</a>
+                </section>
+            </footer>
+        </section>
+    </main>
+
+    <!--topに戻る-->
+    <div id="js-scroll-fadein" class="js-scroll-fadein arrow">
+        <img id="view" src="./img/icon/GOtoTOP/GOtoTOP_icon_White.png" width=80px height=auto>
+
+    </div>
+
+
+    <!--最後にJSの読み込み　getElementとかCreateとかしてるから最後じゃないとまずいの-->
+    <script src=" js/lottie.min.js"></script>
+
+    <script src="js/home.js"></script>
+
+</body>
+
+</html>

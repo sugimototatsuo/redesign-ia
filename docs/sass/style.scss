@@ -1,8 +1,9 @@
-// mobile first
 $breakpoints: (
  'sm': 'screen and (max-width: 576px)',
  'md': 'screen and (max-width: 768px)',
  'lg': 'screen and (max-width: 992px)',
+ //  header用
+ 'xl': 'screen and (max-width: 1310px)',
 ) !default;
 
 //メディアクエリ用のmixinを定義。デフォ値はmd
@@ -18,6 +19,9 @@ $breakpoints: (
 body {
   font-family: sans-serif;
   font-size: 20px;
+}
+.wrap{
+  overflow: hidden;
 }
 
 #showloading {
@@ -65,8 +69,15 @@ header {
             color: #363636;
             line-height: 80px;
             display: block;
-            padding: 0 10px;
+            padding: 0 0.5rem;
             font-size: 1.0rem;
+            @include mq(xl){
+              font-size: 0.75rem;
+              padding: 0 0.3rem;
+            }
+            @include mq(lg){
+              font-size: 0.7rem;
+            }
             &:hover{
               opacity: 0.5;
             }
@@ -106,25 +117,37 @@ header {
   height: 800px;
   background-image: url(../image/header.png);
   background-size: cover;
-  // background: #2B2845;
+  background-position: right bottom;
   color: #fff;
   position: relative;
   h1{
     color: #fff;
-    padding-top: 150px;
-    padding-left: 134px;
+    padding-top: 7rem;
+    padding-left: 5rem;
+    font-size: 3rem;
     z-index: 1;
+    line-height: 8rem;
+    font-weight: normal;
+  }
+  #englishTitle{
+    line-height: normal;
+  }
+  #englishTitle2{
+    padding-top: 3rem;
+    padding-left: 5rem;
   }
   h3{
-    padding-top: 20rem;
-    padding-left: 50rem;
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
     font-size: 2rem;
     z-index: 1;
+    font-weight: normal;
     .second_line{
-      margin-left: 3rem;
+      margin-left: 5rem;
     }
     .third_line{
-      margin-left: 6rem;
+      margin-left: 8rem;
     }
   }
 }
@@ -141,21 +164,21 @@ header {
   display: inline-block;
   padding-left: 0.2rem;
   padding-right: 0.2rem;
-  &:before, &:after{
-    content: '';
-    position: absolute;
-    top: 50%;
-    display: inline-block;
-    width: 45px;
-    height: 1px;
-    background-color: black;
-  }
-  &:before{
-    left: 30rem;
-  }
-  &:after{
-    right: 30rem;
-  }
+  // &:before, &:after{
+  //   content: '';
+  //   position: absolute;
+  //   top: 50%;
+  //   display: inline-block;
+  //   width: 45px;
+  //   height: 1px;
+  //   background-color: black;
+  // }
+  // &:before{
+  //   left: 30rem;
+  // }
+  // &:after{
+  //   right: 30rem;
+  // }
 }
 
 /* ========== aboutus ========== */
@@ -230,7 +253,7 @@ header {
   margin: 1em 0;
   background: #FFFFFF;
   min-height: 3em;
-  width: 30%;
+  width: 25rem;
   display: inline-block;
   text-align: center;
   padding-bottom: 0.8rem;
@@ -239,11 +262,12 @@ header {
   margin: 1em 0;
   background: #FFFFFF;
   min-height: 3em;
-  width: 30%;
+  width: 25rem;
   display: inline-block;
   text-align: center;
   padding-bottom: 0.8rem;
 }
+
 .studio-title {
   font-weight: bold;
   text-decoration: none;
@@ -266,8 +290,8 @@ pre#result {
 }
 
 .studio-photo1,.studio-photo2{
-  width: 100%;
-  height: 300px;
+  width: 25rem;
+  height: 18rem;
   object-fit: cover;
 }
 
@@ -319,22 +343,19 @@ pre#result {
   text-align: center;
 }
 #nomalLink{
-  width: 100%;
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
-  display: flex;
-  padding: 0 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem;
 }
 #column > div > div{
-  width: 30%;
+  width: 23rem;
   display: inline-block;
   text-align: center;
-  padding: 1.2rem;
+  margin: 2rem;
 }
 .link-image{
-  width: 400px;
-  height: 400px;
+  width: 23rem;
+  height: 23rem;
 }
 .link-title{
   display: inline-block;

@@ -55,13 +55,13 @@
 
             <div class="accessContainer">
                 <div id="accessMapcantainer">
-                    <div id="access_map"></div>
+                    <div id="map"></div>
                 </div>
 
                 <script>
                     mapboxgl.accessToken = 'pk.eyJ1IjoibW9lY28wOSIsImEiOiJja2JjZjEweDQwMWFoMnJud2N6M3N4Z2c2In0.cfn_JZgFwQgheoCiYBgFZQ';
                     var map = new mapboxgl.Map({
-                        container: 'access_map',
+                        container: 'map',
                         style: 'mapbox://styles/moeco09/ckbftkk4s1ufj1jmtr4hw3c6u',
                         center: [139.366468, 35.661579],
                         zoom: 15
@@ -69,7 +69,7 @@
 
                     var marker = new mapboxgl.Marker()
                         .setLngLat([139.366468, 35.661579])
-                        .addTo(access_map);
+                        .addTo(map);
 
                 </script>
                 <div id="accessText">

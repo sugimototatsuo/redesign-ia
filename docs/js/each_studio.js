@@ -21,7 +21,11 @@ const renderStudio = (json) => {//シートごとに使い分ける
             const studioLeftSec_Pre = document.createElement('section');
 
             const studioTitleDiv = document.createElement('div');
-            studioTitleDiv.className = 'title';
+            if (studio['core-ja'] == 'メディアアートコア・メディア創生') {
+                studioTitleDiv.className = 'title-red';
+            } else {
+                studioTitleDiv.className = 'title-blue';
+            }
             const studioTitleInnerDiv = document.createElement('div');
             studioTitleInnerDiv.className = 'inner-title';
             const studioTitleTextDiv = document.createElement('div');
@@ -100,46 +104,6 @@ const renderStudio = (json) => {//シートごとに使い分ける
             studioTitleInnerDiv.appendChild(studioSNSDiv);
 
             studioTitleDiv.appendChild(studioTitleInnerDiv);
-            //studioLeftSec_Pre.appendChild(studioTitleDiv);
-
-
-            /*スタジオ画像スライドショー*
-            const photoP = document.createElement('p');//★
-
-            const photo1 = document.createElement("img");
-            photo1.className = 'studio-photo';
-            photo1.src = studio['photo1'];
-            photo1.alt = "";
-
-            const photo2 = document.createElement("img");
-            photo2.className = 'studio-photo';
-            photo2.src = studio['photo2'];
-            photo2.alt = "";
-
-            const photo3 = document.createElement("img");
-            photo3.className = 'studio-photo';
-            photo3.src = studio['photo3'];
-            photo3.alt = "";
-
-            const photo4 = document.createElement("img");
-            photo4.className = 'studio-photo';
-            photo4.src = studio['photo4'];
-            photo4.alt = "";
-
-            const photo5 = document.createElement("img");
-            photo5.className = 'studio-photo';
-            photo5.src = studio['photo5'];
-            photo5.alt = "";
-
-
-            photoP.appendChild(photo1);
-            photoP.appendChild(photo2);
-            photoP.appendChild(photo3);
-            photoP.appendChild(photo4);
-            photoP.appendChild(photo5);
-            studioLeftSec_Pre.appendChild(photoP);*/
-
-
 
 
 

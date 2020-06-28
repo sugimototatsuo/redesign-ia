@@ -16,17 +16,16 @@
      .sns-link:hover{
          opacity:0.5;
      }
-     .studio-sns{
-        /*float: right;*/
-        display:inline-block;
-        margin:0px 0 0 0;
-        left:90%;
-        position: relative;
+     .inner-title .studio-sns{
+     /*今のところ見た目が一番マシ　妥協*/
+       position: absolute;
+        right: 175px;
      }
+
 .labview {
     position: relative;
     display: flex; /*ここを外すと右サイドが下に落ちる*/
-    max-width:1000px;
+    max-width:900px;
     margin:0 auto;
 }
     .labview .left {
@@ -35,19 +34,33 @@
     }
  
     /*アイコンセットsns-iconとスタジオ名セットstudioTitleTextを、親囲いstudioTitleに display: flex;することで横並びにする*/
-    .topBar .title .inner-title {
+   .inner-title {
         display: flex;
     }
     /*タイトル部分全体左に縦棒を引く*/
     .topBar{
-      max-width:1000px;
+      max-width:900px;
       margin: 0 auto;
+   
     }
-        .topBar .title {
-          width: 86%;
+        .topBar .title-red {
+          width: 100%;
           text-align: left;
-          /*border-left: solid 6px #E80000;
-          padding-left: 10px;*/
+          border-left: solid 6px #E80000;
+          padding-left: 10px;
+          margin-bottom: 10px;
+          border-bottom: 1px solid #828282;
+          display: flex;
+          /*align-items: flex-end;*/
+          
+          
+         }
+
+         .topBar .title-blue {
+          width: 100%;
+          text-align: left;
+          border-left: solid 6px #0C09B2;
+          padding-left: 10px;
           margin-bottom: 10px;
           border-bottom: 1px solid #828282;
           display: flex;
@@ -61,12 +74,12 @@ p.studio-title-top{
             letter-spacing: 0.05em;
             width: 100%;
             margin: -5px 0 0px 0px;
-            font-size:20pt; 
+            font-size:24pt; 
             font-weight: 600;
         }
         /*コアの表示*/
         p.studio-core-top {
-            font-size:12pt; 
+            font-size:16pt; 
             margin-bottom:10px;
             font-weight: 400;
        
@@ -82,7 +95,7 @@ p.studio-title-top{
          }
 
          .faculty-div{
-             margin-top: 40px;
+             margin-top: 60px;
          }
          /*教員サイトリンク*/
          .faculty-text-div > p {
@@ -98,6 +111,7 @@ p.studio-title-top{
         /*見出し「担当教員」*/
         .faculty-div > h3{
             font-size :20pt;
+            font-weight:600;
             margin-bottom:10px;
         }
 
@@ -109,20 +123,38 @@ p.studio-title-top{
    
         }
 
+
+/*写真のスライドショー*/
+    .studio-slide{
+      width:600px;
+       }
+
+    
+    .fadeout{
+      opacity: 0;
+      transition: 3s ease-in-out;
+      -webkit-transition: 3s ease-in-out;
+      }
+      .fadein{
+      opacity: 1;
+      transition: 3s ease-in-out;
+      -webkit-transition: 3s ease-in-out;
+      }
+  
  
       
  /*ーーーーーーーーー右サイド・スタジオリストーーーーーーーー*/
     .labview .right {
-      position: relative;
       width: 200px; 
       margin-top:30px;
+      /*親要素 labviewに右揃えで配置*/
+      position: absolute;
+      right: 0;
+      
     }
 
     /*コア間の隙間をとる*/
       .labview .right .coreBox {
-       /* width: 200px;
-        display: flex;
-        justify-content: space-between;*/
         margin-bottom: 50px; 
     }
     
@@ -137,6 +169,9 @@ p.studio-title-top{
         margin:16px 0;
     }
 
+    .studio-list-item >a{
+      font-size:12pt;
+    }
     .studio-list .studio-list-item >a.here{
         color:#000;
     }
@@ -152,7 +187,7 @@ p.studio-title-top{
         cursor: pointer;
       }
       .studio-list-item > a:active {
-        color:#DDDDDD;
+        color:#C4C4C4;
       }
 
        /*コア名の下に線を引く*/
@@ -173,10 +208,8 @@ p.studio-title-top{
     a.faculty-link {
       font-weight: 600;
       font-size:12pt;
-  }
-  a.faculty-link:link {
       color: #828282;
-    }
+  }
     a.faculty-linka:visited {
       color:#828282;
     }
@@ -185,5 +218,7 @@ p.studio-title-top{
       cursor: pointer;
     }
     a.faculty-link:active {
-      color:#DDDDDD;
+      color:#C4C4C4;
     }
+
+

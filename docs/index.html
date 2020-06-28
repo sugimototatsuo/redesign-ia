@@ -25,26 +25,27 @@
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
 
-    <!--フォント取得-->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
-      rel="stylesheet">
-
   </head>
 
 <body>
   <main>
-    <header>
-      <ul class="nav-list">
-        <li class="nav-list-item"><a class="here" href="./index.html">HOME</a></li>
-        <li class="nav-list-item"><a href="./about.html">ABOUT</a></li>
-        <li class="nav-list-item"><a href="./news.html">NEWS</a></li>
-        <li class="nav-list-item"><a href="./studio.html">STUDIO</a></li>
-        <li class="nav-list-item"><a href="./faculty.html">FACULTY</a></li>
-        <li class="nav-list-item"><a href="./works.html">WORKS</a></li>
-        <li class="nav-list-item"><a href="./access.html">ACCESS</a></li>
-      </ul>
-    </header>
-
+    <div class="head-wrapper">
+      <header>
+        <ul class="nav-list">
+          <li class="nav-list-item"><a class="here" href="./index.html">HOME</a></li>
+          <li class="nav-list-item"><a href="./about.html">ABOUT</a></li>
+          <li class="nav-list-item"><a href="./news.html">NEWS</a></li>
+          <li class="nav-list-item"><a href="./studio.html">STUDIO</a></li>
+          <li class="nav-list-item"><a href="./faculty.html">FACULTY</a></li>
+          <li class="nav-list-item"><a href="./works.html">WORKS</a></li>
+          <li class="nav-list-item"><a href="./access.html">ACCESS</a></li>
+        </ul>
+      </header>
+      <div class="language">
+        <span id="language-text">language</span><a class="here" href="./index.html">JA</a><span>|</span><a
+          href="./index-en.html">EN</a></span>
+      </div>
+    </div>
     <section class="contents" style="opacity: 1;">
 
       <div class="top-title">
@@ -98,37 +99,56 @@
       <div class="eachSection">
         <h2 class="sectionTitle">STUDIO</h2>
         <div class="top-img">
-          <div class="slider">
-            <img id="view" src="./img/currentSite_imgs/studio/ed1.png">
-            <i id="prev" class="fas fa-arrow-circle-left"></i>
-            <i id="next" class="fas fa-arrow-circle-right"></i>
+
+
+          <div class="studio-slide">
+            <img id="studioShow-1" class="fadeout" style="position:absolute;"
+              src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/ed1.png" width="600" height="400">
+            <img id="studioShow-2" class="fadein" src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/es2.png"
+              width="600" height="400">
           </div>
-          <nav class="thumbnail">
-            <ul id="thumbnailList">
-            </ul>
-          </nav>
 
         </div>
-
         <p class="sectionDescription">インダストリアルアート学科・学域は、「プロダクトデザイン」と「メディア創生」の2つのコア・分野を柱に、12のスタジオで構成されています</p>
-        <div class="moreButton">
-          <a href="./studio.html" class="btn-flat-simple">MORE</a>
-        </div>
+        <div class="moreButton"><a href="./studio.html" class="btn-flat-simple">MORE</a></div>
       </div>
-
-      <!--FACULTY-->
+      <!--FACULTY -->
       <div class="eachSection">
         <h2 class="sectionTitle">FACULTY</h2>
 
+        <div class="faculty-slide-container">
+          <div class="faculty-slide">
+            <img id="idshow1-1" class="fadeout" style="position:absolute;"
+              src="./img/currentSite_imgs/faculty/kusumi.jpg" width="200" height="200">
+            <img id="idshow1-2" class="fadein" src="./img/currentSite_imgs/faculty/kusumi.jpg" width="200" height="200">
+          </div>
+
+          <div class="faculty-slide">
+            <img id="idshow2-1" class="fadeout" style="position:absolute;"
+              src="./img/currentSite_imgs/faculty/kusumi.jpg" width="200" height="200">
+            <img id="idshow2-2" class="fadein" src="./img/currentSite_imgs/faculty/kusumi.jpg" width="200" height="200">
+          </div>
+
+          <div class="faculty-slide">
+            <img id="idshow3-1" class="fadeout" style="position:absolute;"
+              src="./img/currentSite_imgs/faculty/kusumi.jpg" width="200" height="200">
+            <img id="idshow3-2" class="fadein" src="./img/currentSite_imgs/faculty/kusumi.jpg" width="200" height="200">
+          </div>
+
+        </div>
+
+
         <p class="sectionDescription">インダストリアルアート学科・学域の教員を紹介しています</p>
+
         <div class="moreButton">
           <a href="./faculty.html" class="btn-flat-simple">MORE</a>
         </div>
       </div>
 
+      <!--WORKS-->
       <div class="eachSection">
         <h2 class="sectionTitle">WORKS</h2>
-
+        <div id="works"></div>
         <p class="sectionDescription">学生の作品を紹介しています</p>
         <div class="moreButton">
           <a href="./works.html" class="btn-flat-simple">MORE</a>

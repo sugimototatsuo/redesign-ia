@@ -29,13 +29,13 @@ const renderStudio = (json) => {//シートごとに使い分ける
 
 
             //スタジオタイトル　とコアの表示
-            const studioCoreJa = document.createElement("h4");
-            studioCoreJa.className = 'studio-core';
+            const studioCoreJa = document.createElement("p");
+            studioCoreJa.className = 'studio-core-top';
             studioCoreJa.textContent = studio['core-ja'];
             studioTitleTextDiv.appendChild(studioCoreJa);
 
-            const studioTitleJa = document.createElement("h2");
-            studioTitleJa.className = 'studio-title';
+            const studioTitleJa = document.createElement("p");
+            studioTitleJa.className = 'studio-title-top';
             studioTitleJa.textContent = studio['name-ja'];
             studioTitleTextDiv.appendChild(studioTitleJa);
 
@@ -72,7 +72,7 @@ const renderStudio = (json) => {//シートごとに使い分ける
                 const snsIcon_twitter = document.createElement("img");
                 linkOnIcon_twitter.className = 'sns-link';
                 snsIcon_twitter.className = 'sns-icon-twitter';
-                snsIcon_twitter.src = "../img/icon/twitter/Twitter_Logo_Blue.png";
+                snsIcon_twitter.src = "../img/icon/twitter/Twitter_Logo_Blue_Resized.png";
                 snsIcon_twitter.alt = studio['name-ja'] + "_twitter";
                 linkOnIcon_twitter.href = studio['twitter-link'];
                 linkOnIcon_twitter.target = "_blank";
@@ -87,7 +87,7 @@ const renderStudio = (json) => {//シートごとに使い分ける
                 const snsIcon_site = document.createElement("img");
                 linkOnIcon_site.className = 'sns-link';
                 snsIcon_site.className = 'sns-icon';
-                snsIcon_site.src = "../img/icon/site/LINK.png";
+                snsIcon_site.src = "../img/icon/site/LINK_Bold.png";
                 snsIcon_site.alt = studio['name-ja'] + "_web site link";
                 linkOnIcon_site.href = studio['site-link'];
                 linkOnIcon_site.target = "_blank";

@@ -48,15 +48,17 @@
           border-bottom: 1px solid #828282;
           
          }
+
+       
             /*スタジオ名の表示*/
-        .topBar .title .inner-title .titleText h2 {
+ .title .inner-title .titleText .studio-title-top{
             letter-spacing: 0.05em;
             width: 100%;
             margin: -5px 0 0px 0px;
             font: bold 20pt , sans-serif; 
         }
         /*コアの表示*/
-          .topBar .title .inner-title .titleText h4 {
+        .titleText .studio-core-top {
             font: bold 12pt, sans-serif; 
             margin-bottom:10px;
         }

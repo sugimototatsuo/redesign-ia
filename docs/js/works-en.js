@@ -5,13 +5,13 @@ const sheet = 'group3-works';//読み込むシート名
 const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 
 //jsonをHTMLにとってきて表示するのに必要な基本的な流れは①~⑤である
-const renderStudio = (json) => {//シートごとに使い分ける
-    const studios = json.records;
+const renderWorks = (json) => {//シートごとに使い分ける
+    const works = json.records;
 
-    studios.forEach(studio => {//forEachで各スタジオをグルグル回してる　配列が12個だとちょうどいいのに13個あるので、最後の要素を取ってあげればいい
+    works.forEach(work => {//forEachで各スタジオをグルグル回してる　配列が12個だとちょうどいいのに13個あるので、最後の要素を取ってあげればいい
 
         //シート１枚目
-        if (studio['title-ja'] !== '') {
+        if (work['title-ja'] !== '') {
             const studioDiv = document.createElement('div');
 
             const aworkFig = document.createElement("figure");
@@ -19,18 +19,18 @@ const renderStudio = (json) => {//シートごとに使い分ける
 
             const workImg = document.createElement("img");
             workImg.className = 'work-img';
-            workImg.src = studio['img'];
-            workImg.alt = studio['title-en'];
+            workImg.src = work['img'];
+            workImg.alt = work['title-en'];
             workImg.width = 200;
             workImg.height = 200;
 
             const workText = document.createElement("figcaption");
 
             const workTitle = document.createElement("h3");
-            workTitle.textContent = studio['title-en'];
+            workTitle.textContent = work['title-en'];
 
             const workCaption = document.createElement("p");
-            workCaption.textContent = studio['caption-en'];
+            workCaption.textContent = work['caption-en'];
 
             workText.appendChild(workTitle);
             workText.appendChild(workCaption);
@@ -51,7 +51,7 @@ const getData = async () => {
         const response = await fetch(endpoint);
         if (response.ok) {
             let jsonResponse = await response.json();
-            renderStudio(jsonResponse);
+            renderWorks(jsonResponse);
         }
     }
     catch (error) {

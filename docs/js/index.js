@@ -89,7 +89,8 @@ const renderJson2 = (json) => {
     const nomalFacultyStudio = document.createElement("span");
     const nomalFacultyMajor = document.createElement("span");
     const nomalFacultyImage = document.createElement("img");
-    const nomalFacultyLink = document.createElement("a");
+    const nomalFacultyLink = document.createElement("span");
+    const nomalFacultyLink2 = document.createElement("a");
     //nomal~のところは全部日本語版サイト。
     //○○.classNameのところ、上から順に、教員名（日本語）、教員名（英語）、教授か助教かとか、所属スタジオ、教員の専攻、写真
     nomalFacultyTextDiv.className = 'text-box'
@@ -106,8 +107,8 @@ const renderJson2 = (json) => {
     nomalFacultyStudio.textContent = faculty['f-studio-ja'];
     nomalFacultyMajor.textContent = faculty['major-ja'];
     if (faculty['f-link'] != "") {
-      nomalFacultyLink.textContent = "外部サイト"
-      nomalFacultyLink.href = faculty['f-link'];
+      nomalFacultyLink2.textContent = "外部サイト：" + faculty['f-link-name'];
+      nomalFacultyLink2.href = faculty['f-link'];
     }
     nomalFacultyImage.src = faculty['faculty-photo'];
 
@@ -119,7 +120,8 @@ const renderJson2 = (json) => {
     const englishFacultyStudio = document.createElement("span");
     const englishFacultyMajor = document.createElement("span");
     const englishFacultyImage = document.createElement("img");
-    const englishFacultyLink = document.createElement("a");
+    const englishFacultyLink = document.createElement("span");
+    const englishFacultyLink2 = document.createElement("a");
     //english~のところは全部日本語版サイト。
     //○○.classNameのところ、上から順に、教員名（英語）、教員名（日本語）、教授か助教かとか、所属スタジオ、教員の専攻、写真
     englishFacultyTextDiv.className = 'text-box'
@@ -137,8 +139,8 @@ const renderJson2 = (json) => {
     englishFacultyMajor.textContent = faculty['major-en'];
     englishFacultyImage.src = faculty['faculty-photo'];
     if (faculty['f-link'] != "") {
-      englishFacultyLink.textContent = "official site"
-      englishFacultyLink.href = faculty['f-link'];
+      englishFacultyLink2.textContent = "official site：" + faculty['f-link-name'];
+      englishFacultyLink2.href = faculty['f-link'];
     }
 
     nomalFacultyDiv.appendChild(nomalFacultyImage);
@@ -148,6 +150,7 @@ const renderJson2 = (json) => {
     nomalFacultyTextDiv.appendChild(nomalFacultynameEn);
     nomalFacultyTextDiv.appendChild(nomalFacultyStudio);
     nomalFacultyTextDiv.appendChild(nomalFacultyMajor);
+    nomalFacultyLink.appendChild(nomalFacultyLink2);
     nomalFacultyTextDiv.appendChild(nomalFacultyLink);
     document.getElementById('nomalFaculty').appendChild(nomalFacultyDiv);
     englishFacultyDiv.appendChild(englishFacultyImage);
@@ -157,6 +160,8 @@ const renderJson2 = (json) => {
     englishFacultyTextDiv.appendChild(englishFacultynameJa);
     englishFacultyTextDiv.appendChild(englishFacultyStudio);
     englishFacultyTextDiv.appendChild(englishFacultyMajor);
+    englishFacultyLink.appendChild(englishFacultyLink2);
+    englishFacultyTextDiv.appendChild(englishFacultyLink);
     document.getElementById('englishFaculty').appendChild(englishFacultyDiv);
   });
 

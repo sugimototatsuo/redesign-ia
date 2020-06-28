@@ -6,6 +6,7 @@ const sheet3 = 'link';
 const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 const endpoint2 = `${uri}?id=${id}&sheet=${sheet2}`;
 const endpoint3 = `${uri}?id=${id}&sheet=${sheet3}`;
+var studioImageArray = new Array();
 //jsonをHTMLにとってきて表示するのに必要な基本的な流れは①~⑤である
 const renderStudio = (json) => {//シートごとに使い分ける
     const studios = json.records;
@@ -102,7 +103,7 @@ const renderStudio = (json) => {//シートごとに使い分ける
             //studioLeftSec_Pre.appendChild(studioTitleDiv);
 
 
-            /*スタジオ画像スライドショー*/
+            /*スタジオ画像スライドショー*
             const photoP = document.createElement('p');//★
 
             const photo1 = document.createElement("img");
@@ -136,7 +137,10 @@ const renderStudio = (json) => {//シートごとに使い分ける
             photoP.appendChild(photo3);
             photoP.appendChild(photo4);
             photoP.appendChild(photo5);
-            studioLeftSec_Pre.appendChild(photoP);
+            studioLeftSec_Pre.appendChild(photoP);*/
+
+
+
 
 
             //スタジオ説明
@@ -215,10 +219,10 @@ const renderStudio = (json) => {//シートごとに使い分ける
             studioLeftSec_Pre.appendChild(facultyDiv);
 
 
-
-            var target_editorial = document.getElementById("studioLeftSec_editorial");//要素があれば差し込むというふうにするために変数を突くておく
+            //要素があれば差し込むというふうにするために変数を突くておく
+            var target_editorial = document.getElementById("studioLeftSec_editorial");
             var target_equip = document.getElementById("studioLeftSec_equip");
-            var target_ergonomics = document.getElementById("studioLeftSec_ergonomics");
+            var target_ergonomics = document.getElementById("studioLeftSec_ergo");
             var target_interactive = document.getElementById("studioLeftSec_interactive");
             var target_interface = document.getElementById("studioLeftSec_interface");
             var target_interior = document.getElementById("studioLeftSec_interior");
@@ -226,82 +230,117 @@ const renderStudio = (json) => {//シートごとに使い分ける
             var target_network = document.getElementById("studioLeftSec_network");
             var target_software = document.getElementById("studioLeftSec_software");
             var target_spatial = document.getElementById("studioLeftSec_spatial");
-            var target_transportation = document.getElementById("studioLeftSec_transportation");
+            var target_transportation = document.getElementById("studioLeftSec_trans");
             var target_visual = document.getElementById("studioLeftSec_visual");
 
             if (studio['name-ja'] == 'エディティングスタジオ') {
                 if (target_editorial) {//要素があれば
+
+                    studioImageArray.push(studio['photo1'], studio['photo2']);
+
                     document.getElementById('topBar_editorial').appendChild(studioTitleDiv);
                     document.getElementById('studioLeftSec_editorial').appendChild(studioLeftSec_Pre);
                 }
             }
             if (studio['name-ja'] == '製品・サービスデザインスタジオ') {
                 if (target_equip) {//要素があれば
+
+                    studioImageArray.push(studio['photo1'], studio['photo2'], studio['photo3'], studio['photo4']);
+
                     document.getElementById('topBar_equip').appendChild(studioTitleDiv);
                     document.getElementById('studioLeftSec_equip').appendChild(studioLeftSec_Pre);
                 }
             }
             if (studio['name-ja'] == 'エルゴノミックデザインスタジオ') {
                 if (target_ergonomics) {//要素があれば
-                    document.getElementById('topBar_ergonomics').appendChild(studioTitleDiv);
-                    document.getElementById('studioLeftSec_ergonomics').appendChild(studioLeftSec_Pre);
+                    studioImageArray.push(studio['photo1'], studio['photo2'], studio['photo3'], studio['photo4'], studio['photo5']);
+
+                    document.getElementById('topBar_ergo').appendChild(studioTitleDiv);
+                    document.getElementById('studioLeftSec_ergo').appendChild(studioLeftSec_Pre);
                 }
             }
             if (studio['name-ja'] == 'インタラクティブアートスタジオ') {
                 if (target_interactive) {//要素があれば
+                    studioImageArray.push(studio['photo1'], studio['photo2']);
+
                     document.getElementById('topBar_interactive').appendChild(studioTitleDiv);
                     document.getElementById('studioLeftSec_interactive').appendChild(studioLeftSec_Pre);
                 }
             }
             if (studio['name-ja'] == 'インタフェースデザインスタジオ') {
                 if (target_interface) {//要素があれば
+                    studioImageArray.push(studio['photo1'], studio['photo2']);
+
                     document.getElementById('topBar_interface').appendChild(studioTitleDiv);
                     document.getElementById('studioLeftSec_interface').appendChild(studioLeftSec_Pre);
                 }
             }
             if (studio['name-ja'] == 'インテリアデザインスタジオ') {
+
                 if (target_interior) {//要素があれば
+                    studioImageArray.push(studio['photo1'], studio['photo2']);
+
                     document.getElementById('topBar_interior').appendChild(studioTitleDiv);
                     document.getElementById('studioLeftSec_interior').appendChild(studioLeftSec_Pre);
                 }
             }
             if (studio['name-ja'] == '映像デザインスタジオ') {
                 if (target_kinemat) {//要素があれば
+                    studioImageArray.push(studio['photo1'], studio['photo2']);
+
                     document.getElementById('topBar_kinemat').appendChild(studioTitleDiv);
                     document.getElementById('studioLeftSec_kinemat').appendChild(studioLeftSec_Pre);
                 }
             }
             if (studio['name-ja'] == 'ネットワークデザインスタジオ') {
                 if (target_network) {//要素があれば
+                    studioImageArray.push(studio['photo1'], studio['photo2'], studio['photo3']);
+
                     document.getElementById('topBar_network').appendChild(studioTitleDiv);
                     document.getElementById('studioLeftSec_network').appendChild(studioLeftSec_Pre);
                 }
             }
             if (studio['name-ja'] == 'ソフトウェアデザインスタジオ') {
                 if (target_software) {//要素があれば
+                    studioImageArray.push(studio['photo1'], studio['photo2']);
+
                     document.getElementById('topBar_software').appendChild(studioTitleDiv);
                     document.getElementById('studioLeftSec_software').appendChild(studioLeftSec_Pre);
                 }
             }
             if (studio['name-ja'] == '空間デザインスタジオ') {
                 if (target_spatial) {//要素があれば
+                    studioImageArray.push(studio['photo1'], studio['photo2']);
+
                     document.getElementById('topBar_spatial').appendChild(studioTitleDiv);
                     document.getElementById('studioLeftSec_spatial').appendChild(studioLeftSec_Pre);
                 }
             }
             if (studio['name-ja'] == 'トランスポーテーションデザインスタジオ') {
                 if (target_transportation) {//要素があれば
-                    document.getElementById('topBar_transportation').appendChild(studioTitleDiv);
-                    document.getElementById('studioLeftSec_transportation').appendChild(studioLeftSec_Pre);
+                    studioImageArray.push(studio['photo1'], studio['photo2']);
+
+                    document.getElementById('topBar_trans').appendChild(studioTitleDiv);
+                    document.getElementById('studioLeftSec_trans').appendChild(studioLeftSec_Pre);
                 }
             }
 
             if (studio['name-ja'] == 'ヴィジュアルコミュニケーションデザインスタジオ') {
                 if (target_visual) {//要素があれば
+                    studioImageArray.push(studio['photo1'], studio['photo2'], studio['photo3'], studio['photo4']);
+
                     document.getElementById('topBar_visual').appendChild(studioTitleDiv);
                     document.getElementById('studioLeftSec_visual').appendChild(studioLeftSec_Pre);
                 }
             }
+
+            //念のためスライドショー以前にも画像を入れる
+            console.log(studioImageArray);
+            document.getElementById("studioShow-1").src = studioImageArray[0];
+            document.getElementById("studioShow-1").src = studioImageArray[1];
+
+
+
         }
     });
 
@@ -358,3 +397,29 @@ topButton.onclick = function () {
 };
 
 
+
+
+/*----------------スタジオ画像のスライドショ--------------- ref:http://cya.sakura.ne.jp/java/sshow2.htm*/
+
+var slideCount = -1;		// 現在表示している配列番号
+var slideflag = 0;		// どっちを表示して、どっちを消すかのフラグ
+function slideChange() {	// スライドショーメイン関数
+    slideCount = (slideCount < studioImageArray.length - 1) ? slideCount + 1 : 0;		// 次の配列番号
+    slideflag = (slideflag == 0) ? 1 : 0;						// 表示・非表示フラグ反転
+    if (slideflag == 0) {
+        document.getElementById("studioShow-1").src = studioImageArray[slideCount];		// 次の画像をセットする
+        document.getElementById("studioShow-1").className = "fadein";		// フェードイン
+        document.getElementById("studioShow-2").className = "fadeout";	// フェードアウト
+
+    } else {
+        document.getElementById("studioShow-2").src = studioImageArray[slideCount];		// 次の画像をセットする
+        document.getElementById("studioShow-1").className = "fadeout";	// フェードアウト
+        document.getElementById("studioShow-2").className = "fadein";		// フェードイン
+
+    }
+
+
+    setTimeout("slideChange()", 6000);					// 4秒周期に画像を更新する
+}
+
+slideChange();

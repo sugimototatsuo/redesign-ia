@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <title>東京都立大学システムデザイン学部インダストリアルアート学科|スタジオ｜ネットワークデザインスタジオ</title>
+    <link rel="stylesheet" href="../styles/each_studio.css">
+    <link rel="stylesheet" href="../styles/styles.css">
 
     <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
         <meta property="og:url" content="https://sumikko-mountain.github.io/redesign-ia/" />
@@ -20,32 +21,101 @@
         <meta name="twitter:site" content="@ia_sd_tmu" />
         <meta name="twitter:player" content="@ia_sd_tmu" />
 
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+        <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+        <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
+
+
     </head>
 
 <body>
-    <h1>東京都立大学システムデザイン学部インダストリアルアート学科</h1>
-    <h2>Department of Industrial Art</h2>
-    <h2>Faculty of Systems Design, Tokyo Metropolitan University</h2>
-    <div>Google SheetのデータをJSONで取得できるAPIを使ってサイトを構築しています。</div>
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.626260475521!2d139.3664679!3d35.6615787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018e2086b789781%3A0x74b7f28cd003b142!2z5p2x5Lqs6YO956uL5aSn5a2mIOaXpemHjuOCreODo-ODs-ODkeOCuQ!5e0!3m2!1sja!2sjp!4v1591791543202!5m2!1sja!2sjp"
-        width="600" height="450" frameborder="0"
-        style="border:0;filter:sepia(40%);-webkit-filter:sepia(40%)filter:saturate(150%);-webkit-filter:saturate(150%)"
-        allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-    <div id="studios"></div>
-    <div id="faculties"></div>
-    <div id="links"></div>
+    <main>
+        <div class="head-wrapper">
+            <header>
+                <ul class="nav-list">
+                    <li class="nav-list-item"><a href="../index.html">HOME</a></li>
+                    <li class="nav-list-item"><a href="../about.html">ABOUT</a></li>
+                    <li class="nav-list-item"><a href="../news.html">NEWS</a></li>
+                    <li class="nav-list-item"><a class="here" href="../studio.html">STUDIO</a></li>
+                    <li class="nav-list-item"><a href="../faculty.html">FACULTY</a></li>
+                    <li class="nav-list-item"><a href="../works.html">WORKS</a></li>
+                    <li class="nav-list-item"><a href="../access.html">ACCESS</a></li>
+                </ul>
+            </header>
+            <div class="language">
+                <span id="language-text">language</span><a class="here" href="./network.html">JA</a><span>|</span><a
+                    href="./network-en.html">EN</a></span>
+            </div>
+        </div>
+        <section class="contents" style="opacity: 1;">
+            <div class="topBar" id="topBar_network"></div>
+            <section class="labview">
 
-    <pre id="result-studio"></pre>
-    <pre id="result-faculty"></pre>
-    <pre id="result-link"></pre>
+                <section class="left" id="studioLeftSec_network">
+                    <div class="studio-slide">
+                        <img id="studioShow-1" class="fadeout" style="position:absolute;" width="600" height="400">
+                        <img id="studioShow-2" class="fadein" width="600" height="400">
+                    </div>
+                    <!--ここにスタジオの中身が　スタジオ名から教員まで全て入る-->
+                </section>
+
+                <section class="right">
+                    <p class="core-underLine">メディアアートコア・メディア創生</p>
+                    <div class="coreBox">
+
+                        <ul class="studio-list">
+                            <li class="studio-list-item"><a href="./editorial.html">エディティング</a>
+                            </li>
+                            <li class="studio-list-item"><a href="./interactiveArt.html">インタラクティブアート</a>
+                            </li>
+                            <li class="studio-list-item"><a href="./kinematograph.html">映像デザイン</a>
+                            </li>
+                            <li class="studio-list-item"><a class="here" href="./network.html">ネットワークデザイン</a>
+                            </li>
+                            <li class="studio-list-item"><a href="./software.html">ソフトウェアデザイン</a>
+                            </li>
+                            <li class="studio-list-item"><a class="box"
+                                    href="./visualCommunication.html">ヴィジュアルコミュニケーションデザイン</a></li>
+                        </ul>
+
+                    </div>
+
+                    <p class="core-underLine">プロダクトデザインコア</p>
+                    <div class="coreBox">
+                        <ul class="studio-list">
+                            <li class="studio-list-item"><a href="./equipment_service.html">製品・サービスデザイン</a></li>
+                            <li class="studio-list-item"><a href="./ergonomics.html">エルゴノミックデザイン</a>
+                            </li>
+                            <li class="studio-list-item"><a href="./interface.html">インタフェースデザイン</a>
+                            </li>
+                            <li class="studio-list-item"><a href="./interior.html">インテリアデザイン</a>
+                            </li>
+                            <li class="studio-list-item"><a href="./spatial.html">空間デザイン</a></li>
+                            <li class="studio-list-item"><a href="./transportation.html">トランスポーテーションデザイン</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </section>
+            </section>
+            <footer>
+                <section class="en">
+                    <p class="ja">東京都立大学 システムデザイン学部／研究科</p>
+                    <p class="sd">Faculty &amp; Graduate School of Systems Design</p><a class="sd"
+                        href="https://www.tmu.ac.jp/">Copyright ©2020 Tokyo Metropolitan University. All rights
+                        reserved.</a>
+                </section>
+            </footer>
+        </section>
+    </main>
+
+    <!--topに戻る-->
+    <div id="js-scroll-fadein" class="js-scroll-fadein arrow">
+        <img id="view" src="../img/icon/GOtoTOP/GOtoTOP_icon_White.png" width=80px height=auto>
+
     </div>
-    <div id="sampleAnime"></div>
 
-
-    <script src="js/lottie.min.js"></script>
-
-    <script src="js/index.js"></script>
+    <script src="../js/each_studio.js"></script>
 
 </body>
 

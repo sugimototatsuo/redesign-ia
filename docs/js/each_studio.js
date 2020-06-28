@@ -180,15 +180,33 @@ const renderStudio = (json) => {//シートごとに使い分ける
             facultyTitleJa.textContent = studio['faculty-title-ja'];
             facultyTextDiv.appendChild(facultyTitleJa);
 
+
             if (studio['f-link'] !== '') {
                 const linkP = document.createElement('p');
+                const linkSpan = document.createElement('span');
+
+                const linkIconSpan = document.createElement('span');
+                const linkIconA = document.createElement('a');
+                linkIconA.className = 'sns-link';
+                const linkIcon = document.createElement("img");
+                linkIcon.className = 'faculty-sitelink-icon';
+                linkIcon.src = "../img/icon/site/LINK.png";
+                linkIcon.alt = "website：" + studio['f-link-title'];
+                linkIconA.href = studio['f-link'];
+                linkIconA.target = "_blank";
+                linkIconA.appendChild(linkIcon);
+                linkIconSpan.appendChild(linkIconA);
+
                 const fLink = document.createElement('a');
                 fLink.className = 'faculty-link';
 
-                fLink.textContent = studio['f-link-title'] + "_webサイト";
+                fLink.textContent = studio['f-link-title'];
                 fLink.href = studio['f-link'];
+                fLink.target = "_blank";
+                linkSpan.appendChild(fLink);
 
-                linkP.appendChild(fLink);
+                linkP.appendChild(linkSpan);
+                linkP.appendChild(linkIconSpan, linkIcon);
                 facultyTextDiv.appendChild(linkP);
             }
             facultyContentsDiv.appendChild(facultyTextDiv);//文字だけの囲いを教員情報に追加
@@ -307,4 +325,36 @@ const getData = async () => {
 }
 
 getData();
+
+
+
+
+
+/*---------topへ戻るボタン-------------*/
+function getScrolled() {
+    return (window.pageYOffset !== undefined) ? window.pageYOffset : document.documentElement.scrollTop;
+}
+
+//トップに戻るボタンの要素を取得
+var topButton = document.getElementById('js-scroll-fadein');
+
+//ボタンの表示・非表示
+window.onscroll = function () {
+    (getScrolled() > 500) ? topButton.classList.add('is-fadein') : topButton.classList.remove('is-fadein');
+};
+
+//トップに移動する関数
+function scrollToTop() {
+    var scrolled = getScrolled();
+    window.scrollTo(0, Math.floor(scrolled / 2));
+    if (scrolled > 0) {
+        window.setTimeout(scrollToTop, 30);
+    }
+};
+
+//イベント登録
+topButton.onclick = function () {
+    scrollToTop();
+};
+
 

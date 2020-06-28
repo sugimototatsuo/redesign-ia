@@ -20,7 +20,6 @@
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@ia_sd_tmu" />
         <meta name="twitter:player" content="@ia_sd_tmu" />
-
         <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
         <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
         <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
@@ -29,20 +28,26 @@
 
 <body>
     <main>
-        <header>
-            <ul class="nav-list">
-                <li class="nav-list-item"><a href="./index.html">HOME</a></li>
-                <li class="nav-list-item"><a href="./about.html">ABOUT</a></li>
-                <li class="nav-list-item"><a href="./news.html">NEWS</a></li>
-                <li class="nav-list-item"><a href="./studio.html">STUDIO</a></li>
-                <li class="nav-list-item"><a href="./faculty.html">FACULTY</a></li>
-                <li class="nav-list-item"><a href="./works.html">WORKS</a></li>
-                <li class="nav-list-item"><a class="here" href="./access.html">ACCESS</a></li>
-            </ul>
-        </header>
+        <div class="head-wrapper">
+            <header>
+                <ul class="nav-list">
+                    <li class="nav-list-item"><a href="./index.html">HOME</a></li>
+                    <li class="nav-list-item"><a href="./about.html">ABOUT</a></li>
+                    <li class="nav-list-item"><a href="./news.html">NEWS</a></li>
+                    <li class="nav-list-item"><a href="./studio.html">STUDIO</a></li>
+                    <li class="nav-list-item"><a href="./faculty.html">FACULTY</a></li>
+                    <li class="nav-list-item"><a href="./works.html">WORKS</a></li>
+                    <li class="nav-list-item"><a class="here" href="./access.html">ACCESS</a></li>
+                </ul>
+            </header>
+            <div class="language">
+                <span id="language-text">language</span><a class="here" href="./access.html">JA</a><span>|</span><a
+                    href="./access-en.html">EN</a></span>
+            </div>
+        </div>
 
         <section class="contents" style="opacity: 1;">
-            <h1 class="page-title">NEWS</h1>
+            <h1 class="page-title">ACCESS</h1>
             <span class="page-description">キャンパス所在地と交通案内
             </span>
             <div class="float-clear"></div>
@@ -108,7 +113,7 @@
     <!--最後にJSの読み込み　getElementとかCreateとかしてるから最後じゃないとまずいの-->
     <script src=" js/lottie.min.js"></script>
 
-    <script src="js/home.js"></script>
+    <script src="js/about.js"></script>
 
 </body>
 

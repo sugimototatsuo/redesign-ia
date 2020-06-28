@@ -4,12 +4,14 @@
  /*ーーーーーーーーー左サイド・スタジオ中身ーーーーーーーー*/
  .sns-icon{
     width:40px;
-    margin-left:16px;
+    margin-left:12px;
+    padding:8px;
+
     }
     /*twitterのicon２回りくらい小さいんだが*/
      .sns-icon-twitter{
-    width:60px;
-    margin-left:16px;
+    width:56px;
+    margin-left:12px;
      }
      .sns-link:hover{
          opacity:0.5;
@@ -17,8 +19,8 @@
      .studio-sns{
         /*float: right;*/
         display:inline-block;
-        margin:26px 0 0 0;
-        left:10%;
+        margin:0px 0 0 0;
+        left:20%;
         position: relative;
      }
 .labview {
@@ -29,38 +31,38 @@
       width: 70%;
       position: relative; 
     }
-      .topBar .title {
-        width: 90%;
-        display: flex;
-        align-items: flex-start;
-    }
+ 
     /*アイコンセットsns-iconとスタジオ名セットstudioTitleTextを、親囲いstudioTitleに display: flex;することで横並びにする*/
     .topBar .title .inner-title {
         display: flex;
     }
     /*タイトル部分全体左に縦棒を引く*/
         .topBar .title {
-          width: 80%;
+          width: 86%;
           text-align: left;
           border-left: solid 6px #E80000;
           padding-left: 10px;
           margin-bottom: 10px;
           border-bottom: 1px solid #828282;
+          display: flex;
+          align-items: flex-end;
           
          }
 
        
             /*スタジオ名の表示*/
- .title .inner-title .titleText .studio-title-top{
+p.studio-title-top{
             letter-spacing: 0.05em;
             width: 100%;
             margin: -5px 0 0px 0px;
-            font: bold 20pt , sans-serif; 
+            font-size:20pt; 
+            font-weight: 600;
         }
         /*コアの表示*/
-        .titleText .studio-core-top {
-            font: bold 12pt, sans-serif; 
+        p.studio-core-top {
+            font-size:12pt; 
             margin-bottom:10px;
+            font-weight: 400;
         }
   
       
@@ -69,11 +71,11 @@
     }
 
     /*スタジオ説明文の体裁*/
-        .labview .left p.studio-description {
+ p.studio-description {
         margin-top: 20px;
           font-size :12pt;
-          line-height: 18pt;
           width: 75%;
+          font-weight: 300;
          }
 
          .faculty-div{
@@ -111,10 +113,10 @@
 
 }
 
-        .studio-photo{
-            width:90%;
-            height: auto;
-        }
+ .studio-photo{
+ width:90%;
+height: auto;
+ }
  
 
  
@@ -123,6 +125,7 @@
     .labview .right {
       position: relative;
       width: 200px; 
+      margin-top:30px;
     }
 
     /*コア間の隙間をとる*/
@@ -136,8 +139,8 @@
     .labview .right p {/*右サイド　スタジオリストの pエレメント　コア名メディアアートコア・メディア創生　プロダクトデザインコア*/
         /*letter-spacing: 0.3em;*/
         margin: 0 0 20px 0;
-        font: bold 12pt;
-        color: #999999;
+        font-size:12pt;
+        color: #828282;
      }
 
     .studio-list-item {
@@ -149,13 +152,13 @@
     }
 
     .studio-list-item > a:link {
-        color: #999999;
+        color: #828282;
       }
       .studio-list-item > a:visited {
-        color:#999999;
+        color:#828282;
       }
       .studio-list-item > a:hover {
-        color:#191919;
+        color:#000;
         cursor: pointer;
       }
       .studio-list-item > a:active {
@@ -167,3 +170,30 @@
         border-bottom: 1px solid #828282;
       }
    
+
+      .faculty-sitelink-icon {
+        background: none;
+        display: inline-block;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        margin: 3px 0 0 5px; 
+    }
+
+    a.faculty-link {
+      font-weight: 600;
+      font-size:12pt;
+  }
+  a.faculty-link:link {
+      color: #828282;
+    }
+    a.faculty-linka:visited {
+      color:#828282;
+    }
+    a.faculty-link:hover {
+      color:#000;
+      cursor: pointer;
+    }
+    a.faculty-link:active {
+      color:#DDDDDD;
+    }

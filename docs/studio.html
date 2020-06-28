@@ -33,17 +33,23 @@
 
 <body>
     <main>
-        <header>
-            <ul class="nav-list">
-                <li class="nav-list-item"><a href="./index.html">HOME</a></li>
-                <li class="nav-list-item"><a href="./about.html">ABOUT</a></li>
-                <li class="nav-list-item"><a href="./news.html">NEWS</a></li>
-                <li class="nav-list-item"><a class="here" href="./studio.html">STUDIO</a></li>
-                <li class="nav-list-item"><a href="./faculty.html">FACULTY</a></li>
-                <li class="nav-list-item"><a href="./works.html">WORKS</a></li>
-                <li class="nav-list-item"><a href="./access.html">ACCESS</a></li>
-            </ul>
-        </header>
+        <div class="head-wrapper">
+            <header>
+                <ul class="nav-list">
+                    <li class="nav-list-item"><a href="./index.html">HOME</a></li>
+                    <li class="nav-list-item"><a href="./about.html">ABOUT</a></li>
+                    <li class="nav-list-item"><a href="./news.html">NEWS</a></li>
+                    <li class="nav-list-item"><a class="here" href="./studio.html">STUDIO</a></li>
+                    <li class="nav-list-item"><a href="./faculty.html">FACULTY</a></li>
+                    <li class="nav-list-item"><a href="./works.html">WORKS</a></li>
+                    <li class="nav-list-item"><a href="./access.html">ACCESS</a></li>
+                </ul>
+            </header>
+            <div class="language">
+                <span id="language-text">language</span><a class="here" href="./studio.html">JA</a><span>|</span><a
+                    href="./studio-en.html">EN</a></span>
+            </div>
+        </div>
 
         <section class="contents" style="opacity: 1;">
 
@@ -74,9 +80,11 @@
             </footer>
         </section>
     </main>
-    <section class="scroll-top" style="display: none;"><img src="./img/icon/GOtoTOP/GOtoTOP_icon_White.png">
-        <p class="en">PageTop</p>
-    </section>
+    <!--topに戻る-->
+    <div id="js-scroll-fadein" class="js-scroll-fadein arrow">
+        <img id="view" src="./img/icon/GOtoTOP/GOtoTOP_icon_White.png" width=80px height=auto>
+
+    </div>
 
     <script src="js/lottie.min.js"></script>
 

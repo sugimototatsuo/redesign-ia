@@ -52,8 +52,10 @@
 }
       .about p.ja {
         font-size:10pt;
-        line-height: 2em; }
+        line-height: 2em; 
+    }
       .about p.en {
         font-size:10pt;
-        line-height: 2em; }
+        line-height: 2em;
+     }
 

@@ -329,6 +329,31 @@ const getData = async () => {
       let jsonResponse = await response.json();
       renderStudio(jsonResponse);
     }
+
+    const response2 =  await fetch(endpoint2);
+    if(response2.ok){
+      let jsonResponse = await response2.json();
+            renderJson(jsonResponse);
+    }
+
+    const response3 =  await fetch(endpoint3);
+    if(response3.ok){
+      let jsonResponse = await response3.json();
+            renderJson(jsonResponse);
+    }
+  }
+  catch(error){
+    console.log(error);
+  }
+}
+
+const getData2 = async () => {
+  try{
+    const response2 =  await fetch(endpoint2);
+    if(response2.ok){
+      let jsonResponse = await response2.json();
+            renderJson(jsonResponse);
+    }
   }
   catch (error) {
     console.log(error);

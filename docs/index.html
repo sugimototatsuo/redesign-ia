@@ -95,8 +95,21 @@
       </div>
 
       <div class="right_h">
-        <a href="https://www.tmu.ac.jp/entrance/faculty/application_guidebook.html" class="document">資料請求</a>
-        <a href="" class="language">言語</a>
+
+        <label for="type1" class="lang">言語</label>
+        <input type="checkbox" id="type1" class="accordion">
+        <ul id="links1">
+          <li id="button" class="open">
+            <p id="nomalButton" style="display: block">English</p>
+            <p id="englishButton" style="display: none">Undo</p>
+          </li>
+          <li><button id="button2" class="open">
+              <p id="nomalButton2" style="display: block">やさしい<br>にほんご</p>
+              <p id="easyButton2" style="display: none">もとに もどす</p>
+            </button></li>
+        </ul>
+        <label for="type2">資料</label>
+        <input type="checkbox" id="type2" class="accordion">
       </div>
     </header>
 
@@ -105,15 +118,32 @@
 
 
       <!-- あとで位置変更 -->
-      <button id="button" class="open">
+      <!-- <button id="button" class="open">
         <p id="nomalButton" style="display: block">English</p>
         <p id="englishButton" style="display: none">Undo</p>
-      </button>
+      </button> -->
 
-      <button id="button2" class="open">
+      <!-- <button id="button2" class="open">
         <p id="nomalButton2" style="display: block">やさしいにほんご</p>
         <p id="easyButton2" style="display: none">もとに もどす</p>
-      </button>
+      </button> -->
+
+      <!-- <div class="right_h">
+        <label for="type2">資料</label>
+        <input type="checkbox" id="type2" class="accordion">
+        <label for="type1" class="lang">言語</label>
+        <input type="checkbox" id="type1" class="accordion">
+        <ul id="links1">
+          <li id="button" class="open">
+            <p id="nomalButton" style="display: block">English</p>
+            <p id="englishButton" style="display: none">Undo</p>
+          </li>
+          <li><button id="button2" class="open">
+              <p id="nomalButton2" style="display: block">やさしいにほんご</p>
+              <p id="easyButton2" style="display: none">もとに もどす</p>
+            </button></li>
+        </ul>
+      </div> -->
 
 
       <div class="main-visual">
@@ -271,16 +301,16 @@
             </a>
           </div>
           <div id="moreBtnWork" class="moreBtn">
-            <!--<a href="./html/work.html?langMode" title="seeMore">-->
-            <p id="nomalWorkText" style="display: block">もっと見る</p>
-            <p id="englishWorkText" style="display: none">see more</p>
-            <p id="easyWorkText" style="display: none">
+            <a href="./html/work.html?langMode" title="seeMore">
+              <p id="nomalWorkText" style="display: block">もっと見る</p>
+              <p id="englishWorkText" style="display: none">see more</p>
+              <p id="easyWorkText" style="display: none">
             もっと<ruby>
               <rb>見</rb>
               <rt>み</rt>
             </ruby>る
           </p>
-            <!--</a>-->
+            </a>
           </div>
 
 

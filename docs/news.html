@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>東京都立大学システムデザイン学部 インダストリアルアート学科/学域｜NEWS</title>
+    <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/news.css">
 
     <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
@@ -20,41 +21,56 @@
         <meta name="twitter:site" content="@ia_sd_tmu" />
         <meta name="twitter:player" content="@ia_sd_tmu" />
 
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+        <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+        <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
+
+        <!--フォント取得-->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+            rel="stylesheet">
+
     </head>
 
 <body>
-    <header>
-        <ul>
-            <li><a href="./index.html">HOME</a></li>
-            <li><a href="./about.html">ABOUT</a></li>
-            <li><a href="./news.html">NEWS</a></li>
-            <li><a href="./studio.html">STUDIO</a></li>
-            <li><a href="./faculty.html">FACULTY</a></li>
-            <li><a href="./works.html">WORKS</a></li>
-            <li><a href="./access.html">ACCESS</a></li>
-        </ul>
-    </header>
-    <div class="container">
-        <div id="articles"></div>
+    <main>
+        <header>
+            <ul class="nav-list">
+                <li class="nav-list-item"><a href="./index.html">HOME</a></li>
+                <li class="nav-list-item"><a href="./about.html">ABOUT</a></li>
+                <li class="nav-list-item"><a class="here" href="./news.html">NEWS</a></li>
+                <li class="nav-list-item"><a href="./studio.html">STUDIO</a></li>
+                <li class="nav-list-item"><a href="./faculty.html">FACULTY</a></li>
+                <li class="nav-list-item"><a href="./works.html">WORKS</a></li>
+                <li class="nav-list-item"><a href="./access.html">ACCESS</a></li>
+            </ul>
+        </header>
 
-        <div class="an-article">
-            <p><img src="./img/news-article/IMG_4294.JPG" alt="大東京オルタナティブ・アートブックフェア" class="article-img"></p>
-            <div class="article-text-container">
-                <p class="article-title"> <a href="article_html/article_01.html"> 大東京オルタナティブ・アートブックフェアを開催します</ωa>
-                </p>
-                <p class="update-date">2019/07/02</p>
-                <p class="article-contents">
-                    TOKYO ART BOOK FAIR 2019（7/12-15）の一週間前に、小さなアートブックフェアを緊急開催します。エディトリアルデザインスタジオの有志が参加します。TOKYO ART BOOK
-                    FAIRに出展参加申し込みをしながらもあえなく落選したZineクリエーターを中心に、リアルなアーティストが集い、新しいもうひとつのアートブックの交流市場が東京・北千住のオルタナティブスペース「特火点
-                    – tochka(トーチカ)」にて、実験的に行われます。
+        <section class="contents" style="opacity: 1;">
+            <h1 class="page-title">NEWS</h1>
+            <span class="page-description">インダストリアルアート学科・学域の最新情報
+            </span>
+            <div class="float-clear"></div>
+            <div class="flexBox" id="newsDiv">
 
-                </p>
             </div>
-        </div>
+
+            <footer>
+                <section class="en">
+                    <p class="ja">東京都立大学 システムデザイン学部／研究科</p>
+                    <p class="sd">Faculty &amp; Graduate School of Systems Design</p><a class="sd"
+                        href="https://www.tmu.ac.jp/">Copyright ©2018 Tokyo Metropolitan University. All rights
+                        reserved.</a>
+                </section>
+            </footer>
+        </section>
+    </main>
+
+    <!--topに戻る-->
+    <div id="js-scroll-fadein" class="js-scroll-fadein arrow">
+        <img id="view" src="./img/icon/GOtoTOP/GOtoTOP_icon_White.png" width=80px height=auto>
 
     </div>
 
-    </div>
     <script src="js/lottie.min.js"></script>
     <script src="js/news.js"></script>
 

@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
     <link rel="stylesheet" href="styles/studio.css">
+    <link rel="stylesheet" href="styles/styles.css">
 
     <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
         <meta property="og:url" content="https://sumikko-mountain.github.io/redesign-ia/" />
@@ -20,27 +21,63 @@
         <meta name="twitter:site" content="@ia_sd_tmu" />
         <meta name="twitter:player" content="@ia_sd_tmu" />
 
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+        <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+        <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
+
+        <!--フォント取得-->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+            rel="stylesheet">
+
     </head>
 
 <body>
-    <header>
-        <ul>
-            <li><a href="./index.html">HOME</a></li>
-            <li><a href="./about.html">ABOUT</a></li>
-            <li><a href="./news.html">NEWS</a></li>
-            <li><a href="./studio.html">STUDIO</a></li>
-            <li><a href="./faculty.html">FACULTY</a></li>
-            <li><a href="./works.html">WORKS</a></li>
-            <li><a href="./access.html">ACCESS</a></li>
-        </ul>
-    </header>
-    <div class=container>
-        <h1>STUDIO</h1>
-        <div id="studios"></div>
+    <main>
+        <header>
+            <ul class="nav-list">
+                <li class="nav-list-item"><a href="./index.html">HOME</a></li>
+                <li class="nav-list-item"><a href="./about.html">ABOUT</a></li>
+                <li class="nav-list-item"><a href="./news.html">NEWS</a></li>
+                <li class="nav-list-item"><a class="here" href="./studio.html">STUDIO</a></li>
+                <li class="nav-list-item"><a href="./faculty.html">FACULTY</a></li>
+                <li class="nav-list-item"><a href="./works.html">WORKS</a></li>
+                <li class="nav-list-item"><a href="./access.html">ACCESS</a></li>
+            </ul>
+        </header>
 
+        <section class="contents" style="opacity: 1;">
 
+            <h1 class="page-title">STUDIO</h1>
+            <span class="page-description">スタジオ紹介
+            </span>
+            <div class="float-clear"></div>
+            <p class="studio-description">インダストリアルアート学科・学域は、「プロダクトデザイン」と「メディア創生」の2つのコア・分野を柱に、12のスタジオで構成されています。</p>
+            <h3 class="coreName red">Media Art Core</h3>
+            <div id="media-studios" class="studios">
+                <!--メディアのスタジオが入る-->
+            </div>
+            <div class="float-clear"></div>
 
-    </div>
+            <h3 class="coreName blue">Product Design Core</h3>
+            <div id="product-studios" class="studios">
+                <!--プロダクトのスタジオが入る-->
+            </div>
+            <div class="float-clear"></div>
+
+            <footer>
+                <section class="en">
+                    <p class="ja">東京都立大学 システムデザイン学部／研究科</p>
+                    <p class="sd">Faculty &amp; Graduate School of Systems Design</p><a class="sd"
+                        href="https://www.tmu.ac.jp/">Copyright ©2020 Tokyo Metropolitan University. All rights
+                        reserved.</a>
+                </section>
+            </footer>
+        </section>
+    </main>
+    <section class="scroll-top" style="display: none;"><img src="./img/icon/GOtoTOP/GOtoTOP_icon_White.png">
+        <p class="en">PageTop</p>
+    </section>
+
     <script src="js/lottie.min.js"></script>
 
     <script src="js/studio.js"></script>

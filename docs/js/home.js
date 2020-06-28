@@ -1,11 +1,12 @@
 const uri = 'https://script.google.com/macros/s/AKfycbxyacpN8y4nxSAnU0Eji6E_rBRDFTY7YoWWFa0clY5ELRhskgpt/exec';//google App scriptの何か　たぶんspreadsheetからjsonを取得するためのライブラリ的なものの読み込み
 const id = '1BpGnuwC4lZf9G2yFyiSrxbJuGO8gviV8mr-I2D3x4vA';//URLのid=にあったこれでどのシートかを指定
-const sheet = 'studio';//読み込むシート名
-const sheet2 = 'faculty';
+const sheet = 'group3-studio';//読み込むシート名
+const sheet2 = 'group3-faculty';
 const sheet3 = 'group3-news';
 const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 const endpoint2 = `${uri}?id=${id}&sheet=${sheet2}`;
 const endpoint3 = `${uri}?id=${id}&sheet=${sheet3}`;
+var studioImageArray = new Array();
 //jsonをHTMLにとってきて表示するのに必要な基本的な流れは①~⑤である
 const renderStudio = (json) => {//シートごとに使い分ける
     const studios = json.records;
@@ -65,33 +66,11 @@ const renderStudio = (json) => {//シートごとに使い分ける
             photo1.src = studio['photo1'];
             photo1.alt = "";
 
-            const photo2 = document.createElement("img");
-            photo2.className = 'studio-photo';
-            photo2.src = studio['photo2'];
-            photo2.alt = "";
-
-            const photo3 = document.createElement("img");
-            photo3.className = 'studio-photo';
-            photo3.src = studio['photo3'];
-            photo3.alt = "";
-
-            const photo4 = document.createElement("img");
-            photo4.className = 'studio-photo';
-            photo4.src = studio['photo4'];
-            photo4.alt = "";
-
-            const photo5 = document.createElement("img");
-            photo5.className = 'studio-photo';
-            photo5.src = studio['photo5'];
-            photo5.alt = "";
-
-
+            studioImageArray.push(studio['photo1']);
+            console.log(studioImageArray);
             //imgタグはpタグで囲むべきらしいので、★で作っておいたpの子要素として追加する
             photoP.appendChild(photo1);
-            photoP.appendChild(photo2);
-            photoP.appendChild(photo3);
-            photoP.appendChild(photo4);
-            photoP.appendChild(photo5);
+
 
             studioDiv.appendChild(studioTitleJa);//④
             studioDiv.appendChild(studioTitleEn);
@@ -104,91 +83,9 @@ const renderStudio = (json) => {//シートごとに使い分ける
             studioDiv.appendChild(descriptionJa);
             studioDiv.appendChild(descriptionEn);
             studioDiv.appendChild(photoP);
-
-
-            //document.getElementById('studios').appendChild(studioDiv);//⑤HTML上のstudiosというidがついたdivにここまでの作業で作ったsudioDivを追加
         }
     });
 
-    //document.getElementById('result-studio').textContent = JSON.stringify(json, null, 2);//JavaScript のオブジェクトや値を JSON 文字列に変換させて、HTML上のresultというidがついたdivに付与？する。最後の引数は上限が10のスペーシング 変わってんのかわからない
-}
-
-
-const renderFaculty = (json) => {
-    //シート２枚目
-    const faculties = json.records;
-    faculties.forEach(faculty => {
-
-        if (faculty['f-faculty-ja'] !== '') {
-            const facultyDiv = document.createElement('div');
-
-            const facultyNameJa = document.createElement("span");
-            facultyNameJa.className = 'faculty-name';
-            facultyNameJa.textContent = faculty['f-faculty-ja'];
-            facultyDiv.appendChild(facultyNameJa);
-
-            const facultyNameEn = document.createElement("span");
-            facultyNameEn.className = 'faculty-name';
-            facultyNameEn.textContent = faculty['f-faculty-en'];
-            facultyDiv.appendChild(facultyNameEn);
-
-            const facultyTitleJa = document.createElement("span");
-            facultyTitleJa.className = 'faculty-title';
-            facultyTitleJa.textContent = faculty['f-faculty-title-ja'];
-            facultyDiv.appendChild(facultyTitleJa);
-
-            const facultyTitleEn = document.createElement("span");
-            facultyTitleEn.className = 'faculty-title';
-            facultyTitleEn.textContent = faculty['f-faculty-title-en'];
-            facultyDiv.appendChild(facultyTitleEn);
-
-            const studioJa = document.createElement("span");//この辺はローカル関数なのでstudioとかとかぶってもOK 
-            studioJa.className = 'faculty-studio';
-            studioJa.textContent = faculty['f-studio-ja'];
-            facultyDiv.appendChild(studioJa);
-
-            const studioEn = document.createElement("span");
-            studioEn.className = 'faculty-studio';
-            studioEn.textContent = faculty['f-studio-en'];
-            facultyDiv.appendChild(studioEn);
-
-            const majorJa = document.createElement("span");
-            majorJa.className = 'faculty-major';
-            majorJa.textContent = faculty['major-ja'];
-            facultyDiv.appendChild(majorJa);
-
-            const majorEn = document.createElement("span");
-            majorEn.className = 'faculty-major';
-            majorEn.textContent = faculty['major-en'];
-            facultyDiv.appendChild(majorEn);
-
-
-            if (faculty['f-link'] !== '') {
-                const linkP = document.createElement('p');
-                const fLink = document.createElement('a');
-                fLink.className = 'faculty-link';
-
-                fLink.textContent = faculty['f-faculty-ja'] + "のサイトです";//リンクに何かしらテキストがないと見えない
-                fLink.href = faculty['f-link'];
-
-                linkP.appendChild(fLink);
-                facultyDiv.appendChild(linkP);
-            }
-
-            const photoP = document.createElement('p');//★
-            const photo = document.createElement("img");
-            photo.className = 'faculty-photo';
-            photo.src = faculty['faculty-photo'];
-            photo.alt = "";
-            photoP.appendChild(photo);
-            facultyDiv.appendChild(photoP);
-
-
-            //document.getElementById('faculties').appendChild(facultyDiv);
-
-        }
-    });
-    //document.getElementById('result-faculty').textContent = JSON.stringify(json, null, 2);//JavaScript のオブジェクトや値を JSON 文字列に変換させて、HTML上のresultというidがついたdivに付与？する。最後の引数は上限が10のスペーシング 変わってんのかわからない
 }
 
 
@@ -197,65 +94,85 @@ const renderLink = (json) => {
     const links = json.records;
     var i = 0;
     links.forEach(link => {
-
+        //最新記事3件を取ってくる
         if (link['name-ja'] !== '' && i < 3) {
 
 
             //START-ニュースの1記事を生成して回す
             //一つの記事全体を囲むdiv
-            const anArticleDiv = document.createElement('div');
-            anArticleDiv.className = 'an-article';
+            const anArticleSec = document.createElement('section');
+            anArticleSec.className = 'card';
 
 
-            const photoP = document.createElement('p');//★
+
+            const photoP = document.createElement('p');
             const photo = document.createElement("img");
-            photo.className = 'article-img';
+            photo.className = 'card-img';
             photo.src = link['photo'];
-            photo.alt = "";
+            photo.alt = link['name-ja'];
             photoP.appendChild(photo);
-            anArticleDiv.appendChild(photoP);
 
-            //記事のタイトル・掲載日・内容といった、テキスト部分を包括するdiv
-            const articleTextContainerDiv = document.createElement('div');
-            articleTextContainerDiv.className = 'article-text-container';
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'card-content';
 
-            const articleTitle = document.createElement('p');
-            articleTitle.className = 'article-title';
-            const articleTitleLink = document.createElement('a');
-            articleTitleLink.textContent = link['name-ja'];
-            articleTitleLink.href = link['link'];
-            articleTitle.appendChild(articleTitleLink);
-            articleTextContainerDiv.appendChild(articleTitle);
+            const articleTitleH1 = document.createElement('h1');
+            articleTitleH1.className = 'card-title';
+            articleTitleH1.textContent = link['name-ja'];
+            contentDiv.appendChild(articleTitleH1);
+
+            const articleP = document.createElement('p');
+            articleP.className = 'card-text';
+            var slicetext;
+            if ((link['description-ja']).length > 40) {
+                slicetext = (link['description-ja']).slice(0, 40) + "…";
+                console.log(slicetext);
+            } else {
+                slicetext = link['description-ja'];
+            }
+
+            articleP.textContent = slicetext;
+            contentDiv.appendChild(articleP);
+
+            //タグと日付のDiv
+            const tag_dateDiv = document.createElement('p');
+            tag_dateDiv.className = 'card-meta';
 
             const updateDateP = document.createElement('p');
             updateDateP.className = 'update-date';
-            articleTextContainerDiv.appendChild(updateDateP);
-
-            const articleContents = document.createElement('p');
-            articleContents.className = 'article-contents';
-            articleContents.textContent = link['description-ja'];
-
-            //フォントサイズとボックスの幅を数値で取得したいけどとりあえず手打ち
-            var fontsize = 16;
-            var width = 800;
-
-            //２行分のボックスに収納できる文字数
-            var mojisuu = Math.floor(width / fontsize) * 2;
-            console.log(mojisuu);
-            var shortText = articleContents.innerText;//.innerTextしないとテキスト取れないのか
-            //テキストから（「mojisuu」-1）文字を切り出し。
-            shortText = shortText.substr(0, (mojisuu - 1));
-            //「…」と連結し、元のテキストを置き換える
-            articleContents.innerText = shortText + "…";
-            articleTextContainerDiv.appendChild(articleContents);
-            anArticleDiv.appendChild(articleTextContainerDiv);
+            const date = new Date(link['update-date']);
 
 
-            const floatClearDiv = document.createElement('div');
-            floatClearDiv.className = 'float-clear';
-            anArticleDiv.appendChild(floatClearDiv);
+            const year = date.getFullYear();
+            const month = date.getMonth() + 1;
+            const day = date.getDate();
+            //Dateをそのまま表示すると詳細すぎるのでフォーマットの指定が必要
+            const formatDay = "🕑 " + year + "/" + month + "/" + day;
+            updateDateP.textContent = formatDay;
+            tag_dateDiv.appendChild(updateDateP);
 
-            document.getElementById('articles').appendChild(anArticleDiv);
+
+            const tagP = document.createElement('p');
+            tagP.className = 'tag';
+            tagP.textContent = link['tag-ja'];
+            tag_dateDiv.appendChild(tagP);
+
+            contentDiv.appendChild(tag_dateDiv);
+
+
+
+
+            //カード全体のsectionにリンク付けする
+            const linkOnCard = document.createElement('a');
+            linkOnCard.className = 'article-link';
+            linkOnCard.href = link['article-link'];
+
+            anArticleSec.appendChild(linkOnCard)
+            anArticleSec.appendChild(photoP);
+            anArticleSec.appendChild(contentDiv);
+
+
+
+            document.getElementById('newsDiv').appendChild(anArticleSec);
             //ニュースの1記事を生成して回す-END
 
             i++;
@@ -263,7 +180,6 @@ const renderLink = (json) => {
 
     });
 
-    //document.getElementById('result-link').textContent = JSON.stringify(json, null, 2);//JavaScript のオブジェクトや値を JSON 文字列に変換させて、HTML上のresultというidがついたdivに付与？する。最後の引数は上限が10のスペーシング 変わってんのかわからない
 }
 
 
@@ -283,20 +199,6 @@ const getData = async () => {
 getData();
 
 
-const getData2 = async () => {
-    try {
-        const response = await fetch(endpoint2);
-        if (response.ok) {
-            let jsonResponse = await response.json();
-            renderFaculty(jsonResponse);
-        }
-    }
-    catch (error) {
-        console.log(error);
-    }
-}
-
-getData2();
 
 
 
@@ -327,97 +229,130 @@ let lottieObj = lottie.loadAnimation({
 
 
 
-//画像のスライドショー
-(function () {
-    const setImage = [
-        "./img/currentSite_imgs/studio/ed1.png",
-        "./img/currentSite_imgs/studio/ed2.png",
-        "./img/currentSite_imgs/studio/baba1.png",
-        "./img/currentSite_imgs/studio/baba2.png"
-    ];
-    const view = document.getElementById('view');
-    const prev = document.getElementById('prev');
-    const next = document.getElementById('next');
-    const thumbnailList = document.getElementById('thumbnailList');
+/*---------topへ戻るボタン-------------*/
+function getScrolled() {
+    return (window.pageYOffset !== undefined) ? window.pageYOffset : document.documentElement.scrollTop;
+}
 
-    let list;
-    let image;
-    let current = 0;
-    let clickBtn = true;
+//トップに戻るボタンの要素を取得
+var topButton = document.getElementById('js-scroll-fadein');
 
+//ボタンの表示・非表示
+window.onscroll = function () {
+    (getScrolled() > 500) ? topButton.classList.add('is-fadein') : topButton.classList.remove('is-fadein');
+};
 
-    function createThumbnailItem() {
-        for (let i = 0; i < setImage.length; i++) {
-            list = document.createElement('li');
-            image = document.createElement('img');
-            image.src = setImage[i];
-            list.appendChild(image);
-            thumbnailList.appendChild(list);
-
-            if (i === 0) {
-                list.classList.add("selected");
-            }
-
-            list.addEventListener('click', function () {
-                view.src = this.children[0].src;
-
-                for (let j = 0; j < thumbnailList.children.length; j++) {
-                    thumbnailList.children[j].classList.remove("selected");
-                };
-                this.classList.add("selected");
-                let currentImage = this.children[0].src.slice(-6, -4);
-                current = Number(currentImage) - 1;
-            });
-        };
+//トップに移動する関数
+function scrollToTop() {
+    var scrolled = getScrolled();
+    window.scrollTo(0, Math.floor(scrolled / 2));
+    if (scrolled > 0) {
+        window.setTimeout(scrollToTop, 30);
     }
-    createThumbnailItem();
+};
+
+//イベント登録
+topButton.onclick = function () {
+    scrollToTop();
+};
 
 
-    prev.addEventListener('click', function () {
-        if (clickBtn === true) {
-            clickBtn = false;
-            view.classList.add("appear");
-            thumbnailList.children[current].classList.remove("selected");
-            current--;
-            if (current < 0) {
-                current = setImage.length - 1;
-            }
-            view.src = setImage[current];
-            thumbnailList.children[current].classList.add("selected");
-            setTimeout('view.classList.remove("appear");', 2100);
-            setTimeout(function () {
-                clickBtn = true;
-            }, 2100);
-        } else {
-            return false;
-        }
-    });
 
-    next.addEventListener('click', function () {
-        if (clickBtn === true) {
-            clickBtn = false;
-            view.classList.add("appear");
-            thumbnailList.children[current].classList.remove("selected");
-            current++;
-            if (current > setImage.length - 1) {
-                current = 0;
-            }
-            view.src = setImage[current];
-            thumbnailList.children[current].classList.add("selected");
-            setTimeout('view.classList.remove("appear");', 2100);
-            setTimeout(function () {
-                clickBtn = true;
-            }, 2100);
-        } else {
-            return false;
-        }
-    });
 
-    function autoPlay() {
-        setTimeout(function () {
-            next.click();
-            autoPlay();
-        }, 5000);
+/*----------------スタジオ画像のスライドショ--------------- ref:http://cya.sakura.ne.jp/java/sshow2.htm*/
+
+var slideCount = -1;		// 現在表示している配列番号
+var slideflag = 0;		// どっちを表示して、どっちを消すかのフラグ
+function slideChange() {	// スライドショーメイン関数
+    slideCount = (slideCount < studioImageArray.length - 1) ? slideCount + 1 : 0;		// 次の配列番号
+    slideflag = (slideflag == 0) ? 1 : 0;						// 表示・非表示フラグ反転
+    if (slideflag == 0) {
+        document.getElementById("studioShow-1").src = studioImageArray[slideCount];		// 次の画像をセットする
+        document.getElementById("studioShow-1").className = "fadein";		// フェードイン
+        document.getElementById("studioShow-2").className = "fadeout";	// フェードアウト
+
+    } else {
+        document.getElementById("studioShow-2").src = studioImageArray[slideCount];		// 次の画像をセットする
+        document.getElementById("studioShow-1").className = "fadeout";	// フェードアウト
+        document.getElementById("studioShow-2").className = "fadein";		// フェードイン
+
     }
-    window.onload = autoPlay();
-})();
+
+
+    setTimeout("slideChange()", 4000);					// 4秒周期に画像を更新する
+}
+
+slideChange();
+
+
+
+
+/*----------------教員画像のスライドショ--------------- ref:http://cya.sakura.ne.jp/java/sshow2.htm*/
+
+myImage1 = new Array(	// 画像ファイル名の設定
+    "./img/currentSite_imgs/faculty/kusumi.jpg",
+    "./img/currentSite_imgs/faculty/kushiyama.jpg",
+    "./img/currentSite_imgs/faculty/komma.png",
+    "./img/currentSite_imgs/faculty/verl.jpg",
+    "./img/currentSite_imgs/faculty/andou.jpg"
+);
+
+myImage2 = new Array(	// 画像ファイル名の設定
+    "./img/currentSite_imgs/faculty/kim.png",
+    "./img/currentSite_imgs/faculty/baba.png",
+    "./img/currentSite_imgs/faculty/sugimoto.jpg",
+    "./img/currentSite_imgs/faculty/namba.png",
+    "./img/currentSite_imgs/faculty/hidaka.png"
+);
+
+myImage3 = new Array(	// 画像ファイル名の設定
+    "./img/currentSite_imgs/faculty/kasamatsu.png",
+    "./img/currentSite_imgs/faculty/fujiwara.png",
+    "./img/currentSite_imgs/faculty/mukai.jpg",
+    "./img/currentSite_imgs/faculty/kikutake.jpg",
+    "./img/currentSite_imgs/faculty/motegi.png",
+    "./img/currentSite_imgs/faculty/tsuchiya.jpg"
+);
+
+
+
+var nowCount = -1;		// 現在表示している配列番号
+var nowflag = 0;		// どっちを表示して、どっちを消すかのフラグ
+function myChange() {	// スライドショーメイン関数
+    nowCount = (nowCount < myImage1.length - 1) ? nowCount + 1 : 0;		// 次の配列番号
+    nowflag = (nowflag == 0) ? 1 : 0;						// 表示・非表示フラグ反転
+    if (nowflag == 0) {
+        document.getElementById("idshow1-1").src = myImage1[nowCount];		// 次の画像をセットする
+        document.getElementById("idshow1-1").className = "fadein";		// フェードイン
+        document.getElementById("idshow1-2").className = "fadeout";	// フェードアウト
+
+
+        document.getElementById("idshow2-1").src = myImage2[nowCount];		// 次の画像をセットする
+        document.getElementById("idshow2-1").className = "fadein";		// フェードイン
+        document.getElementById("idshow2-2").className = "fadeout";	// フェードアウト
+
+
+        document.getElementById("idshow3-1").src = myImage3[nowCount];		// 次の画像をセットする
+        document.getElementById("idshow3-1").className = "fadein";		// フェードイン
+        document.getElementById("idshow3-2").className = "fadeout";	// フェードアウト
+    } else {
+        document.getElementById("idshow1-2").src = myImage1[nowCount];		// 次の画像をセットする
+        document.getElementById("idshow1-1").className = "fadeout";	// フェードアウト
+        document.getElementById("idshow1-2").className = "fadein";		// フェードイン
+
+        document.getElementById("idshow2-2").src = myImage2[nowCount];		// 次の画像をセットする
+        document.getElementById("idshow2-1").className = "fadeout";	// フェードアウト
+        document.getElementById("idshow2-2").className = "fadein";		// フェードイン
+
+        document.getElementById("idshow3-2").src = myImage3[nowCount];		// 次の画像をセットする
+        document.getElementById("idshow3-1").className = "fadeout";	// フェードアウト
+        document.getElementById("idshow3-2").className = "fadein";		// フェードイン
+
+    }
+
+
+    setTimeout("myChange()", 4000);					// 4秒周期に画像を更新する
+}
+
+myChange();
+

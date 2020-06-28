@@ -2,7 +2,7 @@ const uri = 'https://script.google.com/macros/s/AKfycbxyacpN8y4nxSAnU0Eji6E_rBRD
 
 const id = '1BpGnuwC4lZf9G2yFyiSrxbJuGO8gviV8mr-I2D3x4vA';
 const sheet = 'Studio';
-const sheet2 = "Faculty";
+const sheet2 = "group4-faculty";
 const sheet3 = 'Link';
 const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 const endpoint2 = `${uri}?id=${id}&sheet=${sheet2}`;
@@ -89,6 +89,8 @@ const renderJson2 = (json) => {
     const nomalFacultyStudio = document.createElement("span");
     const nomalFacultyMajor = document.createElement("span");
     const nomalFacultyImage = document.createElement("img");
+    const nomalFacultyLink = document.createElement("span");
+    const nomalFacultyLink2 = document.createElement("a");
     //nomal~のところは全部日本語版サイト。
     //○○.classNameのところ、上から順に、教員名（日本語）、教員名（英語）、教授か助教かとか、所属スタジオ、教員の専攻、写真
     nomalFacultyTextDiv.className = 'text-box'
@@ -98,11 +100,16 @@ const renderJson2 = (json) => {
     nomalFacultyStudio.className = 'faculty-studio';
     nomalFacultyMajor.className = 'faculty-major';
     nomalFacultyImage.className = "faculty-image";
+    nomalFacultyLink.className = 'faculty-link'
     nomalFacultyname.textContent = faculty['f-faculty-ja'];
     nomalFacultynameEn.textContent = faculty['f-faculty-en'];
     nomalFacultyTitle.textContent = faculty['f-faculty-title-ja'];
     nomalFacultyStudio.textContent = faculty['f-studio-ja'];
     nomalFacultyMajor.textContent = faculty['major-ja'];
+    if (faculty['f-link'] != "") {
+      nomalFacultyLink2.textContent = "外部サイト：" + faculty['f-link-name'];
+      nomalFacultyLink2.href = faculty['f-link'];
+    }
     nomalFacultyImage.src = faculty['faculty-photo'];
 
     const englishFacultyDiv = document.createElement('div');
@@ -113,6 +120,8 @@ const renderJson2 = (json) => {
     const englishFacultyStudio = document.createElement("span");
     const englishFacultyMajor = document.createElement("span");
     const englishFacultyImage = document.createElement("img");
+    const englishFacultyLink = document.createElement("span");
+    const englishFacultyLink2 = document.createElement("a");
     //english~のところは全部日本語版サイト。
     //○○.classNameのところ、上から順に、教員名（英語）、教員名（日本語）、教授か助教かとか、所属スタジオ、教員の専攻、写真
     englishFacultyTextDiv.className = 'text-box'
@@ -122,12 +131,17 @@ const renderJson2 = (json) => {
     englishFacultyStudio.className = 'faculty-studio-en';
     englishFacultyMajor.className = 'faculty-major-en';
     englishFacultyImage.className = "faculty-image-en";
+    englishFacultyLink.className = 'faculty-link-en'
     englishFacultyname.textContent = faculty['f-faculty-en'];
     englishFacultynameJa.textContent = faculty['f-faculty-ja'];
     englishFacultyTitle.textContent = faculty['f-faculty-title-en'];
     englishFacultyStudio.textContent = faculty['f-studio-en'];
     englishFacultyMajor.textContent = faculty['major-en'];
     englishFacultyImage.src = faculty['faculty-photo'];
+    if (faculty['f-link'] != "") {
+      englishFacultyLink2.textContent = "official site：" + faculty['f-link-name'];
+      englishFacultyLink2.href = faculty['f-link'];
+    }
 
     nomalFacultyDiv.appendChild(nomalFacultyImage);
     nomalFacultyDiv.appendChild(nomalFacultyTextDiv);
@@ -136,6 +150,8 @@ const renderJson2 = (json) => {
     nomalFacultyTextDiv.appendChild(nomalFacultynameEn);
     nomalFacultyTextDiv.appendChild(nomalFacultyStudio);
     nomalFacultyTextDiv.appendChild(nomalFacultyMajor);
+    nomalFacultyLink.appendChild(nomalFacultyLink2);
+    nomalFacultyTextDiv.appendChild(nomalFacultyLink);
     document.getElementById('nomalFaculty').appendChild(nomalFacultyDiv);
     englishFacultyDiv.appendChild(englishFacultyImage);
     englishFacultyDiv.appendChild(englishFacultyTextDiv)
@@ -144,6 +160,8 @@ const renderJson2 = (json) => {
     englishFacultyTextDiv.appendChild(englishFacultynameJa);
     englishFacultyTextDiv.appendChild(englishFacultyStudio);
     englishFacultyTextDiv.appendChild(englishFacultyMajor);
+    englishFacultyLink.appendChild(englishFacultyLink2);
+    englishFacultyTextDiv.appendChild(englishFacultyLink);
     document.getElementById('englishFaculty').appendChild(englishFacultyDiv);
   });
 
@@ -224,6 +242,8 @@ window.onload = function () {
     //document.getElementById('englishWorkTitle').style.display = "block";
     document.getElementById('nomalWorkText').style.display = "none";
     document.getElementById('englishWorkText').style.display = "block";
+    document.getElementById('easyWorkText').style.display = "none";
+
     document.getElementById('nomalCurrText').style.display = "none";
     document.getElementById('englishCurrText').style.display = "block";
     document.getElementById('easyCurrText').style.display = "none";
@@ -243,18 +263,18 @@ window.onload = function () {
     document.getElementById('nomalQText').style.display = "none";
     document.getElementById('englishQText').style.display = "block";
     document.getElementById('easyQText').style.display = "none";
+
+    document.getElementById('nomalAcText').style.display = "none";
+    document.getElementById('englishAcText').style.display = "block";
+    document.getElementById('easyAcText').style.display = "none";
   }
 
   else if (document.URL.match("/?lang=2")) {
     langBotton2.classList.remove('open');
     langBotton2.classList.add('close');
     langMode = 2;
-
-    for (var i = 0; i <= 8; i++) {
-      document.getElementById('nomalSubtitle' + (i + 1).toString()).style.display = "none";
-      document.getElementById('easySubtitle' + (i + 1).toString()).style.display = "block";
-      document.getElementById('englishSubtitle' + (i + 1).toString()).style.display = "none";
-    }
+    //langBottonWork.classList.remove('open');
+    //langBottonWork.classList.add('close');
 
     document.getElementById('nomalButton').style.display = "block";
     document.getElementById('englishButton').style.display = "none";
@@ -262,29 +282,59 @@ window.onload = function () {
     document.getElementById('easyButton2').style.display = "block";
 
     document.getElementById('nomalTitle').style.display = "none";
-    document.getElementById('englishTitle').style.display = "none";
     document.getElementById('easyTitle').style.display = "block";
+    document.getElementById('englishTitle').style.display = "none";
+    document.getElementById('englishTitle2').style.display = "none";
 
-    document.getElementById('nomalFaculty').style.display = "none";
-    document.getElementById('englishFaculty').style.display = "none";
-    document.getElementById('easyFaculty').style.display = "block";
+    document.getElementById('nomalCopy').style.display = "none";
+    document.getElementById('englishCopy').style.display = "none";
+    document.getElementById('easyCopy').style.display = "block";
 
-    document.getElementById('nomalCore').style.display = "block";
-    document.getElementById('englishCore').style.display = "none";
+    for (var i = 0; i <= 8; i++) {
+      document.getElementById('easySubtitle' + (i + 1).toString()).style.display = "block";
+      document.getElementById('nomalSubtitle' + (i + 1).toString()).style.display = "none";
+      document.getElementById('englishSubtitle' + (i + 1).toString()).style.display = "none";
+    }
+
+    for (var i = 0; i <= 8; i++) {
+      document.getElementById('nomalContentsTitle' + (i + 1).toString()).style.display = "none";
+      document.getElementById('englishContentsTitle' + (i + 1).toString()).style.display = "none";
+      document.getElementById('easyContentsTitle' + (i + 1).toString()).style.display = "block";
+    }
 
     document.getElementById('nomalText').style.display = "none";
     document.getElementById('englishText').style.display = "none";
     document.getElementById('easyText').style.display = "block";
 
-    document.getElementById('nomalReturn').style.display = "block";
-    document.getElementById('englishReturn').style.display = "none";
+    //document.getElementById('nomalWorkTitle').style.display = "none";
+    //document.getElementById('englishWorkTitle').style.display = "block";
+    document.getElementById('nomalWorkText').style.display = "none";
+    document.getElementById('englishWorkText').style.display = "none";
+    document.getElementById('easyWorkText').style.display = "block";
 
-    document.getElementById('nomalContentsTitle4').style.display = "none";
-    document.getElementById('englishContentsTitle4').style.display = "none";
-    document.getElementById('easyContentsTitle4').style.display = "block";
+    document.getElementById('nomalCurrText').style.display = "none";
+    document.getElementById('englishCurrText').style.display = "none";
+    document.getElementById('easyCurrText').style.display = "block";
+    //document.getElementById('nomalWorkReturn').style.display = "none";
+    //document.getElementById('englishWorkReturn').style.display = "block";
 
     document.getElementById('nomalStudios').style.display = "flex";
     document.getElementById('englishStudios').style.display = "none";
+
+    document.getElementById('nomalFaculty').style.display = "block";
+    document.getElementById('englishFaculty').style.display = "none";
+
+    document.getElementById('nomalAdmissionText').style.display = "none";
+    document.getElementById('englishAdmissionText').style.display = "none";
+    document.getElementById('easyAdmissionText').style.display = "block";
+
+    document.getElementById('nomalQText').style.display = "none";
+    document.getElementById('englishQText').style.display = "none";
+    document.getElementById('easyQText').style.display = "block";
+
+    document.getElementById('nomalAcText').style.display = "none";
+    document.getElementById('englishAcText').style.display = "none";
+    document.getElementById('easyAcText').style.display = "block";
   }
 };
 
@@ -335,6 +385,8 @@ document.getElementById("button").onclick = function () {
     //document.getElementById('englishWorkTitle').style.display = "block";
     document.getElementById('nomalWorkText').style.display = "none";
     document.getElementById('englishWorkText').style.display = "block";
+    document.getElementById('easyWorkText').style.display = "none";
+
     document.getElementById('nomalCurrText').style.display = "none";
     document.getElementById('englishCurrText').style.display = "block";
     document.getElementById('easyCurrText').style.display = "none";
@@ -354,6 +406,10 @@ document.getElementById("button").onclick = function () {
     document.getElementById('nomalQText').style.display = "none";
     document.getElementById('englishQText').style.display = "block";
     document.getElementById('easyQText').style.display = "none";
+
+    document.getElementById('nomalAcText').style.display = "none";
+    document.getElementById('englishAcText').style.display = "block";
+    document.getElementById('easyAcText').style.display = "none";
 
   } else if (langBottonClass == "close") {
     langMode = 0;
@@ -395,6 +451,8 @@ document.getElementById("button").onclick = function () {
     //document.getElementById('englishWorkTitle').style.display = "none";
     document.getElementById('nomalWorkText').style.display = "block";
     document.getElementById('englishWorkText').style.display = "none";
+    document.getElementById('easyWorkText').style.display = "none";
+
     document.getElementById('nomalCurrText').style.display = "block";
     document.getElementById('englishCurrText').style.display = "none";
     document.getElementById('easyCurrText').style.display = "none";
@@ -414,6 +472,10 @@ document.getElementById("button").onclick = function () {
     document.getElementById('nomalQText').style.display = "block";
     document.getElementById('englishQText').style.display = "none";
     document.getElementById('easyQText').style.display = "none";
+
+    document.getElementById('nomalAcText').style.display = "block";
+    document.getElementById('englishAcText').style.display = "none";
+    document.getElementById('easyAcText').style.display = "none";
   }
 
 };
@@ -466,6 +528,8 @@ document.getElementById("button2").onclick = function () {
     //document.getElementById('englishWorkTitle').style.display = "block";
     document.getElementById('nomalWorkText').style.display = "none";
     document.getElementById('englishWorkText').style.display = "none";
+    document.getElementById('easyWorkText').style.display = "block";
+
     document.getElementById('nomalCurrText').style.display = "none";
     document.getElementById('englishCurrText').style.display = "none";
     document.getElementById('easyCurrText').style.display = "block";
@@ -485,6 +549,10 @@ document.getElementById("button2").onclick = function () {
     document.getElementById('nomalQText').style.display = "none";
     document.getElementById('englishQText').style.display = "none";
     document.getElementById('easyQText').style.display = "block";
+
+    document.getElementById('nomalAcText').style.display = "none";
+    document.getElementById('englishAcText').style.display = "none";
+    document.getElementById('easyAcText').style.display = "block";
 
   } else if (langBotton2Class == "close") {
     langMode = 0;
@@ -526,6 +594,8 @@ document.getElementById("button2").onclick = function () {
     //document.getElementById('englishWorkTitle').style.display = "none";
     document.getElementById('nomalWorkText').style.display = "block";
     document.getElementById('englishWorkText').style.display = "none";
+    document.getElementById('easyWorkText').style.display = "none";
+
     document.getElementById('nomalCurrText').style.display = "block";
     document.getElementById('englishCurrText').style.display = "none";
     document.getElementById('easyCurrText').style.display = "none";
@@ -545,6 +615,10 @@ document.getElementById("button2").onclick = function () {
     document.getElementById('nomalQText').style.display = "block";
     document.getElementById('englishQText').style.display = "none";
     document.getElementById('easyQText').style.display = "none";
+
+    document.getElementById('nomalAcText').style.display = "block";
+    document.getElementById('englishAcText').style.display = "none";
+    document.getElementById('easyAcText').style.display = "none";
   }
 };
 

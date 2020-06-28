@@ -21,8 +21,6 @@ const renderWorks = (json) => {//シートごとに使い分ける
             workImg.className = 'work-img';
             workImg.src = work['img'];
             workImg.alt = work['title-en'];
-            workImg.width = 200;
-            workImg.height = 200;
 
             const workText = document.createElement("figcaption");
 

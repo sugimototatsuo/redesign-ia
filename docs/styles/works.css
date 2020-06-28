@@ -36,3 +36,9 @@ figure:hover figcaption {
 transform: rotateY(0) rotateX(0);
 opacity: 1;
 }
+
+.a-work img{
+ width : 200px;
+height : 200px;
+  object-fit: cover;/*アスペ比を変えずにトリミング*/
+}

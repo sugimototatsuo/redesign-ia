@@ -81,7 +81,7 @@ const renderFaculty = (json) => {
                 linkIconA.className = 'sns-link';
                 const linkIcon = document.createElement("img");
                 linkIcon.className = 'sitelink-icon';
-                linkIcon.src = "./img/icon/site/LINK.png";
+                linkIcon.src = "./img/icon/ite/LINK.png";
                 linkIcon.alt = "website：" + faculty['f-link-title'];
                 linkIconA.href = faculty['f-link'];
                 linkIconA.target = "_blank";

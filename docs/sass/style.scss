@@ -301,6 +301,7 @@ pre#result {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 2rem;
+  color: #2E2E2E;
 }
 #nomalFaculty > div {
   margin: 1em 0;
@@ -336,6 +337,13 @@ pre#result {
 }
 #faculty span.faculty-name-2, .faculty-name-en2{
   display: block;
+}
+.faculty-link > a{
+  color: #2E2E2E;
+  text-decoration: none;
+  &:hover{
+    opacity: 0.5;
+  }
 }
 
 // ========== column ==========
@@ -380,7 +388,11 @@ pre#result {
 #admission #nomalAdmissionText img{
   display: block;
   width: 70%;
-  margin: 0.3rem auto;
+  margin: 0.3rem auto 1rem;
+}
+#admission #nomalAdmissionText a{
+  color: #2E2E2E;
+  text-decoration: none;
 }
 
 /* ========== question ========== */
@@ -394,15 +406,28 @@ pre#result {
 
 // ========== access =========
 #access{
-  .frame{
-    border: 1px solid #707070;
-    margin-bottom: -0.5rem;
+
+}
+
+// ========== AcText ==========
+#nomalAcText, #englishAcText, #easyAcText{
+  padding: 2rem 3rem;
+  color: #2E2E2E;
+  ul{
+    list-style: none;
+    li{
+      p{
+
+      }
+    }
+  }
+  h4, > p{
+    padding-left: 3rem;
+  }
+  h4{
+    padding-top: 0.3rem;
   }
 }
-// iframe{
-//   width: 48%!important;
-//   height: 30rem;
-// }
 
 /* ========== footer ========== */
 footer{

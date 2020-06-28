@@ -2,6 +2,8 @@ $breakpoints: (
  'sm': 'screen and (max-width: 576px)',
  'md': 'screen and (max-width: 768px)',
  'lg': 'screen and (max-width: 992px)',
+ //  header用
+ 'xl': 'screen and (max-width: 1310px)',
 ) !default;
 
 //メディアクエリ用のmixinを定義。デフォ値はmd
@@ -11,6 +13,8 @@ $breakpoints: (
     @content;
   }
 }
+
+// ====================
 
 body {
   font-family: sans-serif;
@@ -24,10 +28,14 @@ section{
     width: 100%;
     overflow: hidden;
     margin-bottom: 2rem;
-    #nomalStudios{
+    #nomalStudios, #englishStudios{
       width: 330px;
       float: right;
       text-align: right;
+      @include mq(sm){
+        float: none;
+        background: red;
+      }
       > div{
         width: 50px;
         height: 50px;
@@ -68,13 +76,22 @@ section{
 }
 .faculty_title{
   float: left;
+  @include mq(sm){
+        float: none;
+      }
 }
 
 .right_box{
   float: right;
   text-align: right;
+  @include mq(md){
+    float: none;
+    text-align: left;
+    width: 40%;
+    font-size: 4rem;
+  }
 }
 p{
-  width: 1000px;
+  width: 80%;
   margin: 0 auto;
 }

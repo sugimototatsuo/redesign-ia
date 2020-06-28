@@ -4,7 +4,9 @@
 <head>
     <meta charset="utf-8">
     <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
-    <link rel="stylesheet" href="../styles/styles.css">
+    <!-- <link rel="stylesheet" href="../styles/styles.css"> -->
+    <link rel="stylesheet" href="../sass/reset.css">
+    <link rel="stylesheet" href="../sass/iaLib.css">
 </head>
 
 <body>
@@ -91,15 +93,22 @@
         </div>
     </header>
 
-    <h2>インダスみんなの図書</h2>
+    <!-- <h2>インダスみんなの図書</h2>
 
-    <img src="../image/iaLib.jpg">
+    <img src="../image/iaLib.jpg"> -->
+    <div class="main-visual"></div>
+
+    <div class="first-text">
+        <h3>インダスみんなの図書とは？</h3>
+        <h5>インダストリアルアート学科の先生方のおすすめの本を掲載しています。<br>
+        SNSでも定期的に推薦図書を発信しています。</h5>
+    </div>
 
     <div id="book"></div>
 
     <a href="../index.html" title="returnIndex">
         <p id="nomalReturn" style="display: block">トップへもどる</p>
-        <p id="englishReturn" style="display: none">Return　to top</p>
+        <p id="englishReturn" style="display: none">Return to top</p>
     </a>
     <script src="../js/jsBook.js"></script>
 </body>

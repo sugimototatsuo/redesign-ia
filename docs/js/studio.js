@@ -41,7 +41,7 @@ const renderStudio = (json) => {//シートごとに使い分ける
 
                 photo.src = studio['photo1'];
                 photo.alt = studio['name-ja'];
-                linkOnPhoto.href = studio['studio-page-link'];
+                linkOnPhoto.href = studio['studio-page-link-ja'];
 
 
                 imgDiv.appendChild(photo);
@@ -56,7 +56,7 @@ const renderStudio = (json) => {//シートごとに使い分ける
                 const linkOnText = document.createElement('a');//ここでうっかりlinkっていう変数を作っちゃうとかぶるのでうまくいかない
                 linkOnText.className = 'studio-title';
                 linkOnText.textContent = studio['name-ja'];//リンクに何かしらテキストがないと見えない
-                linkOnText.href = studio['studio-page-link'];
+                linkOnText.href = studio['studio-page-link-ja'];
                 linkTitleP.appendChild(linkOnText);
                 studioDiv.appendChild(linkTitleP);
 
@@ -100,7 +100,7 @@ const renderStudio = (json) => {//シートごとに使い分ける
 
                 photo.src = studio['photo1'];
                 photo.alt = studio['name-ja'];
-                linkOnPhoto.href = studio['studio-page-link'];
+                linkOnPhoto.href = studio['studio-page-link-ja'];
 
 
                 imgDiv.appendChild(photo);
@@ -114,7 +114,7 @@ const renderStudio = (json) => {//シートごとに使い分ける
                 const linkOnText = document.createElement('a');//ここでうっかりlinkっていう変数を作っちゃうとかぶるのでうまくいかない
                 linkOnText.className = 'studio-title';
                 linkOnText.textContent = studio['name-ja'];//リンクに何かしらテキストがないと見えない
-                linkOnText.href = studio['studio-page-link'];
+                linkOnText.href = studio['studio-page-link-ja'];
                 linkTitleP.appendChild(linkOnText);
                 studioDiv.appendChild(linkTitleP);
 

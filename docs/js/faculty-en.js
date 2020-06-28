@@ -24,7 +24,7 @@ const renderFaculty = (json) => {
             const facPhoto = document.createElement("img");
             facPhoto.className = 'faculty-img';
             facPhoto.src = faculty['faculty-photo'];
-            facPhoto.alt = faculty['faculty-ja'];
+            facPhoto.alt = faculty['faculty-en'];
             facPhotoP.appendChild(facPhoto);
 
             menberSec.appendChild(facPhotoP);
@@ -39,31 +39,27 @@ const renderFaculty = (json) => {
 
             const facultyJa = document.createElement("h2");
             facultyJa.className = 'faculty-ja';
-            facultyJa.textContent = faculty['f-faculty-ja'];
+            facultyJa.textContent = faculty['f-faculty-en'];
             nameDiv.appendChild(facultyJa);
 
             const facultyTitleJa = document.createElement("span");
             facultyTitleJa.className = 'studio-facultyTitle';
-            facultyTitleJa.textContent = faculty['f-faculty-title-ja'];
+            facultyTitleJa.textContent = faculty['f-faculty-title-en'];
             nameDiv.appendChild(facultyTitleJa);
 
-            const facultyEn = document.createElement("p");
-            facultyEn.className = 'faculty-en';
-            facultyEn.textContent = faculty['f-faculty-en'];
-            nameDiv.appendChild(facultyEn);
 
             profileSec.appendChild(nameDiv);
 
 
             const studioJa = document.createElement("p");
             studioJa.className = 'faculty-studio';
-            studioJa.textContent = faculty['f-studio-ja'];
+            studioJa.textContent = faculty['f-studio-en'];
             profileSec.appendChild(studioJa);
 
 
             const majorJa = document.createElement("p");
             majorJa.className = 'faculty-major';
-            majorJa.textContent = faculty['major-ja'];
+            majorJa.textContent = faculty['major-en'];
             profileSec.appendChild(majorJa);
 
 

@@ -20,17 +20,17 @@ const renderStudio = (json) => {//シートごとに使い分ける
             const workImg = document.createElement("img");
             workImg.className = 'work-img';
             workImg.src = studio['img'];
-            workImg.alt = studio['title-en'];
+            workImg.alt = studio['title-ja'];
             workImg.width = 200;
             workImg.height = 200;
 
             const workText = document.createElement("figcaption");
 
             const workTitle = document.createElement("h3");
-            workTitle.textContent = studio['title-en'];
+            workTitle.textContent = studio['title-ja'];
 
             const workCaption = document.createElement("p");
-            workCaption.textContent = studio['caption-en'];
+            workCaption.textContent = studio['caption-ja'];
 
             workText.appendChild(workTitle);
             workText.appendChild(workCaption);

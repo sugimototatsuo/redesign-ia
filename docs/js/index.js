@@ -3,7 +3,7 @@ const uri = 'https://script.google.com/macros/s/AKfycbxyacpN8y4nxSAnU0Eji6E_rBRD
 const id = '1BpGnuwC4lZf9G2yFyiSrxbJuGO8gviV8mr-I2D3x4vA';
 const sheet = 'Studio';
 const sheet2 = "group4-faculty";
-const sheet3 = 'Link';
+const sheet3 = 'group4-link';
 const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 const endpoint2 = `${uri}?id=${id}&sheet=${sheet2}`;
 const endpoint3 = `${uri}?id=${id}&sheet=${sheet3}`;
@@ -174,16 +174,19 @@ const renderJson3 = (json) => {
   link.forEach(link => {
     const nomalLinkDiv = document.createElement('div');
     const nomalLinkTitle = document.createElement("a");
+    const nomalLink = document.createElement("a");
     const nomalLinkImage = document.createElement("img");
     nomalLinkTitle.textContent = link['name-ja'];
     //関連コンテンツ名のクラス
     nomalLinkTitle.className = 'link-title';
     nomalLinkTitle.href = link['link'];
+    nomalLink.href = link['link'];
     nomalLinkImage.src = link['photo'];
     //関連コンテンツ画像のクラス
     nomalLinkImage.className = 'link-image';
 
-    nomalLinkDiv.appendChild(nomalLinkImage);
+    nomalLink.appendChild(nomalLinkImage);
+    nomalLinkDiv.appendChild(nomalLink);
     nomalLinkDiv.appendChild(nomalLinkTitle);
     //nomalStudioDiv.appendChild(nomalStudioLink);
     document.getElementById('nomalLink').appendChild(nomalLinkDiv);

@@ -449,8 +449,6 @@
             <rt>かんれん</rt>
           </ruby>コンテンツ -</h3>
         <div class="book-img" id="nomalLink" style="display: flex"></div>
-        <img src="./image/iaLib.jpg" title="iaLib"><a href="./html/iaLib.html" id="nomalLinkIaLib">インダスみんなの図書</a>
-
       </div>
 
       <div id="admission">
@@ -846,7 +844,7 @@
           <div
             onclick="obj=document.getElementById('adcontenteas').style; obj.display=(obj.display=='none')?'block':'none';">
 
-            <a style="cursor:pointer;">▼ もっと<ruby>
+            <a style="cursor:pointer;">もっと<ruby>
                 <rb>見</rb>
                 <rt>み</rt>
               </ruby>る</a>
@@ -1266,7 +1264,7 @@
                 </h4>
                 <div
                   onclick="obj=document.getElementById('q1').style; obj.display=(obj.display=='none')?'block':'none';">
-                  <a style="cursor:pointer;">▼ もっと見る</a>
+                  <a style="cursor:pointer;">もっと見る</a>
                 </div>
                 <div id="q1" style="display:none;clear:both;">
                   <p>学校の提示している取得可能な資格・免許は以下の通りです。</p>
@@ -1288,7 +1286,7 @@
                 <h4>バイトをする余裕はありますか？どんなバイトしていますか？</h4>
                 <div
                   onclick="obj=document.getElementById('q2').style; obj.display=(obj.display=='none')?'block':'none';">
-                  <a style="cursor:pointer;">▼ もっと見る</a>
+                  <a style="cursor:pointer;">もっと見る</a>
                 </div>
                 <div id="q2" style="display:none;clear:both;">
                   <p>1年後期から、週2〜3回程でバイトしています。私は通学時間が長いのもあるため、課題の忙しい時期は少なくしていました。割とシフトの自由が効くバイトを選びました。
@@ -1301,7 +1299,7 @@
                 <h4>数学ができないので不安です。大丈夫ですか？</h4>
                 <div
                   onclick="obj=document.getElementById('q3').style; obj.display=(obj.display=='none')?'block':'none';">
-                  <a style="cursor:pointer;">▼ もっと見る</a>
+                  <a style="cursor:pointer;">もっと見る</a>
                 </div>
                 <div id="q3" style="display:none;clear:both;">
                   <p>他の科目もあるので、数学だけで全てが決まるわけではありません。ただし、苦手意識があるなら早いうちから向き合う方が良いかと思います。（20代　B３女性）</p>
@@ -1312,7 +1310,7 @@
                 <h4>お金がないけどデザインの勉強がしたいです。専門学校に行くべきか、どこなら行けますか？</h4>
                 <div
                   onclick="obj=document.getElementById('q4').style; obj.display=(obj.display=='none')?'block':'none';">
-                  <a style="cursor:pointer;">▼ もっと見る</a>
+                  <a style="cursor:pointer;">もっと見る</a>
                 </div>
                 <div id="q4" style="display:none;clear:both;">
                   <p>都立大の図書館は以下の方にも解放されていますので、利用してみるといいかと。デザインの本などを読んでみるだけでも勉強にはなります。</p>
@@ -1339,7 +1337,18 @@
                 </div>
               </li>
             </ul>
-            <p>その他のご質問がある方は<a href="./html/form.html">こちら</a>からお気軽にご質問ください</p>
+            <div
+              onclick="obj=document.getElementById('qplus').style; obj.display=(obj.display=='none')?'block':'none';">
+              <a style="cursor:pointer;">
+                ▼その他ご質問がある方はこちらからお気軽にご質問ください▼
+              </a>
+            </div>
+            <div id="qplus" style="display:none;clear:both;">
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSeUW0nKHalhyZksHTGTAe7rTyidckQmQ96ll3XzZFL3GPhNTw/viewform?embedded=true"
+                width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+            </div>
+
           </div>
 
           <div id="englishQText" style="display: none">
@@ -1676,7 +1685,7 @@
                 <div
                   onclick="obj=document.getElementById('q4eas').style; obj.display=(obj.display=='none')?'block':'none';">
                   <a style="cursor:pointer;">
-                    ▼ もっと<ruby>
+                    もっと<ruby>
                       <rb>見</rb>
                       <rt>み</rt>
                     </ruby>る
@@ -1775,7 +1784,8 @@
                         <rt>ひと</rt>
                       </ruby>）
                     </li>
-                    <li><ruby>
+                    <li>
+                      <ruby>
                         <rb>医療従事者</rb>
                         <rt>いりょうじゅうじしゃ</rt>
                       </ruby>（<ruby>
@@ -1810,7 +1820,8 @@
                         href="https://www.lib.tmu.ac.jp/guide/first_time.html">(https://www.lib.tmu.ac.jp/guide/first_time.html)</a>
                     </li>
                   </ul>
-                  <p><ruby>
+                  <p>
+                    <ruby>
                       <rb>何</rb>
                       <rt>なに</rt>
                     </ruby>を<ruby>
@@ -1835,20 +1846,172 @@
                     </ruby>や、システムデザインフォーラムにて<ruby>
                       <rb>先生</rb>
                       <rt>せんせい</rt>
-                    </ruby>とお話しできるタイミングがあると思います。ぜひお越しください。（20代　B３女性）</p>
-                  <p>本学の学費はデザイン系の中では私立や専門学校等の他大学と比べ、100万円以上安くなっております。
-                    ただし、専門学校等では本学にないようなPCの無償レンタル・Adobeの無償配布等の制度を取っているところが多々あります。
-                    学費が安い反面、本学にはそういった仕組みはなく、PCやAdobeライセンスは学部3年次までは自費で負担することになります。
-                    これらの金額を加味すると実際の学費よりもかかる費用は年間約10万円ほど高くなることに留意してください。
-                    また、本学の学費の詳細、減免制度、奨学金制度についてはこちらでご覧いただけます。
+                    </ruby>とお<ruby>
+                      <rb>話</rb>
+                      <rt>はなし</rt>
+                    </ruby>ができるタイミングがあると<ruby>
+                      <rb>思</rb>
+                      <rt>おも</rt>
+                    </ruby>います。ぜひ<ruby>
+                      <rb>来</rb>
+                      <rt>き</rt>
+                    </ruby>てください。（20代　B３女性）
+                  </p>
+                  <p>
+                    この<ruby>
+                      <rb>学科</rb>
+                      <rt>がっか</rt>
+                    </ruby>の<ruby>
+                      <rb>学費</rb>
+                      <rt>がくひ</rt>
+                    </ruby>は<ruby>
+                      <rb>中</rb>
+                      <rt>なか</rt>
+                    </ruby>では<ruby>
+                      <rb>私立大学</rb>
+                      <rt>しりつだいがく</rt>
+                    </ruby>や<ruby>
+                      <rb>専門学校</rb>
+                      <rt>せんもんがっこう</rt>
+                    </ruby>などの<ruby>
+                      <rb>他</rb>
+                      <rt>ほか</rt>
+                    </ruby>のデザイン<ruby>
+                      <rb>系</rb>
+                      <rt>けい</rt>
+                    </ruby>の<ruby>
+                      <rb>大学</rb>
+                      <rt>だいがく</rt>
+                    </ruby>と<ruby>
+                      <rb>比</rb>
+                      <rt>くら</rt>
+                    </ruby>べ、100<ruby>
+                      <rb>万円以上安</rb>
+                      <rt>まんえんいじょうやす</rt>
+                    </ruby>いです。
+                    ただし、<ruby>
+                      <rb>専門学校</rb>
+                      <rt>せんもんがっこう</rt>
+                    </ruby>などにはPCを<ruby>
+                      <rb>無料</rb>
+                      <rt>むりょう</rt>
+                    </ruby>で<ruby>
+                      <rb>使</rb>
+                      <rt>つか</rt>
+                    </ruby>うことができたり、Adobeを<ruby>
+                      <rb>無料</rb>
+                      <rt>むりょう</rt>
+                    </ruby>で<ruby>
+                      <rb>使</rb>
+                      <rt>つか</rt>
+                    </ruby>うことができるところもあります。
+                    <ruby>
+                      <rb>東京都立大学</rb>
+                      <rt>とうきょうとりつだいがく</rt>
+                    </ruby>は<ruby>
+                      <rb>学費</rb>
+                      <rt>がくひ</rt>
+                    </ruby>が<ruby>
+                      <rb>安</rb>
+                      <rt>やす</rt>
+                    </ruby>いですが、そういったことはできません。PCやAdobeライセンスは3<ruby>
+                      <rb>年生</rb>
+                      <rt>ねんせい</rt>
+                    </ruby>までは<ruby>
+                      <rb>自分</rb>
+                      <rt>じぶん</rt>
+                    </ruby>で<ruby>
+                      <rb>払</rb>
+                      <rt>はら</rt>
+                    </ruby>うことになります。
+                    （3<ruby>
+                      <rb>年生</rb>
+                      <rt>ねんせい</rt>
+                    </ruby>の<ruby>
+                      <rb>後期</rb>
+                      <rt>こうき</rt>
+                    </ruby>で<ruby>
+                      <rb>研究室</rb>
+                      <rt>けんきゅうしつ</rt>
+                    </ruby>に<ruby>
+                      <rb>入</rb>
+                      <rt>はい</rt>
+                    </ruby>れば、<ruby>
+                      <rb>研究室</rb>
+                      <rt>けんきゅうしつ</rt>
+                    </ruby>からPCを<ruby>
+                      <rb>借</rb>
+                      <rt>か</rt>
+                    </ruby>りることができます。）
+                    これらの<ruby>
+                      <rb>金額</rb>
+                      <rt>きんがく</rt>
+                    </ruby>を<ruby>
+                      <rb>考</rb>
+                      <rt>かんが</rt>
+                    </ruby>えると、<ruby>
+                      <rb>実際</rb>
+                      <rt>じっさい</rt>
+                    </ruby>の<ruby>
+                      <rb>学費</rb>
+                      <rt>がくひ</rt>
+                    </ruby>よりもかかるお<ruby>
+                      <rb>金</rb>
+                      <rt>かね</rt>
+                    </ruby>は１<ruby>
+                      <rb>年</rb>
+                      <rt>ねん</rt>
+                    </ruby>でだいたい10<ruby>
+                      <rb>万円</rb>
+                      <rt>まんえん</rt>
+                    </ruby><ruby>
+                      <rb>高</rb>
+                      <rt>たか</rt>
+                    </ruby>くなることに<ruby>
+                      <rb>気</rb>
+                      <rt>き</rt>
+                    </ruby>をつけてください。
+                    また、<ruby>
+                      <rb>東京都立大学</rb>
+                      <rt>とうきょうとりつだいがく</rt>
+                    </ruby>の<ruby>
+                      <rb>学費</rb>
+                      <rt>がくひ</rt>
+                    </ruby>の<ruby>
+                      <rb>詳</rb>
+                      <rt>くわ</rt>
+                    </ruby>しい<ruby>
+                      <rb>説明</rb>
+                      <rt>せつめい</rt>
+                    </ruby>、<ruby>
+                      <rb>減免制度</rb>
+                      <rt>げんめんせいど</rt>
+                    </ruby>、<ruby>
+                      <rb>奨学金制度</rb>
+                      <rt>しょうがくきんせいど</rt>
+                    </ruby>についてはこちら
                     <a href="https://www.tmu.ac.jp/campus_life/tuition/expenses.html">
-                      (https://www.tmu.ac.jp/campus_life/tuition/expenses.html)</a>（20代 B3女性）
+                      (https://www.tmu.ac.jp/campus_life/tuition/expenses.html)</a>（20代　B3女性）
                   </p>
                 </div>
               </li>
             </ul>
-          </div>
+            <div
+              onclick="obj=document.getElementById('qpluseas').style; obj.display=(obj.display=='none')?'block':'none';">
+              <a style="cursor:pointer;">
+                ▼ほかに<ruby>
+                  <rb>質問</rb>
+                  <rt>しつもん</rt>
+                </ruby>があれば、こちらから▼
+              </a>
+            </div>
+            <div id="qpluseas" style="display:none;clear:both;">
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSeUW0nKHalhyZksHTGTAe7rTyidckQmQ96ll3XzZFL3GPhNTw/viewform?embedded=true"
+                width="100%" height="900" frameborder=" 0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+            </div>
 
+          </div>
         </div>
 
         <div id="access">

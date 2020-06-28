@@ -86,41 +86,7 @@ header {
       }
     }
   }
-  // .right_h{
-  //   width: 20%;
-  //   height: 80px;
-  //   float: right;
-  //   text-align: center;
-  //   ul{
-  //     li{
-  //       list-style: none;
-  //       display: inline-block;
-  //       width: 48%;
-  //       a{
-  //         text-decoration: none;
-  //         color: #363636;
-  //         background: #C3C3C3;
-  //         line-height: 80px;
-  //         // display: inline-block;
-  //         // font-size: 1.0rem;
-  //         // font-weight: bold;
-  //         display: block;
-  //         padding: 0 0.5rem;
-  //         font-size: 1.0rem;
-  //         @include mq(xl){
-  //           font-size: 0.75rem;
-  //           padding: 0 0.3rem;
-  //         }
-  //         @include mq(lg){
-  //           font-size: 0.7rem;
-  //         }
-  //         &:hover{
-  //           opacity: 0.5;
-  //         }
-  //       }
-  //     }
-  //   }
-  //}
+
 .right_h{
   width: 20%;
   height: 80px;
@@ -141,9 +107,7 @@ label {
     background: #C3C3C3;
     cursor :pointer;
 }
-.lang{
-  // position: relative;
-}
+
 input {
     display: none;
 }

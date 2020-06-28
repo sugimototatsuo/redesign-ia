@@ -242,6 +242,8 @@ window.onload = function () {
     //document.getElementById('englishWorkTitle').style.display = "block";
     document.getElementById('nomalWorkText').style.display = "none";
     document.getElementById('englishWorkText').style.display = "block";
+    document.getElementById('easyWorkText').style.display = "none";
+
     document.getElementById('nomalCurrText').style.display = "none";
     document.getElementById('englishCurrText').style.display = "block";
     document.getElementById('easyCurrText').style.display = "none";
@@ -308,6 +310,8 @@ window.onload = function () {
     //document.getElementById('englishWorkTitle').style.display = "block";
     document.getElementById('nomalWorkText').style.display = "none";
     document.getElementById('englishWorkText').style.display = "none";
+    document.getElementById('easyWorkText').style.display = "block";
+
     document.getElementById('nomalCurrText').style.display = "none";
     document.getElementById('englishCurrText').style.display = "none";
     document.getElementById('easyCurrText').style.display = "block";
@@ -381,6 +385,8 @@ document.getElementById("button").onclick = function () {
     //document.getElementById('englishWorkTitle').style.display = "block";
     document.getElementById('nomalWorkText').style.display = "none";
     document.getElementById('englishWorkText').style.display = "block";
+    document.getElementById('easyWorkText').style.display = "none";
+
     document.getElementById('nomalCurrText').style.display = "none";
     document.getElementById('englishCurrText').style.display = "block";
     document.getElementById('easyCurrText').style.display = "none";
@@ -445,6 +451,8 @@ document.getElementById("button").onclick = function () {
     //document.getElementById('englishWorkTitle').style.display = "none";
     document.getElementById('nomalWorkText').style.display = "block";
     document.getElementById('englishWorkText').style.display = "none";
+    document.getElementById('easyWorkText').style.display = "none";
+
     document.getElementById('nomalCurrText').style.display = "block";
     document.getElementById('englishCurrText').style.display = "none";
     document.getElementById('easyCurrText').style.display = "none";
@@ -520,6 +528,8 @@ document.getElementById("button2").onclick = function () {
     //document.getElementById('englishWorkTitle').style.display = "block";
     document.getElementById('nomalWorkText').style.display = "none";
     document.getElementById('englishWorkText').style.display = "none";
+    document.getElementById('easyWorkText').style.display = "block";
+
     document.getElementById('nomalCurrText').style.display = "none";
     document.getElementById('englishCurrText').style.display = "none";
     document.getElementById('easyCurrText').style.display = "block";
@@ -584,6 +594,8 @@ document.getElementById("button2").onclick = function () {
     //document.getElementById('englishWorkTitle').style.display = "none";
     document.getElementById('nomalWorkText').style.display = "block";
     document.getElementById('englishWorkText').style.display = "none";
+    document.getElementById('easyWorkText').style.display = "none";
+
     document.getElementById('nomalCurrText').style.display = "block";
     document.getElementById('englishCurrText').style.display = "none";
     document.getElementById('easyCurrText').style.display = "none";

@@ -32,12 +32,12 @@ const renderStudio = (json) => {//シートごとに使い分ける
             //スタジオタイトル　とコアの表示
             const studioCoreJa = document.createElement("p");
             studioCoreJa.className = 'studio-core-top';
-            studioCoreJa.textContent = studio['core-ja'];
+            studioCoreJa.textContent = studio['core-en'];
             studioTitleTextDiv.appendChild(studioCoreJa);
 
             const studioTitleJa = document.createElement("p");
             studioTitleJa.className = 'studio-title-top';
-            studioTitleJa.textContent = studio['name-ja'];
+            studioTitleJa.textContent = studio['name-en'];
             studioTitleTextDiv.appendChild(studioTitleJa);
 
 
@@ -59,7 +59,7 @@ const renderStudio = (json) => {//シートごとに使い分ける
                 linkOnIcon_insta.className = 'sns-link';
                 snsIcon_insta.className = 'sns-icon';
                 snsIcon_insta.src = "../img/icon/instagram/glyph-logo_May2016.png";
-                snsIcon_insta.alt = studio['name-ja'] + "_instagram";
+                snsIcon_insta.alt = studio['name-en'] + "_instagram";
                 linkOnIcon_insta.href = studio['insta-link'];
                 linkOnIcon_insta.target = "_blank";
                 linkOnIcon_insta.appendChild(snsIcon_insta);
@@ -74,7 +74,7 @@ const renderStudio = (json) => {//シートごとに使い分ける
                 linkOnIcon_twitter.className = 'sns-link';
                 snsIcon_twitter.className = 'sns-icon-twitter';
                 snsIcon_twitter.src = "../img/icon/Twitter/Twitter_Logo_Blue_Resized.png";
-                snsIcon_twitter.alt = studio['name-ja'] + "_twitter";
+                snsIcon_twitter.alt = studio['name-en'] + "_twitter";
                 linkOnIcon_twitter.href = studio['twitter-link'];
                 linkOnIcon_twitter.target = "_blank";
                 linkOnIcon_twitter.appendChild(snsIcon_twitter);
@@ -89,7 +89,7 @@ const renderStudio = (json) => {//シートごとに使い分ける
                 linkOnIcon_site.className = 'sns-link';
                 snsIcon_site.className = 'sns-icon';
                 snsIcon_site.src = "../img/icon/Site/LINK_Bold.png";
-                snsIcon_site.alt = studio['name-ja'] + "_web site link";
+                snsIcon_site.alt = studio['name-en'] + "_web site link";
                 linkOnIcon_site.href = studio['site-link'];
                 linkOnIcon_site.target = "_blank";
                 linkOnIcon_site.appendChild(snsIcon_site);
@@ -100,53 +100,12 @@ const renderStudio = (json) => {//シートごとに使い分ける
             studioTitleInnerDiv.appendChild(studioSNSDiv);
 
             studioTitleDiv.appendChild(studioTitleInnerDiv);
-            //studioLeftSec_Pre.appendChild(studioTitleDiv);
-
-
-            /*スタジオ画像スライドショー*
-            const photoP = document.createElement('p');//★
-
-            const photo1 = document.createElement("img");
-            photo1.className = 'studio-photo';
-            photo1.src = studio['photo1'];
-            photo1.alt = "";
-
-            const photo2 = document.createElement("img");
-            photo2.className = 'studio-photo';
-            photo2.src = studio['photo2'];
-            photo2.alt = "";
-
-            const photo3 = document.createElement("img");
-            photo3.className = 'studio-photo';
-            photo3.src = studio['photo3'];
-            photo3.alt = "";
-
-            const photo4 = document.createElement("img");
-            photo4.className = 'studio-photo';
-            photo4.src = studio['photo4'];
-            photo4.alt = "";
-
-            const photo5 = document.createElement("img");
-            photo5.className = 'studio-photo';
-            photo5.src = studio['photo5'];
-            photo5.alt = "";
-
-
-            photoP.appendChild(photo1);
-            photoP.appendChild(photo2);
-            photoP.appendChild(photo3);
-            photoP.appendChild(photo4);
-            photoP.appendChild(photo5);
-            studioLeftSec_Pre.appendChild(photoP);*/
-
-
-
 
 
             //スタジオ説明
             const descriptionJa = document.createElement("p");
             descriptionJa.className = 'studio-description';
-            descriptionJa.textContent = studio['description-ja'];
+            descriptionJa.textContent = studio['description-en'];
             studioLeftSec_Pre.appendChild(descriptionJa);
 
 
@@ -163,25 +122,25 @@ const renderStudio = (json) => {//シートごとに使い分ける
 
             const teacherHead = document.createElement("h3");
             teacherHead.className = 'teacher';
-            teacherHead.textContent = "担当教員";
+            teacherHead.textContent = "Teacher in charge";
             facultyDiv.appendChild(teacherHead);
 
             const facPhotoP = document.createElement('p');
             const facPhoto = document.createElement("img");
             facPhoto.className = 'studio-faculty-img';
             facPhoto.src = studio['faculty-photo'];
-            facPhoto.alt = studio['faculty-ja'];
+            facPhoto.alt = studio['faculty-en'];
             facPhotoP.appendChild(facPhoto);
             facultyContentsDiv.appendChild(facPhotoP);
 
             const facultyJa = document.createElement("span");
             facultyJa.className = 'studio-faculty';
-            facultyJa.textContent = studio['faculty-ja'];
+            facultyJa.textContent = studio['faculty-en'];
             facultyTextDiv.appendChild(facultyJa);
 
             const facultyTitleJa = document.createElement("span");
             facultyTitleJa.className = 'studio-facultyTitle';
-            facultyTitleJa.textContent = studio['faculty-title-ja'];
+            facultyTitleJa.textContent = studio['faculty-title-en'];
             facultyTextDiv.appendChild(facultyTitleJa);
 
 

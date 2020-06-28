@@ -3,6 +3,10 @@ body {
   font-size: 20px;
 }
 
+.wrap {
+  overflow: hidden;
+}
+
 #showloading {
   width: 100%;
   height: 100vh;
@@ -55,8 +59,21 @@ header .left_h nav ul li a {
   color: #363636;
   line-height: 80px;
   display: block;
-  padding: 0 10px;
+  padding: 0 0.5rem;
   font-size: 1.0rem;
+}
+
+@media screen and (max-width: 1310px) {
+  header .left_h nav ul li a {
+    font-size: 0.75rem;
+    padding: 0 0.3rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  header .left_h nav ul li a {
+    font-size: 0.7rem;
+  }
 }
 
 header .left_h nav ul li a:hover {
@@ -95,30 +112,45 @@ header .right_h a:hover {
   height: 800px;
   background-image: url(../image/header.png);
   background-size: cover;
+  background-position: right bottom;
   color: #fff;
   position: relative;
 }
 
 .main-visual h1 {
   color: #fff;
-  padding-top: 150px;
-  padding-left: 134px;
+  padding-top: 7rem;
+  padding-left: 5rem;
+  font-size: 3rem;
   z-index: 1;
+  line-height: 8rem;
+  font-weight: normal;
+}
+
+.main-visual #englishTitle {
+  line-height: normal;
+}
+
+.main-visual #englishTitle2 {
+  padding-top: 3rem;
+  padding-left: 5rem;
 }
 
 .main-visual h3 {
-  padding-top: 20rem;
-  padding-left: 50rem;
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
   font-size: 2rem;
   z-index: 1;
+  font-weight: normal;
 }
 
 .main-visual h3 .second_line {
-  margin-left: 3rem;
+  margin-left: 5rem;
 }
 
 .main-visual h3 .third_line {
-  margin-left: 6rem;
+  margin-left: 8rem;
 }
 
 /* ========== common section title ========== */
@@ -132,24 +164,6 @@ header .right_h a:hover {
   display: inline-block;
   padding-left: 0.2rem;
   padding-right: 0.2rem;
-}
-
-.section_title:before, .section_title:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  display: inline-block;
-  width: 45px;
-  height: 1px;
-  background-color: black;
-}
-
-.section_title:before {
-  left: 30rem;
-}
-
-.section_title:after {
-  right: 30rem;
 }
 
 /* ========== aboutus ========== */
@@ -230,7 +244,7 @@ header .right_h a:hover {
   margin: 1em 0;
   background: #FFFFFF;
   min-height: 3em;
-  width: 30%;
+  width: 25rem;
   display: inline-block;
   text-align: center;
   padding-bottom: 0.8rem;
@@ -240,7 +254,7 @@ header .right_h a:hover {
   margin: 1em 0;
   background: #FFFFFF;
   min-height: 3em;
-  width: 30%;
+  width: 25rem;
   display: inline-block;
   text-align: center;
   padding-bottom: 0.8rem;
@@ -270,8 +284,8 @@ pre#result {
 }
 
 .studio-photo1, .studio-photo2 {
-  width: 100%;
-  height: 300px;
+  width: 25rem;
+  height: 18rem;
   object-fit: cover;
 }
 
@@ -328,24 +342,21 @@ pre#result {
 }
 
 #nomalLink {
-  width: 100%;
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
-  display: flex;
-  padding: 0 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem;
 }
 
 #column > div > div {
-  width: 30%;
+  width: 23rem;
   display: inline-block;
   text-align: center;
-  padding: 1.2rem;
+  margin: 2rem;
 }
 
 .link-image {
-  width: 400px;
-  height: 400px;
+  width: 23rem;
+  height: 23rem;
 }
 
 .link-title {

@@ -24,55 +24,60 @@
         <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
         <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
         <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
-
-        <!--フォント取得-->
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
-            rel="stylesheet">
-
     </head>
 
 <body>
-    <main>
-        <header>
-            <ul class="nav-list">
-                <li class="nav-list-item"><a href="./index.html">HOME</a></li>
-                <li class="nav-list-item"><a href="./about.html">ABOUT</a></li>
-                <li class="nav-list-item"><a href="./news.html">NEWS</a></li>
-                <li class="nav-list-item"><a href="./studio.html">STUDIO</a></li>
-                <li class="nav-list-item"><a class="here" href="./faculty.html">FACULTY</a></li>
-                <li class="nav-list-item"><a href="./works.html">WORKS</a></li>
-                <li class="nav-list-item"><a href="./access.html">ACCESS</a></li>
-            </ul>
-        </header>
-
-        <section class="contents" style="opacity: 1;">
-
-            <h1 class="page-title">FACULTY</h1>
-            <span class="page-description">教員紹介
-            </span>
-            <div class="float-clear"></div>
-
-            <div class="faculty" id="faculties">
-                <!--ここにJSから教員16名分の情報が全て入る-->
+    <div class="head-wrapper">
+        <main>
+            <header>
+                <ul class="nav-list">
+                    <li class="nav-list-item"><a href="./index.html">HOME</a></li>
+                    <li class="nav-list-item"><a href="./about.html">ABOUT</a></li>
+                    <li class="nav-list-item"><a href="./news.html">NEWS</a></li>
+                    <li class="nav-list-item"><a href="./studio.html">STUDIO</a></li>
+                    <li class="nav-list-item"><a class="here" href="./faculty.html">FACULTY</a></li>
+                    <li class="nav-list-item"><a href="./works.html">WORKS</a></li>
+                    <li class="nav-list-item"><a href="./access.html">ACCESS</a></li>
+                </ul>
+            </header>
+            <div class="language">
+                <span id="language-text">language</span><a class="here" href="./faculty.html">JA</a><span>|</span><a
+                    href="./faculty-en.html">EN</a></span>
             </div>
+    </div>
+
+    <section class="contents" style="opacity: 1;">
+
+        <h1 class="page-title">FACULTY</h1>
+        <span class="page-description">教員紹介
+        </span>
+        <div class="float-clear"></div>
+
+        <div class="faculty" id="faculties">
+            <!--ここにJSから教員16名分の情報が全て入る-->
+        </div>
 
 
 
 
 
-            <footer>
-                <section class="en">
-                    <p class="ja">東京都立大学 システムデザイン学部／研究科</p>
-                    <p class="sd">Faculty &amp; Graduate School of Systems Design</p><a class="sd"
-                        href="https://www.tmu.ac.jp/">Copyright ©2018 Tokyo Metropolitan University. All rights
-                        reserved.</a>
-                </section>
-            </footer>
-        </section>
+        <footer>
+            <section class="en">
+                <p class="ja">東京都立大学 システムデザイン学部／研究科</p>
+                <p class="sd">Faculty &amp; Graduate School of Systems Design</p><a class="sd"
+                    href="https://www.tmu.ac.jp/">Copyright ©2020 Tokyo Metropolitan University. All rights
+                    reserved.</a>
+            </section>
+        </footer>
+    </section>
     </main>
 
     <!--topに戻る-->
-    <div id="js-scroll-fadein" class="js-scroll-fadein arrow"></div>
+    <div id="js-scroll-fadein" class="js-scroll-fadein arrow">
+        <img id="view" src="./img/icon/GOtoTOP/GOtoTOP_icon_White.png" width=80px height=auto>
+
+    </div>
+
     <script src="js/lottie.min.js"></script>
 
     <script src="js/faculty.js"></script>

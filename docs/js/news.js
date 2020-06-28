@@ -56,8 +56,17 @@ const renderLink = (json) => {
 
             const updateDateP = document.createElement('p');
             updateDateP.className = 'update-date';
-            updateDateP.textContent = link['update-date'];
+            const date = new Date(link['update-date']);
+
+
+            const year = date.getFullYear();
+            const month = date.getMonth() + 1;
+            const day = date.getDate();
+            //Dateをそのまま表示すると詳細すぎるのでフォーマットの指定が必要
+            const formatDay = "🕑 " + year + "/" + month + "/" + day;
+            updateDateP.textContent = formatDay;
             tag_dateDiv.appendChild(updateDateP);
+
 
             const tagP = document.createElement('p');
             tagP.className = 'tag';

@@ -29,18 +29,23 @@
 
 <body>
   <main>
-    <header>
-      <ul class="nav-list">
-        <li class="nav-list-item"><a class="here" href="./index.html">HOME</a></li>
-        <li class="nav-list-item"><a href="./about.html">ABOUT</a></li>
-        <li class="nav-list-item"><a href="./news.html">NEWS</a></li>
-        <li class="nav-list-item"><a href="./studio.html">STUDIO</a></li>
-        <li class="nav-list-item"><a href="./faculty.html">FACULTY</a></li>
-        <li class="nav-list-item"><a href="./works.html">WORKS</a></li>
-        <li class="nav-list-item"><a href="./access.html">ACCESS</a></li>
-      </ul>
-    </header>
-
+    <div class="head-wrapper">
+      <header>
+        <ul class="nav-list">
+          <li class="nav-list-item"><a class="here" href="./index.html">HOME</a></li>
+          <li class="nav-list-item"><a href="./about.html">ABOUT</a></li>
+          <li class="nav-list-item"><a href="./news.html">NEWS</a></li>
+          <li class="nav-list-item"><a href="./studio.html">STUDIO</a></li>
+          <li class="nav-list-item"><a href="./faculty.html">FACULTY</a></li>
+          <li class="nav-list-item"><a href="./works.html">WORKS</a></li>
+          <li class="nav-list-item"><a href="./access.html">ACCESS</a></li>
+        </ul>
+      </header>
+      <div class="language">
+        <span id="language-text">language</span><a class="here" href="./index.html">JA</a><span>|</span><a
+          href="./en_html/index_en.html">EN</a></span>
+      </div>
+    </div>
     <section class="contents" style="opacity: 1;">
 
       <div class="top-title">
@@ -94,15 +99,9 @@
       <div class="eachSection">
         <h2 class="sectionTitle">STUDIO</h2>
         <div class="top-img">
-          <div class="slider">
-            <img id="view" src="./img/currentSite_imgs/studio/ed1.png">
-            <i id="prev" class="fas fa-arrow-circle-left"></i>
-            <i id="next" class="fas fa-arrow-circle-right"></i>
+          <div class="slide-area">
+
           </div>
-          <nav class="thumbnail">
-            <ul id="thumbnailList">
-            </ul>
-          </nav>
 
         </div>
 
@@ -116,7 +115,30 @@
       <div class="eachSection">
         <h2 class="sectionTitle">FACULTY</h2>
 
+        <div class="faculty-slide-container">
+          <div class="faculty-slide">
+            <img id="idshow1-1" class="fadeout" style="position:absolute;"
+              src="./img/currentSite_imgs/faculty/kusumi.jpg" width="200" height="200">
+            <img id="idshow1-2" class="fadein" src="./img/currentSite_imgs/faculty/kusumi.jpg" width="200" height="200">
+          </div>
+
+          <div class="faculty-slide">
+            <img id="idshow2-1" class="fadeout" style="position:absolute;"
+              src="./img/currentSite_imgs/faculty/kusumi.jpg" width="200" height="200">
+            <img id="idshow2-2" class="fadein" src="./img/currentSite_imgs/faculty/kusumi.jpg" width="200" height="200">
+          </div>
+
+          <div class="faculty-slide">
+            <img id="idshow3-1" class="fadeout" style="position:absolute;"
+              src="./img/currentSite_imgs/faculty/kusumi.jpg" width="200" height="200">
+            <img id="idshow3-2" class="fadein" src="./img/currentSite_imgs/faculty/kusumi.jpg" width="200" height="200">
+          </div>
+
+        </div>
+
+
         <p class="sectionDescription">インダストリアルアート学科・学域の教員を紹介しています</p>
+
         <div class="moreButton">
           <a href="./faculty.html" class="btn-flat-simple">MORE</a>
         </div>

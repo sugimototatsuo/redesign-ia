@@ -12,6 +12,7 @@
     .about_container {
       max-width: 700px;
       margin: 0 auto;
+      text-align: center;/*文章の中央揃え*/
     }
 
   .about_container img {
@@ -21,7 +22,7 @@
     }
 
     #topHeadLine{
-        margin:0  0 10px 0;
+        margin:10px  0 10px 0;
     }
     .about h2 {
       position: relative;

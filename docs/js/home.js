@@ -1,7 +1,7 @@
 const uri = 'https://script.google.com/macros/s/AKfycbxyacpN8y4nxSAnU0Eji6E_rBRDFTY7YoWWFa0clY5ELRhskgpt/exec';//google App scriptの何か　たぶんspreadsheetからjsonを取得するためのライブラリ的なものの読み込み
 const id = '1BpGnuwC4lZf9G2yFyiSrxbJuGO8gviV8mr-I2D3x4vA';//URLのid=にあったこれでどのシートかを指定
 const sheet = 'group3-studio';//読み込むシート名
-const sheet2 = 'group3-faculty';
+const sheet2 = 'group3-works';
 const sheet3 = 'group3-news';
 const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 const endpoint2 = `${uri}?id=${id}&sheet=${sheet2}`;
@@ -16,73 +16,40 @@ const renderStudio = (json) => {//シートごとに使い分ける
 
         //シート１枚目
         if (studio['name-ja'] !== '') {
-            const studioDiv = document.createElement('div');
-            //運用的にクラス名は言語問わず共通
-            const studioTitleJa = document.createElement("span");//①studioTitle　という変数でもって、span要素の作成
-            studioTitleJa.className = 'studio-title';//②span要素？にクラスの名前をつけてCSSで指定できるようにしている
-            studioTitleJa.textContent = studio['name-ja'];//③[データシート上のkey]
 
-            const studioTitleEn = document.createElement("span");//新たにspan要素の作成　-jaと同上  
-            studioTitleEn.className = 'studio-title';
-            studioTitleEn.textContent = studio['name-en'];
-
-            const studioCoreJa = document.createElement("span");
-            studioCoreJa.className = 'studio-core';
-            studioCoreJa.textContent = studio['core-ja'];
-
-            const studioCoreEn = document.createElement("span");
-            studioCoreEn.className = 'studio-core';
-            studioCoreEn.textContent = studio['core-en'];
-
-            const facultyJa = document.createElement("span");
-            facultyJa.className = 'studio-faculty';
-            facultyJa.textContent = studio['faculty-ja'];
-
-            const facultyEn = document.createElement("span");
-            facultyEn.className = 'studio-faculty';
-            facultyEn.textContent = studio['faculty-en'];
-
-            const facultyTitleJa = document.createElement("span");
-            facultyTitleJa.className = 'studio-facultyTitle';
-            facultyTitleJa.textContent = studio['faculty-title-ja'];
-
-            const facultyTitleEn = document.createElement("span");
-            facultyTitleEn.className = 'studio-facultyTitle';
-            facultyTitleEn.textContent = studio['faculty-title-en'];
-
-            const descriptionJa = document.createElement("p");
-            descriptionJa.className = 'studio-description';
-            descriptionJa.textContent = studio['description-ja'];
-
-            const descriptionEn = document.createElement("p");
-            descriptionEn.className = 'studio-description';
-            descriptionEn.textContent = studio['description-en'];
-
-
-            const photoP = document.createElement('p');//★
-
-            const photo1 = document.createElement("img");
-            photo1.className = 'studio-photo';
-            photo1.src = studio['photo1'];
-            photo1.alt = "";
 
             studioImageArray.push(studio['photo1']);
             console.log(studioImageArray);
-            //imgタグはpタグで囲むべきらしいので、★で作っておいたpの子要素として追加する
-            photoP.appendChild(photo1);
+
+        }
+    });
+
+}
+
+const renderWorks = (json) => {//シートごとに使い分ける
+    const works = json.records;
+    var i = 0;
+    works.forEach(work => {
+        //最新８件を取ってくる
+        if (work['title-ja'] !== '' && i < 8) {
+
+            const aworkFig = document.createElement("figure");
+            aworkFig.className = 'a-work';
+
+            const workImg = document.createElement("img");
+            workImg.className = 'work-img';
+            workImg.src = work['img'];
+            workImg.alt = work['title-ja'];
+            workImg.width = 180;
+            workImg.height = 180;
+
+            aworkFig.appendChild(workImg);
 
 
-            studioDiv.appendChild(studioTitleJa);//④
-            studioDiv.appendChild(studioTitleEn);
-            studioDiv.appendChild(studioCoreJa);
-            studioDiv.appendChild(studioCoreEn);
-            studioDiv.appendChild(facultyJa);
-            studioDiv.appendChild(facultyEn);
-            studioDiv.appendChild(facultyTitleJa);
-            studioDiv.appendChild(facultyTitleEn);
-            studioDiv.appendChild(descriptionJa);
-            studioDiv.appendChild(descriptionEn);
-            studioDiv.appendChild(photoP);
+            document.getElementById('worksDiv').appendChild(aworkFig);
+
+            i++;
+
         }
     });
 
@@ -197,6 +164,23 @@ const getData = async () => {
 }
 
 getData();
+
+
+const getData2 = async () => {
+    try {
+        const response = await fetch(endpoint2);
+        if (response.ok) {
+            let jsonResponse = await response.json();
+            renderWorks(jsonResponse);
+        }
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
+
+getData2();
+
 
 
 

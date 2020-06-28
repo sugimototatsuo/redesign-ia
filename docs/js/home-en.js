@@ -95,7 +95,7 @@ const renderLink = (json) => {
     var i = 0;
     links.forEach(link => {
         //最新記事3件を取ってくる
-        if (link['name-ja'] !== '' && i < 3) {
+        if (link['name-en'] !== '' && i < 3) {
 
 
             //START-ニュースの1記事を生成して回す
@@ -109,7 +109,7 @@ const renderLink = (json) => {
             const photo = document.createElement("img");
             photo.className = 'card-img';
             photo.src = link['photo'];
-            photo.alt = link['name-ja'];
+            photo.alt = link['name-en'];
             photoP.appendChild(photo);
 
             const contentDiv = document.createElement('div');
@@ -117,17 +117,17 @@ const renderLink = (json) => {
 
             const articleTitleH1 = document.createElement('h1');
             articleTitleH1.className = 'card-title';
-            articleTitleH1.textContent = link['name-ja'];
+            articleTitleH1.textContent = link['name-en'];
             contentDiv.appendChild(articleTitleH1);
 
             const articleP = document.createElement('p');
             articleP.className = 'card-text';
             var slicetext;
-            if ((link['description-ja']).length > 40) {
-                slicetext = (link['description-ja']).slice(0, 40) + "…";
+            if ((link['description-en']).length > 120) {
+                slicetext = (link['description-en']).slice(0, 120) + "…";
                 console.log(slicetext);
             } else {
-                slicetext = link['description-ja'];
+                slicetext = link['description-en'];
             }
 
             articleP.textContent = slicetext;
@@ -153,7 +153,7 @@ const renderLink = (json) => {
 
             const tagP = document.createElement('p');
             tagP.className = 'tag';
-            tagP.textContent = link['tag-ja'];
+            tagP.textContent = link['tag-en'];
             tag_dateDiv.appendChild(tagP);
 
             contentDiv.appendChild(tag_dateDiv);

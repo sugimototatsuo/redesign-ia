@@ -29,4 +29,53 @@ body {
   background: #E4EBEF;
   margin-bottom: 2rem;
   padding: 3rem 3rem;
+  color: #363636;
+}
+
+#book div span {
+  display: block;
+}
+
+#book div .book-title {
+  border-bottom: 1px solid #363636;
+  display: inline-block;
+  font-size: 2rem;
+}
+
+#book div .book-writer {
+  margin-bottom: 2.0rem;
+}
+
+#book div .book-reason {
+  font-size: 1.5rem;
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+#book div .book-teacher {
+  display: inline-block;
+  padding-left: 3rem;
+}
+
+#book div .book-text-box {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#book div .book-text-box .book-about {
+  margin-bottom: 1rem;
+}
+
+#book div .book-text-box .book-link, #book div .book-text-box .book-link2 {
+  color: #363636;
+  text-decoration: none;
+}
+
+#book div .book-text-box .book-link:hover, #book div .book-text-box .book-link2:hover {
+  opacity: 0.5;
+}
+
+#book div .book-text-box .book-link {
+  margin-bottom: 0.5rem;
 }

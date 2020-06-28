@@ -48,7 +48,7 @@
        font-weight: 600;
        font-size: 36px;
        color: #000;
-       margin:20px 0px;
+       margin:20px 0 30px 0;
      }
    h1.page-title{
     margin-bottom:40px;
@@ -73,20 +73,7 @@
 
      }
  
-    header a:link {
-         color: #999999;
-       }
-      header a:visited {
-         color:#999999;
-       }
-      header a:hover {
-         color:#191919;
-         cursor: pointer;
-       }
-      header a:active {
-         color:#DDDDDD;
-       }
- 
+
      
        .btn-flat-simple {
          position: relative;
@@ -150,14 +137,21 @@
   .float-clear{
      clear:both;
  }
- 
+
+ /*グロナビと言語を囲む*/
+ .head-wrapper{
+  max-width:1140px;
+  padding:0 30px;/*ウィンドウサイズにかかわらずグロナビと言語全体の左右余白を確保*/
+ }
  /*グロナビ　ヘッダー*/
+
  header {
      width: 100%;
      padding: 15px 0;
      margin: 30px 0 auto;
      text-align: center;
      border-bottom: 1px solid #c4c4c4;
+    
    }
    
    .nav-list{
@@ -177,8 +171,38 @@
 .nav-list-item >a.here{
   color:#000;
 }
+header a:link {
+  color: #c4c4c4;
+}
+header a:visited {
+  color:#c4c4c4;
+}
+header a:hover {
+  color:#000;
+  cursor: pointer;
+}
+header a:active {
+  color:#DDDDDD;
+}
 
- 
+#language-text{
+  font-size:16px;
+  margin-right:12px;
+}
+ .language{
+  margin:20px 0px 0 0;
+   text-align: right;
+   color: #C4C4C4;
+ }
+ .language>a.here{
+  color:#000;
+ }
+
+ .language>a{
+  margin: 0 4px;
+  font-size: 20px;
+  color: #C4C4C4;
+ }
    /*header意外を取り囲む*/
  
  .contents {
@@ -190,7 +214,7 @@
    
  }
  
- 
+
      /*画像のスライドショー ref:https://tech-dig.jp/js-slider//*/
      .slider {
          position: relative;
@@ -430,7 +454,30 @@
 }
 
 
- 
+ /*faculty*/
+  /*教員画像のスライドショー*/
+  .faculty-slide-container{
+    max-width:700px;
+   margin:0 auto;/*コンテナ自身の中央揃え*/
+   display:flex;
+   justify-content:space-between;
+   
+    }
+   
+    .faculty-slide{
+   width:200px;
+   
+    }
+    .fadeout{
+     opacity: 0;
+     transition: 3s ease-in-out;
+     -webkit-transition: 3s ease-in-out;
+     }
+     .fadein{
+     opacity: 1;
+     transition: 3s ease-in-out;
+     -webkit-transition: 3s ease-in-out;
+     }
  
  /*Aceess*/
  
@@ -442,6 +489,4 @@
      height: 400px;
      margin:0 auto;
  }
- 
-
  

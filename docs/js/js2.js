@@ -2,6 +2,7 @@ const uri = 'https://script.google.com/macros/s/AKfycbxyacpN8y4nxSAnU0Eji6E_rBRD
 
 const id = '1BpGnuwC4lZf9G2yFyiSrxbJuGO8gviV8mr-I2D3x4vA';
 const sheet = 'Studio';
+var langMode = 0;
 //const sheet2 = "Faculty";
 const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 //const endpoint2 = `${uri}?id=${id}&sheet=${sheet2}`;
@@ -70,6 +71,7 @@ window.onload = function () {
 
     }
     else if (document.URL.match("/?lang=1")) {
+        langMode = 1;
         langBotton.classList.remove('open');
         langBotton.classList.add('close');
 
@@ -113,6 +115,7 @@ window.onload = function () {
     else if (document.URL.match("/?lang=2")) {
         langBotton2.classList.remove('open');
         langBotton2.classList.add('close');
+        langMode = 2;
 
         for (var i = 0; i <= 8; i++) {
             document.getElementById('nomalSubtitle' + (i + 1).toString()).style.display = "none";

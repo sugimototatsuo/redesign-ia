@@ -81,7 +81,7 @@ const renderFaculty = (json) => {
                 linkIconA.className = 'sns-link';
                 const linkIcon = document.createElement("img");
                 linkIcon.className = 'sitelink-icon';
-                linkIcon.src = "./img/icon/site/LINK.png";
+                linkIcon.src = "./img/icon/Site/LINK.png";
                 linkIcon.alt = "website：" + faculty['f-link-title'];
                 linkIconA.href = faculty['f-link'];
                 linkIconA.target = "_blank";
@@ -147,8 +147,6 @@ let lottieObj = lottie.loadAnimation({
     path: 'https://assets6.lottiefiles.com/packages/lf20_lp3wO4.json' // 再生させたいアニメーションのjsonのパスを指定します。リンクだといけるな…なんだそれ
 });
 
-
-
 /*---------topへ戻るボタン-------------*/
 function getScrolled() {
     return (window.pageYOffset !== undefined) ? window.pageYOffset : document.documentElement.scrollTop;
@@ -175,5 +173,3 @@ function scrollToTop() {
 topButton.onclick = function () {
     scrollToTop();
 };
-
-

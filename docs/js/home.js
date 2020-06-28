@@ -139,8 +139,17 @@ const renderLink = (json) => {
 
             const updateDateP = document.createElement('p');
             updateDateP.className = 'update-date';
-            updateDateP.textContent = link['update-date'];
+            const date = new Date(link['update-date']);
+
+
+            const year = date.getFullYear();
+            const month = date.getMonth() + 1;
+            const day = date.getDate();
+            //Dateをそのまま表示すると詳細すぎるのでフォーマットの指定が必要
+            const formatDay = "🕑 " + year + "/" + month + "/" + day;
+            updateDateP.textContent = formatDay;
             tag_dateDiv.appendChild(updateDateP);
+
 
             const tagP = document.createElement('p');
             tagP.className = 'tag';
@@ -148,6 +157,8 @@ const renderLink = (json) => {
             tag_dateDiv.appendChild(tagP);
 
             contentDiv.appendChild(tag_dateDiv);
+
+
 
 
             //カード全体のsectionにリンク付けする
@@ -248,6 +259,32 @@ topButton.onclick = function () {
 
 
 
+/*----------------スタジオ画像のスライドショ--------------- ref:http://cya.sakura.ne.jp/java/sshow2.htm*/
+
+var slideCount = -1;		// 現在表示している配列番号
+var slideflag = 0;		// どっちを表示して、どっちを消すかのフラグ
+function slideChange() {	// スライドショーメイン関数
+    slideCount = (slideCount < studioImageArray.length - 1) ? slideCount + 1 : 0;		// 次の配列番号
+    slideflag = (slideflag == 0) ? 1 : 0;						// 表示・非表示フラグ反転
+    if (slideflag == 0) {
+        document.getElementById("studioShow-1").src = studioImageArray[slideCount];		// 次の画像をセットする
+        document.getElementById("studioShow-1").className = "fadein";		// フェードイン
+        document.getElementById("studioShow-2").className = "fadeout";	// フェードアウト
+
+    } else {
+        document.getElementById("studioShow-2").src = studioImageArray[slideCount];		// 次の画像をセットする
+        document.getElementById("studioShow-1").className = "fadeout";	// フェードアウト
+        document.getElementById("studioShow-2").className = "fadein";		// フェードイン
+
+    }
+
+
+    setTimeout("slideChange()", 4000);					// 4秒周期に画像を更新する
+}
+
+slideChange();
+
+
 
 
 /*----------------教員画像のスライドショ--------------- ref:http://cya.sakura.ne.jp/java/sshow2.htm*/
@@ -279,8 +316,8 @@ myImage3 = new Array(	// 画像ファイル名の設定
 
 
 
-nowCount = -1;		// 現在表示している配列番号
-nowflag = 0;		// どっちを表示して、どっちを消すかのフラグ
+var nowCount = -1;		// 現在表示している配列番号
+var nowflag = 0;		// どっちを表示して、どっちを消すかのフラグ
 function myChange() {	// スライドショーメイン関数
     nowCount = (nowCount < myImage1.length - 1) ? nowCount + 1 : 0;		// 次の配列番号
     nowflag = (nowflag == 0) ? 1 : 0;						// 表示・非表示フラグ反転
@@ -318,3 +355,4 @@ function myChange() {	// スライドショーメイン関数
 }
 
 myChange();
+

@@ -98,7 +98,10 @@ label {
     display: inline-block;
     float: right;
     margin-left: 5px;
-    width: 8rem;
+    width: 7rem;
+    @include mq(xl){
+      width: 5.5rem;
+    }
     line-height: 80px;
     // margin: 0 0 4px 0;
     // padding : 15px;
@@ -402,4 +405,16 @@ $num: "";
     h3{
       margin-bottom: 0.5rem;
     }
+}
+
+/* ========== footer ========== */
+footer{
+  width: 100%;
+  background: #2B2845;
+  padding: 1rem 0;
+  p{
+    text-align: center!important;
+    color: #FFFFFF;
+    margin-bottom: 0.3rem;
+  }
 }

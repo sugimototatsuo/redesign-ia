@@ -92,11 +92,17 @@ header label {
   display: inline-block;
   float: right;
   margin-left: 5px;
-  width: 8rem;
+  width: 7rem;
   line-height: 80px;
   color: #000;
   background: #C3C3C3;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1310px) {
+  header label {
+    width: 5.5rem;
+  }
 }
 
 header input {
@@ -148,10 +154,9 @@ section .first_box #nomalStudios, section .first_box #englishStudios {
   text-align: right;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   section .first_box #nomalStudios, section .first_box #englishStudios {
     float: none;
-    background: red;
   }
 }
 
@@ -226,4 +231,17 @@ section .second_box .left_box img {
 p {
   width: 80%;
   margin: 0 auto;
+}
+
+/* ========== footer ========== */
+footer {
+  width: 100%;
+  background: #2B2845;
+  padding: 1rem 0;
+}
+
+footer p {
+  text-align: center !important;
+  color: #FFFFFF;
+  margin-bottom: 0.3rem;
 }

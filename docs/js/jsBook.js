@@ -16,6 +16,7 @@ const renderJson = (json) => {
         const bookWriter = document.createElement("span");
         const bookTeacher = document.createElement("span");
         const bookReason = document.createElement("span");
+        const bookTextDiv = document.createElement("div");
         const bookAbout = document.createElement("span");
         const bookLink = document.createElement("a");
         const bookLink2 = document.createElement("a");
@@ -26,6 +27,7 @@ const renderJson = (json) => {
         bookWriter.className = 'book-writer';
         bookTeacher.className = 'book-teacher';
         bookReason.className = 'book-reason';
+        bookTextDiv.className = 'book-text-box'
         bookAbout.className = 'book-about';
         bookLink.className = 'book-link';
         bookLink2.className = 'book-link2';
@@ -44,11 +46,13 @@ const renderJson = (json) => {
 
         bookDiv.appendChild(bookTitle);
         bookDiv.appendChild(bookWriter);
-        bookDiv.appendChild(bookTeacher);
         bookDiv.appendChild(bookReason);
-        bookDiv.appendChild(bookAbout);
-        bookDiv.appendChild(bookLink);
-        bookDiv.appendChild(bookLink2);
+        bookDiv.appendChild(bookTeacher);
+        // bookDiv.appendChild(bookReason);
+        bookDiv.appendChild(bookTextDiv);
+        bookTextDiv.appendChild(bookAbout);
+        bookTextDiv.appendChild(bookLink);
+        bookTextDiv.appendChild(bookLink2);
         document.getElementById('book').appendChild(bookDiv);
         //englishStudioDiv.appendChild(englishStudioTitle);
     });

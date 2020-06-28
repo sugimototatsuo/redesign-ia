@@ -1,13 +1,145 @@
+@charset "UTF-8";
 body {
   font-family: sans-serif;
   font-size: 20px;
 }
 
+#showloading {
+  width: 100%;
+  height: 100vh;
+  background-color: #073a49;
+  position: relative;
+}
+
+#showloading img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.hidden {
+  display: none;
+}
+
+/*========== header nav ==========*/
+header {
+  position: fixed;
+  top: 0;
+  background: #fff;
+  width: 100%;
+  height: 80px;
+  z-index: 10;
+}
+
+header .left_h {
+  width: 80%;
+  height: 80px;
+  float: left;
+}
+
+header .left_h nav ul {
+  padding-left: 50px;
+}
+
+header .left_h nav ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+header .left_h nav ul li a {
+  text-decoration: none;
+  color: #363636;
+  line-height: 80px;
+  display: block;
+  padding: 0 0.5rem;
+  font-size: 1.0rem;
+}
+
+@media screen and (max-width: 1310px) {
+  header .left_h nav ul li a {
+    font-size: 0.75rem;
+    padding: 0 0.3rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  header .left_h nav ul li a {
+    font-size: 0.7rem;
+  }
+}
+
+header .left_h nav ul li a:hover {
+  opacity: 0.5;
+}
+
+header .right_h {
+  width: 20%;
+  height: 80px;
+  float: right;
+  text-align: center;
+  position: relative;
+}
+
+header label {
+  display: inline-block;
+  float: right;
+  margin-left: 5px;
+  width: 7rem;
+  line-height: 80px;
+  color: #000;
+  background: #C3C3C3;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1310px) {
+  header label {
+    width: 5.5rem;
+  }
+}
+
+header input {
+  display: none;
+}
+
+header .right_h ul {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 8rem;
+  margin: 0;
+  padding: 0;
+  background: #C3C3C3;
+  list-style: none;
+}
+
+header .right_h li {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+header #type1:checked ~ #links1 li,
+header #type2:checked ~ #links2 li {
+  height: 70px;
+  opacity: 1;
+  cursor: pointer;
+}
+
 .main-visual {
   width: 100%;
-  height: 800px;
-  background-image: url(../image/iaLib.jpg);
+  height: 700px;
+  background-image: url(../image/みんなの図書visual-02.jpg);
   background-size: cover;
+  background-position: center;
 }
 
 .first-text {
@@ -28,4 +160,68 @@ body {
   background: #E4EBEF;
   margin-bottom: 2rem;
   padding: 3rem 3rem;
+  color: #363636;
+}
+
+#book div span {
+  display: block;
+}
+
+#book div .book-title {
+  border-bottom: 1px solid #363636;
+  display: inline-block;
+  font-size: 2rem;
+}
+
+#book div .book-writer {
+  margin-bottom: 2.0rem;
+}
+
+#book div .book-reason {
+  font-size: 1.5rem;
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+#book div .book-teacher {
+  display: inline-block;
+  padding-left: 3rem;
+}
+
+#book div .book-text-box {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#book div .book-text-box .book-about {
+  margin-bottom: 1rem;
+}
+
+#book div .book-text-box .book-link, #book div .book-text-box .book-link2 {
+  color: #363636;
+  text-decoration: none;
+  display: inline-block;
+  word-break: break-all;
+}
+
+#book div .book-text-box .book-link:hover, #book div .book-text-box .book-link2:hover {
+  opacity: 0.5;
+}
+
+#book div .book-text-box .book-link {
+  margin-bottom: 0.5rem;
+}
+
+/* ========== footer ========== */
+footer {
+  width: 100%;
+  background: #2B2845;
+  padding: 1rem 0;
+}
+
+footer p {
+  text-align: center !important;
+  color: #FFFFFF;
+  margin-bottom: 0.3rem;
 }

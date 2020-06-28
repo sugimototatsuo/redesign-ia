@@ -86,33 +86,72 @@ header {
       }
     }
   }
-  .right_h{
-    width: 20%;
-    height: 80px;
+
+.right_h{
+  width: 20%;
+  height: 80px;
+  float: right;
+  text-align: center;
+  position: relative;
+}
+label {
+    display: inline-block;
     float: right;
-    text-align: center;
-          a{
-            text-decoration: none;
-            color: #363636;
-            line-height: 80px;
-            display: inline-block;
-            width: 48%;
-            background: #C3C3C3;
-            font-size: 1.0rem;
-            font-weight: bold;
-            &:hover{
-              opacity: 0.5;
-            }
-          }
-        }
+    margin-left: 5px;
+    width: 7rem;
+    @include mq(xl){
+      width: 5.5rem;
+    }
+    line-height: 80px;
+    // margin: 0 0 4px 0;
+    // padding : 15px;
+    // line-height: 1;
+    color :#000;
+    background: #C3C3C3;
+    cursor :pointer;
+}
+
+input {
+    display: none;
+}
+.right_h ul {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 8rem;
+    margin: 0;
+    padding: 0;
+    background :#C3C3C3;
+    list-style: none;
+}
+
+.right_h li {
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+#type1:checked ~ #links1 li,
+#type2:checked ~ #links2 li {
+    height: 70px;
+    opacity: 1;
+    cursor :pointer;
+    // padding: 0.3rem 0;
+}
+
 }
 // button
-.open{
-  margin-top: 80px;
-}
+// .open{
+//   margin-top: 80px;
+// }
 
 /* ========== main-visual ========== */
 .main-visual{
+  z-index: 0 !important;
   width: 100%;
   height: 800px;
   background-image: url(../image/header.png);
@@ -301,6 +340,7 @@ pre#result {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 2rem;
+  color: #2E2E2E;
 }
 #nomalFaculty > div {
   margin: 1em 0;
@@ -336,6 +376,13 @@ pre#result {
 }
 #faculty span.faculty-name-2, .faculty-name-en2{
   display: block;
+}
+.faculty-link > a{
+  color: #2E2E2E;
+  text-decoration: none;
+  &:hover{
+    opacity: 0.5;
+  }
 }
 
 // ========== column ==========
@@ -380,7 +427,11 @@ pre#result {
 #admission #nomalAdmissionText img{
   display: block;
   width: 70%;
-  margin: 0.3rem auto;
+  margin: 0.3rem auto 1rem;
+}
+#admission #nomalAdmissionText a{
+  color: #2E2E2E;
+  text-decoration: none;
 }
 
 /* ========== question ========== */
@@ -394,15 +445,28 @@ pre#result {
 
 // ========== access =========
 #access{
-  .frame{
-    border: 1px solid #707070;
-    margin-bottom: -0.5rem;
+
+}
+
+// ========== AcText ==========
+#nomalAcText, #englishAcText, #easyAcText{
+  padding: 2rem 3rem;
+  color: #2E2E2E;
+  ul{
+    list-style: none;
+    li{
+      p{
+
+      }
+    }
+  }
+  h4, > p{
+    padding-left: 3rem;
+  }
+  h4{
+    padding-top: 0.3rem;
   }
 }
-// iframe{
-//   width: 48%!important;
-//   height: 30rem;
-// }
 
 /* ========== footer ========== */
 footer{

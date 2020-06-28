@@ -179,8 +179,25 @@ const renderJson3 = (json) => {
     nomalLinkTitle.textContent = link['name-ja'];
     //関連コンテンツ名のクラス
     nomalLinkTitle.className = 'link-title';
-    nomalLinkTitle.href = link['link'];
-    nomalLink.href = link['link'];
+    nomalLinkTitle.onclick = function () {
+      var langControll;
+      if (langMode == 0) {
+        langControll = "?lang=0";
+      } else if (langMode == 2) {
+        langControll = "?lang=2";
+      }
+      location.href = link['link'] + langControll;
+    };
+    nomalLink.onclick = function () {
+      var langControll;
+      if (langMode == 0) {
+        langControll = "?lang=0";
+      } else if (langMode == 2) {
+        langControll = "?lang=2";
+      }
+      location.href = link['link'] + langControll;
+    };
+
     nomalLinkImage.src = link['photo'];
     //関連コンテンツ画像のクラス
     nomalLinkImage.className = 'link-image';
@@ -190,6 +207,35 @@ const renderJson3 = (json) => {
     nomalLinkDiv.appendChild(nomalLinkTitle);
     //nomalStudioDiv.appendChild(nomalStudioLink);
     document.getElementById('nomalLink').appendChild(nomalLinkDiv);
+
+    const englishLinkDiv = document.createElement('div');
+    const englishLinkTitle = document.createElement("a");
+    const englishLink = document.createElement("a");
+    const englishLinkImage = document.createElement("img");
+    englishLinkTitle.textContent = link['name-en'];
+    //関連コンテンツ名のクラス
+    englishLinkTitle.className = 'link-title';
+    englishLinkTitle.onclick = function () {
+      var langControll;
+      langControll = "?lang=1";
+      location.href = link['link'] + langControll;
+    };
+    englishLink.onclick = function () {
+      var langControll;
+      langControll = "?lang=1";
+      location.href = link['link'] + langControll;
+    };
+
+    englishLinkImage.src = link['photo'];
+    //関連コンテンツ画像のクラス
+    englishLinkImage.className = 'link-image';
+
+    englishLink.appendChild(englishLinkImage);
+    englishLinkDiv.appendChild(englishLink);
+    englishLinkDiv.appendChild(englishLinkTitle);
+    //nomalStudioDiv.appendChild(nomalStudioLink);
+    document.getElementById('englishLink').appendChild(englishLinkDiv);
+
 
   });
 
@@ -259,6 +305,9 @@ window.onload = function () {
     document.getElementById('nomalFaculty').style.display = "none";
     document.getElementById('englishFaculty').style.display = "block";
 
+    document.getElementById('nomalLink').style.display = "none";
+    document.getElementById('englishLink').style.display = "flex";
+
     document.getElementById('nomalAdmissionText').style.display = "none";
     document.getElementById('englishAdmissionText').style.display = "block";
     document.getElementById('easyAdmissionText').style.display = "none";
@@ -326,6 +375,9 @@ window.onload = function () {
 
     document.getElementById('nomalFaculty').style.display = "block";
     document.getElementById('englishFaculty').style.display = "none";
+
+    document.getElementById('nomalLink').style.display = "flex";
+    document.getElementById('englishLink').style.display = "none";
 
     document.getElementById('nomalAdmissionText').style.display = "none";
     document.getElementById('englishAdmissionText').style.display = "none";
@@ -402,6 +454,9 @@ document.getElementById("button").onclick = function () {
     document.getElementById('nomalFaculty').style.display = "none";
     document.getElementById('englishFaculty').style.display = "block";
 
+    document.getElementById('nomalLink').style.display = "none";
+    document.getElementById('englishLink').style.display = "flex";
+
     document.getElementById('nomalAdmissionText').style.display = "none";
     document.getElementById('englishAdmissionText').style.display = "block";
     document.getElementById('easyAdmissionText').style.display = "none";
@@ -467,6 +522,9 @@ document.getElementById("button").onclick = function () {
 
     document.getElementById('nomalFaculty').style.display = "block";
     document.getElementById('englishFaculty').style.display = "none";
+
+    document.getElementById('nomalLink').style.display = "flex";
+    document.getElementById('englishLink').style.display = "none";
 
     document.getElementById('nomalAdmissionText').style.display = "block";
     document.getElementById('englishAdmissionText').style.display = "none";
@@ -545,6 +603,9 @@ document.getElementById("button2").onclick = function () {
     document.getElementById('nomalFaculty').style.display = "block";
     document.getElementById('englishFaculty').style.display = "none";
 
+    document.getElementById('nomalLink').style.display = "flex";
+    document.getElementById('englishLink').style.display = "none";
+
     document.getElementById('nomalAdmissionText').style.display = "none";
     document.getElementById('englishAdmissionText').style.display = "none";
     document.getElementById('easyAdmissionText').style.display = "block";
@@ -610,6 +671,9 @@ document.getElementById("button2").onclick = function () {
 
     document.getElementById('nomalFaculty').style.display = "block";
     document.getElementById('englishFaculty').style.display = "none";
+
+    document.getElementById('nomalLink').style.display = "flex";
+    document.getElementById('englishLink').style.display = "none";
 
     document.getElementById('nomalAdmissionText').style.display = "block";
     document.getElementById('englishAdmissionText').style.display = "none";

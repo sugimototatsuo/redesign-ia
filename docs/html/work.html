@@ -92,6 +92,7 @@
 
         <div class="right_h">
 
+
             <label for="type1" class="lang">言語</label>
             <input type="checkbox" id="type1" class="accordion">
             <ul id="links1">
@@ -106,21 +107,55 @@
             </ul>
             <label for="type2">資料</label>
             <input type="checkbox" id="type2" class="accordion">
+
         </div>
     </header>
 
     <div style="height: 80px;"></div>
 
+    <button id="button2" class="open">
+        <p id="nomalButton2" style="display: block">やさしいにほんご</p>
+        <p id="easyButton2" style="display: none">もとに もどす</p>
+    </button>
+
     <div class="bg-purple">
         <h1 id=nomalTitle style="display: block">学生作品</h1>
         <h1 id="englishTitle" style="display: none">Student's Works</h1>
+        <h1 id="easyTitle" style="display: none">
+            <ruby>
+                <rb>学生</rb>
+                <rt>がくせい</rt>
+            </ruby>の<ruby>
+                <rb>作品</rb>
+                <rt>さくひん</rt>
+            </ruby>
+        </h1>
         <p id="nomalCap" style="display: block">インダストリアルアート学科の授業で作成した作品です。</p>
         <p id="englishCap" style="display: none">This work was created in a class in the Industrial Art Department.</p>
+        <p id="easyCap" style="display: none">
+            インダストリアルアート<ruby>
+                <rb>学科</rb>
+                <rt>がっか</rt>
+            </ruby>の<ruby>
+                <rb>授業</rb>
+                <rt>じゅぎょう</rt>
+            </ruby>で<ruby>
+                <rb>学生</rb>
+                <rt>がくせい</rt>
+            </ruby>が<ruby>
+                <rb>作</rb>
+                <rt>つく</rt>
+            </ruby>った<ruby>
+                <rb>作品</rb>
+                <rt>さくひん</rt>
+            </ruby>です。
+        </p>
     </div>
 
     <div class="grade-title">
         <h3 id="nomalGrade1" style="display: block">学部1年</h3>
-        <h3 id="endlishGrade1" style="display: none">First year of university</h3>
+        <h3 id="englishGrade1" style="display: none">First year of university</h3>
+        <h3 id="easyGrade1" style="display: none">1年生</h3>
     </div>
     <div id="works1">
         <!-- checkbox 学部一年 -->
@@ -371,8 +406,9 @@
 
 
     <div class="grade-title">
-        <h3 id="nomalGrade1" style="display: block">学部2年</h3>
-        <h3 id="endlishGrade1" style="display: none">Second year of university</h3>
+        <h3 id="nomalGrade2" style="display: block">学部2年</h3>
+        <h3 id="englishGrade2" style="display: none">Second year of university</h3>
+        <h3 id="easyGrade2" style="display: none">2年生</h3>
     </div>
     <div id="works2">
         <!-- checkbox 学部2年 -->
@@ -637,7 +673,8 @@
 
     <div class="grade-title">
         <h3 id="nomalGrade3" style="display: block">学部3年</h3>
-        <h3 id="endlishGrade3" style="display: none">Third year of university</h3>
+        <h3 id="englishGrade3" style="display: none">Third year of university</h3>
+        <h3 id="easyGrade3" style="display: none">3年生</h3>
     </div>
     <div id="works3">
         <p id="nomalCom" style="display: block">＊学部3年次以降の授業は日野キャンパスでの開講となります。</p>

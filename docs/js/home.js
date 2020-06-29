@@ -195,15 +195,28 @@ const getData3 = async () => {
 
 getData3();
 
-/*
+
+
+
+
 //ローディングアニメーション　jsonの読み込み
 let lottieObj = lottie.loadAnimation({
-    container: document.getElementById('sampleAnime'), // 表示させたい要素を渡します
+    container: document.getElementById('loadingAnime'), // 表示させたい要素を渡します
     renderer: 'svg', // 描画形式を指定
     loop: true, // trueにしたらループ、1回再生の場合はfalseで
     autoplay: true, // 自動再生、falseの場合は自分のタイミングで
-    path: 'https://assets6.lottiefiles.com/packages/lf20_lp3wO4.json' // 再生させたいアニメーションのjsonのパスを指定します。リンクだといけるな…なんだそれ
-});*/
+    path: 'js/loadingIA.json' // 再生させたいアニメーションのjsonのパスを指定します。リンクだといけるな…なんだそれ
+});
+
+
+window.onload = function () {
+    let iaLogo = document.getElementById('loading');
+
+    // .box に .loaded を追加してローディング表示を消す
+    iaLogo.classList.add('loaded');
+}
+
+
 
 
 
@@ -333,4 +346,5 @@ function myChange() {	// スライドショーメイン関数
 }
 
 myChange();
+
 

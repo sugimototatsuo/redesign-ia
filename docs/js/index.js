@@ -266,8 +266,8 @@ window.onload = function () {
     document.getElementById('englishRec').style.display = "block";
     document.getElementById('easyRec').style.display = "none";
     document.getElementById('nomalLang').style.display = "none";
-    document.getElementById('englishLang').style.display = "none";
-    document.getElementById('easyLang').style.display = "block";
+    document.getElementById('englishLang').style.display = "block";
+    document.getElementById('easyLang').style.display = "none";
 
     document.getElementById('nomalTitle').style.display = "none";
     document.getElementById('easyTitle').style.display = "none";

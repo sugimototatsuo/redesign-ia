@@ -83,16 +83,4 @@
         .faculty a{
             font-weight: 600;
         }
-        .faculty a:link {
-            color: #828282;
-          }
-          .faculty a:visited {
-            color:#828282;
-          }
-          .faculty a:hover {
-            color:#000;
-            cursor: pointer;
-          }
-          .faculty a:active {
-            color:#DDDDDD;
-          }
+  

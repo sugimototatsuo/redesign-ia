@@ -105,6 +105,11 @@ header label {
   }
 }
 
+header label a {
+  text-decoration: none;
+  color: #363636;
+}
+
 header input {
   display: none;
 }
@@ -113,7 +118,7 @@ header .right_h ul {
   position: absolute;
   top: 80px;
   right: 0;
-  width: 8rem;
+  width: 7rem;
   margin: 0;
   padding: 0;
   background: #C3C3C3;
@@ -130,8 +135,7 @@ header .right_h li {
   transition: all 0.5s;
 }
 
-header #type1:checked ~ #links1 li,
-header #type2:checked ~ #links2 li {
+header #type1:checked ~ #links1 li {
   height: 70px;
   opacity: 1;
   cursor: pointer;
@@ -227,21 +231,19 @@ header #type2:checked ~ #links2 li {
   text-align: center;
 }
 
-#works .frame .moreBtn a {
+#works .frame .moreBtn p {
   text-decoration: none;
   color: #363636;
-  display: inline-block;
-  margin: 0 auto;
-}
-
-#works .frame .moreBtn a:hover {
-  opacity: 0.7;
-}
-
-#works .frame .moreBtn a p {
   background: #CFCFCF;
-  padding: 1rem 5rem;
-  margin-top: 3rem;
+  display: block;
+  width: 15%;
+  padding: 1.3rem 0;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+#works .frame .moreBtn p:hover {
+  opacity: 0.7;
 }
 
 /* ========== curriculum ========== */
@@ -297,6 +299,11 @@ header #type2:checked ~ #links2 li {
   text-decoration: none;
   color: #363636;
   font-size: 1rem;
+  cursor: pointer;
+}
+
+.studio-title:hover {
+  opacity: 0.5;
 }
 
 .studio-title-en {
@@ -306,6 +313,11 @@ header #type2:checked ~ #links2 li {
   text-decoration: none;
   color: #363636;
   font-size: 1rem;
+  cursor: pointer;
+}
+
+.studio-title-en:hover {
+  opacity: 0.5;
 }
 
 pre#result {
@@ -406,6 +418,11 @@ pre#result {
   color: #2E2E2E;
   text-decoration: none;
   padding: 0.5rem 0;
+  cursor: pointer;
+}
+
+.link-title:hover {
+  opacity: 0.5;
 }
 
 /* ========== admission ==========*/

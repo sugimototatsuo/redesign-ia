@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: sans-serif;
   font-size: 20px;
@@ -180,6 +181,7 @@ section .second_box {
   width: 100%;
   overflow: hidden;
   margin-bottom: 2rem;
+  /* サムネイル */
 }
 
 section .second_box .right_box {
@@ -195,13 +197,72 @@ section .second_box .right_box h5 {
   font-size: 1.5rem;
 }
 
-section .second_box .left_box {
-  width: 70%;
-  margin-bottom: 2rem;
+section .second_box .cp_cssslider {
+  width: 65%;
+  padding-top: 650px;
+  /* 画像の高さ */
+  position: relative;
+  text-align: center;
 }
 
-section .second_box .left_box img {
+@media screen and (max-width: 1025px) {
+  section .second_box .cp_cssslider {
+    padding-top: 450px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  section .second_box .cp_cssslider {
+    padding-top: 400px;
+  }
+}
+
+section .second_box .cp_cssslider > img {
   width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.5s;
+  border-radius: 3px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+section .second_box .cp_cssslider input[name='cp_switch'] {
+  display: none;
+}
+
+section .second_box .cp_cssslider label {
+  margin: 15px 5px 0 5px;
+  border: 2px solid #ffffff;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  opacity: 0.6;
+  border-radius: 3px;
+}
+
+section .second_box .cp_cssslider label:hover {
+  opacity: 0.9;
+}
+
+section .second_box .cp_cssslider label img {
+  display: block;
+  width: 100px;
+  height: 80px;
+  border-radius: 2px;
+}
+
+section .second_box .cp_cssslider input[name='cp_switch']:checked + label {
+  border: 2px solid #FF7043;
+  opacity: 1;
+}
+
+section .second_box .cp_cssslider input[name='cp_switch'] ~ img {
+  opacity: 0;
+}
+
+section .second_box .cp_cssslider input[name='cp_switch']:checked + label + img {
+  opacity: 1;
 }
 
 .faculty_title {

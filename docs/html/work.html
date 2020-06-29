@@ -17,71 +17,71 @@
         <div class="left_h">
             <nav>
                 <ul>
-                    <li><a href="#aboutus">
+                    <li><a id="head-aboutus">
                             <h3 id="nomalSubtitle1" style="display: block">学科概要</h3>
                             <h3 id="easySubtitle1" style="display: none">この<ruby>
-                      <rb>学科</rb>
-                      <rt>がっか</rt>
-                    </ruby>について</h3>
+                                    <rb>学科</rb>
+                                    <rt>がっか</rt>
+                                </ruby>について</h3>
                             <h3 id="englishSubtitle1" style="display: none">Summary</h3>
                         </a></li>
-                    <li><a href="#works">
+                    <li><a id="head-work">
                             <h3 id="nomalSubtitle2" style="display: block">作品</h3>
                             <h3 id="easySubtitle2" style="display: none"><ruby>
-                      <rb>作品</rb>
-                      <rt>さくひん</rt>
-                    </ruby></h3>
+                                    <rb>作品</rb>
+                                    <rt>さくひん</rt>
+                                </ruby></h3>
                             <h3 id="englishSubtitle2" style="display: none">Works</h3>
                         </a></li>
-                    <li><a href="#curriculum">
+                    <li><a id="head-curriculm">
                             <h3 id="nomalSubtitle3" style="display: block">カリキュラム</h3>
                             <h3 id="easySubtitle3" style="display: none">カリキュラム</h3>
                             <h3 id="englishSubtitle3" style="display: none">Curriculum</h3>
                         </a></li>
-                    <li><a href="#studios">
+                    <li><a id="head-studios">
                             <h3 id="nomalSubtitle4" style="display: block">スタジオ紹介</h3>
                             <h3 id="easySubtitle4" style="display: none">スタジオ<ruby>
-                      <rb>紹介</rb>
-                      <rt>しょうかい</rt>
-                    </ruby></h3>
+                                    <rb>紹介</rb>
+                                    <rt>しょうかい</rt>
+                                </ruby></h3>
                             <h3 id="englishSubtitle4" style="display: none">Studios</h3>
                         </a></li>
-                    <li><a href="#faculty">
+                    <li><a id="head-faculty">
                             <h3 id="nomalSubtitle5" style="display: block">教員紹介</h3>
                             <h3 id="easySubtitle5" style="display: none"><ruby>
-                      <rb>先生</rb>
-                      <rt>せんせい</rt>
-                    </ruby>の<ruby>
-                      <rb>紹介</rb>
-                      <rt>しょうかい</rt>
-                    </ruby></h3>
+                                    <rb>先生</rb>
+                                    <rt>せんせい</rt>
+                                </ruby>の<ruby>
+                                    <rb>紹介</rb>
+                                    <rt>しょうかい</rt>
+                                </ruby></h3>
                             <h3 id="englishSubtitle5" style="display: none">Faculty</h3>
                         </a></li>
-                    <li><a href="#column">
+                    <li><a id="head-column">
                             <h3 id="nomalSubtitle9" style="display: block">関連コンテンツ</h3>
                             <h3 id="easySubtitle9" style="display: none"><ruby>
-                      <rb>関連</rb>
-                      <rt>かんれん</rt>
-                    </ruby>コンテンツ</h3>
+                                    <rb>関連</rb>
+                                    <rt>かんれん</rt>
+                                </ruby>コンテンツ</h3>
                             <h3 id="englishSubtitle9" style="display: none">Column</h3>
                         </a></li>
-                    <li><a href="#admission">
+                    <li><a id="head-admission">
                             <h3 id="nomalSubtitle6" style="display: block">入試案内</h3>
                             <h3 id="easySubtitle6" style="display: none"><ruby>
-                      <rb>入学試験</rb>
-                      <rt>にゅうがくしけん</rt>
-                    </ruby>について</h3>
+                                    <rb>入学試験</rb>
+                                    <rt>にゅうがくしけん</rt>
+                                </ruby>について</h3>
                             <h3 id="englishSubtitle6" style="display: none">Admission</h3>
                         </a></li>
-                    <li><a href="#question">
+                    <li><a id="head-question">
                             <h3 id="nomalSubtitle7" style="display: block">よくある質問</h3>
                             <h3 id="easySubtitle7" style="display: none">よくある<ruby>
-                      <rb>質問</rb>
-                      <rt>しつもん</rt>
-                    </ruby></h3>
+                                    <rb>質問</rb>
+                                    <rt>しつもん</rt>
+                                </ruby></h3>
                             <h3 id="englishSubtitle7" style="display: none">Q&A</h3>
                         </a></li>
-                    <li><a href="#access">
+                    <li><a id="head-access">
                             <h3 id="nomalSubtitle8" style="display: block">アクセス</h3>
                             <h3 id="easySubtitle8" style="display: none">アクセス</h3>
                             <h3 id="englishSubtitle8" style="display: none">Access</h3>
@@ -92,8 +92,11 @@
 
         <div class="right_h">
 
-
-            <label for="type1" class="lang">言語</label>
+            <label for="type1" class="lang">
+                <p id="nomalLang" style="display: block">言語</p>
+                <p id="englishLang" style="display: none">Lang</p>
+                <p id="easyLang" style="display: none">ことば</p>
+            </label>
             <input type="checkbox" id="type1" class="accordion">
             <ul id="links1">
                 <li id="button" class="open">
@@ -105,12 +108,18 @@
                         <p id="easyButton2" style="display: none">もとに もどす</p>
                     </button></li>
             </ul>
-            <label for="type2">資料</label>
+            <label for="type2">
+                <a href="https://www.tmu.ac.jp/entrance/faculty/application_guidebook.html" target="_blank">
+                    <p id="nomalRec" style="display: block">資料</p>
+                    <p id="englishRec" style="display: none">Info</p>
+                    <p id="easyRec" style="display: none"><ruby>
+                            <rb>資料</rb>
+                            <rt>しりょう</rt>
+                        </ruby>
+                </a></label>
             <input type="checkbox" id="type2" class="accordion">
-
         </div>
     </header>
-
     <div style="height: 80px;"></div>
 
     <button id="button2" class="open">
@@ -188,775 +197,906 @@
                         <div class="modalText">
                             <div class="modalCover"><img src="../image/workB1/基礎造形A.jpg" title="popupkisoA2"></div>
                             <h3>基礎造形A 「線による造形表現」</h3>
-                            <h4>担当教員：西崎美穂 准教授</h4>
+                            <div id="nomalm1" style="display: block;">
+                                <h4>担当教員：西崎美穂 准教授</h4>
+                            </div>
+                            <div id="englishm1" style="display: none;">
+                                <h4>Teacher：Associate Professor Miho Nishizaki</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="mainVisual main02 flex center">
-                <div class="btn"><label for="modal02"><img src="../image/iconB1/基礎造形A1_icon.png" title="kisoA1"></label>
+                <div class="mainVisual main02 flex center">
+                    <div class="btn"><label for="modal02"><img src="../image/iconB1/基礎造形A1_icon.png"
+                                title="kisoA1"></label>
+                    </div>
                 </div>
-            </div>
-            <div id="modal02Con" class="modalWrap">
-                <div class="modalBg"><label for="modal02" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal02" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover"><img src="../image/workB1/基礎造形A_2.jpg" title="popupkisoA1-1">
-                                <img src="../image/workB1/基礎造形A_3.jpg" title="popupkisoA1-2"></div>
-                            <h3>基礎造形A 「鉛筆デッサン」</h3>
-                            <h4>担当教員：西崎美穂 准教授</h4>
+                <div id="modal02Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal02" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal02" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover"><img src="../image/workB1/基礎造形A_2.jpg" title="popupkisoA1-1">
+                                    <img src="../image/workB1/基礎造形A_3.jpg" title="popupkisoA1-2"></div>
+                                <h3>基礎造形A 「鉛筆デッサン」</h3>
+                                <div id="nomalm2" style="display: block;">
+                                    <h4>担当教員：西崎美穂 准教授</h4>
+                                </div>
+                                <div id="englishm2" style="display: none;">
+                                    <h4>Teacher：Associate Professor Miho Nishizaki</h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="mainVisual main03 flex center">
-                <div class="btn"><label for="modal03"><img src="../image/iconB1/2DCG_icon.png" title="2dcg"></label>
+                <div class="mainVisual main03 flex center">
+                    <div class="btn"><label for="modal03"><img src="../image/iconB1/2DCG_icon.png" title="2dcg"></label>
+                    </div>
                 </div>
-            </div>
-            <div id="modal03Con" class="modalWrap">
-                <div class="modalBg"><label for="modal03" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal03" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover"><img src="../image/workB1/2DCG_1.jpg" title="popup2dcg1">
-                                <img src="../image/workB1/2DCG_2.jpg" title="popup2dcg2"></div>
-                            <h3>2次元コンピューターグラフィックス (旧課程)</h3>
-                            <h4>担当教員：日高良祐 助教、西崎美穂 准教授</h4>
-                            <h4>使用ソフト：Illustrator、Photoshop</h4>
+                <div id="modal03Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal03" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal03" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover"><img src="../image/workB1/2DCG_1.jpg" title="popup2dcg1">
+                                    <img src="../image/workB1/2DCG_2.jpg" title="popup2dcg2"></div>
+                                <h3>2次元コンピューターグラフィックス (旧課程)</h3>
+                                <div id="nomalm3" style="display: block;">
+                                    <h4>担当教員：日高良祐 助教、西崎美穂 准教授</h4>
+                                    <h4>使用ソフト：Illustrator、Photoshop</h4>
+                                </div>
+                                <div id="englishm3" style="display: none;">
+                                    <h4>Teacher：Assistant Professor Ryosuke Hidaka, Associate Professor Miho Nishizaki
+                                    </h4>
+                                    <h4>Software：Illustrator、Photoshop</h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="mainVisual main04 flex center">
-                <div class="btn"><label for="modal04"><img src="../image/iconB1/基礎造形B_icon.png" title="kisoB"></label>
+                <div class="mainVisual main04 flex center">
+                    <div class="btn"><label for="modal04"><img src="../image/iconB1/基礎造形B_icon.png"
+                                title="kisoB"></label>
+                    </div>
                 </div>
-            </div>
-            <div id="modal04Con" class="modalWrap">
-                <div class="modalBg"><label for="modal04" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal04" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover"><img src="../image/workB1/基礎造形B.jpg" title="popupkisob1">
-                                <img src="../image/workB1/基礎造形B_2.jpg" title="popupkisob2"></div>
-                            <h3>基礎造形B 「筆記用具のデザイン」</h3>
-                            <h4>担当教員：茂木龍太 助教</h4>
+                <div id="modal04Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal04" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal04" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover"><img src="../image/workB1/基礎造形B.jpg" title="popupkisob1">
+                                    <img src="../image/workB1/基礎造形B_2.jpg" title="popupkisob2"></div>
+                                <h3>基礎造形B 「筆記用具のデザイン」</h3>
+                                <div id="nomalm4" style="display: block;">
+                                    <h4>担当教員：茂木龍太 助教</h4>
+                                </div>
+                                <div id="englishm4" style="display: none;">
+                                    <h4>Teacher：Assistant Professor Ryuta Motegi
+                                    </h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="mainVisual main05 flex center">
-                <div class="btn"><label for="modal05"><img src="../image/iconB1/基礎造形B_タンブラー_icon.png" title="tum"></label></div>
-            </div>
-            <div id="modal05Con" class="modalWrap">
-                <div class="modalBg"><label for="modal05" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal05" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover"><img src="../image/workB1/基礎造形B_タンブラー_1.jpg" title="popuptum1">
-                                <img src="../image/workB1/基礎造形B_タンブラー_2.jpg" title="popuptum2"></div>
-                            <h3>基礎造形B 「タンブラーのデザイン」</h3>
-                            <h4>担当教員：茂木龍太 助教</h4>
+                <div class="mainVisual main05 flex center">
+                    <div class="btn"><label for="modal05"><img src="../image/iconB1/基礎造形B_タンブラー_icon.png"
+                                title="tum"></label></div>
+                </div>
+                <div id="modal05Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal05" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal05" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover"><img src="../image/workB1/基礎造形B_タンブラー_1.jpg" title="popuptum1">
+                                    <img src="../image/workB1/基礎造形B_タンブラー_2.jpg" title="popuptum2"></div>
+                                <h3>基礎造形B 「タンブラーのデザイン」</h3>
+                                <div id="nomalm5" style="display: block;">
+                                    <h4>担当教員：茂木龍太 助教</h4>
+                                </div>
+                                <div id="englishm5" style="display: none;">
+                                    <h4>Teacher：Assistant Professor Ryuta Motegi
+                                    </h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="mainVisual main06 flex center">
-                <div class="btn"><label for="modal06"><img src="../image/iconB1/基礎造形C_icon.png" title="kisoC"></label>
+                <div class="mainVisual main06 flex center">
+                    <div class="btn"><label for="modal06"><img src="../image/iconB1/基礎造形C_icon.png"
+                                title="kisoC"></label>
+                    </div>
                 </div>
-            </div>
-            <div id="modal06Con" class="modalWrap">
-                <div class="modalBg"><label for="modal06" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal06" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover"><img src="../image/workB1/基礎造形C.JPG" title="popupgr1"></div>
-                            <h3>基礎造形C 「ギャラリーデザイン」</h3>
-                            <h4>担当教員：土屋真 助教</h4>
+                <div id="modal06Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal06" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal06" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover"><img src="../image/workB1/基礎造形C.JPG" title="popupgr1"></div>
+                                <h3>基礎造形C 「ギャラリーデザイン」</h3>
+                                <div id="nomalm6" style="display: block;">
+                                    <h4>担当教員：土屋真 助教</h4>
+                                </div>
+                                <div id="englishm6" style="display: none;">
+                                    <h4>Teacher：Assistant Professor Ryuta Motegi
+                                    </h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="mainVisual main07 flex center">
-                <div class="btn"><label for="modal07"><img src="../image/iconB1/ドロA_icon.png" title="draA"></label>
+                <div class="mainVisual main07 flex center">
+                    <div class="btn"><label for="modal07"><img src="../image/iconB1/ドロA_icon.png" title="draA"></label>
+                    </div>
                 </div>
-            </div>
-            <div id="modal07Con" class="modalWrap">
-                <div class="modalBg"><label for="modal07" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal07" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover"><img src="../image/workB1/ドロA_1.jpg" title="popupdraA1">
-                                <img src="../image/workB1/ドロA_2.jpg" title="popupdraA2"></div>
-                            <h3>ドローイングA 「デザイン製図法」</h3>
-                            <h4>担当教員：茂木龍太 助教</h4>
+                <div id="modal07Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal07" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal07" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover"><img src="../image/workB1/ドロA_1.jpg" title="popupdraA1">
+                                    <img src="../image/workB1/ドロA_2.jpg" title="popupdraA2"></div>
+                                <h3>ドローイングA 「デザイン製図法」</h3>
+                                <div id="nomalm7" style="display: block;">
+                                    <h4>担当教員：茂木龍太 助教</h4>
+                                </div>
+                                <div id="englishm7" style="display: none;">
+                                    <h4>Teacher：Assistant Professor Shin Tsuchiya
+                                    </h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="mainVisual main08 flex center">
-                <div class="btn"><label for="modal08"><img src="../image/iconB1/ドロB.png" title="draB"></label></div>
-            </div>
-            <div id="modal08Con" class="modalWrap">
-                <div class="modalBg"><label for="modal08" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal08" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover"><img src="../image/workB1/ドロB.jpg" title="popupdraB"></div>
-                            <h3>ドローイングB 「イームズハウス図面」</h3>
-                            <h4>担当教員：土屋真 助教</h4>
+                <div class="mainVisual main08 flex center">
+                    <div class="btn"><label for="modal08"><img src="../image/iconB1/ドロB.png" title="draB"></label></div>
+                </div>
+                <div id="modal08Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal08" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal08" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover"><img src="../image/workB1/ドロB.jpg" title="popupdraB"></div>
+                                <h3>ドローイングB 「イームズハウス図面」</h3>
+                                <div id="nomalm8" style="display: block;">
+                                    <h4>担当教員：茂木龍太 助教</h4>
+                                </div>
+                                <div id="englishm8" style="display: none;">
+                                    <h4>Teacher：Assistant Professor Ryuta Motegi
+                                    </h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="mainVisual main09 flex center">
-                <div class="btn"><label for="modal09"><img src="../image/iconB1/ドロC_icon.png" title="draC1"></label>
+                <div class="mainVisual main09 flex center">
+                    <div class="btn"><label for="modal09"><img src="../image/iconB1/ドロC_icon.png" title="draC1"></label>
+                    </div>
                 </div>
-            </div>
-            <div id="modal09Con" class="modalWrap">
-                <div class="modalBg"><label for="modal09" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal09" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover"><img src="../image/workB1/ドロC_緑地の現状.png" title="popupdraC1">
-                                <img src="../image/workB1/ドロC_考察.png" title="popupdraC2">
-                                <img src="../image/workB1/ドロC_コンセプト.png" title="popupdraC3">
-                                <img src="../image/workB1/ドロC_図面.png" title="popupdraC4"></div>
-                            <h3>ドローイングC 「南大沢キャンパス内の空間デザイン」</h3>
-                            <h4>担当教員：土屋真 助教</h4>
+                <div id="modal09Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal09" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal09" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover"><img src="../image/workB1/ドロC_緑地の現状.png" title="popupdraC1">
+                                    <img src="../image/workB1/ドロC_考察.png" title="popupdraC2">
+                                    <img src="../image/workB1/ドロC_コンセプト.png" title="popupdraC3">
+                                    <img src="../image/workB1/ドロC_図面.png" title="popupdraC4"></div>
+                                <h3>ドローイングC 「南大沢キャンパス内の空間デザイン」</h3>
+                                <div id="nomalm9" style="display: block;">
+                                    <h4>担当教員：土屋真 助教</h4>
+                                </div>
+                                <div id="englishm9" style="display: none;">
+                                    <h4>Teacher：Assistant Professor Ryuta Motegi
+                                    </h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="mainVisual main10 flex center">
-                <div class="btn"><label for="modal10"><img src="../image/iconB1/ドロC_テレワーク_icon.png" title="draC2"></label></div>
-            </div>
-            <div id="modal10Con" class="modalWrap">
-                <div class="modalBg"><label for="modal10" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal10" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover"><img src="../image/workB1/ドロC_テレワーク_1.jpg" title="popupdraC21">
-                                <img src="../image/workB1/ドロC_テレワーク_2.jpg" title="popupdraC22"></div>
-                            <h3>ドローイングC 「テレワーク」</h3>
-                            <h4>担当教員：土屋真 助教</h4>
+                <div class="mainVisual main10 flex center">
+                    <div class="btn"><label for="modal10"><img src="../image/iconB1/ドロC_テレワーク_icon.png"
+                                title="draC2"></label></div>
+                </div>
+                <div id="modal10Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal10" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal10" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover"><img src="../image/workB1/ドロC_テレワーク_1.jpg" title="popupdraC21">
+                                    <img src="../image/workB1/ドロC_テレワーク_2.jpg" title="popupdraC22"></div>
+                                <h3>ドローイングC 「テレワーク」</h3>
+                                <div id="nomalm10" style="display: block;">
+                                    <h4>担当教員：土屋真 助教</h4>
+                                </div>
+                                <div id="englishm10" style="display: none;">
+                                    <h4>Teacher：Assistant Professor Ryuta Motegi
+                                    </h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="mainVisual main11 flex center">
-                <div class="btn"><label for="modal11"><img src="../image/iconB1/アニ基礎_icon.png" title="ani"></label>
+                <div class="mainVisual main11 flex center">
+                    <div class="btn"><label for="modal11"><img src="../image/iconB1/アニ基礎_icon.png" title="ani"></label>
+                    </div>
                 </div>
-            </div>
-            <div id="modal11Con" class="modalWrap">
-                <div class="modalBg"><label for="modal11" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal11" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover"><img src="../image/workB1/アニ基礎.jpg" title="popupdrani"></div>
-                            <h4>担当教員：今間俊博 教授</h4>
-                            <h4>使用ソフト：Premiere、AfterEffects</h4>
+                <div id="modal11Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal11" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal11" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover"><img src="../image/workB1/アニ基礎.jpg" title="popupdrani"></div>
+                                <h3>アニメーション基礎「セルアニメーション」</h3>
+                                <div id="nomalm11" style="display: block;">
+                                    <h4>担当教員：今間俊博 教授</h4>
+                                    <h4>使用ソフト：Premiere、AfterEffects</h4>
+                                </div>
+                                <div id="englishm11" style="display: none;">
+                                    <h4>Teacher：Professor Toshihiro Komma
+                                    </h4>
+                                    <h4>Software：Premiere、AfterEffects</h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="mainVisual main12 flex center">
-                <div class="btn"><label for="modal12"><img src="../image/iconB1/デザプロ_icon.png" title="dp"></label></div>
-            </div>
-            <div id="modal12Con" class="modalWrap">
-                <div class="modalBg"><label for="modal12" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal12" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover"><img src="../image/workB1/デザプロ1.png" title="popupdp1">
-                                <img src="../image/workB1/デザプロ3.jpg" title="popupdp2">
-                                <img src="../image/workB1/デザプロ2.jpg" title="popupdp3"></div>
-                            <h3>デザインプログラミング</h3>
-                            <h4>担当教員：安藤大地 助教</h4>
-                            <h4>使用ソフト：Processing</h4>
+                <div class="mainVisual main12 flex center">
+                    <div class="btn"><label for="modal12"><img src="../image/iconB1/デザプロ_icon.png" title="dp"></label>
+                    </div>
+                </div>
+                <div id="modal12Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal12" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal12" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover"><img src="../image/workB1/デザプロ1.png" title="popupdp1">
+                                    <img src="../image/workB1/デザプロ3.jpg" title="popupdp2">
+                                    <img src="../image/workB1/デザプロ2.jpg" title="popupdp3"></div>
+                                <h3>デザインプログラミング「最終課題」
+                                </h3>
+                                <div id="nomalm12" style="display: block;">
+                                    <h4>担当教員：安藤大地 助教</h4>
+                                    <h4>使用ソフト：Processing</h4>
+                                </div>
+                                <div id="englishm12" style="display: none;">
+                                    <h4>Teacher：Assistant Professor　Daichi Ando
+                                    </h4>
+                                    <h4>Software：Processing</h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
-    </div>
 
 
-    <div class="grade-title">
-        <h3 id="nomalGrade2" style="display: block">学部2年</h3>
-        <h3 id="englishGrade2" style="display: none">Second year of university</h3>
-        <h3 id="easyGrade2" style="display: none">2年生</h3>
-    </div>
-    <div id="works2">
-        <!-- checkbox 学部2年 -->
-        <input type="checkbox" id="modal13" class="modalCheck">
-        <input type="checkbox" id="modal14" class="modalCheck">
-        <input type="checkbox" id="modal15" class="modalCheck">
-        <input type="checkbox" id="modal16" class="modalCheck">
-        <input type="checkbox" id="modal17" class="modalCheck">
-        <input type="checkbox" id="modal18" class="modalCheck">
-        <input type="checkbox" id="modal19" class="modalCheck">
-        <input type="checkbox" id="modal20" class="modalCheck">
-        <input type="checkbox" id="modal21" class="modalCheck">
-        <input type="checkbox" id="modal22" class="modalCheck">
-        <input type="checkbox" id="modal23" class="modalCheck">
-        <input type="checkbox" id="modal24" class="modalCheck">
-
-        <div class="wrapper">
-            <div class="mainVisual main13 flex center">
-                <div class="btn"><label for="modal13"><img src="../image/iconB2/スペース_icon.png" title="space"></label>
-                </div>
-            </div>
-            <div id="modal13Con" class="modalWrap">
-                <div class="modalBg"><label for="modal13" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal13" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover">
-                                <img src="../image/workB2/スペース2.JPG" title="popupspace1">
-                                <img src="../image/workB2/スペース3.jpg" title="popupspase2"></div>
-                            <h3>Basics of Spatial Design「Urban Garden Project」</h3>
-                            <h4>担当教員：ヴァールアダムス 准教授</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mainVisual main14 flex center">
-                <div class="btn"><label for="modal14"><img src="../image/iconB2/SpaceDesign1-2-1_icon.png" title="space2"></label></div>
-            </div>
-            <div id="modal14Con" class="modalWrap">
-                <div class="modalBg"><label for="modal14" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal14" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover">
-                                <img src="../image/workB2/SpaceDesign1-2-1.jpg" title="popupspace21">
-                                <img src="../image/workB2/SpaceDesign.JPG" title="popupspase22"></div>
-                            <h3>Basics of Spatial Design「Urban Garden Project」</h3>
-                            <h4>担当教員：ヴァールアダムス 准教授</h4>
-                            <h4>使用ソフト：SketchUp</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mainVisual main15 flex center">
-                <div class="btn"><label for="modal15"><img src="../image/iconB2/インテ_icon.png" title="inte"></label>
-                </div>
-            </div>
-            <div id="modal15Con" class="modalWrap">
-                <div class="modalBg"><label for="modal15" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal15" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover">
-                                <img src="../image/workB2/インテ.jpg" title="popupinte"></div>
-                            <h3>リビングデザイン基礎 「紙の造作」</h3>
-                            <h4>担当教員：藤原敬介 教授</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mainVisual main16 flex center">
-                <div class="btn"><label for="modal16"><img src="../image/iconB2/トラポ_icon.png" title="tra"></label></div>
-            </div>
-            <div id="modal16Con" class="modalWrap">
-                <div class="modalBg"><label for="modal16" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal16" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover">
-                                <img src="../image/workB2/トラポ.png" title="popuptra"></div>
-                            <h3>トランスポーテーションデザイン基礎「パーソナルモビリティ」</h3>
-                            <h4>担当教員：難波治 教授</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mainVisual main17 flex center">
-                <div class="btn"><label for="modal17"><img src="../image/iconB2/人間工学_icon.png" title="hum"></label>
-                </div>
-            </div>
-            <div id="modal17Con" class="modalWrap">
-                <div class="modalBg"><label for="modal17" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal17" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover">
-                                <img src="../image/workB2/人間工学_1.jpg" title="popuphum1">
-                                <img src="../image/workB2/人間工学_2.jpg" title="popuphum2">
-                                <img src="../image/workB2/人間工学_3.jpg" title="popuphum3">
-                                <img src="../image/workB2/人間工学_4.jpg" title="popuphum4"></div>
-                            <h3>人間工学基礎 「ユーザビリティ評価と製品開発プロセス」</h3>
-                            <h4>担当教員：笠松慶子 教授</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mainVisual main18 flex center">
-                <div class="btn"><label for="modal18"><img src="../image/iconB2/kim_icon.png" title="kim"></label></div>
-            </div>
-            <div id="modal18Con" class="modalWrap">
-                <div class="modalBg"><label for="modal18" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal18" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover">
-                                <img src="../image/workB2/kim.png" title="popupkim"></div>
-                            <h3>イクイップメントデザイン基礎 「製品デザイン」</h3>
-                            <h4>担当教員：金石振 准教授</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mainVisual main19 flex center">
-                <div class="btn"><label for="modal19"><img src="../image/iconB2/プロトタイプ_icon.png" title="prt"></label>
-                </div>
-            </div>
-            <div id="modal19Con" class="modalWrap">
-                <div class="modalBg"><label for="modal19" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal19" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover">
-                                <img src="../image/workB2/プロトタイプ_1.png" title="popupprt1">
-                                <img src="../image/workB2/プロトタイプ_2.png" title="popupprt2">
-                                <img src="../image/workB2/プロトタイプ_3.png" title="popupprt3">
-                                <img src="../image/workB2/プロトタイプ_4.png" title="popupprt4"></div>
-                            <h3>プロトタイピング基礎 「時計デザイン」</h3>
-                            <h4>担当教員：馬場哲晃 准教授</h4>
-                            <h4>使用ソフト：Processing</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mainVisual main20 flex center">
-                <div class="btn"><label for="modal20"><img src="../image/iconB2/gra_icon.png" title="gra"></label></div>
-            </div>
-            <div id="modal20Con" class="modalWrap">
-                <div class="modalBg"><label for="modal20" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal20" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover">
-                                <img src="../image/workB2/gra.jpg" title="popupgra1">
-                                <img src="../image/workB2/gra_2.jpg" title="popupgra2"></div>
-                            <h3>グラフィックデザイン基礎「文庫本カバーデザイン / ステーショナリーデザイン」</h3>
-                            <h4>担当教員：菊竹雪 教授</h4>
-                            <h4>使用ソフト：Illustrator</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mainVisual main21 flex center">
-                <div class="btn"><label for="modal21"><img src="../image/iconB2/映像基礎_icon.png" title="mov"></label>
-                </div>
-            </div>
-            <div id="modal21Con" class="modalWrap">
-                <div class="modalBg"><label for="modal21" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal21" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover">
-                                <img src="../image/workB2/映像基礎.png" title="popupmov1"></div>
-                            <h3>映像基礎 「照明効果」</h3>
-                            <h4>担当教員：今間俊博 教授</h4>
-                            <h4>使用ソフト：Premiere、AfterEffects</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mainVisual main22 flex center">
-                <div class="btn"><label for="modal22"><img src="../image/iconB2/役に立たない機械_icon.png" title="med"></label>
-                </div>
-            </div>
-            <div id="modal22Con" class="modalWrap">
-                <div class="modalBg"><label for="modal22" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal22" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover">
-                                <img src="../image/workB2/役に立たない機械.jpg" title="popupmed1">
-                                <img src="../image/workB2/役に立たない機械 5班_ページ_1.jpg" title="popupmed2">
-                                <img src="../image/workB2/役に立たない機械 5班_ページ_2.jpg" title="popupmed3">
-                                <img src="../image/workB2/役に立たない機械 5班_ページ_3.jpg" title="popupmed4">
-                                <img src="../image/workB2/役に立たない機械 5班_ページ_5.jpg" title="popupmed5"></div>
-                            <h3>メディア表現概論 「役に立たない機械」</h3>
-                            <h4>担当教員：串山久美子 教授</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mainVisual main23 flex center">
-                <div class="btn"><label for="modal23"><img src="../image/iconB2/プロ基礎_icon.png" title="pb"></label></div>
-            </div>
-            <div id="modal23Con" class="modalWrap">
-                <div class="modalBg"><label for="modal23" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal23" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover">
-                                <img src="../image/workB2/プロ基礎.png" title="popuppb"></div>
-                            <h3>プログラミング基礎「オリジナルゲーム制作」</h3>
-                            <h4>担当教員：向井智彦 准教授</h4>
-                            <h4>使用ソフト：Unity (C#)、Visual Studio</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mainVisual main24 flex center">
-                <div class="btn"><label for="modal24"><img src="../image/iconB2/web基礎_icon.png" title="wb"></label>
-                </div>
-            </div>
-            <div id="modal24Con" class="modalWrap">
-                <div class="modalBg"><label for="modal24" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal24" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover">
-                                <img src="../image/workB2/web基礎.png" title="popuppb"></div>
-                            <h3>Web基礎 「コンテンツ制作」</h3>
-                            <h4>担当教員：安藤大地 助教</h4>
-                            <h4>使用ソフト等：atom(HTML、CSS、JavaScript)、Illustrator</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        <div class="grade-title">
+            <h3 id="nomalGrade2" style="display: block">学部2年</h3>
+            <h3 id="englishGrade2" style="display: none">Second year of university</h3>
+            <h3 id="easyGrade2" style="display: none">2年生</h3>
         </div>
-    </div>
+        <div id="works2">
+            <!-- checkbox 学部2年 -->
+            <input type="checkbox" id="modal13" class="modalCheck">
+            <input type="checkbox" id="modal14" class="modalCheck">
+            <input type="checkbox" id="modal15" class="modalCheck">
+            <input type="checkbox" id="modal16" class="modalCheck">
+            <input type="checkbox" id="modal17" class="modalCheck">
+            <input type="checkbox" id="modal18" class="modalCheck">
+            <input type="checkbox" id="modal19" class="modalCheck">
+            <input type="checkbox" id="modal20" class="modalCheck">
+            <input type="checkbox" id="modal21" class="modalCheck">
+            <input type="checkbox" id="modal22" class="modalCheck">
+            <input type="checkbox" id="modal23" class="modalCheck">
+            <input type="checkbox" id="modal24" class="modalCheck">
 
-    <div class="grade-title">
-        <h3 id="nomalGrade3" style="display: block">学部3年</h3>
-        <h3 id="englishGrade3" style="display: none">Third year of university</h3>
-        <h3 id="easyGrade3" style="display: none">3年生</h3>
-    </div>
-    <div id="works3">
-        <p id="nomalCom" style="display: block">＊学部3年次以降の授業は日野キャンパスでの開講となります。</p>
-        <p id="englishCom" style="display: none">＊Classes for the third year of the undergraduate program and beyond
-            will be held at the Hino Campus.</p>
+            <div class="wrapper">
+                <div class="mainVisual main13 flex center">
+                    <div class="btn"><label for="modal13"><img src="../image/iconB2/スペース_icon.png"
+                                title="space"></label>
+                    </div>
+                </div>
+                <div id="modal13Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal13" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal13" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover">
+                                    <img src="../image/workB2/スペース2.JPG" title="popupspace1">
+                                    <img src="../image/workB2/スペース3.jpg" title="popupspase2"></div>
+                                <h3>Basics of Spatial Design「Urban Garden Project」</h3>
+                                <div id="nomalm13" style="display: block;">
+                                    <h4>担当教員：ヴァールアダムス 准教授</h4>
 
-        <!-- checkbox 学部2年 -->
-        <input type="checkbox" id="modal25" class="modalCheck">
-        <input type="checkbox" id="modal26" class="modalCheck">
-        <input type="checkbox" id="modal27" class="modalCheck">
-        <input type="checkbox" id="modal28" class="modalCheck">
-        <input type="checkbox" id="modal29" class="modalCheck">
-        <input type="checkbox" id="modal30" class="modalCheck">
-        <input type="checkbox" id="modal31" class="modalCheck">
-        <input type="checkbox" id="modal32" class="modalCheck">
-        <input type="checkbox" id="modal33" class="modalCheck">
-        <input type="checkbox" id="modal34" class="modalCheck">
-        <input type="checkbox" id="modal35" class="modalCheck">
-        <input type="checkbox" id="modal36" class="modalCheck">
+                                </div>
+                                <div id="englishm13" style="display: none;">
+                                    <h4>Teacher：Associate Professor Verl Adams
+                                    </h4>
 
-        <div class="wrapper">
-            <div class="mainVisual main25 flex center">
-                <div class="btn"><label for="modal25"><img src="../image/iconB3/LIvingDesignB180122_icon.png" title="lid"></label></div>
-            </div>
-            <div id="modal25Con" class="modalWrap">
-                <div class="modalBg"><label for="modal25" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal25" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover"><img src="../image/workB3/LIvingDesignB180122.png" title="popuplib1"></div>
-                            <h3>リビングデザイン演習・実習「インテリアエレメントデザイン」</h3>
-                            <h4>担当教員：藤原敬介 教授</h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="mainVisual main26 flex center">
-                <div class="btn"><label for="modal26"><img src="../image/iconB3/スペース_icon.png" title="spe"></label>
+                <div class="mainVisual main14 flex center">
+                    <div class="btn"><label for="modal14"><img src="../image/iconB2/SpaceDesign1-2-1_icon.png"
+                                title="space2"></label></div>
                 </div>
-            </div>
-            <div id="modal26Con" class="modalWrap">
-                <div class="modalBg"><label for="modal26" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal26" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover">
-                                <img src="../image/workB3/スペース_ページ_01.jpg" title="popupspe1">
-                                <img src="../image/workB3/スペース_ページ_02.jpg" title="popupspe2">
-                                <img src="../image/workB3/スペース_ページ_04.jpg" title="popupspe3">
-                                <img src="../image/workB3/スペース_ページ_12.jpg" title="popupspe4"></div>
-                            <h3>スペースデザイン演習・実習</h3>
-                            <h4>担当教員：ヴァールアダムス 准教授</h4>
+                <div id="modal14Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal14" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal14" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover">
+                                    <img src="../image/workB2/SpaceDesign1-2-1.jpg" title="popupspace21">
+                                    <img src="../image/workB2/SpaceDesign.JPG" title="popupspase22"></div>
+                                <h3>Basics of Spatial Design「Urban Garden Project」</h3>
+                                <div id="nomalm13" style="display: block;">
+                                    <h4>担当教員：ヴァールアダムス 准教授</h4>
+                                    <h4>使用ソフト：SketchUp</h4>
+                                </div>
+                                <div id="englishm13" style="display: none;">
+                                    <h4>Teacher：Associate Professor Verl Adams
+                                    </h4>
+                                    <h4>Software：SketchUp</h4>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="mainVisual main27 flex center">
-                <div class="btn"><label for="modal27"><img src="../image/iconB3/ストラテジック_icon.png" title="str"></label>
+                <div class="mainVisual main15 flex center">
+                    <div class="btn"><label for="modal15"><img src="../image/iconB2/インテ_icon.png" title="inte"></label>
+                    </div>
                 </div>
-            </div>
-            <div id="modal27Con" class="modalWrap">
-                <div class="modalBg"><label for="modal27" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal27" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover">
-                                <img src="../image/workB3/ストラテジック.png" title="popupstr1"></div>
-                            <h3>ストラテジック・デザイン特別演習</h3>
-                            <h4>担当教員：山下敏男 先生</h4>
+                <div id="modal15Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal15" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal15" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover">
+                                    <img src="../image/workB2/インテ.jpg" title="popupinte"></div>
+                                <h3>リビングデザイン基礎 「紙の造作」</h3>
+                                <div id="nomalm13" style="display: block;">
+                                    <h4>担当教員：藤原敬介 教授</h4>
+                                </div>
+                                <div id="englishm13" style="display: none;">
+                                    <h4>Teacher：Professor Keisuke Fujiwara
+                                    </h4>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="mainVisual main28 flex center">
-                <div class="btn"><label for="modal28"><img src="../image/iconB3/イクイップメント_icon.png" title="kimb3"></label></div>
-            </div>
-            <div id="modal28Con" class="modalWrap">
-                <div class="modalBg"><label for="modal28" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal28" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover">
-                                <img src="../image/workB3/イクイップメント_1.jpg" title="popupeq1">
-                                <img src="../image/workB3/イクイップメント_2.jpg" title="popupeq2">
-                                <img src="../image/workB3/イクイップメント_3.jpg" title="popupeq3">
-                                <img src="../image/workB3/イクイップメント_4.jpg" title="popupeq4"></div>
-                            <h3>イクイップメントデザイン演習・実習</h3>
-                            <h4>担当教員：金石振 准教授</h4>
+                <div class="mainVisual main16 flex center">
+                    <div class="btn"><label for="modal16"><img src="../image/iconB2/トラポ_icon.png" title="tra"></label>
+                    </div>
+                </div>
+                <div id="modal16Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal16" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal16" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover">
+                                    <img src="../image/workB2/トラポ.png" title="popuptra"></div>
+                                <h3>トランスポーテーションデザイン基礎「パーソナルモビリティ」</h3>
+                                <h4>担当教員：難波治 教授</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="mainVisual main29 flex center">
-                <div class="btn"><label for="modal29"><img src="../image/iconB3/トラポ_icon.png" title="trab3"></label>
+                <div class="mainVisual main17 flex center">
+                    <div class="btn"><label for="modal17"><img src="../image/iconB2/人間工学_icon.png" title="hum"></label>
+                    </div>
                 </div>
-            </div>
-            <div id="modal29Con" class="modalWrap">
-                <div class="modalBg"><label for="modal29" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal29" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover">
-                                <img src="../image/workB3/トラポ.jpg" title="popuptrab3"></div>
-                            <h3>トランスポーテーションデザイン演習・実習</h3>
-                            <h4>担当教員：難波治 教授</h4>
+                <div id="modal17Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal17" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal17" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover">
+                                    <img src="../image/workB2/人間工学_1.jpg" title="popuphum1">
+                                    <img src="../image/workB2/人間工学_2.jpg" title="popuphum2">
+                                    <img src="../image/workB2/人間工学_3.jpg" title="popuphum3">
+                                    <img src="../image/workB2/人間工学_4.jpg" title="popuphum4"></div>
+                                <h3>人間工学基礎 「ユーザビリティ評価と製品開発プロセス」</h3>
+                                <h4>担当教員：笠松慶子 教授</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="mainVisual main30 flex center">
-                <div class="btn"><label for="modal30"><img src="../image/iconB3/yamijenga_icon.png" title="jenga"></label></div>
-            </div>
-            <div id="modal30Con" class="modalWrap">
-                <div class="modalBg"><label for="modal30" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal30" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover">
-                                <img src="../image/workB3/yamijenga.jpg" title="popupjenga1">
-                                <img src="../image/workB3/yamijenga_3.jpg" title="popupjenga2">
-                                <img src="../image/workB3/yamijenga_2.jpg" title="popupjenga3"></div>
-                            <h3>インタラクションデザイン演習・実習</h3>
-                            <h4>担当教員：馬場哲晃 准教授</h4>
-                            <h4>使用ソフト等：OpenFrameworks(C++)</h4>
+                <div class="mainVisual main18 flex center">
+                    <div class="btn"><label for="modal18"><img src="../image/iconB2/kim_icon.png" title="kim"></label>
+                    </div>
+                </div>
+                <div id="modal18Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal18" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal18" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover">
+                                    <img src="../image/workB2/kim.png" title="popupkim"></div>
+                                <h3>イクイップメントデザイン基礎 「製品デザイン」</h3>
+                                <h4>担当教員：金石振 准教授</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="mainVisual main31 flex center">
-                <div class="btn"><label for="modal31"><img src="../image/iconB3/インタラクティブ_icon.png" title="jenga"></label></div>
-            </div>
-            <div id="modal31Con" class="modalWrap">
-                <div class="modalBg"><label for="modal31" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal31" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover">
-                                <img src="../image/workB3/Kinect_1.png" title="popupinta1">
-                                <img src="../image/workB3/Kinect_2.jpg" title="popupinta2"></div>
-                            <h3>インタラクティブアート演習・実習</h3>
-                            <h4>担当教員：串山久美子 教授</h4>
-                            <h4>使用ソフト等：OpenFrameworks(C++)、Kinect、AfterEffects、Xcode</h4>
+                <div class="mainVisual main19 flex center">
+                    <div class="btn"><label for="modal19"><img src="../image/iconB2/プロトタイプ_icon.png"
+                                title="prt"></label>
+                    </div>
+                </div>
+                <div id="modal19Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal19" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal19" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover">
+                                    <img src="../image/workB2/プロトタイプ_1.png" title="popupprt1">
+                                    <img src="../image/workB2/プロトタイプ_2.png" title="popupprt2">
+                                    <img src="../image/workB2/プロトタイプ_3.png" title="popupprt3">
+                                    <img src="../image/workB2/プロトタイプ_4.png" title="popupprt4"></div>
+                                <h3>プロトタイピング基礎 「時計デザイン」</h3>
+                                <h4>担当教員：馬場哲晃 准教授</h4>
+                                <h4>使用ソフト：Processing</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="mainVisual main32 flex center">
-                <div class="btn"><label for="modal32"><img src="../image/iconB3/グラッフィック_icon.png" title="gra"></label>
+                <div class="mainVisual main20 flex center">
+                    <div class="btn"><label for="modal20"><img src="../image/iconB2/gra_icon.png" title="gra"></label>
+                    </div>
                 </div>
-            </div>
-            <div id="modal32Con" class="modalWrap">
-                <div class="modalBg"><label for="modal32" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal32" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover">
-                                <img src="../image/workB3/グラッフィック1.jpeg" title="popupgra1">
-                                <img src="../image/workB3/グラフィック.jpg" title="popupgra2"></div>
-                            <h3>グラフィックデザイン演習・実習「お香のパッケージデザイン」</h3>
-                            <h4>担当教員：菊竹雪 教授</h4>
-                            <h4>使用ソフト：Illustrator</h4>
+                <div id="modal20Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal20" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal20" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover">
+                                    <img src="../image/workB2/gra.jpg" title="popupgra1">
+                                    <img src="../image/workB2/gra_2.jpg" title="popupgra2"></div>
+                                <h3>グラフィックデザイン基礎「文庫本カバーデザイン / ステーショナリーデザイン」</h3>
+                                <h4>担当教員：菊竹雪 教授</h4>
+                                <h4>使用ソフト：Illustrator</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="mainVisual main33 flex center">
-                <div class="btn"><label for="modal33"><img src="../image/iconB3/net_icon.png" title="net2"></label>
+                <div class="mainVisual main21 flex center">
+                    <div class="btn"><label for="modal21"><img src="../image/iconB2/映像基礎_icon.png" title="mov"></label>
+                    </div>
                 </div>
-            </div>
-            <div id="modal33Con" class="modalWrap">
-                <div class="modalBg"><label for="modal33" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal33" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover">
-                                <img src="../image/workB3/net_1.png" title="popupnet1">
-                                <img src="../image/workB3/net_2.png" title="popupnet2">
-                                <img src="../image/workB3/net_3.png" title="popupnet3">
-                                <img src="../image/workB3/net_4.png" title="popupnet4">
-                                <img src="../image/workB3/net_5.png" title="popupnet5"></div>
-                            <h3>ネットワーク演習・実習</h3>
-                            <h4>担当教員：杉本達應 准教授、安藤大地 助教</h4>
-                            <h4>使用ソフト：Visual Studio Code(HTML、CSS、JavaScript)</h4>
+                <div id="modal21Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal21" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal21" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover">
+                                    <img src="../image/workB2/映像基礎.png" title="popupmov1"></div>
+                                <h3>映像基礎 「照明効果」</h3>
+                                <h4>担当教員：今間俊博 教授</h4>
+                                <h4>使用ソフト：Premiere、AfterEffects</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="mainVisual main34 flex center">
-                <div class="btn"><label for="modal34"><img src="../image/iconB3/maya_icon.png" title="maya"></label>
+                <div class="mainVisual main22 flex center">
+                    <div class="btn"><label for="modal22"><img src="../image/iconB2/役に立たない機械_icon.png"
+                                title="med"></label>
+                    </div>
                 </div>
-            </div>
-            <div id="modal34Con" class="modalWrap">
-                <div class="modalBg"><label for="modal34" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal34" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover">
-                                <img src="../image/workB3/maya_1.PNG" title="popupmaya1">
-                                <img src="../image/workB3/maya_2.PNG" title="popupmaya2"></div>
-                            <h3>映像演習・実習「モデリング、カメラワーク / PV」</h3>
-                            <h4>担当教員：今間俊博 教授</h4>
-                            <h4>使用ソフト：Maya、Premiere、AfterEffects</h4>
+                <div id="modal22Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal22" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal22" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover">
+                                    <img src="../image/workB2/役に立たない機械.jpg" title="popupmed1">
+                                    <img src="../image/workB2/役に立たない機械 5班_ページ_1.jpg" title="popupmed2">
+                                    <img src="../image/workB2/役に立たない機械 5班_ページ_2.jpg" title="popupmed3">
+                                    <img src="../image/workB2/役に立たない機械 5班_ページ_3.jpg" title="popupmed4">
+                                    <img src="../image/workB2/役に立たない機械 5班_ページ_5.jpg" title="popupmed5"></div>
+                                <h3>メディア表現概論 「役に立たない機械」</h3>
+                                <h4>担当教員：串山久美子 教授</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="mainVisual main35 flex center">
-                <div class="btn"><label for="modal35"><img src="../image/iconB3/mc_icon.png" title="mc"></label></div>
-            </div>
-            <div id="modal35Con" class="modalWrap">
-                <div class="modalBg"><label for="modal35" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal35" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover">
-                                <img src="../image/workB3/mc_1.PNG" title="popupmc1">
-                                <img src="../image/workB3/mc_2.PNG" title="popupmc2"></div>
-                            <h3>モーションキャプチャ演習</h3>
-                            <h4>担当教員：今間俊博 教授</h4>
-                            <h4>使用ソフト：Maya、MotionBuilder、Premiere、AfterEffects</h4>
+                <div class="mainVisual main23 flex center">
+                    <div class="btn"><label for="modal23"><img src="../image/iconB2/プロ基礎_icon.png" title="pb"></label>
+                    </div>
+                </div>
+                <div id="modal23Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal23" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal23" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover">
+                                    <img src="../image/workB2/プロ基礎.png" title="popuppb"></div>
+                                <h3>プログラミング基礎「オリジナルゲーム制作」</h3>
+                                <h4>担当教員：向井智彦 准教授</h4>
+                                <h4>使用ソフト：Unity (C#)、Visual Studio</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="mainVisual main36 flex center">
-                <div class="btn"><label for="modal36"><img src="../image/iconB3/エディティング_icon.png" title="ed"></label>
+                <div class="mainVisual main24 flex center">
+                    <div class="btn"><label for="modal24"><img src="../image/iconB2/web基礎_icon.png" title="wb"></label>
+                    </div>
                 </div>
-            </div>
-            <div id="modal36Con" class="modalWrap">
-                <div class="modalBg"><label for="modal36" class="closeModal"></label></div>
-                <div class="modalCon">
-                    <div class="modalInner">
-                        <div class="modalCloseBtn"><label for="modal36" class="closeModal">×</label></div>
-                        <div class="modalText">
-                            <div class="modalCover">
-                                <img src="../image/workB3/ed_1.PNG" title="popuped1">
-                                <img src="../image/workB3/ed_2.PNG" title="popuped2"></div>
-                            <h3>エディティング演習・実習</h3>
-                            <h4>担当教員：楠見清 准教授</h4>
-                            <h4>使用ソフト：</h4>
+                <div id="modal24Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal24" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal24" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover">
+                                    <img src="../image/workB2/web基礎.png" title="popuppb"></div>
+                                <h3>Web基礎 「コンテンツ制作」</h3>
+                                <h4>担当教員：安藤大地 助教</h4>
+                                <h4>使用ソフト等：atom(HTML、CSS、JavaScript)、Illustrator</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
-
-
         </div>
-    </div>
 
-    <a href="../index.html" title="returnIndex">
-        <p id="nomalReturn" style="display: block">TOPへもどる</p>
-        <p id="englishReturn" style="display: none">Return to Top</p>
-    </a>
+        <div class="grade-title">
+            <h3 id="nomalGrade3" style="display: block">学部3年</h3>
+            <h3 id="englishGrade3" style="display: none">Third year of university</h3>
+            <h3 id="easyGrade3" style="display: none">3年生</h3>
+        </div>
+        <div id="works3">
+            <p id="nomalCom" style="display: block">＊学部3年次以降の授業は日野キャンパスでの開講となります。</p>
+            <p id="englishCom" style="display: none">＊Classes for the third year of the undergraduate program and beyond
+                will be held at the Hino Campus.</p>
+            <p id="easyCom" style="display: none">
+                ＊3<ruby>
+                    <rb>年生</rb>
+                    <rt>ねんせい</rt>
+                </ruby>からの<ruby>
+                    <rb>授業</rb>
+                    <rt>じゅぎょう</rt>
+                </ruby>は<ruby>
+                    <rb>日野</rb>
+                    <rt>ひの</rt>
+                </ruby>キャンパスでやります。
+            </p>
 
-    <footer>
-        <p>東京都立大学</p>
-        <p>Tokyo Metropolitan University</p>
-    </footer>
+            <!-- checkbox 学部3年 -->
+            <input type="checkbox" id="modal25" class="modalCheck">
+            <input type="checkbox" id="modal26" class="modalCheck">
+            <input type="checkbox" id="modal27" class="modalCheck">
+            <input type="checkbox" id="modal28" class="modalCheck">
+            <input type="checkbox" id="modal29" class="modalCheck">
+            <input type="checkbox" id="modal30" class="modalCheck">
+            <input type="checkbox" id="modal31" class="modalCheck">
+            <input type="checkbox" id="modal32" class="modalCheck">
+            <input type="checkbox" id="modal33" class="modalCheck">
+            <input type="checkbox" id="modal34" class="modalCheck">
+            <input type="checkbox" id="modal35" class="modalCheck">
+            <input type="checkbox" id="modal36" class="modalCheck">
 
-    <script src="../js/work.js"></script>
+            <div class="wrapper">
+                <div class="mainVisual main25 flex center">
+                    <div class="btn"><label for="modal25"><img src="../image/iconB3/LIvingDesignB180122_icon.png"
+                                title="lid"></label></div>
+                </div>
+                <div id="modal25Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal25" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal25" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover"><img src="../image/workB3/LIvingDesignB180122.png"
+                                        title="popuplib1"></div>
+                                <h3>リビングデザイン演習・実習「インテリアエレメントデザイン」</h3>
+                                <h4>担当教員：藤原敬介 教授</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mainVisual main26 flex center">
+                    <div class="btn"><label for="modal26"><img src="../image/iconB3/スペース_icon.png" title="spe"></label>
+                    </div>
+                </div>
+                <div id="modal26Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal26" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal26" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover">
+                                    <img src="../image/workB3/スペース_ページ_01.jpg" title="popupspe1">
+                                    <img src="../image/workB3/スペース_ページ_02.jpg" title="popupspe2">
+                                    <img src="../image/workB3/スペース_ページ_04.jpg" title="popupspe3">
+                                    <img src="../image/workB3/スペース_ページ_12.jpg" title="popupspe4"></div>
+                                <h3>スペースデザイン演習・実習</h3>
+                                <h4>担当教員：ヴァールアダムス 准教授</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mainVisual main27 flex center">
+                    <div class="btn"><label for="modal27"><img src="../image/iconB3/ストラテジック_icon.png"
+                                title="str"></label>
+                    </div>
+                </div>
+                <div id="modal27Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal27" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal27" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover">
+                                    <img src="../image/workB3/ストラテジック.png" title="popupstr1"></div>
+                                <h3>ストラテジック・デザイン特別演習</h3>
+                                <h4>担当教員：山下敏男 先生</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mainVisual main28 flex center">
+                    <div class="btn"><label for="modal28"><img src="../image/iconB3/イクイップメント_icon.png"
+                                title="kimb3"></label></div>
+                </div>
+                <div id="modal28Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal28" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal28" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover">
+                                    <img src="../image/workB3/イクイップメント_1.jpg" title="popupeq1">
+                                    <img src="../image/workB3/イクイップメント_2.jpg" title="popupeq2">
+                                    <img src="../image/workB3/イクイップメント_3.jpg" title="popupeq3">
+                                    <img src="../image/workB3/イクイップメント_4.jpg" title="popupeq4"></div>
+                                <h3>イクイップメントデザイン演習・実習</h3>
+                                <h4>担当教員：金石振 准教授</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mainVisual main29 flex center">
+                    <div class="btn"><label for="modal29"><img src="../image/iconB3/トラポ_icon.png" title="trab3"></label>
+                    </div>
+                </div>
+                <div id="modal29Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal29" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal29" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover">
+                                    <img src="../image/workB3/トラポ.jpg" title="popuptrab3"></div>
+                                <h3>トランスポーテーションデザイン演習・実習</h3>
+                                <h4>担当教員：難波治 教授</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mainVisual main30 flex center">
+                    <div class="btn"><label for="modal30"><img src="../image/iconB3/yamijenga_icon.png"
+                                title="jenga"></label></div>
+                </div>
+                <div id="modal30Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal30" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal30" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover">
+                                    <img src="../image/workB3/yamijenga.jpg" title="popupjenga1">
+                                    <img src="../image/workB3/yamijenga_3.jpg" title="popupjenga2">
+                                    <img src="../image/workB3/yamijenga_2.jpg" title="popupjenga3"></div>
+                                <h3>インタラクションデザイン演習・実習</h3>
+                                <h4>担当教員：馬場哲晃 准教授</h4>
+                                <h4>使用ソフト等：OpenFrameworks(C++)</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mainVisual main31 flex center">
+                    <div class="btn"><label for="modal31"><img src="../image/iconB3/インタラクティブ_icon.png"
+                                title="jenga"></label></div>
+                </div>
+                <div id="modal31Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal31" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal31" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover">
+                                    <img src="../image/workB3/Kinect_1.png" title="popupinta1">
+                                    <img src="../image/workB3/Kinect_2.jpg" title="popupinta2"></div>
+                                <h3>インタラクティブアート演習・実習</h3>
+                                <h4>担当教員：串山久美子 教授</h4>
+                                <h4>使用ソフト等：OpenFrameworks(C++)、Kinect、AfterEffects、Xcode</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mainVisual main32 flex center">
+                    <div class="btn"><label for="modal32"><img src="../image/iconB3/グラッフィック_icon.png"
+                                title="gra"></label>
+                    </div>
+                </div>
+                <div id="modal32Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal32" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal32" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover">
+                                    <img src="../image/workB3/グラッフィック1.jpeg" title="popupgra1">
+                                    <img src="../image/workB3/グラフィック.jpg" title="popupgra2"></div>
+                                <h3>グラフィックデザイン演習・実習「お香のパッケージデザイン」</h3>
+                                <h4>担当教員：菊竹雪 教授</h4>
+                                <h4>使用ソフト：Illustrator</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mainVisual main33 flex center">
+                    <div class="btn"><label for="modal33"><img src="../image/iconB3/net_icon.png" title="net2"></label>
+                    </div>
+                </div>
+                <div id="modal33Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal33" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal33" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover">
+                                    <img src="../image/workB3/net_1.png" title="popupnet1">
+                                    <img src="../image/workB3/net_2.png" title="popupnet2">
+                                    <img src="../image/workB3/net_3.png" title="popupnet3">
+                                    <img src="../image/workB3/net_4.png" title="popupnet4">
+                                    <img src="../image/workB3/net_5.png" title="popupnet5"></div>
+                                <h3>ネットワーク演習・実習</h3>
+                                <h4>担当教員：杉本達應 准教授、安藤大地 助教</h4>
+                                <h4>使用ソフト：Visual Studio Code(HTML、CSS、JavaScript)</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mainVisual main34 flex center">
+                    <div class="btn"><label for="modal34"><img src="../image/iconB3/maya_icon.png" title="maya"></label>
+                    </div>
+                </div>
+                <div id="modal34Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal34" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal34" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover">
+                                    <img src="../image/workB3/maya_1.PNG" title="popupmaya1">
+                                    <img src="../image/workB3/maya_2.PNG" title="popupmaya2"></div>
+                                <h3>映像演習・実習「モデリング、カメラワーク / PV」</h3>
+                                <h4>担当教員：今間俊博 教授</h4>
+                                <h4>使用ソフト：Maya、Premiere、AfterEffects</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mainVisual main35 flex center">
+                    <div class="btn"><label for="modal35"><img src="../image/iconB3/mc_icon.png" title="mc"></label>
+                    </div>
+                </div>
+                <div id="modal35Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal35" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal35" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover">
+                                    <img src="../image/workB3/mc_1.PNG" title="popupmc1">
+                                    <img src="../image/workB3/mc_2.PNG" title="popupmc2"></div>
+                                <h3>モーションキャプチャ演習</h3>
+                                <h4>担当教員：今間俊博 教授</h4>
+                                <h4>使用ソフト：Maya、MotionBuilder、Premiere、AfterEffects</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mainVisual main36 flex center">
+                    <div class="btn"><label for="modal36"><img src="../image/iconB3/エディ_icon.png" title="ed"></label>
+                    </div>
+                </div>
+                <div id="modal36Con" class="modalWrap">
+                    <div class="modalBg"><label for="modal36" class="closeModal"></label></div>
+                    <div class="modalCon">
+                        <div class="modalInner">
+                            <div class="modalCloseBtn"><label for="modal36" class="closeModal">×</label></div>
+                            <div class="modalText">
+                                <div class="modalCover">
+                                    <img src="../image/workB3/エディ.JPG" title="popuped1">
+                                </div>
+                                <h3>エディティング演習・実習</h3>
+                                <h4>担当教員：楠見清 准教授</h4>
+                                <h4>使用ソフト：Illustrator、InDesign、Photoshop</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <a href="../index.html" title="returnIndex">
+            <p id="nomalReturn" style="display: block">TOPへもどる</p>
+            <p id="englishReturn" style="display: none">Return to Top</p>
+        </a>
+
+        <footer>
+            <p>東京都立大学</p>
+            <p>Tokyo Metropolitan University</p>
+        </footer>
+
+        <script src="../js/work.js"></script>
 
 </body>
 

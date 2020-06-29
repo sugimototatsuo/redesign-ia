@@ -176,19 +176,7 @@ p.studio-title-top{
         color:#000;
     }
 
-    .studio-list-item > a:link {
-        color: #828282;
-      }
-      .studio-list-item > a:visited {
-        color:#828282;
-      }
-      .studio-list-item > a:hover {
-        color:#000;
-        cursor: pointer;
-      }
-      .studio-list-item > a:active {
-        color:#C4C4C4;
-      }
+
 
        /*コア名の下に線を引く*/
       p.core-underLine{
@@ -208,17 +196,7 @@ p.studio-title-top{
     a.faculty-link {
       font-weight: 600;
       font-size:12pt;
-      color: #828282;
+
   }
-    a.faculty-linka:visited {
-      color:#828282;
-    }
-    a.faculty-link:hover {
-      color:#000;
-      cursor: pointer;
-    }
-    a.faculty-link:active {
-      color:#C4C4C4;
-    }
 
 

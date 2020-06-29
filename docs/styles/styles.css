@@ -70,11 +70,26 @@
      a { 
          text-decoration: none ;
          cursor: pointer;
-
      }
  
+     a:link {
+      color: #828282;
+    }
+     a:visited {
+      color:#828282;
+    }
+     a:hover {
+      color:#000;
+      cursor: pointer;
+    }
+     a:active {
+      color:#C4C4C4;
+    }
 
-     
+/*ボタンのスタイルだけリンクが白なので*/
+     .moreButton > a.btn-flat-simple {
+      color: #fff;
+     }
        .btn-flat-simple {
          position: relative;
          display: inline-block;
@@ -119,20 +134,27 @@
      letter-spacing: 0.8px;
      margin: 30px 0 0 0;
      padding: 40px 0 0 0;
-     color: #777; }
+     color: #828282; 
+    }
      footer p.sd {
        font-size:8pt;
-       margin-bottom: 13px; }
+       margin-bottom: 13px; 
+      }
      footer p.ja {
-       font-size:8pt; }
+       font-size:8pt; 
+      }
      footer a {
-       text-decoration: none; }
+       text-decoration: none; 
+      }
        footer a.sd {
-        font-size:8pt; }
+        font-size:8pt;
+       }
          footer a.sd:visited {
-           color: #828282; }
+           color: #828282; 
+          }
          footer a.sd:link {
-           color: #828282; }
+           color: #828282; 
+          }
  
   .float-clear{
      clear:both;
@@ -171,29 +193,19 @@
 .nav-list-item >a.here{
   color:#000;
 }
-header a:link {
-  color: #828282;
-}
-header a:visited {
-  color:#828282;
-}
-header a:hover {
-  color:#000;
-  cursor: pointer;
-}
-header a:active {
-  color:#C4C4C4;
-}
+ 
 
-#language-text{
-  font-size:16px;
-  margin-right:12px;
-}
- .language{
+
+.language{
   margin:20px 0px 0 0;
    text-align: right;
    color: #828282;
  }
+#language-text{
+  font-size:16px;
+  margin-right:12px;
+}
+
  .language>a.here{
   color:#000;
  }
@@ -201,17 +213,9 @@ header a:active {
  .language>a{
   margin: 0 4px;
   font-size: 20px;
-  color: #828282;
+
  }
 
-
- .language>a:hover {
-  color:#000;
-  cursor: pointer;
-}
-.language>a:active {
-  color:#C4C4C4;
-}
 
    /*header意外を取り囲む*/
  

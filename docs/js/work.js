@@ -1,6 +1,13 @@
 var url = location.href;
 var langMode = 0;
 
+var showloading = document.getElementById('showloading');
+var contents = document.getElementById('mainContent');
+window.addEventListener('load', function () {
+    showloading.style.display = 'none';
+    contents.classList.remove('hidden');
+});
+
 window.onload = function () {
     var langBotton = document.getElementById("button");
     var langBotton2 = document.getElementById("button2");
@@ -25,7 +32,6 @@ window.onload = function () {
             document.getElementById('easyGrade' + (i + 1).toString()).style.display = "none";
             document.getElementById('englishGrade' + (i + 1).toString()).style.display = "block";
         }
-
 
         document.getElementById('nomalButton').style.display = "none";
         document.getElementById('englishButton').style.display = "block";
@@ -53,6 +59,11 @@ window.onload = function () {
 
         document.getElementById('nomalReturn').style.display = "none";
         document.getElementById('englishReturn').style.display = "block";
+
+        for (var i = 0; i <= 35; i++) {
+            document.getElementById('nomalm' + (i + 1).toString()).style.display = "none";
+            document.getElementById('englishm' + (i + 1).toString()).style.display = "block";
+        }
     }
     else if (document.URL.match("/?lang=2")) {
         langMode = 2;
@@ -98,6 +109,11 @@ window.onload = function () {
 
         document.getElementById('nomalReturn').style.display = "block";
         document.getElementById('englishReturn').style.display = "none";
+
+        for (var i = 0; i <= 35; i++) {
+            document.getElementById('nomalm' + (i + 1).toString()).style.display = "block";
+            document.getElementById('englishm' + (i + 1).toString()).style.display = "none";
+        }
     }
 };
 
@@ -126,7 +142,6 @@ document.getElementById("button").onclick = function () {
             document.getElementById('englishGrade' + (i + 1).toString()).style.display = "block";
         }
 
-
         document.getElementById('nomalButton').style.display = "none";
         document.getElementById('englishButton').style.display = "block";
         document.getElementById('nomalButton2').style.display = "block";
@@ -153,6 +168,11 @@ document.getElementById("button").onclick = function () {
         document.getElementById('nomalCom').style.display = "none";
         document.getElementById('englishCom').style.display = "block";
         document.getElementById('easyCom').style.display = "none";
+
+        for (var i = 0; i <= 35; i++) {
+            document.getElementById('nomalm' + (i + 1).toString()).style.display = "none";
+            document.getElementById('englishm' + (i + 1).toString()).style.display = "block";
+        }
 
         document.getElementById('nomalReturn').style.display = "none";
         document.getElementById('englishReturn').style.display = "block";
@@ -203,6 +223,11 @@ document.getElementById("button").onclick = function () {
 
         document.getElementById('nomalReturn').style.display = "block";
         document.getElementById('englishReturn').style.display = "none";
+
+        for (var i = 0; i <= 35; i++) {
+            document.getElementById('nomalm' + (i + 1).toString()).style.display = "block";
+            document.getElementById('englishm' + (i + 1).toString()).style.display = "none";
+        }
 
     }
 
@@ -278,6 +303,11 @@ document.getElementById("button2").onclick = function () {
         document.getElementById('nomalReturn').style.display = "block";
         document.getElementById('englishReturn').style.display = "none";
 
+        for (var i = 0; i <= 35; i++) {
+            document.getElementById('nomalm' + (i + 1).toString()).style.display = "block";
+            document.getElementById('englishm' + (i + 1).toString()).style.display = "none";
+        }
+
 
     } else if (langBottonClass2 == "close") {
         langMode = 0;
@@ -323,6 +353,11 @@ document.getElementById("button2").onclick = function () {
 
         document.getElementById('nomalReturn').style.display = "block";
         document.getElementById('englishReturn').style.display = "none";
+
+        for (var i = 0; i <= 35; i++) {
+            document.getElementById('nomalm' + (i + 1).toString()).style.display = "block";
+            document.getElementById('englishm' + (i + 1).toString()).style.display = "none";
+        }
 
     }
 };

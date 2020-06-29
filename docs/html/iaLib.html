@@ -7,9 +7,14 @@
     <!-- <link rel="stylesheet" href="../styles/styles.css"> -->
     <link rel="stylesheet" href="../sass/reset.css">
     <link rel="stylesheet" href="../sass/iaLib.css">
+    <link rel="shortcut icon" href="../image/mark.ico">
 </head>
 
 <body>
+    <div id="showloading">
+        <img src="../image/loading.gif" alt="loading">
+    </div>
+
     <header>
         <div class="left_h">
             <nav>
@@ -120,16 +125,51 @@
 
     <div style="height: 80px;"></div>
 
+    <div id="mainContent" class="hidden">
+        <div class="main-visual"></div>
 
-    <div class="main-visual"></div>
+        <div class="first-text">
+            <div id="nomalf" style="display: block">
+                <h3>インダスみんなの図書とは？</h3>
+                <h5>インダストリアルアート学科の先生方のおすすめの本を掲載しています。<br>
+                    <a href="https://twitter.com/ia_sd_tmu" target="_blank">SNS</a>でも定期的に推薦図書を発信しています。</h5>
+            </div>
+            <div id="englishf" style="display: none">
+                <h3>What is "インダスみんなの図書"？</h3>
+                <h5>The following books are recommended by the Industrial Arts Department faculty.<br>
+                    We also regularly send out book recommendations on <a href="https://twitter.com/ia_sd_tmu"
+                        target="_blank">SNS</a>.</h5>
+            </div>
+            <div id="easyf" style="display: block">
+                <h3>インダスみんなの<ruby>
+                        <rb>図書</rb>
+                        <rt>としょ</rt>
+                    </ruby>って？</h3>
+                <h5>インダストリアルアート<ruby>
+                        <rb>学科</rb>
+                        <rt>がっか</rt>
+                    </ruby>の<ruby>
+                        <rb>先生</rb>
+                        <rt>せんせい</rt>
+                    </ruby>のおすすめの<ruby>
+                        <rb>本</rb>
+                        <rt>ほん</rt>
+                    </ruby>です。<br>
+                    <a href="https://twitter.com/ia_sd_tmu" target="_blank">SNS</a>でも<ruby>
+                        <rb>定期的</rb>
+                        <rt>ていきてき</rt>
+                    </ruby>におすすめの<ruby>
+                        <rb>本</rb>
+                        <rt>ほん</rt>
+                    </ruby>を<ruby>
+                        <rb>発信</rb>
+                        <rt>はっしん</rt>
+                    </ruby>しています。</h5>
+            </div>
+        </div>
 
-    <div class="first-text">
-        <h3>インダスみんなの図書とは？</h3>
-        <h5>インダストリアルアート学科の先生方のおすすめの本を掲載しています。<br>
-            SNSでも定期的に推薦図書を発信しています。</h5>
+        <div id="book"></div>
     </div>
-
-    <div id="book"></div>
 
     <a href="../index.html" title="returnIndex">
         <p id="nomalReturn" style="display: block">トップへもどる</p>

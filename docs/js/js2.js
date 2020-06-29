@@ -30,13 +30,18 @@ const renderJson = (json) => {
             location.href = studios['name-short'].toString() + ".html" + langControll;
         };
         nomalStudioImage.src = "../image/" + studios['name-short'].toString() + ".png";
+        if (document.URL.match(studios['name-short'].toString())) {
+            nomalStudioDiv.style.border = "solid 3px #0000c0";
+        }
         //nomalStudioLink.textContent = studios['name-ja'];
         //nomalStudioImage.src = studios['photo1'];
 
         const englishStudioDiv = document.createElement('div');
         const englishStudioLink = document.createElement("a");
         const englishStudioImage = document.createElement("img");
-
+        if (document.URL.match(studios['name-short'].toString())) {
+            englishStudioDiv.style.border = "solid 3px #0000c0";
+        }
         //リンクと画像にクラス名（英語版サイト）。でもこれ英語と日本語で分けなくても良かったかも。
         englishStudioLink.className = 'studio-link-en';
         englishStudioImage.className = 'studio-image-en'

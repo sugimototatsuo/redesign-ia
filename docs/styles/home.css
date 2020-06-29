@@ -134,3 +134,50 @@
      margin:0 auto;
  }
  
+
+
+
+
+
+ /*------------ローディングアニメーション-------*/
+ .loadingContainer{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  -webkit-transition: all 2.2s ease; /* 1.2秒でフェードアウト */
+          transition: all 2.2s ease;
+  color: #fff; /* ローディングアニメーションカラー */
+  background-color: #fff; /* 背景カラー */
+}
+
+
+
+
+/* ローディング表示を消すための定義 */
+.loadingContainer.loaded{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+}
+
+
+
+
+
+/* ローディングアニメーション 中央揃えに*/
+.loadPosition {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  width: 520px;
+  height:520px;
+}
+ 
+

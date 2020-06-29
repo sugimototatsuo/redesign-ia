@@ -26,9 +26,15 @@
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
 
+    <script src="js/lottie.min.js"></script>
   </head>
 
 <body>
+  <div id="loading" class="loadingContainer">
+    <!-- type1 〜 type8 はお好みで -->
+    <div class="loadPosition" id="loadingAnime">
+    </div>
+  </div>
   <main>
     <div class="head-wrapper">
       <header>
@@ -212,7 +218,7 @@
 
 
   <!--最後にJSの読み込み　getElementとかCreateとかしてるから最後じゃないとまずいの-->
-  <script src=" js/lottie.min.js"></script>
+
 
   <script src="js/home.js"></script>
 

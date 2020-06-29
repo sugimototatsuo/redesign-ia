@@ -94,11 +94,38 @@
                 </ul>
             </nav>
         </div>
+
         <div class="right_h">
-            <a href="https://www.tmu.ac.jp/entrance/faculty/application_guidebook.html" target="_blank">資料請求</a>
-            <a href="#">言語</a>
+
+            <label for="type1" class="lang">
+                <p id="nomalLang" style="display: block">言語</p>
+                <p id="englishLang" style="display: none">Lang</p>
+                <p id="easyLang" style="display: none">ことば</p>
+            </label>
+            <input type="checkbox" id="type1" class="accordion">
+            <ul id="links1">
+                <li id="button" class="open">
+                    <p id="nomalButton" style="display: block">English</p>
+                    <p id="englishButton" style="display: none">Undo</p>
+                </li>
+                <li><button id="button2" class="open">
+                        <p id="nomalButton2" style="display: block">やさしい<br>にほんご</p>
+                        <p id="easyButton2" style="display: none">もとに もどす</p>
+                    </button></li>
+            </ul>
+            <label for="type2">
+                <a href="https://www.tmu.ac.jp/entrance/faculty/application_guidebook.html" target="_blank">
+                    <p id="nomalRec" style="display: block">資料</p>
+                    <p id="englishRec" style="display: none">Info</p>
+                    <p id="easyRec" style="display: none"><ruby>
+                            <rb>資料</rb>
+                            <rt>しりょう</rt>
+                        </ruby>
+                </a></label>
+            <input type="checkbox" id="type2" class="accordion">
         </div>
     </header>
+    <div style="height: 80px;"></div>
 
     <button id="button" class="open">
         <p id="nomalButton" style="display: block">English</p>

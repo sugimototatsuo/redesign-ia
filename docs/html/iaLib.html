@@ -14,71 +14,71 @@
         <div class="left_h">
             <nav>
                 <ul>
-                    <li><a href="#aboutus">
+                    <li><a id="head-aboutus">
                             <h3 id="nomalSubtitle1" style="display: block">学科概要</h3>
                             <h3 id="easySubtitle1" style="display: none">この<ruby>
-                              <rb>学科</rb>
-                              <rt>がっか</rt>
-                            </ruby>について</h3>
+                                    <rb>学科</rb>
+                                    <rt>がっか</rt>
+                                </ruby>について</h3>
                             <h3 id="englishSubtitle1" style="display: none">Summary</h3>
                         </a></li>
-                    <li><a href="#works">
+                    <li><a id="head-work">
                             <h3 id="nomalSubtitle2" style="display: block">作品</h3>
                             <h3 id="easySubtitle2" style="display: none"><ruby>
-                              <rb>作品</rb>
-                              <rt>さくひん</rt>
-                            </ruby></h3>
+                                    <rb>作品</rb>
+                                    <rt>さくひん</rt>
+                                </ruby></h3>
                             <h3 id="englishSubtitle2" style="display: none">Works</h3>
                         </a></li>
-                    <li><a href="#curriculum">
+                    <li><a id="head-curriculm">
                             <h3 id="nomalSubtitle3" style="display: block">カリキュラム</h3>
                             <h3 id="easySubtitle3" style="display: none">カリキュラム</h3>
                             <h3 id="englishSubtitle3" style="display: none">Curriculum</h3>
                         </a></li>
-                    <li><a href="#studios">
+                    <li><a id="head-studios">
                             <h3 id="nomalSubtitle4" style="display: block">スタジオ紹介</h3>
                             <h3 id="easySubtitle4" style="display: none">スタジオ<ruby>
-                              <rb>紹介</rb>
-                              <rt>しょうかい</rt>
-                            </ruby></h3>
+                                    <rb>紹介</rb>
+                                    <rt>しょうかい</rt>
+                                </ruby></h3>
                             <h3 id="englishSubtitle4" style="display: none">Studios</h3>
                         </a></li>
-                    <li><a href="#faculty">
+                    <li><a id="head-faculty">
                             <h3 id="nomalSubtitle5" style="display: block">教員紹介</h3>
                             <h3 id="easySubtitle5" style="display: none"><ruby>
-                              <rb>先生</rb>
-                              <rt>せんせい</rt>
-                            </ruby>の<ruby>
-                              <rb>紹介</rb>
-                              <rt>しょうかい</rt>
-                            </ruby></h3>
+                                    <rb>先生</rb>
+                                    <rt>せんせい</rt>
+                                </ruby>の<ruby>
+                                    <rb>紹介</rb>
+                                    <rt>しょうかい</rt>
+                                </ruby></h3>
                             <h3 id="englishSubtitle5" style="display: none">Faculty</h3>
                         </a></li>
-                    <li><a href="#column">
+                    <li><a id="head-column">
                             <h3 id="nomalSubtitle9" style="display: block">関連コンテンツ</h3>
                             <h3 id="easySubtitle9" style="display: none"><ruby>
-                              <rb>関連</rb>
-                              <rt>かんれん</rt>
-                            </ruby>コンテンツ</h3>
+                                    <rb>関連</rb>
+                                    <rt>かんれん</rt>
+                                </ruby>コンテンツ</h3>
                             <h3 id="englishSubtitle9" style="display: none">Column</h3>
                         </a></li>
-                    <li><a href="#admission">
+                    <li><a id="head-admission">
                             <h3 id="nomalSubtitle6" style="display: block">入試案内</h3>
                             <h3 id="easySubtitle6" style="display: none"><ruby>
-                              <rb>入学試験</rb>
-                              <rt>にゅうがくしけん</rt>
-                            </ruby>について</h3>
+                                    <rb>入学試験</rb>
+                                    <rt>にゅうがくしけん</rt>
+                                </ruby>について</h3>
                             <h3 id="englishSubtitle6" style="display: none">Admission</h3>
                         </a></li>
-                    <li><a href="#question">
+                    <li><a id="head-question">
                             <h3 id="nomalSubtitle7" style="display: block">よくある質問</h3>
                             <h3 id="easySubtitle7" style="display: none">よくある<ruby>
-                              <rb>質問</rb>
-                              <rt>しつもん</rt>
-                            </ruby></h3>
+                                    <rb>質問</rb>
+                                    <rt>しつもん</rt>
+                                </ruby></h3>
                             <h3 id="englishSubtitle7" style="display: none">Q&A</h3>
                         </a></li>
-                    <li><a href="#access">
+                    <li><a id="head-access">
                             <h3 id="nomalSubtitle8" style="display: block">アクセス</h3>
                             <h3 id="easySubtitle8" style="display: none">アクセス</h3>
                             <h3 id="englishSubtitle8" style="display: none">Access</h3>
@@ -89,7 +89,11 @@
 
         <div class="right_h">
 
-            <label for="type1" class="lang">言語</label>
+            <label for="type1" class="lang">
+                <p id="nomalLang" style="display: block">言語</p>
+                <p id="englishLang" style="display: none">Lang</p>
+                <p id="easyLang" style="display: none">ことば</p>
+            </label>
             <input type="checkbox" id="type1" class="accordion">
             <ul id="links1">
                 <li id="button" class="open">
@@ -101,14 +105,20 @@
                         <p id="easyButton2" style="display: none">もとに もどす</p>
                     </button></li>
             </ul>
-            <label for="type2">資料</label>
+            <label for="type2">
+                <a href="https://www.tmu.ac.jp/entrance/faculty/application_guidebook.html" target="_blank">
+                    <p id="nomalRec" style="display: block">資料</p>
+                    <p id="englishRec" style="display: none">Info</p>
+                    <p id="easyRec" style="display: none"><ruby>
+                            <rb>資料</rb>
+                            <rt>しりょう</rt>
+                        </ruby>
+                </a></label>
             <input type="checkbox" id="type2" class="accordion">
         </div>
     </header>
 
-
     <div style="height: 80px;"></div>
-
 
 
     <div class="main-visual"></div>

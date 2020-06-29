@@ -86,6 +86,14 @@ window.onload = function () {
         document.getElementById('nomalButton2').style.display = "block";
         document.getElementById('easyButton2').style.display = "none";
 
+        document.getElementById('nomalRec').style.display = "none";
+        document.getElementById('englishRec').style.display = "block";
+        document.getElementById('easyRec').style.display = "none";
+        document.getElementById('nomalLang').style.display = "none";
+        document.getElementById('englishLang').style.display = "block";
+        document.getElementById('easyLang').style.display = "none";
+
+
         document.getElementById('nomalTitle').style.display = "none";
         document.getElementById('englishTitle').style.display = "block";
         document.getElementById('easyTitle').style.display = "none";
@@ -127,6 +135,14 @@ window.onload = function () {
         document.getElementById('englishButton').style.display = "none";
         document.getElementById('nomalButton2').style.display = "none";
         document.getElementById('easyButton2').style.display = "block";
+
+        document.getElementById('nomalRec').style.display = "none";
+        document.getElementById('englishRec').style.display = "none";
+        document.getElementById('easyRec').style.display = "block";
+        document.getElementById('nomalLang').style.display = "none";
+        document.getElementById('englishLang').style.display = "none";
+        document.getElementById('easyLang').style.display = "block";
+
 
         document.getElementById('nomalTitle').style.display = "none";
         document.getElementById('englishTitle').style.display = "none";
@@ -181,6 +197,14 @@ document.getElementById("button").onclick = function () {
         document.getElementById('nomalButton2').style.display = "block";
         document.getElementById('easyButton2').style.display = "none";
 
+        document.getElementById('nomalRec').style.display = "none";
+        document.getElementById('englishRec').style.display = "block";
+        document.getElementById('easyRec').style.display = "none";
+        document.getElementById('nomalLang').style.display = "none";
+        document.getElementById('englishLang').style.display = "block";
+        document.getElementById('easyLang').style.display = "none";
+
+
         document.getElementById('nomalTitle').style.display = "none";
         document.getElementById('englishTitle').style.display = "block";
         document.getElementById('easyTitle').style.display = "none";
@@ -222,6 +246,13 @@ document.getElementById("button").onclick = function () {
         document.getElementById('englishButton').style.display = "none";
         document.getElementById('nomalButton2').style.display = "block";
         document.getElementById('easyButton2').style.display = "none";
+
+        document.getElementById('nomalRec').style.display = "block";
+        document.getElementById('englishRec').style.display = "none";
+        document.getElementById('easyRec').style.display = "none";
+        document.getElementById('nomalLang').style.display = "block";
+        document.getElementById('englishLang').style.display = "none";
+        document.getElementById('easyLang').style.display = "none";
 
         document.getElementById('nomalTitle').style.display = "block";
         document.getElementById('englishTitle').style.display = "none";
@@ -271,6 +302,13 @@ document.getElementById("button2").onclick = function () {
         document.getElementById('nomalButton2').style.display = "none";
         document.getElementById('easyButton2').style.display = "block";
 
+        document.getElementById('nomalRec').style.display = "none";
+        document.getElementById('englishRec').style.display = "none";
+        document.getElementById('easyRec').style.display = "block";
+        document.getElementById('nomalLang').style.display = "none";
+        document.getElementById('englishLang').style.display = "none";
+        document.getElementById('easyLang').style.display = "block";
+
         document.getElementById('nomalTitle').style.display = "none";
         document.getElementById('englishTitle').style.display = "none";
         document.getElementById('easyTitle').style.display = "block";
@@ -311,6 +349,13 @@ document.getElementById("button2").onclick = function () {
         document.getElementById('englishButton').style.display = "none";
         document.getElementById('nomalButton2').style.display = "block";
         document.getElementById('easyButton2').style.display = "none";
+
+        document.getElementById('nomalRec').style.display = "block";
+        document.getElementById('englishRec').style.display = "none";
+        document.getElementById('easyRec').style.display = "none";
+        document.getElementById('nomalLang').style.display = "block";
+        document.getElementById('englishLang').style.display = "none";
+        document.getElementById('easyLang').style.display = "none";
 
         document.getElementById('nomalTitle').style.display = "block";
         document.getElementById('englishTitle').style.display = "none";

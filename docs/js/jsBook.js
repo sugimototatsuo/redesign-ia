@@ -6,6 +6,12 @@ const sheet = 'group4-book';
 const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 //const endpoint2 = `${uri}?id=${id}&sheet=${sheet2}`;
 
+var showloading = document.getElementById('showloading');
+var contents = document.getElementById('mainContent');
+window.addEventListener('load', function () {
+    showloading.style.display = 'none';
+    contents.classList.remove('hidden');
+});
 
 const renderJson = (json) => {
     const books = json.records;
@@ -107,6 +113,10 @@ window.onload = function () {
         document.getElementById('nomalLang').style.display = "none";
         document.getElementById('englishLang').style.display = "block";
         document.getElementById('easyLang').style.display = "none";
+
+        document.getElementById('nomalf').style.display = "none";
+        document.getElementById('englishf').style.display = "block";
+        document.getElementById('easyf').style.display = "none";
     }
 
     else if (document.URL.match("/?lang=2")) {
@@ -131,6 +141,10 @@ window.onload = function () {
         document.getElementById('nomalLang').style.display = "none";
         document.getElementById('englishLang').style.display = "none";
         document.getElementById('easyLang').style.display = "block";
+
+        document.getElementById('nomalf').style.display = "none";
+        document.getElementById('englishf').style.display = "none";
+        document.getElementById('easyf').style.display = "block";
 
     }
 };
@@ -167,6 +181,10 @@ document.getElementById("button").onclick = function () {
         document.getElementById('englishLang').style.display = "block";
         document.getElementById('easyLang').style.display = "none";
 
+        document.getElementById('nomalf').style.display = "none";
+        document.getElementById('englishf').style.display = "block";
+        document.getElementById('easyf').style.display = "none";
+
     } else if (langBottonClass == "close") {
         langBotton.classList.remove('close');
         langBotton.classList.add('open');
@@ -190,6 +208,10 @@ document.getElementById("button").onclick = function () {
         document.getElementById('nomalLang').style.display = "block";
         document.getElementById('englishLang').style.display = "none";
         document.getElementById('easyLang').style.display = "none";
+
+        document.getElementById('nomalf').style.display = "block";
+        document.getElementById('englishf').style.display = "none";
+        document.getElementById('easyf').style.display = "none";
     }
 };
 
@@ -221,6 +243,10 @@ document.getElementById("button2").onclick = function () {
         document.getElementById('englishLang').style.display = "none";
         document.getElementById('easyLang').style.display = "block";
 
+        document.getElementById('nomalf').style.display = "none";
+        document.getElementById('englishf').style.display = "none";
+        document.getElementById('easyf').style.display = "block";
+
     } else if (langBotton2Class == "close") {
         langMode = 0;
         langBotton2.classList.remove('close');
@@ -243,6 +269,10 @@ document.getElementById("button2").onclick = function () {
         document.getElementById('nomalLang').style.display = "block";
         document.getElementById('englishLang').style.display = "none";
         document.getElementById('easyLang').style.display = "none";
+
+        document.getElementById('nomalf').style.display = "block";
+        document.getElementById('englishf').style.display = "none";
+        document.getElementById('easyf').style.display = "none";
     }
 };
 

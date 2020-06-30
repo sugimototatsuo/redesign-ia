@@ -1,4 +1,4 @@
-
+//全ページに共通の事項を書く
 /*---------topへ戻るボタン-------------*/
 function getScrolled() {
     return (window.pageYOffset !== undefined) ? window.pageYOffset : document.documentElement.scrollTop;

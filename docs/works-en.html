@@ -25,34 +25,31 @@
         <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
         <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
 
-        <!--フォント取得-->
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
-            rel="stylesheet">
-
     </head>
 
 <body>
     <main>
-        <div class="head-wrapper">
-            <header>
-                <ul class="nav-list">
-                    <li class="nav-list-item"><a href="./index-en.html">HOME</a></li>
-                    <li class="nav-list-item"><a href="./about-en.html">ABOUT</a></li>
-                    <li class="nav-list-item"><a href="./news-en.html">NEWS</a></li>
-                    <li class="nav-list-item"><a href="./studio-en.html">STUDIO</a></li>
-                    <li class="nav-list-item"><a href="./faculty-en.html">FACULTY</a></li>
-                    <li class="nav-list-item"><a class="here" href="./works-en.html">WORKS</a></li>
-                    <li class="nav-list-item"><a href="./access-en.html">ACCESS</a></li>
-                </ul>
-            </header>
+
+        <header id="header" class="header">
+            <ul class="nav-list">
+                <li class="nav-list-item"><a href="./index-en.html">HOME</a></li>
+                <li class="nav-list-item"><a href="./about-en.html">ABOUT</a></li>
+                <li class="nav-list-item"><a href="./news-en.html">NEWS</a></li>
+                <li class="nav-list-item"><a href="./studio-en.html">STUDIO</a></li>
+                <li class="nav-list-item"><a href="./faculty-en.html">FACULTY</a></li>
+                <li class="nav-list-item"><a class="here" href="./works-en.html">WORKS</a></li>
+                <li class="nav-list-item"><a href="./access-en.html">ACCESS</a></li>
+            </ul>
+        </header>
+
+        <section class="contents" style="opacity: 1;">
+
             <div class="language">
                 <span id="language-text">language</span><a href="./works.html">JA</a><span>|</span><a class="here"
                     href="./works-en.html">EN</a></span>
             </div>
-        </div>
 
 
-        <section class="contents" style="opacity: 1;">
 
             <h1 class="page-title">WORKS</h1>
             <span class="page-description">Students' works
@@ -66,10 +63,10 @@
 
             <div class="ia-twitter">
                 <a href="https://twitter.com/ia_sd_tmu?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-lang="en"
-                  data-show-count="false">Follow @ia_sd_tmu</a>
+                    data-show-count="false">Follow @ia_sd_tmu</a>
                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
-            
+
             <footer>
                 <section class="en">
                     <p class="ja">東京都立大学 システムデザイン学部／研究科</p>
@@ -86,9 +83,9 @@
         <img id="view" src="./img/icon/GOtoTOP/GOtoTOP_icon_White.png" width=80px height=auto>
 
     </div>
-    <script src="js/lottie.min.js"></script>
 
     <script src="js/works-en.js"></script>
+    <script src="js/index.js"></script>
 
 </body>
 

@@ -52,6 +52,19 @@ header .left_h nav ul {
 header .left_h nav ul li {
   list-style: none;
   display: inline-block;
+  font-size: 1.0rem;
+}
+
+@media screen and (max-width: 1310px) {
+  header .left_h nav ul li {
+    font-size: 0.65rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  header .left_h nav ul li {
+    font-size: 0.6rem;
+  }
 }
 
 header .left_h nav ul li a {
@@ -60,19 +73,11 @@ header .left_h nav ul li a {
   line-height: 80px;
   display: block;
   padding: 0 0.5rem;
-  font-size: 1.0rem;
 }
 
 @media screen and (max-width: 1310px) {
   header .left_h nav ul li a {
-    font-size: 0.75rem;
     padding: 0 0.3rem;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  header .left_h nav ul li a {
-    font-size: 0.7rem;
   }
 }
 

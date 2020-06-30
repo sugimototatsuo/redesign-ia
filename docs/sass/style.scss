@@ -64,19 +64,27 @@ header {
         li{
           list-style: none;
           display: inline-block;
+          font-size: 1.0rem;
+          @include mq(xl){
+            font-size: 0.65rem;
+            // padding: 0 0.3rem;
+          }
+          @include mq(lg){
+            font-size: 0.6rem;
+          }
           a{
             text-decoration: none;
             color: #363636;
             line-height: 80px;
             display: block;
             padding: 0 0.5rem;
-            font-size: 1.0rem;
+            // font-size: 1.0rem;
             @include mq(xl){
-              font-size: 0.75rem;
+              // font-size: 0.75rem;
               padding: 0 0.3rem;
             }
             @include mq(lg){
-              font-size: 0.7rem;
+              // font-size: 0.7rem;
             }
             &:hover{
               opacity: 0.5;

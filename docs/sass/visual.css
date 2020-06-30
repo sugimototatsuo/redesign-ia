@@ -138,6 +138,10 @@ header #type2:checked ~ #links2 li {
   cursor: pointer;
 }
 
+.wraper {
+  min-height: 90vh;
+}
+
 section {
   background: #E4EBEF;
   padding: 5rem;
@@ -294,6 +298,22 @@ p {
   margin: 0 auto;
 }
 
+a.toTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #2B2845;
+  color: #FFFFFF;
+  text-align: center;
+  width: 12rem;
+  padding: 1.0rem 0.3rem;
+  text-decoration: none;
+}
+
+a.toTop:hover {
+  opacity: 0.5;
+}
+
 /* ========== footer ========== */
 footer {
   width: 100%;
@@ -301,7 +321,7 @@ footer {
   padding: 1rem 0;
 }
 
-footer p {
+footer > p {
   text-align: center !important;
   color: #FFFFFF;
   margin-bottom: 0.3rem;

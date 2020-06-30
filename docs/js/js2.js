@@ -16,6 +16,7 @@ const renderJson = (json) => {
         //const nomalStudioTitle = document.createElement("span");
         const nomalStudioLink = document.createElement("a");
         const nomalStudioImage = document.createElement("img");
+        const nomalStudioLinkName = document.createElement("span");
 
         //リンクと画像にクラス名（日本語版サイト）
         nomalStudioLink.className = 'studio-link';
@@ -29,22 +30,36 @@ const renderJson = (json) => {
             }
             location.href = studios['name-short'].toString() + ".html" + langControll;
         };
+        nomalStudioLinkName.textContent = studios['name-ja'];
         nomalStudioImage.src = "../image/" + studios['name-short'].toString() + ".png";
         if (document.URL.match(studios['name-short'].toString())) {
             nomalStudioDiv.style.border = "solid 3px #0000c0";
         }
+        nomalStudioDiv.onmouseover = function () {
+            nomalStudioDiv.style.border = "solid 3px #ffffff";
+        };
+        nomalStudioDiv.onmouseout = function () {
+            if (document.URL.match(studios['name-short'].toString())) {
+                nomalStudioDiv.style.border = "solid 3px #0000c0";
+            } else {
+                nomalStudioDiv.style.border = "solid 3px #E4EBEF";
+            }
+        };
+
         //nomalStudioLink.textContent = studios['name-ja'];
         //nomalStudioImage.src = studios['photo1'];
 
         const englishStudioDiv = document.createElement('div');
         const englishStudioLink = document.createElement("a");
         const englishStudioImage = document.createElement("img");
+        const englishStudioLinkName = document.createElement("span");
         if (document.URL.match(studios['name-short'].toString())) {
             englishStudioDiv.style.border = "solid 3px #0000c0";
         }
         //リンクと画像にクラス名（英語版サイト）。でもこれ英語と日本語で分けなくても良かったかも。
         englishStudioLink.className = 'studio-link-en';
         englishStudioImage.className = 'studio-image-en'
+        englishStudioLinkName.textContent = studios['name-en'];
         englishStudioLink.onclick = function () {
             var langControll;
             langControll = "?lang=1";
@@ -53,13 +68,14 @@ const renderJson = (json) => {
         //englishStudioLink.textContent = studios['name-en'];
         englishStudioImage.src = "../image/" + studios['name-short'].toString() + ".png";
 
-
         nomalStudioLink.appendChild(nomalStudioImage);
         nomalStudioDiv.appendChild(nomalStudioLink);
+        nomalStudioDiv.appendChild(nomalStudioLinkName);
         document.getElementById('nomalStudios').appendChild(nomalStudioDiv);
         //englishStudioDiv.appendChild(englishStudioTitle);
         englishStudioLink.appendChild(englishStudioImage);
         englishStudioDiv.appendChild(englishStudioLink);
+        englishStudioDiv.appendChild(englishStudioLinkName);
         document.getElementById('englishStudios').appendChild(englishStudioDiv);
 
     });

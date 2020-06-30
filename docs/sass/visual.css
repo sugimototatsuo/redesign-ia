@@ -185,7 +185,7 @@ section .first_box #nomalStudios > div,section .first_box #englishStudios > div{
  
 /* ツールチップ部分を隠す */
 section .first_box #nomalStudios > div span ,section .first_box #englishStudios > div span{
-    display: none;
+   display: none;
 }
  
 /* マウスオーバー */

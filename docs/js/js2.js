@@ -17,7 +17,7 @@ const renderJson = (json) => {
         const nomalStudioLink = document.createElement("a");
         const nomalStudioImage = document.createElement("img");
         const nomalStudioLinkName = document.createElement("span");
-
+        //englishStudioLinkName.id = 'englishCap';
         //リンクと画像にクラス名（日本語版サイト）
         nomalStudioLink.className = 'studio-link';
         nomalStudioImage.className = 'studio-image';
@@ -53,6 +53,7 @@ const renderJson = (json) => {
         const englishStudioLink = document.createElement("a");
         const englishStudioImage = document.createElement("img");
         const englishStudioLinkName = document.createElement("span");
+        englishStudioLinkName.id = 'englishCap';
         if (document.URL.match(studios['name-short'].toString())) {
             englishStudioDiv.style.border = "solid 3px #0000c0";
         }
@@ -92,6 +93,7 @@ const renderJson = (json) => {
 
     document.getElementById('result').textContent = JSON.stringify(json, null, 2);
 }
+
 
 //初回読み込み時の言語
 window.onload = function () {
@@ -243,6 +245,13 @@ document.getElementById("button").onclick = function () {
         document.getElementById('nomalFaculty').style.display = "none";
         document.getElementById('englishFaculty').style.display = "block";
         document.getElementById('easyFaculty').style.display = "none";
+
+        document.getElementById('nomalStudios').onmouseout = function () {
+            document.getElementById('nomalCap').style.display = "none";
+        };
+        document.getElementById('englishStudios').onmouseout = function () {
+            document.getElementById('englishCap').style.display = "block";
+        };
 
         document.getElementById('nomalCore').style.display = "none";
         document.getElementById('englishCore').style.display = "block";

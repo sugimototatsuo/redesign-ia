@@ -169,8 +169,8 @@
 
  header {
      width: 100%;
-     padding: 15px 0;
-     margin: 30px 0 auto;
+     padding: 5px 0;
+     margin: 15px 0 auto;
      text-align: center;
      border-bottom: 1px solid #c4c4c4;
     
@@ -185,9 +185,14 @@
    .nav-list-item{
      list-style: none;
      display: inline-block;
-     margin: 0 33px;
+     margin: 0 25px;
      font-size: 20px;
+     padding: 8px;
    }
+   .nav-list-item >a{
+
+  }
+   
 
    /*グロナビのうち現在いる親の階層　を黒くする*/
 .nav-list-item >a.here{
@@ -299,6 +304,27 @@ text-align: right;
 
 }
 
-  /*ここまで共通設定*/
+  /*headerのスクロールに応じて現れる*/
  
- 
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .header {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  
+  .header--unpinned {
+    -webkit-transform: translateY(-150%);
+    transform: translateY(-150%);
+  }
+
+  .header {
+    -webkit-transition: -webkit-transform .4s ease;
+    transition: -webkit-transform .4s ease;
+    transition: transform .4s ease;
+    transition: transform .4s ease, -webkit-transform .4s ease;
+  }

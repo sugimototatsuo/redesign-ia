@@ -160,25 +160,21 @@
      clear:both;
  }
 
- /*グロナビと言語を囲む*/
- .head-wrapper{
-  max-width:1140px;
-  padding:0 30px;/*ウィンドウサイズにかかわらずグロナビと言語全体の左右余白を確保*/
- }
- /*グロナビ　ヘッダー*/
+
+ /*グロナビ　ヘッダーのスタイル*/
 
  header {
      width: 100%;
-     padding: 5px 0;
-     margin: 15px 0 auto;
+     margin:  0 auto;
      text-align: center;
      border-bottom: 1px solid #c4c4c4;
+     z-index:100;/*languageより上に来るようにしないと押せなくなる*/
     
    }
    
    .nav-list{
      text-align: center;
-     padding: 10px 0;
+     padding: 20px 0;
      margin: 0 auto;
    }
  
@@ -201,10 +197,41 @@
  
 
 
+
+  /*headerのスクロールに応じて現れる*/
+ 
+  .header {
+    position: fixed;
+    padding:0 30px;/*ウィンドウサイズにかかわらずグロナビと言語全体の左右余白を確保*/
+    max-width:1140px;
+    margin:0 auto;
+
+  }
+  .header {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  
+  .header--unpinned {
+    -webkit-transform: translateY(-150%);
+    transform: translateY(-150%);
+  }
+
+  .header {
+    -webkit-transition: -webkit-transform .4s ease;
+    transition: -webkit-transform .4s ease;
+    transition: transform .4s ease;
+    transition: transform .4s ease, -webkit-transform .4s ease;
+  }
+
+
+/*言語のスタイル*/
 .language{
-  margin:20px 0px 0 0;
+ max-width:1140px;
    text-align: right;
    color: #828282;
+   position:relative;
+   margin-bottom: 80px;
  }
 #language-text{
   font-size:16px;
@@ -222,12 +249,13 @@
  }
 
 
-   /*header意外を取り囲む*/
+   /*headrと言語意外を取り囲む*/
  
  .contents {
     /* min-height: 500px;*/
      background-color: #FFF;
-     margin: 50px 30px 10px 30px;
+     margin: 0px 30px 10px 30px;
+     padding-top:110px;
      animation: fadeIn 3s ease 0s 1 normal;
      -webkit-animation: fadeIn 3s ease 0s 1 normal;
    
@@ -303,28 +331,3 @@
 text-align: right;
 
 }
-
-  /*headerのスクロールに応じて現れる*/
- 
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-  .header {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  
-  .header--unpinned {
-    -webkit-transform: translateY(-150%);
-    transform: translateY(-150%);
-  }
-
-  .header {
-    -webkit-transition: -webkit-transform .4s ease;
-    transition: -webkit-transform .4s ease;
-    transition: transform .4s ease;
-    transition: transform .4s ease, -webkit-transform .4s ease;
-  }

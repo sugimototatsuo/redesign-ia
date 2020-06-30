@@ -56,6 +56,16 @@ const renderJson = (json) => {
         if (document.URL.match(studios['name-short'].toString())) {
             englishStudioDiv.style.border = "solid 3px #0000c0";
         }
+        englishStudioDiv.onmouseover = function () {
+            englishStudioDiv.style.border = "solid 3px #ffffff";
+        };
+        englishStudioDiv.onmouseout = function () {
+            if (document.URL.match(studios['name-short'].toString())) {
+                englishStudioDiv.style.border = "solid 3px #0000c0";
+            } else {
+                englishStudioDiv.style.border = "solid 3px #E4EBEF";
+            }
+        };
         //リンクと画像にクラス名（英語版サイト）。でもこれ英語と日本語で分けなくても良かったかも。
         englishStudioLink.className = 'studio-link-en';
         englishStudioImage.className = 'studio-image-en'

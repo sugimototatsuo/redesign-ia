@@ -3,6 +3,18 @@ body {
   font-size: 20px;
 }
 
+@media screen and (max-width: 992px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  body {
+    font-size: 5px;
+  }
+}
+
 .wrap {
   overflow: hidden;
 }
@@ -40,7 +52,7 @@ header {
 }
 
 header .left_h {
-  width: 80%;
+  width: 82%;
   height: 80px;
   float: left;
 }
@@ -63,7 +75,7 @@ header .left_h nav ul li {
 
 @media screen and (max-width: 992px) {
   header .left_h nav ul li {
-    font-size: 0.6rem;
+    font-size: 0.3rem;
   }
 }
 
@@ -75,18 +87,12 @@ header .left_h nav ul li a {
   padding: 0 0.5rem;
 }
 
-@media screen and (max-width: 1310px) {
-  header .left_h nav ul li a {
-    padding: 0 0.3rem;
-  }
-}
-
 header .left_h nav ul li a:hover {
   opacity: 0.5;
 }
 
 header .right_h {
-  width: 20%;
+  width: 18%;
   height: 80px;
   float: right;
   text-align: center;
@@ -106,7 +112,13 @@ header label {
 
 @media screen and (max-width: 1310px) {
   header label {
-    width: 5.5rem;
+    width: 5.0rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  header label {
+    width: 4rem;
   }
 }
 
@@ -132,7 +144,13 @@ header .right_h ul {
 
 @media screen and (max-width: 1310px) {
   header .right_h ul {
-    width: 5.5rem;
+    width: 5.0rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  header .right_h ul {
+    width: 4rem;
   }
 }
 

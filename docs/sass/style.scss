@@ -403,7 +403,7 @@ pre#result {
 #faculty span.faculty-name-2, .faculty-name-en2{
   display: block;
 }
-.faculty-link > a{
+.faculty-link ,.faculty-link-en > a{
   color: #2E2E2E;
   text-decoration: none;
   &:hover{
@@ -415,7 +415,7 @@ pre#result {
 #column{
   text-align: center;
 }
-#nomalLink{
+#nomalLink,#englishLink{
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
   margin: 2rem;
@@ -442,34 +442,58 @@ pre#result {
 }
 
 /* ========== admission ==========*/
-#admission #nomalAdmissionText{
+#nomalAdmissionText ,#englishAdmissionText ,#easyAdmissionText{
   background: #E4EBEF;
   padding: 50px 100px;
+  width: 100%;
 }
-#admission #nomalAdmissionText h4{
+#nomalAdmissionText,#englishAdmissionText,#easyAdmissionText h4{
   font-size: 1.5rem;
   margin-top: 1rem;
 }
-#admission #nomalAdmissionText p, ol, ul{
+#nomalAdmissionText,#englishAdmissionText,#easyAdmissionText p, ol, ul{
   padding-left: 3rem;
   /* padding-bottom: 20px; */
 }
-#admission #nomalAdmissionText img{
+#nomalAdmissionText,#englishAdmissionText,#easyAdmissionText > img{
   display: block;
-  width: 70%;
+  // width: 70%;
   margin: 0.3rem auto 1rem;
 }
-#admission #nomalAdmissionText a{
+#nomalAdmissionText,#englishAdmissionText,#easyAdmissionText a{
   color: #2E2E2E;
   text-decoration: none;
 }
+#adcontent img{
+  display: block;
+  margin: 0.5rem auto 1rem;
+}
+#adcontenten img{
+  display: block;
+  margin: 0.5rem auto 1rem;
+}
+#adcontenten a{
+  text-decoration: none;
+  color: #2E2E2E;
+}
+#adcontenteas img{
+  display: block;
+  margin: 0.5rem auto 1rem;
+}
 
 /* ========== question ========== */
-#question #nomalQText{
+#question #nomalQText,#englishQText,#easyQText{
   background: #E4EBEF;
   padding: 3rem 5rem;
   h4{
     margin-top: 1rem;
+  }
+  a{
+    text-decoration: none;
+    color: #2E2E2E;
+    &:hover{
+      opacity: 0.5;
+    }
   }
 }
 

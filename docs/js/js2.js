@@ -17,7 +17,7 @@ const renderJson = (json) => {
         const nomalStudioLink = document.createElement("a");
         const nomalStudioImage = document.createElement("img");
         const nomalStudioLinkName = document.createElement("span");
-        //englishStudioLinkName.id = 'englishCap';
+        nomalStudioLinkName.className = 'nomalCap';
         //リンクと画像にクラス名（日本語版サイト）
         nomalStudioLink.className = 'studio-link';
         nomalStudioImage.className = 'studio-image';
@@ -53,7 +53,7 @@ const renderJson = (json) => {
         const englishStudioLink = document.createElement("a");
         const englishStudioImage = document.createElement("img");
         const englishStudioLinkName = document.createElement("span");
-        englishStudioLinkName.id = 'englishCap';
+        englishStudioLinkName.className = 'englishCap';
         if (document.URL.match(studios['name-short'].toString())) {
             englishStudioDiv.style.border = "solid 3px #0000c0";
         }
@@ -205,6 +205,22 @@ window.onload = function () {
 };
 
 
+/*
+document.getElementById('nomalStudios').onmouseover = function () {
+    if (langMode == 0) {
+        document.getElementByClassName('nomalCap').style.display = "block";
+    }
+};
+
+document.getElementById('englishStudios').onmouseover = function () {
+    if (langMode == 1) {
+        document.getElementByClassName('englishCap').style.display = "block";
+    }
+};*/
+
+
+
+
 //ページ内の切り替え
 document.getElementById("button").onclick = function () {
     var langBotton = document.getElementById("button");
@@ -245,13 +261,6 @@ document.getElementById("button").onclick = function () {
         document.getElementById('nomalFaculty').style.display = "none";
         document.getElementById('englishFaculty').style.display = "block";
         document.getElementById('easyFaculty').style.display = "none";
-
-        document.getElementById('nomalStudios').onmouseout = function () {
-            document.getElementById('nomalCap').style.display = "none";
-        };
-        document.getElementById('englishStudios').onmouseout = function () {
-            document.getElementById('englishCap').style.display = "block";
-        };
 
         document.getElementById('nomalCore').style.display = "none";
         document.getElementById('englishCore').style.display = "block";

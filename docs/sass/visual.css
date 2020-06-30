@@ -180,7 +180,7 @@ section .first_box #nomalStudios > div .studio-image, section .first_box #nomalS
 
 /*吹き出し*/
 section .first_box #nomalStudios > div,section .first_box #englishStudios > div{
-    display: inline-block; 
+   display: inline-block; 
 }
  
 /* ツールチップ部分を隠す */
@@ -196,7 +196,7 @@ section .first_box #nomalStudios > div:hover, section .first_box #englishStudios
  
 /* マウスオーバー時にツールチップを表示 */
 section .first_box #nomalStudios > div:hover span,section .first_box #englishStudios > div:hover span {
-    display: block; /* ボックス要素にする */
+    /*display: block; /* ボックス要素にする */
     position: absolute; 
     top: 25px;
     right:40px;

@@ -6,7 +6,7 @@ body {
 #showloading {
   width: 100%;
   height: 100vh;
-  background-color: #000000;
+  background-color: #073a49;
   position: relative;
 }
 
@@ -832,6 +832,22 @@ label {
 
 .modalText h3 {
   margin-bottom: 0.5rem;
+}
+
+a.toTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #2B2845;
+  color: #FFFFFF;
+  text-align: center;
+  width: 12rem;
+  padding: 1.0rem 0.3rem;
+  text-decoration: none;
+}
+
+a.toTop:hover {
+  opacity: 0.5;
 }
 
 /* ========== footer ========== */

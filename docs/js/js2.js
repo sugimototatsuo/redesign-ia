@@ -204,6 +204,21 @@ window.onload = function () {
     }
 };
 
+/*
+document.getElementById('nomalStudios').onmouseover = function () {
+    document.getElementByClassName('nomalCap').style.display = "block";
+};
+document.getElementById('nomalStudios').onmouseout = function () {
+    document.getElementByClassName('nomalCap').style.display = "none";
+};
+
+document.getElementById('englishStudios').onmouseover = function () {
+    document.getElementByClassName('englishCap').style.display = "block";
+};
+document.getElementById('englishStudios').onmouseout = function () {
+    document.getElementByClassName('englishCap').style.display = "none";
+};
+*/
 
 /*
 document.getElementById('nomalStudios').onmouseover = function () {
@@ -277,7 +292,7 @@ document.getElementById("button").onclick = function () {
         document.getElementById('easyContentsTitle4').style.display = "none";
 
         document.getElementById('nomalStudios').style.display = "none";
-        document.getElementById('englishStudios').style.display = "block";
+        document.getElementById('englishStudios').style.display = "inline-block";
 
     } else if (langBottonClass == "close") {
         langBotton.classList.remove('close');
@@ -325,7 +340,7 @@ document.getElementById("button").onclick = function () {
         document.getElementById('englishContentsTitle4').style.display = "none";
         document.getElementById('easyContentsTitle4').style.display = "none";
 
-        document.getElementById('nomalStudios').style.display = "block";
+        document.getElementById('nomalStudios').style.display = "inline-block";
         document.getElementById('englishStudios').style.display = "none";
     }
 };
@@ -380,7 +395,7 @@ document.getElementById("button2").onclick = function () {
         document.getElementById('englishContentsTitle4').style.display = "none";
         document.getElementById('easyContentsTitle4').style.display = "block";
 
-        document.getElementById('nomalStudios').style.display = "block";
+        document.getElementById('nomalStudios').style.display = "inline-block";
         document.getElementById('englishStudios').style.display = "none";
 
     } else if (langBotton2Class == "close") {
@@ -428,7 +443,7 @@ document.getElementById("button2").onclick = function () {
         document.getElementById('englishContentsTitle4').style.display = "none";
         document.getElementById('easyContentsTitle4').style.display = "none";
 
-        document.getElementById('nomalStudios').style.display = "block";
+        document.getElementById('nomalStudios').style.display = "inline-block";
         document.getElementById('englishStudios').style.display = "none";
     }
 };

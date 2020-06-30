@@ -109,7 +109,7 @@ header .right_h ul {
   position: absolute;
   top: 80px;
   right: 0;
-  width: 8rem;
+  width: 7rem;
   margin: 0;
   padding: 0;
   background: #C3C3C3;
@@ -131,6 +131,11 @@ header #type2:checked ~ #links2 li {
   height: 70px;
   opacity: 1;
   cursor: pointer;
+}
+
+header label a {
+  text-decoration: none;
+  color: #000;
 }
 
 .bg-purple {

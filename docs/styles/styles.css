@@ -168,15 +168,11 @@
 
 
  header {
-  
      text-align: center;
      border-bottom: 1px solid #c4c4c4;
-   
     max-width:1140px;
     width: 100%;
     margin:0 auto;
-
-    
    }
    
    .nav-list{
@@ -343,3 +339,4 @@ text-align: right;
 padding:30px 0 0 0;
 
 }
+

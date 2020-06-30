@@ -11,7 +11,7 @@ body {
 #showloading {
   width: 100%;
   height: 100vh;
-  background-color: #073a49;
+  background-color: #000000;
   position: relative;
 }
 
@@ -170,12 +170,60 @@ section .first_box #nomalStudios > div, section .first_box #englishStudios > div
   height: 50px;
   display: inline-block;
   text-align: center;
+  border: solid 3px #E4EBEF;
 }
 
 section .first_box #nomalStudios > div .studio-image, section .first_box #nomalStudios > div .studio-image-en, section .first_box #englishStudios > div .studio-image, section .first_box #englishStudios > div .studio-image-en {
   width: 42px;
   height: 42px;
 }
+
+/*吹き出し*/
+section .first_box #nomalStudios > div,section .first_box #englishStudios > div{
+    display: inline-block; 
+}
+ 
+/* ツールチップ部分を隠す */
+section .first_box #nomalStudios > div span ,section .first_box #englishStudios > div span{
+    display: none;
+}
+ 
+/* マウスオーバー */
+section .first_box #nomalStudios > div:hover, section .first_box #englishStudios > div:hover {
+    position: relative;
+    color: #333;
+}
+ 
+/* マウスオーバー時にツールチップを表示 */
+section .first_box #nomalStudios > div:hover span,section .first_box #englishStudios > div:hover span {
+    display: block; /* ボックス要素にする */
+    position: absolute; 
+    top: 25px;
+    right:40px;
+    font-size: 65%;
+    color: #fff;
+    background-color: rgb(53, 61, 104); 
+    width: 190px;
+    padding: 5px;
+    border-radius:3px;
+    z-index:100;
+}
+ 
+section .first_box #nomalStudios > div span:before,section .first_box #englishStudios > div span:before{
+    content:''; 
+    display:block; 
+    position:absolute; /* relativeからの絶対位置 */
+    height:0; 
+    width:0; 
+    top:0px; 
+    right:-2px;
+    border:10px transparent solid; 
+    border-right-width:0; 
+    border-left-color:rgb(53, 61, 104); 
+    transform:rotate(90deg);
+    z-index:100;
+}
+/*吹き出しここまで*/
 
 section .first_box h1 {
   font-size: 2rem;

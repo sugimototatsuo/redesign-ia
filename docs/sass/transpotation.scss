@@ -9,7 +9,7 @@ $breakpoints: (
 //メディアクエリ用のmixinを定義。デフォ値はmd
 @mixin mq($breakpoint: md) {
 //map-get(マップ型変数, キー)で値を取得
-  @media ( max-width: #{map-get($breakpoints, $breakpoint)} ) {
+  @media #{map-get($breakpoints, $breakpoint)} {
     @content;
   }
 }
@@ -117,7 +117,10 @@ label {
     color :#000;
     background: #C3C3C3;
     cursor :pointer;
-
+    a{
+      text-decoration: none;
+      color: #363636;
+    }
 }
 
 input {
@@ -168,7 +171,63 @@ input {
 section{
   background: #E4EBEF;
   padding: 5rem;
+  .first_box{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    #nomalStudios, #englishStudios{
+      width: 330px;
+      float: right;
+      text-align: right;
+      @include mq(md){
+        float: none;
+      }
+      > div{
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        text-align: center;
+        .studio-image,.studio-image-en{
+          width: 42px;
+          height: 42px;
+        }
+      }
+    }
+    h1{
+      font-size: 2rem;
+    }
+    .insta {/*アイコンの背景*/
+      position: relative;/*相対配置*/
+      display: inline-block;
+      width: 55px;/*幅*/
+      height: 55px;/*高さ*/
+      vertical-align: middle;/*垂直中央に*/
+      background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+      background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;/*グラデーション①*/
+      overflow: hidden;/*はみ出た部分を隠す*/
+      border-radius: 8px;/*角丸に*/
+    }
 
+    .insta:before {/*グラデーションを重ねるため*/
+      content: '';
+      position: absolute;/*絶対配置*/
+      top: 24px;/*ずらす*/
+      left: -18px;/*ずらす*/
+      width: 70px;/*グラデーションカバーの幅*/
+      height: 70px;/*グラデーションカバーの高さ*/
+      background: -webkit-radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+      background: radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);/*グラデーション②*/
+    }
+
+    .fa-instagram {/*アイコン*/
+      color: #FFF;/*白に*/
+      position: relative;/*z-indexを使うため*/
+      z-index: 2;/*グラデーションより前に*/
+      font-size: 45px;/*アイコンサイズ*/
+      top: 6px;/*上下にずらす*/
+      left: 0.5px;/*左右にずらす*/
+    }
+  }
   .second_box{
     width: 100%;
     overflow: hidden;

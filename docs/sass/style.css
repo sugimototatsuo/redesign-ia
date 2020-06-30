@@ -393,12 +393,21 @@ pre#result {
   display: block;
 }
 
-.faculty-link, .faculty-link-en > a {
+.faculty-link a {
   color: #2E2E2E;
   text-decoration: none;
 }
 
-.faculty-link:hover, .faculty-link-en > a:hover {
+.faculty-link a:hover {
+  opacity: 0.5;
+}
+
+.faculty-link-en a {
+  color: #2E2E2E;
+  text-decoration: none;
+}
+
+.faculty-link-en a:hover {
   opacity: 0.5;
 }
 

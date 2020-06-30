@@ -118,7 +118,7 @@ input {
     position: absolute;
     top: 80px;
     right: 0;
-    width: 8rem;
+    width: 7rem;
     margin: 0;
     padding: 0;
     background :#C3C3C3;
@@ -142,6 +142,11 @@ input {
     cursor :pointer;
     // padding: 0.3rem 0;
 }
+label a{
+  text-decoration: none;
+  color: #000;
+}
+
 
 }
 // button
@@ -165,6 +170,11 @@ input {
   h5{
     font-size: 1.2rem;
     padding-left: 2rem;
+  }
+  a{
+    text-decoration: none;
+    // color: #000;
+    font-size: 1.3rem;
   }
 }
 #book div{

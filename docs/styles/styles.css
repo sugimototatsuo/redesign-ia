@@ -116,8 +116,10 @@
  body{
   background-color:#ffffff;
   margin: 0px auto;
+  
   font-family: 'Open Sans',"Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3",sans-serif;
  max-width:1200px;
+ 
   }
  
   
@@ -163,12 +165,17 @@
 
  /*グロナビ　ヘッダーのスタイル*/
 
+
+
  header {
-     width: 100%;
-     margin:  0 auto;
+  
      text-align: center;
      border-bottom: 1px solid #c4c4c4;
-     z-index:100;/*languageより上に来るようにしないと押せなくなる*/
+   
+    max-width:1140px;
+    width: 100%;
+    margin:0 auto;
+
     
    }
    
@@ -176,12 +183,14 @@
      text-align: center;
      padding: 20px 0;
      margin: 0 auto;
+     
+
    }
  
    .nav-list-item{
      list-style: none;
      display: inline-block;
-     margin: 0 25px;
+     margin: 0 30px;
      font-size: 20px;
      padding: 8px;
    }
@@ -202,9 +211,7 @@
  
   .header {
     position: fixed;
-    padding:0 30px;/*ウィンドウサイズにかかわらずグロナビと言語全体の左右余白を確保*/
-    max-width:1140px;
-    margin:0 auto;
+   
 
   }
   .header {
@@ -231,7 +238,7 @@
    text-align: right;
    color: #828282;
    position:relative;
-   margin-bottom: 80px;
+   margin-bottom: 70px;
  }
 #language-text{
   font-size:16px;
@@ -249,13 +256,17 @@
  }
 
 
-   /*headrと言語意外を取り囲む*/
+
+ main{
+  padding: 0px 30px 10px 30px;
+ }
+
+   /*headr意外を取り囲む*/
  
  .contents {
     /* min-height: 500px;*/
      background-color: #FFF;
-     margin: 0px 30px 10px 30px;
-     padding-top:110px;
+     padding-top:105px;
      animation: fadeIn 3s ease 0s 1 normal;
      -webkit-animation: fadeIn 3s ease 0s 1 normal;
    
@@ -329,5 +340,6 @@
 
 .ia-twitter{
 text-align: right;
+padding:30px 0 0 0;
 
 }

@@ -21,7 +21,12 @@ const renderStudio = (json) => {//シートごとに使い分ける
             const studioLeftSec_Pre = document.createElement('section');
 
             const studioTitleDiv = document.createElement('div');
-            studioTitleDiv.className = 'title';
+
+            if (studio['core-ja'] == 'メディアアートコア・メディア創生') {
+                studioTitleDiv.className = 'title-red';
+            } else {
+                studioTitleDiv.className = 'title-blue';
+            }
             const studioTitleInnerDiv = document.createElement('div');
             studioTitleInnerDiv.className = 'inner-title';
             const studioTitleTextDiv = document.createElement('div');

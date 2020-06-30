@@ -175,7 +175,7 @@ header #type1:checked ~ #links1 li {
 .wraper {
   width: 100%;
   padding: 3rem 5rem;
-  min-height: 90vh;
+  min-height: 95vh;
   background: #E4EBEF;
   font-weight: normal;
 }

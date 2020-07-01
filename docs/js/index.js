@@ -310,7 +310,7 @@ window.onload = function () {
     document.getElementById('englishStudios').style.display = "flex";
 
     document.getElementById('nomalFaculty').style.display = "none";
-    document.getElementById('englishFaculty').style.display = "block";
+    document.getElementById('englishFaculty').style.display = "flex";
 
     document.getElementById('nomalLink').style.display = "none";
     document.getElementById('englishLink').style.display = "flex";
@@ -387,7 +387,7 @@ window.onload = function () {
     document.getElementById('nomalStudios').style.display = "flex";
     document.getElementById('englishStudios').style.display = "none";
 
-    document.getElementById('nomalFaculty').style.display = "block";
+    document.getElementById('nomalFaculty').style.display = "flex";
     document.getElementById('englishFaculty').style.display = "none";
 
     document.getElementById('nomalLink').style.display = "flex";
@@ -473,7 +473,7 @@ document.getElementById("button").onclick = function () {
     document.getElementById('englishStudios').style.display = "flex";
 
     document.getElementById('nomalFaculty').style.display = "none";
-    document.getElementById('englishFaculty').style.display = "block";
+    document.getElementById('englishFaculty').style.display = "flex";
 
     document.getElementById('nomalLink').style.display = "none";
     document.getElementById('englishLink').style.display = "flex";
@@ -548,7 +548,7 @@ document.getElementById("button").onclick = function () {
     document.getElementById('nomalStudios').style.display = "flex";
     document.getElementById('englishStudios').style.display = "none";
 
-    document.getElementById('nomalFaculty').style.display = "block";
+    document.getElementById('nomalFaculty').style.display = "flex";
     document.getElementById('englishFaculty').style.display = "none";
 
     document.getElementById('nomalLink').style.display = "flex";
@@ -635,7 +635,7 @@ document.getElementById("button2").onclick = function () {
     document.getElementById('nomalStudios').style.display = "flex";
     document.getElementById('englishStudios').style.display = "none";
 
-    document.getElementById('nomalFaculty').style.display = "block";
+    document.getElementById('nomalFaculty').style.display = "flex";
     document.getElementById('englishFaculty').style.display = "none";
 
     document.getElementById('nomalLink').style.display = "flex";
@@ -711,7 +711,7 @@ document.getElementById("button2").onclick = function () {
     document.getElementById('nomalStudios').style.display = "flex";
     document.getElementById('englishStudios').style.display = "none";
 
-    document.getElementById('nomalFaculty').style.display = "block";
+    document.getElementById('nomalFaculty').style.display = "flex";
     document.getElementById('englishFaculty').style.display = "none";
 
     document.getElementById('nomalLink').style.display = "flex";

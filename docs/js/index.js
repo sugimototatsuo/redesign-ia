@@ -30,6 +30,15 @@ const renderJson = (json) => {
     //nomalStudioLink.href = "./html/" + studios['name-short'].toString() + ".html";
 
     nomalStudioLink.textContent = studios['name-ja'];
+    nomalStudioImage.onclick = function () {
+      var langControll;
+      if (langMode == 0) {
+        langControll = "?lang=0";
+      } else if (langMode == 2) {
+        langControll = "?lang=2";
+      }
+      location.href = "./html/" + studios['name-short'].toString() + ".html" + langControll;
+    };
     nomalStudioLink.onclick = function () {
       var langControll;
       if (langMode == 0) {
@@ -51,6 +60,11 @@ const renderJson = (json) => {
 
     //スタジオ名（英語）のクラス
     englishStudioLink.className = 'studio-title-en';
+    englishStudioImage.onclick = function () {
+      var langControll;
+      langControll = "?lang=1";
+      location.href = "./html/" + studios['name-short'].toString() + ".html" + langControll;
+    };
     englishStudioLink.onclick = function () {
       var langControll;
       langControll = "?lang=1";

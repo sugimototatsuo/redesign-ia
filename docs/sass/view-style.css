@@ -176,7 +176,15 @@ header .left_h nav ul li a {
 @media screen and (min-width: 992px) {
   header .left_h nav ul li a {
     color: #363636;
-    font-size: 0.2rem;
+    font-size: 0.5rem;
+    line-height: 80px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header .left_h nav ul li a {
+    color: #363636;
+    font-size: 0.9rem;
     line-height: 80px;
   }
 }
@@ -184,6 +192,11 @@ header .left_h nav ul li a {
 header .left_h nav ul li a h3 {
   margin-top: 1rem;
   padding-left: 1rem;
+  cursor: pointer;
+}
+
+header .left_h nav ul li a h3:hover {
+  opacity: 0.5;
 }
 
 @media screen and (min-width: 992px) {
@@ -195,6 +208,7 @@ header .left_h nav ul li a h3 {
 header .right_h {
   width: 40%;
   float: right;
+  font-weight: bold;
 }
 
 @media screen and (min-width: 992px) {
@@ -205,7 +219,7 @@ header .right_h {
 
 header .right_h label {
   display: inline-block;
-  width: 4.5rem;
+  width: 3.7rem;
   text-align: center;
   float: right;
   color: #363636;
@@ -216,9 +230,23 @@ header .right_h label {
   cursor: pointer;
 }
 
+@media screen and (min-width: 576px) {
+  header .right_h label {
+    width: 5.0rem;
+  }
+}
+
 header .right_h label a {
   text-decoration: none;
   color: #363636;
+}
+
+header .right_h label p {
+  cursor: pointer;
+}
+
+header .right_h label p:hover {
+  opacity: 0.5;
 }
 
 header .right_h input {
@@ -229,13 +257,19 @@ header .right_h ul {
   position: absolute;
   top: 80px;
   right: 0;
-  width: 4.5rem;
+  width: 3.7rem;
   font-size: 1rem;
   margin: 0;
   padding: 0;
   background: #C3C3C3;
   list-style: none;
   text-align: center;
+}
+
+@media screen and (min-width: 576px) {
+  header .right_h ul {
+    width: 5.0rem;
+  }
 }
 
 header .right_h li {
@@ -812,6 +846,14 @@ pre#result {
   }
 }
 
+#question > div a {
+  cursor: pointer;
+}
+
+#question > div a:hover {
+  opacity: 0.5;
+}
+
 #access iframe {
   width: 100%;
   height: 400px;
@@ -832,7 +874,7 @@ pre#result {
 
 @media screen and (min-width: 992px) {
   #nomalAcText ul li p, #englishAcText ul li p, #easyAcText ul li p {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -840,8 +882,20 @@ pre#result {
   padding-left: 3rem;
 }
 
+@media screen and (min-width: 992px) {
+  #nomalAcText h4, #nomalAcText > p, #englishAcText h4, #englishAcText > p, #easyAcText h4, #easyAcText > p {
+    font-size: 1.2rem;
+  }
+}
+
 #nomalAcText h4, #englishAcText h4, #easyAcText h4 {
   padding-top: 0.3rem;
+}
+
+@media screen and (min-width: 992px) {
+  #nomalAcText h4, #englishAcText h4, #easyAcText h4 {
+    font-size: 1.2rem;
+  }
 }
 
 /* ========== footer ========== */
@@ -855,4 +909,10 @@ footer p {
   text-align: center !important;
   color: #FFFFFF;
   margin-bottom: 0.3rem;
+}
+
+@media screen and (min-width: 992px) {
+  footer p {
+    font-size: 1.2rem;
+  }
 }

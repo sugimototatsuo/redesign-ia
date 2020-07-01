@@ -165,12 +165,21 @@ header{
             color: #fff;
             @include mq(lg){
               color: $textCol;
-              font-size: 0.2rem;
+              font-size: 0.5rem;
+              line-height: 80px;
+            }
+            @include mq(xl){
+              color: $textCol;
+              font-size: 0.9rem;
               line-height: 80px;
             }
             h3{
               margin-top: 1rem;
               padding-left: 1rem;
+              cursor: pointer;
+            &:hover{
+              opacity: 0.5;
+            }
               @include mq(lg){
                 margin: 0;
               }
@@ -184,12 +193,16 @@ header{
   .right_h{
     width: 40%;
     float: right;
+    font-weight: bold;
     @include mq(lg){
       width: 20%;
     }
 label {
     display: inline-block;
-    width: 4.5rem;
+    width: 3.7rem;
+    @include mq(sm){
+      width: 5.0rem;
+    }
     text-align: center;
     float: right;
     color :$textCol;
@@ -202,6 +215,12 @@ label {
       text-decoration: none;
       color: $textCol;
     }
+    p{
+      cursor: pointer;
+            &:hover{
+              opacity: 0.5;
+            }
+    }
 }
 input {
     display: none;
@@ -210,7 +229,10 @@ ul {
     position: absolute;
     top: 80px;
     right: 0;
-    width: 4.5rem;
+    width: 3.7rem;
+    @include mq(sm){
+      width: 5.0rem;
+    }
     font-size: 1rem;
     margin: 0;
     padding: 0;
@@ -714,6 +736,12 @@ pre#result {
       padding: 2rem 4rem;
       font-size: 1.3rem;
     }
+    a{
+      cursor: pointer;
+            &:hover{
+              opacity: 0.5;
+            }
+    }
   }
 }
 
@@ -752,16 +780,22 @@ pre#result {
       p{
         font-size: 0.5rem;
         @include mq(lg){
-          font-size: 1rem;
+          font-size: 1.2rem;
         }
       }
     }
   }
   h4, > p{
     padding-left: 3rem;
+    @include mq(lg){
+          font-size: 1.2rem;
+        }
   }
   h4{
     padding-top: 0.3rem;
+    @include mq(lg){
+          font-size: 1.2rem;
+        }
   }
 }
 
@@ -775,5 +809,8 @@ footer{
     text-align: center!important;
     color: #FFFFFF;
     margin-bottom: 0.3rem;
+    @include mq(lg){
+          font-size: 1.2rem;
+        }
   }
 }

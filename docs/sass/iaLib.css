@@ -1,18 +1,14 @@
 @charset "UTF-8";
 body {
-  font-family: sans-serif;
-  font-size: 20px;
+  font-family: 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+  font-size: 10px;
+  font-weight: normal;
+  width: 100%;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 992px) {
   body {
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 769px) {
-  body {
-    font-size: 5px;
+    font-size: 12px;
   }
 }
 
@@ -42,93 +38,211 @@ body {
   display: none;
 }
 
-/*========== header nav ==========*/
 header {
-  position: fixed;
-  top: 0;
-  background: #fff;
   width: 100%;
   height: 80px;
+  position: fixed;
+  background: #fff;
   z-index: 10;
+  /*チェックボックス等は非表示に*/
+  /*アイコンのスペース*/
+  /*ハンバーガーアイコンをCSSだけで表現*/
+  /*閉じる用の薄黒カバー*/
+  /*中身*/
+  /*チェックが入ったらもろもろ表示*/
+}
+
+header #nav-drawer {
+  position: relative;
+  padding-left: 30px;
+}
+
+header .nav-unshown {
+  display: none;
+}
+
+header #nav-open {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 992px) {
+  header #nav-open {
+    display: none;
+  }
+}
+
+header #nav-open span, header #nav-open span:before, header #nav-open span:after {
+  position: absolute;
+  height: 3px;
+  /*線の太さ*/
+  width: 25px;
+  /*長さ*/
+  border-radius: 3px;
+  background: #2B2845;
+  display: block;
+  content: '';
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+header #nav-open span:before {
+  bottom: -8px;
+}
+
+header #nav-open span:after {
+  bottom: -16px;
+}
+
+header #nav-close {
+  display: none;
+  /*はじめは隠しておく*/
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  /*全体に広がるように*/
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+
+@media screen and (max-width: 992px) {
+  header #nav-content {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    /*最前面に*/
+    width: 70%;
+    /*右側に隙間を作る（閉じるカバーを表示）*/
+    max-width: 330px;
+    /*最大幅（調整してください）*/
+    height: 100vh;
+    background: #2B2845;
+    /*背景色*/
+    transition: .3s ease-in-out;
+    /*滑らかに表示*/
+    -webkit-transform: translateX(-105%);
+    transform: translateX(-105%);
+    /*左に隠しておく*/
+  }
+}
+
+header #nav-input:checked ~ #nav-close {
+  display: block;
+  /*カバーを表示*/
+  opacity: .5;
+}
+
+header #nav-input:checked ~ #nav-content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+  /*中身を表示（右へスライド）*/
+  box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
 }
 
 header .left_h {
-  width: 82%;
-  height: 80px;
+  width: 60%;
   float: left;
 }
 
-header .left_h nav ul {
-  padding-left: -50px;
+@media screen and (min-width: 992px) {
+  header .left_h {
+    width: 80%;
+  }
 }
 
 header .left_h nav ul li {
   list-style: none;
-  display: inline-block;
-  font-size: 1.0rem;
 }
 
-@media screen and (max-width: 1310px) {
+@media screen and (min-width: 992px) {
   header .left_h nav ul li {
-    font-size: 0.65rem;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  header .left_h nav ul li {
-    font-size: 0.3rem;
+    display: inline-block;
   }
 }
 
 header .left_h nav ul li a {
   text-decoration: none;
-  color: #363636;
-  line-height: 80px;
-  display: block;
-  padding: 0 0.5rem;
+  font-size: 1.2rem;
+  color: #fff;
 }
 
-header .left_h nav ul li a:hover {
-  opacity: 0.5;
+@media screen and (min-width: 992px) {
+  header .left_h nav ul li a {
+    color: #363636;
+    font-size: 0.5rem;
+    line-height: 80px;
+  }
 }
 
-header .right_h {
-  width: 18%;
-  height: 80px;
-  float: right;
-  text-align: center;
-  position: relative;
+@media screen and (min-width: 1200px) {
+  header .left_h nav ul li a {
+    color: #363636;
+    font-size: 0.9rem;
+    line-height: 80px;
+  }
 }
 
-header label {
-  display: inline-block;
-  float: right;
-  margin-left: 5px;
-  width: 7rem;
-  line-height: 80px;
-  color: #000;
-  background: #C3C3C3;
+header .left_h nav ul li a h3 {
+  margin-top: 1rem;
+  padding-left: 1rem;
   cursor: pointer;
 }
 
-@media screen and (max-width: 1310px) {
-  header label {
+header .left_h nav ul li a h3:hover {
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 992px) {
+  header .left_h nav ul li a h3 {
+    margin: 0;
+  }
+}
+
+header .right_h {
+  width: 40%;
+  float: right;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 992px) {
+  header .right_h {
+    width: 20%;
+  }
+}
+
+header .right_h label {
+  display: inline-block;
+  width: 3.7rem;
+  text-align: center;
+  float: right;
+  color: #363636;
+  background: #C3C3C3;
+  line-height: 80px;
+  margin-left: 2%;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 576px) {
+  header .right_h label {
     width: 5.0rem;
   }
 }
 
-@media screen and (max-width: 992px) {
-  header label {
-    width: 4rem;
-  }
-}
-
-header label a {
+header .right_h label a {
   text-decoration: none;
   color: #363636;
 }
 
-header input {
+header .right_h input {
   display: none;
 }
 
@@ -136,22 +250,18 @@ header .right_h ul {
   position: absolute;
   top: 80px;
   right: 0;
-  width: 7rem;
+  width: 3.7rem;
+  font-size: 1rem;
   margin: 0;
   padding: 0;
   background: #C3C3C3;
   list-style: none;
+  text-align: center;
 }
 
-@media screen and (max-width: 1310px) {
+@media screen and (min-width: 576px) {
   header .right_h ul {
     width: 5.0rem;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  header .right_h ul {
-    width: 4rem;
   }
 }
 
@@ -165,18 +275,24 @@ header .right_h li {
   transition: all 0.5s;
 }
 
-header #type1:checked ~ #links1 li {
-  height: 70px;
+header .right_h #type1:checked ~ #links1 li {
+  height: 60px;
   opacity: 1;
   cursor: pointer;
 }
 
 .main-visual {
   width: 100%;
-  height: 700px;
+  height: 600px;
   background-image: url(../image/みんなの図書visual-02.jpg);
   background-size: cover;
   background-position: center;
+}
+
+@media screen and (min-width: 992px) {
+  .main-visual {
+    height: 800px;
+  }
 }
 
 .first-text {
@@ -184,13 +300,37 @@ header #type1:checked ~ #links1 li {
 }
 
 .first-text h3 {
-  font-size: 2.0rem;
+  font-size: 1.3rem;
   margin-bottom: 1rem;
 }
 
+@media screen and (min-width: 768px) {
+  .first-text h3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .first-text h3 {
+    font-size: 2.0rem;
+  }
+}
+
 .first-text h5 {
-  font-size: 1.2rem;
-  padding-left: 2rem;
+  font-size: 1.0rem;
+}
+
+@media screen and (min-width: 768px) {
+  .first-text h5 {
+    font-size: 1.2rem;
+    padding-left: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .first-text h5 {
+    font-size: 1.5rem;
+  }
 }
 
 .first-text a {
@@ -201,8 +341,14 @@ header #type1:checked ~ #links1 li {
 #book div {
   background: #E4EBEF;
   margin-bottom: 2rem;
-  padding: 3rem 3rem;
+  padding: 3rem 1.5rem;
   color: #363636;
+}
+
+@media screen and (min-width: 768px) {
+  #book div {
+    padding: 3rem 3.0rem;
+  }
 }
 
 #book div span {
@@ -212,32 +358,90 @@ header #type1:checked ~ #links1 li {
 #book div .book-title {
   border-bottom: 1px solid #363636;
   display: inline-block;
-  font-size: 2rem;
+  font-size: 0.6rem;
+}
+
+@media screen and (min-width: 768px) {
+  #book div .book-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #book div .book-title {
+    font-size: 1.7rem;
+  }
 }
 
 #book div .book-writer {
   margin-bottom: 2.0rem;
+  font-size: 0.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  #book div .book-writer {
+    font-size: 1.0rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #book div .book-writer {
+    font-size: 1.3rem;
+  }
 }
 
 #book div .book-reason {
-  font-size: 1.5rem;
-  padding-left: 2rem;
+  font-size: 0.6rem;
+  padding-left: 0.5rem;
   margin-bottom: 1.5rem;
   display: inline-block;
 }
 
+@media screen and (min-width: 768px) {
+  #book div .book-reason {
+    font-size: 1.1rem;
+    padding-left: 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #book div .book-reason {
+    font-size: 1.3rem;
+  }
+}
+
 #book div .book-teacher {
   display: inline-block;
-  padding-left: 3rem;
+  padding-left: 0.5rem;
+  font-size: 0.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  #book div .book-teacher {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #book div .book-teacher {
+    font-size: 1.0rem;
+  }
 }
 
 #book div .book-text-box {
-  width: 90%;
   margin: 0 auto;
 }
 
 #book div .book-text-box .book-about {
   margin-bottom: 1rem;
+  word-break: break-all;
+  font-size: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  #book div .book-text-box .book-about {
+    font-size: 1.2rem;
+  }
 }
 
 #book div .book-text-box .book-link, #book div .book-text-box .book-link2 {
@@ -245,6 +449,13 @@ header #type1:checked ~ #links1 li {
   text-decoration: none;
   display: inline-block;
   word-break: break-all;
+  font-size: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  #book div .book-text-box .book-link, #book div .book-text-box .book-link2 {
+    font-size: 1.2rem;
+  }
 }
 
 #book div .book-text-box .book-link:hover, #book div .book-text-box .book-link2:hover {

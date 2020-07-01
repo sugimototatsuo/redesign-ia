@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="../sass/reset.css">
     <link rel="stylesheet" href="../sass/work.css">
 
@@ -17,8 +17,13 @@
     </div>
 
     <header>
-        <div class="left_h">
-            <nav>
+        <div class="left_h" id="nav-drawer">
+            <!-- 追加 -->
+            <input id="nav-input" type="checkbox" class="nav-unshown">
+            <label id="nav-open" for="nav-input"><span></span></label>
+            <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+            <!--  -->
+            <nav id="nav-content">
                 <ul>
                     <li><a id="head-aboutus">
                             <h3 id="nomalSubtitle1" style="display: block">学科概要</h3>
@@ -142,8 +147,39 @@
                     <rt>さくひん</rt>
                 </ruby>
             </h1>
-            <p id="nomalCap" style="display: block">インダストリアルアート学科の授業で作成した作品です。</p>
-            <p id="englishCap" style="display: none">This work was created in a class in the Industrial Art Department.
+            <p id="nomalCap" style="display: block">
+                インダストリアルアート学科の授業で作成した作品です。</br>
+                </br>
+                本学科は、理工系学部·研究科の中にあるデザインコースとして、
+                またプロダクト系とメディア系の幅広いデザイン分野が共存する学科として世界的にも非常にユニークな存在といえます。
+                この特色を最大限活かし、美術系大学など他大学のデザイン系学科とは一線を画した独自の人材を育成します。</br>
+                デザインとはただ形を作るにとどまらず、コンセプト提案、しくみ構築機能の調整統合など、
+                新しいモノやコトを生み出す作業における上流段階での重要な役割を担うものであるとの位置づけから、
+                デザイナーには専門職的なアプローチのみならず、ものづくりの指揮官の役割が社会から期待されるようになっています。</br>
+                このような社会の要請に応えられる新しいタイプのデザイナーおよびそれに関わる研究者の育成を目指します。
+                そのために、学生には専門分野だけにとどまらず、学科の特色を活かし、理工系から人文·社会系まで、プロダクト系からメディア系まで、
+                幅広い領域に対する興味と知見を有し、それらを総動員して新しいタイプのデザインを創生することを期待します。
+            </p>
+            <p id="englishCap" style="display: none">
+                This work was created in a class in the Industrial Art Department.</br>
+                </br>
+                We are proud of the Department of Industrial Art, Faculty and Graduate School of System Design's unique
+                pairing of
+                product-related and media-related design disciplines within the Metropolitan University's science and
+                engineering
+                departments.</br> Design is not just about creating form, but it's rather about playing an important
+                role in
+                the creation of
+                new products and trends, which the creation is of the concept, it's architecture, or the production and
+                integration of
+                its application. </br>Designers today must not only have specialist knowledge, but they must also be
+                able to
+                take initiative
+                To achieve this, we encourage students to take interest in not only their own specialization, but also
+                the wider world
+                of science and technology, culture and social sciences, popular products and media, and utilize our
+                facilities to
+                explore new types of design by drawing on all of them.
             </p>
             <p id="easyCap" style="display: none">
                 インダストリアルアート<ruby>
@@ -161,7 +197,171 @@
                 </ruby>った<ruby>
                     <rb>作品</rb>
                     <rt>さくひん</rt>
+                </ruby>です。</br>
+                </br>
+                この<ruby>
+                    <rb>学科</rb>
+                    <rt>がっか</rt>
+                </ruby>は、<ruby>
+                    <rb>理工学系学部</rb>
+                    <rt>りこうがくけいがくぶ</rt>
+                </ruby>の<ruby>
+                    <rb>中</rb>
+                    <rt>なか</rt>
+                </ruby>にあるデザインコースとしても、
+                プロダクト<ruby>
+                    <rb>系</rb>
+                    <rt>けい</rt>
+                </ruby>とメディア<ruby>
+                    <rb>系</rb>
+                    <rt>けい</rt>
+                </ruby>の<ruby>
+                    <rb>幅広</rb>
+                    <rt>はばひろ</rt>
+                </ruby>いデザイン<ruby>
+                    <rb>分野</rb>
+                    <rt>ぶんや</rt>
+                </ruby>を<ruby>
+                    <rb>学</rb>
+                    <rt>まな</rt>
+                </ruby>ぶことができる<ruby>
+                    <rb>学科</rb>
+                    <rt>がっか
+                    </rt>
+                </ruby>としても<ruby>
+                    <rb>世界</rb>
+                    <rt>せかい</rt>
+                </ruby>の<ruby>
+                    <rb>中</rb>
+                    <rt>なか</rt>
+                </ruby>でもとてもユニークな<ruby>
+                    <rb>存在</rb>
+                    <rt>そんざい</rt>
                 </ruby>です。
+                この<ruby>
+                    <rb>特徴</rb>
+                    <rt>とくちょう</rt>
+                </ruby>を<ruby>
+                    <rb>活</rb>
+                    <rt>い</rt>
+                </ruby>かして、<ruby>
+                    <rb>美術系大学</rb>
+                    <rt>びじゅつけいだいがく</rt>
+                </ruby>などの<ruby>
+                    <rb>他大学</rb>
+                    <rt>ただいがく</rt>
+                </ruby>のデザイン<ruby>
+                    <rb>系学科</rb>
+                    <rt>けいがっか</rt>
+                </ruby>とは<ruby>
+                    <rb>違</rb>
+                    <rt>ちが</rt>
+                </ruby>ったユニークな<ruby>
+                    <rb>人</rb>
+                    <rt>ひと</rt>
+                </ruby>を<ruby>
+                    <rb>育</rb>
+                    <rt>そだ</rt>
+                </ruby>てます。</br>
+                デザインとは<ruby>
+                    <rb>形</rb>
+                    <rt>かたち</rt>
+                </ruby>を<ruby>
+                    <rb>作</rb>
+                    <rt>つく</rt>
+                </ruby>ることだけではなくて、コンセプトを<ruby>
+                    <rb>出</rb>
+                    <rt>だ</rt>
+                </ruby>すこと、もののしくみや<ruby>
+                    <rb>機能</rb>
+                    <rt>きのう</rt>
+                </ruby>を<ruby>
+                    <rb>調整</rb>
+                    <rt>ちょうせい</rt>
+                </ruby>することなどの、
+                <ruby>
+                    <rb>新</rb>
+                    <rt>あたら</rt>
+                </ruby>しいモノやコトをつくるときに<ruby>
+                    <rb>大事</rb>
+                    <rt>だいじ</rt>
+                </ruby>なことです。
+                なので、デザイナーには<ruby>
+                    <rb>専門職的</rb>
+                    <rt>せんもんしょくてき</rt>
+                </ruby>なアプローチだけでなく、ものづくりのリーダーの<ruby>
+                    <rb>役目</rb>
+                    <rt>やくめ</rt>
+                </ruby>が<ruby>
+                    <rb>社会</rb>
+                    <rt>しゃかい</rt>
+                </ruby>から<ruby>
+                    <rb>期待</rb>
+                    <rt>きたい</rt>
+                </ruby>されるようになっています。</br>
+                このような<ruby>
+                    <rb>社会</rb>
+                    <rt>しゃかい</rt>
+                </ruby>の<ruby>
+                    <rb>求</rb>
+                    <rt>もと</rt>
+                </ruby>めにこたえることのできる<ruby>
+                    <rb>新</rb>
+                    <rt>あたら</rt>
+                </ruby>しいタイプのデザイナーやデザインに<ruby>
+                    <rb>関</rb>
+                    <rt></rt>
+                </ruby>わる<ruby>
+                    <rb>研究者</rb>
+                    <rt>けんきゅうしゃ</rt>
+                </ruby>を<ruby>
+                    <rb>育</rb>
+                    <rt>そだ</rt>
+                </ruby>てることを<ruby>
+                    <rb>目指</rb>
+                    <rt>めざ</rt>
+                </ruby>します。
+                そのために、みんなは<ruby>
+                    <rb>学生</rb>
+                    <rt>がくせい</rt>
+                </ruby>に<ruby>
+                    <rb>専門分野</rb>
+                    <rt>せんもんぶんや</rt>
+                </ruby>だけではなく、<ruby>
+                    <rb>理工系</rb>
+                    <rt>りこうけい</rt>
+                </ruby>から<ruby>
+                    <rb>人文・社会系</rb>
+                    <rt>じんぶん・しゃかいけい</rt>
+                </ruby>まで、プロダクト<ruby>
+                    <rb>系</rb>
+                    <rt>けい</rt>
+                </ruby>からメディア<ruby>
+                    <rb>系</rb>
+                    <rt>けい</rt>
+                </ruby>まで、
+                <ruby>
+                    <rb>広</rb>
+                    <rt>ひろ</rt>
+                </ruby>く<ruby>
+                    <rb>興味</rb>
+                    <rt>きょうみ</rt>
+                </ruby>と<ruby>
+                    <rb>知識</rb>
+                    <rt>ちしき</rt>
+                </ruby>を<ruby>
+                    <rb>持</rb>
+                    <rt>も</rt>
+                </ruby>ち、それらを<ruby>
+                    <rb>使</rb>
+                    <rt>つか</rt>
+                </ruby>って<ruby>
+                    <rb>新</rb>
+                    <rt>あたら</rt>
+                </ruby>しいタイプのデザインをつくることを<ruby>
+                    <rb>期待</rb>
+                    <rt>きたい</rt>
+                </ruby>しています。
             </p>
         </div>
 

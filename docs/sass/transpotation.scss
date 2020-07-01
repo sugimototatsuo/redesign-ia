@@ -1,0 +1,356 @@
+$breakpoints: (
+ 'sm': 'screen and (max-width: 576px)',
+ 'md': 'screen and (max-width: 768px)',
+ 'lg': 'screen and (max-width: 992px)',
+ //  header用
+ 'xl': 'screen and (max-width: 1310px)',
+) !default;
+
+//メディアクエリ用のmixinを定義。デフォ値はmd
+@mixin mq($breakpoint: md) {
+//map-get(マップ型変数, キー)で値を取得
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// ====================
+
+body {
+  font-family: sans-serif;
+  font-size: 20px;
+}
+.wrap{
+  overflow: hidden;
+}
+
+#showloading {
+width: 100%;
+height: 100vh;
+background-color: #073a49;
+position: relative;
+}
+
+#showloading img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+}
+
+.hidden {
+display: none;
+}
+
+/*========== header nav ==========*/
+header {
+  position: fixed;
+  top: 0;
+  background: #fff;
+  width: 100%;
+  height: 80px;
+  z-index: 10;
+  .left_h{
+    width: 80%;
+    height: 80px;
+    float: left;
+    nav{
+      ul {
+        padding-left: -50px;
+        li{
+          list-style: none;
+          display: inline-block;
+          font-size: 1.0rem;
+          @include mq(xl){
+            font-size: 0.65rem;
+            // padding: 0 0.3rem;
+          }
+          @include mq(lg){
+            font-size: 0.6rem;
+          }
+          a{
+            text-decoration: none;
+            color: #363636;
+            line-height: 80px;
+            display: block;
+            padding: 0 0.5rem;
+            // font-size: 1.0rem;
+            @include mq(xl){
+              // font-size: 0.75rem;
+              padding: 0 0.3rem;
+            }
+            @include mq(lg){
+              // font-size: 0.7rem;
+            }
+            &:hover{
+              opacity: 0.5;
+            }
+          }
+        }
+      }
+    }
+  }
+
+.right_h{
+  width: 20%;
+  height: 80px;
+  float: right;
+  text-align: center;
+  position: relative;
+}
+label {
+    display: inline-block;
+    float: right;
+    margin-left: 5px;
+    width: 7rem;
+    @include mq(xl){
+      width: 5.5rem;
+    }
+    line-height: 80px;
+    // margin: 0 0 4px 0;
+    // padding : 15px;
+    // line-height: 1;
+    color :#000;
+    background: #C3C3C3;
+    cursor :pointer;
+    a{
+      text-decoration: none;
+      color: #363636;
+    }
+}
+
+input {
+    display: none;
+}
+.right_h ul {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 7rem;
+    @include mq(xl){
+      width: 5.5rem;
+    }
+    margin: 0;
+    padding: 0;
+    background :#C3C3C3;
+    list-style: none;
+}
+
+.right_h li {
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+#type1:checked ~ #links1 li{
+    height: 70px;
+    opacity: 1;
+    cursor :pointer;
+    // padding: 0.3rem 0;
+}
+
+}
+// button
+// .open{
+//   margin-top: 80px;
+// }
+
+
+.wraper{
+  min-height: 90vh;
+}
+
+section{
+  background: #E4EBEF;
+  padding: 5rem;
+  .first_box{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    #nomalStudios, #englishStudios{
+      width: 330px;
+      float: right;
+      text-align: right;
+      @include mq(md){
+        float: none;
+      }
+      > div{
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        text-align: center;
+        .studio-image,.studio-image-en{
+          width: 42px;
+          height: 42px;
+        }
+      }
+    }
+    h1{
+      font-size: 2rem;
+    }
+    .insta {/*アイコンの背景*/
+      position: relative;/*相対配置*/
+      display: inline-block;
+      width: 55px;/*幅*/
+      height: 55px;/*高さ*/
+      vertical-align: middle;/*垂直中央に*/
+      background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+      background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;/*グラデーション①*/
+      overflow: hidden;/*はみ出た部分を隠す*/
+      border-radius: 8px;/*角丸に*/
+    }
+
+    .insta:before {/*グラデーションを重ねるため*/
+      content: '';
+      position: absolute;/*絶対配置*/
+      top: 24px;/*ずらす*/
+      left: -18px;/*ずらす*/
+      width: 70px;/*グラデーションカバーの幅*/
+      height: 70px;/*グラデーションカバーの高さ*/
+      background: -webkit-radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+      background: radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);/*グラデーション②*/
+    }
+
+    .fa-instagram {/*アイコン*/
+      color: #FFF;/*白に*/
+      position: relative;/*z-indexを使うため*/
+      z-index: 2;/*グラデーションより前に*/
+      font-size: 45px;/*アイコンサイズ*/
+      top: 6px;/*上下にずらす*/
+      left: 0.5px;/*左右にずらす*/
+    }
+  }
+  .second_box{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    .right_box{
+      width: 30%;
+      h3{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+      h5{
+        font-size: 1.5rem;
+      }
+    }
+    // .left_box{
+    //   width: 70%;
+    //   margin-bottom: 2rem;
+    //   img{
+    //     width: 100%;
+    //   }
+    // }
+.cp_cssslider {
+width: 65%;
+padding-top: 650px; /* 画像の高さ */
+@include mq(lg2){
+  padding-top: 450px;
+}
+@include mq(lg){
+  padding-top: 400px;
+}
+position: relative;
+// margin: 2em auto;
+text-align: center;
+}
+.cp_cssslider > img {
+width: 100%;
+position: absolute;
+left: 0;
+top: 0;
+transition: all 0.5s;
+border-radius: 3px;
+box-shadow:0px 0px 5px 0px rgba(0,0,0,0.3);
+}
+.cp_cssslider input[name='cp_switch'] {
+display: none;
+}
+/* サムネイル */
+.cp_cssslider label {
+margin: 15px 5px 0 5px;
+border: 2px solid #ffffff;
+display: inline-block;
+cursor: pointer;
+transition: all 0.5s ease;
+opacity: 0.6;
+border-radius: 3px;
+}
+.cp_cssslider label:hover {
+opacity: 0.9;
+}
+.cp_cssslider label img {
+display: block;
+width: 100px;
+height: 80px;
+border-radius: 2px;
+}
+.cp_cssslider input[name='cp_switch']:checked + label {
+border: 2px solid #FF7043;
+opacity: 1;
+}
+.cp_cssslider input[name='cp_switch'] ~ img {
+opacity: 0;
+}
+.cp_cssslider input[name='cp_switch']:checked + label + img {
+opacity: 1;
+}
+  }
+}
+.faculty_title{
+  float: left;
+  @include mq(sm){
+        float: none;
+      }
+}
+
+.right_box{
+  float: right;
+  text-align: right;
+  @include mq(md){
+    float: none;
+    text-align: left;
+    width: 40%;
+    font-size: 4rem;
+  }
+}
+p{
+  width: 80%;
+  margin: 0 auto;
+}
+
+// ========== toTop ==========
+a.toTop{
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #2B2845;
+  color: #FFFFFF;
+  text-align: center;
+  width: 12rem;
+  padding: 1.0rem 0.3rem;
+  text-decoration: none;
+  &:hover{
+    opacity: 0.5;
+  }
+}
+
+/* ========== footer ========== */
+footer{
+  width: 100%;
+  background: #2B2845;
+  padding: 1rem 0;
+  >p{
+    text-align: center!important;
+    color: #FFFFFF;
+    margin-bottom: 0.3rem;
+  }
+}

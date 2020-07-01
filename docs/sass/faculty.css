@@ -53,6 +53,7 @@ header {
 }
 
 header .left_h {
+  padding-left: 50px;
   width: 82%;
   height: 80px;
   float: left;
@@ -171,91 +172,181 @@ header #type1:checked ~ #links1 li {
   cursor: pointer;
 }
 
-.main-visual {
+.wraper {
   width: 100%;
-  height: 700px;
-  background-image: url(../image/みんなの図書visual-02.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-.first-text {
-  padding: 3rem 3rem;
-}
-
-.first-text h3 {
-  font-size: 2.0rem;
-  margin-bottom: 1rem;
-}
-
-.first-text h5 {
-  font-size: 1.2rem;
-  padding-left: 2rem;
-}
-
-.first-text a {
-  text-decoration: none;
-  font-size: 1.3rem;
-}
-
-#book div {
+  padding: 3rem 5rem;
+  min-height: 95vh;
   background: #E4EBEF;
+  font-weight: normal;
+}
+
+.wraper .first_box {
+  width: 100%;
+  overflow: hidden;
   margin-bottom: 2rem;
-  padding: 3rem 3rem;
-  color: #363636;
 }
 
-#book div span {
-  display: block;
+.wraper .first_box #studios {
+  width: 30%;
+  float: right;
 }
 
-#book div .book-title {
-  border-bottom: 1px solid #363636;
-  display: inline-block;
-  font-size: 2rem;
+@media screen and (max-width: 769px) {
+  .wraper .first_box #studios {
+    width: 100%;
+    float: none;
+  }
 }
 
-#book div .book-writer {
-  margin-bottom: 2.0rem;
-}
-
-#book div .book-reason {
+.wraper .first_box #studios h3 {
+  margin-top: 0.5rem;
   font-size: 1.5rem;
-  padding-left: 2rem;
-  margin-bottom: 1.5rem;
+}
+
+.wraper .first_box #studios div {
+  width: 100%;
+}
+
+.wraper .first_box #studios div div {
+  width: 4rem;
+  height: 4rem;
   display: inline-block;
 }
 
-#book div .book-teacher {
-  display: inline-block;
-  padding-left: 3rem;
-}
-
-#book div .book-text-box {
-  width: 90%;
+.wraper .first_box #studios div div a img {
+  display: block;
+  width: 3rem;
+  height: 3rem;
   margin: 0 auto;
 }
 
-#book div .book-text-box .book-about {
-  margin-bottom: 1rem;
+.wraper .first_box #studios div div span {
+  font-size: 0.2rem;
+  text-align: center;
 }
 
-#book div .book-text-box .book-link, #book div .book-text-box .book-link2 {
-  color: #363636;
-  text-decoration: none;
+.wraper .first_box .faculty_title {
+  width: 60%;
+  float: left;
+}
+
+@media screen and (max-width: 769px) {
+  .wraper .first_box .faculty_title {
+    width: 100%;
+    float: none;
+  }
+}
+
+.wraper .first_box .faculty_title h1 {
+  font-size: 2.7rem;
+}
+
+.wraper .first_box .faculty_title h4 {
+  font-size: 1.5rem;
+}
+
+.wraper .second_box {
+  width: 100%;
+  overflow: hidden;
+  /* サムネイル */
+}
+
+.wraper .second_box .right_box {
+  width: 25%;
+  text-align: right;
+  float: right;
+}
+
+@media screen and (max-width: 769px) {
+  .wraper .second_box .right_box {
+    width: 100%;
+    text-align-last: left;
+    float: none;
+  }
+}
+
+.wraper .second_box .right_box h3 {
+  font-size: 2rem;
+  font-weight: normal;
+  padding-bottom: 1rem;
+}
+
+.wraper .second_box .right_box h5 {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.wraper .second_box .cp_cssslider {
+  width: 70%;
+  float: left;
+  padding-top: 700px;
+  /* 画像の高さ */
+  position: relative;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 769px) {
+  .wraper .second_box .cp_cssslider {
+    width: 100%;
+    float: none;
+  }
+}
+
+.wraper .second_box .cp_cssslider > img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.5s;
+  border-radius: 3px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.wraper .second_box .cp_cssslider input[name='cp_switch'] {
+  display: none;
+}
+
+.wraper .second_box .cp_cssslider label {
+  margin: 15px 5px 0 5px;
+  border: 2px solid #ffffff;
   display: inline-block;
-  word-break: break-all;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  opacity: 0.6;
+  border-radius: 3px;
 }
 
-#book div .book-text-box .book-link:hover, #book div .book-text-box .book-link2:hover {
-  opacity: 0.5;
+.wraper .second_box .cp_cssslider label:hover {
+  opacity: 0.9;
 }
 
-#book div .book-text-box .book-link {
-  margin-bottom: 0.5rem;
+.wraper .second_box .cp_cssslider label img {
+  display: block;
+  width: 100px;
+  height: 80px;
+  border-radius: 2px;
 }
 
-a.toTop {
+.wraper .second_box .cp_cssslider input[name='cp_switch']:checked + label {
+  border: 2px solid #FF7043;
+  opacity: 1;
+}
+
+.wraper .second_box .cp_cssslider input[name='cp_switch'] ~ img {
+  opacity: 0;
+}
+
+.wraper .second_box .cp_cssslider input[name='cp_switch']:checked + label + img {
+  opacity: 1;
+}
+
+.wraper .text {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.wraper a.toTop {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
@@ -267,7 +358,7 @@ a.toTop {
   text-decoration: none;
 }
 
-a.toTop:hover {
+.wraper a.toTop:hover {
   opacity: 0.5;
 }
 

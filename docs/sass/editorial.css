@@ -1,19 +1,6 @@
-@charset "UTF-8";
 body {
   font-family: sans-serif;
   font-size: 20px;
-}
-
-@media screen and (max-width: 992px) {
-  body {
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 769px) {
-  body {
-    font-size: 5px;
-  }
 }
 
 .wrap {
@@ -53,7 +40,7 @@ header {
 }
 
 header .left_h {
-  width: 82%;
+  width: 80%;
   height: 80px;
   float: left;
 }
@@ -76,7 +63,7 @@ header .left_h nav ul li {
 
 @media screen and (max-width: 992px) {
   header .left_h nav ul li {
-    font-size: 0.3rem;
+    font-size: 0.6rem;
   }
 }
 
@@ -88,12 +75,18 @@ header .left_h nav ul li a {
   padding: 0 0.5rem;
 }
 
+@media screen and (max-width: 1310px) {
+  header .left_h nav ul li a {
+    padding: 0 0.3rem;
+  }
+}
+
 header .left_h nav ul li a:hover {
   opacity: 0.5;
 }
 
 header .right_h {
-  width: 18%;
+  width: 20%;
   height: 80px;
   float: right;
   text-align: center;
@@ -113,13 +106,7 @@ header label {
 
 @media screen and (max-width: 1310px) {
   header label {
-    width: 5.0rem;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  header label {
-    width: 4rem;
+    width: 5.5rem;
   }
 }
 
@@ -145,13 +132,7 @@ header .right_h ul {
 
 @media screen and (max-width: 1310px) {
   header .right_h ul {
-    width: 5.0rem;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  header .right_h ul {
-    width: 4rem;
+    width: 5.5rem;
   }
 }
 
@@ -171,115 +152,39 @@ header #type1:checked ~ #links1 li {
   cursor: pointer;
 }
 
-.main-visual {
+.wraper {
+  min-height: 90vh;
+}
+
+.wraper .first-text {
+  width: 40%;
+  float: left;
+}
+
+.wraper #studios {
+  width: 60%;
+  float: right;
+}
+
+.wraper #studios h3 {
+  color: red;
+}
+
+.wraper #studios div {
   width: 100%;
-  height: 700px;
-  background-image: url(../image/みんなの図書visual-02.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
-.first-text {
-  padding: 3rem 3rem;
+.wraper #studios div div {
+  width: 16%;
 }
 
-.first-text h3 {
-  font-size: 2.0rem;
-  margin-bottom: 1rem;
-}
-
-.first-text h5 {
-  font-size: 1.2rem;
-  padding-left: 2rem;
-}
-
-.first-text a {
-  text-decoration: none;
-  font-size: 1.3rem;
-}
-
-#book div {
-  background: #E4EBEF;
-  margin-bottom: 2rem;
-  padding: 3rem 3rem;
-  color: #363636;
-}
-
-#book div span {
+.wraper #studios div div a img {
   display: block;
-}
-
-#book div .book-title {
-  border-bottom: 1px solid #363636;
-  display: inline-block;
-  font-size: 2rem;
-}
-
-#book div .book-writer {
-  margin-bottom: 2.0rem;
-}
-
-#book div .book-reason {
-  font-size: 1.5rem;
-  padding-left: 2rem;
-  margin-bottom: 1.5rem;
-  display: inline-block;
-}
-
-#book div .book-teacher {
-  display: inline-block;
-  padding-left: 3rem;
-}
-
-#book div .book-text-box {
   width: 90%;
   margin: 0 auto;
 }
 
-#book div .book-text-box .book-about {
-  margin-bottom: 1rem;
-}
-
-#book div .book-text-box .book-link, #book div .book-text-box .book-link2 {
-  color: #363636;
-  text-decoration: none;
-  display: inline-block;
-  word-break: break-all;
-}
-
-#book div .book-text-box .book-link:hover, #book div .book-text-box .book-link2:hover {
-  opacity: 0.5;
-}
-
-#book div .book-text-box .book-link {
-  margin-bottom: 0.5rem;
-}
-
-a.toTop {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  background: #2B2845;
-  color: #FFFFFF;
+.wraper #studios div div span {
+  font-size: 0.4rem;
   text-align: center;
-  width: 12rem;
-  padding: 1.0rem 0.3rem;
-  text-decoration: none;
-}
-
-a.toTop:hover {
-  opacity: 0.5;
-}
-
-/* ========== footer ========== */
-footer {
-  width: 100%;
-  background: #2B2845;
-  padding: 1rem 0;
-}
-
-footer p {
-  text-align: center !important;
-  color: #FFFFFF;
-  margin-bottom: 0.3rem;
 }

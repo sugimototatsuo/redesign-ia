@@ -7,6 +7,13 @@ var langMode = 0;
 const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 //const endpoint2 = `${uri}?id=${id}&sheet=${sheet2}`;
 
+var showloading = document.getElementById('showloading');
+var contents = document.getElementById('mainContent');
+window.addEventListener('load', function () {
+    showloading.style.display = 'none';
+    contents.classList.remove('hidden');
+});
+
 
 const renderJson = (json) => {
     const studios = json.records;

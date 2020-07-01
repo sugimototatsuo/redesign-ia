@@ -18,8 +18,7 @@
      }
      .inner-title .studio-sns{
      /*今のところ見た目が一番マシ　妥協*/
-       position: absolute;
-        right: 175px;
+      padding-left:50px
      }
 
 .labview {
@@ -43,11 +42,11 @@
       margin: 0 auto;
    
     }
-        .topBar .title-red {
+        .topBar .title {
           width: 100%;
           text-align: left;
-          border-left: solid 6px #E80000;
-          padding-left: 10px;
+          /*border-left: solid 6px #E80000;
+          padding-left: 10px;*/
           margin-bottom: 10px;
           border-bottom: 1px solid #828282;
           display: flex;
@@ -55,19 +54,6 @@
           
           
          }
-
-         .topBar .title-blue {
-          width: 100%;
-          text-align: left;
-          border-left: solid 6px #0C09B2;
-          padding-left: 10px;
-          margin-bottom: 10px;
-          border-bottom: 1px solid #828282;
-          display: flex;
-          align-items: flex-end;
-          
-         }
-
        
             /*スタジオ名の表示*/
 p.studio-title-top{
@@ -78,11 +64,20 @@ p.studio-title-top{
             font-weight: 600;
         }
         /*コアの表示*/
-        p.studio-core-top {
+        p.studio-core-top-media{
+          border-left: solid 33px #E80000;
             font-size:16pt; 
             margin-bottom:10px;
             font-weight: 400;
-       
+            padding-left:8px;/*マージンだと四角ごと右に寄る*/
+        }
+
+        p.studio-core-top-product {
+          border-left: solid 33px #0C09B2;
+            font-size:16pt; 
+            margin-bottom:10px;
+            font-weight: 400;
+            padding-left:8px;/*マージンだと四角ごと右に寄る*/
         }
   
 
@@ -171,11 +166,19 @@ p.studio-title-top{
 
     .studio-list-item >a{
       font-size:12pt;
+      /*padding-left:4px;*/
     }
-    .studio-list .studio-list-item >a.here{
+    .studio-list-media .studio-list-item >a.here{
         color:#000;
+        border-left: solid 3px #E80000;
+        padding-left:4px;
     }
 
+    .studio-list-product .studio-list-item >a.here{
+      color:#000;
+      border-left: solid 3px #0C09B2;
+      padding-left:4px;
+  }
 
 
        /*コア名の下に線を引く*/
@@ -200,3 +203,9 @@ p.studio-title-top{
   }
 
 
+
+  .distribution-map-img{
+    max-width:900px;
+  margin: 0 auto;
+  padding:20px 30px 30px 30px;
+}

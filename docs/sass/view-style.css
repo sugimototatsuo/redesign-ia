@@ -214,7 +214,7 @@ header .right_h {
 
 header .right_h label {
   display: inline-block;
-  width: 4.5rem;
+  width: 4.0rem;
   text-align: center;
   float: right;
   color: #363636;
@@ -223,6 +223,12 @@ header .right_h label {
   margin-left: 2%;
   font-size: 1rem;
   cursor: pointer;
+}
+
+@media screen and (min-width: 576px) {
+  header .right_h label {
+    width: 5.0rem;
+  }
 }
 
 header .right_h label a {
@@ -238,13 +244,19 @@ header .right_h ul {
   position: absolute;
   top: 80px;
   right: 0;
-  width: 4.5rem;
+  width: 4.0rem;
   font-size: 1rem;
   margin: 0;
   padding: 0;
   background: #C3C3C3;
   list-style: none;
   text-align: center;
+}
+
+@media screen and (min-width: 576px) {
+  header .right_h ul {
+    width: 5.0rem;
+  }
 }
 
 header .right_h li {

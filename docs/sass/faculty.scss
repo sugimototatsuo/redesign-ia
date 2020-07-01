@@ -525,6 +525,7 @@ li {
 
   // ========== toTop ==========
   a.toTop{
+    z-index: 20;
     position: fixed;
     bottom: 2rem;
     right: 2rem;

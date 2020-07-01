@@ -393,7 +393,7 @@ header .right_h #type1:checked ~ #links1 li {
 
 @media screen and (min-width: 992px) {
   .wraper .first_box .faculty_title h1 {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
   }
 }
 
@@ -648,7 +648,6 @@ header .right_h #type1:checked ~ #links1 li {
 }
 
 a.toTop {
-  z-index: 20;
   position: fixed;
   bottom: 2rem;
   right: 2rem;

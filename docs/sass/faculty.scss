@@ -61,6 +61,7 @@ header {
   height: 80px;
   z-index: 10;
   .left_h{
+    padding-left: 50px;
     width: 82%;
     height: 80px;
     float: left;
@@ -183,91 +184,163 @@ input {
 //   margin-top: 80px;
 // }
 
-.main-visual{
+// ==================
+.wraper{
   width: 100%;
-  height: 700px;
-  background-image: url(../image/みんなの図書visual-02.jpg);
-  background-size: cover;
-  background-position: center;
-}
-.first-text{
-  padding: 3rem 3rem;
-  h3{
-    font-size: 2.0rem;
-    margin-bottom: 1rem;
-  }
-  h5{
-    font-size: 1.2rem;
-    padding-left: 2rem;
-  }
-  a{
-    text-decoration: none;
-    // color: #000;
-    font-size: 1.3rem;
-  }
-}
-#book div{
+  padding: 3rem 5rem;
+  min-height: 95vh;
   background: #E4EBEF;
-  margin-bottom: 2rem;
-  padding: 3rem 3rem;
-  color: #363636;
-  span{
-    display: block;
-  }
-  .book-title{
-    border-bottom: 1px solid #363636;
-    display: inline-block;
-    font-size: 2rem;
-  }
-  .book-writer{
-    margin-bottom: 2.0rem;
-  }
-  .book-reason{
-    font-size: 1.5rem;
-    padding-left: 2rem;
-    margin-bottom: 1.5rem;
-    display: inline-block;
-  }
-  .book-teacher{
-    display: inline-block;
-    padding-left: 3rem;
-  }
-  .book-text-box{
-    width: 90%;
-    margin: 0 auto;
-    .book-about{
-      margin-bottom: 1rem;
-    }
-    .book-link, .book-link2{
-      color: #363636;
-      text-decoration: none;
-      display: inline-block;
-      word-break: break-all;
-      &:hover{
-        opacity: 0.5;
+  font-weight: normal;
+  .first_box{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    #studios{
+      width: 30%;
+      float: right;
+      @include mq(md){
+        width: 100%;
+        float: none;
+      }
+      h3{
+        margin-top: 0.5rem;
+        font-size: 1.5rem;
+      }
+      div{
+        width: 100%;
+        div{
+          width: 4rem;
+          height: 4rem;
+          display: inline-block;
+          a{
+            img{
+              display: block;
+              width: 3rem;
+              height: 3rem;
+              margin: 0 auto;
+            }
+          }
+          span{
+            font-size: 0.2rem;
+            text-align: center;
+          }
+        }
       }
     }
-    .book-link{
-      margin-bottom: 0.5rem;
+    .faculty_title{
+      width: 60%;
+      float: left;
+      @include mq(md){
+        width: 100%;
+        float: none;
+      }
+      h1{
+        font-size: 2.7rem;
+      }
+      h4{
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .second_box{
+    width: 100%;
+    overflow: hidden;
+    .right_box{
+      width: 25%;
+      text-align: right;
+      float: right;
+      @include mq(md){
+        width: 100%;
+        text-align-last: left;
+        float: none;
+      }
+      h3{
+        font-size: 2rem;
+        font-weight: normal;
+        padding-bottom: 1rem;
+      }
+      h5{
+        font-size: 1.5rem;
+        font-weight: normal;
+      }
+    }
+    .cp_cssslider{
+      width: 70%;
+      float: left;
+      @include mq(md){
+        width: 100%;
+        float: none;
+      }
+      padding-top: 700px; /* 画像の高さ */
+      position: relative;
+      text-align: center;
+      margin-bottom: 3rem;
+      }
+      .cp_cssslider > img {
+      width: 100%;
+
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: all 0.5s;
+      border-radius: 3px;
+      box-shadow:0px 0px 5px 0px rgba(0,0,0,0.3);
+      }
+      .cp_cssslider input[name='cp_switch'] {
+      display: none;
+      }
+      /* サムネイル */
+      .cp_cssslider label {
+      margin: 15px 5px 0 5px;
+      border: 2px solid #ffffff;
+      display: inline-block;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      opacity: 0.6;
+      border-radius: 3px;
+      }
+      .cp_cssslider label:hover {
+      opacity: 0.9;
+      }
+      .cp_cssslider label img {
+      display: block;
+      width: 100px;
+      height: 80px;
+      border-radius: 2px;
+      }
+      .cp_cssslider input[name='cp_switch']:checked + label {
+      border: 2px solid #FF7043;
+      opacity: 1;
+      }
+      .cp_cssslider input[name='cp_switch'] ~ img {
+      opacity: 0;
+      }
+      .cp_cssslider input[name='cp_switch']:checked + label + img {
+      opacity: 1;
+      }
+  }
+  .text{
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  // ========== toTop ==========
+  a.toTop{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #2B2845;
+    color: #FFFFFF;
+    text-align: center;
+    width: 12rem;
+    padding: 1.0rem 0.3rem;
+    text-decoration: none;
+    &:hover{
+      opacity: 0.5;
     }
   }
 }
 
-// ========== toTop ==========
-a.toTop{
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  background: #2B2845;
-  color: #FFFFFF;
-  text-align: center;
-  width: 12rem;
-  padding: 1.0rem 0.3rem;
-  text-decoration: none;
-  &:hover{
-    opacity: 0.5;
-  }
-}
 
 /* ========== footer ========== */
 footer{

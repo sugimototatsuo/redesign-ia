@@ -3,6 +3,18 @@ body {
   font-size: 20px;
 }
 
+@media screen and (max-width: 992px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  body {
+    font-size: 5px;
+  }
+}
+
 .wrap {
   overflow: hidden;
 }
@@ -10,7 +22,7 @@ body {
 #showloading {
   width: 100%;
   height: 100vh;
-  background-color: #000000;
+  background-color: #073a49;
   position: relative;
 }
 
@@ -40,7 +52,7 @@ header {
 }
 
 header .left_h {
-  width: 80%;
+  width: 82%;
   height: 80px;
   float: left;
 }
@@ -63,7 +75,7 @@ header .left_h nav ul li {
 
 @media screen and (max-width: 992px) {
   header .left_h nav ul li {
-    font-size: 0.6rem;
+    font-size: 0.3rem;
   }
 }
 
@@ -75,18 +87,12 @@ header .left_h nav ul li a {
   padding: 0 0.5rem;
 }
 
-@media screen and (max-width: 1310px) {
-  header .left_h nav ul li a {
-    padding: 0 0.3rem;
-  }
-}
-
 header .left_h nav ul li a:hover {
   opacity: 0.5;
 }
 
 header .right_h {
-  width: 20%;
+  width: 18%;
   height: 80px;
   float: right;
   text-align: center;
@@ -106,7 +112,13 @@ header label {
 
 @media screen and (max-width: 1310px) {
   header label {
-    width: 5.5rem;
+    width: 5.0rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  header label {
+    width: 4rem;
   }
 }
 
@@ -132,7 +144,13 @@ header .right_h ul {
 
 @media screen and (max-width: 1310px) {
   header .right_h ul {
-    width: 5.5rem;
+    width: 5.0rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  header .right_h ul {
+    width: 4rem;
   }
 }
 
@@ -393,12 +411,21 @@ pre#result {
   display: block;
 }
 
-.faculty-link > a {
+.faculty-link a {
   color: #2E2E2E;
   text-decoration: none;
 }
 
-.faculty-link > a:hover {
+.faculty-link a:hover {
+  opacity: 0.5;
+}
+
+.faculty-link-en a {
+  color: #2E2E2E;
+  text-decoration: none;
+}
+
+.faculty-link-en a:hover {
   opacity: 0.5;
 }
 
@@ -406,7 +433,7 @@ pre#result {
   text-align: center;
 }
 
-#nomalLink {
+#nomalLink, #englishLink {
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
   margin: 2rem;
@@ -437,40 +464,69 @@ pre#result {
 }
 
 /* ========== admission ==========*/
-#admission #nomalAdmissionText {
+#nomalAdmissionText, #englishAdmissionText, #easyAdmissionText {
   background: #E4EBEF;
   padding: 50px 100px;
+  width: 100%;
 }
 
-#admission #nomalAdmissionText h4 {
+#nomalAdmissionText, #englishAdmissionText, #easyAdmissionText h4 {
   font-size: 1.5rem;
   margin-top: 1rem;
 }
 
-#admission #nomalAdmissionText p, ol, ul {
+#nomalAdmissionText, #englishAdmissionText, #easyAdmissionText p, ol, ul {
   padding-left: 3rem;
   /* padding-bottom: 20px; */
 }
 
-#admission #nomalAdmissionText img {
+#nomalAdmissionText, #englishAdmissionText, #easyAdmissionText > img {
   display: block;
-  width: 70%;
   margin: 0.3rem auto 1rem;
 }
 
-#admission #nomalAdmissionText a {
+#nomalAdmissionText, #englishAdmissionText, #easyAdmissionText a {
   color: #2E2E2E;
   text-decoration: none;
 }
 
+#adcontent img {
+  display: block;
+  margin: 0.5rem auto 1rem;
+}
+
+#adcontenten img {
+  display: block;
+  margin: 0.5rem auto 1rem;
+}
+
+#adcontenten a {
+  text-decoration: none;
+  color: #2E2E2E;
+}
+
+#adcontenteas img {
+  display: block;
+  margin: 0.5rem auto 1rem;
+}
+
 /* ========== question ========== */
-#question #nomalQText {
+#question #nomalQText, #englishQText, #easyQText {
   background: #E4EBEF;
   padding: 3rem 5rem;
 }
 
-#question #nomalQText h4 {
+#question #nomalQText h4, #englishQText h4, #easyQText h4 {
   margin-top: 1rem;
+}
+
+#question #nomalQText a, #englishQText a, #easyQText a {
+  text-decoration: none;
+  color: #2E2E2E;
+}
+
+#question #nomalQText a:hover, #englishQText a:hover, #easyQText a:hover {
+  opacity: 0.5;
 }
 
 #nomalAcText, #englishAcText, #easyAcText {

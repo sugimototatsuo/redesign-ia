@@ -9,7 +9,7 @@ $breakpoints: (
 //メディアクエリ用のmixinを定義。デフォ値はmd
 @mixin mq($breakpoint: md) {
 //map-get(マップ型変数, キー)で値を取得
-  @media ( max-width: #{map-get($breakpoints, $breakpoint)} ) {
+  @media #{map-get($breakpoints, $breakpoint)} {
     @content;
   }
 }
@@ -117,7 +117,10 @@ label {
     color :#000;
     background: #C3C3C3;
     cursor :pointer;
-
+    a{
+      text-decoration: none;
+      color: #363636;
+    }
 }
 
 input {
@@ -163,135 +166,32 @@ input {
 
 .wraper{
   min-height: 90vh;
-}
-
-// section{
-//   background: #E4EBEF;
-//   padding: 5rem;
-
-//   .second_box{
-//     width: 100%;
-//     overflow: hidden;
-//     margin-bottom: 2rem;
-//     .right_box{
-//       width: 30%;
-//       h3{
-//         font-size: 2rem;
-//         margin-bottom: 2rem;
-//       }
-//       h5{
-//         font-size: 1.5rem;
-//       }
-//     }
-//     // .left_box{
-//     //   width: 70%;
-//     //   margin-bottom: 2rem;
-//     //   img{
-//     //     width: 100%;
-//     //   }
-//     // }
-// .cp_cssslider {
-// width: 65%;
-// padding-top: 650px; /* 画像の高さ */
-// @include mq(lg2){
-//   padding-top: 450px;
-// }
-// @include mq(lg){
-//   padding-top: 400px;
-// }
-// position: relative;
-// // margin: 2em auto;
-// text-align: center;
-// }
-// .cp_cssslider > img {
-// width: 100%;
-// position: absolute;
-// left: 0;
-// top: 0;
-// transition: all 0.5s;
-// border-radius: 3px;
-// box-shadow:0px 0px 5px 0px rgba(0,0,0,0.3);
-// }
-// .cp_cssslider input[name='cp_switch'] {
-// display: none;
-// }
-// /* サムネイル */
-// .cp_cssslider label {
-// margin: 15px 5px 0 5px;
-// border: 2px solid #ffffff;
-// display: inline-block;
-// cursor: pointer;
-// transition: all 0.5s ease;
-// opacity: 0.6;
-// border-radius: 3px;
-// }
-// .cp_cssslider label:hover {
-// opacity: 0.9;
-// }
-// .cp_cssslider label img {
-// display: block;
-// width: 100px;
-// height: 80px;
-// border-radius: 2px;
-// }
-// .cp_cssslider input[name='cp_switch']:checked + label {
-// border: 2px solid #FF7043;
-// opacity: 1;
-// }
-// .cp_cssslider input[name='cp_switch'] ~ img {
-// opacity: 0;
-// }
-// .cp_cssslider input[name='cp_switch']:checked + label + img {
-// opacity: 1;
-// }
-//   }
-// }
-// .faculty_title{
-//   float: left;
-//   @include mq(sm){
-//         float: none;
-//       }
-// }
-
-// .right_box{
-//   float: right;
-//   text-align: right;
-//   @include mq(md){
-//     float: none;
-//     text-align: left;
-//     width: 40%;
-//     font-size: 4rem;
-//   }
-// }
-// p{
-//   width: 80%;
-//   margin: 0 auto;
-// }
-
-// ========== toTop ==========
-a.toTop{
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  background: #2B2845;
-  color: #FFFFFF;
-  text-align: center;
-  width: 12rem;
-  padding: 1.0rem 0.3rem;
-  text-decoration: none;
-  &:hover{
-    opacity: 0.5;
+  .first-text{
+    width: 40%;
+    float: left;
   }
-}
-
-/* ========== footer ========== */
-footer{
-  width: 100%;
-  background: #2B2845;
-  padding: 1rem 0;
-  >p{
-    text-align: center!important;
-    color: #FFFFFF;
-    margin-bottom: 0.3rem;
+  #studios{
+    width: 60%;
+    float: right;
+    h3{
+      color: red;
+    }
+    div{
+      width: 100%;
+      div{
+        width: 16%;
+        a{
+          img{
+            display: block;
+            width: 90%;
+            margin: 0 auto;
+          }
+        }
+        span{
+          font-size: 0.4rem;
+          text-align: center;
+        }
+      }
+    }
   }
 }

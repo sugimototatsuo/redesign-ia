@@ -545,6 +545,25 @@ header .right_h #type1:checked ~ #links1 li {
   opacity: 0.5;
 }
 
+@media screen and (min-width: 768px) {
+  .studio-title-en {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .studio-title-en {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .studio-title-en {
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+  }
+}
+
 pre#result {
   background-color: #444;
   color: #fff;
@@ -579,26 +598,53 @@ pre#result {
 #nomalFaculty, #englishFaculty {
   border: 1px solid #707070;
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 0 2rem;
+  justify-content: space-around;
+  padding: 1rem 2rem;
   color: #2E2E2E;
 }
 
 #nomalFaculty > div {
   margin: 1em 0;
-  padding: 1rem;
-  min-height: 3em;
-  width: 33%;
+  width: 100%;
+  height: 9rem;
   display: inline-block;
   overflow: hidden;
 }
 
+@media screen and (min-width: 768px) {
+  #nomalFaculty > div {
+    width: 40%;
+    height: 10rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #nomalFaculty > div {
+    width: 30%;
+    height: 10rem;
+  }
+}
+
 #englishFaculty > div {
   margin: 1em 0;
-  padding: 1rem;
-  min-height: 3em;
-  width: 33%;
+  width: 100%;
+  height: 9rem;
   display: inline-block;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  #englishFaculty > div {
+    width: 40%;
+    height: 10rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #englishFaculty > div {
+    width: 30%;
+    height: 10rem;
+  }
 }
 
 .text-box {
@@ -614,7 +660,13 @@ pre#result {
 #faculty span {
   display: inline-block;
   margin: 0.2rem 1rem;
-  font-size: 0.8rem;
+  font-size: 0.5rem;
+}
+
+@media screen and (min-width: 992px) {
+  #faculty span {
+    font-size: 0.7rem;
+  }
 }
 
 .faculty-name, .faculty-name-en {
@@ -654,15 +706,29 @@ pre#result {
 }
 
 #column > div > div {
-  width: 23rem;
+  width: 10rem;
   display: inline-block;
   text-align: center;
   margin: 2rem;
 }
 
+@media screen and (min-width: 768px) {
+  #column > div > div {
+    width: 23rem;
+  }
+}
+
 .link-image {
-  width: 23rem;
-  height: 23rem;
+  width: 10rem;
+  height: 10rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .link-image {
+    width: 23rem;
+    height: 23rem;
+  }
 }
 
 .link-title {
@@ -677,24 +743,78 @@ pre#result {
   opacity: 0.5;
 }
 
+@media screen and (min-width: 768px) {
+  .link-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* ========== admission ==========*/
+#admission #nomalAdmissionText, #admission #englishAdmissionText, #admission #easyAdmissionText {
+  padding: 1rem 2rem;
+  background: #E4EBEF;
+}
+
+@media screen and (min-width: 768px) {
+  #admission #nomalAdmissionText, #admission #englishAdmissionText, #admission #easyAdmissionText {
+    padding: 2rem 4rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #admission #nomalAdmissionText, #admission #englishAdmissionText, #admission #easyAdmissionText {
+    padding: 2rem 4rem;
+    font-size: 1.2rem;
+  }
+}
+
+#admission #nomalAdmissionText h4, #admission #englishAdmissionText h4, #admission #easyAdmissionText h4 {
+  padding-bottom: 0.5rem;
+}
+
+#admission #nomalAdmissionText h5, #admission #englishAdmissionText h5, #admission #easyAdmissionText h5 {
+  padding: 0.3rem 0 0.1rem;
+}
+
+#admission #nomalAdmissionText div img, #admission #englishAdmissionText div img, #admission #easyAdmissionText div img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+#admission #nomalAdmissionText a, #admission #englishAdmissionText a, #admission #easyAdmissionText a {
+  color: #363636;
+}
+
+#admission #nomalAdmissionText a:hover, #admission #englishAdmissionText a:hover, #admission #easyAdmissionText a:hover {
+  opacity: 0.5;
+}
+
 /* ========== admission ==========*/
 /* ========== question ========== */
-#question #nomalQText, #englishQText, #easyQText {
+#question > div {
+  padding: 1rem 2rem;
   background: #E4EBEF;
-  padding: 3rem 5rem;
 }
 
-#question #nomalQText h4, #englishQText h4, #easyQText h4 {
-  margin-top: 1rem;
+@media screen and (min-width: 768px) {
+  #question > div {
+    padding: 2rem 4rem;
+    font-size: 1.1rem;
+  }
 }
 
-#question #nomalQText a, #englishQText a, #easyQText a {
-  text-decoration: none;
-  color: #2E2E2E;
+@media screen and (min-width: 992px) {
+  #question > div {
+    padding: 2rem 4rem;
+    font-size: 1.3rem;
+  }
 }
 
-#question #nomalQText a:hover, #englishQText a:hover, #easyQText a:hover {
-  opacity: 0.5;
+#access iframe {
+  width: 100%;
+  height: 400px;
 }
 
 #nomalAcText, #englishAcText, #easyAcText {
@@ -704,6 +824,16 @@ pre#result {
 
 #nomalAcText ul, #englishAcText ul, #easyAcText ul {
   list-style: none;
+}
+
+#nomalAcText ul li p, #englishAcText ul li p, #easyAcText ul li p {
+  font-size: 0.5rem;
+}
+
+@media screen and (min-width: 992px) {
+  #nomalAcText ul li p, #englishAcText ul li p, #easyAcText ul li p {
+    font-size: 1rem;
+  }
 }
 
 #nomalAcText h4, #nomalAcText > p, #englishAcText h4, #englishAcText > p, #easyAcText h4, #easyAcText > p {

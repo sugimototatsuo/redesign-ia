@@ -473,6 +473,16 @@ li {
   &:hover{
     opacity: 0.5;
   }
+  @include mq(md){
+    font-size: 0.6rem;
+  }
+  @include mq(lg){
+    font-size: 1rem;
+  }
+  @include mq(xl){
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+  }
 }
 pre#result {
   background-color: #444;
@@ -500,24 +510,39 @@ pre#result {
 #nomalFaculty, #englishFaculty{
   border: 1px solid #707070;
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 0 2rem;
+  justify-content: space-around;
+  padding: 1rem 2rem;
   color: #2E2E2E;
 }
 #nomalFaculty > div {
   margin: 1em 0;
-  padding: 1rem;
-  min-height: 3em;
-  width: 33%;
+  width: 100%;
+  height: 9rem;
   display: inline-block;
   overflow: hidden;
+  @include mq(md){
+    width: 40%;
+    height: 10rem;
+  }
+  @include mq(lg){
+    width: 30%;
+    height: 10rem;
+  }
 }
 #englishFaculty > div {
   margin: 1em 0;
-  padding: 1rem;
-  min-height: 3em;
-  width: 33%;
+  width: 100%;
+  height: 9rem;
   display: inline-block;
+  overflow: hidden;
+  @include mq(md){
+    width: 40%;
+    height: 10rem;
+  }
+  @include mq(lg){
+    width: 30%;
+    height: 10rem;
+  }
 }
 .text-box{
   width: 67%;
@@ -526,12 +551,17 @@ pre#result {
 .faculty-image,.faculty-image-en{
   float: left;
   width: 33%;
-  // height: 30%;
 }
 #faculty span{
   display: inline-block;
   margin: 0.2rem 1rem;
-  font-size: 0.8rem;
+  font-size: 0.5rem;
+  @include mq(md){
+    // font-size: 0.1rem;
+  }
+  @include mq(lg){
+    font-size: 0.7rem;
+  }
 }
 .faculty-name, .faculty-name-en{
     font-weight: bold;
@@ -564,14 +594,22 @@ pre#result {
   margin: 2rem;
 }
 #column > div > div{
-  width: 23rem;
+  width: 10rem;
   display: inline-block;
   text-align: center;
   margin: 2rem;
+  @include mq(md){
+    width: 23rem;
+  }
 }
 .link-image{
-  width: 23rem;
-  height: 23rem;
+  width: 10rem;
+  height: 10rem;
+  cursor: pointer;
+  @include mq(md){
+    width: 23rem;
+    height: 23rem;
+  }
 }
 .link-title{
   display: inline-block;
@@ -582,8 +620,45 @@ pre#result {
   &:hover{
     opacity: 0.5;
   }
+  @include mq(md){
+   font-size: 1.5rem;
+  }
 }
 
+/* ========== admission ==========*/
+#admission{
+#nomalAdmissionText, #englishAdmissionText, #easyAdmissionText{//#nomal ,#english ,#easyAdmissionText
+    padding: 1rem 2rem;
+    background: #E4EBEF;
+    @include mq(md){
+      padding: 2rem 4rem;
+      font-size: 1.1rem;
+    }
+    @include mq(lg){
+      padding: 2rem 4rem;
+      font-size: 1.2rem;
+    }
+    h4{
+      padding-bottom: 0.5rem;
+    }
+    h5{
+      padding: 0.3rem 0 0.1rem;
+    }
+    div{
+      img{
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+      }
+    }
+    a{
+      color: $textCol;
+      &:hover{
+        opacity: 0.5;
+      }
+    }
+  }
+}
 
 // 問題あり
 /* ========== admission ==========*/
@@ -627,24 +702,44 @@ pre#result {
 // }
 
 /* ========== question ========== */
-#question #nomalQText,#englishQText,#easyQText{
-  background: #E4EBEF;
-  padding: 3rem 5rem;
-  h4{
-    margin-top: 1rem;
-  }
-  a{
-    text-decoration: none;
-    color: #2E2E2E;
-    &:hover{
-      opacity: 0.5;
+#question{
+  >div{
+    padding: 1rem 2rem;
+    background: #E4EBEF;
+    @include mq(md){
+      padding: 2rem 4rem;
+      font-size: 1.1rem;
+    }
+    @include mq(lg){
+      padding: 2rem 4rem;
+      font-size: 1.3rem;
     }
   }
 }
 
+
+
+// #question #nomalQText,#englishQText,#easyQText{
+//   background: #E4EBEF;
+//   padding: 3rem 5rem;
+//   h4{
+//     margin-top: 1rem;
+//   }
+//   a{
+//     text-decoration: none;
+//     color: #2E2E2E;
+//     &:hover{
+//       opacity: 0.5;
+//     }
+//   }
+// }
+
 // ========== access =========
 #access{
-
+  iframe{
+    width: 100%;
+    height: 400px
+  }
 }
 
 // ========== AcText ==========
@@ -655,7 +750,10 @@ pre#result {
     list-style: none;
     li{
       p{
-
+        font-size: 0.5rem;
+        @include mq(lg){
+          font-size: 1rem;
+        }
       }
     }
   }

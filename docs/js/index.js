@@ -401,6 +401,9 @@ window.onload = function () {
     document.getElementById('nomalStudios').style.display = "flex";
     document.getElementById('englishStudios').style.display = "none";
 
+    // document.getElementById('nomalCapSt').style.display = "none";
+    // document.getElementById('easyCapSt').style.display = "flex";
+
     document.getElementById('nomalFaculty').style.display = "flex";
     document.getElementById('englishFaculty').style.display = "none";
 
@@ -562,6 +565,9 @@ document.getElementById("button").onclick = function () {
     document.getElementById('nomalStudios').style.display = "flex";
     document.getElementById('englishStudios').style.display = "none";
 
+    // document.getElementById('nomalCapSt').style.display = "flex";
+    // document.getElementById('easyCapSt').style.display = "none";
+
     document.getElementById('nomalFaculty').style.display = "flex";
     document.getElementById('englishFaculty').style.display = "none";
 
@@ -649,6 +655,9 @@ document.getElementById("button2").onclick = function () {
     document.getElementById('nomalStudios').style.display = "flex";
     document.getElementById('englishStudios').style.display = "none";
 
+    // document.getElementById('nomalCapSt').style.display = "none";
+    // document.getElementById('easyCapSt').style.display = "flex";
+
     document.getElementById('nomalFaculty').style.display = "flex";
     document.getElementById('englishFaculty').style.display = "none";
 
@@ -724,6 +733,9 @@ document.getElementById("button2").onclick = function () {
 
     document.getElementById('nomalStudios').style.display = "flex";
     document.getElementById('englishStudios').style.display = "none";
+
+    // document.getElementById('nomalCapSt').style.display = "flex";
+    // document.getElementById('easyCapSt').style.display = "none";
 
     document.getElementById('nomalFaculty').style.display = "flex";
     document.getElementById('englishFaculty').style.display = "none";

@@ -474,6 +474,7 @@ const getData = async () => {
 getData();
 
 //headerのページ遷移時と言語情報渡し
+
 document.getElementById("head-aboutus").onclick = function () {
     var langControll;
     if (langMode == 0) {
@@ -593,3 +594,16 @@ document.getElementById("head-access").onclick = function () {
     }
     location.href = "../index.html" + langControll + "#access";
 };
+
+document.getElementById("back").onclick = function () {
+    var langControll;
+    if (langMode == 0) {
+        langControll = "?lang=0";
+    } else if (langMode == 1) {
+        langControll = "?lang=1";
+    } else if (langMode == 2) {
+        langControll = "?lang=2";
+    }
+    location.href = "../index.html" + langControll;
+};
+

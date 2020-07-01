@@ -192,6 +192,11 @@ header .left_h nav ul li a {
 header .left_h nav ul li a h3 {
   margin-top: 1rem;
   padding-left: 1rem;
+  cursor: pointer;
+}
+
+header .left_h nav ul li a h3:hover {
+  opacity: 0.5;
 }
 
 @media screen and (min-width: 992px) {

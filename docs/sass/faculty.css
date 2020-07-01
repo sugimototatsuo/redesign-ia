@@ -1,18 +1,14 @@
 @charset "UTF-8";
 body {
-  font-family: sans-serif;
-  font-size: 20px;
+  font-family: 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+  font-size: 10px;
+  font-weight: normal;
+  width: 100%;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 992px) {
   body {
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 769px) {
-  body {
-    font-size: 5px;
+    font-size: 12px;
   }
 }
 
@@ -23,7 +19,7 @@ body {
 #showloading {
   width: 100%;
   height: 100vh;
-  background-color: #000000;
+  background-color: #073a49;
   position: relative;
 }
 
@@ -42,94 +38,211 @@ body {
   display: none;
 }
 
-/*========== header nav ==========*/
 header {
-  position: fixed;
-  top: 0;
-  background: #fff;
   width: 100%;
   height: 80px;
+  position: fixed;
+  background: #fff;
   z-index: 10;
+  /*チェックボックス等は非表示に*/
+  /*アイコンのスペース*/
+  /*ハンバーガーアイコンをCSSだけで表現*/
+  /*閉じる用の薄黒カバー*/
+  /*中身*/
+  /*チェックが入ったらもろもろ表示*/
+}
+
+header #nav-drawer {
+  position: relative;
+  padding-left: 30px;
+}
+
+header .nav-unshown {
+  display: none;
+}
+
+header #nav-open {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 992px) {
+  header #nav-open {
+    display: none;
+  }
+}
+
+header #nav-open span, header #nav-open span:before, header #nav-open span:after {
+  position: absolute;
+  height: 3px;
+  /*線の太さ*/
+  width: 25px;
+  /*長さ*/
+  border-radius: 3px;
+  background: #2B2845;
+  display: block;
+  content: '';
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+header #nav-open span:before {
+  bottom: -8px;
+}
+
+header #nav-open span:after {
+  bottom: -16px;
+}
+
+header #nav-close {
+  display: none;
+  /*はじめは隠しておく*/
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  /*全体に広がるように*/
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+
+@media screen and (max-width: 992px) {
+  header #nav-content {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    /*最前面に*/
+    width: 70%;
+    /*右側に隙間を作る（閉じるカバーを表示）*/
+    max-width: 330px;
+    /*最大幅（調整してください）*/
+    height: 100vh;
+    background: #2B2845;
+    /*背景色*/
+    transition: .3s ease-in-out;
+    /*滑らかに表示*/
+    -webkit-transform: translateX(-105%);
+    transform: translateX(-105%);
+    /*左に隠しておく*/
+  }
+}
+
+header #nav-input:checked ~ #nav-close {
+  display: block;
+  /*カバーを表示*/
+  opacity: .5;
+}
+
+header #nav-input:checked ~ #nav-content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+  /*中身を表示（右へスライド）*/
+  box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
 }
 
 header .left_h {
-  padding-left: 50px;
-  width: 82%;
-  height: 80px;
+  width: 60%;
   float: left;
 }
 
-header .left_h nav ul {
-  padding-left: -50px;
+@media screen and (min-width: 992px) {
+  header .left_h {
+    width: 80%;
+  }
 }
 
 header .left_h nav ul li {
   list-style: none;
-  display: inline-block;
-  font-size: 1.0rem;
 }
 
-@media screen and (max-width: 1310px) {
+@media screen and (min-width: 992px) {
   header .left_h nav ul li {
-    font-size: 0.65rem;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  header .left_h nav ul li {
-    font-size: 0.3rem;
+    display: inline-block;
   }
 }
 
 header .left_h nav ul li a {
   text-decoration: none;
-  color: #363636;
-  line-height: 80px;
-  display: block;
-  padding: 0 0.5rem;
+  font-size: 1.2rem;
+  color: #fff;
 }
 
-header .left_h nav ul li a:hover {
-  opacity: 0.5;
+@media screen and (min-width: 992px) {
+  header .left_h nav ul li a {
+    color: #363636;
+    font-size: 0.5rem;
+    line-height: 80px;
+  }
 }
 
-header .right_h {
-  width: 18%;
-  height: 80px;
-  float: right;
-  text-align: center;
-  position: relative;
+@media screen and (min-width: 1200px) {
+  header .left_h nav ul li a {
+    color: #363636;
+    font-size: 0.9rem;
+    line-height: 80px;
+  }
 }
 
-header label {
-  display: inline-block;
-  float: right;
-  margin-left: 5px;
-  width: 7rem;
-  line-height: 80px;
-  color: #000;
-  background: #C3C3C3;
+header .left_h nav ul li a h3 {
+  margin-top: 1rem;
+  padding-left: 1rem;
   cursor: pointer;
 }
 
-@media screen and (max-width: 1310px) {
-  header label {
+header .left_h nav ul li a h3:hover {
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 992px) {
+  header .left_h nav ul li a h3 {
+    margin: 0;
+  }
+}
+
+header .right_h {
+  width: 40%;
+  float: right;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 992px) {
+  header .right_h {
+    width: 20%;
+  }
+}
+
+header .right_h label {
+  display: inline-block;
+  width: 4.0rem;
+  text-align: center;
+  float: right;
+  color: #363636;
+  background: #C3C3C3;
+  line-height: 80px;
+  margin-left: 2%;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 576px) {
+  header .right_h label {
     width: 5.0rem;
   }
 }
 
-@media screen and (max-width: 992px) {
-  header label {
-    width: 4rem;
-  }
-}
-
-header label a {
+header .right_h label a {
   text-decoration: none;
   color: #363636;
 }
 
-header input {
+header .right_h input {
   display: none;
 }
 
@@ -137,22 +250,18 @@ header .right_h ul {
   position: absolute;
   top: 80px;
   right: 0;
-  width: 7rem;
+  width: 4.0rem;
+  font-size: 1rem;
   margin: 0;
   padding: 0;
   background: #C3C3C3;
   list-style: none;
+  text-align: center;
 }
 
-@media screen and (max-width: 1310px) {
+@media screen and (min-width: 576px) {
   header .right_h ul {
     width: 5.0rem;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  header .right_h ul {
-    width: 4rem;
   }
 }
 
@@ -166,41 +275,54 @@ header .right_h li {
   transition: all 0.5s;
 }
 
-header #type1:checked ~ #links1 li {
-  height: 70px;
+header .right_h #type1:checked ~ #links1 li {
+  height: 60px;
   opacity: 1;
   cursor: pointer;
 }
 
 .wraper {
   width: 100%;
-  padding: 3rem 5rem;
-  min-height: 95vh;
+  padding: 1rem 1.5rem;
+  min-height: 100vh;
   background: #E4EBEF;
   font-weight: normal;
+}
+
+@media screen and (min-width: 992px) {
+  .wraper {
+    padding: 2rem 3rem;
+  }
 }
 
 .wraper .first_box {
   width: 100%;
   overflow: hidden;
+  margin-top: 1rem;
   margin-bottom: 2rem;
 }
 
 .wraper .first_box #studios {
-  width: 30%;
-  float: right;
+  width: 100%;
+  margin-bottom: 2rem;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (min-width: 768px) {
   .wraper .first_box #studios {
-    width: 100%;
-    float: none;
+    width: 40%;
+    float: right;
   }
 }
 
 .wraper .first_box #studios h3 {
   margin-top: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 0.9rem;
+}
+
+@media screen and (min-width: 992px) {
+  .wraper .first_box #studios h3 {
+    font-size: 1.7rem;
+  }
 }
 
 .wraper .first_box #studios div {
@@ -208,87 +330,89 @@ header #type1:checked ~ #links1 li {
 }
 
 .wraper .first_box #studios div div {
-  width: 4rem;
-  height: 4rem;
+  width: 15%;
   display: inline-block;
 }
 
-.wraper .first_box #studios div div a img {
+.wraper .first_box #studios div div a {
   display: block;
-  width: 3rem;
-  height: 3rem;
-  margin: 0 auto;
+  width: 100%;
+  position: relative;
+}
+
+.wraper .first_box #studios div div a:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.wraper .first_box #studios div div a img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  object-fit: cover;
 }
 
 .wraper .first_box #studios div div span {
   font-size: 0.2rem;
   text-align: center;
-  display: none;
 }
 
 .wraper .first_box .faculty_title {
-  width: 60%;
-  float: left;
+  width: 100%;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (min-width: 768px) {
   .wraper .first_box .faculty_title {
-    width: 100%;
-    float: none;
+    width: 60%;
+    float: left;
   }
 }
 
 .wraper .first_box .faculty_title h1 {
-  font-size: 2.7rem;
+  font-size: 1.3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .wraper .first_box .faculty_title h1 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .wraper .first_box .faculty_title h1 {
+    font-size: 2.1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .wraper .first_box .faculty_title h1 {
+    font-size: 2.8rem;
+  }
 }
 
 .wraper .first_box .faculty_title h4 {
-  font-size: 1.5rem;
+  font-size: 1.0rem;
 }
 
-/*吹き出し*/
-.wraper .first_box #nomalStudios > div,.wraper .first_box #englishStudios > div{
-   display: inline-block;
+@media screen and (min-width: 768px) {
+  .wraper .first_box .faculty_title h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
 }
- 
- 
-/* マウスオーバー */
-.wraper .first_box #nomalStudios > div:hover, .wraper .first_box #englishStudios > div:hover {
-    position: relative;
-    color: #333;
-}
- 
-/* マウスオーバー時にツールチップを表示 */
-.wraper .first_box #nomalStudios > div:hover span,.wraper .first_box #englishStudios > div:hover span {
-    display: block; /* ボックス要素にする */
-    position: absolute; 
-    top: 25px;
-    right:40px;
-    font-size: 65%;
-    color: #fff;
-    background-color: rgb(53, 61, 104); 
-    width: 190px;
-    padding: 5px;
-    border-radius:3px;
-    z-index:100;
-}
- 
-.wraper .first_box #nomalStudios > div span:before,.wraper .first_box #englishStudios > div span:before{
-    content:''; 
-    display:block; 
-    position:absolute; /* relativeからの絶対位置 */
-    height:0; 
-    width:0; 
-    top:0px; 
-    right:-2px;
-    border:10px transparent solid; 
-    border-right-width:0; 
-    border-left-color:rgb(53, 61, 104); 
-    transform:rotate(90deg);
-    z-index:100;
-}
-/*吹き出しここまで*/
 
+@media screen and (min-width: 992px) {
+  .wraper .first_box .faculty_title h4 {
+    font-size: 1.7rem;
+  }
+}
 
 .wraper .second_box {
   width: 100%;
@@ -297,44 +421,164 @@ header #type1:checked ~ #links1 li {
 }
 
 .wraper .second_box .right_box {
-  width: 25%;
-  text-align: right;
-  float: right;
+  width: 100%;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (min-width: 768px) {
   .wraper .second_box .right_box {
-    width: 100%;
-    text-align-last: left;
-    float: none;
+    width: 25%;
+    text-align: right;
+    float: right;
   }
 }
 
 .wraper .second_box .right_box h3 {
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: normal;
   padding-bottom: 1rem;
+  display: inline-block;
+}
+
+@media screen and (min-width: 768px) {
+  .wraper .second_box .right_box h3 {
+    display: block;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .wraper .second_box .right_box h3 {
+    font-size: 2.0rem;
+  }
 }
 
 .wraper .second_box .right_box h5 {
-  font-size: 1.5rem;
+  font-size: 0.8rem;
   font-weight: normal;
+  display: inline-block;
+  padding-left: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .wraper .second_box .right_box h5 {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .wraper .second_box .right_box h5 {
+    font-size: 1.5rem;
+  }
+}
+
+.wraper .second_box .right_box .insta_btn {
+  display: inline-block;
+  text-align: center;
+  /*中央揃え*/
+  color: #2e6ca5;
+  /*文字色*/
+  text-decoration: none;
+  /*下線消す*/
+  margin-bottom: 2rem;
+}
+
+.wraper .second_box .right_box .insta_btn:hover {
+  /*ホバー時*/
+  color: #668ad8;
+  /*文字色*/
+  transition: .5s;
+  /*ゆっくり変化*/
+}
+
+.wraper .second_box .right_box .insta_btn .insta {
+  /*アイコンの背景*/
+  position: relative;
+  /*相対配置*/
+  display: inline-block;
+  width: 50px;
+  /*幅*/
+  height: 50px;
+  /*高さ*/
+  background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  /*グラデーション①*/
+  overflow: hidden;
+  /*はみ出た部分を隠す*/
+  border-radius: 13px;
+  /*角丸に*/
+}
+
+.wraper .second_box .right_box .insta_btn .insta:before {
+  /*グラデーションを重ねるため*/
+  content: '';
+  position: absolute;
+  /*絶対配置*/
+  top: 23px;
+  /*ずらす*/
+  left: -18px;
+  /*ずらす*/
+  width: 60px;
+  /*グラデーションカバーの幅*/
+  height: 60px;
+  /*グラデーションカバーの高さ*/
+  background: -webkit-radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+  background: radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+  /*グラデーション②*/
+}
+
+.wraper .second_box .right_box .insta_btn .fa-instagram {
+  /*アイコン*/
+  color: #FFF;
+  /*白に*/
+  position: relative;
+  /*z-indexを使うため*/
+  z-index: 2;
+  /*グラデーションより前に*/
+  font-size: 35px;
+  /*アイコンサイズ*/
+  line-height: 50px;
+  /*高さと合わせる*/
 }
 
 .wraper .second_box .cp_cssslider {
-  width: 70%;
-  float: left;
-  padding-top: 700px;
+  width: 100%;
+  padding-top: 350px;
   /* 画像の高さ */
   position: relative;
   text-align: center;
   margin-bottom: 3rem;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (min-width: 768px) {
   .wraper .second_box .cp_cssslider {
-    width: 100%;
-    float: none;
+    width: 75%;
+    float: left;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .wraper .second_box .cp_cssslider {
+    padding-top: 500px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wraper .second_box .cp_cssslider {
+    padding-top: 510px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .wraper .second_box .cp_cssslider {
+    padding-top: 600px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .wraper .second_box .cp_cssslider {
+    padding-top: 800px;
   }
 }
 
@@ -353,9 +597,9 @@ header #type1:checked ~ #links1 li {
 }
 
 .wraper .second_box .cp_cssslider label {
-  margin: 15px 5px 0 5px;
   border: 2px solid #ffffff;
   display: inline-block;
+  width: 24%;
   cursor: pointer;
   transition: all 0.5s ease;
   opacity: 0.6;
@@ -368,8 +612,7 @@ header #type1:checked ~ #links1 li {
 
 .wraper .second_box .cp_cssslider label img {
   display: block;
-  width: 100px;
-  height: 80px;
+  width: 100%;
   border-radius: 2px;
 }
 
@@ -388,7 +631,20 @@ header #type1:checked ~ #links1 li {
 
 .wraper .text {
   width: 75%;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
+  font-size: 0.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .wraper .text {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .wraper .text {
+    font-size: 1.2rem;
+  }
 }
 
 a.toTop {
@@ -419,5 +675,3 @@ footer p {
   color: #FFFFFF;
   margin-bottom: 0.3rem;
 }
-
-

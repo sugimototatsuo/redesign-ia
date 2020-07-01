@@ -177,6 +177,10 @@ header{
             h3{
               margin-top: 1rem;
               padding-left: 1rem;
+              cursor: pointer;
+            &:hover{
+              opacity: 0.5;
+            }
               @include mq(lg){
                 margin: 0;
               }

@@ -176,6 +176,10 @@ header{
             h3{
               margin-top: 1rem;
               padding-left: 1rem;
+              cursor: pointer;
+            &:hover{
+              opacity: 0.5;
+            }
               @include mq(lg){
                 margin: 0;
               }
@@ -195,7 +199,7 @@ header{
     }
 label {
     display: inline-block;
-    width: 4.0rem;
+    width: 3.7rem;
     @include mq(sm){
       width: 5.0rem;
     }
@@ -219,7 +223,7 @@ ul {
     position: absolute;
     top: 80px;
     right: 0;
-    width: 4.0rem;
+    width: 3.7rem;
     @include mq(sm){
       width: 5.0rem;
     }

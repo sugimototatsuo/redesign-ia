@@ -176,6 +176,10 @@ header{
             h3{
               margin-top: 1rem;
               padding-left: 1rem;
+              cursor: pointer;
+            &:hover{
+              opacity: 0.5;
+            }
               @include mq(lg){
                 margin: 0;
               }
@@ -195,7 +199,7 @@ header{
     }
 label {
     display: inline-block;
-    width: 4.0rem;
+    width: 3.7rem;
     @include mq(sm){
       width: 5.0rem;
     }
@@ -211,6 +215,12 @@ label {
       text-decoration: none;
       color: $textCol;
     }
+    p{
+      cursor: pointer;
+            &:hover{
+              opacity: 0.5;
+            }
+    }
 }
 input {
     display: none;
@@ -219,7 +229,7 @@ ul {
     position: absolute;
     top: 80px;
     right: 0;
-    width: 4.0rem;
+    width: 3.7rem;
     @include mq(sm){
       width: 5.0rem;
     }
@@ -726,6 +736,12 @@ pre#result {
       padding: 2rem 4rem;
       font-size: 1.3rem;
     }
+    a{
+      cursor: pointer;
+            &:hover{
+              opacity: 0.5;
+            }
+    }
   }
 }
 
@@ -764,16 +780,22 @@ pre#result {
       p{
         font-size: 0.5rem;
         @include mq(lg){
-          font-size: 1rem;
+          font-size: 1.2rem;
         }
       }
     }
   }
   h4, > p{
     padding-left: 3rem;
+    @include mq(lg){
+          font-size: 1.2rem;
+        }
   }
   h4{
     padding-top: 0.3rem;
+    @include mq(lg){
+          font-size: 1.2rem;
+        }
   }
 }
 
@@ -787,5 +809,8 @@ footer{
     text-align: center!important;
     color: #FFFFFF;
     margin-bottom: 0.3rem;
+    @include mq(lg){
+          font-size: 1.2rem;
+        }
   }
 }

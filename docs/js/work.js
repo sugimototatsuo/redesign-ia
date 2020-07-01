@@ -482,3 +482,15 @@ document.getElementById("head-access").onclick = function () {
     }
     location.href = "../index.html" + langControll + "#access";
 };
+
+document.getElementById("back").onclick = function () {
+    var langControll;
+    if (langMode == 0) {
+        langControll = "?lang=0";
+    } else if (langMode == 1) {
+        langControll = "?lang=1";
+    } else if (langMode == 2) {
+        langControll = "?lang=2";
+    }
+    location.href = "../index.html" + langControll;
+};

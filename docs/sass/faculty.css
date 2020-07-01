@@ -391,7 +391,7 @@ header #type1:checked ~ #links1 li {
   margin: 0 auto;
 }
 
-.wraper a.toTop {
+a.toTop {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
@@ -403,7 +403,7 @@ header #type1:checked ~ #links1 li {
   text-decoration: none;
 }
 
-.wraper a.toTop:hover {
+a.toTop:hover {
   opacity: 0.5;
 }
 

@@ -22,7 +22,7 @@ body {
 #showloading {
   width: 100%;
   height: 100vh;
-  background-color: #073a49;
+  background-color: #000000;
   position: relative;
 }
 
@@ -360,7 +360,14 @@ pre#result {
   width: 25rem;
   height: 18rem;
   object-fit: cover;
+  cursor: pointer;
+  transition-duration: 0.3s;
 }
+
+/*
+#nomalStudios:hover img, #englishStudios:hover img {
+  opacity: 0.5;
+}*/
 
 #nomalFaculty, #englishFaculty {
   border: 1px solid #707070;

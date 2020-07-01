@@ -3,29 +3,44 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
-    <link rel="stylesheet" href="../styles/styles.css">
+    <!-- <link rel="stylesheet" href="../styles/styles.css"> -->
+    <link rel="stylesheet" href="../sass/reset.css">
+    <!-- <link rel="stylesheet" href="../sass/visual.css"> -->
+    <link rel="stylesheet" href="../sass/faculty.css">
     <link rel="shortcut icon" href="../image/mark.ico">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </head>
 
 <body>
-    <!--
+
     <div id="showloading">
         <img src="../image/loading.gif" alt="loading" width="500px">
     </div>
 
-    <div id="mainContent" class="hidden">-->
-    <!--headerはコピペなので不都合あったら直してください-->
+
+
+    <!-- <div class="wrap">
+        <div id="showloading">
+            <img src="./image/loading.gif" alt="loading">
+        </div> -->
+
     <header>
-        <div class="left_h">
-            <nav>
+        <div class="left_h" id="nav-drawer">
+            <!-- 追加 -->
+            <input id="nav-input" type="checkbox" class="nav-unshown">
+            <label id="nav-open" for="nav-input"><span></span></label>
+            <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+            <!--  -->
+            <nav id="nav-content">
                 <ul>
                     <li><a id="head-aboutus">
                             <h3 id="nomalSubtitle1" style="display: block">学科概要</h3>
-                            <h3 id="easySubtitle1" style="display: none">この<ruby>
+                            <h3 id="easySubtitle1" style="display: none"><ruby>
                                     <rb>学科</rb>
                                     <rt>がっか</rt>
-                                </ruby>について</h3>
+                                </ruby></h3>
                             <h3 id="englishSubtitle1" style="display: none">Summary</h3>
                         </a></li>
                     <li><a id="head-work">
@@ -54,7 +69,7 @@
                             <h3 id="easySubtitle5" style="display: none"><ruby>
                                     <rb>先生</rb>
                                     <rt>せんせい</rt>
-                                </ruby>の<ruby>
+                                </ruby><ruby>
                                     <rb>紹介</rb>
                                     <rt>しょうかい</rt>
                                 </ruby></h3>
@@ -73,12 +88,12 @@
                             <h3 id="easySubtitle6" style="display: none"><ruby>
                                     <rb>入学試験</rb>
                                     <rt>にゅうがくしけん</rt>
-                                </ruby>について</h3>
+                                </ruby></h3>
                             <h3 id="englishSubtitle6" style="display: none">Admission</h3>
                         </a></li>
                     <li><a id="head-question">
                             <h3 id="nomalSubtitle7" style="display: block">よくある質問</h3>
-                            <h3 id="easySubtitle7" style="display: none">よくある<ruby>
+                            <h3 id="easySubtitle7" style="display: none"><ruby>
                                     <rb>質問</rb>
                                     <rt>しつもん</rt>
                                 </ruby></h3>
@@ -92,64 +107,118 @@
                 </ul>
             </nav>
         </div>
+
         <div class="right_h">
-            <a href="https://www.tmu.ac.jp/entrance/faculty/application_guidebook.html">資料請求</a>
-            <a href="#">言語</a>
+
+
+            <label for="type1" class="lang">
+                <p id="nomalLang" style="display: block">言語</p>
+                <p id="englishLang" style="display: none">Lang</p>
+                <p id="easyLang" style="display: none">ことば</p>
+            </label>
+            <input type="checkbox" id="type1" class="accordion">
+            <ul id="links1">
+                <li id="button" class="open">
+                    <p id="nomalButton" style="display: block">English</p>
+                    <p id="englishButton" style="display: none">Undo</p>
+                </li>
+                <li><button id="button2" class="open">
+                        <p id="nomalButton2" style="display: block">やさしい<br>にほんご</p>
+                        <p id="easyButton2" style="display: none">もとに<br>もどす</p>
+                    </button></li>
+            </ul>
+            <label for="type2">
+                <a href="https://www.tmu.ac.jp/entrance/faculty/application_guidebook.html" target="_blank">
+                    <p id="nomalRec" style="display: block">資料</p>
+                    <p id="englishRec" style="display: none">Info</p>
+                    <p id="easyRec" style="display: none"><ruby>
+                            <rb>資料</rb>
+                            <rt>しりょう</rt>
+                        </ruby></p>
+                </a>
+            </label>
+            <input type="checkbox" id="type2" class="accordion">
+
         </div>
     </header>
+    <div style="height: 80px;"></div>
 
-    <button id="button" class="open">
-        <p id="nomalButton" style="display: block">English</p>
-        <p id="englishButton" style="display: none">Undo</p>
-    </button>
 
-    <button id="button2" class="open">
-        <p id="nomalButton2" style="display: block">やさしいにほんご</p>
-        <p id="easyButton2" style="display: none">もとに もどす</p>
-    </button>
-    <h1 id="nomalTitle" style="display: block">映像デザインスタジオ</h1>
-    <h1 id="englishTitle" style="display: none">Kinematograph Design Studio</h1>
-    <h1 id="easyTitle" style="display: none"><ruby>
-            <rb>映像</rb>
-            <rt>えいぞう</rt>
-        </ruby>デザインスタジオ</h1>
+    <div id="mainContent" class="hidden">
+        <div class="wraper">
 
-    <div id="nomalFaculty" style="display: block">
-        <h3>担当教員</h3>
-        <h5>今間 俊博</h5>
-        <h5>教授</h5>
-    </div>
+            <div class="first_box">
+                <div id="studios">
+                    <h3 id="nomalContentsTitle4" style="display: block">他のスタジオを見る</h3>
+                    <h3 id="englishContentsTitle4" style="display: none">Other Studios</h3>
+                    <h3 id="easyContentsTitle4" style="display: none"><ruby>
+                            <rb>他</rb>
+                            <rt>ほか</rt>
+                        </ruby>のスタジオを<ruby>
+                            <rb>見</rb>
+                            <rt>み</rt>
+                        </ruby>る</h3>
+                    <div id="nomalStudios" style="display: block"></div>
+                    <div id="englishStudios" style="display: none"></div>
+                </div>
 
-    <div id="englishFaculty" style="display: none">
-        <h3>Faculty</h3>
-        <h5>Toshihiro Komma</h5>
-        <h5>Professor</h5>
-    </div>
+                <div class="faculty_title">
+                    <h1 id="nomalTitle" style="display: block">映像デザインスタジオ</h1>
+                    <h1 id="englishTitle" style="display: none">Kinematograph Design Studio</h1>
+                    <h1 id="easyTitle" style="display: none"><ruby>
+                                <rb>映像</rb>
+                                <rt>えいぞう</rt>
+                            </ruby>デザインスタジオ</h1>
+                    <h4 id="nomalCore" style="display: block">メディアアートコア</h4>
+                    <h4 id="englishCore" style="display: none">Media Art Core</h4>
 
-    <div id="easyFaculty" style="display: none">
-        <h3><ruby>
+                </div>
+            </div>
+
+            <div class="second_box">
+                <div class="right_box">
+                    <div id="nomalFaculty" style="display: block">
+                        <h3>担当教員</h3>
+                        <h5>今間 俊博</h5>
+                        <h5>教授</h5>
+                    </div>
+
+                    <div id="englishFaculty" style="display: none">
+                        <h3>Faculty</h3>
+                        <h5>Toshihiro Komma</h5>
+                        <h5>Professor</h5>
+                    </div>
+
+                    <div id="easyFaculty" style="display: none">
+                        <h3><ruby>
                 <rb>担当教員</rb>
                 <rt>たんとうきょういん</rt>
             </ruby></h3>
-        <h5><ruby>
+                        <h5><ruby>
                 <rb>今間 俊博</rb>
                 <rt>こんま　としひろ</rt>
             </ruby></h5>
-        <h5><ruby>
+                        <h5><ruby>
                 <rb>教授</rb>
                 <rt>きょうじゅ</rt>
             </ruby></h5>
-    </div>
+                    </div>
+                </div>
 
-    <h4 id="nomalCore" style="display: block">メディアアートコア</h4>
-    <h4 id="englishCore" style="display: none">Media Art Core</h4>
+                <div class="cp_cssslider">
+                    <input type="radio" name="cp_switch" id="photo1" checked />
+                    <label for="photo1"><img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/kd2.png" alt="photo1"></label>
+                    <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/kd2.png" alt="photo1">
+                    <input type="radio" name="cp_switch" id="photo2" />
+                    <label for="photo2"><img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/kd1.png" alt="photo2"></label>
+                    <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/kd1.png" alt="photo2">
 
-    <div id="studioPhoto">
-        <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/kd2.png" alt="photo1" id="studioPhoto1">
-        <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/kd1.png" alt="photo2" id="studioPhoto2">
-    </div>
 
-    <p id="nomalText" style="display: block">
+                </div>
+            </div>
+
+            <div class="text">
+                <p id="nomalText" style="display: block">
         映像は大きく分類すると、その制作手法によって実写(LIVE)映像と、アニメーション映像に分けられる。
         一般的によく目にするアニメーション以外に、CGアニメーション、クレイなどのストップモーションアニメーション等、色々な制作手法が存在する。
         照明、カメラワーク、編集、企画、世界観、キャラクター設定、シナリオ、コンテをベースに、アニメーション特有の知識を加えることにより、
@@ -158,7 +227,7 @@
         シナリオ、コンテなどの仕組みを理解する。
     </p>
 
-    <p id="englishText" style="display: none">
+                <p id="englishText" style="display: none">
         Moving image work can be roughly divided between live action and “animated” productions. Students in the
         Kinematograph
         Design Studio learn not only the basics of theory and practice in lighting, camera work, editing, producing,
@@ -168,7 +237,7 @@
         the fundamentals of traditional cell, computer generated, and stop-motion animation techniques.
     </p>
 
-    <p id="easyText" style="display: none">
+                <p id="easyText" style="display: none">
         <ruby>
             <rb>映像</rb>
             <rt>えいぞう</rt>
@@ -295,23 +364,18 @@
             <rt>りかい</rt>
         </ruby>します。
     </p>
+            </div>
+        </div>
+    </div>
 
-    <a href="../index.html" title="returnIndex">
+    <a class="toTop" id="back">
         <p id="nomalReturn" style="display: block">トップへもどる</p>
         <p id="englishReturn" style="display: none">Return to top</p>
     </a>
 
-    <div id="studios">
-        <h3 id="nomalContentsTitle4" style="display: block">他のスタジオを見る</h3>
-        <h3 id="englishContentsTitle4" style="display: none">Other Studios</h3>
-        <h3 id="easyContentsTitle4" style="display: none"><ruby>
-                <rb>他</rb>
-                <rt>ほか</rt>
-            </ruby>のスタジオを<ruby>
-                <rb>見</rb>
-                <rt>み</rt>
-            </ruby>る</h3>
-        <!--面倒だからjsonで取ってくるけど、ホバーしたらどうのこうのするならこっちのが良いかもと思ったので一応残しておきます
+
+    <!--面倒だからjsonで取ってくるけど、ホバーしたらどうのこうのするならこっちのが良いかもと思ったので一応残しておきます
+
                 <a href="editorial.html">
                     <img src="../image/editorial.png" title="edi" width="50px" height="50px">
                 </a>
@@ -349,10 +413,17 @@
                     <img src="../image/visual.png" title="edi" width="50px" height="50px">
                 </a>
                 --->
-        <div id="nomalStudios" style="display: block"></div>
-        <div id="englishStudios" style="display: none"></div>
-    </div>
+
+
+    <!-- </div> -->
     <!--</div>-->
+
+
+    <footer>
+        <p>東京都立大学</p>
+        <p>Tokyo Metropolitan University</p>
+    </footer>
+
     <script src="../js/js2.js"></script>
 </body>
 

@@ -3,24 +3,44 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
-    <link rel="stylesheet" href="../styles/styles.css">
+    <!-- <link rel="stylesheet" href="../styles/styles.css"> -->
+    <link rel="stylesheet" href="../sass/reset.css">
+    <!-- <link rel="stylesheet" href="../sass/visual.css"> -->
+    <link rel="stylesheet" href="../sass/faculty.css">
     <link rel="shortcut icon" href="../image/mark.ico">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </head>
 
 <body>
-    <!--headerはコピペなので不都合あったら直してください-->
+
+    <div id="showloading">
+        <img src="../image/loading.gif" alt="loading" width="500px">
+    </div>
+
+
+
+    <!-- <div class="wrap">
+        <div id="showloading">
+            <img src="./image/loading.gif" alt="loading">
+        </div> -->
+
     <header>
-        <div class="left_h">
-            <nav>
+        <div class="left_h" id="nav-drawer">
+            <!-- 追加 -->
+            <input id="nav-input" type="checkbox" class="nav-unshown">
+            <label id="nav-open" for="nav-input"><span></span></label>
+            <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+            <!--  -->
+            <nav id="nav-content">
                 <ul>
                     <li><a id="head-aboutus">
                             <h3 id="nomalSubtitle1" style="display: block">学科概要</h3>
-                            <h3 id="easySubtitle1" style="display: none">この<ruby>
+                            <h3 id="easySubtitle1" style="display: none"><ruby>
                                     <rb>学科</rb>
                                     <rt>がっか</rt>
-                                </ruby>について</h3>
+                                </ruby></h3>
                             <h3 id="englishSubtitle1" style="display: none">Summary</h3>
                         </a></li>
                     <li><a id="head-work">
@@ -49,7 +69,7 @@
                             <h3 id="easySubtitle5" style="display: none"><ruby>
                                     <rb>先生</rb>
                                     <rt>せんせい</rt>
-                                </ruby>の<ruby>
+                                </ruby><ruby>
                                     <rb>紹介</rb>
                                     <rt>しょうかい</rt>
                                 </ruby></h3>
@@ -68,12 +88,12 @@
                             <h3 id="easySubtitle6" style="display: none"><ruby>
                                     <rb>入学試験</rb>
                                     <rt>にゅうがくしけん</rt>
-                                </ruby>について</h3>
+                                </ruby></h3>
                             <h3 id="englishSubtitle6" style="display: none">Admission</h3>
                         </a></li>
                     <li><a id="head-question">
                             <h3 id="nomalSubtitle7" style="display: block">よくある質問</h3>
-                            <h3 id="easySubtitle7" style="display: none">よくある<ruby>
+                            <h3 id="easySubtitle7" style="display: none"><ruby>
                                     <rb>質問</rb>
                                     <rt>しつもん</rt>
                                 </ruby></h3>
@@ -87,69 +107,117 @@
                 </ul>
             </nav>
         </div>
+
         <div class="right_h">
-            <a href="https://www.tmu.ac.jp/entrance/faculty/application_guidebook.html">資料請求</a>
-            <a href="#">言語</a>
+
+
+            <label for="type1" class="lang">
+                <p id="nomalLang" style="display: block">言語</p>
+                <p id="englishLang" style="display: none">Lang</p>
+                <p id="easyLang" style="display: none">ことば</p>
+            </label>
+            <input type="checkbox" id="type1" class="accordion">
+            <ul id="links1">
+                <li id="button" class="open">
+                    <p id="nomalButton" style="display: block">English</p>
+                    <p id="englishButton" style="display: none">Undo</p>
+                </li>
+                <li><button id="button2" class="open">
+                        <p id="nomalButton2" style="display: block">やさしい<br>にほんご</p>
+                        <p id="easyButton2" style="display: none">もとに<br>もどす</p>
+                    </button></li>
+            </ul>
+            <label for="type2">
+                <a href="https://www.tmu.ac.jp/entrance/faculty/application_guidebook.html" target="_blank">
+                    <p id="nomalRec" style="display: block">資料</p>
+                    <p id="englishRec" style="display: none">Info</p>
+                    <p id="easyRec" style="display: none"><ruby>
+                            <rb>資料</rb>
+                            <rt>しりょう</rt>
+                        </ruby></p>
+                </a>
+            </label>
+            <input type="checkbox" id="type2" class="accordion">
+
         </div>
     </header>
-    <!--
-    <div id="showloading">
-        <img src="../image/loading.gif" alt="loading" width="500px">
-    </div>
-
-    <div id="mainContent" class="hidden">-->
-    <button id="button" class="open">
-        <p id="nomalButton" style="display: block">English</p>
-        <p id="englishButton" style="display: none">Undo</p>
-    </button>
-
-    <button id="button2" class="open">
-        <p id="nomalButton2" style="display: block">やさしいにほんご</p>
-        <p id="easyButton2" style="display: none">もとに もどす</p>
-    </button>
-    <h1 id="nomalTitle" style="display: block">インテリアデザインスタジオ</h1>
-    <h1 id="englishTitle" style="display: none">Interior Design Studio</h1>
-    <h1 id="easyTitle" style="display: none">インテリアデザインスタジオ</h1>
-
-    <a href="https://instagram.com/int.lab.ia?igshid=i5lwdrdfzx9d"><i class="fab fa-instagram"></i></a>
-
-    <div id="nomalFaculty" style="display: block">
-        <h3>担当教員</h3>
-        <h5>藤原 敬介</h5>
-        <h5>教授</h5>
-    </div>
-
-    <div id="englishFaculty" style="display: none">
-        <h3>Faculty</h3>
-        <h5>Keisuke Fujiwara</h5>
-        <h5>Professor</h5>
-    </div>
-
-    <div id="easyFaculty" style="display: none">
-        <h3><ruby>
-                <rb>担当教員</rb>
-                <rt>たんとうきょういん</rt>
-            </ruby></h3>
-        <h5><ruby>
-                <rb>藤原 敬介</rb>
-                <rt>ふじわら　けいすけ</rt>
-            </ruby></h5>
-        <h5><ruby>
-                <rb>教授</rb>
-                <rt>きょうじゅ</rt>
-            </ruby></h5>
-    </div>
-
-    <h4 id="nomalCore" style="display: block">プロダクトデザインコア</h4>
-    <h4 id="englishCore" style="display: none">Product Design Core</h4>
+    <div style="height: 80px;"></div>
 
 
-    <div id="studioPhoto">
-        <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/id1.jpg" alt="photo1" id="studioPhoto1">
-        <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/id2.jpg" alt="photo2" id="studioPhoto2">
-    </div>
+    <div id="mainContent" class="hidden">
+        <div class="wraper">
 
-    <p id="nomalText" style="display: block">
+            <div class="first_box">
+                <div id="studios">
+                    <h3 id="nomalContentsTitle4" style="display: block">他のスタジオを見る</h3>
+                    <h3 id="englishContentsTitle4" style="display: none">Other Studios</h3>
+                    <h3 id="easyContentsTitle4" style="display: none"><ruby>
+                            <rb>他</rb>
+                            <rt>ほか</rt>
+                        </ruby>のスタジオを<ruby>
+                            <rb>見</rb>
+                            <rt>み</rt>
+                        </ruby>る</h3>
+                    <div id="nomalStudios" style="display: block"></div>
+                    <div id="englishStudios" style="display: none"></div>
+                </div>
+
+                <div class="faculty_title">
+                    <h1 id="nomalTitle" style="display: block">インテリアデザインスタジオ</h1>
+                    <h1 id="englishTitle" style="display: none">Interior Design Studio</h1>
+                    <h1 id="easyTitle" style="display: none">インテリアデザインスタジオ</h1>
+
+                    <h4 id="nomalCore" style="display: block">プロダクトデザインコア</h4>
+                    <h4 id="englishCore" style="display: none">Product Design Core</h4>
+
+
+                </div>
+            </div>
+
+            <div class="second_box">
+                <div class="right_box">
+                    <div id="nomalFaculty" style="display: block">
+                        <h3>担当教員</h3>
+                        <h5>藤原 敬介</h5>
+                        <h5>教授</h5>
+                    </div>
+
+                    <div id="englishFaculty" style="display: none">
+                        <h3>Faculty</h3>
+                        <h5>Keisuke Fujiwara</h5>
+                        <h5>Professor</h5>
+                    </div>
+
+                    <div id="easyFaculty" style="display: none">
+                        <h3><ruby>
+                                    <rb>担当教員</rb>
+                                    <rt>たんとうきょういん</rt>
+                                </ruby></h3>
+                        <h5><ruby>
+                                    <rb>藤原 敬介</rb>
+                                    <rt>ふじわら　けいすけ</rt>
+                                </ruby></h5>
+                        <h5><ruby>
+                                    <rb>教授</rb>
+                                    <rt>きょうじゅ</rt>
+                                </ruby></h5>
+                    </div>
+                    <a class="insta_btn" href="https://instagram.com/int.lab.ia?igshid=i5lwdrdfzx9d"><i class="fab fa-instagram"></i></a>
+                </div>
+
+                <div class="cp_cssslider">
+                    <input type="radio" name="cp_switch" id="photo1" checked />
+                    <label for="photo1"><img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/id1.jpg" alt="photo1"></label>
+                    <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/id1.jpg" alt="photo1">
+                    <input type="radio" name="cp_switch" id="photo2" />
+                    <label for="photo2"><img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/id2.jpg" alt="photo2"></label>
+                    <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/id2.jpg" alt="photo2">
+
+                </div>
+            </div>
+
+            <div class="text">
+                <p id="nomalText" style="display: block">
         デザインとは、社会に対し、未来に対し、小さな"きっかけ"という種を蒔くようなことだと考えています。
         インテリアデザインスタジオでは、人間と社会と自然を結び付け"生きるとは何か"を考えることをデザインの出発点としています。
         ひとりひとりの感性や知性を大切にしながら議論を重ね、デザインの試行錯誤を繰り返します。デザインを"造形を通した文化の創造"と位置づけ、
@@ -157,7 +225,7 @@
         ここでデザインを学び巣立った学生たちが、世界を魅了するデザイニストとなり、未来に素敵な花を芽吹かせてくれることを願っています。
     </p>
 
-    <p id="englishText" style="display: none">
+                <p id="englishText" style="display: none">
         At the Interior Design Studio we believe that design is a way of sowing the seeds of opportunities for the
         future.
         Design is cultural creation through forms. It is a constant trial and error of how to better connect people, and
@@ -167,7 +235,7 @@
         graduating class we are spreading the seeds of a brilliant bouquet of flowers, ready to brighten the world.
     </p>
 
-    <p id="easyText" style="display: none">
+                <p id="easyText" style="display: none">
         デザインとは、<ruby>
             <rb>社会</rb>
             <rt>しゃかい</rt>
@@ -287,23 +355,18 @@
             <rt>ねが</rt>
         </ruby>っています。
     </p>
+            </div>
+        </div>
+    </div>
 
-    <a href="../index.html" title="returnIndex">
+    <a class="toTop" id="back">
         <p id="nomalReturn" style="display: block">トップへもどる</p>
         <p id="englishReturn" style="display: none">Return to top</p>
     </a>
 
-    <div id="studios">
-        <h3 id="nomalContentsTitle4" style="display: block">他のスタジオを見る</h3>
-        <h3 id="englishContentsTitle4" style="display: none">Other Studios</h3>
-        <h3 id="easyContentsTitle4" style="display: none"><ruby>
-                <rb>他</rb>
-                <rt>ほか</rt>
-            </ruby>のスタジオを<ruby>
-                <rb>見</rb>
-                <rt>み</rt>
-            </ruby>る</h3>
-        <!--面倒だからjsonで取ってくるけど、ホバーしたらどうのこうのするならこっちのが良いかもと思ったので一応残しておきます
+
+    <!--面倒だからjsonで取ってくるけど、ホバーしたらどうのこうのするならこっちのが良いかもと思ったので一応残しておきます
+
                 <a href="editorial.html">
                     <img src="../image/editorial.png" title="edi" width="50px" height="50px">
                 </a>
@@ -341,10 +404,17 @@
                     <img src="../image/visual.png" title="edi" width="50px" height="50px">
                 </a>
                 --->
-        <div id="nomalStudios" style="display: block"></div>
-        <div id="englishStudios" style="display: none"></div>
-    </div>
+
+
+    <!-- </div> -->
     <!--</div>-->
+
+
+    <footer>
+        <p>東京都立大学</p>
+        <p>Tokyo Metropolitan University</p>
+    </footer>
+
     <script src="../js/js2.js"></script>
 </body>
 

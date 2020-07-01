@@ -3,23 +3,44 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
-    <link rel="stylesheet" href="../styles/styles.css">
+    <!-- <link rel="stylesheet" href="../styles/styles.css"> -->
+    <link rel="stylesheet" href="../sass/reset.css">
+    <!-- <link rel="stylesheet" href="../sass/visual.css"> -->
+    <link rel="stylesheet" href="../sass/faculty.css">
     <link rel="shortcut icon" href="../image/mark.ico">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </head>
 
 <body>
-    <!--headerはコピペなので不都合あったら直してください-->
+
+    <div id="showloading">
+        <img src="../image/loading.gif" alt="loading" width="500px">
+    </div>
+
+
+
+    <!-- <div class="wrap">
+        <div id="showloading">
+            <img src="./image/loading.gif" alt="loading">
+        </div> -->
+
     <header>
-        <div class="left_h">
-            <nav>
+        <div class="left_h" id="nav-drawer">
+            <!-- 追加 -->
+            <input id="nav-input" type="checkbox" class="nav-unshown">
+            <label id="nav-open" for="nav-input"><span></span></label>
+            <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+            <!--  -->
+            <nav id="nav-content">
                 <ul>
                     <li><a id="head-aboutus">
                             <h3 id="nomalSubtitle1" style="display: block">学科概要</h3>
-                            <h3 id="easySubtitle1" style="display: none">この<ruby>
+                            <h3 id="easySubtitle1" style="display: none"><ruby>
                                     <rb>学科</rb>
                                     <rt>がっか</rt>
-                                </ruby>について</h3>
+                                </ruby></h3>
                             <h3 id="englishSubtitle1" style="display: none">Summary</h3>
                         </a></li>
                     <li><a id="head-work">
@@ -48,7 +69,7 @@
                             <h3 id="easySubtitle5" style="display: none"><ruby>
                                     <rb>先生</rb>
                                     <rt>せんせい</rt>
-                                </ruby>の<ruby>
+                                </ruby><ruby>
                                     <rb>紹介</rb>
                                     <rt>しょうかい</rt>
                                 </ruby></h3>
@@ -67,12 +88,12 @@
                             <h3 id="easySubtitle6" style="display: none"><ruby>
                                     <rb>入学試験</rb>
                                     <rt>にゅうがくしけん</rt>
-                                </ruby>について</h3>
+                                </ruby></h3>
                             <h3 id="englishSubtitle6" style="display: none">Admission</h3>
                         </a></li>
                     <li><a id="head-question">
                             <h3 id="nomalSubtitle7" style="display: block">よくある質問</h3>
-                            <h3 id="easySubtitle7" style="display: none">よくある<ruby>
+                            <h3 id="easySubtitle7" style="display: none"><ruby>
                                     <rb>質問</rb>
                                     <rt>しつもん</rt>
                                 </ruby></h3>
@@ -86,182 +107,231 @@
                 </ul>
             </nav>
         </div>
+
         <div class="right_h">
-            <a href="https://www.tmu.ac.jp/entrance/faculty/application_guidebook.html">資料請求</a>
-            <a href="#">言語</a>
+
+
+            <label for="type1" class="lang">
+                <p id="nomalLang" style="display: block">言語</p>
+                <p id="englishLang" style="display: none">Lang</p>
+                <p id="easyLang" style="display: none">ことば</p>
+            </label>
+            <input type="checkbox" id="type1" class="accordion">
+            <ul id="links1">
+                <li id="button" class="open">
+                    <p id="nomalButton" style="display: block">English</p>
+                    <p id="englishButton" style="display: none">Undo</p>
+                </li>
+                <li><button id="button2" class="open">
+                        <p id="nomalButton2" style="display: block">やさしい<br>にほんご</p>
+                        <p id="easyButton2" style="display: none">もとに<br>もどす</p>
+                    </button></li>
+            </ul>
+            <label for="type2">
+                <a href="https://www.tmu.ac.jp/entrance/faculty/application_guidebook.html" target="_blank">
+                    <p id="nomalRec" style="display: block">資料</p>
+                    <p id="englishRec" style="display: none">Info</p>
+                    <p id="easyRec" style="display: none"><ruby>
+                            <rb>資料</rb>
+                            <rt>しりょう</rt>
+                        </ruby></p>
+                </a>
+            </label>
+            <input type="checkbox" id="type2" class="accordion">
+
         </div>
     </header>
-    <!--
-    <div id="showloading">
-        <img src="../image/loading.gif" alt="loading" width="500px">
+    <div style="height: 80px;"></div>
+
+
+    <div id="mainContent" class="hidden">
+        <div class="wraper">
+
+            <div class="first_box">
+                <div id="studios">
+                    <h3 id="nomalContentsTitle4" style="display: block">他のスタジオを見る</h3>
+                    <h3 id="englishContentsTitle4" style="display: none">Other Studios</h3>
+                    <h3 id="easyContentsTitle4" style="display: none"><ruby>
+                            <rb>他</rb>
+                            <rt>ほか</rt>
+                        </ruby>のスタジオを<ruby>
+                            <rb>見</rb>
+                            <rt>み</rt>
+                        </ruby>る</h3>
+                    <div id="nomalStudios" style="display: block"></div>
+                    <div id="englishStudios" style="display: none"></div>
+                </div>
+
+                <div class="faculty_title">
+                    <h1 id="nomalTitle" style="display: block">エルゴノミックデザインスタジオ</h1>
+                    <h1 id="englishTitle" style="display: none">Ergonomics Design Studio</h1>
+                    <h1 id="easyTitle" style="display: none">エルゴノミックデザインスタジオ</h1>
+
+                    <h4 id="nomalCore" style="display: block">プロダクトデザインコア</h4>
+                    <h4 id="englishCore" style="display: none">Product Design Core</h4>
+                </div>
+            </div>
+
+            <div class="second_box">
+                <div class="right_box">
+                    <div id="nomalFaculty" style="display: block">
+                        <h3>担当教員</h3>
+                        <h5>笠松 慶子</h5>
+                        <h5>教授</h5>
+                    </div>
+
+                    <div id="englishFaculty" style="display: none">
+                        <h3>Faculty</h3>
+                        <h5>Keiko Kasamatsu</h5>
+                        <h5>Professor</h5>
+                    </div>
+
+                    <div id="easyFaculty" style="display: none">
+                        <h3><ruby>
+                                    <rb>担当教員</rb>
+                                    <rt>たんとうきょういん</rt>
+                                </ruby></h3>
+                        <h5><ruby>
+                                    <rb>笠松 慶子</rb>
+                                    <rt>かさまつ　けいこ</rt>
+                                </ruby></h5>
+                        <h5><ruby>
+                                    <rb>教授</rb>
+                                    <rt>きょうじゅ</rt>
+                                </ruby></h5>
+                    </div>
+                </div>
+
+                <div class="cp_cssslider">
+                    <input type="radio" name="cp_switch" id="photo1" checked />
+                    <label for="photo1"><img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/ergo1.jpg" alt="photo1"></label>
+                    <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/ergo1.jpg" alt="photo1">
+                    <input type="radio" name="cp_switch" id="photo2" />
+                    <label for="photo2"><img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/ergo2.jpg" alt="photo2"></label>
+                    <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/ergo2.jpg" alt="photo2">
+                    <input type="radio" name="cp_switch" id="photo3" />
+                    <label for="photo3"><img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/ergo3.png" alt="photo3"></label>
+                    <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/ergo3.png" alt="photo3">
+                    <input type="radio" name="cp_switch" id="photo4" />
+                    <label for="photo4"><img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/ergo4.png" alt="photo4"></label>
+                    <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/ergo4.png" alt="photo4">
+                    <input type="radio" name="cp_switch" id="photo4" />
+                    <label for="photo4"><img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/ergo5.png" alt="photo5"></label>
+                    <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/ergo5.png" alt="photo5">
+
+                </div>
+            </div>
+
+            <div class="text">
+                <p id="nomalText" style="display: block">
+                        エルゴノミックデザインスタジオでは、人が心地よく過ごせるために、人とモノやシステムとの関係を考え、
+                        どのようなデザインが必要かを検討しています。そのため、人間工学的アプローチにより、人を観察し、
+                        その行動や気持ちを把握する手法を研究しています。その方法としては、ユーザの経験を把握し、見える化し、デザインする手法を取っています。
+                        そこから、デザインアプローチにつなげ、モノを創り出すためのエビデンスを見つけ出す研究を行っています。
+                    </p>
+
+                <p id="englishText" style="display: none">
+                        It's important that we appeal to users' sensibilities if we are produce satisfying goods and services. The
+                        Ergonomics
+                        Studio uses a sensibility and physiology index to analyze qualitative and quantitive usability and comfort,
+                        investigates
+                        factors and mechanisms which foster active use, and pursue design elements necessary to build comfortable
+                        relations
+                        between users, goods and services, and other people.
+                    </p>
+
+                <p id="easyText" style="display: none">
+                        エルゴノミックデザインスタジオでは、<ruby>
+                            <rb>人</rb>
+                            <rt>ひと</rt>
+                        </ruby>が<ruby>
+                            <rb>心地</rb>
+                            <rt>ここち</rt>
+                        </ruby>よく<ruby>
+                            <rb>過</rb>
+                            <rt>す</rt>
+                        </ruby>ごせるために、<ruby>
+                            <rb>人</rb>
+                            <rt>ひと</rt>
+                        </ruby>とモノやシステムとの<ruby>
+                            <rb>関係</rb>
+                            <rt>かんけい</rt>
+                        </ruby>を<ruby>
+                            <rb>考</rb>
+                            <rt>かんが</rt>
+                        </ruby>えて、どのようなデザインが<ruby>
+                            <rb>必要</rb>
+                            <rt>ひつよう</rt>
+                        </ruby>かを<ruby>
+                            <rb>考</rb>
+                            <rt>かんが</rt>
+                        </ruby>えています。
+                        そのため、<ruby>
+                            <rb>人間工学的</rb>
+                            <rt>にんげんこうがくてき</rt>
+                        </ruby>アプローチにより、<ruby>
+                            <rb>人</rb>
+                            <rt>ひと</rt>
+                        </ruby>を<ruby>
+                            <rb>観察</rb>
+                            <rt>かんさつ</rt>
+                        </ruby>して、その<ruby>
+                            <rb>行動</rb>
+                            <rt>こうどう</rt>
+                        </ruby>や<ruby>
+                            <rb>気持</rb>
+                            <rt>きも</rt>
+                        </ruby>ちを<ruby>
+                            <rb>理解</rb>
+                            <rt>りかい</rt>
+                        </ruby>するやり<ruby>
+                            <rb>方</rb>
+                            <rt>かた</rt>
+                        </ruby>を<ruby>
+                            <rb>研究</rb>
+                            <rt>けんきゅう</rt>
+                        </ruby>しています。その<ruby>
+                            <rb>方法</rb>
+                            <rt>ほうほう</rt>
+                        </ruby>は、ユーザの<ruby>
+                            <rb>経験</rb>
+                            <rt>けいけん</rt>
+                        </ruby>を<ruby>
+                            <rb>理解</rb>
+                            <rt>りかい</rt>
+                        </ruby>して、<ruby>
+                            <rb>見</rb>
+                            <rt>み</rt>
+                        </ruby>える<ruby>
+                            <rb>化</rb>
+                            <rt>か</rt>
+                        </ruby>して、デザインするやり<ruby>
+                            <rb>方</rb>
+                            <rt>かた</rt>
+                        </ruby>です。
+                        そこから、デザインアプローチにつなげて、モノを<ruby>
+                            <rb>作</rb>
+                            <rt>つく</rt>
+                        </ruby>るエビデンスを<ruby>
+                            <rb>見</rb>
+                            <rt>み</rt>
+                        </ruby>つける<ruby>
+                            <rb>研究</rb>
+                            <rt>けんきゅう</rt>
+                        </ruby>をしています。
+                    </p>
+            </div>
+        </div>
     </div>
 
-    <div id="mainContent" class="hidden">-->
-    <button id="button" class="open">
-        <p id="nomalButton" style="display: block">English</p>
-        <p id="englishButton" style="display: none">Undo</p>
-    </button>
-
-    <button id="button2" class="open">
-        <p id="nomalButton2" style="display: block">やさしいにほんご</p>
-        <p id="easyButton2" style="display: none">もとに もどす</p>
-    </button>
-    <h1 id="nomalTitle" style="display: block">エルゴノミックデザインスタジオ</h1>
-    <h1 id="englishTitle" style="display: none">Ergonomics Design Studio</h1>
-    <h1 id="easyTitle" style="display: none">エルゴノミックデザインスタジオ</h1>
-
-    <div id="nomalFaculty" style="display: block">
-        <h3>担当教員</h3>
-        <h5>笠松 慶子</h5>
-        <h5>教授</h5>
-    </div>
-
-    <div id="englishFaculty" style="display: none">
-        <h3>Faculty</h3>
-        <h5>Keiko Kasamatsu</h5>
-        <h5>Professor</h5>
-    </div>
-
-    <div id="easyFaculty" style="display: none">
-        <h3><ruby>
-                <rb>担当教員</rb>
-                <rt>たんとうきょういん</rt>
-            </ruby></h3>
-        <h5><ruby>
-                <rb>笠松 慶子</rb>
-                <rt>かさまつ　けいこ</rt>
-            </ruby></h5>
-        <h5><ruby>
-                <rb>教授</rb>
-                <rt>きょうじゅ</rt>
-            </ruby></h5>
-    </div>
-
-    <h4 id="nomalCore" style="display: block">プロダクトデザインコア</h4>
-    <h4 id="englishCore" style="display: none">Product Design Core</h4>
-
-    <div id="studioPhoto">
-        <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/ergo1.jpg" alt="photo1" id="studioPhoto1">
-        <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/ergo2.jpg" alt="photo2" id="studioPhoto2">
-        <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/ergo3.png" alt="photo3" id="studioPhoto3">
-        <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/ergo4.png" alt="photo4" id="studioPhoto4">
-        <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/ergo5.png" alt="photo5" id="studioPhoto5">
-    </div>
-
-
-    <p id="nomalText" style="display: block">
-        エルゴノミックデザインスタジオでは、人が心地よく過ごせるために、人とモノやシステムとの関係を考え、
-        どのようなデザインが必要かを検討しています。そのため、人間工学的アプローチにより、人を観察し、
-        その行動や気持ちを把握する手法を研究しています。その方法としては、ユーザの経験を把握し、見える化し、デザインする手法を取っています。
-        そこから、デザインアプローチにつなげ、モノを創り出すためのエビデンスを見つけ出す研究を行っています。
-    </p>
-
-    <p id="englishText" style="display: none">
-        It's important that we appeal to users' sensibilities if we are produce satisfying goods and services. The
-        Ergonomics
-        Studio uses a sensibility and physiology index to analyze qualitative and quantitive usability and comfort,
-        investigates
-        factors and mechanisms which foster active use, and pursue design elements necessary to build comfortable
-        relations
-        between users, goods and services, and other people.
-    </p>
-
-    <p id="easyText" style="display: none">
-        エルゴノミックデザインスタジオでは、<ruby>
-            <rb>人</rb>
-            <rt>ひと</rt>
-        </ruby>が<ruby>
-            <rb>心地</rb>
-            <rt>ここち</rt>
-        </ruby>よく<ruby>
-            <rb>過</rb>
-            <rt>す</rt>
-        </ruby>ごせるために、<ruby>
-            <rb>人</rb>
-            <rt>ひと</rt>
-        </ruby>とモノやシステムとの<ruby>
-            <rb>関係</rb>
-            <rt>かんけい</rt>
-        </ruby>を<ruby>
-            <rb>考</rb>
-            <rt>かんが</rt>
-        </ruby>えて、どのようなデザインが<ruby>
-            <rb>必要</rb>
-            <rt>ひつよう</rt>
-        </ruby>かを<ruby>
-            <rb>考</rb>
-            <rt>かんが</rt>
-        </ruby>えています。
-        そのため、<ruby>
-            <rb>人間工学的</rb>
-            <rt>にんげんこうがくてき</rt>
-        </ruby>アプローチにより、<ruby>
-            <rb>人</rb>
-            <rt>ひと</rt>
-        </ruby>を<ruby>
-            <rb>観察</rb>
-            <rt>かんさつ</rt>
-        </ruby>して、その<ruby>
-            <rb>行動</rb>
-            <rt>こうどう</rt>
-        </ruby>や<ruby>
-            <rb>気持</rb>
-            <rt>きも</rt>
-        </ruby>ちを<ruby>
-            <rb>理解</rb>
-            <rt>りかい</rt>
-        </ruby>するやり<ruby>
-            <rb>方</rb>
-            <rt>かた</rt>
-        </ruby>を<ruby>
-            <rb>研究</rb>
-            <rt>けんきゅう</rt>
-        </ruby>しています。その<ruby>
-            <rb>方法</rb>
-            <rt>ほうほう</rt>
-        </ruby>は、ユーザの<ruby>
-            <rb>経験</rb>
-            <rt>けいけん</rt>
-        </ruby>を<ruby>
-            <rb>理解</rb>
-            <rt>りかい</rt>
-        </ruby>して、<ruby>
-            <rb>見</rb>
-            <rt>み</rt>
-        </ruby>える<ruby>
-            <rb>化</rb>
-            <rt>か</rt>
-        </ruby>して、デザインするやり<ruby>
-            <rb>方</rb>
-            <rt>かた</rt>
-        </ruby>です。
-        そこから、デザインアプローチにつなげて、モノを<ruby>
-            <rb>作</rb>
-            <rt>つく</rt>
-        </ruby>るエビデンスを<ruby>
-            <rb>見</rb>
-            <rt>み</rt>
-        </ruby>つける<ruby>
-            <rb>研究</rb>
-            <rt>けんきゅう</rt>
-        </ruby>をしています。 </p>
-
-    <a href="../index.html" title="returnIndex">
+    <a class="toTop" id="back">
         <p id="nomalReturn" style="display: block">トップへもどる</p>
         <p id="englishReturn" style="display: none">Return to top</p>
     </a>
 
-    <div id="studios">
-        <h3 id="nomalContentsTitle4" style="display: block">他のスタジオを見る</h3>
-        <h3 id="englishContentsTitle4" style="display: none">Other Studios</h3>
-        <h3 id="easyContentsTitle4" style="display: block"><ruby>
-                <rb>他</rb>
-                <rt>ほか</rt>
-            </ruby>のスタジオを<ruby>
-                <rb>見</rb>
-                <rt>み</rt>
-            </ruby>る</h3>
-        <!--面倒だからjsonで取ってくるけど、ホバーしたらどうのこうのするならこっちのが良いかもと思ったので一応残しておきます
+
+    <!--面倒だからjsonで取ってくるけど、ホバーしたらどうのこうのするならこっちのが良いかもと思ったので一応残しておきます
+
                 <a href="editorial.html">
                     <img src="../image/editorial.png" title="edi" width="50px" height="50px">
                 </a>
@@ -299,10 +369,17 @@
                     <img src="../image/visual.png" title="edi" width="50px" height="50px">
                 </a>
                 --->
-        <div id="nomalStudios" style="display: block"></div>
-        <div id="englishStudios" style="display: none"></div>
-    </div>
+
+
+    <!-- </div> -->
     <!--</div>-->
+
+
+    <footer>
+        <p>東京都立大学</p>
+        <p>Tokyo Metropolitan University</p>
+    </footer>
+
     <script src="../js/js2.js"></script>
 </body>
 

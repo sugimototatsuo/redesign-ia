@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
     <!-- <link rel="stylesheet" href="../styles/styles.css"> -->
     <link rel="stylesheet" href="../sass/reset.css">
@@ -26,8 +27,13 @@
         </div> -->
 
     <header>
-        <div class="left_h">
-            <nav>
+        <div class="left_h" id="nav-drawer">
+            <!-- 追加 -->
+            <input id="nav-input" type="checkbox" class="nav-unshown">
+            <label id="nav-open" for="nav-input"><span></span></label>
+            <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+            <!--  -->
+            <nav id="nav-content">
                 <ul>
                     <li><a id="head-aboutus">
                             <h3 id="nomalSubtitle1" style="display: block">学科概要</h3>
@@ -137,8 +143,8 @@
     </header>
     <div style="height: 80px;"></div>
 
-    <div id="mainContent" class="hidden">
 
+    <div id="mainContent" class="hidden">
         <div class="wraper">
 
             <div class="first_box">
@@ -164,231 +170,281 @@
                     <h4 id="nomalCore" style="display: block">メディアアートコア</h4>
                     <h4 id="englishCore" style="display: none">Media Art Core</h4>
 
-                    <a href=https://instagram.com/tmu_editing_studio?igshid=19iww9epxm63d" target="_blank"><span
-                            class="insta">
+                </div>
+            </div>
+
+            <div class="second_box">
+                <div class="right_box">
+                    <div id="nomalFaculty" style="display: block">
+                        <h3>担当教員</h3>
+                        <h5>楠見清</h5>
+                        <h5>准教授</h5>
+                    </div>
+
+                    <div id="englishFaculty" style="display: none">
+                        <h3>Faculty</h3>
+                        <h5>Kiyoshi Kusumi</h5>
+                        <h5>Associate Professor</h5>
+                    </div>
+
+                    <div id="easyFaculty" style="display: none">
+                        <h3><ruby>
+                                                <rb>担当教員</rb>
+                                                <rt>たんとうきょういん</rt>
+                                            </ruby></h3>
+                        <h5><ruby>
+                                                <rb>楠見　清</rb>
+                                                <rt>くすみ　きよし</rt>
+                                            </ruby></h5>
+                        <h5><ruby>
+                                                <rb>准教授</rb>
+                                                <rt>じゅんきょうじゅ</rt>
+                                            </ruby></h5>
+                    </div>
+                    <a class="insta_btn" href="https://instagram.com/tmu_editing_studio?igshid=19iww9epxm63d" target="_blank"><span class="insta">
                             <i class="fab fa-instagram"></i>
                         </span></a>
+                </div>
+
+                <div class="cp_cssslider">
+                    <input type="radio" name="cp_switch" id="photo1" checked />
+                    <label for="photo1"><img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/ed1.png" alt="photo1"></label>
+                    <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/ed1.png" alt="photo1">
+                    <input type="radio" name="cp_switch" id="photo2" />
+                    <label for="photo2"><img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/ed2.png" alt="photo2"></label>
+                    <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/ed2.png" alt="photo2">
 
                 </div>
             </div>
 
-            <div id="studioPhoto">
-                <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/ed1.png" alt="photo1"
-                    id="studioPhoto1">
-                <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/ed2.png" alt="photo2"
-                    id="studioPhoto2">
+            <div class="text">
+                <p id="nomalText" style="display: block">
+                                情報コミュニケーション·システムの発達と拡充により誰もが情報の発信者となったいま、
+                                テキストや画像や音や映像などの情報を編集することはすでに私たちの生活のなかで日常的な行為といえるでしょう。
+                                その前提のもと、これまで歴史的に構築されてきた編集の技術を理論的な分析とともに再構築し、情報メディア時代の知の手法として
+                                実践的な開発に取り組んでいます。とくに電子書籍などのディジタル媒体とフィジカルな書物、編集の技術史と文化史を接続する視点から、
+                                既存のソースの有効活用による新たな価値やコミュニケーションの創出と情報共有時代の新しい公共性のありかたを考え、
+                                その社会システムをデザイン/エディットしていきます。
+                            </p>
+
+                <p id="englishText" style="display: none">
+                                Today is an exciting time to learn the art of editing, its historical underpinnings, its various schools
+                                of
+                                theoretical
+                                analysis, and its many practical and intellectual applications. Of course everyone today is both an
+                                informationconsumer
+                                and producer, editing text, images, music, and moving images, on a daily basis. That's why gaining
+                                perspective,
+                                and
+                                hands-on approaches to electronic and printed books, and understanding the technological and cultural
+                                history of
+                                shaping
+                                the discourse, and our information resources, connects us more profoundly to our values in motion and
+                                helps
+                                us
+                                gain
+                                insights to how and why we share our information, and with it, our social systems.
+                            </p>
+
+                <p id="easyText" style="display: none">
+                                この<ruby>
+                                    <rb>数年</rb>
+                                    <rt>すうねん</rt>
+                                </ruby>で、<ruby>
+                                    <rb>情報</rb>
+                                    <rt>じょうほう</rt>
+                                </ruby>コミュニケーション·システムは<ruby>
+                                    <rb>発達</rb>
+                                    <rt>はったつ</rt>
+                                </ruby>し<ruby>
+                                    <rb>大</rb>
+                                    <rt>おお</rt>
+                                </ruby>きくなりました。そのことでみんなが<ruby>
+                                    <rb>情報</rb>
+                                    <rt>じょうほう</rt>
+                                </ruby>の<ruby>
+                                    <rb>発信者</rb>
+                                    <rt>はっしんしゃ</rt>
+                                </ruby>となりました。
+                                なので、テキストや<ruby>
+                                    <rb>画像</rb>
+                                    <rt>がぞう</rt>
+                                </ruby>や<ruby>
+                                    <rb>音</rb>
+                                    <rt>おと</rt>
+                                </ruby>や<ruby>
+                                    <rb>映像</rb>
+                                    <rt>えいぞう</rt>
+                                </ruby>などの<ruby>
+                                    <rb>情報</rb>
+                                    <rt>じょうほう</rt>
+                                </ruby>を<ruby>
+                                    <rb>編集</rb>
+                                    <rt>へんしゅう</rt>
+                                </ruby>することはすでに<ruby>
+                                    <rb>私</rb>
+                                    <rt>わたし</rt>
+                                </ruby>たちの<ruby>
+                                    <rb>生活</rb>
+                                    <rt>せいかつ</rt>
+                                </ruby>のなかで<ruby>
+                                    <rb>日常的</rb>
+                                    <rt>にちじょうてき</rt>
+                                </ruby>なことでしょう。
+                                この<ruby>
+                                    <rb>条件</rb>
+                                    <rt>じょうけん</rt>
+                                </ruby>のもと、これまで<ruby>
+                                    <rb>歴史的</rb>
+                                    <rt>れきしてき</rt>
+                                </ruby>につくられてきた<ruby>
+                                    <rb>編集</rb>
+                                    <rt>へんしゅう</rt>
+                                </ruby>の<ruby>
+                                    <rb>技術</rb>
+                                    <rt>ぎじゅつ</rt>
+                                </ruby>を<ruby>
+                                    <rb>理論的</rb>
+                                    <rt>りろんてき</rt>
+                                </ruby>によく<ruby>
+                                    <rb>調</rb>
+                                    <rt>しら</rt>
+                                </ruby>べて<ruby>
+                                    <rb>考</rb>
+                                    <rt>かんが</rt>
+                                </ruby>えて、もう<ruby>
+                                    <rb>一度作</rb>
+                                    <rt>いちどつく</rt>
+                                </ruby>り、<ruby>
+                                    <rb>実践的</rb>
+                                    <rt>じっせんてき</rt>
+                                </ruby>な<ruby>
+                                    <rb>開発</rb>
+                                    <rt>かいはつ</rt>
+                                </ruby>に<ruby>
+                                    <rb>取</rb>
+                                    <rt>と</rt>
+                                </ruby>り<ruby>
+                                    <rb>組</rb>
+                                    <rt>く</rt>
+                                </ruby>んでいます。
+                                とくに<ruby>
+                                    <rb>電子書籍</rb>
+                                    <rt>でんししょせき</rt>
+                                </ruby>などのディジタル<ruby>
+                                    <rb>媒体</rb>
+                                    <rt>ばいたい</rt>
+                                </ruby>とフィジカルな<ruby>
+                                    <rb>書物、編集</rb>
+                                    <rt>しょもつ　へんしゅう</rt>
+                                </ruby>の<ruby>
+                                    <rb>技術史</rb>
+                                    <rt>ぎじゅつし</rt>
+                                </ruby>と<ruby>
+                                    <rb>文化史</rb>
+                                    <rt>ぶんかし</rt>
+                                </ruby>をつなぐ<ruby>
+                                    <rb>見方</rb>
+                                    <rt>みかた</rt>
+                                </ruby>から、<ruby>
+                                    <rb>今</rb>
+                                    <rt>いま</rt>
+                                </ruby>ある<ruby>
+                                    <rb>資源</rb>
+                                    <rt>しげん</rt>
+                                </ruby>の<ruby>
+                                    <rb>有効活用</rb>
+                                    <rt>ゆうこうかつよう</rt>
+                                </ruby>による<ruby>
+                                    <rb>新</rb>
+                                    <rt>あたら</rt>
+                                </ruby>しい<ruby>
+                                    <rb>価値</rb>
+                                    <rt>かち</rt>
+                                </ruby>やコミュニケーションを<ruby>
+                                    <rb>作</rb>
+                                    <rt>つく</rt>
+                                </ruby>り<ruby>
+                                    <rb>出</rb>
+                                    <rt>だ</rt>
+                                </ruby>して、<ruby>
+                                    <rb>情報共有時代</rb>
+                                    <rt>じょうほうきょうゆうじだい</rt>
+                                </ruby>の<ruby>
+                                    <rb>新</rb>
+                                    <rt>あたら</rt>
+                                </ruby>しい<ruby>
+                                    <rb>公共性</rb>
+                                    <rt>こうきょうせい</rt>
+                                </ruby>のありかたを<ruby>
+                                    <rb>考</rb>
+                                    <rt>かんが</rt>
+                                </ruby>え、その<ruby>
+                                    <rb>社会</rb>
+                                    <rt>しゃかい</rt>
+                                </ruby>システムをデザイン/エディットしていきます。
+                            </p>
             </div>
-
-            <div class="second-text">
-                <div id="nomalFaculty" style="display: block">
-                    <h3>担当教員</h3>
-                    <h5>楠見清</h5>
-                    <h5>准教授</h5>
-                </div>
-
-                <div id="englishFaculty" style="display: none">
-                    <h3>Faculty</h3>
-                    <h5>Kiyoshi Kusumi</h5>
-                    <h5>Associate Professor</h5>
-                </div>
-
-                <div id="easyFaculty" style="display: none">
-                    <h3><ruby>
-                            <rb>担当教員</rb>
-                            <rt>たんとうきょういん</rt>
-                        </ruby></h3>
-                    <h5><ruby>
-                            <rb>楠見　清</rb>
-                            <rt>くすみ　きよし</rt>
-                        </ruby></h5>
-                    <h5><ruby>
-                            <rb>准教授</rb>
-                            <rt>じゅんきょうじゅ</rt>
-                        </ruby></h5>
-                </div>
-            </div>
-
-            <p id="nomalText" style="display: block">
-                情報コミュニケーション·システムの発達と拡充により誰もが情報の発信者となったいま、
-                テキストや画像や音や映像などの情報を編集することはすでに私たちの生活のなかで日常的な行為といえるでしょう。
-                その前提のもと、これまで歴史的に構築されてきた編集の技術を理論的な分析とともに再構築し、情報メディア時代の知の手法として
-                実践的な開発に取り組んでいます。とくに電子書籍などのディジタル媒体とフィジカルな書物、編集の技術史と文化史を接続する視点から、
-                既存のソースの有効活用による新たな価値やコミュニケーションの創出と情報共有時代の新しい公共性のありかたを考え、
-                その社会システムをデザイン/エディットしていきます。
-            </p>
-
-            <p id="englishText" style="display: none">
-                Today is an exciting time to learn the art of editing, its historical underpinnings, its various schools
-                of
-                theoretical
-                analysis, and its many practical and intellectual applications. Of course everyone today is both an
-                informationconsumer
-                and producer, editing text, images, music, and moving images, on a daily basis. That's why gaining
-                perspective,
-                and
-                hands-on approaches to electronic and printed books, and understanding the technological and cultural
-                history of
-                shaping
-                the discourse, and our information resources, connects us more profoundly to our values in motion and
-                helps
-                us
-                gain
-                insights to how and why we share our information, and with it, our social systems.
-            </p>
-
-            <p id="easyText" style="display: none">
-                この<ruby>
-                    <rb>数年</rb>
-                    <rt>すうねん</rt>
-                </ruby>で、<ruby>
-                    <rb>情報</rb>
-                    <rt>じょうほう</rt>
-                </ruby>コミュニケーション·システムは<ruby>
-                    <rb>発達</rb>
-                    <rt>はったつ</rt>
-                </ruby>し<ruby>
-                    <rb>大</rb>
-                    <rt>おお</rt>
-                </ruby>きくなりました。そのことでみんなが<ruby>
-                    <rb>情報</rb>
-                    <rt>じょうほう</rt>
-                </ruby>の<ruby>
-                    <rb>発信者</rb>
-                    <rt>はっしんしゃ</rt>
-                </ruby>となりました。
-                なので、テキストや<ruby>
-                    <rb>画像</rb>
-                    <rt>がぞう</rt>
-                </ruby>や<ruby>
-                    <rb>音</rb>
-                    <rt>おと</rt>
-                </ruby>や<ruby>
-                    <rb>映像</rb>
-                    <rt>えいぞう</rt>
-                </ruby>などの<ruby>
-                    <rb>情報</rb>
-                    <rt>じょうほう</rt>
-                </ruby>を<ruby>
-                    <rb>編集</rb>
-                    <rt>へんしゅう</rt>
-                </ruby>することはすでに<ruby>
-                    <rb>私</rb>
-                    <rt>わたし</rt>
-                </ruby>たちの<ruby>
-                    <rb>生活</rb>
-                    <rt>せいかつ</rt>
-                </ruby>のなかで<ruby>
-                    <rb>日常的</rb>
-                    <rt>にちじょうてき</rt>
-                </ruby>なことでしょう。
-                この<ruby>
-                    <rb>条件</rb>
-                    <rt>じょうけん</rt>
-                </ruby>のもと、これまで<ruby>
-                    <rb>歴史的</rb>
-                    <rt>れきしてき</rt>
-                </ruby>につくられてきた<ruby>
-                    <rb>編集</rb>
-                    <rt>へんしゅう</rt>
-                </ruby>の<ruby>
-                    <rb>技術</rb>
-                    <rt>ぎじゅつ</rt>
-                </ruby>を<ruby>
-                    <rb>理論的</rb>
-                    <rt>りろんてき</rt>
-                </ruby>によく<ruby>
-                    <rb>調</rb>
-                    <rt>しら</rt>
-                </ruby>べて<ruby>
-                    <rb>考</rb>
-                    <rt>かんが</rt>
-                </ruby>えて、もう<ruby>
-                    <rb>一度作</rb>
-                    <rt>いちどつく</rt>
-                </ruby>り、<ruby>
-                    <rb>実践的</rb>
-                    <rt>じっせんてき</rt>
-                </ruby>な<ruby>
-                    <rb>開発</rb>
-                    <rt>かいはつ</rt>
-                </ruby>に<ruby>
-                    <rb>取</rb>
-                    <rt>と</rt>
-                </ruby>り<ruby>
-                    <rb>組</rb>
-                    <rt>く</rt>
-                </ruby>んでいます。
-                とくに<ruby>
-                    <rb>電子書籍</rb>
-                    <rt>でんししょせき</rt>
-                </ruby>などのディジタル<ruby>
-                    <rb>媒体</rb>
-                    <rt>ばいたい</rt>
-                </ruby>とフィジカルな<ruby>
-                    <rb>書物、編集</rb>
-                    <rt>しょもつ　へんしゅう</rt>
-                </ruby>の<ruby>
-                    <rb>技術史</rb>
-                    <rt>ぎじゅつし</rt>
-                </ruby>と<ruby>
-                    <rb>文化史</rb>
-                    <rt>ぶんかし</rt>
-                </ruby>をつなぐ<ruby>
-                    <rb>見方</rb>
-                    <rt>みかた</rt>
-                </ruby>から、<ruby>
-                    <rb>今</rb>
-                    <rt>いま</rt>
-                </ruby>ある<ruby>
-                    <rb>資源</rb>
-                    <rt>しげん</rt>
-                </ruby>の<ruby>
-                    <rb>有効活用</rb>
-                    <rt>ゆうこうかつよう</rt>
-                </ruby>による<ruby>
-                    <rb>新</rb>
-                    <rt>あたら</rt>
-                </ruby>しい<ruby>
-                    <rb>価値</rb>
-                    <rt>かち</rt>
-                </ruby>やコミュニケーションを<ruby>
-                    <rb>作</rb>
-                    <rt>つく</rt>
-                </ruby>り<ruby>
-                    <rb>出</rb>
-                    <rt>だ</rt>
-                </ruby>して、<ruby>
-                    <rb>情報共有時代</rb>
-                    <rt>じょうほうきょうゆうじだい</rt>
-                </ruby>の<ruby>
-                    <rb>新</rb>
-                    <rt>あたら</rt>
-                </ruby>しい<ruby>
-                    <rb>公共性</rb>
-                    <rt>こうきょうせい</rt>
-                </ruby>のありかたを<ruby>
-                    <rb>考</rb>
-                    <rt>かんが</rt>
-                </ruby>え、その<ruby>
-                    <rb>社会</rb>
-                    <rt>しゃかい</rt>
-                </ruby>システムをデザイン/エディットしていきます。
-            </p>
-
         </div>
-
-        <a href="../index.html" title="returnIndex">
-            <p id="nomalReturn" style="display: block">トップへもどる</p>
-            <p id="englishReturn" style="display: none">Return to top</p>
-        </a>
-
-
     </div>
 
+    <a class="toTop" id="back">
+        <p id="nomalReturn" style="display: block">トップへもどる</p>
+        <p id="englishReturn" style="display: none">Return to top</p>
+    </a>
 
+
+    <!--面倒だからjsonで取ってくるけど、ホバーしたらどうのこうのするならこっちのが良いかもと思ったので一応残しておきます
+
+                <a href="editorial.html">
+                    <img src="../image/editorial.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="equipment.html">
+                    <img src="../image/equipment.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="ergonomics.html">
+                    <img src="../image/ergonomics.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="interactive.html">
+                    <img src="../image/interactive.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="interface.html">
+                    <img src="../image/interface.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="interior.html">
+                    <img src="../image/interior.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="kinematograph.html">
+                    <img src="../image/kinematograph.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="network.html">
+                    <img src="../image/network.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="software.html">
+                    <img src="../image/software.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="spatial.html">
+                    <img src="../image/spatial.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="transportation.html">
+                    <img src="../image/transportation.png" title="edi" width="50px" height="50px">
+                </a>
+                <a href="visual.html">
+                    <img src="../image/visual.png" title="edi" width="50px" height="50px">
+                </a>
+                --->
+
+
+    <!-- </div> -->
     <!--</div>-->
-    <script src="../js/js2.js"></script>
 
+
+    <footer>
+        <p>東京都立大学</p>
+        <p>Tokyo Metropolitan University</p>
+    </footer>
+
+    <script src="../js/js2.js"></script>
 </body>
 
 </html>

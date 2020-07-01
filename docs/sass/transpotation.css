@@ -393,7 +393,7 @@ header .right_h #type1:checked ~ #links1 li {
 
 @media screen and (min-width: 992px) {
   .wraper .first_box .faculty_title h1 {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
   }
 }
 
@@ -648,7 +648,6 @@ header .right_h #type1:checked ~ #links1 li {
 }
 
 a.toTop {
-  z-index: 20;
   position: fixed;
   bottom: 2rem;
   right: 2rem;
@@ -658,7 +657,6 @@ a.toTop {
   width: 12rem;
   padding: 1.0rem 0.3rem;
   text-decoration: none;
-  z-index: 200;
 }
 
 a.toTop:hover {
@@ -677,50 +675,3 @@ footer p {
   color: #FFFFFF;
   margin-bottom: 0.3rem;
 }
-
-/*吹き出し*/
-.wraper .first_box #nomalStudios > div,.wraper .first_box #englishStudios > div{
-   display: inline-block;
-}
- 
-/* ツールチップ部分を隠す */
-.wraper .first_box #nomalStudios > div span ,.wraper .first_box #englishStudios > div span{
-   display: none;
-}
- 
-/* マウスオーバー */
-.wraper .first_box #nomalStudios > div:hover, .wraper .first_box #englishStudios > div:hover {
-    position: relative;
-    color: #333;
-}
- 
-/* マウスオーバー時にツールチップを表示 */
-.wraper .first_box #nomalStudios > div:hover span,.wraper .first_box #englishStudios > div:hover span {
-    display: block; /* ボックス要素にする */
-    position: absolute; 
-    top: 25px;
-    right:40px;
-    font-size: 65%;
-    color: #fff;
-    background-color: rgb(53, 61, 104); 
-    width: 190px;
-    padding: 5px;
-    border-radius:3px;
-    z-index:100;
-}
- 
-.wraper .first_box #nomalStudios > div span:before,.wraper .first_box #englishStudios > div span:before{
-    content:''; 
-    display:block; 
-    position:absolute; /* relativeからの絶対位置 */
-    height:0; 
-    width:0; 
-    top:0px; 
-    right:-2px;
-    border:10px transparent solid; 
-    border-right-width:0; 
-    border-left-color:rgb(53, 61, 104); 
-    transform:rotate(90deg);
-    z-index:100;
-}
-/*吹き出しここまで*/

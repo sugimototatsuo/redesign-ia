@@ -3,10 +3,12 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
   <!-- <link rel="stylesheet" href="styles/styles.css"> -->
   <link rel="stylesheet" href="./sass/reset.css">
-  <link rel="stylesheet" href="./sass/style.css">
+  <link rel="stylesheet" href="./sass/view-style.css">
+  <!-- <link rel="stylesheet" href="./sass/style.css"> -->
   <link rel="shortcut icon" href="./image/mark.ico">
 
 
@@ -20,8 +22,92 @@
     </div>
 
     <header>
-      <div class="left_h">
-        <nav>
+
+      <!-- 追加 -->
+      <div class="left_h" id="nav-drawer">
+        <!-- 追加 -->
+        <input id="nav-input" type="checkbox" class="nav-unshown">
+        <label id="nav-open" for="nav-input"><span></span></label>
+        <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+        <!--  -->
+        <nav id="nav-content">
+          <ul>
+            <li><a href="#aboutus">
+                <h3 id="nomalSubtitle1" style="display: block">学科概要</h3>
+                <h3 id="easySubtitle1" style="display: none"><ruby>
+                              <rb>学科</rb>
+                              <rt>がっか</rt>
+                            </ruby></h3>
+                <h3 id="englishSubtitle1" style="display: none">Summary</h3>
+              </a></li>
+            <li><a href="#works">
+                <h3 id="nomalSubtitle2" style="display: block">作品</h3>
+                <h3 id="easySubtitle2" style="display: none"><ruby>
+                              <rb>作品</rb>
+                              <rt>さくひん</rt>
+                            </ruby></h3>
+                <h3 id="englishSubtitle2" style="display: none">Works</h3>
+              </a></li>
+            <li><a href="#curriculum">
+                <h3 id="nomalSubtitle3" style="display: block">カリキュラム</h3>
+                <h3 id="easySubtitle3" style="display: none">カリキュラム</h3>
+                <h3 id="englishSubtitle3" style="display: none">Curriculum</h3>
+              </a></li>
+            <li><a href="#studios">
+                <h3 id="nomalSubtitle4" style="display: block">スタジオ紹介</h3>
+                <h3 id="easySubtitle4" style="display: none">スタジオ<ruby>
+                              <rb>紹介</rb>
+                              <rt>しょうかい</rt>
+                            </ruby></h3>
+                <h3 id="englishSubtitle4" style="display: none">Studios</h3>
+              </a></li>
+            <li><a href="#faculty">
+                <h3 id="nomalSubtitle5" style="display: block">教員紹介</h3>
+                <h3 id="easySubtitle5" style="display: none"><ruby>
+                              <rb>先生</rb>
+                              <rt>せんせい</rt>
+                            </ruby><ruby>
+                              <rb>紹介</rb>
+                              <rt>しょうかい</rt>
+                            </ruby></h3>
+                <h3 id="englishSubtitle5" style="display: none">Faculty</h3>
+              </a></li>
+            <li><a href="#column">
+                <h3 id="nomalSubtitle9" style="display: block">関連コンテンツ</h3>
+                <h3 id="easySubtitle9" style="display: none"><ruby>
+                              <rb>関連</rb>
+                              <rt>かんれん</rt>
+                            </ruby>コンテンツ</h3>
+                <h3 id="englishSubtitle9" style="display: none">Column</h3>
+              </a></li>
+            <li><a href="#admission">
+                <h3 id="nomalSubtitle6" style="display: block">入試案内</h3>
+                <h3 id="easySubtitle6" style="display: none"><ruby>
+                              <rb>入学試験</rb>
+                              <rt>にゅうがくしけん</rt>
+                            </ruby></h3>
+                <h3 id="englishSubtitle6" style="display: none">Admission</h3>
+              </a></li>
+            <li><a href="#question">
+                <h3 id="nomalSubtitle7" style="display: block">よくある質問</h3>
+                <h3 id="easySubtitle7" style="display: none"><ruby>
+                              <rb>質問</rb>
+                              <rt>しつもん</rt>
+                            </ruby></h3>
+                <h3 id="englishSubtitle7" style="display: none">Q&A</h3>
+              </a></li>
+            <li><a href="#access">
+                <h3 id="nomalSubtitle8" style="display: block">アクセス</h3>
+                <h3 id="easySubtitle8" style="display: none">アクセス</h3>
+                <h3 id="englishSubtitle8" style="display: none">Access</h3>
+              </a></li>
+          </ul>
+        </nav>
+      </div>
+
+
+      <!-- <div class="left_h">
+        <nav id="nav-content">
           <ul>
             <li><a href="#aboutus">
                 <h3 id="nomalSubtitle1" style="display: block">学科概要</h3>
@@ -94,7 +180,7 @@
               </a></li>
           </ul>
         </nav>
-      </div>
+      </div> -->
 
       <div class="right_h">
 
@@ -134,7 +220,7 @@
 
 
       <div class="main-visual">
-        <h1 id="nomalTitle" style="display: block">東京都立大学 システムデザイン学部<br>インダストリアルアート学科</h1>
+        <h1 id="nomalTitle" style="display: block">東京都立大学<br class="br">システムデザイン学部<br>インダストリアルアート学科</h1>
         <h1 id="easyTitle" style="display: none"><ruby>
             <rb>東京都立大学</rb>
             <rt>とうきょうとりつだいがく</rt>
@@ -148,9 +234,9 @@
         <h1 id="englishTitle" style="display: none">Department of Industrial Art</h1>
         <h2 id="englishTitle2" style="display: none">Faculty of Systems Design, Tokyo Metropolitan University</h2>
         <div>
-          <h3 id="nomalCopy" style="display: block"><span style="font-size: 2.8rem;">「アート」</span><br> <span
-              class=" second_line">ー それは、<span style="font-size: 2.8rem;">新時代</span>を築く</span><br><span
-              class="third_line">イノベーションの<span style="font-size: 2.8rem;">原動力</span>です。</span></h3>
+          <h3 id="nomalCopy" style="display: block"><span style="font-size: 1.2rem;">「アート」</span><br> <span
+              class=" second_line">ー それは、<span style="font-size: 1.2rem;">新時代</span>を築く</span><br><span
+              class="third_line">イノベーションの<span style="font-size: 1.2rem;">原動力</span>です。</span></h3>
           <h3 id="englishCopy" style="display: none">Art is the driving force of the innovation<br> that builds a new
             age.
           </h3>

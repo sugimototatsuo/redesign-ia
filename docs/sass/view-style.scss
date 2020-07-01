@@ -165,7 +165,12 @@ header{
             color: #fff;
             @include mq(lg){
               color: $textCol;
-              font-size: 0.2rem;
+              font-size: 0.5rem;
+              line-height: 80px;
+            }
+            @include mq(xl){
+              color: $textCol;
+              font-size: 0.9rem;
               line-height: 80px;
             }
             h3{
@@ -184,6 +189,7 @@ header{
   .right_h{
     width: 40%;
     float: right;
+    font-weight: bold;
     @include mq(lg){
       width: 20%;
     }

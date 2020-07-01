@@ -176,7 +176,15 @@ header .left_h nav ul li a {
 @media screen and (min-width: 992px) {
   header .left_h nav ul li a {
     color: #363636;
-    font-size: 0.2rem;
+    font-size: 0.5rem;
+    line-height: 80px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header .left_h nav ul li a {
+    color: #363636;
+    font-size: 0.9rem;
     line-height: 80px;
   }
 }
@@ -195,6 +203,7 @@ header .left_h nav ul li a h3 {
 header .right_h {
   width: 40%;
   float: right;
+  font-weight: bold;
 }
 
 @media screen and (min-width: 992px) {

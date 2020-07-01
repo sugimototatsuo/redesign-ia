@@ -5,6 +5,7 @@ const sheet = 'group4-book';
 //const sheet2 = "Faculty";
 const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 //const endpoint2 = `${uri}?id=${id}&sheet=${sheet2}`;
+var langMode = 0;
 
 var showloading = document.getElementById('showloading');
 var contents = document.getElementById('mainContent');

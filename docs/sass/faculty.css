@@ -19,12 +19,15 @@ body {
 #showloading {
   width: 100%;
   height: 100vh;
-  background-color: #073a49;
-  position: relative;
+
+  background-color: #000000;
+  position: fixed;
+  z-index: 20;
+
 }
 
 #showloading img {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -32,6 +35,15 @@ body {
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
+  z-index: 20;
+}
+
+.fadeout-bg {
+  transition-property: opacity;
+  transition-delay: .2s;
+  transition-duration: .1s;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .hidden {
@@ -542,6 +554,56 @@ header .right_h #type1:checked ~ #links1 li {
   /*高さと合わせる*/
 }
 
+.wraper .second_box .right_box .twitter-btn {
+  display: inline-block;
+  text-align: center;
+  /*中央揃え*/
+  color: #2e6ca5;
+  /*文字色*/
+  text-decoration: none;
+  /*下線消す*/
+  margin-bottom: 2rem;
+}
+
+.wraper .second_box .right_box .twitter-btn:hover {
+  /*ホバー時*/
+  color: #668ad8;
+  /*文字色*/
+  transition: .5s;
+  /*ゆっくり変化*/
+}
+
+.wraper .second_box .right_box .twitter-btn .twitter {
+  /*アイコンの背景*/
+  position: relative;
+  /*相対配置*/
+  display: inline-block;
+  width: 50px;
+  /*幅*/
+  height: 50px;
+  /*高さ*/
+  background: #00acee;
+  /*グラデーション①*/
+  overflow: hidden;
+  /*はみ出た部分を隠す*/
+  border-radius: 13px;
+  /*角丸に*/
+}
+
+.wraper .second_box .right_box .twitter-btn .fa-twitter {
+  /*アイコン*/
+  color: #FFF;
+  /*白に*/
+  position: relative;
+  /*z-indexを使うため*/
+  z-index: 2;
+  /*グラデーションより前に*/
+  font-size: 35px;
+  /*アイコンサイズ*/
+  line-height: 50px;
+  /*高さと合わせる*/
+}
+
 .wraper .second_box .cp_cssslider {
   width: 100%;
   padding-top: 350px;
@@ -658,7 +720,6 @@ a.toTop {
   width: 12rem;
   padding: 1.0rem 0.3rem;
   text-decoration: none;
-  z-index: 200;
 }
 
 a.toTop:hover {
@@ -679,23 +740,23 @@ footer p {
 }
 
 /*吹き出し*/
-.wraper .first_box #nomalStudios > div,.wraper .first_box #englishStudios > div{
+.wraper .first_box #nomalStudios > div,section .first_box #englishStudios > div{
    display: inline-block;
 }
  
 /* ツールチップ部分を隠す */
-.wraper .first_box #nomalStudios > div span ,.wraper .first_box #englishStudios > div span{
+.wraper .first_box #nomalStudios > div span ,section .first_box #englishStudios > div span{
    display: none;
 }
  
 /* マウスオーバー */
-.wraper .first_box #nomalStudios > div:hover, .wraper .first_box #englishStudios > div:hover {
+.wraper .first_box #nomalStudios > div:hover, section .first_box #englishStudios > div:hover {
     position: relative;
     color: #333;
 }
  
 /* マウスオーバー時にツールチップを表示 */
-.wraper .first_box #nomalStudios > div:hover span,.wraper .first_box #englishStudios > div:hover span {
+.wraper .first_box #nomalStudios > div:hover span,section .first_box #englishStudios > div:hover span {
     display: block; /* ボックス要素にする */
     position: absolute; 
     top: 25px;
@@ -709,7 +770,7 @@ footer p {
     z-index:100;
 }
  
-.wraper .first_box #nomalStudios > div span:before,.wraper .first_box #englishStudios > div span:before{
+.wraper .first_box #nomalStudios > div span:before,section .first_box #englishStudios > div span:before{
     content:''; 
     display:block; 
     position:absolute; /* relativeからの絶対位置 */

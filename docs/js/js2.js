@@ -9,10 +9,11 @@ const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 
 var showloading = document.getElementById('showloading');
 var contents = document.getElementById('mainContent');
-window.addEventListener('load', function () {
-    showloading.style.display = 'none';
+window.addEventListener('load', stopload);
+function stopload() {
+    showloading.classList.add('fadeout-bg');
     contents.classList.remove('hidden');
-});
+}
 
 
 const renderJson = (json) => {

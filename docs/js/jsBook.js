@@ -9,10 +9,11 @@ var langMode = 0;
 
 var showloading = document.getElementById('showloading');
 var contents = document.getElementById('mainContent');
-window.addEventListener('load', function () {
-    showloading.style.display = 'none';
+window.addEventListener('load', stopload);
+function stopload() {
+    showloading.classList.add('fadeout-bg');
     contents.classList.remove('hidden');
-});
+}
 
 const renderJson = (json) => {
     const books = json.records;
@@ -48,8 +49,6 @@ const renderJson = (json) => {
         bookLink.textContent = "購入はこちら:" + books['book-link1'];
         bookLink2.href = books['book-link2'];
         bookLink2.textContent = books['book-link2'];
-        //nomalStudioLink.textContent = studios['name-ja'];
-        //nomalStudioImage.src = studios['photo1'];
 
         bookDiv.appendChild(bookTitle);
         bookDiv.appendChild(bookWriter);

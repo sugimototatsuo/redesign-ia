@@ -554,6 +554,57 @@ header .right_h #type1:checked ~ #links1 li {
   /*高さと合わせる*/
 }
 
+
+.wraper .second_box .right_box .twitter-btn {
+  display: inline-block;
+  text-align: center;
+  /*中央揃え*/
+  color: #2e6ca5;
+  /*文字色*/
+  text-decoration: none;
+  /*下線消す*/
+  margin-bottom: 2rem;
+}
+
+.wraper .second_box .right_box .twitter-btn:hover {
+  /*ホバー時*/
+  color: #668ad8;
+  /*文字色*/
+  transition: .5s;
+  /*ゆっくり変化*/
+}
+
+.wraper .second_box .right_box .twitter-btn .twitter {
+  /*アイコンの背景*/
+  position: relative;
+  /*相対配置*/
+  display: inline-block;
+  width: 50px;
+  /*幅*/
+  height: 50px;
+  /*高さ*/
+  background: #00acee;
+  /*グラデーション①*/
+  overflow: hidden;
+  /*はみ出た部分を隠す*/
+  border-radius: 13px;
+  /*角丸に*/
+}
+
+.wraper .second_box .right_box .twitter-btn .fa-twitter {
+  /*アイコン*/
+  color: #FFF;
+  /*白に*/
+  position: relative;
+  /*z-indexを使うため*/
+  z-index: 2;
+  /*グラデーションより前に*/
+  font-size: 35px;
+  /*アイコンサイズ*/
+  line-height: 50px;
+  /*高さと合わせる*/
+}
+
 .wraper .second_box .cp_cssslider {
   width: 100%;
   padding-top: 350px;

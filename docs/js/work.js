@@ -3,10 +3,11 @@ var langMode = 0;
 
 var showloading = document.getElementById('showloading');
 var contents = document.getElementById('mainContent');
-window.addEventListener('load', function () {
-    showloading.style.display = 'none';
+window.addEventListener('load', stopload);
+function stopload() {
+    showloading.classList.add('fadeout-bg');
     contents.classList.remove('hidden');
-});
+}
 
 window.onload = function () {
     var langBotton = document.getElementById("button");

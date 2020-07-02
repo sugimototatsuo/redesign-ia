@@ -48,8 +48,6 @@ const renderJson = (json) => {
         bookLink.textContent = "購入はこちら:" + books['book-link1'];
         bookLink2.href = books['book-link2'];
         bookLink2.textContent = books['book-link2'];
-        //nomalStudioLink.textContent = studios['name-ja'];
-        //nomalStudioImage.src = studios['photo1'];
 
         bookDiv.appendChild(bookTitle);
         bookDiv.appendChild(bookWriter);

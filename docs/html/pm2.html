@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
+    <!-- <link rel="stylesheet" href="../styles/styles.css"> -->
+    <link rel="stylesheet" href="../sass/reset.css">
+    <!-- <link rel="stylesheet" href="../sass/visual.css"> -->
+    <link rel="stylesheet" href="../sass/faculty.css">
+    <link rel="shortcut icon" href="../image/mark.ico">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="showloading">
+        <img src="../image/loading.gif" alt="loading" width="500px">
+    </div>
+
+
+
+    <!-- <div class="wrap">
+        <div id="showloading">
+            <img src="./image/loading.gif" alt="loading">
+        </div> -->
+
+    <header>
+        <div class="left_h" id="nav-drawer">
+            <!-- 追加 -->
+            <input id="nav-input" type="checkbox" class="nav-unshown">
+            <label id="nav-open" for="nav-input"><span></span></label>
+            <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+            <!--  -->
+            <nav id="nav-content">
+                <ul>
+                    <li><a id="head-aboutus">
+                            <h3 id="nomalSubtitle1" style="display: block">学科概要</h3>
+                            <h3 id="easySubtitle1" style="display: none"><ruby>
+                                    <rb>学科</rb>
+                                    <rt>がっか</rt>
+                                </ruby></h3>
+                            <h3 id="englishSubtitle1" style="display: none">Summary</h3>
+                        </a></li>
+                    <li><a id="head-work">
+                            <h3 id="nomalSubtitle2" style="display: block">作品</h3>
+                            <h3 id="easySubtitle2" style="display: none"><ruby>
+                                    <rb>作品</rb>
+                                    <rt>さくひん</rt>
+                                </ruby></h3>
+                            <h3 id="englishSubtitle2" style="display: none">Works</h3>
+                        </a></li>
+                    <li><a id="head-curriculm">
+                            <h3 id="nomalSubtitle3" style="display: block">カリキュラム</h3>
+                            <h3 id="easySubtitle3" style="display: none">カリキュラム</h3>
+                            <h3 id="englishSubtitle3" style="display: none">Curriculum</h3>
+                        </a></li>
+                    <li><a id="head-studios">
+                            <h3 id="nomalSubtitle4" style="display: block">スタジオ紹介</h3>
+                            <h3 id="easySubtitle4" style="display: none">スタジオ<ruby>
+                                    <rb>紹介</rb>
+                                    <rt>しょうかい</rt>
+                                </ruby></h3>
+                            <h3 id="englishSubtitle4" style="display: none">Studios</h3>
+                        </a></li>
+                    <li><a id="head-faculty">
+                            <h3 id="nomalSubtitle5" style="display: block">教員紹介</h3>
+                            <h3 id="easySubtitle5" style="display: none"><ruby>
+                                    <rb>先生</rb>
+                                    <rt>せんせい</rt>
+                                </ruby><ruby>
+                                    <rb>紹介</rb>
+                                    <rt>しょうかい</rt>
+                                </ruby></h3>
+                            <h3 id="englishSubtitle5" style="display: none">Faculty</h3>
+                        </a></li>
+                    <li><a id="head-column">
+                            <h3 id="nomalSubtitle9" style="display: block">関連コンテンツ</h3>
+                            <h3 id="easySubtitle9" style="display: none"><ruby>
+                                    <rb>関連</rb>
+                                    <rt>かんれん</rt>
+                                </ruby>コンテンツ</h3>
+                            <h3 id="englishSubtitle9" style="display: none">Column</h3>
+                        </a></li>
+                    <li><a id="head-admission">
+                            <h3 id="nomalSubtitle6" style="display: block">入試案内</h3>
+                            <h3 id="easySubtitle6" style="display: none"><ruby>
+                                    <rb>入学試験</rb>
+                                    <rt>にゅうがくしけん</rt>
+                                </ruby></h3>
+                            <h3 id="englishSubtitle6" style="display: none">Admission</h3>
+                        </a></li>
+                    <li><a id="head-question">
+                            <h3 id="nomalSubtitle7" style="display: block">よくある質問</h3>
+                            <h3 id="easySubtitle7" style="display: none"><ruby>
+                                    <rb>質問</rb>
+                                    <rt>しつもん</rt>
+                                </ruby></h3>
+                            <h3 id="englishSubtitle7" style="display: none">Q&A</h3>
+                        </a></li>
+                    <li><a id="head-access">
+                            <h3 id="nomalSubtitle8" style="display: block">アクセス</h3>
+                            <h3 id="easySubtitle8" style="display: none">アクセス</h3>
+                            <h3 id="englishSubtitle8" style="display: none">Access</h3>
+                        </a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="right_h">
+
+
+            <label for="type1" class="lang">
+                <p id="nomalLang" style="display: block">言語</p>
+                <p id="englishLang" style="display: none">Lang</p>
+                <p id="easyLang" style="display: none">ことば</p>
+            </label>
+            <input type="checkbox" id="type1" class="accordion">
+            <ul id="links1">
+                <li id="button" class="open">
+                    <p id="nomalButton" style="display: block">English</p>
+                    <p id="englishButton" style="display: none">Undo</p>
+                </li>
+                <li><button id="button2" class="open">
+                        <p id="nomalButton2" style="display: block">やさしい<br>にほんご</p>
+                        <p id="easyButton2" style="display: none">もとに<br>もどす</p>
+                    </button></li>
+            </ul>
+            <label for="type2">
+                <a href="https://www.tmu.ac.jp/entrance/faculty/application_guidebook.html" target="_blank">
+                    <p id="nomalRec" style="display: block">資料</p>
+                    <p id="englishRec" style="display: none">Info</p>
+                    <p id="easyRec" style="display: none"><ruby>
+                            <rb>資料</rb>
+                            <rt>しりょう</rt>
+                        </ruby></p>
+                </a>
+            </label>
+            <input type="checkbox" id="type2" class="accordion">
+
+        </div>
+    </header>
+    <div style="height: 80px;"></div>
+
+
+    <div id="mainContent" class="hidden">
+        <div class="wraper">
+            <div class="first_box">
+                <div class="faculty_title">
+                    <h1 id="nomalTitle" style="display: block">みやこ祭2019<br>Projection Mapping</h1>
+                    <h1 id="englishTitle" style="display: none">Miyako Fes 2019<br>Projection Mapping</h1>
+                    <h1 id="easyTitle" style="display: none">みやこまつり2019<br>プロジェクションマッピング</h1>
+
+                    <h4 id="nomalCore" style="display: block">インダストリアルアート学科有志作品</h4>
+                    <h4 id="englishCore" style="display: none">Industrial Art Department volunteer work</h4>
+
+                </div>
+            </div>
+
+            <div class="second_box">
+                <div class="right_box">
+                    <div id="nomalFaculty" style="display: block">
+                        <h3>2019.11.3~5</h3>
+                        <h5>17:30/18:00/18:30</h5>
+                        <h5>@南大沢キャンパス</br>1号館中庭
+                        </h5>
+                    </div>
+
+                    <div id="englishFaculty" style="display: none">
+                        <h3>2019.11.3~5</h3>
+                        <h5>17:30/18:00/18:30</h5>
+                        <h5>@Minami-Osawa Campus, Building 1, courtyard
+                        </h5>
+                    </div>
+
+                    <div id="easyFaculty" style="display: none">
+                        <h3>2019.11.3~5</h3>
+                        <h5>17:30/18:00/18:30</h5>
+                        <h5>@<ruby>
+                                <rb>南大沢</rb>
+                                <rt>みなみおおさわ</rt>
+                            </ruby>キャンパス</br>1<ruby>
+                                <rb>号館中庭</rb>
+                                <rt>ごうかんなかにわ</rt>
+                            </ruby>
+                        </h5>
+                    </div>
+
+                    <a class="twitter-btn" href="https://twitter.com/miyakofespm2019" target="_blank"><span
+                            class="twitter">
+                            <i class="fab fa-twitter"></i>
+                        </span></a>
+                </div>
+
+                <div class="cp_cssslider">
+                    <input type="radio" name="cp_switch" id="photo1" checked />
+                    <label for="photo1"><img src="../image/pm00.jpg" alt="photo1"></label>
+                    <img src="../image/pm00.jpg" alt="photo1">
+                    <input type="radio" name="cp_switch" id="photo2" />
+                    <label for="photo2"><img src="../image/pm02.jpg" alt="photo2"></label>
+                    <img src="../image/pm02.jpg" alt="photo2">
+                    <input type="radio" name="cp_switch" id="photo3" />
+                    <label for="photo3"><img src="../image/pm04.jpg" alt="photo3"></label>
+                    <img src="../image/pm04.jpg" alt="photo3">
+                    <input type="radio" name="cp_switch" id="photo4" />
+                    <label for="photo4"><img src="../image/pm01.jpg" alt="photo4"></label>
+                    <img src="../image/pm01.jpg" alt="photo4">
+
+
+                </div>
+            </div>
+
+            <div class="text">
+                <p id="nomalText" style="display: block">
+                    インダストリアルアート学科では、毎年有志の学生が大学祭でプロジェクションマッピングを制作しています。
+                    2019年度は学部1、2年生が中心となって制作しました。</br>
+                    テーマは「Re:」。平成から令和へ、また首都大から都立大へ、新しい時代に向けて続いていき、
+                    そして繰り返していく時の流れを表現しました。</br>
+                    </br>
+                    本企画は学生同士で話し合いながら一つのものを仕上げていきます。
+                    「大学祭を盛り上げるためにはどんな作品がいいだろう？」「どういうテーマが『アート学科らしさ』を知ってもらえるだろう？」「どんな作品がお客さんに楽しんでもらえるだろう？」
+                    と、学生が自ずと地域を意識しながら企画していくのも特徴です。デザインを学ぶ上で大切なエッセンスが詰まった企画とも言えるのではないでしょうか。
+                </p>
+
+                <p id="englishText" style="display: none">
+                    In the Department of Industrial Art, students volunteer to perform projection mapping at the
+                    university festival every
+                    year. It is produced by first and second year undergraduates in the 2019 academic year. </br>
+                    The theme is "Re:". It expresses the flow of time, which repeats itself unchanged as the times
+                    change, as original names
+                    and university names change. I did. </br></br>
+                    In this project, the students will discuss with each other to complete one project.
+                    What kind of work would be the best way to liven up the university festival? What kind of theme
+                    would give people an
+                    idea of what 'art department-ness' is? Another feature of the project is that the students are
+                    naturally aware of the
+                    local area. It could be said that this project is packed with the essence of what it takes to study
+                    design.
+                </p>
+
+                <p id="easyText" style="display: none">
+                    インダストリアルアート<ruby>
+                        <rb>学科</rb>
+                        <rt>がっか</rt>
+                    </ruby>では、<ruby>
+                        <rb>毎年、有志</rb>
+                        <rt>まいとし　ゆうし</rt>
+                    </ruby>の<ruby>
+                        <rb>学生</rb>
+                        <rt>がくせい</rt>
+                    </ruby>が<ruby>
+                        <rb>大学祭</rb>
+                        <rt>だいがくさい</rt>
+                    </ruby>でプロジェクションマッピングをつくっています。
+                    2019<ruby>
+                        <rb>年</rb>
+                        <rt>ねん</rt>
+                    </ruby>は1、2<ruby>
+                        <rb>年生</rb>
+                        <rt>ねんせい</rt>
+                    </ruby>が<ruby>
+                        <rb>中心</rb>
+                        <rt>ちゅうしん</rt>
+                    </ruby>となってつくりました。</br>
+                    テーマは「Re:」です。<ruby>
+                        <rb>大学名</rb>
+                        <rt>だいがくめい</rt>
+                    </ruby>や<ruby>
+                        <rb>元号</rb>
+                        <rt>げんごう</rt>
+                    </ruby>が<ruby>
+                        <rb>変</rb>
+                        <rt>か</rt>
+                    </ruby>わる<ruby>
+                        <rb>中</rb>
+                        <rt>なか</rt>
+                    </ruby>で、<ruby>
+                        <rb>新</rb>
+                        <rt>あたら</rt>
+                    </ruby>しい<ruby>
+                        <rb>時代</rb>
+                        <rt>じだい</rt>
+                    </ruby>に<ruby>
+                        <rb>向</rb>
+                        <rt>む</rt>
+                    </ruby>けて<ruby>
+                        <rb>続</rb>
+                        <rt>つづ</rt>
+                    </ruby>き、
+                    そしてくりかえしていく<ruby>
+                        <rb>時間</rb>
+                        <rt>じかん</rt>
+                    </ruby>を<ruby>
+                        <rb>表現</rb>
+                        <rt>ひょうげん</rt>
+                    </ruby>しました。</br>
+                    </br>
+                    この<ruby>
+                        <rb>企画</rb>
+                        <rt>きかく</rt>
+                    </ruby>は<ruby>
+                        <rb>学生</rb>
+                        <rt>がくせい</rt>
+                    </ruby>だけで<ruby>
+                        <rb>話</rb>
+                        <rt>はな</rt>
+                    </ruby>し<ruby>
+                        <rb>合</rb>
+                        <rt>あ</rt>
+                    </ruby>いながら1つのものをつくります。
+                    「<ruby>
+                        <rb>大学祭</rb>
+                        <rt>だいがくさい</rt>
+                    </ruby>を<ruby>
+                        <rb>良</rb>
+                        <rt>よ</rt>
+                    </ruby>くするためにはどんな<ruby>
+                        <rb>作品</rb>
+                        <rt>さくひん</rt>
+                    </ruby>がいいだろう？」「どういうテーマが『アート<ruby>
+                        <rb>学科</rb>
+                        <rt>がっか</rt>
+                    </ruby>らしさ』を<ruby>
+                        <rb>知</rb>
+                        <rt>し</rt>
+                    </ruby>ってもらえるだろう？」「どんな<ruby>
+                        <rb>作品</rb>
+                        <rt>さくひん</rt>
+                    </ruby>がお<ruby>
+                        <rb>客</rb>
+                        <rt>きゃく</rt>
+                    </ruby>さんに<ruby>
+                        <rb>楽</rb>
+                        <rt>たの</rt>
+                    </ruby>しんでもらえるだろう？」
+                    と、<ruby>
+                        <rb>学生</rb>
+                        <rt>がくせい</rt>
+                    </ruby>が<ruby>
+                        <rb>地域</rb>
+                        <rt>ちいき</rt>
+                    </ruby>を<ruby>
+                        <rb>意識</rb>
+                        <rt>いしき</rt>
+                    </ruby>しながらつくっていきます。デザインの<ruby>
+                        <rb>勉強</rb>
+                        <rt>べんきょう</rt>
+                    </ruby>がたくさんできる<ruby>
+                        <rb>企画</rb>
+                        <rt>きかく</rt>
+                    </ruby>でもあります。
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <a class="toTop" id="back">
+        <p id="nomalReturn" style="display: block">トップへもどる</p>
+        <p id="englishReturn" style="display: none">Return to top</p>
+    </a>
+
+    <footer>
+        <p>東京都立大学</p>
+        <p>Tokyo Metropolitan University</p>
+    </footer>
+
+    <script src="../js/js2.js"></script>
+</body>
+
+</html>

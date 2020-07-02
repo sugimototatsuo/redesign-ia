@@ -266,6 +266,20 @@ li {
   }
   h1{
     padding-bottom: 1rem;
+    @include mq(md){
+      font-size: 1.2rem;
+    }
+    @include mq(lg){
+      font-size: 1.4rem;
+    }
+  }
+  p{
+    @include mq(md){
+      font-size: 0.9rem;
+    }
+    @include mq(lg){
+      font-size: 1.1rem;
+    }
   }
 }
 .grade-title{
@@ -295,6 +309,10 @@ li {
 #works3{
   p{
     margin-bottom: 2rem;
+    font-size: 0.3rem;
+    @include mq(md){
+      font-size: 1.2rem;
+    }
   }
 }
 

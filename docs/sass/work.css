@@ -18,7 +18,7 @@ body {
 #showloading {
   width: 100%;
   height: 100vh;
-  background-color: #000000;
+  background-color: #073a49;
   position: relative;
 }
 
@@ -293,6 +293,30 @@ header .right_h #type1:checked ~ #links1 li {
   padding-bottom: 1rem;
 }
 
+@media screen and (min-width: 768px) {
+  .bg-purple h1 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .bg-purple h1 {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .bg-purple p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .bg-purple p {
+    font-size: 1.1rem;
+  }
+}
+
 .grade-title {
   padding: 2rem 3rem 1rem;
   font-size: 1.2rem;
@@ -327,6 +351,13 @@ header .right_h #type1:checked ~ #links1 li {
 
 #works3 p {
   margin-bottom: 2rem;
+  font-size: 0.3rem;
+}
+
+@media screen and (min-width: 768px) {
+  #works3 p {
+    font-size: 1.2rem;
+  }
 }
 
 html, body, .wrapper {

@@ -791,23 +791,23 @@ footer p {
 }
 
 /*吹き出し*/
-.wraper .first_box #nomalStudios > div,section .first_box #englishStudios > div{
+.wraper .first_box #nomalStudios > div,.wraper .first_box #englishStudios > div{
    display: inline-block;
 }
  
 /* ツールチップ部分を隠す */
-.wraper .first_box #nomalStudios > div span ,section .first_box #englishStudios > div span{
+.wraper .first_box #nomalStudios > div span ,.wraper .first_box #englishStudios > div span{
    display: none;
 }
  
 /* マウスオーバー */
-.wraper .first_box #nomalStudios > div:hover, section .first_box #englishStudios > div:hover {
+.wraper .first_box #nomalStudios > div:hover, .wraper .first_box #englishStudios > div:hover {
     position: relative;
     color: #333;
 }
  
 /* マウスオーバー時にツールチップを表示 */
-.wraper .first_box #nomalStudios > div:hover span,section .first_box #englishStudios > div:hover span {
+.wraper .first_box #nomalStudios > div:hover span,.wraper .first_box #englishStudios > div:hover span {
     display: block; /* ボックス要素にする */
     position: absolute; 
     top: 25px;
@@ -821,7 +821,7 @@ footer p {
     z-index:100;
 }
  
-.wraper .first_box #nomalStudios > div span:before,section .first_box #englishStudios > div span:before{
+.wraper .first_box #nomalStudios > div span:before,.wraper .first_box #englishStudios > div span:before{
     content:''; 
     display:block; 
     position:absolute; /* relativeからの絶対位置 */

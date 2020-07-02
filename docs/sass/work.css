@@ -37,8 +37,8 @@ body {
 
 .fadeout-bg {
   transition-property: opacity;
-  transition-delay: .9s;
-  transition-duration: .8s;
+  transition-delay: .3s;
+  transition-duration: .2s;
   opacity: 0;
   pointer-events: none;
 }

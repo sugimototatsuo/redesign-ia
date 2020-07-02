@@ -324,9 +324,9 @@ window.onload = function () {
     document.getElementById('nomalStudios').style.display = "none";
     document.getElementById('englishStudios').style.display = "flex";
 
-    document.getElementById('nomalCapSt').style.display = "none";
-    document.getElementById('englishCapSt').style.display = "block";
-    document.getElementById('easyCapSt').style.display = "none";
+    // document.getElementById('nomalCapSt').style.display = "none";
+    // document.getElementById('englishCapSt').style.display = "block";
+    // document.getElementById('easyCapSt').style.display = "none";
 
     document.getElementById('nomalFaculty').style.display = "none";
     document.getElementById('englishFaculty').style.display = "flex";
@@ -406,9 +406,9 @@ window.onload = function () {
     document.getElementById('nomalStudios').style.display = "flex";
     document.getElementById('englishStudios').style.display = "none";
 
-    document.getElementById('nomalCapSt').style.display = "none";
-    document.getElementById('englishCapSt').style.display = "none";
-    document.getElementById('easyCapSt').style.display = "block";
+    // document.getElementById('nomalCapSt').style.display = "none";
+    // document.getElementById('englishCapSt').style.display = "none";
+    // document.getElementById('easyCapSt').style.display = "block";
 
     document.getElementById('nomalFaculty').style.display = "flex";
     document.getElementById('englishFaculty').style.display = "none";
@@ -495,9 +495,9 @@ document.getElementById("button").onclick = function () {
     document.getElementById('nomalStudios').style.display = "none";
     document.getElementById('englishStudios').style.display = "flex";
 
-    document.getElementById('nomalCapSt').style.display = "none";
-    document.getElementById('englishCapSt').style.display = "block";
-    document.getElementById('easyCapSt').style.display = "none";
+    // document.getElementById('nomalCapSt').style.display = "none";
+    // document.getElementById('englishCapSt').style.display = "block";
+    // document.getElementById('easyCapSt').style.display = "none";
 
     document.getElementById('nomalFaculty').style.display = "none";
     document.getElementById('englishFaculty').style.display = "flex";
@@ -575,9 +575,9 @@ document.getElementById("button").onclick = function () {
     document.getElementById('nomalStudios').style.display = "flex";
     document.getElementById('englishStudios').style.display = "none";
 
-    document.getElementById('nomalCapSt').style.display = "bock";
-    document.getElementById('englishCapSt').style.display = "none";
-    document.getElementById('easyCapSt').style.display = "none";
+    // document.getElementById('nomalCapSt').style.display = "bock";
+    // document.getElementById('englishCapSt').style.display = "none";
+    // document.getElementById('easyCapSt').style.display = "none";
 
     // document.getElementById('nomalCapSt').style.display = "flex";
     // document.getElementById('easyCapSt').style.display = "none";
@@ -669,9 +669,9 @@ document.getElementById("button2").onclick = function () {
     document.getElementById('nomalStudios').style.display = "flex";
     document.getElementById('englishStudios').style.display = "none";
 
-    document.getElementById('nomalCapSt').style.display = "none";
-    document.getElementById('englishCapSt').style.display = "none";
-    document.getElementById('easyCapSt').style.display = "block";
+    // document.getElementById('nomalCapSt').style.display = "none";
+    // document.getElementById('englishCapSt').style.display = "none";
+    // document.getElementById('easyCapSt').style.display = "block";
 
     document.getElementById('nomalFaculty').style.display = "flex";
     document.getElementById('englishFaculty').style.display = "none";
@@ -749,9 +749,9 @@ document.getElementById("button2").onclick = function () {
     document.getElementById('nomalStudios').style.display = "flex";
     document.getElementById('englishStudios').style.display = "none";
 
-    document.getElementById('nomalCapSt').style.display = "block";
-    document.getElementById('englishCapSt').style.display = "none";
-    document.getElementById('easyCapSt').style.display = "none";
+    // document.getElementById('nomalCapSt').style.display = "block";
+    // document.getElementById('englishCapSt').style.display = "none";
+    // document.getElementById('easyCapSt').style.display = "none";
 
     document.getElementById('nomalFaculty').style.display = "flex";
     document.getElementById('englishFaculty').style.display = "none";

@@ -805,6 +805,9 @@ label {
   text-decoration: none;
   font-size: 2.5rem;
 }
+.modalCloseBtn label:hover {
+  opacity: 0.5;
+}
 
 .modalCheck:not(:checked) ~ .wrapper > *:not(.modalWrap) {
   filter: blur(0px);
@@ -833,6 +836,10 @@ label {
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
+}
+
+.smallbtn label:hover {
+  opacity: 0.5;
 }
 
 @media screen and (min-width: 992px) {

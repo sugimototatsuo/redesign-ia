@@ -209,7 +209,10 @@ label {
     background: #C3C3C3;
     line-height: 80px;
     margin-left: 2%;
-    font-size: 1rem;
+    // font-size: 0.7rem;
+    // @include mq(sm){
+    //   font-size: 1.0rem;
+    // }
     cursor :pointer;
     a{
       text-decoration: none;
@@ -245,6 +248,7 @@ li {
     transition: all 0.5s;
 }
 
+
 #type1:checked ~ #links1 li{
     height: 60px;
     opacity: 1;
@@ -266,6 +270,20 @@ li {
   }
   h1{
     padding-bottom: 1rem;
+    @include mq(md){
+      font-size: 1.2rem;
+    }
+    @include mq(lg){
+      font-size: 1.4rem;
+    }
+  }
+  p{
+    @include mq(md){
+      font-size: 0.9rem;
+    }
+    @include mq(lg){
+      font-size: 1.1rem;
+    }
   }
 }
 .grade-title{
@@ -295,6 +313,10 @@ li {
 #works3{
   p{
     margin-bottom: 2rem;
+    font-size: 0.3rem;
+    @include mq(md){
+      font-size: 1.2rem;
+    }
   }
 }
 

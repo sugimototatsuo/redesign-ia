@@ -236,7 +236,6 @@ header .right_h label {
   background: #C3C3C3;
   line-height: 80px;
   margin-left: 2%;
-  font-size: 1rem;
   cursor: pointer;
 }
 
@@ -303,6 +302,30 @@ header .right_h #type1:checked ~ #links1 li {
   padding-bottom: 1rem;
 }
 
+@media screen and (min-width: 768px) {
+  .bg-purple h1 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .bg-purple h1 {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .bg-purple p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .bg-purple p {
+    font-size: 1.1rem;
+  }
+}
+
 .grade-title {
   padding: 2rem 3rem 1rem;
   font-size: 1.2rem;
@@ -337,6 +360,13 @@ header .right_h #type1:checked ~ #links1 li {
 
 #works3 p {
   margin-bottom: 2rem;
+  font-size: 0.3rem;
+}
+
+@media screen and (min-width: 768px) {
+  #works3 p {
+    font-size: 1.2rem;
+  }
 }
 
 html, body, .wrapper {
